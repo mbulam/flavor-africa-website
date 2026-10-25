@@ -3,7 +3,7 @@ TITLE = "Lagos Fashion Week 2026: everything to know"
 TAG = "Flavor Fashion"
 H1 = "Lagos Fashion Week 2026"
 DEK = "Everything to know before the runway lights up. Five days, one big idea, and the platform that has launched some of Africa's most exciting designers. The CRAFTED season runs from 28 October to 1 November."
-META = "Flavor Fashion · 28 Oct – 1 Nov 2026 · 5 min read"
+META = "Flavor Fashion · 22 Oct 2026 · 5 min read"
 LEAD = ("img/lfw-incubator.jpg", "On the runway at Lagos Fashion Week")
 
 BODY = [

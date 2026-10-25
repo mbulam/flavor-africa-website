@@ -3,7 +3,7 @@ TITLE = "tg.blk: the Mombasa producer opening doors for alternative music"
 TAG = "Flavor Radar"
 H1 = "tg.blk"
 DEK = "She taught herself to make beats on GarageBand, broke through with a song she recorded in a dorm room, and in 2026 both Apple Music and Spotify put her name in lights. Meet the Mombasa artist leading Kenya's alternative wave."
-META = "Flavor Radar · October 2026 · 4 min read"
+META = "Flavor Radar · 26 Oct 2026 · 4 min read"
 LEAD = ("img/tg-2026.jpg", "tg.blk")
 
 BODY = [

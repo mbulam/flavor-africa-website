@@ -3,7 +3,7 @@ TITLE = "Mr Eazi: singer, investor, owner"
 TAG = "Money Moves"
 H1 = "Mr Eazi: singer, investor, owner"
 DEK = "The Afrobeats star has spent a decade building something bigger than a music career. Here are the seven moves that turned Oluwatosin Ajibade into one of African entertainment's most serious businessmen."
-META = "Money Moves · October 2026 · 6 min read"
+META = "Money Moves · 26 Oct 2026 · 6 min read"
 LEAD = ("img/me-cover.jpg", "Mr Eazi")
 
 BODY = [

@@ -255,3 +255,43 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 
 .art>.meta{display:block}
 .art>.meta+.body{margin-top:26px}
+
+/* ---- socials + ticker (26 Oct 2026) ---- */
+.bar{grid-template-columns:minmax(44px,1fr) auto minmax(44px,1fr)}
+.bar>.icon{justify-self:start}
+.soc{display:flex;align-items:center;gap:6px}
+.soc a{display:grid;place-items:center;width:34px;height:34px;color:var(--ink);transition:color .2s}
+.soc a:hover{color:var(--purple)}
+.soc svg{width:19px;height:19px}
+.soc-hdr{justify-self:end}
+.drw-soc{padding:26px 0 40px}
+.drw-soc .meta{display:block;margin-bottom:12px}
+.drw-soc .soc{flex-direction:column;align-items:stretch;gap:0}
+.drw-soc .soc a{width:auto;height:auto;display:flex;gap:14px;justify-content:flex-start;padding:10px 0;font-size:15px;color:var(--ink)}
+.drw-soc .soc a:hover{color:var(--purple)}
+.foot-soc{grid-column:1/-1;display:flex;align-items:center;gap:14px}
+.foot-soc .soc a{color:var(--purple)}
+.hero-box{position:relative;min-width:0}
+.rail{position:absolute;top:22px;left:16px;z-index:2;flex-direction:column;gap:4px}
+.rail::after{content:"";width:1px;height:24px;background:rgba(255,255,255,.55);margin-top:6px}
+.rail a{color:#fff;filter:drop-shadow(0 1px 3px rgba(0,0,0,.55))}
+.rail a:hover{color:var(--yellow)}
+.hero-box .hero-txt{padding-left:28px}
+.ticker{background:var(--purple);color:#fff;overflow:hidden;white-space:nowrap}
+.tk-track{display:flex;width:max-content;animation:tk 38s linear infinite}
+.ticker:hover .tk-track{animation-play-state:paused}
+.tk-run{display:flex;align-items:center;flex-shrink:0}
+.tk-run span{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:13px 0}
+.tk-run i{width:5px;height:5px;border-radius:50%;background:var(--yellow);margin:0 22px;flex-shrink:0}
+@keyframes tk{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.tk-track{animation:none}.ticker{overflow-x:auto}}
+@media (max-width:700px){.soc-hdr{display:none}}
+@media (max-width:640px){
+  .hero-box{margin-inline:-16px}
+  .hero-box .hero{margin-inline:0}
+  .rail{top:16px;left:8px}
+  .rail::after{height:48px}
+  .hero-box .hero-txt{padding-left:56px}
+  .tk-run span{font-size:11px;padding:11px 0}
+  .tk-run i{margin:0 16px}
+}
