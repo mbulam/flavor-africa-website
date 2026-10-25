@@ -238,3 +238,20 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
   .qgrid{grid-template-columns:minmax(0,1fr)}
   .secbar h2{font-size:24px}
 }
+
+/* long-form articles */
+.art .body figure{margin:32px 0}
+.art blockquote.pull{margin:34px 0;padding:6px 0 6px 22px;border-left:4px solid var(--yellow)}
+.art blockquote.pull p{font-family:var(--head);font-weight:500;font-size:clamp(24px,3.4vw,30px);line-height:1.2;text-transform:uppercase;color:var(--purple);margin:0}
+.art blockquote.pull cite{display:block;margin-top:10px;font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.art .body em{font-style:italic}
+.art .body a{color:var(--purple);border-bottom:1px solid var(--line)}
+.sources{margin-top:40px;border-top:1px solid var(--line);padding-top:14px}
+.sources summary{cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--purple)}
+.sources ul{margin:12px 0 0;padding-left:18px;font-size:13px;color:var(--mute);line-height:1.6}
+.sources li{margin-bottom:4px}
+.sources a:hover{color:var(--purple)}
+.sources p{font-size:12px;color:var(--mute);margin:12px 0 0}
+
+.art>.meta{display:block}
+.art>.meta+.body{margin-top:26px}

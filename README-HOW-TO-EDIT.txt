@@ -38,3 +38,13 @@ HOW TO ADD A NEW STORY
    Trending or a card block.
 5. Add a card for it on its section page (copy an <a class="card"> block).
 6. Check it on a phone-width screen before publishing.
+
+LONG-FORM ARTICLES (added 26 Oct 2026)
+The ten story pages (mr-eazi, ayrosh, tg-blk, nairobi-new-sound, made-in-lagos,
+soul-makossa, lagos-fashion-week, watchlist, sunday-reset) now carry full
+articles. Their text lives in _articles/*.py, one file per story, with a
+Sources list at the bottom of each. To change an article, edit its .py file
+and run:  python3 _articles/build.py
+That rewrites only the article body and <title> of each page; the header,
+menu and footer are left alone. Every fact must still be checked against
+2+ independent sources; anything single-sourced was left out.
