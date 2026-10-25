@@ -48,3 +48,16 @@ and run:  python3 _articles/build.py
 That rewrites only the article body and <title> of each page; the header,
 menu and footer are left alone. Every fact must still be checked against
 2+ independent sources; anything single-sourced was left out.
+
+SEO, SOCIALS AND CHARTS (added 26 Oct 2026)
+- Every page's <head> carries a meta description, canonical URL, Open Graph /
+  Twitter tags (the share preview on WhatsApp, Instagram DMs, X) and schema.org
+  JSON-LD (NewsArticle on stories). When you copy a story page for a new
+  story, update those lines too: title, description, canonical/og:url,
+  og:image, datePublished.
+- Add each new page to sitemap.xml. robots.txt points search engines to it.
+- Socials (Instagram, TikTok, YouTube) sit in the header (desktop), the menu,
+  the footer, and the rail on the homepage hero.
+- The scrolling ticker under the homepage hero is the <div class="ticker">
+  block in index.html. Edit the <span> items in BOTH .tk-run copies.
+- charts.html is the Charts section (Flavor Charts, every Tuesday).

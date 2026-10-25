@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_articles/
+Disallow: /_builder.py
+
+Sitemap: https://flavorafricagroup.org/sitemap.xml
