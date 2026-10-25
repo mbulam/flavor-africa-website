@@ -19,7 +19,7 @@ BODY = [
 
 ("h2", "The first week", "A first ", "for Africa"),
 ("p", "The numbers came fast. In its first week, <em>Made in Lagos</em> debuted at No. 10 on Spotify's Global Album chart, the first African album to debut on that chart, let alone inside the top ten. Nine days after release it had passed 100 million streams across five platforms."),
-("img", "img/mil-cover.jpg", "The Made in Lagos album cover"),
+("img", "img/mil-cover.jpg", "Wizkid"),
 
 ("h2", "2021", "Essence ", "makes history"),
 ("p", "Then came the slow burn. “Essence”, the album's duet with Tems, wasn't released as a big lead single, but listeners in the US found it on their own. In July 2021 it debuted on the Billboard Hot 100 at No. 82. It was Tems’ first ever entry on the chart."),

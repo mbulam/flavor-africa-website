@@ -4,7 +4,7 @@ TAG = "Flavor Fashion"
 H1 = "Lagos Fashion Week 2026"
 DEK = "Everything to know before the runway lights up. Five days, one big idea, and the platform that has launched some of Africa's most exciting designers. The CRAFTED season runs from 28 October to 1 November."
 META = "Flavor Fashion · 28 Oct – 1 Nov 2026 · 5 min read"
-LEAD = ("img/lfw-cover.jpg", "Lagos Fashion Week")
+LEAD = ("img/lfw-incubator.jpg", "On the runway at Lagos Fashion Week")
 
 BODY = [
 ("p", "Every year, for one week, the fashion world's attention turns to Victoria Island. Buyers, editors, stylists and the best-dressed people in West Africa descend on Lagos to see what the continent's designers will do next. In 2026, Lagos Fashion Week comes with a theme that sums up where African fashion is right now: <em>CRAFTED</em>."),
@@ -17,7 +17,7 @@ BODY = [
 ("h2", "The week", "How the five days ", "play out"),
 ("p", "Wednesday 28 October opens the season with a welcome party. From Thursday 29 to Saturday 31 October, the runway shows take over the LagosFW Tents at the Federal Palace Hotel on Victoria Island. On Sunday 1 November, the week moves out into the city, with offsite shows and special presentations across Lagos."),
 ("p", "Heineken returns as title sponsor, a role it has held since 2015, with NIVEA, the Africa Finance Corporation and Lush Hair as key partners. The show is organised by Style House Files, the creative agency behind Lagos Fashion Week since the start. The full designer line-up is being revealed by the organisers in the run-up to the week, and we'll be covering the standout collections as they show."),
-("img", "img/lfw-crafted.jpg", "Lagos Fashion Week"),
+("img", "img/lfw-design.jpg", "Lagos Fashion Week runway"),
 
 ("h2", "Since 2011", "Fifteen years ", "in the making"),
 ("p", "Lagos Fashion Week was founded in 2011 by Omoyemi Akerele, who also runs Style House Files. From the beginning, the goal was bigger than a runway. Akerele has spoken about focusing on what happens after the lights go out: helping designers with production, retail and the business side, so that a great show turns into a lasting brand."),
