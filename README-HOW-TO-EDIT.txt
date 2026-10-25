@@ -57,7 +57,7 @@ SEO, SOCIALS AND CHARTS (added 26 Oct 2026)
   og:image, datePublished.
 - Add each new page to sitemap.xml. robots.txt points search engines to it.
 - Socials (Instagram, TikTok, YouTube) sit in the header (desktop), the menu,
-  the footer, and the rail on the homepage hero.
+  and the footer (not on the cover photo).
 - The scrolling ticker under the homepage hero is the <div class="ticker">
   block in index.html. Edit the <span> items in BOTH .tk-run copies.
 - charts.html is the Charts section (Flavor Charts, every Tuesday).

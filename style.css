@@ -272,11 +272,6 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 .foot-soc{grid-column:1/-1;display:flex;align-items:center;gap:14px}
 .foot-soc .soc a{color:var(--purple)}
 .hero-box{position:relative;min-width:0}
-.rail{position:absolute;top:22px;left:16px;z-index:2;flex-direction:column;gap:4px}
-.rail::after{content:"";width:1px;height:24px;background:rgba(255,255,255,.55);margin-top:6px}
-.rail a{color:#fff;filter:drop-shadow(0 1px 3px rgba(0,0,0,.55))}
-.rail a:hover{color:var(--yellow)}
-.hero-box .hero-txt{padding-left:28px}
 .ticker{background:var(--purple);color:#fff;overflow:hidden;white-space:nowrap}
 .tk-track{display:flex;width:max-content;animation:tk 38s linear infinite}
 .ticker:hover .tk-track{animation-play-state:paused}
@@ -289,9 +284,6 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 @media (max-width:640px){
   .hero-box{margin-inline:-16px}
   .hero-box .hero{margin-inline:0}
-  .rail{top:16px;left:8px}
-  .rail::after{height:48px}
-  .hero-box .hero-txt{padding-left:56px}
   .tk-run span{font-size:11px;padding:11px 0}
   .tk-run i{margin:0 16px}
 }
