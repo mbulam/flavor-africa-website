@@ -18,5 +18,6 @@ BODY = [
 SOURCES = [
  ("SoccerBible: Germany debut their last shirt from Adidas (Sep 2026)", "https://www.soccerbible.com/performance/football-apparel/2026/09/germany-debut-their-last-shirt-from-adidas/"),
  ("Footy Headlines: Final Adidas Germany kit released (Sep 2026)", "https://www.footyheadlines.com/0325810084/final-adidas-germany-kit-released-in-hybrid-specifications-at-replica-price.html"),
+ ("Khaosod English / AP: Nike deal ends German soccer's relationship with Adidas (Mar 2024)", "https://www.khaosodenglish.com/news/business/2024/03/22/nike-deal-ends-german-soccers-long-standing-relationship-with-adidas/"),
  ("House of Heat: Germany Adidas farewell kit details", "https://houseofheat.co/adidas/germany-adidas-farewell-kit-details"),
 ]

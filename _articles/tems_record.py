@@ -16,6 +16,7 @@ BODY = [
 ]
 
 SOURCES = [
+ ("OkayAfrica: Tems takes home her first Grammy (Feb 2023)", "https://www.okayafrica.com/tems-takes-home-her-first-grammy-award/147066"),
  ("DancehallMag: Tems' “What You Need” logs 30th week on Billboard Hot 100 (23 Oct 2026)", "https://www.dancehallmag.com/2026/10/23/news/tems-what-you-need-logs-30th-week-on-billboard-hot-100-setting-a-new-african-record.html"),
  ("Legit.ng: Tems makes history on Billboard Hot 100 (21 Oct 2026)", "https://www.legit.ng/entertainment/celebrities/1737287-tems-history-billboard-hot-100-surpasses-tyla-ckay-major-record/"),
  ("West Africa Weekly: Tems breaks Billboard record", "https://westafricaweekly.com/tems-breaks-billboard-record-as-what-you-need-becomes-longest-charting-solo-african-song/"),

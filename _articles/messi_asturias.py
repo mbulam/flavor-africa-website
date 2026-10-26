@@ -28,6 +28,7 @@ SOURCES = [
  ("Taipei Times / AFP: Messi receives top Spanish award from heir to throne", "https://www.taipeitimes.com/News/sport/archives/2026/10/25/2003866572"),
  ("CRHoy: Messi wins the 2026 Princess of Asturias Award for Sports (3 Jun 2026)", "https://www.crhoy.com/deportes/messi-gana-el-premio-princesa-de-asturias-de-los-deportes-2026/"),
  ("¡Hola!: Messi reacts to winning the Princess of Asturias Award (Jun 2026)", "https://www.hola.com/actualidad/20260603905208/leo-messi-premio-princesa-de-asturias-de-los-deportes-2026/"),
+ ("Africanews: Kenya's Eliud Kipchoge wins Spain's 2023 Asturias award for sports", "https://africanews.com/2023/05/20/kenyas-eliud-kipchoge-wins-spains-2023-asturias-award-for-sports"),
  ("Fundación Princesa de Asturias: Studio Ghibli, 2026 laureate", "https://www.fpa.es/en/princess-of-asturias-awards/laureates/2026-studio-ghibli/?texto=acta"),
  ("Cartoon Brew: Studio Ghibli wins Spain's Princess of Asturias Award", "https://www.cartoonbrew.com/awards/studio-ghibli-spain-princess-of-asturias-award-260664.html"),
 ]
