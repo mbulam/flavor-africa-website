@@ -40,7 +40,7 @@ BODY = [
 ("p", "If you want one song that sums up 2026 so far, it's “Chai ya saa kumi” by Ywaya Tajiri. In June it was the most-streamed song in Nairobi on Spotify, and Ywaya's streams among Kenyan 18 to 24-year-olds were up 6,151% on the year before, the biggest jump of any emerging artist. Behind him on that list were OnlyMoh, Virusi Mbaya, Codey and JayLo, all growing by thousands of percent."),
 ("p", "It's not only newcomers. Prince Indah, the ohangla star, grew 221% among young listeners. Nyashinski, Bridget Blue, Kinoti and Nikita Kering' all more than doubled or came close. Brandy Maina and Maandy grew by more than 200% each."),
 
-("img", "img/nns-ywaya.jpg", "Ywaya Tajiri, the breakout of 2026"),
+("img", "img/nns-ywaya.jpg", "Ywaya Tajiri, the breakout of 2026", "@ariffphotographyke / Instagram"),
 
 ("h2", "On repeat right now", "October's ", "main character"),
 ("p", "If October has a name, it's Kapitani. He has been releasing at a pace few Kenyan artists can match this year, from “Kitemeo” in July to “Safe” with Countree Hype in September. On 12 October he dropped “Shing” with arbantone favourite Toxic Lyrikali, and he was back again on 25 October with “More”. Several songs, one artist, all in rotation at once."),

@@ -12,8 +12,9 @@ def render(m):
     out = ['<div class="art">', '<span class="tag">%s</span>' % e(m.TAG), '<h1>%s</h1>' % e(m.H1),
            '<p class="dek">%s</p>' % e(m.DEK), '<span class="meta">%s</span>' % e(m.META)]
     if getattr(m, "LEAD", None):
-        src, cap = m.LEAD
-        out.append('<figure><img class="lead" src="%s" alt="%s"><figcaption>%s</figcaption></figure>' % (src, e(cap), e(cap)))
+        src, cap = m.LEAD[:2]
+        cr = '<span class="credit">Photo: %s</span>' % e(m.LEAD[2]) if len(m.LEAD) > 2 and m.LEAD[2] else ""
+        out.append('<figure><img class="lead" src="%s" alt="%s"><figcaption>%s%s</figcaption></figure>' % (src, e(cap), e(cap), cr))
     out.append('<div class="body">')
     for b in m.BODY:
         k = b[0]
@@ -24,7 +25,8 @@ def render(m):
             ks = '<span class="k">%s</span>' % e(kicker) if kicker else ""
             out.append('<h2>%s%s<b class="hb">%s</b></h2>' % (ks, e(plain), e(bold)))
         elif k == "img":
-            out.append('<figure><img src="%s" alt="%s" loading="lazy"><figcaption>%s</figcaption></figure>' % (b[1], e(b[2]), e(b[2])))
+            cr = '<span class="credit">Photo: %s</span>' % e(b[3]) if len(b) > 3 and b[3] else ""
+            out.append('<figure><img src="%s" alt="%s" loading="lazy"><figcaption>%s%s</figcaption></figure>' % (b[1], e(b[2]), e(b[2]), cr))
         elif k == "duo":
             out.append('<div class="duo">%s</div>' % "".join('<img src="%s" alt="%s" loading="lazy">' % (s, e(a)) for s, a in b[1]))
         elif k == "quote":
