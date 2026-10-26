@@ -2,7 +2,7 @@ FILE = "tg-blk.html"
 TITLE = "tg.blk: the Mombasa producer opening doors for alternative music"
 TAG = "Flavor Radar"
 H1 = "tg.blk"
-DEK = "She taught herself to make beats on GarageBand, broke through with a song she recorded in a dorm room, and in 2026 both Apple Music and Spotify put her name in lights. Meet the Mombasa artist leading Kenya's alternative wave."
+DEK = "She taught herself to make beats on GarageBand, broke through with a song she recorded and mixed herself, and in 2026 both Apple Music and Spotify put her name in lights. Meet the Mombasa artist leading Kenya's alternative wave."
 META = "Flavor Radar · 27 Oct 2026 · 4 min read"
 LEAD = ("img/tg-2026.jpg", "tg.blk")
 
@@ -11,7 +11,7 @@ BODY = [
 ("p", "That's exactly why the industry is paying attention now."),
 
 ("h2", "Where it started", "Made in ", "a bedroom"),
-("p", "tg.blk, real name Nyathigi Gatere, was born and raised in Mombasa. She started teaching herself to rap and make beats on GarageBand while she was still in high school, then went abroad to study in the United States, where she kept recording and producing in her dorm room and sharpened her songwriting. She has since moved back to Kenya."),
+("p", "tg.blk, real name Thigi, was born and raised in Mombasa. She started teaching herself to rap and make beats on GarageBand while she was still in high school, then went abroad to study in the United States, where she kept recording and producing in her dorm room and sharpened her songwriting. She has since moved back to Kenya."),
 ("p", "Her influences are not the usual list for a rapper. She has named Zimbabwe's Oliver Mtukudzi, Kikuyu benga legend Joseph Kamaru, South Africa's Brenda Fassie and the mixtapes of Kenya's Ogopa DJs, alongside the beat-making of Timbaland and classic boom-bap."),
 
 ("img", "img/tg-garageband.jpg", "tg.blk at home"),
@@ -43,6 +43,9 @@ SOURCES = [
  ("Music In Africa: tg.blk profile", "https://www.musicinafrica.net/node/382350"),
  ("Ones To Watch: Who is tg.blk?", "https://resources.onestowatch.com/tgblk/"),
  ("Ones To Watch: Love Being Used (Apr 2021)", "https://www.onestowatch.com/blog/tgblk-love-being-used"),
+ ("OkayAfrica: tg.blk is pioneering the next wave of hip-hop from Kenya", "https://www.okayafrica.com/tgblk-is-pioneering-the-next-wave-of-hip-hop-from-kenya-to-the-world/171806"),
+ ("The Culture Crypt: tg.blk on besides you (interview)", "https://www.theculturecrypt.com/interviews/tgblk-interview"),
+ ("Okayplayer: First Look Friday, tg.blk", "https://www.okayplayer.com/first-look-friday-tgblk/369889"),
  ("Clash: tg.blk releases besides you (Sep 2026)", "https://www.clashmusic.com/?p=462299"),
  ("The Line of Best Fit: tg.blk reveals besides you (Jun 2026)", "https://www.thelineofbestfit.com/news/tg-blk-reveals-plans-for-new-ep-besides-you"),
 ]
