@@ -196,7 +196,7 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 '''
 # ---------- content (only what Flavor Africa has covered / announced) ----------
 SECTIONS=[
- ('music','Music',['The Drop','Song of the Day','Flavor Playlist','Flavor Charts','Flavor Radar','The Verdict'],'New releases, the charts and the artists to watch, from Nairobi to the world.'),
+ ('music','Music',['The Drop','Flavor Playlist','Flavor Charts','Flavor Radar','The Verdict'],'New releases, the charts and the artists to watch, from Nairobi to the world.'),
  ('screen','Film & TV',['The Watchlist'],'What to watch this weekend across cinemas and streaming.'),
  ('fashion','Fashion',['Flavor Fashion'],'Style, written like an editorial spread.'),
  ('money','Business',['Money Moves','Flavor Figures'],'The real ownership moves behind entertainment, and the numbers that tell the story.'),
