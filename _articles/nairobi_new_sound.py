@@ -28,17 +28,25 @@ BODY = [
 ("p", "Not everything is fast. The year's biggest cross-border hit, “Finale” by Kenya's Bien and Tanzania's Alikiba, is built on konpa (also spelled kompa), the smooth Haitian dance rhythm that has quietly spread through African pop. Alikiba has described konpa as an international sound that has given the region an identity."),
 ("p", "Kodong Klan, the seven-voice Nairobi collective, went the same way in September with “Your Body”. Member Charisma signed off his announcement of the song with a simple slogan: konpa to the world."),
 
+("img", "img/nns-bien.jpg", "Bien, whose konpa-driven “Finale” with Alikiba became the year’s big cross-border hit"),
+
 ("h2", "The plot twist", "Nobody saw ", "this coming"),
 ("p", "Here's the number that surprised everyone. Among young Kenyan listeners, gospel grew 37% year on year. Drill, which a lot of people assumed was the future of youth music, grew just 6%. That means gospel is growing roughly six times faster than drill among the very generation running the club mixes."),
 ("p", "It fits a wider pattern in the data. Young listeners are streaming more of almost everything: amapiano up 34%, R&B up 28%, Afrobeats up 25%, Afropop up 21%. They aren't choosing between the club and the church. They're doing both, sometimes on the same playlist."),
+
+("img", "img/nns-gospel.jpg", "Gospel is growing roughly six times faster than drill among young Kenyan listeners"),
 
 ("h2", "The breakout", "Four o'clock tea, ", "all year"),
 ("p", "If you want one song that sums up 2026 so far, it's “Chai ya saa kumi” by Ywaya Tajiri. In June it was the most-streamed song in Nairobi on Spotify, and Ywaya's streams among Kenyan 18 to 24-year-olds were up 6,151% on the year before, the biggest jump of any emerging artist. Behind him on that list were OnlyMoh, Virusi Mbaya, Codey and JayLo, all growing by thousands of percent."),
 ("p", "It's not only newcomers. Prince Indah, the ohangla star, grew 221% among young listeners. Nyashinski, Bridget Blue, Kinoti and Nikita Kering' all more than doubled or came close. Brandy Maina and Maandy grew by more than 200% each."),
 
+("img", "img/nns-ywaya.jpg", "Ywaya Tajiri, the breakout of 2026"),
+
 ("h2", "On repeat right now", "October's ", "main character"),
 ("p", "If October has a name, it's Kapitani. He has been releasing at a pace few Kenyan artists can match this year, from “Kitemeo” in July to “Safe” with Countree Hype in September. On 12 October he dropped “Shing” with arbantone favourite Toxic Lyrikali, and he was back again on 25 October with “More”. Several songs, one artist, all in rotation at once."),
 ("p", "Mejja, one of gengetone's biggest names, has opened a new chapter too. After more than two decades in music, he finally released his debut album, <em>Mtoto wa Khadija</em>, led by the TikTok-friendly “Siaka Siaka” with Uganda's Fik Fameica."),
+
+("duo", [("img/nns-kapitani.jpg", "Kapitani"), ("img/nns-mejja.jpg", "Mejja")]),
 
 ("h2", "So what is the new sound?", "The new sound is ", "all of it"),
 ("p", "The old guard isn't being pushed out. Sauti Sol, on an indefinite break since 2023, was still the most-streamed Kenya-connected act in Nairobi in June, and still growing, up 30% among young listeners. And this month Bien, one of the group's four voices, became the first African artist signed to Quality Control Music, the Atlanta label behind Migos, Lil Baby and City Girls. Its co-founder Coach K called him an artist who could hold a stadium with just a guitar."),
