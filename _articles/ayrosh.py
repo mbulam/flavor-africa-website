@@ -22,13 +22,19 @@ BODY = [
 ("p", "His debut EP, <em>Murasta</em> (Gikuyu for “rastaman”), arrived in June 2019, launched with a concert at the Michael Joseph Centre in Nairobi. It was seven tracks of Afro-house sung in Gikuyu, English and Swahili, made with US-based Kenyan producer Waithaka Ent, and he has said it took two years to finish. He described it as a story of resilience, love, protest and chasing dreams."),
 ("p", "In October 2020 came <em>Fire</em>, a four-track EP produced by DJ Mura that leaned into R&B and soul, with poet Mumbi Macharia featured. Then, in May 2024, his first full album: <em>SUPERSTAR</em>, nine tracks released on his own Folk Fusion label. Its title track got a remix from producer Kayrop in late 2023, ahead of the album."),
 
+("img", "img/ay-catalogue.jpg", "Ayrosh on stage"),
+
 ("h2", "The movement", "He built ", "Folk Fusion"),
 ("p", "Ayrosh isn't only an artist. He also runs Folk Fusion, a live event in Nairobi built around one idea: take the Gikuyu classics and play them with a modern, funky twist. Over the years its stage has hosted legends like Joseph Kamaru, John Ndichu and the Rift Valley Brothers alongside younger folk and fusion acts, with Kenyan food on the menu and guests encouraged to come in African wear."),
 ("quote", "Folk Fusion is a way of thinking, of being in the future but not forgetting the past.", "Ayrosh, 2019"),
 ("p", "Folk Fusion is also the name on his releases. It's the label behind <em>Fire</em>, <em>SUPERSTAR</em> and his recent singles, which means the music, the brand and the events all sit under one roof he owns."),
 
+("img", "img/ay-folk.jpg", "Ayrosh"),
+
 ("h2", "The collabs", "Good ", "company"),
 ("p", "He's a sought-after feature. He's on “Mwanake Millennial” from Mutoriah's 2019 album <em>Dive In</em>, and this year he appears on Mutoriah's “Day One” too. He's on Wanjine's “Wũiru”, and in 2026 he features on “My Lover” with Mura, Hiribae and Ghedi. Behind the scenes he writes for others as well: he has a writing credit on 10Tonnes’ 2023 single “Njiira”."),
+
+("img", "img/ay-collabs.jpg", "Ayrosh"),
 
 ("h2", "Start here", "The Ayrosh ", "starter pack"),
 ("p", "New to him? Start with “Maheni” for the song that broke him through. Then play the <em>Fire</em> EP for the R&B side, all four tracks in one sitting. Finish with <em>SUPERSTAR</em>, start to finish, and the Kayrop remix of the title track. By 28 November, you'll know the words."),

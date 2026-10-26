@@ -27,9 +27,13 @@ BODY = [
 ("p", "The album rode the wave too. In late August 2021, ten months after release, <em>Made in Lagos</em> reached No. 1 on Billboard's World Albums chart."),
 ("img", "img/mil-tems.jpg", "Wizkid and Tems"),
 
+("img", "img/mil-crowd.jpg", "Wizkid live"),
+
 ("h2", "February 2022", "A 27-year record ", "falls"),
 ("p", "By early 2022, the question was no longer whether <em>Made in Lagos</em> would chart, but how long it would stay. In February it matched the 66 weeks that Cape Verdean legend Cesária Évora's self-titled album had spent on the World Albums chart, a record that had stood for 27 years. The following week it logged its 67th week and the record was Wizkid's alone."),
 ("p", "It never really left. In April 2025 it became the first African album to spend 150 weeks on the chart, and by late August 2025 it had passed 160."),
+
+("duo", [("img/mil-portrait.jpg", "Wizkid"), ("img/mil-now.jpg", "Wizkid")]),
 
 ("h2", "Six years on", "Still ", "on repeat"),
 ("p", "At the 64th Grammy Awards, Wizkid earned two nominations: Best Global Music Album for <em>Made in Lagos</em> (Deluxe) and Best Global Music Performance for “Essence”. He didn't win either, but the nominations confirmed what the charts had already shown: this was an African album the whole world was listening to."),

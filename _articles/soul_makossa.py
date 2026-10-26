@@ -13,6 +13,8 @@ BODY = [
 ("p", "Manu Dibango was born in Douala in December 1933 and became one of Africa's great saxophonists, moving between jazz, soul and the music of home. In 1972 Cameroon hosted the Africa Cup of Nations, and Dibango was asked to record an anthem for the tournament. On the B-side, almost as an afterthought, he put a track called “Soul Makossa”."),
 ("p", "Makossa is the urban dance music of Douala. Dibango built the song on that rhythm, added a heavy dose of American soul and funk, and topped it with a short chanted hook. Then the tournament ended, and the record should have disappeared with it."),
 
+("img", "img/sm-manu.jpg", "Manu Dibango"),
+
 ("h2", "The journey · 1973", "From Douala to ", "New York"),
 ("p", "Instead, a copy made its way to New York. Late in 1972, the DJ David Mancuso found the single in a small Jamaican record shop in Brooklyn and started playing it at The Loft, his legendary invitation-only parties in Manhattan. The dancers went wild. Other DJs went looking for copies, and the DJ Frankie Crocker started playing it on the New York radio station WBLS."),
 ("p", "There weren't nearly enough copies to go round. Cover versions rushed out to meet demand, including one by the Nigerian drummer Babatunde Olatunji, until Atlantic Records licensed Dibango's original for the US. In 1973 “Soul Makossa” climbed to No. 35 on the Billboard Hot 100, with very little help from mainstream radio, and earned Dibango two Grammy nominations."),
@@ -23,9 +25,13 @@ BODY = [
 ("p", "Nearly a decade later, Michael Jackson and Quincy Jones were making <em>Thriller</em>. Dibango's chant, slightly reworked, became the climax of the album's opening track. Nobody asked Dibango, and he wasn't credited."),
 ("p", "When he found out, he took action. Jackson admitted he had borrowed the hook, and the matter was settled out of court. <em>Thriller</em> went on to become the best-selling album in history, carrying a piece of Douala to every corner of the planet."),
 
+("img", "img/sm-mj.jpg", "Michael Jackson"),
+
 ("h2", "The credit", "Who ", "gets paid?"),
 ("p", "The story didn't end there. In 2007 Rihanna released “Don't Stop the Music”, which sampled Jackson's version of the chant. In 2008 a French judge ordered Universal Music to credit Dibango on future French releases of the song, and Dibango dropped that earlier action, giving up his right to further damages."),
 ("p", "In 2009 he went back to court in Paris, suing both Rihanna and Jackson. The judge ruled the claim inadmissible, because of the agreement he had already accepted. It was a reminder of how hard it can be for an African original to get paid when its music travels the world through other people's hits."),
+
+("img", "img/sm-rihanna.jpg", "Rihanna"),
 
 ("h2", "The legacy", "A chant that ", "won't stop"),
 ("p", "“Soul Makossa” has kept travelling. Its sounds have been sampled across hip-hop, from A Tribe Called Quest's “Rhythm (Devoted to the Art of Moving Butts)” to Will Smith's “Gettin' Jiggy Wit It” and Jay-Z's “Face Off”."),
