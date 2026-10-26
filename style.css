@@ -303,3 +303,11 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 :root[data-theme="dark"] .theme .sun{display:none}:root[data-theme="dark"] .theme .moon{display:block}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .theme .sun{display:none}:root:not([data-theme="light"]) .theme .moon{display:block}}
 .credit{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--mute);margin-top:4px}
+
+/* The Wrap block on the homepage */
+.wrapgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 32px}
+.wrapgrid .hs{border-top:1px solid var(--line);padding-block:18px}
+.wrapgrid .hs:nth-child(-n+3){border-top:0;padding-top:0}
+@media (max-width:900px){.wrapgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.wrapgrid .hs:nth-child(3){border-top:1px solid var(--line);padding-top:18px}}
+@media (max-width:600px){.wrapgrid{grid-template-columns:minmax(0,1fr)}.wrapgrid .hs:nth-child(2){border-top:1px solid var(--line);padding-top:18px}}
+.art .body ul{padding-left:20px;margin:0 0 22px}.art .body li{margin:4px 0}

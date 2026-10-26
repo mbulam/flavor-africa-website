@@ -3,7 +3,7 @@ TITLE = "Nairobi's New Sound"
 TAG = "The Flavor Cover"
 H1 = "Nairobi’s New Sound"
 DEK = "It isn't one genre. That's the whole point. Africa's youngest streaming city is playing dancehall, konpa, arbantone and gospel all at once, and the numbers prove it. Issue 01 of the Flavor Cover."
-META = "The Flavor Cover · Issue 01 · October 2026 · 7 min read"
+META = "The Flavor Cover · Issue 01 · 24 Oct 2026 · 7 min read"
 LEAD = ("img/nns-njerae.jpg", "Cover: Njerae, live with Flavor Africa")
 
 BODY = [

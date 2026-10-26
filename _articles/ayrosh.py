@@ -3,7 +3,7 @@ TITLE = "Know your November artist: Ayrosh"
 TAG = "Flavor Artist Live"
 H1 = "Know your November artist: Ayrosh"
 DEK = "He took the sound of Kikuyu bars and weddings and made it sound like the future. Before he headlines Flavor Artist Live on 28 November, here's everything you need to know."
-META = "Flavor Artist Live · 28 November 2026 · 5 min read"
+META = "Flavor Artist Live · 25 Oct 2026 · Show: 28 Nov · 5 min read"
 LEAD = ("img/ay-cover.jpg", "Ayrosh")
 
 BODY = [

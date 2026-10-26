@@ -3,7 +3,7 @@ TITLE = "That chant on Thriller? It started in Cameroon"
 TAG = "Flavor Roots"
 H1 = "That chant on Thriller? It started in Cameroon"
 DEK = "The best-selling album of all time ends its first song with a chant the whole world knows. It wasn't Michael Jackson's. Flavor Roots Issue 01 traces it back to a B-side recorded for a football tournament in 1972."
-META = "Flavor Roots · Issue 01 · Soul Makossa · Cameroon, 1972 · 6 min read"
+META = "Flavor Roots · Issue 01 · 22 Oct 2026 · 6 min read"
 LEAD = ("img/sm-manu-stage.jpg", "Manu Dibango")
 
 BODY = [

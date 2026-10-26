@@ -61,3 +61,16 @@ SEO, SOCIALS AND CHARTS (added 26 Oct 2026)
 - The scrolling ticker under the homepage hero is the <div class="ticker">
   block in index.html. Edit the <span> items in BOTH .tk-run copies.
 - charts.html is the Charts section (Flavor Charts, every Tuesday).
+
+ADDING STORIES THE EASY WAY (added 26 Oct 2026, replaces the manual steps above)
+1. Write the article as _articles/<name>.py (copy any existing one; a caption can
+   take a photo credit as a third item, e.g. ("img", "img/x.jpg", "Caption", "@handle / Instagram")).
+2. Add one line for it to STORIES in _site.py: slug, sections, tag, title,
+   teaser, image, date (YYYY-MM-DD, Nairobi time), image focus.
+3. Run:  python3 _site.py && python3 _articles/build.py
+That creates the page if it's new and rebuilds every section page, the News page,
+the homepage Latest / The Wrap / Culture & Sport blocks and sitemap.xml.
+SCHEDULING: stories dated in the future stay hidden from every listing until their
+date (Nairobi time), so you can publish ahead.
+Sections: news (The Wrap), music, charts, screen, fashion, money, sport, culture,
+features, live. A story can sit in more than one.
