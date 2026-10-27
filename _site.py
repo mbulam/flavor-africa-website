@@ -307,7 +307,8 @@ big=sec.querySelector(".f10-big"),bar=sec.querySelector(".f10-prog i"),tm=sec.qu
 function jsonp(u,cb){var k="f10cb"+(n++),s=document.createElement("script"),done=false;window[k]=function(d){done=true;delete window[k];s.remove();cb(d)};
 s.onerror=function(){if(!done){delete window[k];cb(null)}};s.src=u+"&callback="+k;document.body.appendChild(s);setTimeout(function(){if(!done){done=true;cb(null)}},8000)}
 function find(li,cb){var q=li.dataset.q,id=li.dataset.id;if(cache[q])return cb(cache[q]);
-function pick(d){var r=d&&d.results&&d.results.filter(function(x){return x.previewUrl})[0];if(r)cache[q]=r;return r}
+var want=norm(li.dataset.t);function norm(s){return (s||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim()}
+function pick(d){var r=d&&d.results&&d.results.filter(function(x){var n=norm(x.trackName);return x.previewUrl&&(n.indexOf(want)===0||want.indexOf(n)===0||n.indexOf(want.split(" ")[0])===0)})[0];if(r)cache[q]=r;return r}
 var search=function(){jsonp("https://itunes.apple.com/search?country=ke&entity=song&limit=5&term="+encodeURIComponent(q),function(d){cb(pick(d))})};
 if(id)jsonp("https://itunes.apple.com/lookup?country=ke&id="+id,function(d){var r=pick(d);r?cb(r):search()});else search()}
 function links(li,r){var q=encodeURIComponent(li.dataset.q);sec.querySelector("#f10-sp").href="https://open.spotify.com/search/"+q;
