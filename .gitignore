@@ -1,0 +1,3 @@
+# Python bytecode caches generated while building the site.
+__pycache__/
+*.py[cod]

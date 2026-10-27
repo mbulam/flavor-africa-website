@@ -43,6 +43,7 @@ STORIES = [
  ("tg-blk", ["music"], "Flavor Spotlight", "tg.blk: the Mombasa bedroom producer opening doors for alternative music", "The artist to watch from the coast.", "tg-2026.jpg", "2026-10-27", "center 25%"),
  ("made-in-lagos", ["culture"], "Flavor Rewind", "Made in Lagos at six", "How Wizkid's fourth album rewrote Africa's chart records.", "mil-stage.jpg", "2026-10-30", "center 25%"),
  ("mugithi-decoded", ["culture"], "Flavor Decoded", "Mugithi, decoded", "One voice, one guitar, and a whole room holding on. What mugithi is and where it came from.", "ay-live.jpg", "2026-11-02", "center 30%"),
+ ("ballon-dor-2026", ["sport"], "Flavor Sports", "Kane ends England’s wait. Putellas makes it three.", "Harry Kane and Alexia Putellas lead a night of winners, records and new ground for the Ballon d’Or in London.", "bdor-kane-putellas.jpg", "2026-10-27", "center"),
 ]
 
 SECTIONS = {  # slug: (heading on page, empty message)
@@ -58,6 +59,8 @@ EDITION = {
  "bien-alusa-continua": "Local", "bridget-blue-grammys": "Local", "tems-what-you-need-record": "Continental",
 }
 HERO_AND_SIDES = {"ayrosh", "nairobi-new-sound", "mr-eazi", "soul-makossa"}
+# Selected stories that should also appear in the homepage's main Latest grid.
+HOME_LATEST = {"ballon-dor-2026"}
 
 
 def nice(d):
@@ -235,11 +238,11 @@ def build_sections():
 
 def build_home():
     h = rd("index.html")
-    latest = [s for s in newest(STORIES) if s[0] not in HERO_AND_SIDES and not set(s[1]) & {"news", "culture", "sport"}]
+    latest = [s for s in newest(STORIES) if s[0] not in HERO_AND_SIDES and (s[0] in HOME_LATEST or not set(s[1]) & {"news", "culture", "sport"})]
     h, n = re.subn(r'<div class="hgrid"[^>]*>.*?</div></section>', lambda m: '<div class="hgrid" data-limit="6">%s</div></section>' % "".join(hc(s) for s in latest), h, count=1, flags=re.S)
     assert n == 1
     wrap = newest([s for s in STORIES if "news" in s[1]])
-    cult = newest([s for s in STORIES if "culture" in s[1] or "sport" in s[1]])
+    cult = newest([s for s in STORIES if ("culture" in s[1] or "sport" in s[1]) and s[0] not in HOME_LATEST])
     blocks = ('<section class="wrap block" id="the-wrap"><div class="secbar"><h2>The Wrap</h2><a href="news.html">All news »</a></div>'
               '<div class="wrapgrid" data-limit="6">%s</div></section>'
               '<section class="wrap block"><div class="secbar"><h2>Culture &amp; Sport</h2><a href="culture.html">More culture »</a></div>'
