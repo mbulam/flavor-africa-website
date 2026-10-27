@@ -103,7 +103,7 @@ body:after{{content:"";position:absolute;inset:0;opacity:.05;pointer-events:none
 <div class="tag">FLAVOR CHARTS</div><div class="logo">flavor.africa</div>
 <div class="hd"><div class="k">THE FLAVOR 10 · KENYA · {ed["label"]}</div><div class="rule"></div></div>
 <div class="list">{"".join(rows)}</div>
-<div class="ft"><div><b>Sources:</b> Shazam Kenya · YouTube Kenya · Kenya radio airplay · Audiomack Kenya · Mdundo</div>
+<div class="ft"><div><b>Sources:</b> Apple Music · Spotify · Shazam · YouTube · Kenyan radio · Audiomack · Mdundo</div>
 <div class="key"><em>▲</em> climbed <em>▼</em> dropped<br><em>–</em> no change <em>NEW</em> new entry</div></div>
 </body></html>'''
 

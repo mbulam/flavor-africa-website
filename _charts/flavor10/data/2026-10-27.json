@@ -2,24 +2,28 @@
  "date": "2026-10-27",
  "label": "WEEK OF 27 OCT 2026",
  "sources": {
-  "S": "Shazam Kenya Top 200 (undated, read 27 Oct)",
+  "P": "Apple Music Top 100: Kenya (screenshot 27 Oct, 19:20 EAT, top 13 visible)",
+  "F": "Spotify Hot Hits Kenya (editorial playlist; screenshot 27 Oct, 19:21 EAT, top 10)",
+  "S": "Shazam Kenya Top 200 (read 27 Oct)",
   "Y": "YouTube Kenya, week of 19 Oct",
   "R": "Kenya radio airplay, week of 26 Oct",
-  "M": "Mdundo Kenya (undated, read 27 Oct)",
-  "A": "Audiomack Weekly 100 Kenya, updated 21 Oct"
+  "A": "Audiomack Weekly 100 Kenya, updated 21 Oct",
+  "M": "Mdundo Kenya (read 27 Oct)"
  },
  "songs": [
   {
    "title": "I'll Be Okay",
    "artist": "Bien",
-   "points": 74,
-   "charts": "SYRA"
+   "points": 114,
+   "charts": "SYRAPF",
+   "apple": "6822410197"
   },
   {
    "title": "Kitemeo",
    "artist": "Kapitani",
-   "points": 48,
-   "charts": "YMA"
+   "points": 59,
+   "charts": "YMAF",
+   "apple": "6793757785"
   },
   {
    "title": "Finale",
@@ -28,10 +32,38 @@
    "charts": "YRA"
   },
   {
+   "title": "Heaven Baby",
+   "artist": "Ayra Starr ft. Zayn",
+   "points": 47,
+   "charts": "SYF",
+   "apple": "6796539210"
+  },
+  {
+   "title": "Shing",
+   "artist": "Kapitani ft. Toxic Lyrikali",
+   "points": 42,
+   "charts": "SYF",
+   "apple": "6825214208"
+  },
+  {
+   "title": "AYAYAAH",
+   "artist": "ELEMENT EleéeH, Joshua Baraka & Bien",
+   "points": 34,
+   "charts": "RF"
+  },
+  {
+   "title": "Chai ya Saa Kumi",
+   "artist": "Ywaya Tajiri",
+   "points": 32,
+   "charts": "YRF",
+   "apple": "6796900642"
+  },
+  {
    "title": "Rapudo",
    "artist": "Prince Indah",
    "points": 31,
-   "charts": "YM"
+   "charts": "YM",
+   "apple": "1850928384"
   },
   {
    "title": "Mbebe",
@@ -40,34 +72,11 @@
    "charts": "YA"
   },
   {
-   "title": "Heaven Baby",
-   "artist": "Ayra Starr ft. Zayn",
-   "points": 29,
-   "charts": "SY"
-  },
-  {
    "title": "Hongo ya Karao Vol. 2",
    "artist": "Toxic Lyrikali ft. Mauru Gwash & Kapitani",
    "points": 28,
-   "charts": "YMA"
-  },
-  {
-   "title": "Ozalima",
-   "artist": "Mbosso",
-   "points": 28,
-   "charts": "YA"
-  },
-  {
-   "title": "Shing",
-   "artist": "Kapitani ft. Toxic Lyrikali",
-   "points": 23,
-   "charts": "SY"
-  },
-  {
-   "title": "Tegemeo Letu",
-   "artist": "Kwaya ya Mt. Kizito Makuburi",
-   "points": 20,
-   "charts": "SYM"
+   "charts": "YMA",
+   "apple": "6804729978"
   }
  ]
 }

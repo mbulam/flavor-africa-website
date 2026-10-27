@@ -268,7 +268,6 @@ def flavor10_html():
     ever = {(s["title"].lower(), s["artist"].lower()) for f in files[:-1] for s in json.load(open(f))["songs"]}
     last = {(s["title"].lower(), s["artist"].lower()): i for i, s in enumerate(prev or [], 1)}
     top = max(s["points"] for s in ed["songs"])
-    names = {"S": "Shazam", "Y": "YouTube", "R": "Radio", "M": "Mdundo", "A": "Audiomack"}
     rows = []
     for i, s in enumerate(ed["songs"], 1):
         k = (s["title"].lower(), s["artist"].lower())
@@ -278,18 +277,52 @@ def flavor10_html():
             mv = ('<span class="mv up">▲%d</span>' % d) if d > 0 else ('<span class="mv down">▼%d</span>' % -d) if d < 0 else '<span class="mv">–</span>'
         else:
             mv = '<span class="mv re">RE</span>' if k in ever else '<span class="mv new">NEW</span>'
-        W = 400 * s["points"] / top
+        W = 300 * s["points"] / top
         random.seed(i * 7 + 3)
-        bars = "".join('<rect x="%d" y="%.1f" width="3" height="%.1f" rx="1.5"/>' % (x, (40 - v) / 2, v)
-                       for x in range(0, int(W), 6) for v in [min(40, 10 + 30 * abs(random.gauss(.55, .28)))])
-        on = " · ".join(names[c] for c in s["charts"])
-        rows.append('<li%s><span class="f10-rk">%02d%s</span><div class="f10-t"><b>%s</b><span>%s</span></div>'
-                    '<div class="f10-w"><span class="f10-bar"><svg viewBox="0 0 %.0f 40" preserveAspectRatio="xMinYMid slice" style="width:%.0f%%" aria-hidden="true">%s</svg></span>'
-                    '</div></li>'
-                    % (' class="one"' if i == 1 else "", i, mv, e(s["title"]), e(s["artist"]), W, 100 * s["points"] / top, bars))
+        bars = "".join('<rect x="%d" y="%.1f" width="2.4" height="%.1f" rx="1.2"/>' % (x, (24 - v) / 2, v)
+                       for x in range(0, int(W), 5) for v in [min(24, 6 + 18 * abs(random.gauss(.55, .28)))])
+        lead = re.split(r" ft\. |, | & ", s["artist"])[0]
+        q = "%s %s" % (s["title"], lead)
+        rows.append('<li%s data-q="%s" data-id="%s" data-t="%s" data-a="%s"><span class="f10-rk">%02d%s</span>'
+                    '<div class="f10-t"><b>%s</b><span>%s</span><svg class="f10-wave" viewBox="0 0 %.0f 24" preserveAspectRatio="none" style="width:%.0f%%" aria-hidden="true">%s</svg></div>'
+                    '<button class="f10-btn" type="button" aria-label="Play %s"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="pl" d="M8 5.5v13l11-6.5z"/><path class="pa" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button></li>'
+                    % (' class="one"' if i == 1 else "", e(q), e(s.get("apple", "")), e(s["title"]), e(s["artist"]), i, mv,
+                       e(s["title"]), e(s["artist"]), W, 100 * s["points"] / top, bars, e(s["title"])))
+    player = ('<aside class="f10-pl" aria-label="Flavor 10 player"><div class="f10-art"><img alt="" hidden><span class="f10-ph">flavor.<b>10</b></span></div>'
+              '<div class="f10-now"><span class="tag">Now playing</span><b id="f10-title">%s</b><span id="f10-artist">%s</span></div>'
+              '<div class="f10-ctl"><button class="f10-big" type="button" aria-label="Play preview"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="pl" d="M8 5.5v13l11-6.5z"/><path class="pa" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>'
+              '<div class="f10-prog"><i></i></div><span class="f10-time">0:30</span></div>'
+              '<p class="f10-note">30-second previews. Listen in full:</p><div class="f10-links"><a id="f10-sp" target="_blank" rel="noopener">Spotify</a><a id="f10-am" target="_blank" rel="noopener">Apple Music</a><a id="f10-yt" target="_blank" rel="noopener">YouTube</a></div>'
+              '<audio preload="none"></audio></aside>' % (e(ed["songs"][0]["title"]), e(ed["songs"][0]["artist"])))
     return ('<section class="wrap block" id="flavor-10"><div class="secbar"><h2>The Flavor 10 · Kenya</h2>'
-            '<a href="charts.html">More charts »</a></div><p class="f10-sub">%s · What Kenya is playing this week.</p><ol class="f10">%s</ol>'
-            '<p class="f10-src"><b>Sources:</b> Shazam Kenya · YouTube Kenya · Kenya radio airplay · Audiomack Kenya · Mdundo. Updated every Monday.</p></section>' % (e(ed["label"].title().replace("Of", "of")), "".join(rows)))
+            '<a href="charts.html">More charts »</a></div><p class="f10-sub">%s · What Kenya is playing this week. Tap a song to listen.</p>'
+            '<div class="f10-grid"><ol class="f10">%s</ol>%s</div>'
+            '<p class="f10-src"><b>Sources:</b> Apple Music · Spotify · Shazam · YouTube · Kenyan radio · Audiomack · Mdundo. Updated every Monday.</p></section>%s'
+            % (e(ed["label"].title().replace("Of", "of")), "".join(rows), player, F10JS))
+
+
+F10JS = r"""<script>(function(){var sec=document.getElementById("flavor-10");if(!sec)return;
+var rows=[].slice.call(sec.querySelectorAll(".f10 li")),au=sec.querySelector("audio"),img=sec.querySelector(".f10-art img"),ph=sec.querySelector(".f10-ph"),
+big=sec.querySelector(".f10-big"),bar=sec.querySelector(".f10-prog i"),tm=sec.querySelector(".f10-time"),cur=null,cache={},n=0;
+function jsonp(u,cb){var k="f10cb"+(n++),s=document.createElement("script"),done=false;window[k]=function(d){done=true;delete window[k];s.remove();cb(d)};
+s.onerror=function(){if(!done){delete window[k];cb(null)}};s.src=u+"&callback="+k;document.body.appendChild(s);setTimeout(function(){if(!done){done=true;cb(null)}},8000)}
+function find(li,cb){var q=li.dataset.q,id=li.dataset.id;if(cache[q])return cb(cache[q]);
+function pick(d){var r=d&&d.results&&d.results.filter(function(x){return x.previewUrl})[0];if(r)cache[q]=r;return r}
+var search=function(){jsonp("https://itunes.apple.com/search?country=ke&entity=song&limit=5&term="+encodeURIComponent(q),function(d){cb(pick(d))})};
+if(id)jsonp("https://itunes.apple.com/lookup?country=ke&id="+id,function(d){var r=pick(d);r?cb(r):search()});else search()}
+function links(li,r){var q=encodeURIComponent(li.dataset.q);sec.querySelector("#f10-sp").href="https://open.spotify.com/search/"+q;
+sec.querySelector("#f10-yt").href="https://www.youtube.com/results?search_query="+q;sec.querySelector("#f10-am").href=r&&r.trackViewUrl?r.trackViewUrl:"https://music.apple.com/ke/search?term="+q}
+function show(li,r){sec.querySelector("#f10-title").textContent=li.dataset.t;sec.querySelector("#f10-artist").textContent=li.dataset.a;links(li,r);
+if(r&&r.artworkUrl100){img.src=r.artworkUrl100.replace("100x100","600x600");img.hidden=false;ph.hidden=true}else{img.hidden=true;ph.hidden=false}}
+function state(){rows.forEach(function(x){x.classList.toggle("on",x===cur&&!au.paused)});sec.classList.toggle("playing",!au.paused)}
+function play(li){if(cur===li&&au.src){au.paused?au.play():au.pause();return}cur=li;au.pause();bar.style.width="0";rows.forEach(function(x){x.classList.toggle("sel",x===li)});
+li.classList.add("load");find(li,function(r){li.classList.remove("load");show(li,r);if(cur!==li)return;
+if(r){au.src=r.previewUrl;au.play().catch(function(){})}else{au.removeAttribute("src");sec.querySelector(".f10-note").textContent="No preview for this one. Listen in full:"}})}
+rows.forEach(function(li){li.addEventListener("click",function(ev){if(ev.target.closest("a"))return;play(li)})});
+big.addEventListener("click",function(){play(cur||rows[0])});
+au.addEventListener("play",state);au.addEventListener("pause",state);au.addEventListener("ended",function(){var i=rows.indexOf(cur);state();if(i<rows.length-1)play(rows[i+1])});
+au.addEventListener("timeupdate",function(){if(au.duration){bar.style.width=(100*au.currentTime/au.duration)+"%";tm.textContent="0:"+("0"+Math.max(0,Math.ceil(au.duration-au.currentTime))).slice(-2)}});
+rows[0].classList.add("sel");cur=null;links(rows[0],null);find(rows[0],function(r){if(r&&!cur)show(rows[0],r)})})();</script>"""
 
 
 def build_flavor10():

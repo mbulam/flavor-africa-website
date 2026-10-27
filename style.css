@@ -330,36 +330,57 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
   .sides .hs h3{font-size:15px;margin:6px 0 4px}
 }
 
-/* The Flavor 10 · Kenya (homepage chart) */
+/* The Flavor 10 · Kenya (homepage chart + preview player) */
 .f10-sub{color:var(--mute);font-size:14px;margin:-8px 0 18px;max-width:70ch}
+.f10-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
 .f10{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.f10 li{display:grid;grid-template-columns:70px minmax(0,300px) minmax(0,1fr);gap:18px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
-.f10 li.one{background:var(--yellow);color:#15102A;padding:18px 16px;margin:0 -16px;border-bottom:0}
-.f10-rk{font-family:var(--head);font-size:34px;font-weight:500;line-height:1;color:var(--mute);display:flex;flex-direction:column;gap:5px;font-variant-numeric:tabular-nums}
-.one .f10-rk{color:#2A0174;font-weight:600;font-size:46px}
-.mv{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--mute)}
+.f10 li{display:grid;grid-template-columns:52px minmax(0,1fr) 40px;gap:12px;align-items:center;padding:9px 8px 9px 0;border-bottom:1px solid var(--line);cursor:pointer;transition:background .15s}
+.f10 li:hover{background:var(--ghost)}
+.f10 li.one{background:var(--yellow);color:#15102A;padding:12px 10px;border-bottom:0}
+.f10 li.sel:not(.one){background:var(--ghost)}
+.f10-rk{font-family:var(--head);font-size:26px;font-weight:500;line-height:1;color:var(--mute);display:flex;flex-direction:column;gap:4px;font-variant-numeric:tabular-nums}
+.one .f10-rk{color:#2A0174;font-weight:600;font-size:34px}
+.mv{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.04em;color:var(--mute)}
 .mv.up{color:var(--accent)} .mv.down{color:#B23A3A}
-.mv.new{background:var(--purple);color:var(--yellow);padding:2px 6px;align-self:flex-start}
-.mv.re{border:1px solid var(--accent);color:var(--accent);padding:1px 5px;align-self:flex-start}
+.mv.new{background:var(--purple);color:var(--yellow);padding:2px 5px;align-self:flex-start}
+.mv.re{border:1px solid var(--accent);color:var(--accent);padding:1px 4px;align-self:flex-start}
 .one .mv{color:#2A0174}
-.f10-t b{display:block;font-family:var(--head);font-size:22px;font-weight:600;text-transform:uppercase;letter-spacing:.01em;line-height:1.1}
-.one .f10-t b{font-size:30px;color:#2A0174}
-.f10-t span{display:block;font-size:13.5px;color:var(--mute);margin-top:2px}
+.f10-t{min-width:0}
+.f10-t b{display:block;font-family:var(--head);font-size:19px;font-weight:600;text-transform:uppercase;letter-spacing:.01em;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.one .f10-t b{font-size:24px;color:#2A0174}
+.f10-t span{display:block;font-size:12.5px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .one .f10-t span{color:#15102A}
-.f10-w{display:flex;align-items:center;gap:14px;min-width:0}
-.f10-bar{flex:none;width:min(560px,100%)}
-.f10-w svg{display:block;height:30px;fill:var(--accent);opacity:.8}
-.one .f10-w svg{fill:#2A0174;opacity:1;height:38px}
-.f10-on{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
-.one .f10-on{color:#2A0174}
-@media (max-width:700px){
-  .f10 li{grid-template-columns:52px minmax(0,1fr);gap:4px 12px}
-  .f10-w{grid-column:2}
-  .f10-w svg{height:22px}
-  .one .f10-w svg{height:26px}
-  .f10-rk{font-size:28px}.one .f10-rk{font-size:36px}
-  .f10-t b{font-size:19px}.one .f10-t b{font-size:24px}
-  .f10-on{font-size:9.5px;white-space:normal}
-}
-
+.f10-wave{display:block;height:14px;margin-top:5px;fill:var(--accent);opacity:.55}
+.one .f10-wave{fill:#2A0174;opacity:.8}
+.f10-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--paper);color:var(--accent);display:grid;place-items:center;cursor:pointer;padding:0}
+.f10-btn svg,.f10-big svg{width:16px;height:16px;fill:currentColor}
+.one .f10-btn{background:#2A0174;border-color:#2A0174;color:#F5CC11}
+.f10 .pa,.f10-pl .pa{display:none}
+.f10 li.on .pl,.playing .f10-big .pl{display:none}
+.f10 li.on .pa,.playing .f10-big .pa{display:inline}
+.f10 li.load .f10-btn{opacity:.4}
+.f10-pl{position:sticky;top:120px;border:1px solid var(--line);padding:22px;background:var(--paper)}
+.f10-art{aspect-ratio:1/1;background:var(--purple);display:grid;place-items:center;overflow:hidden;max-width:340px;margin:0 auto}
+.f10-art img{width:100%;height:100%;object-fit:cover;display:block}
+.f10-ph{font-family:var(--body);font-weight:700;font-size:44px;color:#fff;letter-spacing:-.03em}.f10-ph b{color:var(--yellow)}
+.f10-now{margin-top:18px}.f10-now .tag{margin-bottom:8px;display:inline-block}
+.f10-now b{display:block;font-family:var(--head);font-size:28px;font-weight:600;text-transform:uppercase;line-height:1.05}
+.f10-now span:last-child{display:block;color:var(--mute);font-size:14px;margin-top:2px}
+.f10-ctl{display:flex;align-items:center;gap:14px;margin-top:16px}
+.f10-big{width:52px;height:52px;border-radius:50%;border:0;background:var(--purple);color:var(--yellow);display:grid;place-items:center;cursor:pointer;flex:none;padding:0}
+.f10-big svg{width:22px;height:22px}
+.f10-prog{flex:1;height:4px;background:var(--line);border-radius:2px;overflow:hidden}.f10-prog i{display:block;height:100%;width:0;background:var(--accent)}
+.f10-time{font-family:var(--mono);font-size:12px;color:var(--mute)}
+.f10-note{font-size:12.5px;color:var(--mute);margin:14px 0 8px}
+.f10-links{display:flex;gap:8px;flex-wrap:wrap}
+.f10-links a{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);padding:7px 10px;color:var(--accent)}
+.f10-links a:hover{border-color:var(--accent)}
 .f10-src{font-size:13px;color:var(--mute);margin:16px 0 0;max-width:90ch}.f10-src b{color:var(--ink);font-weight:600}
+@media (max-width:900px){
+  .f10-grid{grid-template-columns:minmax(0,1fr);gap:20px}
+  .f10-pl{order:-1;position:static;display:grid;grid-template-columns:88px minmax(0,1fr);grid-template-areas:"art now" "art ctl" "note note" "links links";column-gap:14px;padding:14px}
+  .f10-art{grid-area:art;width:88px;height:88px;margin:0;max-width:none;align-self:start}
+  .f10-now{grid-area:now;margin-top:0}.f10-now .tag{margin-bottom:4px}.f10-now b{font-size:20px}.f10-ph{font-size:18px}
+  .f10-ctl{grid-area:ctl;margin-top:6px}.f10-big{width:40px;height:40px}
+  .f10-note{grid-area:note}.f10-links{grid-area:links}
+}
