@@ -1,0 +1,72 @@
+{
+ "date": "2026-10-27",
+ "label": "WEEK OF 27 OCT 2026",
+ "sources": {
+  "S": "Shazam Kenya (undated, read 27 Oct)",
+  "Y": "YouTube Kenya, week of 19 Oct",
+  "R": "Kenya airplay, week of 26 Oct",
+  "M": "Mdundo Kenya (undated, read 27 Oct)"
+ },
+ "songs": [
+  {
+   "title": "I'll Be Okay",
+   "artist": "Bien",
+   "points": 55,
+   "charts": "SYR"
+  },
+  {
+   "title": "Finale",
+   "artist": "Bien ft. Alikiba",
+   "points": 35,
+   "charts": "YR"
+  },
+  {
+   "title": "Rapudo",
+   "artist": "Prince Indah",
+   "points": 31,
+   "charts": "YM"
+  },
+  {
+   "title": "Heaven Baby",
+   "artist": "Ayra Starr ft. Zayn",
+   "points": 29,
+   "charts": "SY"
+  },
+  {
+   "title": "Kitemeo",
+   "artist": "Kapitani",
+   "points": 28,
+   "charts": "YM"
+  },
+  {
+   "title": "Shing",
+   "artist": "Kapitani ft. Toxic Lyrikali",
+   "points": 23,
+   "charts": "SY"
+  },
+  {
+   "title": "Tegemeo Letu",
+   "artist": "Kwaya ya Mt. Kizito Makuburi",
+   "points": 20,
+   "charts": "SYM"
+  },
+  {
+   "title": "Chai ya Saa Kumi",
+   "artist": "Ywaya Tajiri",
+   "points": 18,
+   "charts": "YR"
+  },
+  {
+   "title": "Hallelujah",
+   "artist": "Iyanii",
+   "points": 14,
+   "charts": "YM"
+  },
+  {
+   "title": "Hongo ya Karao Vol. 2",
+   "artist": "Toxic Lyrikali ft. Mauru Gwash & Kapitani",
+   "points": 12,
+   "charts": "YM"
+  }
+ ]
+}
