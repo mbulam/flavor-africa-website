@@ -4,7 +4,7 @@ TAG = "Flavor Music"
 H1 = "Tyla opens music scholarships to South African students"
 DEK = "Four of 10 US$5,000 awards in Tyla’s That Girl Music Scholarship are reserved for South African students. Applications may close early."
 META = "Flavor Music · 27 Oct 2026 · 3 min read"
-LEAD = None
+LEAD = ("img/tyla-instagram.jpg", "Tyla", "Tyla Instagram")
 
 BODY = [
     ("p", "Four South African students could receive US$5,000 each through Tyla’s That Girl Music Scholarship. The programme supports young women studying music or the arts, and applications may close before the listed deadline if enough eligible responses arrive."),
