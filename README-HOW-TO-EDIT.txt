@@ -80,3 +80,11 @@ The segment names under each section heading (e.g. Music: The Drop, Flavor Playl
 clickable filters, built by _site.py. A chip shows the cards whose tag matches its name; menu
 sub-links open the same filtered view (e.g. music.html#flavor-playlist). News chips use the
 EDITION list in _site.py (Local / Continental / Global) - add each new news story there.
+
+HOMEPAGE LATEST (added 27 Oct 2026)
+Every story added to STORIES in _site.py now appears in the homepage's Latest
+grid automatically (newest first, 6 shown), whatever its section. The Wrap and
+Culture & Sport blocks below skip anything Latest is already showing, so no story
+appears twice. Stories in the top hero/Editor's picks stay out of Latest.
+For tall/portrait posters, make a separate square "-thumb.jpg" crop for the cards
+so the homepage thumbnail shows the subject, not the poster's text.

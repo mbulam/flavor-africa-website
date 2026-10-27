@@ -44,7 +44,7 @@ STORIES = [
  ("made-in-lagos", ["culture"], "Flavor Rewind", "Made in Lagos at six", "How Wizkid's fourth album rewrote Africa's chart records.", "mil-stage.jpg", "2026-10-30", "center 25%"),
  ("mugithi-decoded", ["culture"], "Flavor Decoded", "Mugithi, decoded", "One voice, one guitar, and a whole room holding on. What mugithi is and where it came from.", "ay-live.jpg", "2026-11-02", "center 30%"),
  ("ballon-dor-2026", ["sport"], "Flavor Sports", "Kane ends England’s wait. Putellas makes it three.", "Harry Kane and Alexia Putellas lead a night of winners, records and new ground for the Ballon d’Or in London.", "bdor-kane-putellas.jpg", "2026-10-27", "center"),
- ("jay-z-super-bowl-lxi", ["news", "music"], "The Wrap", "From NFL partner to Super Bowl headliner: Jay-Z takes the Super Bowl stage", "Jay-Z will headline the Apple Music Super Bowl LXI Halftime Show in the 30th-anniversary year of Reasonable Doubt.", "jay-z-super-bowl-lxi.jpg", "2026-10-27", "center 25%"),
+ ("jay-z-super-bowl-lxi", ["news", "music"], "The Wrap", "From NFL partner to Super Bowl headliner: Jay-Z takes the Super Bowl stage", "Jay-Z will headline the Apple Music Super Bowl LXI Halftime Show in the 30th-anniversary year of Reasonable Doubt.", "jay-z-super-bowl-lxi-thumb.jpg", "2026-10-27", "center 40%"),
 ]
 
 SECTIONS = {  # slug: (heading on page, empty message)
@@ -61,8 +61,6 @@ EDITION = {
  "jay-z-super-bowl-lxi": "Global",
 }
 HERO_AND_SIDES = {"ayrosh", "nairobi-new-sound", "mr-eazi", "soul-makossa"}
-# Selected stories that should also appear in the homepage's main Latest grid.
-HOME_LATEST = {"ballon-dor-2026"}
 
 
 def nice(d):
@@ -97,8 +95,9 @@ def hs(s):
 
 SCHED = ('<script>(function(){var d=new Date(Date.now()+108e5).toISOString().slice(0,10);'
          'document.querySelectorAll("[data-pub]").forEach(function(x){if(x.getAttribute("data-pub")>d)x.remove()});'
-         'document.querySelectorAll("[data-limit]").forEach(function(g){var n=+g.getAttribute("data-limit");'
-         '[].slice.call(g.children).forEach(function(c,i){if(i>=n)c.remove()})})})();</script>')
+         'var seen={};document.querySelectorAll("[data-limit]").forEach(function(g){var n=+g.getAttribute("data-limit");'
+         '[].slice.call(g.children).forEach(function(c){if(seen[c.getAttribute("href")])c.remove()});'
+         '[].slice.call(g.children).forEach(function(c,i){if(i>=n)c.remove();else seen[c.getAttribute("href")]=1})})})();</script>')
 
 
 def seg_id(label):
@@ -240,11 +239,14 @@ def build_sections():
 
 def build_home():
     h = rd("index.html")
-    latest = [s for s in newest(STORIES) if s[0] not in HERO_AND_SIDES and (s[0] in HOME_LATEST or not set(s[1]) & {"news", "culture", "sport"})]
+    # Every story goes into Latest (newest first). The Wrap and Culture & Sport blocks
+    # below hide whatever Latest is already showing (done in the browser, so it stays
+    # right as scheduled stories go live).
+    latest = [s for s in newest(STORIES) if s[0] not in HERO_AND_SIDES]
     h, n = re.subn(r'<div class="hgrid"[^>]*>.*?</div></section>', lambda m: '<div class="hgrid" data-limit="6">%s</div></section>' % "".join(hc(s) for s in latest), h, count=1, flags=re.S)
     assert n == 1
     wrap = newest([s for s in STORIES if "news" in s[1]])
-    cult = newest([s for s in STORIES if ("culture" in s[1] or "sport" in s[1]) and s[0] not in HOME_LATEST])
+    cult = newest([s for s in STORIES if ("culture" in s[1] or "sport" in s[1])])
     blocks = ('<section class="wrap block" id="the-wrap"><div class="secbar"><h2>The Wrap</h2><a href="news.html">All news »</a></div>'
               '<div class="wrapgrid" data-limit="6">%s</div></section>'
               '<section class="wrap block"><div class="secbar"><h2>Culture &amp; Sport</h2><a href="culture.html">More culture »</a></div>'
