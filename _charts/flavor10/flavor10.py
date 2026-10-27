@@ -103,7 +103,7 @@ body:after{{content:"";position:absolute;inset:0;opacity:.05;pointer-events:none
 <div class="tag">FLAVOR CHARTS</div><div class="logo">flavor.africa</div>
 <div class="hd"><div class="k">THE FLAVOR 10 · KENYA · {ed["label"]}</div><div class="rule"></div></div>
 <div class="list">{"".join(rows)}</div>
-<div class="ft"><div><b>How it's ranked:</b> each chart's top 20 earns points (No. 1 = 20, No. 20 = 1), added up across charts.<br>A song must appear on at least two charts. Bar length = total points.<br><b>Sources:</b> Shazam Kenya · YouTube Kenya · Kenya radio airplay · Audiomack Kenya · Mdundo</div>
+<div class="ft"><div><b>Sources:</b> Shazam Kenya · YouTube Kenya · Kenya radio airplay · Audiomack Kenya · Mdundo</div>
 <div class="key"><em>▲</em> climbed <em>▼</em> dropped<br><em>–</em> no change <em>NEW</em> new entry</div></div>
 </body></html>'''
 
