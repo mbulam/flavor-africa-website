@@ -257,6 +257,50 @@ def build_home():
     wr("index.html", add_sched(h))
 
 
+# ---- The Flavor 10 · Kenya (homepage chart, from _charts/flavor10/data/*.json) ----
+def flavor10_html():
+    import glob, json, random
+    files = sorted(glob.glob(os.path.join(SITE, "_charts", "flavor10", "data", "*.json")))
+    if not files:
+        return ""
+    ed = json.load(open(files[-1]))
+    prev = json.load(open(files[-2]))["songs"] if len(files) > 1 else None
+    ever = {(s["title"].lower(), s["artist"].lower()) for f in files[:-1] for s in json.load(open(f))["songs"]}
+    last = {(s["title"].lower(), s["artist"].lower()): i for i, s in enumerate(prev or [], 1)}
+    top = max(s["points"] for s in ed["songs"])
+    names = {"S": "Shazam", "Y": "YouTube", "R": "Radio", "M": "Mdundo"}
+    rows = []
+    for i, s in enumerate(ed["songs"], 1):
+        k = (s["title"].lower(), s["artist"].lower())
+        if prev is None: mv = ""
+        elif k in last:
+            d = last[k] - i
+            mv = ('<span class="mv up">▲%d</span>' % d) if d > 0 else ('<span class="mv down">▼%d</span>' % -d) if d < 0 else '<span class="mv">–</span>'
+        else:
+            mv = '<span class="mv re">RE</span>' if k in ever else '<span class="mv new">NEW</span>'
+        W = 400 * s["points"] / top
+        random.seed(i * 7 + 3)
+        bars = "".join('<rect x="%d" y="%.1f" width="3" height="%.1f" rx="1.5"/>' % (x, (40 - v) / 2, v)
+                       for x in range(0, int(W), 6) for v in [min(40, 10 + 30 * abs(random.gauss(.55, .28)))])
+        on = " · ".join(names[c] for c in s["charts"])
+        rows.append('<li%s><span class="f10-rk">%02d%s</span><div class="f10-t"><b>%s</b><span>%s</span></div>'
+                    '<div class="f10-w"><span class="f10-bar"><svg viewBox="0 0 %.0f 40" preserveAspectRatio="xMinYMid slice" style="width:%.0f%%" aria-hidden="true">%s</svg></span>'
+                    '<span class="f10-on" title="Charts it appears on">%s</span></div></li>'
+                    % (' class="one"' if i == 1 else "", i, mv, e(s["title"]), e(s["artist"]), W, 100 * s["points"] / top, bars, on))
+    return ('<section class="wrap block" id="flavor-10"><div class="secbar"><h2>The Flavor 10 · Kenya</h2>'
+            '<a href="charts.html">More charts »</a></div><p class="f10-sub">%s · What Kenya is playing, ranked across Shazam, YouTube, radio airplay and Mdundo. '
+            'A song must chart on at least two to make the 10.</p><ol class="f10">%s</ol></section>' % (e(ed["label"].title().replace("Of", "of")), "".join(rows)))
+
+
+def build_flavor10():
+    h = rd("index.html")
+    block = flavor10_html()
+    h = re.sub(r'<section class="wrap block" id="flavor-10">.*?</section>', "", h, flags=re.S)
+    if block:
+        h = h.replace('<section class="band">', block + '<section class="band">', 1)
+    wr("index.html", h)
+
+
 def build_sitemap():
     today = datetime.date.today().isoformat()
     pages = ["index.html", "news.html"] + [k + ".html" for k in SECTIONS if k != "news"] + ["about.html"] + [s[0] + ".html" for s in STORIES]
@@ -284,5 +328,6 @@ if __name__ == "__main__":
             wr(f, link_menu(fix_nav(f, rd(f)), pages))
     build_sections()
     build_home()
+    build_flavor10()
     build_sitemap()
     print("site rebuilt")
