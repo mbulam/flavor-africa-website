@@ -315,3 +315,17 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 .segs a:hover{border-color:var(--accent)}
 .segs a[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
 .cards[hidden],.card[hidden]{display:none}
+/* Phone homepage (27 Oct 2026): one cover card, then the editor's picks as a swipe row, so Latest sits near the top. Laptop layout unchanged. */
+.picks-hd{display:none}
+@media (max-width:640px){
+  .lead2{gap:20px;padding-bottom:24px}
+  .hero{aspect-ratio:1/1}
+  .picks-hd{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono,"DM Mono",monospace);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:12px}
+  .picks-hd em{font-style:normal;color:var(--accent)}
+  .picks-hd{margin:0 0 -8px}
+  .sides{display:flex;flex-direction:row;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px}
+  .sides::-webkit-scrollbar{display:none}
+  .sides .hs{flex:0 0 68%;display:flex;flex-direction:column;gap:10px;padding:0;border:0;scroll-snap-align:start;min-width:0}
+  .sides .hs-img{aspect-ratio:4/3;width:100%}
+  .sides .hs h3{font-size:15px;margin:6px 0 4px}
+}
