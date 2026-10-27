@@ -40,7 +40,7 @@ STORIES = [
  ("lupita-in-their-words", ["culture"], "In Their Words", "In Their Words: Lupita Nyong'o on beauty", "“You can't eat beauty. It doesn't feed you.”", "itw-lupita.jpg", "2026-10-25", "center 30%"),
  ("mr-eazi", ["money"], "Money Moves", "Mr Eazi: singer, investor, owner", "Seven moves that turned an Afrobeats star into a business.", "me-cover.jpg", "2026-10-26", "center 25%"),
  ("savara", ["features", "music"], "Flavor Feature", "Savara: the rhythm before the spotlight", "After 17 years helping shape Sauti Sol's sound, Savara is making room for a sound of his own.", "savara-1.jpg", "2026-10-26", "center 25%"),
- ("tg-blk", ["music"], "Flavor Radar", "tg.blk: the Mombasa bedroom producer opening doors for alternative music", "The artist to watch from the coast.", "tg-2026.jpg", "2026-10-27", "center 25%"),
+ ("tg-blk", ["music"], "Flavor Spotlight", "tg.blk: the Mombasa bedroom producer opening doors for alternative music", "The artist to watch from the coast.", "tg-2026.jpg", "2026-10-27", "center 25%"),
  ("made-in-lagos", ["culture"], "Flavor Rewind", "Made in Lagos at six", "How Wizkid's fourth album rewrote Africa's chart records.", "mil-stage.jpg", "2026-10-30", "center 25%"),
  ("mugithi-decoded", ["culture"], "Flavor Decoded", "Mugithi, decoded", "One voice, one guitar, and a whole room holding on. What mugithi is and where it came from.", "ay-live.jpg", "2026-11-02", "center 30%"),
 ]
@@ -51,6 +51,11 @@ SECTIONS = {  # slug: (heading on page, empty message)
  "screen": ("Latest in Film & TV", ""), "fashion": ("Latest in Fashion", ""),
  "money": ("Latest in Business", ""), "sport": ("Latest in Sports", ""),
  "culture": ("Latest in Culture", ""), "features": ("Latest Features", ""), "live": ("Latest in Live", ""),
+}
+# The Wrap edition for each news story (filters News page chips: Local / Continental / Global)
+EDITION = {
+ "tems-soul-train-2026": "Continental", "sofiya-nzau-world-tour": "Local", "drake-janice-stfu-lawsuit": "Global",
+ "bien-alusa-continua": "Local", "bridget-blue-grammys": "Local", "tems-what-you-need-record": "Continental",
 }
 HERO_AND_SIDES = {"ayrosh", "nairobi-new-sound", "mr-eazi", "soul-makossa"}
 
@@ -65,9 +70,10 @@ def newest(items):
 
 def card(s):
     slug, secs, tag, title, teaser, img, date, pos = s
-    return ('<a class="card" href="%s.html" data-pub="%s"><div class="ph img left"><img loading="lazy" src="img/%s" alt="" style="object-position:%s">'
+    ed = (' data-ed="%s"' % EDITION[slug]) if slug in EDITION else ""
+    return ('<a class="card" href="%s.html" data-pub="%s"%s><div class="ph img left"><img loading="lazy" src="img/%s" alt="" style="object-position:%s">'
             '<span class="tag">%s</span></div><h3>%s</h3><p>%s</p><span class="meta">%s</span></a>'
-            % (slug, date, img, pos, e(tag), e(title), e(teaser), nice(date)))
+            % (slug, date, ed, img, pos, e(tag), e(title), e(teaser), nice(date)))
 
 
 def hc(s):
@@ -88,6 +94,48 @@ SCHED = ('<script>(function(){var d=new Date(Date.now()+108e5).toISOString().sli
          'document.querySelectorAll("[data-pub]").forEach(function(x){if(x.getAttribute("data-pub")>d)x.remove()});'
          'document.querySelectorAll("[data-limit]").forEach(function(g){var n=+g.getAttribute("data-limit");'
          '[].slice.call(g.children).forEach(function(c,i){if(i>=n)c.remove()})})})();</script>')
+
+
+def seg_id(label):
+    return re.sub(r"[^a-z0-9]+", "-", html.unescape(label).lower()).strip("-")
+
+
+def segs_html(h):
+    """Turn the segment labels under a section heading into clickable filter chips."""
+    m = re.search(r'<div class="segs"[^>]*>(.*?)</div>', h, flags=re.S)
+    if not m:
+        return h
+    labels = [x for x in re.findall(r'<(?:span|a)[^>]*>(.*?)</(?:span|a)>', m.group(1)) if x != "All"]
+    chips = '<a href="#all" data-seg="" aria-pressed="true">All</a>' + "".join(
+        '<a href="#%s" data-seg="%s" aria-pressed="false">%s</a>' % (seg_id(l), e(html.unescape(l)), l) for l in labels)
+    return h[:m.start()] + '<div class="segs" role="group" aria-label="Filter by segment">%s</div>' % chips + h[m.end():]
+
+
+FILTER = ('<script>(function(){var bar=document.querySelector(".segs");if(!bar)return;var chips=[].slice.call(bar.querySelectorAll("a[data-seg]"));'
+          'var box=document.querySelector(".block .cards"),sec=document.querySelector(".block[style]");if(!sec)return;'
+          'var msg=document.createElement("div");msg.className="empty";msg.hidden=true;(box||sec).insertAdjacentElement("afterend",msg);'
+          'function go(id){var c=chips.filter(function(x){return x.getAttribute("href")==="#"+id})[0]||chips[0],seg=c.getAttribute("data-seg"),n=0;'
+          'chips.forEach(function(x){x.setAttribute("aria-pressed",x===c?"true":"false")});'
+          'if(box)[].slice.call(box.children).forEach(function(k){var t=k.querySelector(".tag"),ok=!seg||(t&&t.textContent.trim()===seg)||k.getAttribute("data-ed")===seg;k.hidden=!ok;if(ok)n++});'
+          'if(box)box.hidden=!n;msg.hidden=!!n||(!box&&!seg);msg.textContent=seg?"Nothing in "+seg+" yet. Check back soon.":"";}'
+          'chips.forEach(function(x){x.addEventListener("click",function(ev){ev.preventDefault();var id=x.getAttribute("href").slice(1);'
+          'history.replaceState(null,"",id==="all"?location.pathname:"#"+id);go(id)})});'
+          'window.addEventListener("hashchange",function(){go(location.hash.slice(1))});go(location.hash.slice(1))})();</script>')
+
+
+def add_filter(h):
+    h = re.sub(r'<script>\(function\(\)\{var bar=document\.querySelector\("\.segs"\).*?</script>', "", h, flags=re.S)
+    return h.replace("</body>", FILTER + "</body>", 1)
+
+
+def link_menu(h, pages):
+    """Point menu sub-links (e.g. Music > Flavor Playlist) at the filtered section view."""
+    def fix(m):
+        page, label = m.group(1), m.group(2)
+        if label.startswith("All ") or label not in pages.get(page, ()):
+            return m.group(0)
+        return '<li><a href="%s#%s">%s</a></li>' % (page, seg_id(label), label)
+    return re.sub(r'<li><a href="([a-z]+\.html)(?:#[a-z0-9-]+)?">([^<]+)</a></li>', fix, h)
 
 
 def rd(f):
@@ -182,7 +230,7 @@ def build_sections():
         h = rd(f)
         h, n = re.subn(r'<section class="wrap block" style="padding-top:36px">.*?</section>', lambda m: section_html(slug), h, count=1, flags=re.S)
         assert n == 1, f
-        wr(f, add_sched(h))
+        wr(f, add_filter(add_sched(segs_html(h))))
 
 
 def build_home():
@@ -219,9 +267,14 @@ if __name__ == "__main__":
     for s in STORIES:
         new_page(s)
     ensure_news_page()
+    pages = {}
+    for k in SECTIONS:
+        m = re.search(r'<div class="segs"[^>]*>(.*?)</div>', rd(k + ".html"), flags=re.S)
+        if m:
+            pages[k + ".html"] = [x for x in re.findall(r'<(?:span|a)[^>]*>(.*?)</(?:span|a)>', m.group(1)) if x != "All"]
     for f in sorted(os.listdir(SITE)):
         if f.endswith(".html"):
-            wr(f, fix_nav(f, rd(f)))
+            wr(f, link_menu(fix_nav(f, rd(f)), pages))
     build_sections()
     build_home()
     build_sitemap()

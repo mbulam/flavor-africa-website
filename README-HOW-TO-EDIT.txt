@@ -74,3 +74,9 @@ SCHEDULING: stories dated in the future stay hidden from every listing until the
 date (Nairobi time), so you can publish ahead.
 Sections: news (The Wrap), music, charts, screen, fashion, money, sport, culture,
 features, live. A story can sit in more than one.
+
+SEGMENT CHIPS (added 27 Oct 2026)
+The segment names under each section heading (e.g. Music: The Drop, Flavor Playlist...) are
+clickable filters, built by _site.py. A chip shows the cards whose tag matches its name; menu
+sub-links open the same filtered view (e.g. music.html#flavor-playlist). News chips use the
+EDITION list in _site.py (Local / Continental / Global) - add each new news story there.

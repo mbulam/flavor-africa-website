@@ -311,3 +311,7 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 @media (max-width:900px){.wrapgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.wrapgrid .hs:nth-child(3){border-top:1px solid var(--line);padding-top:18px}}
 @media (max-width:600px){.wrapgrid{grid-template-columns:minmax(0,1fr)}.wrapgrid .hs:nth-child(2){border-top:1px solid var(--line);padding-top:18px}}
 .art .body ul{padding-left:20px;margin:0 0 22px}.art .body li{margin:4px 0}
+.segs a{border:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:8px 12px;color:var(--accent);text-decoration:none;cursor:pointer}
+.segs a:hover{border-color:var(--accent)}
+.segs a[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.cards[hidden],.card[hidden]{display:none}

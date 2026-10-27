@@ -196,7 +196,7 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 '''
 # ---------- content (only what Flavor Africa has covered / announced) ----------
 SECTIONS=[
- ('music','Music',['The Drop','Flavor Playlist','Flavor Charts','Flavor Radar','The Verdict'],'New releases, the charts and the artists to watch, from Nairobi to the world.'),
+ ('music','Music',['The Drop','Flavor Playlist','Flavor Charts','Flavor Spotlight','The Verdict'],'New releases, the charts and the artists to watch, from Nairobi to the world.'),
  ('screen','Film & TV',['The Watchlist'],'What to watch this weekend across cinemas and streaming.'),
  ('fashion','Fashion',['Flavor Fashion'],'Style, written like an editorial spread.'),
  ('money','Business',['Money Moves','Flavor Figures'],'The real ownership moves behind entertainment, and the numbers that tell the story.'),
@@ -213,7 +213,7 @@ STORIES=[
  ('watchlist-23-oct','screen','The Watchlist','Must watch this weekend: Lupin, A Land Apart, Spinners and more','Six picks for 23\u201325 October across Netflix, Prime Video, Showmax and cinemas.','23 Oct 2026','watchlist.html','img/wl-lupin.jpg'),
  ('ayrosh','live','Flavor Artist Live','Know your November artist: Ayrosh','Mugithi, reimagined. Ayrosh headlines Flavor Artist Live on 28 November.','Oct 2026','ayrosh.html','img/ay-cover.jpg'),
  ('nairobi-new-sound','features','The Flavor Cover','Nairobi\u2019s New Sound','It isn\u2019t one genre. That\u2019s the whole point. Issue 01 of the Flavor Cover.','Oct 2026','nairobi-new-sound.html','img/nns-njerae.jpg'),
- ('tg-blk','music','Flavor Radar','tg.blk: the Mombasa bedroom producer opening doors for alternative music','From GarageBand in Mombasa to Apple Music and Spotify\u2019s radar in 2026.','Oct 2026','tg-blk.html','img/tg-2026.jpg'),
+ ('tg-blk','music','Flavor Spotlight','tg.blk: the Mombasa bedroom producer opening doors for alternative music','From GarageBand in Mombasa to Apple Music and Spotify\u2019s radar in 2026.','Oct 2026','tg-blk.html','img/tg-2026.jpg'),
  ('made-in-lagos','culture','Flavor Rewind','Made in Lagos at six: the delayed album that rewrote Africa\u2019s chart records','Wizkid\u2019s fourth album arrived two weeks late, then broke records from Spotify to Billboard.','30 Oct 2026','made-in-lagos.html','img/mil-stage.jpg'),
  ('sunday-reset','music','Flavor Playlist','Sunday Reset: six songs for a slow Sunday','Flavor Playlist Vol. 01, from Sade to Black Coffee and Msaki.','25 Oct 2026','sunday-reset.html','img/sunday-reset-poster.jpg'),
  ('soul-makossa','culture','Flavor Roots','That chant on Thriller? It started in Cameroon','Flavor Roots Issue 01: how Manu Dibango\u2019s Soul Makossa travelled from Douala to the whole world.','Oct 2026','soul-makossa.html','img/sm-manu-stage.jpg'),
@@ -388,7 +388,7 @@ article('ayrosh.html','Ayrosh at Flavor Artist Live','Flavor Artist Live','Know 
  ('The catalogue',L('Start','here'),'\u201cMaheni\u201d and \u201cKirinyaga\u201d for the classics. The Fire EP (2020) for four tracks of Kikuyu R&B. Then SUPERSTAR, his nine-track album from May 2024.','img/ay-catalogue.jpg','Ayrosh',''),
  ('28 November',L('See him','live'),'He\u2019s packed out tents like this one. Now it\u2019s Flavor\u2019s turn: Ayrosh headlines Flavor Artist Live on Saturday 28 November.','img/ay-live.jpg','Ayrosh',''),
 ],'<div class="facts2"><div><span>Date</span><span>Sat 28 Nov 2026</span></div><div><span>Venue</span><span>To be announced</span></div><div><span>Tickets</span><span>Coming soon</span></div></div>')
-article('tg-blk.html','tg.blk','Flavor Radar','tg.blk','The Mombasa artist carving out her own lane and opening the doors for alternative music.','Flavor Radar \u00b7 October 2026','img/tg-2026.jpg','tg.blk',[
+article('tg-blk.html','tg.blk','Flavor Spotlight','tg.blk','The Mombasa artist carving out her own lane and opening the doors for alternative music.','Flavor Spotlight \u00b7 October 2026','img/tg-2026.jpg','tg.blk',[
  ('Where it started',L('From','Mombasa'),'Born and raised on the coast, tg.blk, real name Thigi, grew up on the funk and soul her mother played on the radio. She calls herself \u201ca child of the internet\u201d.','img/tg-mombasa.jpg','tg.blk',''),
  ('The bedroom producer',L('Made on','GarageBand'),'She makes her own beats and blends rap, lo-fi, R&B and soul. Her breakout \u201cLove Being Used\u201d was recorded and mixed at home in Mombasa, and it reached US rapper Vince Staples.','img/tg-garageband.jpg','tg.blk',''),
  ('The year it clicked',L('Her','2026'),'January: Apple Music named her in its Africa Rising Class of 2026. July: Spotify picked her as its EQUAL Africa artist. Two of the biggest platforms in music, saying the same thing.','',''  ,''),

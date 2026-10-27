@@ -49,7 +49,7 @@ def render(m):
             raise ValueError(k)
     out.append("</div>")
     if getattr(m, "SOURCES", None):
-        out.append('<details class="sources"><summary>Sources</summary><ul>%s</ul><p>Every fact in this story was checked against at least two independent sources.</p></details>'
+        out.append('<details class="sources"><summary>Sources</summary><ul>%s</ul></details>'
                    % "".join('<li><a href="%s" target="_blank" rel="noopener">%s</a></li>' % (u, e(t)) for t, u in m.SOURCES))
     out.append("</div>")
     return "".join(out)
