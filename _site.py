@@ -268,7 +268,7 @@ def flavor10_html():
     ever = {(s["title"].lower(), s["artist"].lower()) for f in files[:-1] for s in json.load(open(f))["songs"]}
     last = {(s["title"].lower(), s["artist"].lower()): i for i, s in enumerate(prev or [], 1)}
     top = max(s["points"] for s in ed["songs"])
-    names = {"S": "Shazam", "Y": "YouTube", "R": "Radio", "M": "Mdundo"}
+    names = {"S": "Shazam", "Y": "YouTube", "R": "Radio", "M": "Mdundo", "A": "Audiomack"}
     rows = []
     for i, s in enumerate(ed["songs"], 1):
         k = (s["title"].lower(), s["artist"].lower())
@@ -285,11 +285,12 @@ def flavor10_html():
         on = " · ".join(names[c] for c in s["charts"])
         rows.append('<li%s><span class="f10-rk">%02d%s</span><div class="f10-t"><b>%s</b><span>%s</span></div>'
                     '<div class="f10-w"><span class="f10-bar"><svg viewBox="0 0 %.0f 40" preserveAspectRatio="xMinYMid slice" style="width:%.0f%%" aria-hidden="true">%s</svg></span>'
-                    '<span class="f10-on" title="Charts it appears on">%s</span></div></li>'
-                    % (' class="one"' if i == 1 else "", i, mv, e(s["title"]), e(s["artist"]), W, 100 * s["points"] / top, bars, on))
+                    '</div></li>'
+                    % (' class="one"' if i == 1 else "", i, mv, e(s["title"]), e(s["artist"]), W, 100 * s["points"] / top, bars))
     return ('<section class="wrap block" id="flavor-10"><div class="secbar"><h2>The Flavor 10 · Kenya</h2>'
-            '<a href="charts.html">More charts »</a></div><p class="f10-sub">%s · What Kenya is playing, ranked across Shazam, YouTube, radio airplay and Mdundo. '
-            'A song must chart on at least two to make the 10.</p><ol class="f10">%s</ol></section>' % (e(ed["label"].title().replace("Of", "of")), "".join(rows)))
+            '<a href="charts.html">More charts »</a></div><p class="f10-sub">%s · What Kenya is playing this week.</p><ol class="f10">%s</ol>'
+            '<p class="f10-src"><b>How it\'s ranked:</b> each chart\'s top 20 earns points (No. 1 = 20, No. 20 = 1), added up across charts; a song must appear on at least two. '
+            '<b>Sources:</b> Shazam Kenya · YouTube Kenya · Kenya radio airplay · Audiomack Kenya · Mdundo. Updated every Monday.</p></section>' % (e(ed["label"].title().replace("Of", "of")), "".join(rows)))
 
 
 def build_flavor10():

@@ -62,11 +62,11 @@ def html(ed, moves):
     d = datetime.date.fromisoformat(ed["date"])
     rows = []
     for i, (s, (mk, mt)) in enumerate(zip(songs, moves), 1):
-        w = max(60, round((470 if i == 1 else 420) * s["points"] / top))
+        w = max(60, round((560 if i == 1 else 470) * s["points"] / top))
         lab = '<div class="lab">NO. 1 IN KENYA THIS WEEK</div>' if i == 1 else ""
         rows.append(f'''<div class="row{' one' if i == 1 else ''}"><div class="rk">{i:02d}<span class="mv {mk}">{mt}</span></div>
 <div class="info">{lab}<div class="t">{s["title"]}</div><div class="a">{s["artist"]}</div></div>
-<div class="bar">{wave(w, 56 if i == 1 else 40, i * 7 + 3)}<span class="dots">{dots(s["charts"])}</span></div></div>''')
+<div class="bar">{wave(w, 56 if i == 1 else 40, i * 7 + 3)}</div></div>''')
     return f'''<!doctype html><html><head><meta charset="utf-8"><style>
 *{{margin:0;padding:0;box-sizing:border-box}}
 body{{width:1080px;height:1350px;font-family:Poppins;color:{INK};overflow:hidden;background:{CR};position:relative}}
@@ -103,8 +103,8 @@ body:after{{content:"";position:absolute;inset:0;opacity:.05;pointer-events:none
 <div class="tag">FLAVOR CHARTS</div><div class="logo">flavor.africa</div>
 <div class="hd"><div class="k">THE FLAVOR 10 · KENYA · {ed["label"]}</div><div class="rule"></div></div>
 <div class="list">{"".join(rows)}</div>
-<div class="ft"><div>Ranked across <b>four Kenyan charts</b>. A song must chart on<br>at least two to make the 10. Bar length = combined score.</div>
-<div class="key"><i>S</i>Shazam<i>Y</i>YouTube<i>R</i>Radio<i>M</i>Mdundo<br><em>▲</em> climbed <em>▼</em> dropped <em>–</em> no change <em>NEW</em> new entry</div></div>
+<div class="ft"><div><b>How it's ranked:</b> each chart's top 20 earns points (No. 1 = 20, No. 20 = 1), added up across charts.<br>A song must appear on at least two charts. Bar length = total points.<br><b>Sources:</b> Shazam Kenya · YouTube Kenya · Kenya radio airplay · Audiomack Kenya · Mdundo</div>
+<div class="key"><em>▲</em> climbed <em>▼</em> dropped<br><em>–</em> no change <em>NEW</em> new entry</div></div>
 </body></html>'''
 
 
