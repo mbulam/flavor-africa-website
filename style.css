@@ -222,6 +222,13 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 .hc-img{aspect-ratio:4/3;overflow:hidden;background:var(--tint)}
 .hc-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
 .hc:hover .hc-img img{transform:scale(1.03)}
+/* Keep the FAME Week artwork whole in story cards so its branding and poster text remain legible. */
+.card[href="fame-week-africa.html"] .ph.img,
+.hc[href="fame-week-africa.html"] .hc-img,
+.hs[href="fame-week-africa.html"] .hs-img{background:#ed00ad}
+.card[href="fame-week-africa.html"] .ph.img img,
+.hc[href="fame-week-africa.html"] .hc-img img,
+.hs[href="fame-week-africa.html"] .hs-img img{object-fit:contain;object-position:center;background:#ed00ad}
 .hc h3{font-family:var(--body);font-weight:500;font-size:18px;line-height:1.35;margin:10px 0 6px}
 .hc p{margin:0 0 8px;color:var(--mute);font-size:14px}
 .qgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}

@@ -13,7 +13,8 @@ def render(m):
            '<p class="dek">%s</p>' % e(m.DEK), '<span class="meta">%s</span>' % e(m.META)]
     if getattr(m, "LEAD", None):
         src, cap = m.LEAD[:2]
-        cr = '<span class="credit">Photo: %s</span>' % e(m.LEAD[2]) if len(m.LEAD) > 2 and m.LEAD[2] else ""
+        credit_label = m.LEAD[3] if len(m.LEAD) > 3 and m.LEAD[3] else "Photo"
+        cr = '<span class="credit">%s: %s</span>' % (e(credit_label), e(m.LEAD[2])) if len(m.LEAD) > 2 and m.LEAD[2] else ""
         out.append('<figure><img class="lead" src="%s" alt="%s"><figcaption>%s%s</figcaption></figure>' % (src, e(cap), e(cap), cr))
     out.append('<div class="body">')
     for b in m.BODY:
