@@ -5,7 +5,8 @@ compared with the most recent earlier edition to draw the movement markers:
   ▲n climbed n places · ▼n dropped n places · – no change · NEW first time in the 10
   RE re-entry (was in an earlier edition, not the last one)
 
-Run:  python3 flavor10.py 2026-10-27      (reads data/2026-10-27.json, writes PNG)
+Run:  python3 flavor10.py 2026-10-28      (reads data/2026-10-28.json, writes PNG)
+From 28 Oct 2026 the chart is DAILY: build data/<date>.json first with daily.py.
 """
 import json, glob, os, random, sys, datetime
 from playwright.sync_api import sync_playwright
@@ -56,6 +57,9 @@ def dots(c):
     return "".join(f'<span class="d{" on" if k in c else ""}">{k}</span>' for k in "SYRM")
 
 
+SRC = {True: 'Apple Music · Shazam · YouTube · Kenyan radio', False: 'Apple Music · Spotify · Shazam · YouTube · Kenyan radio · Audiomack · Mdundo'}
+
+
 def html(ed, moves):
     songs = ed["songs"]
     top = max(s["points"] for s in songs)
@@ -63,7 +67,7 @@ def html(ed, moves):
     rows = []
     for i, (s, (mk, mt)) in enumerate(zip(songs, moves), 1):
         w = max(60, round((560 if i == 1 else 470) * s["points"] / top))
-        lab = '<div class="lab">NO. 1 IN KENYA THIS WEEK</div>' if i == 1 else ""
+        lab = '<div class="lab">NO. 1 IN KENYA TODAY</div>' if i == 1 else ""
         rows.append(f'''<div class="row{' one' if i == 1 else ''}"><div class="rk">{i:02d}<span class="mv {mk}">{mt}</span></div>
 <div class="info">{lab}<div class="t">{s["title"]}</div><div class="a">{s["artist"]}</div></div>
 <div class="bar">{wave(w, 56 if i == 1 else 40, i * 7 + 3)}</div></div>''')
@@ -103,7 +107,7 @@ body:after{{content:"";position:absolute;inset:0;opacity:.05;pointer-events:none
 <div class="tag">FLAVOR CHARTS</div><div class="logo">flavor.africa</div>
 <div class="hd"><div class="k">THE FLAVOR 10 · KENYA · {ed["label"]}</div><div class="rule"></div></div>
 <div class="list">{"".join(rows)}</div>
-<div class="ft"><div><b>Sources:</b> Apple Music · Spotify · Shazam · YouTube · Kenyan radio · Audiomack · Mdundo</div>
+<div class="ft"><div><b>Sources:</b> {SRC.get(ed["date"] >= "2026-10-28", "")}</div>
 <div class="key"><em>▲</em> climbed <em>▼</em> dropped<br><em>–</em> no change <em>NEW</em> new entry</div></div>
 </body></html>'''
 

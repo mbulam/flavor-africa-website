@@ -300,9 +300,9 @@ def flavor10_html():
               '<p class="f10-note">30-second previews. Listen in full:</p><div class="f10-links"><a id="f10-sp" target="_blank" rel="noopener">Spotify</a><a id="f10-am" target="_blank" rel="noopener">Apple Music</a><a id="f10-yt" target="_blank" rel="noopener">YouTube</a></div>'
               '<audio preload="none"></audio></aside>' % (e(ed["songs"][0]["title"]), e(ed["songs"][0]["artist"])))
     return ('<section class="wrap block" id="flavor-10"><div class="secbar"><h2>The Flavor 10 · Kenya</h2>'
-            '<a href="charts.html">More charts »</a></div><p class="f10-sub">%s · What Kenya is playing this week. Tap a song to listen.</p>'
+            '<a href="charts.html">More charts »</a></div><p class="f10-sub">%s · What Kenya is playing today. Tap a song to listen.</p>'
             '<div class="f10-grid"><ol class="f10">%s</ol>%s</div>'
-            '<p class="f10-src"><b>Sources:</b> Apple Music · Spotify · Shazam · YouTube · Kenyan radio · Audiomack · Mdundo. Updated every Monday.</p></section>%s'
+            '<p class="f10-src"><b>Sources:</b> Apple Music · Shazam · YouTube · Kenyan radio. Updated daily.</p></section>%s'
             % (e(ed["label"].title().replace("Of", "of")), "".join(rows), player, F10JS))
 
 
