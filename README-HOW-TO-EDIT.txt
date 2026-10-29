@@ -71,7 +71,10 @@ ADDING STORIES THE EASY WAY (added 26 Oct 2026, replaces the manual steps above)
 That creates the page if it's new and rebuilds every section page, the News page,
 the homepage Latest / The Wrap / Culture & Sport blocks and sitemap.xml.
 SCHEDULING: stories dated in the future stay hidden from every listing until their
-date (Nairobi time), so you can publish ahead.
+date (Nairobi time), so you can publish ahead. Until their date they're also kept out
+of sitemap.xml and marked noindex, so Google can't find them early; the daily 06:10
+GitHub Action releases them on the day. To preview one, open its link directly
+(e.g. flavorafricagroup.org/made-in-lagos.html).
 Sections: news (The Wrap), music, charts, screen, fashion, money, sport, culture,
 features, live. A story can sit in more than one.
 

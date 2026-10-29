@@ -8,7 +8,10 @@ HOW TO ADD A STORY
    homepage blocks, the News page and sitemap.xml. build.py fills in the article.
 
 SCHEDULING: a story whose date is in the future is hidden from every listing until
-that day (Nairobi time), so you can publish ahead and it appears on its own.
+that day (Nairobi time), so you can publish ahead and it appears on its own. Until
+then its page also carries a noindex tag and stays out of sitemap.xml, so search
+engines don't pick it up early. The daily GitHub Action (06:10 Nairobi) reruns this
+script, which adds the story to the sitemap and lifts the noindex on its date.
 """
 import html, os, re, datetime
 
@@ -364,9 +367,36 @@ def build_flavor10():
     wr("index.html", h)
 
 
+def nairobi_today():
+    return (datetime.datetime.utcnow() + datetime.timedelta(hours=3)).date()
+
+
+LIVE_ROBOTS = '<meta name="robots" content="index,follow,max-image-preview:large">'
+SCHED_ROBOTS = '<meta name="robots" content="noindex,follow">'
+
+
+def mark_scheduled():
+    """Keep search engines off a scheduled story's page until its date (Nairobi time).
+    While a story is in the future its robots tag says noindex; on the day it's switched back."""
+    today = nairobi_today().isoformat()
+    for s in STORIES:
+        f = s[0] + ".html"
+        if not os.path.exists(os.path.join(SITE, f)):
+            continue
+        h = rd(f)
+        if s[6] > today:
+            new = h.replace(LIVE_ROBOTS, SCHED_ROBOTS) if LIVE_ROBOTS in h else (
+                h if SCHED_ROBOTS in h else h.replace("<head>", "<head>" + SCHED_ROBOTS, 1))
+        else:
+            new = h.replace(SCHED_ROBOTS, LIVE_ROBOTS)
+        if new != h:
+            wr(f, new)
+
+
 def build_sitemap():
-    today = datetime.date.today().isoformat()
-    pages = ["index.html", "news.html"] + [k + ".html" for k in SECTIONS if k != "news"] + ["about.html"] + [s[0] + ".html" for s in STORIES]
+    today = nairobi_today().isoformat()
+    live = [s for s in STORIES if s[6] <= today]  # scheduled stories join the sitemap on their date
+    pages = ["index.html", "news.html"] + [k + ".html" for k in SECTIONS if k != "news"] + ["about.html"] + [s[0] + ".html" for s in live]
     seen, rows = set(), []
     for p in pages:
         if p in seen:
@@ -393,4 +423,5 @@ if __name__ == "__main__":
     build_home()
     build_flavor10()
     build_sitemap()
+    mark_scheduled()
     print("site rebuilt")
