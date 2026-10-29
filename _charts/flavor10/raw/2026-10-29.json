@@ -1,5 +1,5 @@
 {
- "read": "29 Oct 2026, 15:02 EAT",
+ "read": "29 Oct 2026, 15:03 EAT",
  "sources": {
   "P": {
    "name": "Apple Music Top 100: Kenya",
@@ -519,7 +519,8 @@
   },
   "R": {
    "name": "Kenya Airplay",
-   "date": "week of 26 Oct 2026",
+   "date": "week of 29 Oct 2026",
+   "fetched": "2026-10-29",
    "top": [
     [
      "Asali",
@@ -535,7 +536,7 @@
     ],
     [
      "AYAYAAH",
-     "ELEMENT EleéeH, Joshua Baraka & Bien"
+     "ELEMENT EleéeH & Joshua Baraka & Bien"
     ],
     [
      "Chai ya saa kumi",
@@ -547,7 +548,7 @@
     ],
     [
      "WHERE IS MY HUSBAND! - Remix",
-     "RAYE, David Guetta & Hypaton"
+     "RAYE & David Guetta & Hypaton"
     ],
     [
      "Siaka",
@@ -567,7 +568,7 @@
     ],
     [
      "Bounce",
-     "Ruger"
+     "ruger"
     ],
     [
      "What To Do",
@@ -615,11 +616,111 @@
     ],
     [
      "Kautamu Flani (feat. Vijana Barubaru)",
-     "Bensoul, Vijana BaruBaru & V-Be"
+     "Bensoul & Vijana BaruBaru & V-Be"
     ],
     [
      "DAISIES",
      "Justin Bieber"
+    ],
+    [
+     "Love Design",
+     "Darassa & Harmonize"
+    ],
+    [
+     "Taya",
+     "Okello Max"
+    ],
+    [
+     "Wrong Places",
+     "Joshua Baraka & JAE5"
+    ],
+    [
+     "The Fate of Ophelia",
+     "Taylor Swift"
+    ],
+    [
+     "Cham Thum (Atoti)",
+     "Watendawili"
+    ],
+    [
+     "Egwu",
+     "Chike & Mohbad"
+    ],
+    [
+     "Bae Bae",
+     "BNXN & ruger"
+    ],
+    [
+     "Golden (Acapella)",
+     "AUDREY NUNA & REI AMI & EJAE & KPop Demon Hunters Cast & HUNTR/X"
+    ],
+    [
+     "Man I Need",
+     "Olivia Dean"
+    ],
+    [
+     "Beta",
+     "Mutoriah"
+    ],
+    [
+     "Hit & Run",
+     "Shenseea & Masicka & Di Genius"
+    ],
+    [
+     "NOW YOU KNOW(UMENIKNOW)",
+     "Lilmaina & danski & YBW Smith & SEAN MMG"
+    ],
+    [
+     "Happy",
+     "Diamond Platnumz"
+    ],
+    [
+     "Ozalima",
+     "Mbosso"
+    ],
+    [
+     "SLICK",
+     "Victony"
+    ],
+    [
+     "It Won't Stop",
+     "Sevyn Streeter & Chris Brown"
+    ],
+    [
+     "Aki Sioni - Magik Mix",
+     "Njerae"
+    ],
+    [
+     "Salama (feat. Diamond Platnumz)",
+     "Barnaba & Diamond Platnumz"
+    ],
+    [
+     "Extra Pressure",
+     "Bien & Bensoul"
+    ],
+    [
+     "Kitemeo",
+     "Kapitani"
+    ],
+    [
+     "Particula",
+     "Major Lazer & DJ Maphorisa & Nasty C & Ice Prince & Patoranking & Jidenna"
+    ],
+    [
+     "Love Me JeJe",
+     "Tems"
+    ],
+    [
+     "Donjo Maber",
+     "Dufla & Iyanii"
+    ],
+    [
+     "Who’s Dat Girl",
+     "Ayra Starr & Rema"
+    ],
+    [
+     "I Choose You",
+     "Bien & Bridget Blue"
     ]
    ]
   }
