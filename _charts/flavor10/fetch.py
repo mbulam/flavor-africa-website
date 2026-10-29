@@ -112,16 +112,13 @@ def pairs(text, code):
 
 # ---------------- Apple Music (daily) ----------------
 def apple():
-    try:
-        d = json.loads(get("https://rss.applemarketingtools.com/api/v2/ke/music/most-played/100/songs.json"))
-        rows = [(x["name"], x["artistName"]) for x in d["feed"]["results"]]
-        if len(rows) >= 20:
-            return clean(rows), "rss.applemarketingtools.com"
-    except Exception as e:
-        print("  apple v2:", e)
-    d = json.loads(get("https://itunes.apple.com/ke/rss/topsongs/limit=100/json"))
-    rows = [(x["im:name"]["label"], x["im:artist"]["label"]) for x in d["feed"]["entry"]]
-    return clean(rows), "itunes.apple.com rss"
+    # Apple Music "most played" only. The old iTunes Store feed is a different (sales) chart,
+    # so it is never used as a stand-in: if this fails, yesterday's Apple list is kept instead.
+    d = json.loads(get("https://rss.applemarketingtools.com/api/v2/ke/music/most-played/100/songs.json"))
+    rows = [(x["name"], x["artistName"]) for x in d["feed"]["results"]]
+    if len(rows) < 20:
+        raise RuntimeError("apple: short list")
+    return clean(rows), "rss.applemarketingtools.com"
 
 
 # ---------------- Shazam (daily) ----------------

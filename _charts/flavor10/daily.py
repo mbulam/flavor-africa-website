@@ -72,10 +72,20 @@ def display(title, artist):
     return t.replace("’", "'"), artist
 
 
+# Not songs (recitations, sermons, sound effects): left out of the ranking.
+NOT_MUSIC = ("quran", "qur'an", "durood", "surah", "sermon", "white noise", "rain sounds")
+
+
+def is_music(title, artist):
+    t = (title + " " + artist).lower()
+    return not any(w in t for w in NOT_MUSIC)
+
+
 def rank(raw):
     tally = {}
     for code, src in raw["sources"].items():
-        for pos, (title, artist) in enumerate(src["top"][:TOPN], 1):
+        top = [x for x in src["top"] if is_music(*x)]
+        for pos, (title, artist) in enumerate(top[:TOPN], 1):
             k = norm(title)
             e = tally.setdefault(k, {"points": 0, "charts": "", "best": 99, "seen": (title, artist)})
             if code in e["charts"]:

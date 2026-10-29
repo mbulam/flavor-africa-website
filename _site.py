@@ -297,7 +297,7 @@ def flavor10_html():
             d = last[k] - i
             mv = ('<span class="mv up">▲%d</span>' % d) if d > 0 else ('<span class="mv down">▼%d</span>' % -d) if d < 0 else '<span class="mv">–</span>'
         else:
-            mv = '<span class="mv re">RE</span>' if k in ever else '<span class="mv new">NEW</span>'
+            mv = '<span class="mv re">RE</span>' if k in ever else '<span class="mv new">FRESH</span>'
         W = 300 * s["points"] / top
         random.seed(i * 7 + 3)
         bars = "".join('<rect x="%d" y="%.1f" width="2.4" height="%.1f" rx="1.2"/>' % (x, (24 - v) / 2, v)

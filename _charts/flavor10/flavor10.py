@@ -2,7 +2,7 @@
 
 Each edition is saved as data/YYYY-MM-DD.json. When a new edition is built, it is
 compared with the most recent earlier edition to draw the movement markers:
-  ▲n climbed n places · ▼n dropped n places · – no change · NEW first time in the 10
+  ▲n climbed n places · ▼n dropped n places · – no change · FRESH first time in the 10
   RE re-entry (was in an earlier edition, not the last one)
 
 Run:  python3 flavor10.py 2026-10-28      (reads data/2026-10-28.json, writes PNG)
@@ -40,7 +40,7 @@ def movement(songs, history):
         elif k in ever:
             out.append(("re", "RE"))
         else:
-            out.append(("new", "NEW"))
+            out.append(("new", "FRESH"))
     return out
 
 
@@ -108,7 +108,7 @@ body:after{{content:"";position:absolute;inset:0;opacity:.05;pointer-events:none
 <div class="hd"><div class="k">THE FLAVOR 10 · KENYA · {ed["label"]}</div><div class="rule"></div></div>
 <div class="list">{"".join(rows)}</div>
 <div class="ft"><div><b>Sources:</b> {SRC.get(ed["date"] >= "2026-10-28", "")}</div>
-<div class="key"><em>▲</em> climbed <em>▼</em> dropped<br><em>–</em> no change <em>NEW</em> new entry</div></div>
+<div class="key"><em>▲</em> climbed <em>▼</em> dropped<br><em>–</em> no change <em>FRESH</em> new entry</div></div>
 </body></html>'''
 
 
