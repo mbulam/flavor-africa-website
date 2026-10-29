@@ -11,9 +11,16 @@
   {
    "title": "I'll Be Okay",
    "artist": "Bien",
-   "points": 95,
-   "charts": "PSYR",
+   "points": 70,
+   "charts": "SYR",
    "apple": "6822410197"
+  },
+  {
+   "title": "Chai ya Saa Kumi",
+   "artist": "Ywaya Tajiri",
+   "points": 56,
+   "charts": "PYR",
+   "apple": "6796900642"
   },
   {
    "title": "Finale",
@@ -22,24 +29,11 @@
    "charts": "YR"
   },
   {
-   "title": "Chai ya Saa Kumi",
-   "artist": "Ywaya Tajiri",
-   "points": 38,
-   "charts": "YR",
-   "apple": "6796900642"
-  },
-  {
    "title": "Heaven Baby",
    "artist": "Ayra Starr ft. Zayn",
    "points": 36,
    "charts": "SY",
    "apple": "6796539210"
-  },
-  {
-   "title": "WORSHIP",
-   "artist": "Asake & DJ Snake",
-   "points": 35,
-   "charts": "PS"
   },
   {
    "title": "Shing",
@@ -55,22 +49,28 @@
    "charts": "YR"
   },
   {
+   "title": "Good News",
+   "artist": "Shaboozey",
+   "points": 25,
+   "charts": "PS"
+  },
+  {
+   "title": "Durood Ibrahim",
+   "artist": "quran",
+   "points": 25,
+   "charts": "P"
+  },
+  {
    "title": "Asali",
    "artist": "Xenia Manasseh & Cracker Mallo",
    "points": 25,
    "charts": "R"
   },
   {
-   "title": "Gratitude",
-   "artist": "Asake",
+   "title": "Me too",
+   "artist": "Abigail Chams & Harmonize",
    "points": 24,
    "charts": "P"
-  },
-  {
-   "title": "Something for You",
-   "artist": "Octopizzo",
-   "points": 24,
-   "charts": "S"
   }
  ]
 }
