@@ -54,6 +54,49 @@ PAIR_PATTERNS = [
 ]
 
 
+def ld_list(text):
+    """Songs from a page's schema.org ItemList (how Soundcharts publishes its chart tables)."""
+    rows = []
+    for blk in re.findall(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', text, flags=re.S):
+        try:
+            d = json.loads(blk)
+        except Exception:
+            continue
+        stack = [d]
+        while stack:
+            o = stack.pop()
+            if isinstance(o, list):
+                stack.extend(o)
+            elif isinstance(o, dict):
+                if o.get("@type") == "ItemList" and isinstance(o.get("itemListElement"), list):
+                    for el in sorted(o["itemListElement"], key=lambda x: x.get("position", 0)):
+                        it = el.get("item", el)
+                        by = it.get("byArtist") or {}
+                        if isinstance(by, list):
+                            by = {"name": " & ".join(b.get("name", "") for b in by)}
+                        rows.append((it.get("name"), by.get("name")))
+                    if len(rows) >= 20:
+                        return rows
+                    rows = []
+                stack.extend(o.values())
+    return rows
+
+
+def soundcharts(urls, code):
+    last = None
+    for u in urls:
+        try:
+            page = get(u)
+        except Exception as e:
+            last = e
+            continue
+        rows = ld_list(page)
+        if len(rows) >= 20:
+            return clean(rows), u.replace("https://", "")
+        last = RuntimeError("no list on " + u)
+    raise last or RuntimeError("no source")
+
+
 def pairs(text, code):
     """Pull (title, artist) pairs out of a page's embedded JSON (pages may escape their quotes)."""
     for t in (text, text.replace('\\"', '"')):
@@ -98,12 +141,17 @@ def shazam():
             return clean(rows), "shazam csv"
     except Exception as e:
         print("  shazam csv:", e)
-    rows = pairs(get("https://www.shazam.com/charts/top-200/kenya"), "S")
-    return clean(rows), "shazam.com chart page"
+    return soundcharts(["https://soundcharts.com/en/charts/shazam/kenya",
+                        "https://soundcharts.com/en/charts/shazam-top-200/kenya"], "S")
 
 
 # ---------------- Spotify via kworb (weekly for Kenya) ----------------
 def spotify():
+    try:
+        return soundcharts(["https://soundcharts.com/en/charts/spotify/kenya",
+                            "https://soundcharts.com/en/charts/spotify-weekly/kenya"], "F")
+    except Exception as e:
+        print("  spotify soundcharts:", e)
     html = get("https://kworb.net/spotify/country/ke_weekly.html")
     rows = []
     for cell in re.findall(r'<td class="text mp"><div>(.*?)</div></td>', html, flags=re.S):
@@ -144,8 +192,7 @@ def youtube():
 
 # ---------------- Kenya Airplay via Soundcharts (weekly) ----------------
 def airplay():
-    rows = pairs(get("https://soundcharts.com/en/charts/airplay/kenya"), "R")
-    return clean(rows), "soundcharts.com"
+    return soundcharts(["https://soundcharts.com/en/charts/airplay/kenya"], "R")
 
 
 FETCH = {"P": apple, "S": shazam, "F": spotify, "Y": youtube, "R": airplay}
