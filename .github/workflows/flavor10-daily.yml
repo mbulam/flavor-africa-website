@@ -1,7 +1,7 @@
 # The Flavor 10 · Kenya: updates itself every morning, no one needs to do anything.
 # The same run also releases scheduled stories to Google (sitemap + noindex) on their date.
 # 06:10 Nairobi time = 03:10 UTC. It fetches the source charts, ranks them, rebuilds the
-# homepage and pushes; Netlify then publishes the site as usual.
+# homepage and pushes; Cloudflare Pages then publishes the site as usual.
 # Runs ONCE a day. To force an extra run, use "Run workflow" on GitHub (Actions tab).
 name: Flavor 10 daily update
 on:

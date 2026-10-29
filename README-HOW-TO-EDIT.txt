@@ -4,7 +4,14 @@ FLAVOR AFRICA WEBSITE - HOW IT WORKS
 WHAT THIS IS
 A plain static website: HTML pages + one stylesheet + an img folder.
 No database, no login. Open index.html in a browser to preview it.
-To publish: upload the whole folder to Cloudflare Pages, Netlify or any web host.
+HOSTING (moved from Netlify on 29 Oct 2026)
+The live site (flavorafricagroup.org and www.flavorafricagroup.org) is hosted on
+Cloudflare Pages, free plan, project "flavor-africa-website". Cloudflare publishes
+automatically from the main branch of this GitHub repo: any push to main goes live
+within a minute or two. No build step; the repo folder is served as-is.
+Test copy: https://flavor-africa-website.pages.dev
+The domain is registered at Afriregister and uses Cloudflare's nameservers.
+Netlify is no longer used.
 
 FILES
 index.html            Home page (top story, Latest News, Trending, Flavor Playlist,
@@ -96,7 +103,7 @@ AUTOMATIC UPDATES (added 29 Oct 2026)
 - The Flavor 10 · Kenya updates itself every morning at about 06:10 Nairobi time.
   GitHub Actions (.github/workflows/flavor10-daily.yml) runs _charts/flavor10/fetch.py
   (collects Apple Music, Shazam, YouTube and Kenyan airplay charts; Spotify has no public Kenya chart), then
-  daily.py (ranks them) and _site.py (rebuilds the homepage), and pushes. Netlify publishes.
+  daily.py (ranks them) and _site.py (rebuilds the homepage), and pushes. Cloudflare Pages publishes.
   What worked on the last run is written to _charts/flavor10/status.txt.
   If a source can't be reached, its last good copy is reused for a few days, then dropped.
   It runs once a day only. To force an extra run: "Run workflow" on GitHub (Actions tab).
