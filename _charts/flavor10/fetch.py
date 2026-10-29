@@ -141,8 +141,8 @@ def shazam():
             return clean(rows), "shazam csv"
     except Exception as e:
         print("  shazam csv:", e)
-    return soundcharts(["https://soundcharts.com/en/charts/shazam/kenya",
-                        "https://soundcharts.com/en/charts/shazam-top-200/kenya"], "S")
+    rows = pairs(get("https://www.shazam.com/charts/top-200/kenya"), "S")
+    return clean(rows), "shazam.com chart page"
 
 
 # ---------------- Spotify via kworb (weekly for Kenya) ----------------
@@ -195,7 +195,10 @@ def airplay():
     return soundcharts(["https://soundcharts.com/en/charts/airplay/kenya"], "R")
 
 
-FETCH = {"P": apple, "S": shazam, "F": spotify, "Y": youtube, "R": airplay}
+# Spotify (F) publishes no public Kenya chart (as of Oct 2026), so it is not fetched; spotify()
+# is kept in case one appears. Shazam blocks requests from GitHub's servers at times: when it
+# does, its last good copy is used for up to 3 days and then left out until it answers again.
+FETCH = {"P": apple, "S": shazam, "Y": youtube, "R": airplay}
 WEEKLY = {"F", "Y", "R"}
 
 
@@ -215,7 +218,7 @@ def main(date):
     today = datetime.date.fromisoformat(date)
     stamp = datetime.datetime.utcnow() + datetime.timedelta(hours=3)
     out, report = {}, []
-    for code in ["P", "S", "F", "Y", "R"]:
+    for code in ["P", "S", "Y", "R"]:
         fn = FETCH.get(code)
         if fn:
             try:

@@ -1,4 +1,4 @@
-# Python bytecode caches generated while building the site.
 __pycache__/
 *.py[cod]
 _charts/flavor10/out/
+_charts/flavor10/debug/

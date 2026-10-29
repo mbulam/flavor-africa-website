@@ -88,3 +88,15 @@ Culture & Sport blocks below skip anything Latest is already showing, so no stor
 appears twice. Stories in the top hero/Editor's picks stay out of Latest.
 For tall/portrait posters, make a separate square "-thumb.jpg" crop for the cards
 so the homepage thumbnail shows the subject, not the poster's text.
+
+AUTOMATIC UPDATES (added 29 Oct 2026)
+- The Flavor 10 · Kenya updates itself every morning at about 06:10 Nairobi time.
+  GitHub Actions (.github/workflows/flavor10-daily.yml) runs _charts/flavor10/fetch.py
+  (collects Apple Music, Shazam, YouTube and Kenyan airplay charts; Spotify has no public Kenya chart), then
+  daily.py (ranks them) and _site.py (rebuilds the homepage), and pushes. Netlify publishes.
+  What worked on the last run is written to _charts/flavor10/status.txt.
+  If a source can't be reached, its last good copy is reused for a few days, then dropped.
+  Force a run: change _charts/flavor10/RUN and push, or "Run workflow" on GitHub (Actions tab).
+- Climb arrows are green, drop arrows are red (style.css: --climb / --fall).
+- Editor's picks on the homepage rotate every day from the long-form stories of the last
+  30 days (PICK_TAGS in _site.py). The big hero story is still set by hand in index.html.
