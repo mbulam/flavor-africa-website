@@ -17,11 +17,11 @@ import csv, datetime, glob, io, json, os, re, sys, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
-MAX_AGE = {"P": 3, "S": 3, "F": 3, "Y": 10, "R": 10}   # days a carried-forward copy may be used
+MAX_AGE = {"P": 3, "S": 3, "F": 10, "Y": 10, "R": 10}   # days a carried-forward copy may be used
 NAMES = {
     "P": "Apple Music Top 100: Kenya",
     "S": "Shazam Top 200: Kenya",
-    "F": "Spotify Daily: Kenya",
+    "F": "Spotify Weekly: Kenya",
     "Y": "YouTube Top Songs: Kenya",
     "R": "Kenya Airplay",
 }
@@ -43,6 +43,28 @@ def clean(rows):
         if t and a and (t, a) not in out:
             out.append((t, a))
     return [list(x) for x in out[:TOP]]
+
+
+PAIR_PATTERNS = [
+    r'"heading"\s*:\s*\{\s*"title"\s*:\s*"((?:[^"\\]|\\.)+)"\s*,\s*"subtitle"\s*:\s*"((?:[^"\\]|\\.)+)"',
+    r'"title"\s*:\s*"((?:[^"\\]|\\.)+)"\s*,\s*"subtitle"\s*:\s*"((?:[^"\\]|\\.)+)"',
+    r'"name"\s*:\s*"((?:[^"\\]|\\.)+)"\s*,\s*"artistName"\s*:\s*"((?:[^"\\]|\\.)+)"',
+    r'"songName"\s*:\s*"((?:[^"\\]|\\.)+)"[^{}]{0,400}?"artistName"\s*:\s*"((?:[^"\\]|\\.)+)"',
+    r'"title"\s*:\s*"((?:[^"\\]|\\.)+)"[^{}]{0,300}?"creditName"\s*:\s*"((?:[^"\\]|\\.)+)"',
+]
+
+
+def pairs(text, code):
+    """Pull (title, artist) pairs out of a page's embedded JSON (pages may escape their quotes)."""
+    for t in (text, text.replace('\\"', '"')):
+        for pat in PAIR_PATTERNS:
+            got = re.findall(pat, t)
+            if len(got) >= 20:
+                dec = lambda x: json.loads('"%s"' % x) if "\\" in x else x
+                return [(dec(a), dec(b)) for a, b in got]
+    os.makedirs(f"{HERE}/debug", exist_ok=True)
+    open(f"{HERE}/debug/{code}.txt", "w").write(text[:200000])
+    raise RuntimeError("no song list found in page (saved to debug/%s.txt)" % code)
 
 
 # ---------------- Apple Music (daily) ----------------
@@ -76,20 +98,13 @@ def shazam():
             return clean(rows), "shazam csv"
     except Exception as e:
         print("  shazam csv:", e)
-    d = json.loads(get("https://www.shazam.com/services/amapi/v1/catalog/KE/charts?types=songs&chart=most-played&limit=100"))
-    rows = []
-    for ch in d.get("results", {}).get("songs", []):
-        for x in ch.get("data", []):
-            a = x.get("attributes", {})
-            rows.append((a.get("name"), a.get("artistName")))
-    if len(rows) < 20:
-        raise RuntimeError("shazam: no rows")
-    return clean(rows), "shazam amapi"
+    rows = pairs(get("https://www.shazam.com/charts/top-200/kenya"), "S")
+    return clean(rows), "shazam.com chart page"
 
 
-# ---------------- Spotify via kworb (daily) ----------------
+# ---------------- Spotify via kworb (weekly for Kenya) ----------------
 def spotify():
-    html = get("https://kworb.net/spotify/country/ke_daily.html")
+    html = get("https://kworb.net/spotify/country/ke_weekly.html")
     rows = []
     for cell in re.findall(r'<td class="text mp"><div>(.*?)</div></td>', html, flags=re.S):
         txt = re.sub(r"<[^>]+>", "", cell).replace("&amp;", "&").replace("&#39;", "'").strip()
@@ -127,7 +142,14 @@ def youtube():
     return clean(rows), "charts.youtube.com"
 
 
-FETCH = {"P": apple, "S": shazam, "F": spotify, "Y": youtube}   # R (airplay) has no open feed: carried from manual editions
+# ---------------- Kenya Airplay via Soundcharts (weekly) ----------------
+def airplay():
+    rows = pairs(get("https://soundcharts.com/en/charts/airplay/kenya"), "R")
+    return clean(rows), "soundcharts.com"
+
+
+FETCH = {"P": apple, "S": shazam, "F": spotify, "Y": youtube, "R": airplay}
+WEEKLY = {"F", "Y", "R"}
 
 
 def last_good(code, before):
@@ -151,7 +173,8 @@ def main(date):
         if fn:
             try:
                 top, via = fn()
-                out[code] = {"name": NAMES[code], "date": today.strftime("%-d %b %Y"), "fetched": date, "top": top}
+                label = ("week of " if code in WEEKLY else "") + today.strftime("%-d %b %Y")
+                out[code] = {"name": NAMES[code], "date": label, "fetched": date, "top": top}
                 report.append(f"{code} OK   {len(top):3d} songs  via {via}")
                 continue
             except Exception as e:
