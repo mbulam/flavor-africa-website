@@ -54,6 +54,7 @@ STORIES = [
  ("ballon-dor-2026", ["sport"], "Flavor Sports", "Kane ends England’s wait. Putellas makes it three.", "Harry Kane and Alexia Putellas lead a night of winners, records and new ground for the Ballon d’Or in London.", "bdor-kane-putellas.jpg", "2026-10-27", "center"),
  ("jay-z-super-bowl-lxi", ["news", "music"], "The Wrap", "From NFL partner to Super Bowl headliner: Jay-Z takes the Super Bowl stage", "Jay-Z will headline the Apple Music Super Bowl LXI Halftime Show in the 30th-anniversary year of Reasonable Doubt.", "jay-z-super-bowl-lxi-thumb.jpg", "2026-10-27", "center 40%"),
  ("tyla-that-girl-scholarship", ["news", "music"], "The Wrap", "Tyla opens music scholarships to South African students", "Four of 10 US$5,000 awards are reserved for South African students. Applications may close early.", "tyla-instagram.jpg", "2026-10-27", "center 0%"),
+ ("patrick-stewart-dies-at-86", ["news", "screen"], "The Wrap", "Sir Patrick Stewart dies at 86", "The Star Trek and X-Men actor died at his home in Los Angeles on 28 October.", "wr-patrick-stewart.jpg", "2026-10-29", "center 20%"),
  ("fame-week-africa", ["news", "music"], "The Wrap", "From brief to beat: FAME Week pairs African music makers with storytellers", "A songwriting camp links music creators with screen and content briefs, while raising questions about credit, licensing and fair pay.", "fame-week-africa-logo.jpg", "2026-10-28", "center"),
 ]
 
@@ -71,6 +72,7 @@ EDITION = {
  "jay-z-super-bowl-lxi": "Global",
  "tyla-that-girl-scholarship": "Continental",
  "fame-week-africa": "Continental",
+ "patrick-stewart-dies-at-86": "Global",
 }
 HERO = {"ayrosh"}   # the big top story (hand-set in index.html)
 # Editor's picks rotate every day from the long-form stories of the last PICK_DAYS days.
