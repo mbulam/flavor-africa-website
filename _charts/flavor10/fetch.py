@@ -28,12 +28,23 @@ NAMES = {
 TOP = 50
 
 
-def get(url, data=None, headers=None):
+def get(url, data=None, headers=None, tries=4):
+    """Fetch a page, retrying passing server hiccups (502/503/timeouts) a few times."""
+    import time, urllib.error
     h = {"User-Agent": UA, "Accept": "*/*", "Accept-Language": "en"}
     h.update(headers or {})
-    req = urllib.request.Request(url, data=data, headers=h)
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.read().decode("utf-8", "replace")
+    for n in range(tries):
+        try:
+            req = urllib.request.Request(url, data=data, headers=h)
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return r.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            if e.code in (403, 404, 405) or n == tries - 1:
+                raise
+        except Exception:
+            if n == tries - 1:
+                raise
+        time.sleep(15 * (n + 1))
 
 
 def clean(rows):
