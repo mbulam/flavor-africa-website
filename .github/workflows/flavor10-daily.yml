@@ -38,7 +38,7 @@ jobs:
         run: |
           git config user.name "flavor10-bot"
           git config user.email "flavor10-bot@users.noreply.github.com"
-          git add -A _charts/flavor10 index.html sitemap.xml ":!_charts/flavor10/debug"
+          git add -A _charts/flavor10 index.html sitemap.xml
           if git diff --cached --quiet; then echo "Nothing changed"; exit 0; fi
           git commit -m "Flavor 10: daily update $(TZ=Africa/Nairobi date +%F)"
           for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && exit 0; sleep 10; done
