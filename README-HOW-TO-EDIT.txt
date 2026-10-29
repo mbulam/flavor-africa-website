@@ -99,7 +99,7 @@ AUTOMATIC UPDATES (added 29 Oct 2026)
   daily.py (ranks them) and _site.py (rebuilds the homepage), and pushes. Netlify publishes.
   What worked on the last run is written to _charts/flavor10/status.txt.
   If a source can't be reached, its last good copy is reused for a few days, then dropped.
-  Force a run: change _charts/flavor10/RUN and push, or "Run workflow" on GitHub (Actions tab).
+  It runs once a day only. To force an extra run: "Run workflow" on GitHub (Actions tab).
 - Climb arrows are green, drop arrows are red (style.css: --climb / --fall).
 - Editor's picks on the homepage rotate every day from the long-form stories of the last
   30 days (PICK_TAGS in _site.py). The big hero story is still set by hand in index.html.
