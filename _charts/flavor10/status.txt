@@ -1,5 +1,6 @@
-Flavor 10 fetch for 2026-10-29 · run 29 Oct 2026 15:08 EAT · fresh: PYR
-P OK    50 songs  via itunes.apple.com rss
+Flavor 10 fetch for 2026-10-29 · run 29 Oct 2026 15:14 EAT · fresh: YR
+P FAIL HTTPError: HTTP Error 502: Bad Gateway
+P KEPT copy from 2026-10-28
 S FAIL HTTPError: HTTP Error 403: Forbidden
 S KEPT copy from 2026-10-28
 Y OK    50 songs  via charts.youtube.com

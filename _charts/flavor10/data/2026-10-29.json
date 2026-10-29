@@ -2,7 +2,7 @@
  "date": "2026-10-29",
  "label": "29 OCT 2026",
  "sources": {
-  "P": "Apple Music Top 100: Kenya (29 Oct 2026)",
+  "P": "Apple Music Top 100: Kenya (28 Oct 2026)",
   "S": "Shazam Top 200: Kenya (28 Oct 2026)",
   "Y": "YouTube Top Songs: Kenya (week of 29 Oct 2026)",
   "R": "Kenya Airplay (week of 29 Oct 2026)"
@@ -11,22 +11,22 @@
   {
    "title": "I'll Be Okay",
    "artist": "Bien",
-   "points": 70,
-   "charts": "SYR",
+   "points": 95,
+   "charts": "PSYR",
    "apple": "6822410197"
-  },
-  {
-   "title": "Chai ya Saa Kumi",
-   "artist": "Ywaya Tajiri",
-   "points": 56,
-   "charts": "PYR",
-   "apple": "6796900642"
   },
   {
    "title": "Finale",
    "artist": "Bien ft. Alikiba",
    "points": 43,
    "charts": "YR"
+  },
+  {
+   "title": "Chai ya Saa Kumi",
+   "artist": "Ywaya Tajiri",
+   "points": 38,
+   "charts": "YR",
+   "apple": "6796900642"
   },
   {
    "title": "Heaven Baby",
@@ -43,22 +43,22 @@
    "apple": "6822137422"
   },
   {
+   "title": "WORSHIP",
+   "artist": "Asake & DJ Snake",
+   "points": 34,
+   "charts": "PS"
+  },
+  {
    "title": "Ukining'inia",
    "artist": "Collo Blue",
    "points": 28,
    "charts": "YR"
   },
   {
-   "title": "Good News",
-   "artist": "Shaboozey",
+   "title": "Oh No",
+   "artist": "Rema",
    "points": 25,
    "charts": "PS"
-  },
-  {
-   "title": "Durood Ibrahim",
-   "artist": "quran",
-   "points": 25,
-   "charts": "P"
   },
   {
    "title": "Asali",
@@ -67,8 +67,8 @@
    "charts": "R"
   },
   {
-   "title": "Me too",
-   "artist": "Abigail Chams & Harmonize",
+   "title": "Come Closer",
+   "artist": "Wizkid & Drake",
    "points": 24,
    "charts": "P"
   }
