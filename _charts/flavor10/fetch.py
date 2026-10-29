@@ -202,7 +202,7 @@ WEEKLY = {"F", "Y", "R"}
 def last_good(code, before):
     for f in sorted(glob.glob(f"{HERE}/raw/*.json"), reverse=True):
         day = os.path.basename(f)[:-5]
-        if day >= before:
+        if day > before:   # today's own earlier run counts, so a passing hiccup keeps the freshest copy
             continue
         src = json.load(open(f)).get("sources", {}).get(code)
         if src and src.get("top"):
