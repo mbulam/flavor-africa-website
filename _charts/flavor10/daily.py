@@ -8,6 +8,8 @@ Sources and how often they refresh:
   S  Shazam Top 200: Kenya       (daily)   via shazam.com/charts/top-200/kenya
   Y  YouTube Top Songs: Kenya    (weekly)  via soundcharts.com/en/charts/youtube/kenya
   R  Kenya Airplay               (weekly)  via soundcharts.com/en/charts/airplay/kenya
+  F  Spotify Daily: Kenya         (daily)   via kworb.net (added 29 Oct 2026, used when available)
+From 29 Oct 2026 fetch.py collects these automatically every morning (GitHub Actions).
 Weekly sources are carried forward unchanged until their next edition comes out.
 
 Scoring: each source's top 25 counts. Position 1 = 25 points ... position 25 = 1 point.
@@ -58,6 +60,18 @@ def norm(title):
     return ALIASES.get(t, t)
 
 
+def display(title, artist):
+    """Tidy a platform title for print: "Ginger (feat. Burna Boy)" -> "Ginger", artist keeps the feature."""
+    m = re.search(r"\s*[\(\[](?:feat|ft|with)\.?\s+([^\)\]]+)[\)\]]", title, flags=re.I)
+    t = title
+    if m:
+        t = (title[:m.start()] + title[m.end():]).strip()
+        guest = m.group(1).strip()
+        if guest.split(",")[0].split("&")[0].strip().lower() not in artist.lower():
+            artist = "%s ft. %s" % (artist, guest)
+    return t.replace("’", "'"), artist
+
+
 def rank(raw):
     tally = {}
     for code, src in raw["sources"].items():
@@ -72,7 +86,7 @@ def rank(raw):
     order = sorted(tally.items(), key=lambda kv: (-kv[1]["points"], -len(kv[1]["charts"]), kv[1]["best"]))
     songs = []
     for k, e in order[:10]:
-        title, artist = CANON.get(k, e["seen"])
+        title, artist = CANON.get(k) or display(*e["seen"])
         s = {"title": title, "artist": artist, "points": e["points"], "charts": e["charts"]}
         if k in APPLE_IDS:
             s["apple"] = APPLE_IDS[k]
@@ -93,4 +107,4 @@ def build(date):
 
 
 if __name__ == "__main__":
-    build(sys.argv[1])
+    build(sys.argv[1] if len(sys.argv) > 1 else (datetime.datetime.utcnow() + datetime.timedelta(hours=3)).date().isoformat())

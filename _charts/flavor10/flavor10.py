@@ -86,7 +86,7 @@ body:after{{content:"";position:absolute;inset:0;opacity:.05;pointer-events:none
 .rk{{font-size:40px;font-weight:300;color:rgba(21,16,42,.4);letter-spacing:-.02em;line-height:1;display:flex;flex-direction:column;gap:6px}}
 .one .rk{{color:{P};font-weight:700;font-size:56px}}
 .mv{{font-size:16px;font-weight:700;letter-spacing:.06em;line-height:1;align-self:flex-start;padding:4px 6px 3px;border-radius:3px}}
-.mv.up{{color:{P}}} .mv.down{{color:#9A2A2A}} .mv.same{{color:rgba(21,16,42,.45)}}
+.mv.up{{color:#138A4A}} .mv.down{{color:#D22F35}} .mv.same{{color:rgba(21,16,42,.45)}}
 .mv.none{{display:none}} .mv.new{{background:{P};color:{Y}}} .mv.re{{border:1px solid {P};color:{P}}}
 .one .mv.none{{display:none}} .mv.new{{background:{P};color:{Y}}}
 .lab{{font-size:12px;letter-spacing:.24em;font-weight:600;color:{P};margin-bottom:6px}}

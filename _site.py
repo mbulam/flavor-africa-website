@@ -303,8 +303,12 @@ def flavor10_html():
     return ('<section class="wrap block" id="flavor-10"><div class="secbar"><h2>The Flavor 10 · Kenya</h2>'
             '<a href="charts.html">More charts »</a></div><p class="f10-sub">%s · What Kenya is playing today. Tap a song to listen.</p>'
             '<div class="f10-grid"><ol class="f10">%s</ol>%s</div>'
-            '<p class="f10-src"><b>Sources:</b> Apple Music · Shazam · YouTube · Kenyan radio. Updated daily.</p></section>%s'
-            % (e(ed["label"].title().replace("Of", "of")), "".join(rows), player, F10JS))
+            '<p class="f10-src"><b>Sources:</b> %s. Updated daily.</p></section>%s'
+            % (e(ed["label"].title().replace("Of", "of")), "".join(rows), player,
+               " · ".join(SRC_LABEL[c] for c in "PFSYR" if c in ed.get("sources", {})), F10JS))
+
+
+SRC_LABEL = {"P": "Apple Music", "F": "Spotify", "S": "Shazam", "Y": "YouTube", "R": "Kenyan radio"}
 
 
 F10JS = r"""<script>(function(){var sec=document.getElementById("flavor-10");if(!sec)return;
@@ -336,6 +340,8 @@ def build_flavor10():
     h = rd("index.html")
     block = flavor10_html()
     h = re.sub(r'<section class="wrap block" id="flavor-10">.*?</section>', "", h, flags=re.S)
+    # remove the chart's player script too, or every rebuild would add another copy
+    h = re.sub(r'<script>\(function\(\)\{var sec=document\.getElementById\("flavor-10"\).*?</script>', "", h, flags=re.S)
     if block:
         h = h.replace('<section class="band">', block + '<section class="band">', 1)
     wr("index.html", h)
