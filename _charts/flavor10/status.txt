@@ -1,0 +1,8 @@
+Flavor 10 fetch for 2026-10-29 · run 29 Oct 2026 14:57 EAT · fresh: PY
+P OK    50 songs  via rss.applemarketingtools.com
+S FAIL HTTPError: HTTP Error 405: Not allowed.
+S KEPT copy from 2026-10-28
+F FAIL HTTPError: HTTP Error 404: Not Found
+F DROPPED (no copy newer than 3 days)
+Y OK    50 songs  via charts.youtube.com
+R KEPT copy from 2026-10-28
