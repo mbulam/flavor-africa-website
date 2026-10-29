@@ -236,7 +236,7 @@ def header(cur):
     for slug,name,segs,_ in SECTIONS:
         items=''.join('<li><a href="%s.html">%s</a></li>'%(slug,e(x)) for x in segs)
         acc+='<div class="acc"><button type="button" aria-expanded="false"><b style="font-weight:600">%s</b><span>+</span></button><ul hidden><li><a href="%s.html">All %s</a></li>%s</ul></div>'%(e(name),slug,e(name),items)
-    acc+='<div class="acc"><a href="about.html">About &amp; contact</a></div>'
+    acc+='<div class="acc"><a href="about.html">About</a></div>'
     return ('<header><div class="wrap bar"><button class="icon" type="button" id="open" aria-label="Open menu">%s</button>'
             '<a class="logo" href="index.html">flavor.africa</a><span></span></div>'
             '<nav class="sub" aria-label="Sections"><div class="wrap">%s</div></nav></header>'

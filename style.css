@@ -424,7 +424,7 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 .ab-work{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
 .ab-work h3{font-size:24px;text-transform:uppercase;margin:8px 0 6px}
 .ab-work p{margin:0;color:var(--mute);font-size:14px}
-.ab-note{color:var(--mute);font-size:14px;margin:14px 0 0;max-width:40ch}
+.ab-note{color:var(--mute);font-size:14px;margin:22px 0 0;max-width:60ch}
 @media (max-width:900px){
   .ab-essay{grid-template-columns:minmax(0,1fr);gap:24px}
   .ab-map,.ab-work{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -435,3 +435,7 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
   .ab-hero{padding:40px 0 34px}
   .ab-map,.ab-work{grid-template-columns:minmax(0,1fr)}
 }
+.ab-plain{max-width:68ch}
+.ab-work.ab-work3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.ab-note a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:900px){.ab-work.ab-work3{grid-template-columns:minmax(0,1fr)}}
