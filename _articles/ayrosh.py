@@ -2,8 +2,8 @@ FILE = "ayrosh.html"
 TITLE = "Know your November artist: Ayrosh"
 TAG = "Flavor Artist Live"
 H1 = "Know your November artist: Ayrosh"
-DEK = "He took the sound of Kikuyu bars and weddings and made it sound like the future. Before he headlines Flavor Artist Live on 28 November, here's everything you need to know."
-META = "Flavor Artist Live · 25 Oct 2026 · Show: 28 Nov · 5 min read"
+DEK = "He took the sound of Kikuyu bars and weddings and made it sound like the future. Before he headlines Flavor Artist Live (date to be announced), here's everything you need to know."
+META = "Flavor Artist Live · 25 Oct 2026 · Show: TBA · 5 min read"
 LEAD = ("img/ay-cover.jpg", "Ayrosh")
 
 BODY = [
@@ -37,12 +37,12 @@ BODY = [
 ("img", "img/ay-collabs.jpg", "Ayrosh"),
 
 ("h2", "Start here", "The Ayrosh ", "starter pack"),
-("p", "New to him? Start with “Maheni” for the song that broke him through. Then play the <em>Fire</em> EP for the R&B side, all four tracks in one sitting. Finish with <em>SUPERSTAR</em>, start to finish, and the Kayrop remix of the title track. By 28 November, you'll know the words."),
+("p", "New to him? Start with “Maheni” for the song that broke him through. Then play the <em>Fire</em> EP for the R&B side, all four tracks in one sitting. Finish with <em>SUPERSTAR</em>, start to finish, and the Kayrop remix of the title track. By the time he takes the stage, you'll know the words."),
 
-("h2", "28 November", "See him ", "live"),
-("p", "Ayrosh headlines Flavor Artist Live on Saturday 28 November 2026. Expect the bar classics, the new music, and that moment when the whole room becomes a train. Venue and tickets will be announced on our socials."),
+("h2", "Date TBA", "See him ", "live"),
+("p", "Ayrosh headlines Flavor Artist Live. The date is to be announced. Expect the bar classics, the new music, and that moment when the whole room becomes a train. Venue and tickets will be announced on our socials."),
 ("img", "img/ay-live.jpg", "Ayrosh live"),
-("facts", [("Date", "Sat 28 Nov 2026"), ("Venue", "To be announced"), ("Tickets", "Coming soon")]),
+("facts", [("Date", "To be announced"), ("Venue", "To be announced"), ("Tickets", "Coming soon")]),
 ]
 
 SOURCES = [
