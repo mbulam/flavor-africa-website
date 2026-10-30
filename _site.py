@@ -19,8 +19,9 @@ SITE = os.path.dirname(os.path.abspath(__file__))
 URL = "https://flavorafricagroup.org/"
 e = lambda s: html.escape(s, quote=True)
 
-# slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, Nairobi), image focus
+# slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, or YYYY-MM-DDTHH:MM to go live at a set time; Nairobi), image focus
 STORIES = [
+ ("thandiwe-muriu", ["features", "culture"], "Flavor Feature", "Thandiwe Muriu: the art of hiding in plain sight", "The Nairobi photographer dresses women in the same fabric as the wall behind them, and they're still all you can see.", "tm-cover.jpg", "2026-10-31T09:00", "center 15%"),
  ("marley-locks-mau-mau", ["culture"], "Flavor Roots", "Did Bob Marley's locks come from Kenya?", "Flavor Roots Issue 02: from Kingston to the Mau Mau forests, the real story behind the locks.", "fr2-marley.jpg", "2026-10-29", "center 30%"),
  ("the-verdict-lupin-part-4", ["screen"], "The Verdict", "Lupin Part 4: bigger, flashier, still worth it", "Critics love it, fans are split. Our call on Omar Sy's return.", "verdict-lupin.jpg", "2026-10-28", "center 25%"),
  ("tems-soul-train-2026", ["news", "music"], "The Wrap", "Tems is the only double nominee in the first Soul Train Awards reveal", "R&B/Soul Song of the Year and Spotify's RNB X International Artist.", "wr-tems-st.jpg", "2026-10-05", "center 40%"),
@@ -80,14 +81,14 @@ PICK_TAGS = {"The Flavor Cover", "Flavor Feature", "Money Moves", "Flavor Roots"
              "The Verdict", "Flavor Spotlight", "In Their Words", "Flavor Fashion", "Flavor Artist Live"}
 PICK_DAYS = 30
 PICKJS = ('<script>(function(){var g=document.querySelector(".sides[data-pool]");if(!g)return;'
-          'var now=new Date(Date.now()+108e5),d=now.toISOString().slice(0,10),day=Math.floor(now.getTime()/864e5);'
+          'var now=new Date(Date.now()+108e5),d=now.toISOString().slice(0,16),day=Math.floor(now.getTime()/864e5);'
           'var k=[].slice.call(g.children).filter(function(c){if(c.getAttribute("data-pub")>d){c.remove();return false}return true});'
           'var n=k.length;if(n<4)return;var st=(day*3)%n;'
           'for(var i=0;i<n;i++)g.appendChild(k[(st+i)%n])})();</script>')
 
 
 def nice(d):
-    return datetime.date.fromisoformat(d).strftime("%-d %b %Y")
+    return datetime.date.fromisoformat(d[:10]).strftime("%-d %b %Y")
 
 
 def newest(items):
@@ -116,7 +117,7 @@ def hs(s):
             % (slug, date, img, pos, e(tag), e(title), nice(date)))
 
 
-SCHED = ('<script>(function(){var d=new Date(Date.now()+108e5).toISOString().slice(0,10);'
+SCHED = ('<script>(function(){var d=new Date(Date.now()+108e5).toISOString().slice(0,16);'
          'document.querySelectorAll("[data-pub]").forEach(function(x){if(x.getAttribute("data-pub")>d)x.remove()});'
          'var seen={};document.querySelectorAll("[data-limit]").forEach(function(g){var n=+g.getAttribute("data-limit");'
          '[].slice.call(g.children).forEach(function(c){if(seen[c.getAttribute("href")])c.remove()});'
@@ -212,7 +213,7 @@ def new_page(s):
     if os.path.exists(os.path.join(SITE, f)):
         return
     h = rd("savara.html")
-    url, im, iso = URL + f, URL + "img/" + img, date + "T08:00:00+03:00"
+    url, im, iso = URL + f, URL + "img/" + img, (date + ":00+03:00") if "T" in date else (date + "T08:00:00+03:00")
     h = re.sub(r"<title>.*?</title>", "<title>%s | flavor.africa</title>" % e(title), h, count=1)
     h = re.sub(r'(<meta name="description" content=")[^"]*', lambda m: m.group(1) + e(teaser), h, count=1)
     for prop in ("og:description", "twitter:description"):
@@ -294,7 +295,7 @@ def build_home():
     # right as scheduled stories go live).
     today = (datetime.datetime.utcnow() + datetime.timedelta(hours=3)).date()
     pool = [s for s in newest(STORIES) if s[2] in PICK_TAGS and s[0] not in HERO
-            and (today - datetime.date.fromisoformat(s[6])).days <= PICK_DAYS]
+            and (today - datetime.date.fromisoformat(s[6][:10])).days <= PICK_DAYS]
     sides = '<div class="sides" data-pool data-limit="3">%s</div>%s</section>' % ("".join(hs(s) for s in pool), PICKJS)
     h, n = re.subn(r'<div class="sides"[^>]*>.*?</section>', lambda m: sides, h, count=1, flags=re.S)
     assert n == 1
@@ -414,7 +415,7 @@ def mark_scheduled():
         if not os.path.exists(os.path.join(SITE, f)):
             continue
         h = rd(f)
-        if s[6] > today:
+        if s[6][:10] > today:
             new = h.replace(LIVE_ROBOTS, SCHED_ROBOTS) if LIVE_ROBOTS in h else (
                 h if SCHED_ROBOTS in h else h.replace("<head>", "<head>" + SCHED_ROBOTS, 1))
         else:
@@ -425,7 +426,7 @@ def mark_scheduled():
 
 def build_sitemap():
     today = nairobi_today().isoformat()
-    live = [s for s in STORIES if s[6] <= today]  # scheduled stories join the sitemap on their date
+    live = [s for s in STORIES if s[6][:10] <= today]  # scheduled stories join the sitemap on their date
     pages = ["index.html", "news.html"] + [k + ".html" for k in SECTIONS if k != "news"] + ["about.html"] + [s[0] + ".html" for s in live]
     seen, rows = set(), []
     for p in pages:
