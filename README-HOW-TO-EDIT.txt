@@ -120,4 +120,4 @@ GOOGLE ANALYTICS + COOKIE NOTICE (added 30 Oct 2026)
 - Cookie notice: "Okay" / "No thanks", remembered in the visitor's browser.
   Kenyan and other non-EU visitors are counted unless they click "No thanks";
   visitors in the EU/UK/Switzerland are only counted after they click "Okay".
-  Its look is the "Cookie notice" block at the end of style.css.
+  Its look is the <style> at the start of GA_BODY in _site.py.
