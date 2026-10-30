@@ -1,7 +1,7 @@
 FILE = "ayrosh.html"
-TITLE = "Know your November artist: Ayrosh"
+TITLE = "Know your next artist: Ayrosh"
 TAG = "Flavor Artist Live"
-H1 = "Know your November artist: Ayrosh"
+H1 = "Know your next artist: Ayrosh"
 DEK = "He took the sound of Kikuyu bars and weddings and made it sound like the future. Before he headlines Flavor Artist Live (date to be announced), here's everything you need to know."
 META = "Flavor Artist Live · 25 Oct 2026 · Show: TBA · 5 min read"
 LEAD = ("img/ay-cover.jpg", "Ayrosh")
