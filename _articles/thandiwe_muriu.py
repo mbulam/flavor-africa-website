@@ -3,50 +3,36 @@ TITLE = "Thandiwe Muriu: the art of hiding in plain sight"
 TAG = "Flavor Feature"
 H1 = "Thandiwe Muriu: the art of hiding in plain sight"
 DEK = "The Nairobi photographer dresses women in the same fabric as the wall behind them, and somehow they're all you can see. How Camo took her from the city's fabric shops to Paris, Venice and Kyoto."
-META = "Flavor Feature · 31 Oct 2026 · 5 min read"
+META = "Flavor Feature · 31 Oct 2026 · 4 min read"
 LEAD = ("img/tm-cover.jpg", "Thandiwe Muriu", "@thandiwe_muriu / Instagram", "Photo")
 
 IG = "@thandiwe_muriu / Instagram"
 
 BODY = [
-("h2", "The start", "Dad's camera, ", "her rules"),
-("p", "Thandiwe Muriu was born in Nairobi in 1990, and she still lives and works in the city. She found photography at 14, experimenting with her father's Nikon, and with no formal training she was working professionally by 17."),
-("p", "Before the art world knew her name, she built a career in commercial advertising photography. It was a Kenyan industry dominated by men, and working in it kept raising the same questions for her: what role women are expected to play, where tradition fits in, and how she saw herself."),
+("p", "Look at one of Thandiwe Muriu's portraits too quickly and you might miss the woman in it. Her dress is cut from the same bold print as the wall behind her, the pattern running from backdrop to sleeve without a break. Then you catch her face, the sculpted hair, the glasses made from something you probably have in your kitchen, and suddenly she's all you can see."),
+("p", "That trick is the heart of <em>Camo</em>, the series that has taken the Nairobi photographer from the city's fabric shops to galleries in Paris and Venice, a book with Chronicle Books and, this year, a festival in Kyoto backed by Longchamp."),
 ("img", "img/tm-orange.jpg", "From the Camo series", IG),
 
-("h2", "The idea", "Hiding ", "in plain sight"),
-("p", "Those questions became <em>Camo</em>, short for camouflage, her first series. Her models wear outfits cut from the same bold fabric as the backdrop, so they seem to melt into the picture while still standing out from it."),
-("p", "The idea grew out of her own experience. She has described the series as a personal reflection on how she felt she could disappear into the background of her own culture."),
+("h2", "", "A camera ", "at 14"),
+("p", "Muriu was born in Nairobi in 1990 and still lives and works there. She taught herself photography, starting at 14 with her father's Nikon, and was working professionally by 17."),
+("p", "For years she shot commercial advertising work in an industry run largely by men. It kept pushing her to ask what role women are expected to play, where tradition fits in, and how she saw herself."),
+("p", "<em>Camo</em>, short for camouflage, grew out of those questions. She has described it as a personal reflection on how she felt she could disappear into the background of her own culture. Her models become part of the canvas and, at the same time, step out of it."),
 ("quote", "With a little seed of imagination, you can grow a field of hope.", "African proverb, from Camo"),
-("img", "img/tm-camo.jpg", "From the Camo series", IG),
 
-("h2", "The process", "It starts ", "in the shops"),
-("p", "Camo began as a way to celebrate African fabric, but she soon realised it had far more to say. Every image starts with the cloth: she spends hours in Nairobi's fabric shops, hunting for the loudest, boldest prints she can find."),
-("p", "Then comes the hair. Before each shoot she researches traditional hairstyles from across Africa and designs modern versions of them for her hairstylist, bringing old forms back in a new way."),
-("p", "Last come the accessories, built from everyday Kenyan objects: soda cans, tea strainers, bottle tops, combs and straws, reworked into jewellery and eyewear. It's a nod to how resourceful people are at home, where ordinary things are constantly given a second life."),
+("h2", "", "Fabric, hair and ", "a kitchen drawer"),
+("p", "Every portrait starts in Nairobi's fabric shops, where she spends hours hunting for the loudest, boldest prints she can find. The series began as a way to celebrate African fabric, but she soon realised it had far more to say."),
+("p", "Then comes the hair. Before each shoot she researches traditional hairstyles from across Africa and designs modern versions for her hairstylist to build. The finishing touches are everyday Kenyan objects, soda cans, tea strainers, bottle tops, combs and straws, reworked into jewellery and eyewear: a nod to how resourceful people at home are with whatever is around them."),
 ("duo", [("img/tm-fabric.jpg", "From the Camo series"), ("img/tm-hair.jpg", "From the Camo series")]),
+("p", "Each image also carries an African proverb, in English and Swahili, so the culture is heard as well as seen. In 2024 the series became her first book, <em>Camo</em>, published by Chronicle Books."),
 
-("h2", "The words", "Old wisdom, ", "new frame"),
-("p", "Every Camo image is paired with an African proverb, in English and Swahili, so the culture is heard as well as seen. In 2024 the series became her first book, <em>Camo</em>, published by Chronicle Books."),
-("img", "img/tm-book.jpg", "Camo, published by Chronicle Books in 2024", IG),
-
-("h2", "The rise", "From Nairobi ", "to the world"),
-("p", "In 2020 she won the People's Choice Award for Emerging Photographer of the Year at Photo London. She is represented by 193 Gallery, which has shown her work in Paris and Venice."),
-("p", "In 2024 her work was part of <em>Passengers in Transit</em>, an official collateral event of the 60th Venice Biennale, presented by the Centre for Contemporary Art, Lagos and hosted by 193 Gallery. She has also been a resident at the Rockefeller Foundation's Bellagio Center in Italy."),
-("img", "img/tm-yellow.jpg", "From the Camo series", IG),
-
-("h2", "The new work", "Nature as ", "co-creator"),
-("p", "For <em>Clouds Bring Blessings</em>, her third solo show at 193 Gallery in Paris, which opened in November 2025, she made her own fabric for the first time. Working with tie-dye, she let nature act as a co-creator in every piece."),
-
-("h2", "This year", "Nairobi ", "meets Kyoto"),
-("p", "In April 2026, Longchamp presented Camo at Kyotographie, the Kyoto International Photography Festival in Japan. Alongside it she showed <em>More Than Half</em>, a new chapter of Camo made as the festival's African Artist in Residence, which weaves in traditional Japanese fabric."),
-("p", "The series is about belonging. In Japan, people with one Japanese parent and one parent of another origin are often called <em>hāfu</em>, meaning half, a word that suggests something incomplete. Her portraits argue the opposite: both origins make one whole person. <em>More Than Half</em> is showing at 193 Gallery Venice until 31 December 2026."),
+("h2", "", "From Nairobi to ", "Venice and Kyoto"),
+("p", "The recognition has followed. In 2020 she won the People's Choice Award for Emerging Photographer of the Year at Photo London. She is represented by 193 Gallery, which has shown her work in Paris and Venice, and in 2024 she was part of <em>Passengers in Transit</em>, an official collateral event of the 60th Venice Biennale presented by the Centre for Contemporary Art, Lagos. She has also been a resident at the Rockefeller Foundation's Bellagio Center in Italy."),
+("p", "Her newer work pushes the idea further. For <em>Clouds Bring Blessings</em>, her third solo show at 193 Gallery in Paris, which opened in November 2025, she dyed her own fabric for the first time, using tie-dye and letting nature act as a co-creator."),
+("p", "In April 2026, Longchamp presented <em>Camo</em> at Kyotographie, the Kyoto International Photography Festival in Japan. Alongside it she showed <em>More Than Half</em>, a new chapter made as the festival's African Artist in Residence, using traditional Japanese fabric. It takes on the Japanese word <em>hāfu</em>, meaning half, which is used for people with one Japanese parent and one parent of another origin, and argues that both origins make one whole person. The series is at 193 Gallery Venice until 31 December 2026."),
 ("img", "img/tm-kyoto.jpg", "New work from her Kyotographie residency", IG),
 
-("h2", "Paying it forward", "More than ", "a picture"),
-("p", "Back home, she runs workshops in Nairobi schools, sharing her story so young Kenyan women feel free to chase creative careers that are usually dominated by men."),
-("p", "So next time you walk past a fabric stall in town, look twice. It could be the start of a Thandiwe Muriu portrait."),
-("img", "img/tm-headwrap.jpg", "From the Camo series", IG),
+("p", "For all the travel, home is still where the work begins. Muriu runs workshops in Nairobi schools, sharing her story so young Kenyan women feel free to chase creative careers that are usually dominated by men."),
+("p", "So next time you pass a fabric stall in town, look twice. It could be the start of her next portrait."),
 ]
 
 SOURCES = [
