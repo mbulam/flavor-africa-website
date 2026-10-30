@@ -82,6 +82,8 @@ date (Nairobi time), so you can publish ahead. Until their date they're also kep
 of sitemap.xml and marked noindex, so Google can't find them early; the daily 06:10
 GitHub Action releases them on the day. To preview one, open its link directly
 (e.g. flavorafricagroup.org/made-in-lagos.html).
+SET TIME (added 30 Oct 2026): the date can also carry a time, e.g. "2026-10-31T09:00"
+(Nairobi). The story then appears in listings at exactly that time instead of midnight.
 Sections: news (The Wrap), music, charts, screen, fashion, money, sport, culture,
 features, live. A story can sit in more than one.
 
