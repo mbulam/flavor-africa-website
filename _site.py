@@ -150,6 +150,33 @@ FILTER = ('<script>(function(){var bar=document.querySelector(".segs");if(!bar)r
           'window.addEventListener("hashchange",function(){go(location.hash.slice(1))});go(location.hash.slice(1))})();</script>')
 
 
+# Google Analytics (GA4) + cookie notice, added 30 Oct 2026. _site.py puts these on every
+# page each time it runs (so new stories get them too). Measurement ID comes from
+# Google Analytics > Admin > Data streams > Flavor Africa Website.
+GA_ID = "G-DXW50Q0F0K"
+GA_HEAD = ('<!--ga--><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}'
+           'gtag("consent","default",{analytics_storage:"denied",ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",'
+           'region:["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IS","IE","IT","LV","LI","LT","LU","MT","NL","NO","PL","PT","RO","SK","SI","ES","SE","GB","CH"]});'
+           'gtag("consent","default",{analytics_storage:"granted",ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied"});'
+           'try{var c=localStorage.getItem("fa-cookies");if(c)gtag("consent","update",{analytics_storage:c==="yes"?"granted":"denied"})}catch(e){}'
+           'gtag("js",new Date());gtag("config","%s");</script>'
+           '<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script><!--/ga-->' % (GA_ID, GA_ID))
+GA_BODY = ('<!--cookies--><div class="cookie-note" id="cookie-note" role="region" aria-label="Cookie notice" hidden>'
+           '<p>We use cookies to count visits and see which stories people read. Nothing is sold or used for ads.</p>'
+           '<div class="cookie-btns"><button type="button" data-c="no">No thanks</button><button type="button" data-c="yes" class="ok">Okay</button></div></div>'
+           '<script>(function(){var n=document.getElementById("cookie-note");if(!n)return;var s=null;try{s=localStorage.getItem("fa-cookies")}catch(e){}'
+           'if(!s)n.hidden=false;n.addEventListener("click",function(ev){var v=ev.target.getAttribute("data-c");if(!v)return;'
+           'try{localStorage.setItem("fa-cookies",v)}catch(e){}if(window.gtag)gtag("consent","update",{analytics_storage:v==="yes"?"granted":"denied"});n.hidden=true})})();</script><!--/cookies-->')
+
+
+def add_analytics(h):
+    """Put the GA tag in <head> and the cookie notice before </body>, replacing any older copy."""
+    h = re.sub(r"<!--ga-->.*?<!--/ga-->", "", h, flags=re.S)
+    h = re.sub(r"<!--cookies-->.*?<!--/cookies-->", "", h, flags=re.S)
+    h = h.replace("</head>", GA_HEAD + "</head>", 1)
+    return h.replace("</body>", GA_BODY + "</body>", 1)
+
+
 def add_filter(h):
     h = re.sub(r'<script>\(function\(\)\{var bar=document\.querySelector\("\.segs"\).*?</script>', "", h, flags=re.S)
     return h.replace("</body>", FILTER + "</body>", 1)
@@ -421,7 +448,7 @@ if __name__ == "__main__":
             pages[k + ".html"] = [x for x in re.findall(r'<(?:span|a)[^>]*>(.*?)</(?:span|a)>', m.group(1)) if x != "All"]
     for f in sorted(os.listdir(SITE)):
         if f.endswith(".html"):
-            wr(f, link_menu(fix_nav(f, rd(f)), pages))
+            wr(f, add_analytics(link_menu(fix_nav(f, rd(f)), pages)))
     build_sections()
     build_home()
     build_flavor10()

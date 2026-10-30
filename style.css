@@ -439,3 +439,15 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 .ab-work.ab-work3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .ab-note a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 @media (max-width:900px){.ab-work.ab-work3{grid-template-columns:minmax(0,1fr)}}
+
+/* Cookie notice (added 30 Oct 2026; markup is added to every page by _site.py) */
+.cookie-note{position:fixed;left:16px;right:16px;bottom:16px;z-index:999;max-width:560px;margin:0 auto;
+  background:#15102A;color:#fff;border-top:4px solid #2A0174;padding:14px 16px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;box-shadow:0 8px 28px rgba(21,16,42,.25);font-family:var(--body)}
+.cookie-note[hidden]{display:none}
+.cookie-note p{margin:0;flex:1 1 260px;font-size:13px;line-height:1.5}
+.cookie-btns{display:flex;gap:8px}
+.cookie-btns button{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+  padding:9px 14px;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;cursor:pointer}
+.cookie-btns button.ok{background:#fff;color:#2A0174;border-color:#fff}
+.cookie-btns button:focus-visible{outline:2px solid #F5CC11;outline-offset:2px}

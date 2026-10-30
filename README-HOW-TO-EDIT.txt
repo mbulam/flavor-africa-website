@@ -110,3 +110,14 @@ AUTOMATIC UPDATES (added 29 Oct 2026)
 - Climb arrows are green, drop arrows are red (style.css: --climb / --fall).
 - Editor's picks on the homepage rotate every day from the long-form stories of the last
   30 days (PICK_TAGS in _site.py). The big hero story is still set by hand in index.html.
+
+GOOGLE ANALYTICS + COOKIE NOTICE (added 30 Oct 2026)
+- Google Analytics 4, Measurement ID G-DXW50Q0F0K (property "flavorafricagroup.org",
+  account "Flavor Africa"). See the numbers at analytics.google.com.
+- _site.py adds the tracking code and the cookie notice to EVERY page each time it
+  runs (GA_ID / GA_HEAD / GA_BODY / add_analytics). Don't paste the Google tag into
+  pages by hand; if the ID ever changes, change GA_ID in _site.py and run it.
+- Cookie notice: "Okay" / "No thanks", remembered in the visitor's browser.
+  Kenyan and other non-EU visitors are counted unless they click "No thanks";
+  visitors in the EU/UK/Switzerland are only counted after they click "Okay".
+  Its look is the "Cookie notice" block at the end of style.css.
