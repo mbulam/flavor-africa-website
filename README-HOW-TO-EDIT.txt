@@ -97,7 +97,8 @@ HOMEPAGE LATEST (added 27 Oct 2026)
 Every story added to STORIES in _site.py now appears in the homepage's Latest
 grid automatically (newest first, 6 shown), whatever its section. The Wrap and
 Culture & Sport blocks below skip anything Latest is already showing, so no story
-appears twice. Stories in the top hero/Editor's picks stay out of Latest.
+appears twice. The top hero story stays out of Latest. Editor's picks do NOT hide a story from Latest
+(changed 31 Oct 2026), so a new story always shows in Latest even if it's also a pick.
 For tall/portrait posters, make a separate square "-thumb.jpg" crop for the cards
 so the homepage thumbnail shows the subject, not the poster's text.
 

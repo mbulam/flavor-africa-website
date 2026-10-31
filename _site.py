@@ -123,7 +123,7 @@ SCHED = ('<script>(function(){var d=new Date(Date.now()+108e5).toISOString().sli
          'document.querySelectorAll("[data-pub]").forEach(function(x){if(x.getAttribute("data-pub")>d)x.remove()});'
          'var seen={};document.querySelectorAll("[data-limit]").forEach(function(g){var n=+g.getAttribute("data-limit");'
          '[].slice.call(g.children).forEach(function(c){if(seen[c.getAttribute("href")])c.remove()});'
-         '[].slice.call(g.children).forEach(function(c,i){if(i>=n)c.remove();else seen[c.getAttribute("href")]=1})})})();</script>')
+         '[].slice.call(g.children).forEach(function(c,i){if(i>=n)c.remove();else if(!g.hasAttribute("data-pool"))seen[c.getAttribute("href")]=1})})})();</script>')
 
 
 def seg_id(label):
