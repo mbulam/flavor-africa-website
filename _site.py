@@ -21,6 +21,7 @@ e = lambda s: html.escape(s, quote=True)
 
 # slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, or YYYY-MM-DDTHH:MM to go live at a set time; Nairobi), image focus
 STORIES = [
+ ("kit-culture", ["sport", "fashion"], "Flavor Sports", "Kit Culture: how the football shirt became the outfit", "From London queues to Soweto's rooftops, the jersey left the stadium.", "sp-kit-cover.jpg", "2026-11-01T09:00", "center 30%"),
  ("is-halloween-a-nairobi-thing", ["culture"], "Flavor Decoded", "Is Halloween a Nairobi thing now?", "Ten years ago it was a hard sell. Tonight the city is in costume. How a borrowed holiday found a home in Nairobi.", "hn-party.jpg", "2026-10-31T18:00", "center 45%"),
  ("thandiwe-muriu", ["features", "culture"], "Flavor Feature", "Thandiwe Muriu: the art of hiding in plain sight", "The Nairobi photographer dresses women in the same fabric as the wall behind them, and they're still all you can see.", "tm-cover.jpg", "2026-10-31T09:00", "center 15%"),
  ("marley-locks-mau-mau", ["culture"], "Flavor Roots", "Did Bob Marley's locks come from Kenya?", "Flavor Roots Issue 02: from Kingston to the Mau Mau forests, the real story behind the locks.", "fr2-marley.jpg", "2026-10-29", "center 30%"),
