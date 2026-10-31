@@ -4,7 +4,7 @@ TAG = "Flavor Decoded"
 H1 = "Is Halloween a Nairobi thing now?"
 DEK = "Ten years ago, Nairobi's bars were working hard just to get people interested. Tonight the city is in costume. How a borrowed holiday found a home here, and why not everyone is happy about it."
 META = "Flavor Decoded · 31 Oct 2026 · 5 min read"
-LEAD = ("img/nw-skyline.jpg", "Nairobi")
+LEAD = ("img/hn-party.jpg", "Dressed for Halloween")
 
 BODY = [
 ("p", "By the time you read this, the kids at Village Market will be handing the night over to the grown-ups. The Gigiri mall's Halloween Fright Night runs a Little Monsters party from 2pm and a Villain party from 6pm, at KES 2,000 at the gate. An hour later and across town, Sarakasi Dome in Ngara opens its doors for Rock Riot's Halloween edition, with Rash Band, Keni and Nessa Dove on stage and DJ Orts and DJ Edygrim on the decks."),
