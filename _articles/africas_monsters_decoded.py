@@ -11,13 +11,13 @@ BODY = [
 
 ("h2", "Central Kenya", "The ogre with ", "two mouths"),
 ("img", "img/dec-irimu.jpg", "An artist's ogre. Every storyteller drew the irimu differently."),
-("p", "In Gĩkũyũ folktales, the irimu is an ogre with an ordinary, friendly mouth at the front and a second, hungry mouth at the back of its head, hidden under its hair. The detail was the lesson: beware the charmer whose smile hides an appetite. In many Kenyan ogre tales the monster swallows whole communities, until a brother and sister bring it down."),
+("p", "In Gĩkũyũ folktales, the irimu is an ogre with an ordinary, friendly mouth at the front and a second, hungry mouth at the back of its head, hidden under its hair. The detail was the lesson: beware the charmer whose smile hides an appetite."),
 ("p", "The irimu has relatives right across the region, including the Kamba eimu and the Swahili zimwi. The zimwi still lives on in everyday Swahili, in the proverb <em>zimwi likujualo halikuli likakwisha</em>: a monster that knows you won't finish you off."),
 
 ("h2", "Zanzibar", "The ", "bat-wing"),
 ("img", "img/dec-popobawa.jpg", "The Popobawa, as one artist imagines it. Its name describes the shadow it casts, not its true form."),
 ("p", "Popobawa is Swahili for “bat-wing”, from <em>popo</em> (bat) and <em>bawa</em> (wing). It's a shape-shifting shetani, an evil spirit, said to have first appeared on Pemba Island. The name is said to describe the dark shadow it casts when it attacks at night, not its actual form, which is believed to change."),
-("p", "Waves of panic about the Popobawa have swept Pemba and Unguja more than once. Its most famous rule is also its strangest: deny that it exists and you're inviting a visit. So people talk about it, openly."),
+("p", "Waves of panic about the Popobawa have swept Pemba and Unguja more than once, with people spending whole nights awake outside their houses. Its most famous rule is also its strangest: deny that it exists and you're inviting a visit. So people talk about it, openly."),
 ("img", "img/dec-popobawa-2.jpg", "The Popobawa", "gnugazer, Mythical Creatures of Africa (2016)"),
 
 ("h2", "Southern Africa", "The ", "invisible one"),
@@ -35,7 +35,7 @@ BODY = [
 
 ("h2", "Across the continent", "The ", "water queen"),
 ("img", "img/dec-mamiwata.jpg", "An artist's Mami Wata, with her snake and mirror"),
-("p", "Mami Wata is known in West, Central, East and Southern Africa, and across the diaspora, as a water spirit who can bring wealth and just as easily take it away. In Central Africa she has a counterpart called Mamba Muntu."),
+("p", "Mami Wata is known in West, Central, East and Southern Africa, and across the diaspora, as a water spirit who can bring wealth and just as easily take it away. A related water spirit, Mamba Muntu, is pictured as a mermaid too."),
 ("p", "Where she comes from is one of folklore's great debates. Art historian Henry John Drewal traces her familiar image to Africans' first encounters with Europeans and their mermaid pictures in the 15th century. Others point out that the continent had many water-spirit traditions long before any ships arrived. Her most famous look, a woman with a snake around her shoulders, came from a 19th-century print of a snake charmer made in Hamburg, Germany, which was copied and reworked across West Africa until it became Mami Wata."),
 
 ("h2", "So why did they last?", "More than ", "monsters"),
@@ -57,5 +57,10 @@ SOURCES = [
  ("SAS Publishers: Ogre symbolism in Gĩkũyũ narratives", "https://saspublishers.com/article/10839/download"),
  ("University of Pennsylvania: Kenyan folklore", "https://www.africa.upenn.edu/NEH/kfolklore.htm"),
  ("Boston University: the ogre in African narrative", "https://open.bu.edu/bitstreams/c57df790-754c-446c-a079-bdaa098d47d1/download"),
+ ("Merriam-Webster: Mamba Muntu", "https://www.merriam-webster.com/dictionary/mamba%20muntu"),
+ ("Wikipedia: Lightning bird", "https://en.wikipedia.org/wiki/Lightning_bird"),
+ ("Wikipedia: Black Leopard, Red Wolf", "https://en.wikipedia.org/wiki/Black_Leopard,_Red_Wolf"),
+ ("Futility Closet: Popobawa", "https://www.futilitycloset.com/2006/02/16/ambitious-cryptid"),
+ ("Gods and Monsters: Popobawa", "https://godsandmonsters.info/popobawa/"),
  ("Daily News (Tanzania): Zimwi likujualo halikuli likakwisha", "https://dailynews.co.tz/?p=163576"),
 ]
