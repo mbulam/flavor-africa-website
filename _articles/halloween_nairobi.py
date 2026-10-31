@@ -12,13 +12,16 @@ BODY = [
 ("p", "None of this is ours, strictly speaking. Halloween grew out of Samhain, an old Celtic festival, and reached Kenya the long way round: through America, through film and, lately, through the For You page. Which makes the question worth asking. Is Halloween a Nairobi thing now?"),
 
 ("h2", "2016", "When it was ", "a hard sell"),
+("img", "img/hn-decor.jpg", "Halloween decor"),
 ("p", "Ten years ago, the honest answer was no. In October 2016, <a href=\"https://www.businessdailyafrica.com/bd/lifestyle/cashing-in-on-halloween--2129754\">Business Daily</a> described a holiday that had meant very little to Kenyans only a few years earlier, and a city's worth of hotels, bars, pastry chefs and costume designers working hard to change that. Nairobi's entrepreneurs, it reported, were competing to throw the scariest party."),
 ("p", "Not everyone was charmed. That December, the economist XN Iraki used his column in <a href=\"https://www.standardmedia.co.ke/article/2000226657/why-are-we-celebrating-halloween-baby-showers-and-other-non-traditional-festivals\">The Standard</a> to puzzle over the new imports, Halloween and baby showers among them. “It was mesmerising to see banners advertising Halloween in October,” he wrote."),
 
 ("h2", "2024", "When it became ", "a circuit"),
+("img", "img/hn-costume.jpg", "Dressed for the night"),
 ("p", "Eight years later the conversation had moved on. In 2024, <a href=\"https://www.kbc.co.ke/young-kenyans-embrace-halloween-trend/\">KBC</a> was reporting on young Kenyans hosting and attending costume parties, and <a href=\"https://www.pulse.co.ke/story/halloween-in-nairobi-9-venues-marking-the-unofficial-holiday-2024112007104870279\">Pulse Kenya</a> was listing nine venues marking what it called the city's unofficial holiday. SK8City put up to KSh 20,000 on the best costume. Rock Riot took its Halloween night to Nairobi Street Kitchen. This year it has moved to Sarakasi Dome, and it now bills itself as an annual celebration."),
 ("img", "img/nw2-rockriot.jpg", "Rock Riot Halloween Edition", "A-List Events (poster)"),
 ("p", "What changed wasn't so much Nairobi's nightlife as Nairobi's phones. As <a href=\"https://k24.digital/lifestyle/how-halloween-is-finding-place-in-kenyas-celebration-culture\">K24</a> put it this week, young Kenyans pick Halloween up through social media and pop culture, with TikTok and Instagram doing much of the heavy lifting: costume ideas, makeup tutorials, themed shoots. KBC's 2024 report had a viral example of its own, three creators in horror make-up walking through the CBD while passers-by and security guards stared."),
+("img", "img/hn-makeup.jpg", "The themed shoot: Halloween makeup made for the feed"),
 ("p", "And where people go, business follows. Malls, bars, restaurants and makeup artists now plan October around a holiday that, a decade ago, they were pushing uphill."),
 
 ("h2", "The other side", "Not in ", "this house"),
