@@ -359,10 +359,10 @@ def flavor10_html():
             '<div class="f10-grid"><ol class="f10">%s</ol>%s</div>'
             '<p class="f10-src"><b>Sources:</b> %s. Updated daily.</p></section>%s'
             % (e(ed["label"].title().replace("Of", "of")), "".join(rows), player,
-               " · ".join(SRC_LABEL[c] for c in "PFSYR" if c in ed.get("sources", {})), F10JS))
+               " · ".join(SRC_LABEL[c] for c in "PFSYRAM" if c in ed.get("sources", {})), F10JS))
 
 
-SRC_LABEL = {"P": "Apple Music", "F": "Spotify", "S": "Shazam", "Y": "YouTube", "R": "Kenyan radio"}
+SRC_LABEL = {"P": "Apple Music", "F": "Spotify", "S": "Shazam", "Y": "YouTube", "R": "Kenyan radio", "A": "Audiomack", "M": "Mdundo"}
 
 
 F10JS = r"""<script>(function(){var sec=document.getElementById("flavor-10");if(!sec)return;

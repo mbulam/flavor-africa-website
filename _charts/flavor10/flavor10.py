@@ -57,7 +57,11 @@ def dots(c):
     return "".join(f'<span class="d{" on" if k in c else ""}">{k}</span>' for k in "SYRM")
 
 
-SRC = {True: 'Apple Music · Shazam · YouTube · Kenyan radio', False: 'Apple Music · Spotify · Shazam · YouTube · Kenyan radio · Audiomack · Mdundo'}
+SRC_LABEL = {"P": "Apple Music", "F": "Spotify", "S": "Shazam", "Y": "YouTube", "R": "Kenyan radio", "A": "Audiomack", "M": "Mdundo"}
+
+
+def src(ed):  # footer "Sources:" line, built from the charts this edition used
+    return " · ".join(SRC_LABEL[c] for c in "PFSYRAM" if c in ed.get("sources", {}))
 
 
 def html(ed, moves):
@@ -107,7 +111,7 @@ body:after{{content:"";position:absolute;inset:0;opacity:.05;pointer-events:none
 <div class="tag">FLAVOR CHARTS</div><div class="logo">flavor.africa</div>
 <div class="hd"><div class="k">THE FLAVOR 10 · KENYA · {ed["label"]}</div><div class="rule"></div></div>
 <div class="list">{"".join(rows)}</div>
-<div class="ft"><div><b>Sources:</b> {SRC.get(ed["date"] >= "2026-10-28", "")}</div>
+<div class="ft"><div><b>Sources:</b> {src(ed)}</div>
 <div class="key"><em>▲</em> climbed <em>▼</em> dropped<br><em>–</em> no change <em>FRESH</em> new entry</div></div>
 </body></html>'''
 
