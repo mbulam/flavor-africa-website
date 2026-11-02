@@ -1,76 +1,76 @@
 {
  "date": "2026-11-02",
- "label": "WEEK OF 2 NOV 2026",
+ "label": "2 NOV 2026",
  "sources": {
-  "S": "Shazam Top 200: Kenya (undated, read 2 Nov 2026)",
-  "Y": "YouTube Top Songs: Kenya (week of 26 Oct 2026)",
-  "R": "Kenya Airplay (week of 26 Oct 2026)",
-  "M": "Mdundo Top Songs: Kenya (undated weekly chart, read 2 Nov 2026)",
-  "A": "Audiomack Weekly 100: Kenya (updated 28 Oct 2026, top 10 readable)"
+  "P": "Apple Music Top 100: Kenya (2 Nov 2026)",
+  "S": "Shazam Top 200: Kenya (28 Oct 2026)",
+  "Y": "YouTube Top Songs: Kenya (week of 2 Nov 2026)",
+  "R": "Kenya Airplay (week of 2 Nov 2026)"
  },
  "songs": [
   {
    "title": "I'll Be Okay",
    "artist": "Bien",
-   "points": 68,
-   "charts": "SYRA",
+   "points": 99,
+   "charts": "PSYR",
    "apple": "6822410197"
-  },
-  {
-   "title": "Kitemeo",
-   "artist": "Kapitani",
-   "points": 51,
-   "charts": "YMA",
-   "apple": "6793757785"
-  },
-  {
-   "title": "Finale",
-   "artist": "Bien ft. Alikiba",
-   "points": 49,
-   "charts": "YRA",
-   "apple": "1846452662"
-  },
-  {
-   "title": "Hongo ya Karao Vol. 2",
-   "artist": "Toxic Lyrikali ft. Mauru Gwash & Kapitani",
-   "points": 30,
-   "charts": "YA",
-   "apple": "6804729978"
-  },
-  {
-   "title": "Ozalima",
-   "artist": "Mbosso",
-   "points": 30,
-   "charts": "YA",
-   "apple": "6764882556"
-  },
-  {
-   "title": "Rapudo",
-   "artist": "Prince Indah",
-   "points": 28,
-   "charts": "YM",
-   "apple": "1850928384"
   },
   {
    "title": "Chai ya Saa Kumi",
    "artist": "Ywaya Tajiri",
-   "points": 28,
+   "points": 40,
    "charts": "YR",
    "apple": "6796900642"
   },
   {
-   "title": "Tegemeo Letu",
-   "artist": "Kwaya ya Mt. Kizito Makuburi",
-   "points": 24,
-   "charts": "SYM",
-   "apple": "1823648377"
+   "title": "Finale",
+   "artist": "Bien ft. Alikiba",
+   "points": 40,
+   "charts": "YR"
   },
   {
    "title": "Heaven Baby",
    "artist": "Ayra Starr ft. Zayn",
-   "points": 22,
+   "points": 38,
    "charts": "SY",
    "apple": "6796539210"
+  },
+  {
+   "title": "WORSHIP",
+   "artist": "Asake & DJ Snake",
+   "points": 36,
+   "charts": "PS"
+  },
+  {
+   "title": "Shing",
+   "artist": "Kapitani ft. Toxic Lyrikali",
+   "points": 31,
+   "charts": "SY",
+   "apple": "6822137422"
+  },
+  {
+   "title": "Ukining'inia",
+   "artist": "Collo Blue",
+   "points": 28,
+   "charts": "YR"
+  },
+  {
+   "title": "Asali",
+   "artist": "Xenia Manasseh & Cracker Mallo",
+   "points": 25,
+   "charts": "R"
+  },
+  {
+   "title": "Oh No",
+   "artist": "Rema",
+   "points": 24,
+   "charts": "PS"
+  },
+  {
+   "title": "Forgiveness",
+   "artist": "Asake",
+   "points": 24,
+   "charts": "P"
   }
  ]
 }
