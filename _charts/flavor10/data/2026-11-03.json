@@ -1,0 +1,76 @@
+{
+ "date": "2026-11-03",
+ "label": "3 NOV 2026",
+ "sources": {
+  "P": "Apple Music Top 100: Kenya (3 Nov 2026)",
+  "S": "Shazam Top 200: Kenya (28 Oct 2026)",
+  "Y": "YouTube Top Songs: Kenya (week of 3 Nov 2026)",
+  "R": "Kenya Airplay (week of 3 Nov 2026)"
+ },
+ "songs": [
+  {
+   "title": "I'll Be Okay",
+   "artist": "Bien",
+   "points": 99,
+   "charts": "PSYR",
+   "apple": "6822410197"
+  },
+  {
+   "title": "Chai ya Saa Kumi",
+   "artist": "Ywaya Tajiri",
+   "points": 51,
+   "charts": "PYR",
+   "apple": "6796900642"
+  },
+  {
+   "title": "Finale",
+   "artist": "Bien ft. Alikiba",
+   "points": 40,
+   "charts": "YR"
+  },
+  {
+   "title": "Heaven Baby",
+   "artist": "Ayra Starr ft. Zayn",
+   "points": 38,
+   "charts": "SY",
+   "apple": "6796539210"
+  },
+  {
+   "title": "WORSHIP",
+   "artist": "Asake & DJ Snake",
+   "points": 36,
+   "charts": "PS"
+  },
+  {
+   "title": "Shing",
+   "artist": "Kapitani ft. Toxic Lyrikali",
+   "points": 31,
+   "charts": "SY",
+   "apple": "6822137422"
+  },
+  {
+   "title": "Ukining'inia",
+   "artist": "Collo Blue",
+   "points": 28,
+   "charts": "YR"
+  },
+  {
+   "title": "Oh No",
+   "artist": "Rema",
+   "points": 27,
+   "charts": "PS"
+  },
+  {
+   "title": "Asali",
+   "artist": "Xenia Manasseh & Cracker Mallo",
+   "points": 25,
+   "charts": "R"
+  },
+  {
+   "title": "Forgiveness",
+   "artist": "Asake",
+   "points": 24,
+   "charts": "P"
+  }
+ ]
+}
