@@ -239,6 +239,7 @@ def main(date):
                 report.append(f"{code} FAIL {type(e).__name__}: {str(e)[:120]}")
         src, got = last_good(code, date)
         if src and (today - datetime.date.fromisoformat(got)).days <= MAX_AGE[code]:
+            src = dict(src, fetched=got)   # keep the ORIGINAL fetch date, so the copy can age out
             out[code] = src
             report.append(f"{code} KEPT copy from {got}")
         else:
