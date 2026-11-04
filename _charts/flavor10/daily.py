@@ -13,16 +13,22 @@ From 29 Oct 2026 fetch.py collects these automatically every morning (GitHub Act
 Weekly sources are carried forward unchanged until their next edition comes out.
 
 Scoring: each source's top 25 counts. Position 1 = 25 points ... position 25 = 1 point.
-All four sources weigh the same. A song's score is the sum across sources; ties are
+All sources weigh the same.
+CLIMB BONUS (added 4 Nov 2026 so the chart moves more): on a daily source (Apple Music,
+Shazam, Spotify), a song earns 1 extra point for every place it climbed since that
+source's previous day (a song new to its top 50 counts as climbing from 51), up to
+10 points. Songs falling or standing still get no bonus. Weekly sources get none. A song's score is the sum across sources; ties are
 broken by the number of sources it appears on, then by its best single position.
 The top 10 is written to data/YYYY-MM-DD.json (same format the site and flavor10.py read).
 
 Run:  python3 daily.py 2026-10-28
 """
-import json, os, re, sys, datetime
+import json, os, re, sys, glob, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TOPN = 25
+DAILY_SRC = {"P", "S", "F"}
+CLIMB_CAP = 10
 
 # Same song, different spellings across platforms -> one canonical (title, artist)
 ALIASES = {
@@ -81,16 +87,32 @@ def is_music(title, artist):
     return not any(w in t for w in NOT_MUSIC)
 
 
-def rank(raw):
+def yesterday_positions(code, src, prev):
+    """Where each song sat on this source the previous day (only for daily sources that really refreshed)."""
+    if code not in DAILY_SRC or not prev:
+        return {}
+    old = prev.get("sources", {}).get(code)
+    if not old or old.get("fetched") == src.get("fetched"):
+        return {}
+    pos = {}
+    for p, (t, a) in enumerate([x for x in old["top"] if is_music(*x)], 1):
+        pos.setdefault(norm(t), p)
+    return pos
+
+
+def rank(raw, prev=None):
     tally = {}
     for code, src in raw["sources"].items():
         top = [x for x in src["top"] if is_music(*x)]
+        before = yesterday_positions(code, src, prev)
         for pos, (title, artist) in enumerate(top[:TOPN], 1):
             k = norm(title)
             e = tally.setdefault(k, {"points": 0, "charts": "", "best": 99, "seen": (title, artist)})
             if code in e["charts"]:
                 continue  # one entry per source
             e["points"] += TOPN + 1 - pos
+            if before:
+                e["points"] += min(CLIMB_CAP, max(0, before.get(k, len(before) + 1) - pos))
             e["charts"] += code
             e["best"] = min(e["best"], pos)
     order = sorted(tally.items(), key=lambda kv: (-kv[1]["points"], -len(kv[1]["charts"]), kv[1]["best"]))
@@ -106,7 +128,9 @@ def rank(raw):
 
 def build(date):
     raw = json.load(open(f"{HERE}/raw/{date}.json"))
-    songs, order = rank(raw)
+    older = sorted(f for f in glob.glob(f"{HERE}/raw/*.json") if os.path.basename(f)[:-5] < date)
+    prev = json.load(open(older[-1])) if older else None
+    songs, order = rank(raw, prev)
     d = datetime.date.fromisoformat(date)
     ed = {"date": date, "label": d.strftime("%-d %b %Y").upper(),
           "sources": {c: "%s (%s)" % (s["name"], s["date"]) for c, s in raw["sources"].items()},

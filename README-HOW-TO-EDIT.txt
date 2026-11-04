@@ -106,7 +106,7 @@ AUTOMATIC UPDATES (added 29 Oct 2026)
 - The Flavor 10 · Kenya updates itself every morning at about 06:10 Nairobi time.
   GitHub Actions (.github/workflows/flavor10-daily.yml) runs _charts/flavor10/fetch.py
   (collects Apple Music, Shazam, YouTube and Kenyan airplay charts; Spotify has no public Kenya chart), then
-  daily.py (ranks them) and _site.py (rebuilds the homepage), and pushes. Cloudflare Pages publishes.
+  daily.py (ranks them; fast climbers on daily sources get up to 10 bonus points, added 4 Nov 2026) and _site.py (rebuilds the homepage), and pushes. Cloudflare Pages publishes.
   What worked on the last run is written to _charts/flavor10/status.txt.
   If a source can't be reached, its last good copy is reused for a few days, then dropped.
   It runs once a day only. To force an extra run: "Run workflow" on GitHub (Actions tab).
