@@ -21,7 +21,7 @@ e = lambda s: html.escape(s, quote=True)
 
 # slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, or YYYY-MM-DDTHH:MM to go live at a set time; Nairobi), image focus
 STORIES = [
- ("awar-odhiang-model-of-the-year", ["fashion", "features"], "Flavor Fashion", "Awar Odhiang: from Pugnido to Model of the Year", "The model who closed Chanel is the British Fashion Council’s Model of the Year 2026. This is how she got there.", "ao-cover.jpg", "2026-11-05T12:00", "center 20%"),
+ ("awar-odhiang-model-of-the-year", ["fashion", "features"], "Flavor Fashion", "Awar Odhiang: from Pugnido to Model of the Year", "The model who closed Chanel is the British Fashion Council’s Model of the Year 2026. This is how she got there.", "ao-cover.jpg", "2026-11-05T18:00", "center 20%"),
  ("neema-ngelime", ["screen", "features"], "Flavor Spotlight", "Neema Ngelime: eight awards for a film still in development", "The Tanzanian director to watch, and the documentary winning before it is finished.", "nn-portrait.jpg", "2026-11-03", "center 25%"),
  ("kit-culture", ["sport", "fashion"], "Flavor Sports", "Kit Culture: how the football shirt became the outfit", "From London queues to Soweto's rooftops, the jersey left the stadium.", "sp-kit-cover.jpg", "2026-11-01T09:00", "center 30%"),
  ("is-halloween-a-nairobi-thing", ["culture"], "Flavor Decoded", "Is Halloween a Nairobi thing now?", "Ten years ago it was a hard sell. Tonight the city is in costume. How a borrowed holiday found a home in Nairobi.", "hn-party.jpg", "2026-10-31T18:00", "center 45%"),
