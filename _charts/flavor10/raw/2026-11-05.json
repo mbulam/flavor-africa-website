@@ -1,0 +1,626 @@
+{
+ "read": "5 Nov 2026, 13:48 EAT",
+ "sources": {
+  "P": {
+   "name": "Apple Music Top 100: Kenya",
+   "date": "5 Nov 2026",
+   "fetched": "2026-11-05",
+   "top": [
+    [
+     "I'll Be Okay",
+     "Bien"
+    ],
+    [
+     "Forgiveness",
+     "Asake"
+    ],
+    [
+     "Gratitude",
+     "Asake"
+    ],
+    [
+     "Come Closer (feat. Drake)",
+     "Wizkid"
+    ],
+    [
+     "Joro",
+     "Wizkid"
+    ],
+    [
+     "MONEY CONSTANT",
+     "DJ Maphorisa, DJ Tunez, Wizkid & Mavo"
+    ],
+    [
+     "Chai ya saa kumi",
+     "Ywaya Tajiri"
+    ],
+    [
+     "WHY LOVE",
+     "Asake"
+    ],
+    [
+     "Dem Dey",
+     "Burna Boy"
+    ],
+    [
+     "Janice STFU",
+     "Drake"
+    ],
+    [
+     "Headlines",
+     "Drake"
+    ],
+    [
+     "Raindance",
+     "Dave & Tems"
+    ],
+    [
+     "Likizo",
+     "Ywaya Tajiri"
+    ],
+    [
+     "Somebody's Daughter",
+     "Ywaya Tajiri"
+    ],
+    [
+     "WORSHIP",
+     "Asake & DJ Snake"
+    ],
+    [
+     "Ginger (feat. Burna Boy)",
+     "Wizkid"
+    ],
+    [
+     "Jogodo",
+     "Wizkid & Asake"
+    ],
+    [
+     "Oh No",
+     "Rema"
+    ],
+    [
+     "Aura Salad",
+     "SSSoundGawd & Mavo"
+    ],
+    [
+     "Marvins Room",
+     "Drake"
+    ],
+    [
+     "SLICK",
+     "Victony"
+    ],
+    [
+     "Change Your Mind (feat. Shaboozey)",
+     "Burna Boy"
+    ],
+    [
+     "Ojuelegba",
+     "Wizkid"
+    ],
+    [
+     "Wendo",
+     "Ywaya Tajiri & Bobo"
+    ],
+    [
+     "Mniache Nimpende",
+     "Ywaya Tajiri"
+    ],
+    [
+     "Wild Thoughts (feat. Rihanna & Bryson Tiller)",
+     "DJ Khaled"
+    ],
+    [
+     "Abantwana Bakho (feat. Thatohatsi, Young Stunna & Nkosazana Daughter)",
+     "DJ Maphorisa, Xduppy & Kabza De Small"
+    ],
+    [
+     "On the Low",
+     "Burna Boy"
+    ],
+    [
+     "Blame U",
+     "Odeal"
+    ],
+    [
+     "Nitafanjaye",
+     "Ywaya Tajiri"
+    ],
+    [
+     "Controlla",
+     "Drake"
+    ],
+    [
+     "Amapiano",
+     "Asake & Olamide"
+    ],
+    [
+     "Find My Babe",
+     "Mavo"
+    ],
+    [
+     "Charm",
+     "Rema"
+    ],
+    [
+     "Finale",
+     "Bien & Alikiba"
+    ],
+    [
+     "Money Trees (feat. Jay Rock)",
+     "Kendrick Lamar"
+    ],
+    [
+     "uValo (feat. Dlala Thukzin)",
+     "JAZZWRLD, Thukuthela & Babalwa M"
+    ],
+    [
+     "Nakupenda (feat. Al Xapo & Zlatan)",
+     "TxC, Davido, Scotts Maphuma & Shoday"
+    ],
+    [
+     "Freestyle",
+     "Lil Baby"
+    ],
+    [
+     "IKEBE 3000",
+     "Blaqbonez & Asake"
+    ],
+    [
+     "Girls Need Love",
+     "Summer Walker"
+    ],
+    [
+     "Work (feat. Drake)",
+     "Rihanna"
+    ],
+    [
+     "Money In The Grave (feat. Rick Ross)",
+     "Drake"
+    ],
+    [
+     "Heaven Baby (feat. ZAYN)",
+     "Ayra Starr"
+    ],
+    [
+     "So Good (feat. Kendrick Lamar)",
+     "Jhené Aiko"
+    ],
+    [
+     "Solar Eclipse",
+     "Drake & Don Toliver"
+    ],
+    [
+     "God's Plan",
+     "Drake"
+    ],
+    [
+     "I'M DAT NIGGA",
+     "Future"
+    ],
+    [
+     "UNAVAILABLE (feat. Musa Keys)",
+     "Davido"
+    ],
+    [
+     "HIGHEST IN THE ROOM",
+     "Travis Scott"
+    ]
+   ]
+  },
+  "Y": {
+   "name": "YouTube Top Songs: Kenya",
+   "date": "week of 5 Nov 2026",
+   "fetched": "2026-11-05",
+   "top": [
+    [
+     "I'll Be Okay",
+     "Bien"
+    ],
+    [
+     "Dai Dai",
+     "Shakira, Burna Boy"
+    ],
+    [
+     "Heaven Baby (feat. ZAYN)",
+     "Ayra Starr"
+    ],
+    [
+     "Kitemeo",
+     "Kapitani"
+    ],
+    [
+     "Shing (feat. Toxic Lyrikali)",
+     "Kapitani"
+    ],
+    [
+     "Finale",
+     "Bien, Alikiba"
+    ],
+    [
+     "Ozalima",
+     "Mbosso"
+    ],
+    [
+     "SLICK",
+     "Victony"
+    ],
+    [
+     "Chai ya saa kumi",
+     "Ywaya Tajiri"
+    ],
+    [
+     "Zzero Sufuri   Otero Ft  Toxic Lyrikali",
+     "Toxic Lyrikali, Zzero Sufuri"
+    ],
+    [
+     "Kwa Neema (feat. Darassa)",
+     "Otile Brown"
+    ],
+    [
+     "Hongo Ya Karao (Vol. 2) (feat. Mauru Gwash & Kapitani)",
+     "Toxic Lyrikali"
+    ],
+    [
+     "Moyo (feat. Rayvanny)",
+     "Kusslove"
+    ],
+    [
+     "Dance Samawaah!",
+     "Collo Blue, NDOVU KUU"
+    ],
+    [
+     "Rapudo",
+     "Prince Indah"
+    ],
+    [
+     "Mboka",
+     "Mejja Genge"
+    ],
+    [
+     "Wrong Places",
+     "Joshua Baraka, JAE5"
+    ],
+    [
+     "TEGEMEO LETU",
+     "KABI CATHOLIC"
+    ],
+    [
+     "Ukining'inia",
+     "Collo Blue"
+    ],
+    [
+     "Mdomo uliponza kichwa",
+     "Soul Touch Brand"
+    ],
+    [
+     "Niwa Yiulu",
+     "Wilberforce Musyoka"
+    ],
+    [
+     "Baridi",
+     "D Voice, Zuchu"
+    ],
+    [
+     "Kucheza Unajua Dance",
+     "Zuchu, Matua Tz, Desmile TZ"
+    ],
+    [
+     "Party Lit",
+     "JETTI, DJ CHEEM"
+    ],
+    [
+     "More",
+     "Kapitani"
+    ],
+    [
+     "Hallelujah",
+     "Iyanii"
+    ],
+    [
+     "Up Burukanga",
+     "Collo Blue, ADDEH PRINCE"
+    ],
+    [
+     "Siaka",
+     "Mejja Genge"
+    ],
+    [
+     "Ordinary",
+     "Alex Warren"
+    ],
+    [
+     "Pink Blush",
+     "Dolly Babe"
+    ],
+    [
+     "Raindance",
+     "Dave, Tems"
+    ],
+    [
+     "Natafuta Doo",
+     "Elisha Toto"
+    ],
+    [
+     "Nikumbuke",
+     "Joel Lwaga, Diamond Platnumz"
+    ],
+    [
+     "Mwokozi",
+     "PAUL CLEMENT"
+    ],
+    [
+     "Imeshindikana",
+     "Harmonize, Jay melody"
+    ],
+    [
+     "Woii",
+     "Valiant, Di Genius"
+    ],
+    [
+     "Oh No",
+     "Rema"
+    ],
+    [
+     "Top Shotta",
+     "Collo Blue"
+    ],
+    [
+     "HATUA ZANGU",
+     "VICTOR MUTHENYA"
+    ],
+    [
+     "Wikend",
+     "Alex Kasau Katombi"
+    ],
+    [
+     "Berna",
+     "Prince Indah"
+    ],
+    [
+     "BLOW (DELUXE)",
+     "Wakadinali"
+    ],
+    [
+     "Nikumbuke (Remix)",
+     "Sammy G, Guardian Angel"
+    ],
+    [
+     "Wewe",
+     "Harmonize"
+    ],
+    [
+     "LAST DANCE",
+     "Wakadinali"
+    ],
+    [
+     "Dame Tu Cosita (feat. Cutty Ranks)",
+     "El Chombo"
+    ],
+    [
+     "HATE",
+     "Toxic Lyrikali"
+    ],
+    [
+     "Mtu Mzima",
+     "Marioo"
+    ],
+    [
+     "PRAY FOR ME",
+     "Sunvera Scott"
+    ],
+    [
+     "Girls Like You (feat. Cardi B)",
+     "Maroon 5"
+    ]
+   ]
+  },
+  "R": {
+   "name": "Kenya Airplay",
+   "date": "week of 5 Nov 2026",
+   "fetched": "2026-11-05",
+   "top": [
+    [
+     "Asali",
+     "Xenia Manasseh & Cracker Mallo"
+    ],
+    [
+     "I'll Be Okay",
+     "Bien"
+    ],
+    [
+     "Chai ya saa kumi",
+     "Ywaya Tajiri"
+    ],
+    [
+     "AYAYAAH",
+     "ELEMENT EleéeH & Joshua Baraka & Bien"
+    ],
+    [
+     "Ukining'inia",
+     "Collo Blue"
+    ],
+    [
+     "Finale",
+     "Bien & Alikiba"
+    ],
+    [
+     "SHE DID IT AGAIN (feat. Zara Larsson)",
+     "Tyla & Zara Larsson"
+    ],
+    [
+     "Shoulda Never (feat. USHER)",
+     "Kehlani & USHER"
+    ],
+    [
+     "WHERE IS MY HUSBAND! - Remix",
+     "RAYE & David Guetta & Hypaton"
+    ],
+    [
+     "Happy",
+     "Diamond Platnumz"
+    ],
+    [
+     "Bhuju (feat. Mbosso)",
+     "Alikiba & Mbosso"
+    ],
+    [
+     "Taya",
+     "Okello Max"
+    ],
+    [
+     "Wrong Places",
+     "Joshua Baraka & JAE5"
+    ],
+    [
+     "Bounce",
+     "ruger"
+    ],
+    [
+     "Update",
+     "Burna Boy"
+    ],
+    [
+     "Pawa",
+     "Mbosso"
+    ],
+    [
+     "Hit & Run",
+     "Shenseea & Masicka & Di Genius"
+    ],
+    [
+     "Sianda",
+     "Savara"
+    ],
+    [
+     "I Just Might",
+     "Bruno Mars"
+    ],
+    [
+     "Siaka",
+     "Mejja & Fik Fameica"
+    ],
+    [
+     "Salama (feat. Diamond Platnumz)",
+     "Barnaba & Diamond Platnumz"
+    ],
+    [
+     "Niwache",
+     "Nikita Kering'"
+    ],
+    [
+     "Halleluja",
+     "Iyanii"
+    ],
+    [
+     "Furaha",
+     "Harmonize"
+    ],
+    [
+     "YoYo",
+     "Joshua Baraka"
+    ],
+    [
+     "What To Do",
+     "Rotimi"
+    ],
+    [
+     "12 to 12",
+     "sombr"
+    ],
+    [
+     "Mind Your Business",
+     "Darassa"
+    ],
+    [
+     "Kautamu Flani (feat. Vijana Barubaru)",
+     "Bensoul & Vijana BaruBaru & V-Be"
+    ],
+    [
+     "Nasinzia II",
+     "Nameless & Marioo"
+    ],
+    [
+     "The Fate of Ophelia",
+     "Taylor Swift"
+    ],
+    [
+     "Cham Thum (Atoti)",
+     "Watendawili"
+    ],
+    [
+     "Man I Need",
+     "Olivia Dean"
+    ],
+    [
+     "Sensational (feat. Davido & Lojay)",
+     "Chris Brown & Davido & Lojay"
+    ],
+    [
+     "Lifestyle",
+     "Bien & Scar Mkadinali"
+    ],
+    [
+     "Bae Bae",
+     "BNXN & ruger"
+    ],
+    [
+     "The Greatest Bend Over",
+     "Yung Bredda & Full Blown"
+    ],
+    [
+     "Niwewe",
+     "Bridget Blue"
+    ],
+    [
+     "Change Your Mind (feat. Shaboozey)",
+     "Burna Boy & Shaboozey"
+    ],
+    [
+     "I Choose You",
+     "Bien & Bridget Blue"
+    ],
+    [
+     "Disko",
+     "KODONGKLAN"
+    ],
+    [
+     "Folded",
+     "Kehlani"
+    ],
+    [
+     "Egwu",
+     "Chike & Mohbad"
+    ],
+    [
+     "Golden (Acapella)",
+     "AUDREY NUNA & REI AMI & EJAE & KPop Demon Hunters Cast & HUNTR/X"
+    ],
+    [
+     "URAO",
+     "Charisma & Watendawili"
+    ],
+    [
+     "Beta",
+     "Mutoriah"
+    ],
+    [
+     "Designer",
+     "Billnass"
+    ],
+    [
+     "SINA NOMA",
+     "Charisma"
+    ],
+    [
+     "Perfect Design",
+     "Nyashinski"
+    ],
+    [
+     "Instructions",
+     "Mahalia"
+    ]
+   ]
+  }
+ }
+}
