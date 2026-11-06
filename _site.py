@@ -67,6 +67,9 @@ STORIES = [
  ("tyla-that-girl-scholarship", ["news", "music"], "The Wrap", "Tyla opens music scholarships to South African students", "Four of 10 US$5,000 awards are reserved for South African students. Applications may close early.", "tyla-instagram.jpg", "2026-10-27", "center 0%"),
  ("patrick-stewart-dies-at-86", ["news", "screen"], "The Wrap", "Sir Patrick Stewart dies at 86", "The Star Trek and X-Men actor died at his home in Los Angeles on 28 October.", "wr-patrick-stewart.jpg", "2026-10-29", "center 20%"),
  ("fame-week-africa", ["news", "music"], "The Wrap", "From brief to beat: FAME Week pairs African music makers with storytellers", "A songwriting camp links music creators with screen and content briefs, while raising questions about credit, licensing and fair pay.", "fame-week-africa-logo.jpg", "2026-10-28", "center"),
+ ("cfda-awards-2026-rachel-scott", ["news", "fashion"], "The Wrap", "Rachel Scott wins Womenswear Designer of the Year again at the CFDA Awards", "The Diotima founder takes the prize for the second time. Ralph Lauren wins menswear.", "wr-rachel-scott.jpg", "2026-11-06T17:00", "center 25%"),
+ ("idris-elba-kenya-creative-economy", ["news", "money"], "The Wrap", "Kenya signs a creative economy deal with Idris Elba", "Funding, AI training and global market access for young Kenyan creatives.", "wr-idris-elba.jpg", "2026-11-06T17:10", "center 25%"),
+ ("joshua-baraka-visa-ambassador", ["news", "music"], "The Wrap", "Joshua Baraka becomes Visa's first Ugandan brand ambassador", "The deal starts with his B'rakaland EA show in Kampala on 28 November.", "wr-joshua-baraka.jpg", "2026-11-06T17:20", "center 25%"),
 ]
 
 SECTIONS = {  # slug: (heading on page, empty message)
@@ -84,6 +87,7 @@ EDITION = {
  "tyla-that-girl-scholarship": "Continental",
  "fame-week-africa": "Continental",
  "patrick-stewart-dies-at-86": "Global",
+ "cfda-awards-2026-rachel-scott": "Global", "idris-elba-kenya-creative-economy": "Local", "joshua-baraka-visa-ambassador": "Continental",
 }
 HERO = {"ayrosh"}   # the big top story (hand-set in index.html)
 # Editor's picks rotate every day from the long-form stories of the last PICK_DAYS days.
