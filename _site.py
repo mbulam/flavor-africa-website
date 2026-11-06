@@ -22,6 +22,7 @@ e = lambda s: html.escape(s, quote=True)
 # slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, or YYYY-MM-DDTHH:MM to go live at a set time; Nairobi), image focus
 STORIES = [
  ("ronaldo-retires-portugal", ["sport"], "Flavor Sports", "How Ronaldo's Portugal story ended", "The bust-up, the 146-goal record and what comes next.", "sp-ronaldo-retires.jpg", "2026-11-05T17:00", "center 20%"),
+ ("makaveli-at-30", ["culture", "music"], "Flavor Rewind", "Makaveli at 30: the album 2Pac finished in a week", "Thirty years on, his last finished album still sounds like a man in a hurry.", "mak-coat.jpg", "2026-11-06T10:30", "center 15%"),
  ("awar-odhiang-model-of-the-year", ["fashion", "features"], "Flavor Fashion", "Awar Odhiang: from Pugnido to Model of the Year", "The model who closed Chanel is the British Fashion Council’s Model of the Year 2026. This is how she got there.", "ao-cover.jpg", "2026-11-05T18:00", "center 20%"),
  ("neema-ngelime", ["screen", "features"], "Flavor Spotlight", "Neema Ngelime: eight awards for a film still in development", "The Tanzanian director to watch, and the documentary winning before it is finished.", "nn-portrait.jpg", "2026-11-03", "center 25%"),
  ("kit-culture", ["sport", "fashion"], "Flavor Sports", "Kit Culture: how the football shirt became the outfit", "From London queues to Soweto's rooftops, the jersey left the stadium.", "sp-kit-cover.jpg", "2026-11-01T09:00", "center 30%"),
