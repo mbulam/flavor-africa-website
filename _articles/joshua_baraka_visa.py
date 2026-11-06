@@ -4,7 +4,7 @@ TAG = "The Wrap"
 H1 = "Joshua Baraka becomes Visa’s first Ugandan brand ambassador"
 DEK = "The “Nana” singer will front Visa campaigns aimed at young music fans, starting with his own headline show in Kampala this month."
 META = "The Wrap · Continental · 6 Nov 2026 · 3 min read"
-LEAD = ("img/wr-joshua-baraka.jpg", "Joshua Baraka")
+LEAD = ("img/wr-joshua-baraka.jpg", "Joshua Baraka (second from left) with the Visa team at the announcement")
 
 BODY = [
 ("p", "Visa has named Joshua Baraka its brand ambassador, the first Ugandan to take on the role. The partnership was announced on Thursday 5 November 2026."),

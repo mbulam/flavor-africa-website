@@ -4,7 +4,7 @@ TAG = "The Wrap"
 H1 = "Kenya signs a creative economy deal with Idris Elba"
 DEK = "The government and the actor's Akuna Group have agreed to work together on funding, AI training and global market access for young Kenyan creatives."
 META = "The Wrap · Local · 6 Nov 2026 · 3 min read"
-LEAD = ("img/wr-idris-elba.jpg", "Sir Idris Elba")
+LEAD = ("img/wr-idris-elba.jpg", "Sir Idris Elba at the signing with Kenya on the sidelines of CHOGM 2026 in Antigua and Barbuda")
 
 BODY = [
 ("p", "Kenya has signed a partnership with Sir Idris Elba aimed at young people working in the creative industries. The agreement, a Statement of Intent, was signed on Tuesday 3 November 2026 on the sidelines of the Commonwealth Heads of Government Meeting (CHOGM) in Antigua and Barbuda."),
