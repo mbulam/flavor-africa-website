@@ -263,7 +263,7 @@ document.querySelectorAll('.copy').forEach(function(b){b.onclick=function(){var 
 })();</script>'''
 
 def page(fname,title,body):
-    head='<title>%s</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n%s\n<link rel="stylesheet" href="style.css">\n'%(e(title),FONTS)
+    head='<title>%s</title>\n%s\n<link rel="stylesheet" href="style.css">\n'%(e(title),FONTS)
     doc=head+header(fname)+'<main>'+body+'</main>'+FOOTER+JS
     if fname!='index.html':
         doc=('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
