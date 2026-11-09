@@ -21,6 +21,7 @@ e = lambda s: html.escape(s, quote=True)
 
 # slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, or YYYY-MM-DDTHH:MM to go live at a set time; Nairobi), image focus
 STORIES = [
+ ("ghana-must-go-decoded", ["culture", "fashion"], "Flavor Decoded", "Ghana Must Go, decoded", "How a cheap checked tote got its name in 1983, and ended up on Denim Tears' new adidas.", "gmg-lead.jpg", "2026-11-10T11:00", "center 25%"),
  ("ronaldo-retires-portugal", ["sport"], "Flavor Sports", "How Ronaldo's Portugal story ended", "The bust-up, the 146-goal record and what comes next.", "sp-ronaldo-retires.jpg", "2026-11-05T17:00", "center 20%"),
  ("makaveli-at-30", ["culture", "music"], "Flavor Rewind", "Makaveli at 30: the album 2Pac finished in a week", "Thirty years on, his last finished album still sounds like a man in a hurry.", "mak-coat.jpg", "2026-11-06T10:30", "center 15%"),
  ("tegla-loroupe-new-york-1994", ["sport", "culture"], "Flavor Rewind", "The day Tegla Loroupe took New York", "32 years ago today, a 21-year-old from West Pokot became the first African woman to win a major marathon.", "teg-ny.jpg", "2026-11-06T11:00", "center 20%"),
