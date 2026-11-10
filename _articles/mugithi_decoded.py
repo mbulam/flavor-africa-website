@@ -16,7 +16,7 @@ BODY = [
 ("h2", "The keepers", "Bringing the classics ", "back"),
 ("p", "Mugithi's biggest stars have also been its historians. The late Salim Junior became a household name partly by reviving Kikuyu hits from decades earlier and covering them for a new generation. Artists like Mike Rua and Mike Murimi carried the sound through the bars, weddings and celebrations where it still lives today."),
 ("h2", "The new moment", "Same train, ", "new tracks"),
-("p", "A younger generation is now taking mugithi out of the bar and onto bigger stages. <a href=\"ayrosh.html\">Ayrosh</a>, who headlines Flavor Artist Live on Saturday 28 November, blends it with R&B, soul, Afro-house and even EDM, and calls his take on it futuristic. The roots are obvious. The production isn't what your parents danced to."),
+("p", "A younger generation is now taking mugithi out of the bar and onto bigger stages. Ayrosh blends it with R&B, soul, Afro-house and even EDM, and calls his take on it futuristic. The roots are obvious. The production isn't what your parents danced to."),
 ("p", "So when the guitar starts at the show, you'll know what to do. Find someone, hold on, and join the train."),
 ]
 
