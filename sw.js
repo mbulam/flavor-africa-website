@@ -1,16 +1,18 @@
 // flavor.africa app mode (added 10 Nov 2026).
-// Pages, the stylesheet and the app's files always come fresh from the internet first, so new stories
-// show straight away. A copy is kept so pages already read still open with no signal.
-// Photos are served from the saved copy and refreshed in the background.
+// Speed first (changed 10 Nov 2026): a page the phone fetched in the last 10 minutes opens straight from the
+// phone, and is refreshed quietly behind the scenes. Older copies wait up to 1.5 seconds for a fresh one,
+// then fall back to the saved copy, so a slow network never leaves a blank screen and saved stories open offline.
+// The stylesheet and app code are served from the phone and refreshed in the background. Photos likewise.
 // Bump VERSION if this file ever changes in a way that should clear old copies.
-var VERSION = "fa-v2";
+var VERSION = "fa-v3";
 var PAGES = VERSION + "-pages";
 var IMAGES = VERSION + "-images";
 var MAX_IMAGES = 80;
 
 self.addEventListener("install", function (e) {
+  var first = ["/", "/style.css", "/favicon.svg", "/icons/app-192.png", "/app/app.css", "/app/app.js", "/app/feed.json", "/live"];
   e.waitUntil(caches.open(PAGES).then(function (c) {
-    return c.addAll(["/", "/style.css", "/favicon.svg", "/icons/app-192.png", "/app/app.css", "/app/app.js", "/app/feed.json"]);
+    return Promise.all(first.map(function (u) { return c.add(u).catch(function () {}); }));
   }).then(function () { return self.skipWaiting(); }));
 });
 
@@ -34,21 +36,67 @@ var OFFLINE = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta 
   'h1{font-size:28px;margin:0 0 8px}p{margin:0 0 20px;opacity:.85;line-height:1.5}a{display:inline-block;background:#F5CC11;color:#2A0174;padding:12px 18px;text-decoration:none;font-weight:700;letter-spacing:.04em}</style></head>' +
   '<body><div><h1>flavor.africa</h1><p>You\'re offline right now.<br>Stories you\'ve already opened still work.</p><a href="/">Try again</a></div></body></html>';
 
+// Cloudflare serves /story.html at /story, so both are filed under one name.
+function keyOf(url) {
+  var p = url.pathname.replace(/\.html$/, "").replace(/\/index$/, "/");
+  return url.origin + (p || "/");
+}
+var FRESH = 10 * 60 * 1000, WAIT = 1500, flying = {};
+
+// fetch a page or file, keep a time-stamped copy, and share the request if it is already under way
+function pull(key) {
+  if (flying[key]) return flying[key].then(function (r) { return r.clone(); });
+  var p = fetch(key, { credentials: "same-origin" }).then(function (res) {
+    if (!res.ok) return res;
+    return res.blob().then(function (body) {
+      var h = new Headers(res.headers); h.set("x-fa-at", String(Date.now()));
+      var mk = function () { return new Response(body, { status: 200, headers: h }); };
+      return caches.open(PAGES).then(function (c) { return c.put(key, mk()); }).then(mk, mk);
+    });
+  });
+  flying[key] = p;
+  var done = function () { delete flying[key]; };
+  p.then(done, done);
+  return p.then(function (r) { return r.clone(); });
+}
+function age(res) { return Date.now() - (+res.headers.get("x-fa-at") || 0); }
+function offline() { return new Response(OFFLINE, { headers: { "Content-Type": "text/html; charset=utf-8" } }); }
+
 self.addEventListener("fetch", function (e) {
   var req = e.request;
   if (req.method !== "GET") return;
   var url = new URL(req.url);
   if (url.origin !== self.location.origin) return; // Google Analytics, fonts, chart players: leave alone
+  if (url.pathname.indexOf("/api/") === 0) return;  // votes and Fan Seat always go straight to the server
 
-  var isPage = req.mode === "navigate" || /\.(html|css|js|json)$/.test(url.pathname);
+  var nav = req.mode === "navigate";
+  var isCode = /\.(css|js)$/.test(url.pathname);
+  var isPage = nav || /\.(html|json)$/.test(url.pathname) || (req.headers.get("accept") || "").indexOf("text/html") > -1;
+
+  if (isCode) { // from the phone at once, refreshed behind the scenes
+    var ck = url.origin + url.pathname;
+    e.respondWith(caches.match(ck).then(function (hit) {
+      var net = pull(ck);
+      if (hit) { e.waitUntil(net.catch(function () {})); return hit; }
+      return net;
+    }));
+    return;
+  }
+
   if (isPage) {
-    e.respondWith(fetch(req).then(function (res) {
-      if (res.ok) { var copy = res.clone(); caches.open(PAGES).then(function (c) { c.put(req, copy); }); }
-      return res;
-    }).catch(function () {
-      return caches.match(req, { ignoreSearch: req.mode === "navigate" }).then(function (hit) {
-        return hit || (req.mode === "navigate" ? new Response(OFFLINE, { headers: { "Content-Type": "text/html; charset=utf-8" } }) : Response.error());
-      });
+    var key = /\.json$/.test(url.pathname) ? url.origin + url.pathname : keyOf(url);
+    e.respondWith(caches.match(key).then(function (hit) {
+      if (hit && age(hit) < FRESH) {
+        if (age(hit) > 60000) e.waitUntil(pull(key).catch(function () {}));
+        return hit;
+      }
+      var net = pull(key).then(function (res) { return res.ok || !hit ? res : hit; });
+      if (!hit) return net.catch(function () { return nav ? offline() : Response.error(); });
+      e.waitUntil(net.catch(function () {}));
+      return Promise.race([
+        net.catch(function () { return hit; }),
+        new Promise(function (ok) { setTimeout(function () { ok(hit); }, WAIT); })
+      ]);
     }));
     return;
   }
@@ -60,7 +108,8 @@ self.addEventListener("fetch", function (e) {
           if (res.ok) { c.put(req, res.clone()); trim(IMAGES, MAX_IMAGES); }
           return res;
         }).catch(function () { return hit || Response.error(); });
-        return hit || net;
+        if (hit) { e.waitUntil(net); return hit; }
+        return net;
       });
     }));
   }

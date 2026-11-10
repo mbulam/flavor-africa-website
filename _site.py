@@ -91,6 +91,10 @@ EDITION = {
  "patrick-stewart-dies-at-86": "Global",
  "idris-elba-kenya-creative-economy": "Local", "joshua-baraka-visa-ambassador": "Continental",
 }
+# Fan Seat in the app (added 10 Nov 2026): set this when a Flavor Artist Live artist is confirmed and the app's Live tab
+# starts taking fans' questions for them; set it back to None to close it. "show" is a short code for that show.
+# Example: FAN_SEAT = {"show": "2026-11-artist", "artist": "Artist Name", "line": "Flavor Artist Live · 29 Nov"}
+FAN_SEAT = None
 HERO = {"nairobi-new-sound"}   # the big top story (hand-set in index.html)
 # Editor's picks rotate every day from the long-form stories of the last PICK_DAYS days.
 PICK_TAGS = {"The Flavor Cover", "Flavor Feature", "Money Moves", "Flavor Roots", "Flavor Rewind", "Flavor Decoded",
@@ -521,8 +525,9 @@ def build_app_feed():
     if files:
         ed = json.load(open(files[-1]))
         if ed.get("songs"):
-            f10 = {"t": ed["songs"][0]["title"], "a": ed["songs"][0]["artist"], "label": ed.get("label", "")}
-    out = {"hero": sorted(HERO)[0] if HERO else "", "f10": f10,
+            f10 = {"t": ed["songs"][0]["title"], "a": ed["songs"][0]["artist"], "label": ed.get("label", ""),
+                   "songs": [{"t": x["title"], "a": x["artist"]} for x in ed["songs"]]}
+    out = {"hero": sorted(HERO)[0] if HERO else "", "f10": f10, "fanseat": FAN_SEAT,
            "stories": [{"s": s[0], "c": s[1], "t": s[2], "h": s[3], "d": s[4], "i": "img/" + s[5], "p": s[6], "o": s[7]}
                        for s in newest(STORIES)]}
     with open(os.path.join(SITE, "app", "feed.json"), "w") as f:

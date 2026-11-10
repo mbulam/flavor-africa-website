@@ -138,3 +138,16 @@ like an app. Nothing here changes the normal website.
   first open of the day, and from the "f." button top-left), Saved (bookmark on every
   story, Saved tab, readable offline) and For You (pick segments on the home tab).
 - app/feed.json is rebuilt by _site.py from STORIES every run; don't edit it by hand.
+
+APP: FANS' PICK, FAN SEAT AND SPEED (added 10 Nov 2026)
+- functions/api/vote.js and functions/api/fanseat.js are small Cloudflare Pages Functions (they run on
+  Cloudflare, not in the browser). They need a D1 database bound to the Pages project as DB, and a secret
+  called ADMIN_KEY (16+ characters), for BOTH Production and Preview. Until the database is bound they
+  answer "not-ready" and the app simply hides the fans' pick, so nothing breaks.
+- Fans' pick: in the app, the Flavor 10 has a "Which one's your No. 1?" panel. One pick per phone per day,
+  counted Monday to Sunday (Nairobi). Percentages show once 10 fans have picked. It never changes the chart.
+- Fan Seat: set FAN_SEAT in _site.py when a Flavor Artist Live artist is confirmed and run _site.py; the app
+  then shows an "Ask <artist>" form under the purple band (3 questions per phone). Set it to None to close.
+- Reading them: flavorafricagroup.org/app/inbox.html#<ADMIN_KEY> lists every question and the weekly picks.
+- Speed: sw.js opens pages from the phone when it fetched them in the last 10 minutes, and app.js fetches
+  the pages behind the tabs and the stories on screen ahead of the tap.

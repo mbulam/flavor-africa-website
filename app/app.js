@@ -2,6 +2,8 @@
 //   Flavor Daily  - swipeable story cards of today's top stories, shown on the first open of the day.
 //   Saved         - bookmark any story; the Saved tab lists them and they open offline.
 //   For You       - pick the segments you're into and the home tab puts them first.
+//   Fans' pick    - pick your own No. 1 from the Flavor 10, once a day (saved by /api/vote).
+//   Fan Seat      - send a question for the next Flavor Artist Live artist (saved by /api/fanseat; on when FAN_SEAT is set in _site.py).
 // Everything is stored on the phone (localStorage). Story data comes from /app/feed.json, built by _site.py.
 (function () {
   var R = document.documentElement;
@@ -30,12 +32,38 @@
 
   var page = (location.pathname.split("/").pop() || "index.html").replace(/\.html$/, "") || "index";
 
+  // Speed: fetch the pages behind the tabs and the stories on screen ahead of the tap, so they open at once.
+  (function () {
+    var c = navigator.connection || {}, seen = {}, left = 14;
+    if (c.saveData || !("serviceWorker" in navigator)) return;
+    function warm(a) {
+      var u; try { u = new URL(a.href); } catch (e) { return; }
+      if (u.origin !== location.origin || u.pathname.indexOf("/api/") === 0 || /\.(jpg|png|mp4|pdf)$/i.test(u.pathname)) return;
+      var k = u.pathname.replace(/\.html$/, "");
+      if (seen[k] || k === location.pathname.replace(/\.html$/, "") || left <= 0) return;
+      seen[k] = 1; left--;
+      fetch(u.pathname).catch(function () {});
+    }
+    function start() {
+      [].forEach.call(document.querySelectorAll(".fa-tabs a"), warm);
+      if (!("IntersectionObserver" in window)) return;
+      var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { io.unobserve(x.target); warm(x.target); } }); }, { rootMargin: "200px" });
+      [].forEach.call(document.querySelectorAll("main a[href]"), function (a) { io.observe(a); });
+      new MutationObserver(function (ms) { ms.forEach(function (m) { [].forEach.call(m.addedNodes, function (n) { if (n.querySelectorAll) [].forEach.call(n.querySelectorAll("a[href]"), function (a) { io.observe(a); }); }); }); })
+        .observe(document.body, { childList: true, subtree: true });
+    }
+    document.addEventListener("pointerdown", function (e) { var a = e.target.closest && e.target.closest("a[href]"); if (a) { left++; warm(a); } }, { passive: true });
+    if (document.readyState === "complete") setTimeout(start, 800); else window.addEventListener("load", function () { setTimeout(start, 800); });
+  })();
+
   fetch("/app/feed.json").then(function (r) { return r.json(); }).then(function (feed) {
     var now = nbo().slice(0, 16);
     var live = feed.stories.filter(function (s) { return s.p <= now; });
     var bySlug = {}; live.forEach(function (s) { bySlug[s.s] = s; });
     saved(bySlug);
     if (page === "index") forYou(live);
+    if (page === "index") vote(feed);
+    fanSeat(feed);
     daily(feed, live);
   }).catch(function () {});
 
@@ -151,6 +179,105 @@
       box.querySelector("[data-edit]").addEventListener("click", function () { picker(follow); });
     }
     rail();
+  }
+
+  // a random code kept on this phone, so one phone gets one pick a day (no name, no account)
+  function phoneId() {
+    var id = store.get("fa-id", "");
+    if (!/^[a-z0-9]{24}$/.test(id)) {
+      var a = new Uint8Array(24), abc = "abcdefghijklmnopqrstuvwxyz0123456789"; id = "";
+      (window.crypto || window.msCrypto).getRandomValues(a);
+      for (var k = 0; k < 24; k++) id += abc[a[k] % 36];
+      store.set("fa-id", id);
+    }
+    return id;
+  }
+  function api(path, body) {
+    var o = body ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) } : {};
+    return fetch(path, o).then(function (r) { return r.json().then(function (d) { d.status = r.status; return d; }); });
+  }
+
+  // ---------- Fans' pick (vote on the Flavor 10) ----------
+  function vote(feed) {
+    var sec = document.getElementById("flavor-10");
+    if (!sec || !feed.f10 || !feed.f10.songs) return;
+    var songs = feed.f10.songs.map(function (s) { return { key: s.t + " — " + s.a, t: s.t, a: s.a }; });
+    var MIN = 10, st = null, busy = false;                     // results show once MIN fans have picked
+    var box = el("div", "fa-vote"); box.hidden = true;
+    var sub = sec.querySelector(".f10-sub");
+    if (sub && sub.nextSibling) sec.insertBefore(box, sub.nextSibling); else sec.appendChild(box);
+    var sheet = el("section", "fa-sheet"); sheet.hidden = true; sheet.setAttribute("aria-label", "Pick your number one");
+    document.body.appendChild(sheet);
+
+    function title(k) { for (var i = 0; i < songs.length; i++) if (songs[i].key === k) return songs[i].t; return ""; }
+    function leader() { var best = null; songs.forEach(function (s) { var n = st.tally[s.key] || 0; if (n && (!best || n > best.n)) best = { t: s.t, n: n }; }); return best; }
+    function panel() {
+      var html = '<span class="k">Fans\' pick · this week</span>';
+      if (st.mine && title(st.mine)) {
+        html += "<b>You picked " + esc(title(st.mine)) + "</b>";
+        var l = st.total >= MIN ? leader() : null;
+        html += "<p>" + (l ? "Out in front: " + esc(l.t) + ", with " + Math.round(l.n / st.total * 100) + "% of picks." : "Picks are still coming in. The fans' No. 1 shows here once enough of you have chosen.") + "</p>";
+        html += '<button type="button" data-pick>' + (st.total >= MIN ? "See the picks" : "Change my pick") + "</button>";
+      } else {
+        html += "<b>Which one's your No. 1?</b><p>The chart counts streams and airplay. This one's just you. One pick a day.</p><button type=\"button\" data-pick>Pick yours</button>";
+      }
+      box.innerHTML = html; box.hidden = false;
+    }
+    function list() {
+      var show = st.total >= MIN && st.mine;
+      var html = '<div class="fa-sheet-hd"><h2>Your No. 1</h2><button type="button" data-x aria-label="Close">' + ICON.close + '</button></div><p class="fa-sheet-sub">' +
+        (show ? "This week's picks so far. Tap another song to change yours." : "Tap the one you'd put at the top. You can pick again tomorrow.") + '</p><ul class="fa-pick">';
+      songs.forEach(function (s) {
+        var n = st.tally[s.key] || 0, pc = st.total ? Math.round(n / st.total * 100) : 0;
+        html += '<li><button type="button" data-song="' + esc(s.key) + '" aria-pressed="' + (st.mine === s.key) + '"><span><b>' + esc(s.t) + "</b><i>" + esc(s.a) + "</i></span>" +
+          (show ? '<em>' + pc + '%</em><u style="width:' + pc + '%"></u>' : "") + "</button></li>";
+      });
+      sheet.innerHTML = html + "</ul>";
+    }
+    function close() { sheet.hidden = true; }
+    box.addEventListener("click", function (e) { if (e.target.closest("[data-pick]")) { list(); sheet.hidden = false; sheet.scrollTop = 0; } });
+    sheet.addEventListener("click", function (e) {
+      if (e.target.closest("[data-x]")) return close();
+      var b = e.target.closest("[data-song]"); if (!b || busy) return;
+      busy = true;
+      api("/api/vote", { song: b.getAttribute("data-song"), id: phoneId() }).then(function (d) {
+        busy = false;
+        if (!d.ok) return toast(d.error === "busy" ? "Lots of picks from this connection today. Try again tomorrow." : "That didn't go through. Try again.");
+        st = d; panel(); list(); toast("Your pick is in.");
+      }).catch(function () { busy = false; toast("You're offline. Try again when you're back."); });
+    });
+    [].forEach.call(document.querySelectorAll(".fa-tabs a, .fa-tabs button"), function (a) { a.addEventListener("click", close); });
+
+    api("/api/vote?id=" + phoneId()).then(function (d) { if (d.ok) { st = d; panel(); } }).catch(function () {});
+  }
+
+  // ---------- Fan Seat (questions for the next Flavor Artist Live artist) ----------
+  function fanSeat(feed) {
+    var fs = feed.fanseat, band = document.querySelector("section.band");
+    if (!fs || !fs.show || !fs.artist || !band) return;
+    var sent = store.get("fa-fanseat", {}), mine = sent[fs.show] || 0;
+    var box = el("section", "wrap fa-fanseat"); box.setAttribute("aria-label", "Fan Seat");
+    band.parentNode.insertBefore(box, band.nextSibling);
+    function form(note) {
+      if (mine >= 3) { box.innerHTML = '<span class="tag">Fan Seat</span><h2>Your questions are in</h2><p>That\'s your three for ' + esc(fs.artist) + ". We'll put the best ones to them at the show.</p>"; return; }
+      box.innerHTML = '<span class="tag">Fan Seat</span><h2>Ask ' + esc(fs.artist) + "</h2><p>" + esc(fs.line || "") + (fs.line ? ". " : "") + "What have you always wanted to know? The best questions get asked at the show.</p>" +
+        (note ? '<p class="ok">' + esc(note) + "</p>" : "") +
+        '<form><label for="fa-fs-q">Your question</label><textarea id="fa-fs-q" maxlength="280" rows="3" required></textarea><span class="n" aria-hidden="true">0 / 280</span>' +
+        '<label for="fa-fs-n">Your name (optional)</label><input id="fa-fs-n" maxlength="40" autocomplete="given-name"><button type="submit">Send it</button></form>';
+      var f = box.querySelector("form"), q = f.querySelector("textarea"), n = f.querySelector(".n"), go = f.querySelector("button");
+      q.addEventListener("input", function () { n.textContent = q.value.length + " / 280"; });
+      f.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (q.value.trim().length < 5) return toast("Add a little more to your question.");
+        go.disabled = true;
+        api("/api/fanseat", { q: q.value, name: f.querySelector("input").value, id: phoneId() }).then(function (d) {
+          go.disabled = false;
+          if (d.ok || d.error === "limit") { mine = d.ok ? mine + 1 : 3; sent[fs.show] = mine; store.set("fa-fanseat", sent); return form(d.ok ? "Sent. Got another one?" : ""); }
+          toast(d.error === "closed" ? "Fan Seat has closed for this show." : "That didn't go through. Try again.");
+        }).catch(function () { go.disabled = false; toast("You're offline. Try again when you're back."); });
+      });
+    }
+    form("");
   }
 
   // ---------- Flavor Daily ----------

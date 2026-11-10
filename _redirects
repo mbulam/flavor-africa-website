@@ -6,3 +6,5 @@
 /_site.py / 302
 /README-HOW-TO-EDIT.txt / 302
 /.gitignore / 302
+/functions/* / 302
+/wrangler.toml / 302
