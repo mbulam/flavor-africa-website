@@ -124,3 +124,17 @@ GOOGLE ANALYTICS + COOKIE NOTICE (added 30 Oct 2026)
   Kenyan and other non-EU visitors are counted unless they click "No thanks";
   visitors in the EU/UK/Switzerland are only counted after they click "Okay".
   Its look is the <style> at the start of GA_BODY in _site.py.
+
+APP MODE (added 10 Nov 2026)
+People can add the site to their phone's home screen; opened from that icon it behaves
+like an app. Nothing here changes the normal website.
+- manifest.webmanifest + icons/ : the app's name, icon and colours.
+- sw.js : keeps copies so stories already read open offline. Bump VERSION in it if you
+  ever need phones to drop their old copies.
+- _site.py (PWA_HEAD / PWA_BODY / add_pwa) adds to every page: the manifest link, the
+  "add to home screen" banner, and, in app mode only, the bottom tabs
+  (Home / Flavor 10 / Live / Saved / Menu) and the purple splash.
+- app/app.js + app/app.css load only in app mode: Flavor Daily (story cards shown on the
+  first open of the day, and from the "f." button top-left), Saved (bookmark on every
+  story, Saved tab, readable offline) and For You (pick segments on the home tab).
+- app/feed.json is rebuilt by _site.py from STORIES every run; don't edit it by hand.

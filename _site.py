@@ -203,7 +203,7 @@ PWA_HEAD = ('<!--pwa--><link rel="manifest" href="/manifest.webmanifest">'
             '<meta name="apple-mobile-web-app-title" content="Flavor Africa"><meta name="apple-mobile-web-app-status-bar-style" content="default">'
             # App feel: when opened from the home-screen icon, <html> gets class "app": no section strip, a bottom tab bar,
             # a purple splash on the first open of a session, no tap flash, and a quick fade-in. The normal website is unchanged.
-            '<script>(function(){var r=document.documentElement;if((window.matchMedia&&matchMedia("(display-mode: standalone)").matches)||navigator.standalone===true){r.classList.add("app");'
+            '<script>(function(){var r=document.documentElement;if((window.matchMedia&&matchMedia("(display-mode: standalone)").matches)||navigator.standalone===true){r.classList.add("app");document.write(\'<link rel="stylesheet" href="/app/app.css">\');'
             'try{if(!sessionStorage.getItem("fa-splash"))r.classList.add("splash")}catch(e){}}})();</script>'
             '<style>.fa-tabs{display:none}html.app{-webkit-tap-highlight-color:transparent}html.app .sub{display:none}html.app #open{visibility:hidden}html.app .bar{padding-block:8px}'
             'html.app body{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}html.app header,html.app .fa-tabs{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}'
@@ -215,7 +215,7 @@ PWA_HEAD = ('<!--pwa--><link rel="manifest" href="/manifest.webmanifest">'
             'html.app .cookie-note{bottom:calc(76px + env(safe-area-inset-bottom,0px))}'
             '.fa-splash{position:fixed;inset:0;z-index:1000;background:#2A0174 url(/icons/app-512.png) center/132px no-repeat;pointer-events:none;transition:opacity .3s ease}.fa-splash.out{opacity:0}'
             '@keyframes fa-in{from{opacity:.35}}html.app main{animation:fa-in .2s ease-out}@media (prefers-reduced-motion:reduce){html.app main{animation:none}}</style><!--/pwa-->')
-PWA_BODY = ('<!--install--><nav class="fa-tabs" aria-label="App"><a href="index.html" data-t="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9v11h14V9"/></svg>Home</a><a href="news.html" data-t="news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>News</a><a href="index.html#flavor-10" data-t="f10"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V11M10 20V4M15 20v-6M20 20V8"/></svg>Flavor 10</a><a href="live.html" data-t="live"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 0 0 4 2 2 0 0 0 0 4v2h18v-2a2 2 0 0 0 0-4 2 2 0 0 0 0-4V6H3z"/><path d="M14 6v12" stroke-dasharray="2 2"/></svg>Live</a><button type="button" data-t="menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</button></nav><script>(function(){var r=document.documentElement;if(!r.classList.contains("app"))return;var n=document.querySelector(".fa-tabs");if(!n)return;var p=location.pathname.split("/").pop()||"index.html",t=p==="index.html"?(location.hash==="#flavor-10"?"f10":"home"):p==="news.html"?"news":p==="live.html"?"live":"";window.addEventListener("hashchange",function(){if(p!=="index.html")return;[].forEach.call(n.querySelectorAll("a"),function(a){a.removeAttribute("aria-current")});var k=n.querySelector("[data-t="+(location.hash==="#flavor-10"?"f10":"home")+"]");if(k)k.setAttribute("aria-current","page")});if(t){var a=n.querySelector("[data-t="+t+"]");if(a)a.setAttribute("aria-current","page")}n.querySelector("[data-t=menu]").addEventListener("click",function(){var o=document.getElementById("open");if(o)o.click()});if(r.classList.contains("splash")){r.classList.remove("splash");try{sessionStorage.setItem("fa-splash","1")}catch(e){}var sp=document.createElement("div");sp.className="fa-splash";sp.setAttribute("aria-hidden","true");document.body.appendChild(sp);var gone=false,done=function(){if(gone)return;gone=true;sp.classList.add("out");setTimeout(function(){sp.remove()},350)};setTimeout(done,700);setTimeout(done,2500)}})();</script><style>.fa-install{position:fixed;left:16px;right:16px;bottom:16px;z-index:998;max-width:560px;margin:0 auto;background:#15102A;color:#fff;'
+PWA_BODY = ('<!--install--><nav class="fa-tabs" aria-label="App"><a href="index.html" data-t="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9v11h14V9"/></svg>Home</a><a href="index.html#flavor-10" data-t="f10"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V11M10 20V4M15 20v-6M20 20V8"/></svg>Flavor 10</a><a href="live.html" data-t="live"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 0 0 4 2 2 0 0 0 0 4v2h18v-2a2 2 0 0 0 0-4 2 2 0 0 0 0-4V6H3z"/><path d="M14 6v12" stroke-dasharray="2 2"/></svg>Live</a><button type="button" data-t="saved" aria-label="Saved stories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg>Saved</button><button type="button" data-t="menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</button></nav><script>(function(){var r=document.documentElement;if(!r.classList.contains("app"))return;var n=document.querySelector(".fa-tabs");if(!n)return;var p=location.pathname.split("/").pop()||"index.html",t=p==="index.html"?(location.hash==="#flavor-10"?"f10":"home"):p==="live.html"?"live":"";window.addEventListener("hashchange",function(){if(p!=="index.html")return;[].forEach.call(n.querySelectorAll("a"),function(a){a.removeAttribute("aria-current")});var k=n.querySelector("[data-t="+(location.hash==="#flavor-10"?"f10":"home")+"]");if(k)k.setAttribute("aria-current","page")});if(t){var a=n.querySelector("[data-t="+t+"]");if(a)a.setAttribute("aria-current","page")}n.querySelector("[data-t=menu]").addEventListener("click",function(){var o=document.getElementById("open");if(o)o.click()});var js=document.createElement("script");js.src="/app/app.js";document.body.appendChild(js);if(r.classList.contains("splash")){r.classList.remove("splash");try{sessionStorage.setItem("fa-splash","1")}catch(e){}var sp=document.createElement("div");sp.className="fa-splash";sp.setAttribute("aria-hidden","true");document.body.appendChild(sp);var gone=false,done=function(){if(gone)return;gone=true;sp.classList.add("out");setTimeout(function(){sp.remove()},350)};setTimeout(done,700);setTimeout(done,2500)}})();</script><style>.fa-install{position:fixed;left:16px;right:16px;bottom:16px;z-index:998;max-width:560px;margin:0 auto;background:#15102A;color:#fff;'
             'border-top:4px solid #F5CC11;padding:14px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;box-shadow:0 8px 28px rgba(21,16,42,.25);font-family:var(--body);'
             'padding-bottom:calc(14px + env(safe-area-inset-bottom,0px))} .fa-install[hidden]{display:none} .fa-install img{width:44px;height:44px;flex:0 0 44px;border-radius:10px}'
             ' .fa-install p{margin:0;flex:1 1 220px;font-size:13px;line-height:1.5} .fa-install svg{vertical-align:-3px} .fa-install .btns{display:flex;gap:8px;margin-left:auto}'
@@ -511,6 +511,24 @@ def build_sitemap():
     wr("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s\n</urlset>\n' % "\n".join(rows))
 
 
+def build_app_feed():
+    """app/feed.json: what the home-screen app reads for Flavor Daily, Saved and For You (added 10 Nov 2026).
+    Every story is listed with its date; the app itself hides stories dated in the future."""
+    import glob, json
+    os.makedirs(os.path.join(SITE, "app"), exist_ok=True)
+    f10 = None
+    files = sorted(glob.glob(os.path.join(SITE, "_charts", "flavor10", "data", "*.json")))
+    if files:
+        ed = json.load(open(files[-1]))
+        if ed.get("songs"):
+            f10 = {"t": ed["songs"][0]["title"], "a": ed["songs"][0]["artist"], "label": ed.get("label", "")}
+    out = {"hero": sorted(HERO)[0] if HERO else "", "f10": f10,
+           "stories": [{"s": s[0], "c": s[1], "t": s[2], "h": s[3], "d": s[4], "i": "img/" + s[5], "p": s[6], "o": s[7]}
+                       for s in newest(STORIES)]}
+    with open(os.path.join(SITE, "app", "feed.json"), "w") as f:
+        json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
+
+
 if __name__ == "__main__":
     for s in STORIES:
         new_page(s)
@@ -527,5 +545,6 @@ if __name__ == "__main__":
     build_home()
     build_flavor10()
     build_sitemap()
+    build_app_feed()
     mark_scheduled()
     print("site rebuilt")

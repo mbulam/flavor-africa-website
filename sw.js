@@ -1,16 +1,16 @@
 // flavor.africa app mode (added 10 Nov 2026).
-// Pages and the stylesheet always come fresh from the internet first, so new stories
+// Pages, the stylesheet and the app's files always come fresh from the internet first, so new stories
 // show straight away. A copy is kept so pages already read still open with no signal.
 // Photos are served from the saved copy and refreshed in the background.
 // Bump VERSION if this file ever changes in a way that should clear old copies.
-var VERSION = "fa-v1";
+var VERSION = "fa-v2";
 var PAGES = VERSION + "-pages";
 var IMAGES = VERSION + "-images";
 var MAX_IMAGES = 80;
 
 self.addEventListener("install", function (e) {
   e.waitUntil(caches.open(PAGES).then(function (c) {
-    return c.addAll(["/", "/style.css", "/favicon.svg", "/icons/app-192.png"]);
+    return c.addAll(["/", "/style.css", "/favicon.svg", "/icons/app-192.png", "/app/app.css", "/app/app.js", "/app/feed.json"]);
   }).then(function () { return self.skipWaiting(); }));
 });
 
@@ -40,7 +40,7 @@ self.addEventListener("fetch", function (e) {
   var url = new URL(req.url);
   if (url.origin !== self.location.origin) return; // Google Analytics, fonts, chart players: leave alone
 
-  var isPage = req.mode === "navigate" || url.pathname.slice(-5) === ".html" || url.pathname.slice(-4) === ".css";
+  var isPage = req.mode === "navigate" || /\.(html|css|js|json)$/.test(url.pathname);
   if (isPage) {
     e.respondWith(fetch(req).then(function (res) {
       if (res.ok) { var copy = res.clone(); caches.open(PAGES).then(function (c) { c.put(req, copy); }); }
