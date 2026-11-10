@@ -111,18 +111,6 @@ html.app header{border-bottom-color:transparent;box-shadow:0 1px 0 var(--line)}
 .fa-pick u{position:absolute;left:0;top:0;bottom:0;background:var(--tint);text-decoration:none}
 .fa-pick button[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 4px 0 0 var(--yellow)}
 
-/* Fan Seat */
-.fa-fanseat{padding-block:30px 6px}
-.fa-fanseat h2{font-size:34px;text-transform:uppercase;margin:12px 0 8px}
-.fa-fanseat p{margin:0 0 14px;color:var(--mute);font-size:15px}
-.fa-fanseat p.ok{color:var(--accent);font-weight:500}
-.fa-fanseat label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:14px 0 6px}
-.fa-fanseat textarea,.fa-fanseat input{display:block;width:100%;border:1px solid var(--line);background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;padding:12px;border-radius:0;-webkit-user-select:text;user-select:text}
-.fa-fanseat textarea:focus,.fa-fanseat input:focus{outline:2px solid var(--accent);outline-offset:0}
-.fa-fanseat .n{display:block;text-align:right;font-family:var(--mono);font-size:11px;color:var(--mute);margin-top:4px}
-.fa-fanseat form button{margin-top:16px;min-height:48px;padding:0 22px;border:0;background:var(--purple);color:#fff;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
-.fa-fanseat form button:disabled{opacity:.6}
-
 /* a tap shows at once */
 html.app .fa-tabs a:active,html.app .fa-tabs button:active,html.app main a:active,html.app .fa-list a:active{opacity:.55}
 

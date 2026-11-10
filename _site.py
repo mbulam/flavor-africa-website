@@ -238,7 +238,7 @@ PWA_BODY = ('<!--install--><nav class="fa-tabs" aria-label="App"><a href="index.
             ' then <b>Add to Home Screen</b>.</p>'
             '<div class="btns"><button type="button" data-i="no">Not now</button><button type="button" data-i="add" class="ok i-and">Add it</button>'
             '<button type="button" data-i="ok" class="ok i-ios">Got it</button></div></div>'
-            '<script>(function(){if("serviceWorker" in navigator)window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})});'
+            '<script>(function(){if("serviceWorker" in navigator)window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})});if(/^\\/(index|live)?(\\.html)?$/.test(location.pathname)){var fj=document.createElement("script");fj.src="/app/fanseat.js";document.body.appendChild(fj)}'
             'var app=(window.matchMedia&&matchMedia("(display-mode: standalone)").matches)||navigator.standalone===true;if(app)return;'
             'var b=document.getElementById("fa-install");if(!b)return;var K="fa-install",t=0;try{t=+localStorage.getItem(K)||0}catch(e){}if(Date.now()-t<2592e6)return;'
             'var ios=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1),ev=null,shown=false;'

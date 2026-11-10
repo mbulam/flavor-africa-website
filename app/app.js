@@ -3,7 +3,7 @@
 //   Saved         - bookmark any story; the Saved tab lists them and they open offline.
 //   For You       - pick the segments you're into and the home tab puts them first.
 //   Fans' pick    - pick your own No. 1 from the Flavor 10, once a day (saved by /api/vote).
-//   Fan Seat      - send a question for the next Flavor Artist Live artist (saved by /api/fanseat; on when FAN_SEAT is set in _site.py).
+//   (Fan Seat lives in app/fanseat.js, because the website shows it too.)
 // Everything is stored on the phone (localStorage). Story data comes from /app/feed.json, built by _site.py.
 (function () {
   var R = document.documentElement;
@@ -63,7 +63,6 @@
     saved(bySlug);
     if (page === "index") forYou(live);
     if (page === "index") vote(feed);
-    fanSeat(feed);
     daily(feed, live);
   }).catch(function () {});
 
@@ -167,6 +166,7 @@
     var box = el("section", "wrap fa-foryou");
     box.setAttribute("aria-label", "For you");
     var lead = main.firstElementChild;
+    lead = document.getElementById("fan-seat") || lead;   // Fan Seat, when it's open, stays right under the cover story
     if (lead && lead.nextSibling) main.insertBefore(box, lead.nextSibling); else main.appendChild(box);
 
     function picker(sel) {
@@ -270,35 +270,6 @@
     [].forEach.call(document.querySelectorAll(".fa-tabs a, .fa-tabs button"), function (a) { a.addEventListener("click", close); });
 
     api("/api/vote?id=" + phoneId()).then(function (d) { if (d.ok) { st = d; panel(); } }).catch(function () {});
-  }
-
-  // ---------- Fan Seat (questions for the next Flavor Artist Live artist) ----------
-  function fanSeat(feed) {
-    var fs = feed.fanseat, band = document.querySelector("section.band");
-    if (!fs || !fs.show || !fs.artist || !band) return;
-    var sent = store.get("fa-fanseat", {}), mine = sent[fs.show] || 0;
-    var box = el("section", "wrap fa-fanseat"); box.setAttribute("aria-label", "Fan Seat");
-    band.parentNode.insertBefore(box, band.nextSibling);
-    function form(note) {
-      if (mine >= 3) { box.innerHTML = '<span class="tag">Fan Seat</span><h2>Your questions are in</h2><p>That\'s your three for ' + esc(fs.artist) + ". " + esc(fs.done || "We'll put the best ones to them at the show.") + "</p>"; return; }
-      box.innerHTML = '<span class="tag">Fan Seat</span><h2>Ask ' + esc(fs.artist) + "</h2><p>" + esc(fs.line || "") + (fs.line ? ". " : "") + esc(fs.blurb || "What have you always wanted to know? The best questions get asked at the show.") + "</p>" +
-        (note ? '<p class="ok">' + esc(note) + "</p>" : "") +
-        '<form><label for="fa-fs-q">Your question</label><textarea id="fa-fs-q" maxlength="280" rows="3" required></textarea><span class="n" aria-hidden="true">0 / 280</span>' +
-        '<label for="fa-fs-n">Your name (optional)</label><input id="fa-fs-n" maxlength="40" autocomplete="given-name"><button type="submit">Send it</button></form>';
-      var f = box.querySelector("form"), q = f.querySelector("textarea"), n = f.querySelector(".n"), go = f.querySelector("button");
-      q.addEventListener("input", function () { n.textContent = q.value.length + " / 280"; });
-      f.addEventListener("submit", function (e) {
-        e.preventDefault();
-        if (q.value.trim().length < 5) return toast("Add a little more to your question.");
-        go.disabled = true;
-        api("/api/fanseat", { q: q.value, name: f.querySelector("input").value, id: phoneId() }).then(function (d) {
-          go.disabled = false;
-          if (d.ok || d.error === "limit") { mine = d.ok ? mine + 1 : 3; sent[fs.show] = mine; store.set("fa-fanseat", sent); return form(d.ok ? "Sent. Got another one?" : ""); }
-          toast(d.error === "closed" ? "Fan Seat has closed for this show." : "That didn't go through. Try again.");
-        }).catch(function () { go.disabled = false; toast("You're offline. Try again when you're back."); });
-      });
-    }
-    form("");
   }
 
   // ---------- Flavor Daily ----------
