@@ -1,0 +1,24 @@
+{
+  "name": "flavor.africa",
+  "short_name": "Flavor Africa",
+  "description": "Global culture, African flavor. Entertainment news, charts and features from Nairobi to the world.",
+  "id": "/",
+  "start_url": "/?utm_source=homescreen",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#2A0174",
+  "theme_color": "#2A0174",
+  "lang": "en",
+  "categories": ["entertainment", "news", "music"],
+  "icons": [
+    { "src": "/icons/app-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/app-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/app-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "The Flavor 10", "short_name": "Flavor 10", "url": "/#flavor-10", "icons": [{ "src": "/icons/app-192.png", "sizes": "192x192" }] },
+    { "name": "News", "url": "/news.html", "icons": [{ "src": "/icons/app-192.png", "sizes": "192x192" }] },
+    { "name": "Flavor Artist Live", "short_name": "Live", "url": "/live.html", "icons": [{ "src": "/icons/app-192.png", "sizes": "192x192" }] }
+  ]
+}

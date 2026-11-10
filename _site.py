@@ -192,6 +192,49 @@ def add_analytics(h):
     return h.replace("</body>", GA_BODY + "</body>", 1)
 
 
+# App mode (installable web app), added 10 Nov 2026. manifest.webmanifest + sw.js + icons/
+# let people add the site to their home screen; it then opens full screen like an app.
+# The banner below invites them once (Android: one-tap install; iPhone: Share > Add to Home
+# Screen), waits until the cookie notice is answered, and stays away for 30 days if dismissed.
+PWA_HEAD = ('<!--pwa--><link rel="manifest" href="/manifest.webmanifest">'
+            '<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">'
+            '<meta name="apple-mobile-web-app-title" content="Flavor Africa"><meta name="apple-mobile-web-app-status-bar-style" content="default"><!--/pwa-->')
+PWA_BODY = ('<!--install--><style>.fa-install{position:fixed;left:16px;right:16px;bottom:16px;z-index:998;max-width:560px;margin:0 auto;background:#15102A;color:#fff;'
+            'border-top:4px solid #F5CC11;padding:14px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;box-shadow:0 8px 28px rgba(21,16,42,.25);font-family:var(--body);'
+            'padding-bottom:calc(14px + env(safe-area-inset-bottom,0px))} .fa-install[hidden]{display:none} .fa-install img{width:44px;height:44px;flex:0 0 44px;border-radius:10px}'
+            ' .fa-install p{margin:0;flex:1 1 220px;font-size:13px;line-height:1.5} .fa-install svg{vertical-align:-3px} .fa-install .btns{display:flex;gap:8px;margin-left:auto}'
+            ' .fa-install button{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:10px 14px;min-height:40px;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;cursor:pointer}'
+            ' .fa-install button.ok{background:#F5CC11;color:#2A0174;border-color:#F5CC11;font-weight:600} .fa-install button:focus-visible{outline:2px solid #F5CC11;outline-offset:2px}'
+            ' .fa-install[data-mode=ios] .i-and,.fa-install[data-mode=and] .i-ios{display:none}</style>'
+            '<div class="fa-install" id="fa-install" role="region" aria-label="Add flavor.africa to your home screen" hidden>'
+            '<img src="/icons/app-192.png" alt="">'
+            '<p class="i-and">Put <b>flavor.africa</b> on your home screen. It opens full screen, just like an app.</p>'
+            '<p class="i-ios">Get <b>flavor.africa</b> on your home screen: tap the Share button '
+            '<svg aria-label="Share" role="img" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F5CC11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M5 11v9h14v-9"/></svg>'
+            ' then <b>Add to Home Screen</b>.</p>'
+            '<div class="btns"><button type="button" data-i="no">Not now</button><button type="button" data-i="add" class="ok i-and">Add it</button>'
+            '<button type="button" data-i="ok" class="ok i-ios">Got it</button></div></div>'
+            '<script>(function(){if("serviceWorker" in navigator)window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})});'
+            'var app=(window.matchMedia&&matchMedia("(display-mode: standalone)").matches)||navigator.standalone===true;if(app)return;'
+            'var b=document.getElementById("fa-install");if(!b)return;var K="fa-install",t=0;try{t=+localStorage.getItem(K)||0}catch(e){}if(Date.now()-t<2592e6)return;'
+            'var ios=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1),ev=null,shown=false;'
+            'function show(m){if(shown)return;shown=true;b.setAttribute("data-mode",m);(function go(){var c=document.getElementById("cookie-note");if(c&&!c.hidden){setTimeout(go,1500);return}b.hidden=false})()}'
+            'function later(m){setTimeout(function(){show(m)},6000)}'
+            'window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();ev=e;later("and")});'
+            'if(ios)later("ios");'
+            'b.addEventListener("click",function(e){var a=e.target.closest("[data-i]");if(!a)return;if(a.getAttribute("data-i")==="add"&&ev){ev.prompt();ev=null}'
+            'try{localStorage.setItem(K,String(Date.now()))}catch(x){}b.hidden=true});'
+            'window.addEventListener("appinstalled",function(){b.hidden=true})})();</script><!--/install-->')
+
+
+def add_pwa(h):
+    """Link the app manifest in <head> and add the home-screen banner before </body>, replacing any older copy."""
+    h = re.sub(r"<!--pwa-->.*?<!--/pwa-->", "", h, flags=re.S)
+    h = re.sub(r"<!--install-->.*?<!--/install-->", "", h, flags=re.S)
+    h = h.replace("</head>", PWA_HEAD + "</head>", 1)
+    return h.replace("</body>", PWA_BODY + "</body>", 1)
+
+
 def add_filter(h):
     h = re.sub(r'<script>\(function\(\)\{var bar=document\.querySelector\("\.segs"\).*?</script>', "", h, flags=re.S)
     return h.replace("</body>", FILTER + "</body>", 1)
@@ -463,7 +506,7 @@ if __name__ == "__main__":
             pages[k + ".html"] = [x for x in re.findall(r'<(?:span|a)[^>]*>(.*?)</(?:span|a)>', m.group(1)) if x != "All"]
     for f in sorted(os.listdir(SITE)):
         if f.endswith(".html"):
-            wr(f, add_analytics(link_menu(fix_nav(f, rd(f)), pages)))
+            wr(f, add_pwa(add_analytics(link_menu(fix_nav(f, rd(f)), pages))))
     build_sections()
     build_home()
     build_flavor10()
