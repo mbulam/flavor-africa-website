@@ -529,7 +529,7 @@ def build_app_feed():
     if files:
         ed = json.load(open(files[-1]))
         if ed.get("songs"):
-            f10 = {"t": ed["songs"][0]["title"], "a": ed["songs"][0]["artist"], "label": ed.get("label", ""),
+            f10 = {"t": ed["songs"][0]["title"], "a": ed["songs"][0]["artist"], "label": ed.get("label", ""), "id": ed["songs"][0].get("apple", ""),
                    "songs": [{"t": x["title"], "a": x["artist"]} for x in ed["songs"]]}
     out = {"hero": sorted(HERO)[0] if HERO else "", "f10": f10, "fanseat": FAN_SEAT,
            "stories": [{"s": s[0], "c": s[1], "t": s[2], "h": s[3], "d": s[4], "i": "img/" + s[5], "p": s[6], "o": s[7]}

@@ -67,6 +67,27 @@
     daily(feed, live);
   }).catch(function () {});
 
+  // ---------- Back and Share (the app has no browser buttons, so it brings its own) ----------
+  (function () {
+    var barEl = document.querySelector("header .bar");
+    if (barEl && page !== "index") {
+      var back = el("button", "fa-back", '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>');
+      back.type = "button"; back.setAttribute("aria-label", "Back");
+      back.addEventListener("click", function () { if (history.length > 1 && document.referrer.indexOf(location.origin) === 0) history.back(); else location.href = "/"; });
+      barEl.insertBefore(back, barEl.firstChild);
+      R.classList.add("fa-inner");
+    }
+    if (document.querySelector("article") && navigator.share) {
+      var sh = el("button", "fa-share", '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M5 12v8h14v-8"/></svg>');
+      sh.type = "button"; sh.setAttribute("aria-label", "Share this story");
+      sh.addEventListener("click", function () {
+        var h = document.querySelector("article h1");
+        navigator.share({ title: h ? h.textContent : document.title, url: "https://flavorafricagroup.org" + location.pathname.replace(/\.html$/, "") }).catch(function () {});
+      });
+      document.body.appendChild(sh);
+    }
+  })();
+
   // ---------- Saved ----------
   function saved(bySlug) {
     var list = store.get("fa-saved", []);
@@ -289,7 +310,7 @@
     var today = nbo().slice(0, 10);
 
     // the "f." button in the header that opens it again
-    var hdr = document.querySelector("header .bar");
+    var hdr = R.classList.contains("fa-inner") ? document.querySelector("header .hdr-r") : document.querySelector("header .bar");
     var btn = el("button", "fa-today" + (store.get("fa-daily", "") === today ? " seen" : ""), "<span>f<i>.</i></span>");
     btn.type = "button";
     btn.setAttribute("aria-label", "Open Flavor Daily");
@@ -310,14 +331,35 @@
         '</span><button type="button" data-x aria-label="Close">' + ICON.close + "</button></div></div>";
       if (c.f10) {
         html = '<div class="fa-d-card f10"></div><div class="fa-d-tap"><button type="button" data-prev aria-label="Previous"></button><button type="button" data-next aria-label="Next"></button></div>' + head +
-          '<div class="fa-d-f10"><span class="k">The Flavor 10 · Kenya</span><div class="n">1</div></div><div class="fa-d-body"><span class="tag">Number one today</span><h2>' + esc(c.f10.t) + "</h2><p>" + esc(c.f10.a) +
+          '<div class="fa-d-f10"><span class="k">The Flavor 10 · Kenya</span><div class="art"><div class="n">1</div></div></div><div class="fa-d-body"><span class="tag">Number one today</span><h2>' + esc(c.f10.t) + "</h2><p>" + esc(c.f10.a) +
           '. What Kenya is playing most right now.</p><a class="fa-d-go" href="/index.html#flavor-10">See the full chart »</a></div>';
       } else {
         html = '<div class="fa-d-card" style="background-image:url(\'/' + esc(c.i) + "');background-position:" + esc(c.o) + '"></div><div class="fa-d-tap"><button type="button" data-prev aria-label="Previous"></button><button type="button" data-next aria-label="Next"></button></div>' + head +
           '<div class="fa-d-body"><span class="tag">' + esc(c.t) + "</span><h2>" + esc(c.h) + "</h2><p>" + esc(c.d) + '</p><a class="fa-d-go" href="/' + c.s + '.html">Read the story »</a></div>';
       }
       box.innerHTML = html;
+      if (c.f10) cover(c.f10, function (src) {
+        var art = box.querySelector(".fa-d-f10 .art"); if (!art || !src) return;
+        var im = new Image(); im.alt = "Cover art: " + c.f10.t + " by " + c.f10.a;
+        im.onload = function () { art.insertBefore(im, art.firstChild); art.classList.add("has"); };
+        im.src = src;
+      });
       play(DUR);
+    }
+    // the single's cover art, from Apple Music (the same place the chart's player gets it)
+    var art1;
+    function cover(f, cb) {
+      if (art1 !== undefined) return cb(art1);
+      var k = "faArt" + Date.now(), s = document.createElement("script"), done = false;
+      var end = function (src) { if (done) return; done = true; art1 = src || ""; try { delete window[k]; } catch (e) {} s.remove(); cb(art1); };
+      var want = f.t.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+      window[k] = function (d) {
+        var r = d && d.results && d.results.filter(function (x) { var n = (x.trackName || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim(); return x.artworkUrl100 && (n.indexOf(want) === 0 || want.indexOf(n) === 0); })[0];
+        end(r ? r.artworkUrl100.replace("100x100", "600x600") : "");
+      };
+      s.onerror = function () { end(""); };
+      s.src = (f.id ? "https://itunes.apple.com/lookup?country=ke&id=" + encodeURIComponent(f.id) : "https://itunes.apple.com/search?country=ke&entity=song&limit=5&term=" + encodeURIComponent(f.t + " " + f.a.split(/ ft\. |, | & /)[0])) + "&callback=" + k;
+      document.body.appendChild(s); setTimeout(function () { end(""); }, 6000);
     }
     function bar() { return box.querySelectorAll(".fa-d-bars i b")[i]; }
     function play(ms) {

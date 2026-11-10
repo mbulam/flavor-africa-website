@@ -91,7 +91,7 @@ self.addEventListener("fetch", function (e) {
         return hit;
       }
       var net = pull(key).then(function (res) { return res.ok || !hit ? res : hit; });
-      if (!hit) return net.catch(function () { return nav ? offline() : Response.error(); });
+      if (!hit) return net.then(function (res) { return res.ok ? res : fetch(req); }).catch(function () { return nav ? offline() : Response.error(); });
       e.waitUntil(net.catch(function () {}));
       return Promise.race([
         net.catch(function () { return hit; }),

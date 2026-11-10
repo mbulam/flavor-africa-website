@@ -125,3 +125,16 @@ html.app header{border-bottom-color:transparent;box-shadow:0 1px 0 var(--line)}
 
 /* a tap shows at once */
 html.app .fa-tabs a:active,html.app .fa-tabs button:active,html.app main a:active,html.app .fa-list a:active{opacity:.55}
+
+/* No. 1 card: the single's cover art with the big 1 on its corner */
+.fa-d-f10 .art{position:relative;width:min(64vw,300px);margin-top:18px}
+.fa-d-f10 .art img{display:block;width:100%;aspect-ratio:1;object-fit:cover;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.fa-d-f10 .art.has .n{position:absolute;right:-14px;bottom:-16px;margin:0;font-size:120px;line-height:.8;text-shadow:0 4px 0 #2A0174,4px 0 0 #2A0174,-4px 0 0 #2A0174,0 -4px 0 #2A0174}
+html.app .fa-d-f10{margin-top:9vh}
+
+/* Back (inner pages) and Share (stories) */
+.fa-back{display:grid;place-items:center;justify-self:start;width:44px;height:44px;margin-left:-8px;padding:0;border:0;background:none;color:var(--ink);cursor:pointer}
+.fa-back svg{width:24px;height:24px}
+html.app.fa-inner .hdr-r{display:flex;align-items:center;justify-self:end}
+.fa-share{position:fixed;right:16px;bottom:calc(144px + env(safe-area-inset-bottom,0px));z-index:31;width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:var(--paper);color:var(--accent);display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 20px rgba(21,16,42,.18)}
+.fa-share svg{width:22px;height:22px}
