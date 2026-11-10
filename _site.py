@@ -94,7 +94,11 @@ EDITION = {
 # Fan Seat in the app (added 10 Nov 2026): set this when a Flavor Artist Live artist is confirmed and the app's Live tab
 # starts taking fans' questions for them; set it back to None to close it. "show" is a short code for that show.
 # Example: FAN_SEAT = {"show": "2026-11-artist", "artist": "Artist Name", "line": "Flavor Artist Live · 29 Nov"}
-FAN_SEAT = None
+# Optional: "blurb" (the line under the heading) and "done" (shown after a fan's third question), for interviews etc.
+FAN_SEAT = {"show": "2026-11-anwar-saa-zone", "artist": "Anwar",
+            "line": "We're sitting down with Anwar Hassanali of Saa Zone",
+            "blurb": "What should we ask him? The best questions go into the interview.",
+            "done": "We'll take the best ones into the interview."}
 HERO = {"nairobi-new-sound"}   # the big top story (hand-set in index.html)
 # Editor's picks rotate every day from the long-form stories of the last PICK_DAYS days.
 PICK_TAGS = {"The Flavor Cover", "Flavor Feature", "Money Moves", "Flavor Roots", "Flavor Rewind", "Flavor Decoded",

@@ -259,8 +259,8 @@
     var box = el("section", "wrap fa-fanseat"); box.setAttribute("aria-label", "Fan Seat");
     band.parentNode.insertBefore(box, band.nextSibling);
     function form(note) {
-      if (mine >= 3) { box.innerHTML = '<span class="tag">Fan Seat</span><h2>Your questions are in</h2><p>That\'s your three for ' + esc(fs.artist) + ". We'll put the best ones to them at the show.</p>"; return; }
-      box.innerHTML = '<span class="tag">Fan Seat</span><h2>Ask ' + esc(fs.artist) + "</h2><p>" + esc(fs.line || "") + (fs.line ? ". " : "") + "What have you always wanted to know? The best questions get asked at the show.</p>" +
+      if (mine >= 3) { box.innerHTML = '<span class="tag">Fan Seat</span><h2>Your questions are in</h2><p>That\'s your three for ' + esc(fs.artist) + ". " + esc(fs.done || "We'll put the best ones to them at the show.") + "</p>"; return; }
+      box.innerHTML = '<span class="tag">Fan Seat</span><h2>Ask ' + esc(fs.artist) + "</h2><p>" + esc(fs.line || "") + (fs.line ? ". " : "") + esc(fs.blurb || "What have you always wanted to know? The best questions get asked at the show.") + "</p>" +
         (note ? '<p class="ok">' + esc(note) + "</p>" : "") +
         '<form><label for="fa-fs-q">Your question</label><textarea id="fa-fs-q" maxlength="280" rows="3" required></textarea><span class="n" aria-hidden="true">0 / 280</span>' +
         '<label for="fa-fs-n">Your name (optional)</label><input id="fa-fs-n" maxlength="40" autocomplete="given-name"><button type="submit">Send it</button></form>';
