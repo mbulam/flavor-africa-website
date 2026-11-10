@@ -86,3 +86,11 @@ html.app .fa-today{display:grid;place-items:center;justify-self:start;width:44px
 .fa-toast.on{opacity:1;transform:translate(-50%,0)}
 @media (prefers-reduced-motion:reduce){.fa-toast{transition:none}}
 html.app #open{display:none}
+
+/* Cleaner than the website: in the app, drop the extras the tabs and For You already cover */
+html.app .ticker,html.app .picks-hd,html.app .lead2 .sides,html.app .soc-hdr,html.app footer{display:none}
+html.app .lead2{display:block;padding-block:0 8px}
+html.app .lead2 .hero-box{margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px)))}
+html.app main>section[style*="padding-top:44px"],html.app main>section#the-wrap~section:has(a.hc){display:none}
+html.app .block{padding-top:28px}
+html.app header{border-bottom-color:transparent;box-shadow:0 1px 0 var(--line)}
