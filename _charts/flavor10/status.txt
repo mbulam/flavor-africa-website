@@ -1,4 +1,4 @@
-Flavor 10 fetch for 2026-11-09 · run 09 Nov 2026 14:25 EAT · fresh: PYR
+Flavor 10 fetch for 2026-11-10 · run 10 Nov 2026 14:05 EAT · fresh: PYR
 P OK    50 songs  via rss.applemarketingtools.com
 S FAIL HTTPError: HTTP Error 403: Forbidden
 S DROPPED (no copy newer than 3 days)
