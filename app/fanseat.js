@@ -1,5 +1,5 @@
 // Fan Seat (added 10 Nov 2026; on the website as well as the app from 11 Nov 2026).
-// When FAN_SEAT is set in _site.py, Home and Live get an "Ask <name>" panel near the top, right under the first block.
+// When FAN_SEAT is set in _site.py, Home gets a slim "Ask <name>" strip at the very top (it opens into the form); Live gets the full form under its title.
 // Questions are saved by /api/fanseat (3 per phone) and read on the private inbox page.
 (function () {
   var main = document.querySelector("main"), top = main && main.firstElementChild;
@@ -17,7 +17,7 @@
     }
     return id;
   }
-  var CSS = ".fa-fanseat-w{padding-top:24px}.fa-fanseat{background:var(--tint);border-top:6px solid var(--accent);padding:22px 20px 24px}.fa-fanseat form{max-width:640px}.fa-fanseat h2{font-size:34px;text-transform:uppercase;margin:12px 0 8px}.fa-fanseat p{margin:0 0 14px;color:var(--mute);font-size:15px}" +
+  var CSS = ".fa-fanseat-w{padding-top:24px}.lead2+.fa-fanseat-w,.fa-fanseat-w:first-child{padding-top:16px}.fa-fanseat.mini{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:16px 20px}.fa-fanseat.mini h2{font-size:26px;margin:8px 0 2px}.fa-fanseat.mini p{margin:0;font-size:14px}.fa-fanseat.mini .open{min-height:46px;padding:0 20px;border:0;background:var(--purple);color:#fff;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.fa-fanseat{background:var(--tint);border-top:6px solid var(--accent);padding:22px 20px 24px}.fa-fanseat form{max-width:640px}.fa-fanseat h2{font-size:34px;text-transform:uppercase;margin:12px 0 8px}.fa-fanseat p{margin:0 0 14px;color:var(--mute);font-size:15px}" +
     ".fa-fanseat p.ok{color:var(--accent);font-weight:500}.fa-fanseat p.err{color:var(--fall);font-weight:500}" +
     ".fa-fanseat label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:14px 0 6px}" +
     ".fa-fanseat textarea,.fa-fanseat input{display:block;width:100%;border:1px solid var(--line);background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;padding:12px;border-radius:0;-webkit-user-select:text;user-select:text}" +
@@ -31,7 +31,14 @@
     var sent = load("fa-fanseat", {}), mine = sent[fs.show] || 0;
     var wrap = document.createElement("section"); wrap.className = "wrap fa-fanseat-w"; wrap.id = "fan-seat"; wrap.setAttribute("aria-label", "Fan Seat");
     var box = document.createElement("div"); box.className = "fa-fanseat"; wrap.appendChild(box);
-    main.insertBefore(wrap, top.nextSibling);
+    // Home: a slim strip at the very top that opens into the form when tapped. Live: the full form under the page title.
+    var home = !!main.querySelector(".lead2");
+    if (home) main.insertBefore(wrap, top); else main.insertBefore(wrap, top.nextSibling);
+    function strip() {
+      box.className = "fa-fanseat mini";
+      box.innerHTML = '<div><span class="tag">Fan Seat</span><h2>Ask ' + esc(fs.artist) + "</h2><p>" + esc(fs.line || "") + (fs.line ? ". " : "") + 'Send us your question.</p></div><button type="button" class="open">Ask a question</button>';
+      box.querySelector(".open").addEventListener("click", function () { box.className = "fa-fanseat"; form(""); var q = box.querySelector("textarea"); if (q) q.focus(); });
+    }
     function form(note, bad) {
       if (mine >= 3) { box.innerHTML = '<span class="tag">Fan Seat</span><h2>Your questions are in</h2><p>That\'s your three for ' + esc(fs.artist) + ". " + esc(fs.done || "We'll put the best ones to them at the show.") + "</p>"; return; }
       var keepQ = bad ? box.querySelector("textarea").value : "", keepN = box.querySelector("input") ? box.querySelector("input").value : "";
@@ -53,6 +60,6 @@
           }).catch(function () { form("You seem to be offline. Try again when you're back.", true); });
       });
     }
-    form("");
+    if (home && mine < 3) strip(); else if (home) wrap.remove(); else form("");
   }).catch(function () {});
 })();
