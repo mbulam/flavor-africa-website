@@ -448,7 +448,16 @@
       if (!w || !h || !iw || !ih) return;
       var sharp = 1 / Math.max(w / iw, h / ih); // photo pixels per screen point when it fills the screen
       if (sharp >= 1.8) { card.classList.add("full"); return; }
-      im.style.width = Math.min(w, Math.round(iw / 1.6)) + "px";
+      // Framed: the photo and the words sit together as one block, centred on the page like a magazine layout.
+      var top = box.querySelector(".fa-d-top"), body = box.querySelector(".fa-d-body");
+      var t = top ? top.getBoundingClientRect().bottom - card.getBoundingClientRect().top + 16 : 80;
+      var bh = body ? body.offsetHeight : 0, gap = 26;
+      var dw = Math.min(w, Math.round(iw / 1.6)), dh = Math.round(dw * ih / iw);
+      var room = h - t - bh - gap;
+      if (dh > room) dh = Math.max(160, room);
+      var spare = Math.max(0, room - dh), y = t + Math.round(spare / 2);
+      im.style.width = dw + "px"; im.style.height = dh + "px"; im.style.top = y + "px";
+      if (body) body.style.marginBottom = Math.round(spare / 2) + "px";
       card.classList.add("framed");
     }
     // the single's cover art, from Apple Music (the same place the chart's player gets it)
