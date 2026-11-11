@@ -13,6 +13,12 @@ html.app .fa-today{display:grid;place-items:center;justify-self:start;width:44px
 .fa-d-card{position:absolute;inset:0;background:#2A0174 center/cover no-repeat}
 .fa-d-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,8,22,.55) 0,rgba(11,8,22,0) 22%,rgba(11,8,22,0) 42%,rgba(11,8,22,.92) 100%)}
 .fa-d-card.f10{background:#2A0174}
+.fa-d-card.pic{overflow:hidden;background:#0B0816}
+.fa-d-card.pic .bg{position:absolute;inset:-60px;background:center/cover no-repeat;filter:blur(34px) brightness(.55) saturate(1.1)}
+.fa-d-card.pic img{position:absolute;display:block;opacity:0;transition:opacity .25s ease}
+.fa-d-card.pic.full .bg{display:none}
+.fa-d-card.pic.full img{inset:0;width:100%;height:100%;object-fit:cover;opacity:1}
+.fa-d-card.pic.framed img{top:0;left:50%;transform:translateX(-50%);height:auto;max-height:64%;object-fit:cover;opacity:1;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent);mask-image:linear-gradient(180deg,#000 72%,transparent)}
 .fa-d-card.f10::after{background:none}
 .fa-d-top{position:relative;z-index:2;padding:calc(10px + env(safe-area-inset-top,0px)) 14px 0}
 .fa-d-bars{display:flex;gap:4px}

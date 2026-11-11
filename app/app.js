@@ -426,10 +426,12 @@
           '<div class="fa-d-f10"><span class="k">The Flavor 10 · Kenya</span><div class="art"><div class="n">1</div></div></div><div class="fa-d-body"><span class="tag">Number one today</span><h2>' + esc(c.f10.t) + "</h2><p>" + esc(c.f10.a) +
           '. What Kenya is playing most right now.</p><a class="fa-d-go" href="/index.html#flavor-10">See the full chart »</a></div>';
       } else {
-        html = '<div class="fa-d-card" style="background-image:url(\'/' + esc(c.i) + "');background-position:" + esc(c.o) + '"></div><div class="fa-d-tap"><button type="button" data-prev aria-label="Previous"></button><button type="button" data-next aria-label="Next"></button></div>' + head +
+        html = '<div class="fa-d-card pic"><div class="bg" style="background-image:url(\'/' + esc(c.i) + '\')"></div><img alt="" src="/' + esc(c.i) + '" style="object-position:' + esc(c.o) + '"></div><div class="fa-d-tap"><button type="button" data-prev aria-label="Previous"></button><button type="button" data-next aria-label="Next"></button></div>' + head +
           '<div class="fa-d-body"><span class="tag">' + esc(c.t) + "</span><h2>" + esc(c.h) + "</h2><p>" + esc(c.d) + '</p><a class="fa-d-go" href="/' + c.s + '.html">Read the story »</a></div>';
       }
       box.innerHTML = html;
+      var ph = box.querySelector(".fa-d-card.pic img");
+      if (ph) { if (ph.complete && ph.naturalWidth) fit(ph); else ph.onload = function () { fit(ph); }; }
       if (c.f10) cover(c.f10, function (src) {
         var art = box.querySelector(".fa-d-f10 .art"); if (!art || !src) return;
         var im = new Image(); im.alt = "Cover art: " + c.f10.t + " by " + c.f10.a;
@@ -437,6 +439,17 @@
         im.src = src;
       });
       play(DUR);
+    }
+    // Photos (changed 11 Nov 2026): a photo only fills the whole screen when it has enough pixels to stay sharp.
+    // Smaller or wide photos sit at the top at a size they can hold, over a soft blurred copy of themselves,
+    // instead of being blown up until they look pixelated.
+    function fit(im) {
+      var card = im.parentNode, w = card.clientWidth, h = card.clientHeight, iw = im.naturalWidth, ih = im.naturalHeight;
+      if (!w || !h || !iw || !ih) return;
+      var sharp = 1 / Math.max(w / iw, h / ih); // photo pixels per screen point when it fills the screen
+      if (sharp >= 1.8) { card.classList.add("full"); return; }
+      im.style.width = Math.min(w, Math.round(iw / 1.6)) + "px";
+      card.classList.add("framed");
     }
     // the single's cover art, from Apple Music (the same place the chart's player gets it)
     var art1;
