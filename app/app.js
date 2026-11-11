@@ -500,7 +500,10 @@
       clearTimeout(box._hold);
       if (e.target.closest("a,[data-x]")) return;
       if (held) { play(left); return; }
-      if (e.target.closest("[data-prev]")) prev(); else if (e.target.closest("[data-next]")) next(); else play(left);
+      // a tap anywhere counts (11 Nov 2026): left third goes back, the rest goes forward,
+      // even on top of the chart art or the headline, which used to swallow the tap
+      var r = box.getBoundingClientRect();
+      if (e.clientX - r.left < r.width * 0.32) prev(); else next();
     });
     box.addEventListener("click", function (e) { if (e.target.closest("[data-x]")) close(); });
     box.addEventListener("touchstart", function (e) { ty = e.touches[0].clientY; }, { passive: true });
