@@ -4,7 +4,7 @@
 // then fall back to the saved copy, so a slow network never leaves a blank screen and saved stories open offline.
 // The stylesheet and app code are served from the phone and refreshed in the background. Photos likewise.
 // Bump VERSION if this file ever changes in a way that should clear old copies.
-var VERSION = "fa-v3";
+var VERSION = "fa-v4";
 var PAGES = VERSION + "-pages";
 var IMAGES = VERSION + "-images";
 var MAX_IMAGES = 80;
@@ -113,4 +113,20 @@ self.addEventListener("fetch", function (e) {
       });
     }));
   }
+});
+
+// Alerts (added 11 Nov 2026). The phone is only poked; the words come from /api/push?latest=1.
+self.addEventListener("push", function (e) {
+  e.waitUntil(fetch("/api/push?latest=1", { cache: "no-store" }).then(function (r) { return r.json(); }).catch(function () { return {}; }).then(function (d) {
+    var a = (d && d.alert) || { n: 0, title: "flavor.africa", body: "Something new just went up.", url: "/" };
+    return self.registration.showNotification(a.title, { body: a.body, icon: "/icons/app-192.png", badge: "/icons/app-192.png", tag: "fa-" + a.n, data: { url: a.url || "/" } });
+  }));
+});
+self.addEventListener("notificationclick", function (e) {
+  e.notification.close();
+  var to = new URL((e.notification.data && e.notification.data.url) || "/", self.location.origin).href;
+  e.waitUntil(self.clients.matchAll({ type: "window", includeUncontrolled: true }).then(function (list) {
+    for (var i = 0; i < list.length; i++) if ("focus" in list[i]) { if ("navigate" in list[i]) list[i].navigate(to); return list[i].focus(); }
+    return self.clients.openWindow(to);
+  }));
 });

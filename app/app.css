@@ -126,3 +126,40 @@ html.app .fa-d-f10{margin-top:9vh}
 html.app.fa-inner .hdr-r{display:flex;align-items:center;justify-self:end}
 .fa-share{position:fixed;right:16px;bottom:calc(144px + env(safe-area-inset-bottom,0px));z-index:31;width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:var(--paper);color:var(--accent);display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 20px rgba(21,16,42,.18)}
 .fa-share svg{width:22px;height:22px}
+
+/* Alerts card (Home) */
+.fa-alerts{padding-top:22px}
+.fa-alerts .in{display:flex;gap:14px;border:1px solid var(--line);padding:16px}
+.fa-alerts svg{width:26px;height:26px;flex:0 0 26px;color:var(--accent)}
+.fa-alerts b{display:block;font-family:var(--head);font-weight:600;font-size:22px;text-transform:uppercase;line-height:1.1}
+.fa-alerts p{margin:4px 0 12px;font-size:14px;color:var(--mute)}
+.fa-alerts .btns{display:flex;gap:8px;flex-wrap:wrap}
+.fa-alerts button{min-height:42px;padding:0 14px;border:1px solid var(--line);background:none;color:var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.fa-alerts button.ok{background:var(--purple);border-color:var(--purple);color:#fff}
+.fa-alerts p.on{display:flex;align-items:center;gap:10px;margin:0;font-size:13px}
+.fa-alerts p.on svg{width:18px;height:18px;flex:0 0 18px}
+.fa-alerts p.on button{margin-left:auto;min-height:36px;border:0;color:var(--accent);padding:0}
+
+/* Now playing bar, above the tabs */
+.fa-now{position:fixed;left:0;right:0;bottom:calc(63px + env(safe-area-inset-bottom,0px));z-index:33;height:56px;display:flex;align-items:center;gap:10px;padding:0 6px 0 12px;background:#15102A;color:#fff}
+.fa-now img,.fa-now .ph{width:40px;height:40px;flex:0 0 40px;object-fit:cover}
+.fa-now .ph{display:grid;place-items:center;background:var(--purple);font-family:var(--body);font-weight:700;font-size:16px}
+.fa-now .ph[hidden]{display:none}.fa-now .ph i{font-style:normal;color:var(--yellow)}
+.fa-now a{flex:1;min-width:0;color:#fff;text-decoration:none;line-height:1.25}
+.fa-now a b,.fa-now a span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fa-now a b{font-weight:600;font-size:14px}.fa-now a span{font-size:12px;color:rgba(255,255,255,.75)}
+.fa-now button{width:44px;height:44px;flex:0 0 44px;border:0;background:none;color:#fff;display:grid;place-items:center;cursor:pointer}
+.fa-now button svg{width:22px;height:22px}.fa-now [data-pp]{color:var(--yellow)}
+.fa-now .pr{position:absolute;left:0;top:0;height:2px;width:0;background:var(--yellow)}
+html.app.fa-playing body{padding-bottom:calc(122px + env(safe-area-inset-bottom,0px))}
+html.fa-playing .fa-save{bottom:calc(136px + env(safe-area-inset-bottom,0px))}
+html.fa-playing .fa-share{bottom:calc(200px + env(safe-area-inset-bottom,0px))}
+html.fa-playing .fa-toast{bottom:calc(140px + env(safe-area-inset-bottom,0px))}
+html.fa-playing .fa-sheet{padding-bottom:calc(136px + env(safe-area-inset-bottom,0px))}
+
+/* Pull down to refresh */
+.fa-ptr{position:fixed;left:50%;top:0;z-index:40;width:40px;height:40px;border-radius:50%;background:var(--paper);color:var(--mute);display:grid;place-items:center;box-shadow:0 4px 14px rgba(21,16,42,.22);transform:translate(-50%,-60px)}
+.fa-ptr svg{width:20px;height:20px}
+.fa-ptr.ready{color:var(--accent)}
+.fa-ptr.go{transform:translate(-50%,64px)!important;animation:fa-spin .7s linear infinite}
+@keyframes fa-spin{to{transform:translate(-50%,64px) rotate(360deg)}}

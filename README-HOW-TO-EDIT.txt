@@ -151,3 +151,16 @@ APP: FANS' PICK, FAN SEAT AND SPEED (added 10 Nov 2026)
 - Reading them: flavorafricagroup.org/app/inbox.html#<ADMIN_KEY> lists every question and the weekly picks.
 - Speed: sw.js opens pages from the phone when it fetched them in the last 10 minutes, and app.js fetches
   the pages behind the tabs and the stories on screen ahead of the tap.
+
+APP: ALERTS, NOW-PLAYING BAR, PULL TO REFRESH (added 11 Nov 2026)
+- Alerts: functions/api/push.js. In the app, Home shows a "Know first" card; turning it on registers the phone.
+  Alerts go out on their own for a new Flavor 10 No. 1 and a new Flavor Cover (checked whenever someone opens the
+  app), and the team can send one from the inbox page (app/inbox.html#<ADMIN_KEY>). Phones are only poked; sw.js
+  then fetches the words from /api/push?latest=1. The signing key is created on first use and kept in the D1
+  database (table kv). On iPhone, alerts only work once the app is on the home screen (iOS 16.4+).
+- Now-playing bar (app/app.js): when a Flavor 10 preview plays, a bar sits above the tabs and follows the reader to
+  other pages. iPhones don't let sound restart by itself on a new page, so there it waits for one tap on play.
+- Pull to refresh (app/app.js): pulling down at the top of a page fetches a fresh copy.
+- Fan Seat is app/fanseat.js and shows on the website too: a slim strip at the top of Home, the full form on Live.
+- The "add to home screen" banner (_site.py) tells people inside Instagram, the Google app etc. to open the page
+  in Safari or Chrome first, because those mini browsers can't add to the home screen.

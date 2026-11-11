@@ -3,7 +3,7 @@
 <style>body{margin:0;font-family:Poppins,"Segoe UI",Arial,sans-serif;color:#15102A;background:#fff;line-height:1.5}main{max-width:760px;margin:0 auto;padding:24px 16px 60px}
 h1{font-size:26px;margin:0 0 4px;color:#2A0174}h2{font-size:15px;letter-spacing:.1em;text-transform:uppercase;border-top:5px solid #2A0174;padding-top:10px;margin:36px 0 10px}
 p.s{color:#5E5873;margin:0 0 8px}li{padding:12px 0;border-bottom:1px solid #E4E0EE}ul,ol{list-style:none;margin:0;padding:0}small{display:block;color:#5E5873;font-size:12px;margin-top:4px}
-table{border-collapse:collapse;width:100%}td{padding:8px 0;border-bottom:1px solid #E4E0EE}td:last-child{text-align:right;font-weight:600}</style></head>
+table{border-collapse:collapse;width:100%}td{padding:8px 0;border-bottom:1px solid #E4E0EE}td:last-child{text-align:right;font-weight:600}label{display:block;font-size:13px;color:#5E5873;margin:10px 0}input,textarea{display:block;width:100%;box-sizing:border-box;margin-top:4px;padding:10px;border:1px solid #cfc9e0;font:inherit;color:#15102A}form button{background:#2A0174;color:#fff;border:0;padding:12px 18px;font:inherit;font-weight:600;cursor:pointer}form button:disabled{opacity:.6}</style></head>
 <body><main><h1>flavor.africa inbox</h1><p class="s" id="s">Loading…</p><div id="o"></div></main>
 <script>(function(){var key=location.hash.slice(1),s=document.getElementById("s"),o=document.getElementById("o");
 function e(x){return String(x==null?"":x).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
@@ -17,4 +17,17 @@ Object.keys(shows).forEach(function(k){h+='<p class="s"><b>'+e(k)+"</b> · "+sho
 d.votes.forEach(function(v){(weeks[v.week]=weeks[v.week]||[]).push(v)});
 h+="<h2>Fans' pick, by week</h2>";if(!d.votes.length)h+='<p class="s">No picks yet.</p>';
 Object.keys(weeks).forEach(function(k){h+='<p class="s"><b>Week of '+e(k)+"</b></p><table>";weeks[k].forEach(function(v){h+="<tr><td>"+e(v.song)+"</td><td>"+v.n+"</td></tr>"});h+="</table>"});
-o.innerHTML=h}).catch(function(){s.textContent="Couldn't load. Check your connection."})})();</script></body></html>
+o.innerHTML=h;alerts()}).catch(function(){s.textContent="Couldn't load. Check your connection."})
+function alerts(){var w=document.createElement("div");o.insertBefore(w,o.firstChild);
+function draw(msg){fetch("/api/push?key="+encodeURIComponent(key)).then(function(r){return r.json()}).then(function(d){if(!d.ok)return;
+var x="<h2>Alerts</h2><p class=\"s\"><b>"+d.phones+"</b> "+(d.phones===1?"phone has":"phones have")+" alerts on. A new No. 1 and a new Flavor Cover send one on their own. Use this for anything else, sparingly.</p>"+
+"<form id=\"af\"><label>Title<input id=\"at\" maxlength=\"60\" required placeholder=\"e.g. Fan Seat is open\"></label><label>Message<textarea id=\"ab\" maxlength=\"160\" rows=\"2\" required></textarea></label>"+
+"<label>Opens (a page on the site)<input id=\"au\" maxlength=\"200\" value=\"/\" required></label><button type=\"submit\">Send alert</button> <span id=\"am\" class=\"s\">"+e(msg||"")+"</span></form>";
+if(d.sent.length){x+="<p class=\"s\" style=\"margin-top:18px\"><b>Sent</b></p><ul>";d.sent.forEach(function(m){x+="<li><b>"+e(m.title)+"</b> "+e(m.body)+"<small>"+e(new Date(m.at).toLocaleString("en-KE",{timeZone:"Africa/Nairobi"}))+" · reached "+m.sent+(m.done?"":" so far")+" · opens "+e(m.url)+"</small></li>"});x+="</ul>"}
+w.innerHTML=x;document.getElementById("af").addEventListener("submit",function(ev){ev.preventDefault();var t=document.getElementById("at").value,b=document.getElementById("ab").value,u=document.getElementById("au").value;
+if(!confirm("Send this alert to "+d.phones+" "+(d.phones===1?"phone":"phones")+"?\n\n"+t+"\n"+b))return;var bt=this.querySelector("button");bt.disabled=true;
+(function go(body){fetch("/api/push",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(body)}).then(function(r){return r.json()}).then(function(r){
+if(!r.ok){bt.disabled=false;document.getElementById("am").textContent=r.error==="bad-link"?"The link must be a page on the site, like /live":"That didn't send. Check the title and message.";return}
+if(r.more)go({key:key,more:true});else draw("Sent.")}).catch(function(){bt.disabled=false;document.getElementById("am").textContent="Couldn't send. Check your connection."})})({key:key,title:t,body:b,url:u})})})}
+draw()}
+})();</script></body></html>

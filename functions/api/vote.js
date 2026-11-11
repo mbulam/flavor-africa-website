@@ -3,6 +3,7 @@
 //   POST /api/vote {song, id}        -> one pick per phone per day (picking again changes it)
 // A week runs Monday to Sunday, Nairobi time. Votes live in the Cloudflare D1 database bound to
 // this Pages project as DB. The fans' pick is shown on its own and never changes the Flavor 10 ranking.
+import { tick } from "./push.js";
 const H = { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" };
 const out = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: H });
 
@@ -36,7 +37,7 @@ async function state(db, week, day, phone) {
   return { ok: true, week, day, total, tally, mine };
 }
 
-export async function onRequest({ request, env }) {
+export async function onRequest({ request, env, waitUntil }) {
   const db = env.DB;
   if (!db) return out({ ok: false, error: "not-ready" }, 503);
   try {
@@ -45,6 +46,7 @@ export async function onRequest({ request, env }) {
     const url = new URL(request.url);
 
     if (request.method === "GET") {
+      waitUntil(tick(request, env)); // every app open also checks whether an alert is due (see push.js)
       const id = url.searchParams.get("id") || "";
       return out(await state(db, week, day, /^[a-z0-9]{16,40}$/.test(id) ? await hash(id) : null));
     }
