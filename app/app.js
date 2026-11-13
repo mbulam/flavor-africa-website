@@ -1,7 +1,8 @@
 // flavor.africa app: features that only exist when the site is opened from the home-screen icon (added 10 Nov 2026).
 //   Flavor Daily  - swipeable story cards of today's top stories, shown on the first open of the day.
-//   Saved         - bookmark any story; the Saved tab lists them and they open offline.
-//   For You       - pick the segments you're into and the home tab puts them first.
+//   Screens       - Today, Sections, Flavor 10, Live and Me (see "The app's screens" below).
+//   Saved         - bookmark any story; the Me screen lists them and they open offline.
+//   Follow        - follow sections on the Sections screen and Today puts them first.
 //   Fans' pick    - pick your own No. 1 from the Flavor 10, once a day (saved by /api/vote).
 //   (Fan Seat lives in app/fanseat.js, because the website shows it too.)
 // Everything is stored on the phone (localStorage). Story data comes from /app/feed.json, built by _site.py.
@@ -61,9 +62,8 @@
     var live = feed.stories.filter(function (s) { return s.p <= now; });
     var bySlug = {}; live.forEach(function (s) { bySlug[s.s] = s; });
     saved(bySlug);
-    if (page === "index") forYou(live);
+    shell(feed, live, bySlug);
     if (page === "index") vote(feed);
-    if (page === "index") alerts();
     daily(feed, live);
   }).catch(function () {});
 
@@ -117,90 +117,6 @@
       document.body.appendChild(b);
     }
 
-    // the Saved tab
-    var tab = document.querySelector(".fa-tabs [data-t=saved]");
-    if (!tab) return;
-    var sheet = el("section", "fa-sheet");
-    sheet.hidden = true;
-    sheet.setAttribute("aria-label", "Saved stories");
-    document.body.appendChild(sheet);
-    function render() {
-      var items = list.map(function (s) { return bySlug[s]; }).filter(Boolean);
-      var html = '<div class="fa-sheet-hd"><h2>Saved</h2><button type="button" data-x aria-label="Close">' + ICON.close + "</button></div>";
-      if (!items.length) {
-        html += '<div class="fa-empty">' + ICON.mark + "<p>Nothing saved yet. Tap the bookmark on any story and it lands here, ready to read even without signal.</p></div>";
-      } else {
-        html += '<p class="fa-sheet-sub">' + items.length + (items.length === 1 ? " story" : " stories") + ", kept on this phone.</p><ul class=\"fa-list\">";
-        items.forEach(function (s) {
-          html += '<li><a href="/' + s.s + '.html"><img src="/' + esc(s.i) + '" alt="" loading="lazy" style="object-position:' + esc(s.o) + '"><span><span class="tag">' + esc(s.t) +
-            "</span><b>" + esc(s.h) + '</b><span class="meta">' + nice(s.p) + '</span></span></a><button type="button" data-rm="' + s.s + '" aria-label="Remove ' + esc(s.h) + '">' + ICON.close + "</button></li>";
-        });
-        html += "</ul>";
-      }
-      sheet.innerHTML = html;
-    }
-    function open() {
-      render(); sheet.hidden = false; tab.setAttribute("aria-current", "page");
-      [].forEach.call(document.querySelectorAll(".fa-tabs [aria-current]"), function (a) { if (a !== tab) a.setAttribute("data-was", "1"), a.removeAttribute("aria-current"); });
-    }
-    function close() {
-      sheet.hidden = true; tab.removeAttribute("aria-current");
-      [].forEach.call(document.querySelectorAll(".fa-tabs [data-was]"), function (a) { a.removeAttribute("data-was"); a.setAttribute("aria-current", "page"); });
-    }
-    tab.addEventListener("click", function () { sheet.hidden ? open() : close(); });
-    sheet.addEventListener("click", function (e) {
-      if (e.target.closest("[data-x]")) return close();
-      var rm = e.target.closest("[data-rm]");
-      if (rm) { keep(list.filter(function (x) { return x !== rm.getAttribute("data-rm"); })); render(); toast("Removed from Saved"); }
-    });
-    [].forEach.call(document.querySelectorAll(".fa-tabs a, .fa-tabs [data-t=menu]"), function (a) { a.addEventListener("click", function () { if (!sheet.hidden) close(); }); });
-  }
-
-  // ---------- For You ----------
-  function forYou(live) {
-    var main = document.querySelector("main");
-    if (!main) return;
-    var counts = {};
-    live.forEach(function (s) { if (s.t !== "Flavor Artist Live") counts[s.t] = (counts[s.t] || 0) + 1; });
-    var tags = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a] || a.localeCompare(b); });
-    var follow = store.get("fa-follow", null);
-    var box = el("section", "wrap fa-foryou");
-    box.setAttribute("aria-label", "For you");
-    var lead = main.firstElementChild;
-    lead = document.getElementById("fan-seat") || lead;   // Fan Seat, when it's open, stays right under the cover story
-    if (lead && lead.nextSibling) main.insertBefore(box, lead.nextSibling); else main.appendChild(box);
-
-    function picker(sel) {
-      var html = '<div class="fa-fy-hd"><h2>Make it yours</h2></div><p class="fa-fy-sub">Pick what you\'re into and we\'ll put it first, every time you open the app.</p><div class="fa-chips">';
-      tags.forEach(function (t) { html += '<button type="button" aria-pressed="' + (sel.indexOf(t) > -1) + '" data-tag="' + esc(t) + '">' + esc(t) + "</button>"; });
-      html += '</div><button type="button" class="fa-fy-done">Done</button>';
-      box.innerHTML = html;
-      box.querySelector(".fa-chips").addEventListener("click", function (e) {
-        var c = e.target.closest("[data-tag]"); if (!c) return;
-        c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") === "true" ? "false" : "true");
-      });
-      box.querySelector(".fa-fy-done").addEventListener("click", function () {
-        var pick = [].map.call(box.querySelectorAll("[aria-pressed=true]"), function (c) { return c.getAttribute("data-tag"); });
-        store.set("fa-follow", pick); follow = pick; rail();
-        if (pick.length) toast("Done. Your picks come first now.");
-      });
-    }
-    function rail() {
-      if (!follow || !follow.length) return picker(follow || []);
-      var mine = live.filter(function (s) { return follow.indexOf(s.t) > -1; }).slice(0, 10);
-      var html = '<div class="fa-fy-hd"><h2>For you</h2><button type="button" data-edit>Edit picks</button></div><p class="fa-fy-sub">' + esc(follow.join(" · ")) + "</p>";
-      if (!mine.length) html += '<p class="fa-fy-none">Nothing new in your picks yet. Add a few more and this fills up.</p>';
-      else {
-        html += '<div class="fa-rail">';
-        mine.forEach(function (s) {
-          html += '<a href="/' + s.s + '.html"><img src="/' + esc(s.i) + '" alt="" loading="lazy" style="object-position:' + esc(s.o) + '"><span class="tag">' + esc(s.t) + "</span><b>" + esc(s.h) + '</b><span class="meta">' + nice(s.p) + "</span></a>";
-        });
-        html += "</div>";
-      }
-      box.innerHTML = html;
-      box.querySelector("[data-edit]").addEventListener("click", function () { picker(follow); });
-    }
-    rail();
   }
 
   // a random code kept on this phone, so one phone gets one pick a day (no name, no account)
@@ -273,44 +189,238 @@
     api("/api/vote?id=" + phoneId()).then(function (d) { if (d.ok) { st = d; panel(); } }).catch(function () {});
   }
 
-  // ---------- Alerts ----------
-  function alerts() {
-    var main = document.querySelector("main");
-    if (!main || !("serviceWorker" in navigator) || !("PushManager" in window) || !("Notification" in window) || Notification.permission === "denied") return;
-    var box = el("section", "wrap fa-alerts"); box.setAttribute("aria-label", "Alerts");
-    var BELL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9"/><path d="M10 20a2.2 2.2 0 0 0 4 0"/></svg>';
-    function place() { var after = main.querySelector(".fa-foryou") || document.getElementById("fan-seat") || main.firstElementChild; main.insertBefore(box, after ? after.nextSibling : null); }
-    function u8(s) { s = s.replace(/-/g, "+").replace(/_/g, "/"); var raw = atob(s + "===".slice((s.length + 3) % 4)), a = new Uint8Array(raw.length); for (var i = 0; i < raw.length; i++) a[i] = raw.charCodeAt(i); return a; }
-    function offer() {
-      if (Date.now() - (+store.get("fa-alerts-later", 0)) < 14 * 864e5) return;
-      box.innerHTML = '<div class="in">' + BELL + '<div><b>Know first</b><p>One alert when a new Flavor Cover drops or Kenya gets a new No. 1. Nothing else.</p><div class="btns"><button type="button" class="ok" data-on>Turn on alerts</button><button type="button" data-later>Not now</button></div></div></div>';
-      place();
+  // ---------- Alerts (switched on and off from the Me screen) ----------
+  var push = {
+    ok: ("serviceWorker" in navigator) && ("PushManager" in window) && ("Notification" in window),
+    u8: function (s) { s = s.replace(/-/g, "+").replace(/_/g, "/"); var raw = atob(s + "===".slice((s.length + 3) % 4)), a = new Uint8Array(raw.length); for (var i = 0; i < raw.length; i++) a[i] = raw.charCodeAt(i); return a; },
+    get: function () { return navigator.serviceWorker.ready.then(function (r) { return r.pushManager.getSubscription(); }); },
+    on: function () {
+      return Notification.requestPermission().then(function (p) {
+        if (p !== "granted") throw new Error("denied");
+        return Promise.all([navigator.serviceWorker.ready, api("/api/push")]);
+      }).then(function (r) {
+        if (!r[1].ok) throw new Error("key");
+        return r[0].pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: push.u8(r[1].key) });
+      }).then(function (sub) { return api("/api/push", { endpoint: sub.endpoint, id: phoneId() }).then(function (d) { if (!d.ok) throw new Error("save"); return sub; }); });
+    },
+    off: function (sub) { api("/api/push", { endpoint: sub.endpoint, off: true }).catch(function () {}); return sub.unsubscribe().catch(function () {}); }
+  };
+
+  function fmScreen(f10, feed) {
+    var au = f10.querySelector("audio"), box = el("div", "fa-fm"), fm = feed.fm, chart = feed.f10 ? feed.f10.songs || [] : [];
+    var PLAY = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>';
+    var PAUSE = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>';
+    var tracks = [], info = {};
+    function key(t, a) { return (t + "|" + a).toLowerCase(); }
+    function row(t, a, n, cls) {
+      var k = key(t, a), i = tracks.length; tracks.push({ t: t, a: a, k: k });
+      return '<li class="' + (cls || "") + '"><button type="button" data-tr="' + i + '"><span class="n">' + n + '</span><span class="fa-art" data-art="' + esc(k) + '"></span><span class="tx"><b>' + esc(t) + "</b><em>" + esc(a) + '</em></span><span class="pp" aria-hidden="true">' + PLAY + "</span></button></li>";
     }
-    function on(sub) {
-      box.innerHTML = '<p class="on">' + BELL + '<span>Alerts are on.</span><button type="button" data-off>Turn off</button></p>';
-      place();
-      box.querySelector("[data-off]").addEventListener("click", function () {
-        api("/api/push", { endpoint: sub.endpoint, off: true }).catch(function () {});
-        sub.unsubscribe().catch(function () {}).then(function () { box.remove(); toast("Alerts are off."); });
+    var html = '<div class="fa-fm-hd"><h2>Flavor FM</h2><p>' + (fm ? "Our picks this week, and what Kenya's playing." : "What Kenya's playing, updated every day.") + "</p></div>";
+    if (fm && fm.songs && fm.songs.length) {
+      html += '<section class="fa-fm-pl"><span class="k">This week' + (fm.dates ? " · " + esc(fm.dates) : "") + "</span><h3>" + esc(fm.title || "The Flavor FM playlist") + "</h3>" + (fm.blurb ? "<p>" + esc(fm.blurb) + "</p>" : "") + "<ol>";
+      fm.songs.forEach(function (x, i) { html += row(x[0], x[1], i + 1); });
+      html += "</ol>";
+      var outs = [["spotify", "Spotify"], ["apple", "Apple Music"], ["youtube", "YouTube"]].filter(function (o) { return fm[o[0]]; });
+      if (outs.length) html += '<div class="fa-fm-out"><span>Play it in full on</span>' + outs.map(function (o) { return '<a href="' + esc(fm[o[0]]) + '" target="_blank" rel="noopener">' + o[1] + "</a>"; }).join("") + "</div>";
+      html += "</section>";
+    }
+    if (chart.length) {
+      html += '<section class="fa-fm-ch"><div class="fa-fm-sh"><h3>What Kenya\'s playing</h3><span>The Flavor 10' + (feed.f10.label ? " · " + esc(feed.f10.label.replace(/\s+\d{4}$/, "").toLowerCase().replace(/(^|\s)\S/g, function (c) { return c.toUpperCase(); })) : "") + "</span></div><ol>";
+      chart.forEach(function (x, i) { html += row(x.t, x.a, i + 1, i ? "" : "one"); });
+      html += "</ol></section>";
+    }
+    box.innerHTML = html;
+    f10.insertBefore(box, f10.firstChild);
+
+    // find each song's preview and cover on Apple Music, three at a time
+    var queue = tracks.filter(function (t, i) { return tracks.findIndex(function (u) { return u.k === t.k; }) === i; }), busy = 0, n = 0;
+    function look(t) {
+      busy++;
+      var cb = "faFm" + (n++) + Date.now(), s = document.createElement("script"), done = false;
+      var want = t.t.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+      var end = function (r) {
+        if (done) return; done = true; busy--; try { delete window[cb]; } catch (e) {} s.remove();
+        if (r) {
+          info[t.k] = { src: r.previewUrl, art: (r.artworkUrl100 || "").replace("100x100", "300x300"), url: r.trackViewUrl };
+          [].forEach.call(box.querySelectorAll('[data-art="' + t.k.replace(/"/g, '\\"') + '"]'), function (a) { if (info[t.k].art) a.style.backgroundImage = "url('" + info[t.k].art + "')"; });
+        } else info[t.k] = {};
+        next();
+      };
+      window[cb] = function (d) {
+        var hit = d && d.results && d.results.filter(function (x) { var m = (x.trackName || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim(); return x.previewUrl && (m.indexOf(want) === 0 || want.indexOf(m) === 0); })[0];
+        end(hit);
+      };
+      s.onerror = function () { end(null); };
+      s.src = "https://itunes.apple.com/search?country=ke&entity=song&limit=8&term=" + encodeURIComponent(t.t + " " + t.a.split(/ ft\. | feat\. |, | & /)[0]) + "&callback=" + cb;
+      document.body.appendChild(s); setTimeout(function () { end(null); }, 8000);
+    }
+    function next() { while (busy < 3 && queue.length) look(queue.shift()); }
+    next();
+
+    // play through the chart's own player, so the now-playing bar picks it up
+    var current = null;
+    function mark() {
+      [].forEach.call(box.querySelectorAll("[data-tr]"), function (b) {
+        var on = current !== null && +b.getAttribute("data-tr") === current && au && !au.paused;
+        b.classList.toggle("on", on); b.querySelector(".pp").innerHTML = on ? PAUSE : PLAY;
+        b.setAttribute("aria-label", (on ? "Pause " : "Play ") + tracks[+b.getAttribute("data-tr")].t);
       });
     }
+    if (au) ["play", "pause", "ended"].forEach(function (ev) { au.addEventListener(ev, mark); });
     box.addEventListener("click", function (e) {
-      if (e.target.closest("[data-later]")) { store.set("fa-alerts-later", Date.now()); box.remove(); return; }
-      var b = e.target.closest("[data-on]"); if (!b) return;
-      b.disabled = true;
-      Notification.requestPermission().then(function (p) {
-        if (p !== "granted") { box.remove(); toast("No problem. You can turn alerts on in your phone's settings later."); return; }
-        return Promise.all([navigator.serviceWorker.ready, api("/api/push")]).then(function (r) {
-          if (!r[1].ok) throw new Error("no key");
-          return r[0].pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: u8(r[1].key) });
-        }).then(function (sub) {
-          return api("/api/push", { endpoint: sub.endpoint, id: phoneId() }).then(function (d) { if (!d.ok) throw new Error("save"); on(sub); toast("Alerts are on."); });
-        });
-      }).catch(function () { b.disabled = false; toast("Couldn't turn alerts on. Try again."); });
+      var b = e.target.closest("[data-tr]"); if (!b) return;
+      var i = +b.getAttribute("data-tr"), t = tracks[i], x = info[t.k];
+      if (current === i && au && !au.paused) return au.pause();
+      if (current === i && au && au.src) { au.play().catch(function () {}); return; }
+      if (!x) return toast("Getting the preview ready. Tap again in a second.");
+      if (!x.src || !au) { window.open(x.url || "https://www.youtube.com/results?search_query=" + encodeURIComponent(t.t + " " + t.a), "_blank", "noopener"); return; }
+      current = i;
+      var ti = document.getElementById("f10-title"), ar = document.getElementById("f10-artist"), im = f10.querySelector(".f10-art img");
+      if (ti) ti.textContent = t.t; if (ar) ar.textContent = t.a;
+      if (im && x.art) { im.src = x.art; im.hidden = false; }
+      au.src = x.src; au.currentTime = 0;
+      au.play().catch(function () { toast("Couldn't play that one. Try again."); });
     });
-    navigator.serviceWorker.ready.then(function (reg) { return reg.pushManager.getSubscription(); }).then(function (sub) {
-      if (sub) { api("/api/push", { endpoint: sub.endpoint, id: phoneId() }).catch(function () {}); on(sub); } else offer();
-    }).catch(function () {});
+  }
+
+  // ---------- The app's screens (rebuilt 11 Nov 2026) ----------
+  // Today (the feed), Sections (follow what you read), Flavor 10 (the chart on its own), Live (the Live page) and Me
+  // (saved stories and settings). On the home page the website's own blocks are hidden in the app and these take over.
+  var ABOUT = {
+    "The Wrap": "The day's entertainment news", "The Drop": "New music, every Friday", "Money Moves": "The business side of entertainment",
+    "Flavor Roots": "Global hits traced back to Africa", "Flavor Decoded": "Culture you've seen, explained", "The Verdict": "Our call on the big releases",
+    "Flavor Reads": "African authors, every Sunday", "Flavor Fashion": "Style, told like a magazine", "Flavor Sports": "Where sport meets culture",
+    "Flavor Rewind": "Iconic moments, on their anniversary", "Flavor Spotlight": "The ones to watch", "Flavor Feature": "The people behind the work",
+    "Flavor Charts": "The week on the charts", "Flavor Figures": "The week in numbers", "In Their Words": "Quotes worth keeping",
+    "The Flavor Cover": "Our monthly cover story", "The Watchlist": "What to watch this weekend", "Nairobi This Weekend": "Where to be, Friday to Sunday"
+  };
+  function rowHtml(s) {
+    return '<a class="fa-rw" href="/' + s.s + '.html"><img src="/' + esc(s.i) + '" alt="" loading="lazy" style="object-position:' + esc(s.o) + '"><span><i>' + esc(s.t) + "</i><b>" + esc(s.h) + "</b><em>" + nice(s.p) + "</em></span></a>";
+  }
+  function shell(feed, live, bySlug) {
+    var tabs = document.querySelector(".fa-tabs"), main = document.querySelector("main");
+    if (!tabs || !main) return;
+    var home = page === "index", sheets = {}, DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], LONG = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    function follows() { return store.get("fa-follow", []) || []; }
+    function chart() { return home && location.hash === "#flavor-10"; }
+    function setTab(t) { [].forEach.call(tabs.querySelectorAll("[data-t]"), function (x) { if (x.getAttribute("data-t") === t) x.setAttribute("aria-current", "page"); else x.removeAttribute("aria-current"); }); }
+    function closeSheets() { for (var k in sheets) sheets[k].hidden = true; }
+    function show() {
+      closeSheets();
+      if (home) { R.classList.toggle("fa-s-chart", chart()); R.classList.toggle("fa-s-today", !chart()); window.scrollTo(0, 0); }
+      setTab(home ? (chart() ? "f10" : "home") : page === "live" ? "live" : "");
+    }
+    function go(hash) { history.replaceState(null, "", location.pathname + location.search + hash); show(); }
+    function sheet(name, label) {
+      var s = el("section", "fa-sheet fa-scr"); s.hidden = true; s.setAttribute("aria-label", label);
+      document.body.appendChild(s); sheets[name] = s; return s;
+    }
+    function open(name, draw) { var was = !sheets[name].hidden; closeSheets(); if (was) return show(); draw(); sheets[name].hidden = false; sheets[name].scrollTop = 0; setTab(name); }
+
+    // Flavor FM: the music screen. Our own playlist (FLAVOR_FM in _site.py) when there is one, then the Flavor 10.
+    // Previews come from Apple Music and play through the page's chart player, so the now-playing bar follows them.
+    var f10 = home && document.getElementById("flavor-10");
+    if (f10 && !f10.querySelector(".fa-fm")) fmScreen(f10, feed);
+
+    // the date under the wordmark
+    var logo = document.querySelector("header .logo");
+    if (logo && !logo.querySelector(".fa-date")) {
+      var d = new Date(Date.now() + 108e5);
+      logo.appendChild(el("span", "fa-date", DAYS[d.getUTCDay()] + " " + d.getUTCDate() + " " + LONG[d.getUTCMonth()]));
+    }
+
+    // Today
+    function today() {
+      var box = document.getElementById("fa-today");
+      if (!box) { box = el("div", "wrap"); box.id = "fa-today"; main.insertBefore(box, main.firstChild); }
+      var hero = bySlug[feed.hero] || live[0], fol = follows(), html = "";
+      if (hero) html += '<a class="fa-cv" href="/' + hero.s + '.html"><span class="cvp"><img src="/' + esc(hero.i) + '" alt="" style="object-position:' + esc(hero.o) + '"><i class="tag">' + esc(hero.t) + "</i></span><b>" + esc(hero.h) + "</b><em>" + esc(hero.d) + "</em></a>";
+      if (feed.f10) html += '<a class="fa-n1" href="#flavor-10" data-f10><span class="sq">1</span><span><i>No. 1 in Kenya today</i><b>' + esc(feed.f10.t) + "</b><em>" + esc(feed.f10.a) + '</em></span><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></span></a>';
+      var rest = live.filter(function (s) { return !hero || s.s !== hero.s; });
+      var mine = fol.length ? rest.filter(function (s) { return fol.indexOf(s.t) > -1; }).slice(0, 4) : [];
+      if (mine.length) {
+        html += '<div class="fa-hd"><h2>For you</h2><button type="button" data-secs>Edit</button></div>' + mine.map(rowHtml).join("");
+        rest = rest.filter(function (s) { return mine.indexOf(s) < 0; });
+      }
+      html += '<div class="fa-hd"><h2>Latest</h2><button type="button" data-secs>All sections</button></div>' + rest.slice(0, 14).map(rowHtml).join("");
+      box.innerHTML = html;
+    }
+    if (home) {
+      today();
+      main.addEventListener("click", function (e) {
+        if (e.target.closest("[data-f10]")) { e.preventDefault(); go("#flavor-10"); }
+        else if (e.target.closest("[data-secs]")) open("sections", drawSections);
+      });
+      window.addEventListener("hashchange", show);
+    }
+
+    // Sections
+    var sec = sheet("sections", "Sections"), counts = {}, viewing = null;
+    live.forEach(function (s) { counts[s.t] = (counts[s.t] || 0) + 1; });
+    var tags = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a] || a.localeCompare(b); });
+    function drawSections() {
+      var fol = follows(), html;
+      if (viewing) {
+        html = '<div class="fa-scr-hd"><button type="button" class="bk" data-all>‹ Sections</button><h2>' + esc(viewing) + "</h2><p>" + esc(ABOUT[viewing] || "") + "</p></div>" +
+          '<div class="fa-rows">' + live.filter(function (s) { return s.t === viewing; }).map(rowHtml).join("") + "</div>";
+      } else {
+        html = '<div class="fa-scr-hd"><span class="k">Sections</span><h2>Follow what you read</h2><p>What you follow comes first on Today.</p></div><ul class="fa-secs">';
+        tags.forEach(function (t) {
+          var on = fol.indexOf(t) > -1;
+          html += '<li><button type="button" class="nm" data-sec="' + esc(t) + '"><b>' + esc(t) + "</b><span>" + esc(ABOUT[t] || (counts[t] + (counts[t] === 1 ? " story" : " stories"))) + '</span></button><button type="button" class="fl" data-fol="' + esc(t) + '" aria-pressed="' + on + '">' + (on ? "Following" : "Follow") + "</button></li>";
+        });
+        html += "</ul>";
+      }
+      sec.innerHTML = html;
+    }
+    sec.addEventListener("click", function (e) {
+      var a;
+      if ((a = e.target.closest("[data-fol]"))) {
+        var t = a.getAttribute("data-fol"), fol = follows(), i = fol.indexOf(t);
+        if (i > -1) fol.splice(i, 1); else fol.push(t);
+        store.set("fa-follow", fol); drawSections(); if (home) today();
+      } else if ((a = e.target.closest("[data-sec]"))) { viewing = a.getAttribute("data-sec"); drawSections(); sec.scrollTop = 0; }
+      else if (e.target.closest("[data-all]")) { viewing = null; drawSections(); }
+    });
+
+    // Me
+    var me = sheet("me", "Me");
+    function sw(id, label, sub, on) { return '<div class="fa-set"><span><b>' + label + "</b><em>" + sub + '</em></span><button type="button" role="switch" aria-checked="' + on + '" aria-label="' + label + '" data-sw="' + id + '"><i></i></button></div>'; }
+    function drawMe(sub) {
+      var list = store.get("fa-saved", []).map(function (s) { return bySlug[s]; }).filter(Boolean);
+      var html = '<div class="fa-scr-hd"><span class="k">Me</span><h2>Your flavor</h2></div><div class="fa-hd"><h2>Saved</h2></div>';
+      html += list.length ? '<div class="fa-rows">' + list.map(function (s) { return '<div class="fa-svd">' + rowHtml(s) + '<button type="button" data-rm="' + s.s + '" aria-label="Remove ' + esc(s.h) + '">' + ICON.close + "</button></div>"; }).join("") + "</div>"
+        : '<p class="fa-none">Nothing saved yet. Tap the bookmark on any story and it lands here, ready to read without signal.</p>';
+      html += '<div class="fa-hd"><h2>Settings</h2></div>';
+      if (push.ok && Notification.permission !== "denied") html += sw("alerts", "Alerts", "A new No. 1 or a new Flavor Cover. Nothing else.", !!sub);
+      html += sw("dark", "Dark mode", "Easier on the eyes at night", R.getAttribute("data-theme") === "dark" || (!R.getAttribute("data-theme") && window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches));
+      html += '<button type="button" class="fa-lnk" data-menu>Browse the full site menu<span aria-hidden="true">»</span></button>';
+      me.innerHTML = html; me._sub = sub || null;
+    }
+    function openMe() { open("me", function () { drawMe(me._sub); if (push.ok) push.get().then(function (s) { if (!me.hidden) drawMe(s); }).catch(function () {}); }); }
+    me.addEventListener("click", function (e) {
+      var a;
+      if ((a = e.target.closest("[data-rm]"))) { store.set("fa-saved", store.get("fa-saved", []).filter(function (x) { return x !== a.getAttribute("data-rm"); })); drawMe(me._sub); toast("Removed from Saved"); }
+      else if (e.target.closest("[data-menu]")) { var o = document.getElementById("open"); if (o) o.click(); }
+      else if ((a = e.target.closest("[data-sw]"))) {
+        if (a.getAttribute("data-sw") === "dark") { var th = document.getElementById("theme"); if (th) th.click(); return drawMe(me._sub); }
+        a.disabled = true;
+        if (me._sub) push.off(me._sub).then(function () { drawMe(null); toast("Alerts are off."); });
+        else push.on().then(function (s) { drawMe(s); toast("Alerts are on."); }).catch(function (err) { drawMe(null); toast(err && err.message === "denied" ? "No problem. You can allow alerts in your phone's settings later." : "Couldn't turn alerts on. Try again."); });
+      }
+    });
+
+    tabs.addEventListener("click", function (e) {
+      var t = e.target.closest("[data-t]"); if (!t) return;
+      var k = t.getAttribute("data-t");
+      if (k === "sections") { viewing = null; return open("sections", drawSections); }
+      if (k === "me") return openMe();
+      if (home && k === "home") { e.preventDefault(); go(""); }
+      else if (home && k === "f10") { e.preventDefault(); go("#flavor-10"); }
+      else closeSheets();
+    });
+    show();
   }
 
   // ---------- Now playing bar (keeps the song with you between pages) ----------
@@ -397,12 +507,13 @@
   function daily(feed, live) {
     var cards = [];
     if (feed.f10) cards.push({ f10: feed.f10 });
+    if (feed.fanseat && feed.fanseat.artist) cards.push({ fs: feed.fanseat });
     live.slice(0, 5).forEach(function (s) { cards.push(s); });
     if (!cards.length) return;
     var today = nbo().slice(0, 10);
 
     // the "f." button in the header that opens it again
-    var hdr = R.classList.contains("fa-inner") ? document.querySelector("header .hdr-r") : document.querySelector("header .bar");
+    var hdr = document.querySelector("header .hdr-r");
     var btn = el("button", "fa-today" + (store.get("fa-daily", "") === today ? " seen" : ""), "<span>f<i>.</i></span>");
     btn.type = "button";
     btn.setAttribute("aria-label", "Open Flavor Daily");
@@ -421,7 +532,10 @@
       var dt = new Date(Date.now() + 108e5);
       var head = '<div class="fa-d-top"><div class="fa-d-bars">' + bars + '</div><div class="fa-d-head"><span><b>flavor.africa</b>Daily · ' + dt.getUTCDate() + " " + MONTHS[dt.getUTCMonth()] +
         '</span><button type="button" data-x aria-label="Close">' + ICON.close + "</button></div></div>";
-      if (c.f10) {
+      if (c.fs) {
+        html = '<div class="fa-d-card f10"></div><div class="fa-d-tap"><button type="button" data-prev aria-label="Previous"></button><button type="button" data-next aria-label="Next"></button></div>' + head +
+          '<div class="fa-d-body"><span class="tag">Fan Seat</span><h2>Ask ' + esc(c.fs.artist) + "</h2><p>" + esc(c.fs.line || "") + (c.fs.line ? ". " : "") + esc(c.fs.blurb || "Send us your question.") + '</p><a class="fa-d-go" href="/live.html#fan-seat">Ask your question »</a></div>';
+      } else if (c.f10) {
         html = '<div class="fa-d-card f10"></div><div class="fa-d-tap"><button type="button" data-prev aria-label="Previous"></button><button type="button" data-next aria-label="Next"></button></div>' + head +
           '<div class="fa-d-f10"><span class="k">The Flavor 10 · Kenya</span><div class="art"><div class="n">1</div></div></div><div class="fa-d-body"><span class="tag">Number one today</span><h2>' + esc(c.f10.t) + "</h2><p>" + esc(c.f10.a) +
           '. What Kenya is playing most right now.</p><a class="fa-d-go" href="/index.html#flavor-10">See the full chart »</a></div>';

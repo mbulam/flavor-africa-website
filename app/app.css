@@ -172,3 +172,123 @@ html.fa-playing .fa-sheet{padding-bottom:calc(136px + env(safe-area-inset-bottom
 .fa-ptr.ready{color:var(--accent)}
 .fa-ptr.go{transform:translate(-50%,64px)!important;animation:fa-spin .7s linear infinite}
 @keyframes fa-spin{to{transform:translate(-50%,64px) rotate(360deg)}}
+
+/* ===== App look v2 (11 Nov 2026): purple header, white screens, one job per screen ===== */
+html.app body{background:var(--paper)}
+html.app body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:var(--purple);z-index:36}
+html.app header{background:var(--purple);border-bottom:0;box-shadow:none}
+html.app .bar{display:flex;align-items:center;gap:6px;padding-block:10px;border-bottom:0;min-height:64px}
+html.app .logo{color:#fff;margin-right:auto;display:flex;flex-direction:column;line-height:1.1;font-size:24px}
+.fa-date{display:none}
+html.app.fa-s-today .fa-date{display:block;font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);margin-top:5px}
+html.app #theme,html.app .soc-hdr{display:none}
+html.app .fa-back{color:#fff}
+html.app .hdr-r{display:flex;align-items:center}
+html.app header .fa-today span{background:var(--yellow);color:#2A0174;box-shadow:none}
+html.app header .fa-today span i{color:#2A0174}
+html.app header .fa-today.seen span{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6)}
+html.app header .fa-today.seen span i{color:var(--yellow)}
+
+/* on the home page the app shows its own screens in place of the website's blocks */
+html.app.fa-s-today main>*:not(#fa-today),html.app.fa-s-chart main>*:not(#flavor-10){display:none!important}
+html.app.fa-s-chart #flavor-10{padding-top:20px;background:var(--paper)}
+#fa-today{padding-top:16px;padding-bottom:10px}
+.fa-cv{display:block;color:var(--ink);text-decoration:none}
+.fa-cv .cvp{display:block;position:relative;aspect-ratio:4/3;background:var(--purple);overflow:hidden}
+.fa-cv img{width:100%;height:100%;object-fit:cover;display:block}
+.fa-cv .tag{position:absolute;left:12px;top:12px;font-style:normal}
+.fa-cv b{display:block;margin-top:12px;font-family:var(--head);font-weight:600;font-size:34px;line-height:1;text-transform:uppercase}
+.fa-cv em{display:block;margin-top:8px;font-style:normal;font-size:14px;line-height:1.45;color:var(--mute)}
+.fa-n1{display:flex;align-items:center;gap:12px;margin-top:18px;padding:10px 12px;background:var(--yellow);color:#2A0174;text-decoration:none}
+.fa-n1 .sq{width:48px;height:48px;flex:0 0 48px;background:#2A0174;color:var(--yellow);display:grid;place-items:center;font-family:var(--head);font-weight:600;font-size:30px}
+.fa-n1>span:nth-child(2){flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.3}
+.fa-n1 i{font-style:normal;font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+.fa-n1 b{font-size:15px;font-weight:700;color:#15102A}
+.fa-n1 em{font-style:normal;font-size:13px}
+.fa-n1 .pl{width:40px;height:40px;flex:0 0 40px;border-radius:50%;background:#2A0174;color:var(--yellow);display:grid;place-items:center}
+.fa-n1 .pl svg{width:16px;height:16px}
+.fa-hd{display:flex;align-items:baseline;justify-content:space-between;margin-top:26px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.fa-hd h2{font-family:var(--body);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1.4}
+.fa-hd button{border:0;background:none;color:var(--accent);font-family:var(--body);font-size:13px;font-weight:500;text-decoration:underline;padding:6px 0;cursor:pointer}
+.fa-rw{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none}
+.fa-rw img{width:72px;height:72px;flex:0 0 72px;object-fit:cover;background:var(--tint)}
+.fa-rw span{display:flex;flex-direction:column;gap:3px;min-width:0}
+.fa-rw i{font-style:normal;font-family:var(--body);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.fa-rw b{font-weight:600;font-size:15px;line-height:1.3}
+.fa-rw em{font-style:normal;font-size:12px;color:var(--mute)}
+
+/* Sections and Me: full screens */
+.fa-scr{padding-left:16px;padding-right:16px;padding-top:calc(20px + env(safe-area-inset-top,0px))}
+.fa-scr-hd{padding-bottom:12px;border-bottom:2px solid var(--ink)}
+.fa-scr-hd .k{font-family:var(--body);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.fa-scr-hd h2{font-family:var(--head);font-weight:600;font-size:38px;line-height:1;text-transform:uppercase;margin-top:6px}
+.fa-scr-hd p{margin:8px 0 0;font-size:14px;color:var(--mute)}
+.fa-scr-hd .bk{border:0;background:none;color:var(--accent);font-family:var(--body);font-size:14px;font-weight:500;padding:8px 0;min-height:40px;cursor:pointer}
+.fa-secs{list-style:none;margin:0;padding:0}
+.fa-secs li{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}
+.fa-secs .nm{flex:1;min-width:0;text-align:left;border:0;background:none;color:var(--ink);padding:4px 0;min-height:44px;cursor:pointer;font-family:var(--body)}
+.fa-secs .nm b{display:block;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.fa-secs .nm span{display:block;font-size:12px;color:var(--mute)}
+.fa-secs .fl{min-width:104px;min-height:38px;border:1.5px solid var(--accent);background:var(--paper);color:var(--accent);font-family:var(--body);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.fa-secs .fl[aria-pressed="true"]{background:var(--purple);border-color:var(--purple);color:var(--yellow)}
+.fa-svd{display:flex;align-items:center}
+.fa-svd .fa-rw{flex:1;min-width:0}
+.fa-svd button{width:44px;height:44px;flex:0 0 44px;border:0;background:none;color:var(--mute);display:grid;place-items:center;cursor:pointer}
+.fa-svd button svg{width:18px;height:18px}
+.fa-none{color:var(--mute);font-size:14px;margin:14px 0 0}
+.fa-set{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.fa-set b{display:block;font-size:15px;font-weight:600}
+.fa-set em{display:block;font-style:normal;font-size:12px;color:var(--mute)}
+.fa-set [role=switch]{width:52px;height:32px;flex:0 0 52px;border-radius:16px;border:0;background:#8A84A0;padding:3px;display:flex;cursor:pointer}
+.fa-set [role=switch] i{width:26px;height:26px;border-radius:50%;background:#fff;transition:transform .15s}
+.fa-set [aria-checked="true"]{background:var(--purple);box-shadow:inset 0 0 0 1.5px var(--yellow)}
+.fa-set [aria-checked="true"] i{transform:translateX(20px)}
+.fa-lnk{display:flex;justify-content:space-between;width:100%;padding:16px 0;border:0;border-bottom:1px solid var(--line);background:none;color:var(--ink);font-family:var(--body);font-size:15px;font-weight:600;cursor:pointer}
+
+/* Flavor FM screen (cleaner look): our playlist, then the Flavor 10; the website's chart blocks stay hidden */
+html.app.fa-s-chart #flavor-10{display:flex;flex-direction:column;padding-top:20px;padding-bottom:24px}
+html.app.fa-s-chart #flavor-10>*:not(.fa-fm):not(.fa-vote){display:none}
+.fa-fm{display:none}
+html.app.fa-s-chart .fa-fm{display:block}
+.fa-fm-hd h2{font-family:var(--body);font-size:28px;font-weight:700;letter-spacing:-.02em;text-transform:none}
+.fa-fm-hd p{margin:2px 0 0;font-size:14px;color:var(--mute)}
+.fa-fm section{margin-top:22px}
+.fa-fm .k{font-size:12px;font-weight:600;color:var(--accent)}
+.fa-fm h3{font-family:var(--body);font-size:20px;font-weight:700;text-transform:none;letter-spacing:-.01em;margin:2px 0 0}
+.fa-fm-pl>p{margin:4px 0 0;font-size:14px;color:var(--mute)}
+.fa-fm-sh{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.fa-fm-sh span{font-size:12px;color:var(--mute)}
+.fa-fm ol{list-style:none;margin:10px 0 0;padding:0}
+.fa-fm li button{display:flex;align-items:center;gap:12px;width:100%;min-height:60px;padding:6px 0;border:0;background:none;color:var(--ink);text-align:left;font-family:var(--body);cursor:pointer}
+.fa-fm .n{width:20px;flex:0 0 20px;text-align:center;font-size:15px;font-weight:600;color:var(--mute)}
+.fa-fm .fa-art{display:block;width:46px;height:46px;flex:0 0 46px;border-radius:8px;background:var(--tint) center/cover no-repeat}
+.fa-fm .tx{flex:1;min-width:0;display:flex;flex-direction:column}
+.fa-fm .tx b,.fa-fm .tx em{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fa-fm .tx b{font-size:15px;font-weight:600}
+.fa-fm .tx em{font-style:normal;font-size:13px;color:var(--mute)}
+.fa-fm .pp{width:40px;height:40px;flex:0 0 40px;display:grid;place-items:center;color:var(--accent)}
+.fa-fm .pp svg{width:18px;height:18px}
+.fa-fm button.on .tx b{color:var(--accent)}
+.fa-fm li.one button{background:var(--purple);color:#fff;border-radius:16px;padding:14px;margin-bottom:6px}
+.fa-fm li.one .n{color:var(--yellow);font-size:13px}
+.fa-fm li.one .fa-art{width:64px;height:64px;flex-basis:64px;border-radius:10px;background-color:#4A27A0}
+.fa-fm li.one .tx b{font-size:18px;font-weight:700}.fa-fm li.one .tx em{color:#fff}
+.fa-fm li.one button.on .tx b{color:var(--yellow)}
+.fa-fm li.one .pp{width:46px;height:46px;flex-basis:46px;border-radius:50%;background:var(--yellow);color:#2A0174}
+.fa-fm-out{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
+.fa-fm-out span{font-size:13px;color:var(--mute);margin-right:2px}
+.fa-fm-out a{display:inline-flex;align-items:center;min-height:38px;padding:0 14px;border-radius:19px;background:var(--tint);color:var(--accent);font-size:13px;font-weight:600;text-decoration:none}
+html.app.fa-s-chart #flavor-10>.fa-vote{order:2;margin:22px 0 0;padding:12px 12px 12px 16px;border-radius:14px;background:var(--tint);color:var(--ink);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px}
+html.app.fa-s-chart .fa-vote .k,html.app.fa-s-chart .fa-vote p{display:none}
+html.app.fa-s-chart .fa-vote b{font-family:var(--body);font-size:15px;font-weight:600;text-transform:none;margin:0;color:var(--ink)}
+html.app.fa-s-chart .fa-vote button{border-radius:22px;background:var(--purple);color:#fff;font-family:var(--body);font-size:14px;font-weight:600;letter-spacing:0;text-transform:none}
+
+/* Section pages (Live, Music, News...) in the app: the same clean header as the app's own screens */
+html.app .phead{padding-block:20px 6px}
+html.app .phead h1{border-top:0;padding-top:0;font-weight:600;font-size:40px;line-height:1;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+html.app .phead p{font-size:14px}
+
+/* Fan Seat in the app: plain white, no tinted box */
+html.app .fa-fanseat{background:none;border-top:2px solid var(--ink);padding:16px 0 4px}
+html.app .fa-fanseat.mini{padding:16px 0}
+html.app .fa-fanseat-w{padding-top:18px}

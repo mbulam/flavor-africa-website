@@ -60,6 +60,7 @@
           }).catch(function () { form("You seem to be offline. Try again when you're back.", true); });
       });
     }
+    setTimeout(function () { if (location.hash === "#fan-seat" && wrap.isConnected) wrap.scrollIntoView(); }, 50);
     if (home && mine < 3) strip(); else if (home) wrap.remove(); else form("");
   }).catch(function () {});
 })();
