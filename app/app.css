@@ -299,3 +299,8 @@ html.app .fa-fanseat-w{padding-top:18px}
 .fa-fm li.one .fa-full{padding-left:14px}
 .fa-full span{display:none}
 .fa-full a{display:flex;align-items:center;justify-content:center;white-space:nowrap;min-height:34px;padding:0 8px;border-radius:17px;background:var(--tint);color:var(--accent);font-size:13px;font-weight:600;text-decoration:none}
+
+/* while Flavor Daily is open, everything behind it is purple, so the iPhone's top fade stays purple (14 Nov 2026) */
+html.fa-d-open,html.fa-d-open body{background:#2A0174!important;overflow:hidden}
+html.fa-d-open body::before{background:#2A0174!important}
+html.fa-d-open body>*:not(.fa-daily){visibility:hidden}

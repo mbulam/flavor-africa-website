@@ -619,8 +619,10 @@
     }
     function next() { if (i < cards.length - 1) { i++; draw(); } else close(); }
     function prev() { if (i > 0) i--; draw(); }
-    function open() { i = 0; box.hidden = false; document.body.style.overflow = "hidden"; store.set("fa-daily", today); btn.classList.add("seen"); draw(); }
-    function close() { clearTimeout(timer); box.hidden = true; document.body.style.overflow = ""; }
+    // iPhone fades the top of the screen using the page underneath (white), which left a lilac haze; paint it purple while Daily is open
+    function tint(on) { var r = document.documentElement; r.classList.toggle("fa-d-open", on); }
+    function open() { i = 0; box.hidden = false; tint(true); document.body.style.overflow = "hidden"; store.set("fa-daily", today); btn.classList.add("seen"); draw(); }
+    function close() { clearTimeout(timer); box.hidden = true; tint(false); document.body.style.overflow = ""; }
 
     var held = false;
     box.addEventListener("pointerdown", function (e) { if (e.target.closest("a,[data-x]")) return; held = false; pause(); box._hold = setTimeout(function () { held = true; }, 250); });
