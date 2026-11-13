@@ -334,8 +334,9 @@
     function today() {
       var box = document.getElementById("fa-today");
       if (!box) { box = el("div", "wrap"); box.id = "fa-today"; main.insertBefore(box, main.firstChild); }
-      var hero = bySlug[feed.hero] || live[0], fol = follows(), html = "";
-      if (hero) html += '<a class="fa-cv" href="/' + hero.s + '.html"><span class="cvp"><img src="/' + esc(hero.i) + '" alt="" style="object-position:' + esc(hero.o) + '"><i class="tag">' + esc(hero.t) + "</i></span><b>" + esc(hero.h) + "</b><em>" + esc(hero.d) + "</em></a>";
+      // the cover is always the newest story, so Today never looks stale
+      var hero = live[0], fol = follows(), html = "";
+      if (hero) html += '<a class="fa-cv" href="/' + hero.s + '.html"><span class="cvp"><img src="/' + esc(hero.i) + '" alt="" style="object-position:' + esc(hero.o) + '"></span><span class="cvt"><i>' + esc(hero.t) + " · " + nice(hero.p).replace(/ \d{4}$/, "") + "</i><b>" + esc(hero.h) + "</b><em>" + esc(hero.d) + "</em></span></a>";
       if (feed.f10) html += '<a class="fa-n1" href="#flavor-10" data-f10><span class="sq">1</span><span><i>No. 1 in Kenya today</i><b>' + esc(feed.f10.t) + "</b><em>" + esc(feed.f10.a) + '</em></span><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></span></a>';
       var rest = live.filter(function (s) { return !hero || s.s !== hero.s; });
       var mine = fol.length ? rest.filter(function (s) { return fol.indexOf(s.t) > -1; }).slice(0, 4) : [];
@@ -353,6 +354,7 @@
         else if (e.target.closest("[data-secs]")) open("sections", drawSections);
       });
       window.addEventListener("hashchange", show);
+      window.addEventListener("load", function () { if (chart()) setTimeout(function () { window.scrollTo(0, 0); }, 0); });
     }
 
     // Sections
