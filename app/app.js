@@ -268,13 +268,25 @@
       });
     }
     if (au) ["play", "pause", "ended"].forEach(function (ev) { au.addEventListener(ev, mark); });
+    // under the song you tapped: open the full song on Apple Music, Spotify or YouTube
+    var strip = el("div", "fa-full");
+    function full(b, t, x) {
+      var q = t.t + " " + t.a.split(/ ft\. | feat\. /)[0], e = encodeURIComponent(q);
+      strip.innerHTML = "<span>Full song on</span>" + [
+        ["Apple Music", (x && x.url) || "https://music.apple.com/ke/search?term=" + e],
+        ["Spotify", "https://open.spotify.com/search/" + e],
+        ["YouTube", "https://www.youtube.com/results?search_query=" + e]
+      ].map(function (o) { return '<a href="' + esc(o[1]) + '" target="_blank" rel="noopener">' + o[0] + "</a>"; }).join("");
+      b.parentNode.appendChild(strip);
+    }
     box.addEventListener("click", function (e) {
       var b = e.target.closest("[data-tr]"); if (!b) return;
       var i = +b.getAttribute("data-tr"), t = tracks[i], x = info[t.k];
       if (current === i && au && !au.paused) return au.pause();
       if (current === i && au && au.src) { au.play().catch(function () {}); return; }
+      full(b, t, x);
       if (!x) return toast("Getting the preview ready. Tap again in a second.");
-      if (!x.src || !au) { window.open(x.url || "https://www.youtube.com/results?search_query=" + encodeURIComponent(t.t + " " + t.a), "_blank", "noopener"); return; }
+      if (!x.src || !au) return;
       current = i;
       var ti = document.getElementById("f10-title"), ar = document.getElementById("f10-artist"), im = f10.querySelector(".f10-art img");
       if (ti) ti.textContent = t.t; if (ar) ar.textContent = t.a;
