@@ -21,6 +21,7 @@ e = lambda s: html.escape(s, quote=True)
 
 # slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, or YYYY-MM-DDTHH:MM to go live at a set time; Nairobi), image focus
 STORIES = [
+ ("tems-children-of-blood-and-bone-soundtrack", ["news", "music", "screen"], "The Wrap", "Tems is curating the Children of Blood and Bone soundtrack", "Burna Boy, Ayra Starr and nine more are on it. Her own single lands 20 November.", "wr-tems-cobab.jpg", "2026-11-13T20:00", "center 30%"),
  ("ghana-must-go-decoded", ["culture", "fashion"], "Flavor Decoded", "Ghana Must Go, decoded", "How a cheap checked tote got its name in 1983, and ended up on Denim Tears' new adidas.", "gmg-lead.jpg", "2026-11-10T11:00", "center 25%"),
  ("ronaldo-retires-portugal", ["sport"], "Flavor Sports", "How Ronaldo's Portugal story ended", "The bust-up, the 146-goal record and what comes next.", "sp-ronaldo-retires.jpg", "2026-11-05T17:00", "center 20%"),
  ("makaveli-at-30", ["culture", "music"], "Flavor Rewind", "Makaveli at 30: the album 2Pac finished in a week", "Thirty years on, his last finished album still sounds like a man in a hurry.", "mak-coat.jpg", "2026-11-06T10:30", "center 15%"),
@@ -90,6 +91,7 @@ EDITION = {
  "fame-week-africa": "Continental",
  "patrick-stewart-dies-at-86": "Global",
  "idris-elba-kenya-creative-economy": "Local", "joshua-baraka-visa-ambassador": "Continental",
+ "tems-children-of-blood-and-bone-soundtrack": "Continental",
 }
 # Fan Seat in the app (added 10 Nov 2026): set this when a Flavor Artist Live artist is confirmed and the app's Live tab
 # starts taking fans' questions for them; set it back to None to close it. "show" is a short code for that show.
