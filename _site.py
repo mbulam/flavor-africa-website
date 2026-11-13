@@ -101,7 +101,30 @@ EDITION = {
 # from there). Links are the full playlist on each service; leave any you don't have as "".
 # Example: FLAVOR_FM = {"title": "Sunday Reset", "dates": "16 - 22 Nov", "blurb": "Slow it down before Monday.",
 #   "songs": [["Song", "Artist"], ...], "spotify": "https://open.spotify.com/playlist/...", "apple": "", "youtube": ""}
-FLAVOR_FM = None
+FLAVOR_FM = {"title": "Sunday Reset", "dates": "15 - 21 Nov", "blurb": "Slow it down before Monday.",
+    "songs": [
+        ["By Your Side", "Sade"],
+        ["Why Don't You", "Cleo Sol"],
+        ["Free Mind", "Tems"],
+        ["Cranes in the Sky", "Solange"],
+        ["Niambie", "Xenia Manasseh"],
+        ["Get You", "Daniel Caesar feat. Kali Uchis"],
+        ["Nerea", "Sauti Sol feat. Amos & Josh"],
+        ["Nterini", "Fatoumata Diawara"],
+        ["Fire on the Mountain", "Aṣa"],
+        ["Ex-Factor", "Lauryn Hill"],
+        ["Bag Lady", "Erykah Badu"],
+        ["Pink + White", "Frank Ocean"],
+        ["Ex", "Nikita Kering'"],
+        ["Be Honest", "Jorja Smith feat. Burna Boy"],
+        ["Duduke", "Simi"],
+        ["Lucy", "Bensoul"],
+        ["Melanin", "Sauti Sol feat. Patoranking"],
+        ["Essence", "Wizkid feat. Tems"],
+        ["Somebody's Son", "Tiwa Savage feat. Brandy"],
+        ["Good Days", "SZA"],
+    ],
+    "spotify": "", "apple": "", "youtube": ""}
 # Optional: "blurb" (the line under the heading) and "done" (shown after a fan's third question), for interviews etc.
 FAN_SEAT = {"show": "2026-11-anwar-saa-zone", "artist": "Anwar",
             "line": "We're sitting down with Anwar Hassanali of Saa Zone",
