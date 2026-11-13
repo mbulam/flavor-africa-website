@@ -1,0 +1,74 @@
+{
+ "date": "2026-11-13",
+ "label": "13 NOV 2026",
+ "sources": {
+  "P": "Apple Music Top 100: Kenya (13 Nov 2026)",
+  "Y": "YouTube Top Songs: Kenya (week of 13 Nov 2026)",
+  "R": "Kenya Airplay (week of 13 Nov 2026)"
+ },
+ "songs": [
+  {
+   "title": "I'll Be Okay",
+   "artist": "Bien",
+   "points": 71,
+   "charts": "PYR",
+   "apple": "6822410197"
+  },
+  {
+   "title": "Chai ya Saa Kumi",
+   "artist": "Ywaya Tajiri",
+   "points": 57,
+   "charts": "PYR",
+   "apple": "6796900642"
+  },
+  {
+   "title": "Finale",
+   "artist": "Bien ft. Alikiba",
+   "points": 45,
+   "charts": "YR"
+  },
+  {
+   "title": "Asali",
+   "artist": "Xenia Manasseh & Cracker Mallo",
+   "points": 25,
+   "charts": "R"
+  },
+  {
+   "title": "Forgiveness",
+   "artist": "Asake",
+   "points": 24,
+   "charts": "P"
+  },
+  {
+   "title": "Dai Dai",
+   "artist": "Shakira, Burna Boy",
+   "points": 24,
+   "charts": "Y"
+  },
+  {
+   "title": "Gratitude",
+   "artist": "Asake",
+   "points": 23,
+   "charts": "P"
+  },
+  {
+   "title": "Heaven Baby",
+   "artist": "Ayra Starr ft. Zayn",
+   "points": 23,
+   "charts": "Y",
+   "apple": "6796539210"
+  },
+  {
+   "title": "Ozalima",
+   "artist": "Mbosso",
+   "points": 22,
+   "charts": "YR"
+  },
+  {
+   "title": "Come Closer",
+   "artist": "Wizkid ft. Drake",
+   "points": 22,
+   "charts": "P"
+  }
+ ]
+}
