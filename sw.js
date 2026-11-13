@@ -4,7 +4,7 @@
 // then fall back to the saved copy, so a slow network never leaves a blank screen and saved stories open offline.
 // The stylesheet and app code are served from the phone and refreshed in the background. Photos likewise.
 // Bump VERSION if this file ever changes in a way that should clear old copies.
-var VERSION = "fa-v12";
+var VERSION = "fa-v13";
 var PAGES = VERSION + "-pages";
 var IMAGES = VERSION + "-images";
 var MAX_IMAGES = 80;
@@ -68,6 +68,7 @@ self.addEventListener("fetch", function (e) {
   var url = new URL(req.url);
   if (url.origin !== self.location.origin) return; // Google Analytics, fonts, chart players: leave alone
   if (url.pathname.indexOf("/api/") === 0) return;  // votes and Fan Seat always go straight to the server
+  if (url.pathname === "/app/version.txt") return;   // the update check always asks the server
 
   var nav = req.mode === "navigate";
   var isCode = /\.(css|js)$/.test(url.pathname);

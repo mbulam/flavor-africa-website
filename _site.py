@@ -572,6 +572,19 @@ def build_app_feed():
         json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
 
 
+def write_version():
+    # A fingerprint of everything the app shows. The app checks it each time it opens; when it changes,
+    # the app clears its saved pages and reloads, so updates arrive without reinstalling (14 Nov 2026).
+    import hashlib
+    h = hashlib.sha1()
+    files = sorted(f for f in os.listdir(SITE) if f.endswith(".html")) + ["style.css", "app/app.js", "app/app.css", "app/fanseat.js", "app/feed.json"]
+    for f in files:
+        fp = os.path.join(SITE, f)
+        if os.path.exists(fp):
+            h.update(f.encode()); h.update(open(fp, "rb").read())
+    wr("app/version.txt", h.hexdigest()[:12] + "\n")
+
+
 if __name__ == "__main__":
     for s in STORIES:
         new_page(s)
@@ -590,4 +603,5 @@ if __name__ == "__main__":
     build_sitemap()
     build_app_feed()
     mark_scheduled()
+    write_version()
     print("site rebuilt")

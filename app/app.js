@@ -33,6 +33,31 @@
 
   var page = (location.pathname.split("/").pop() || "index.html").replace(/\.html$/, "") || "index";
 
+  // Updates without reinstalling (14 Nov 2026): each time the app opens or comes back to the front, ask the
+  // server for the site's fingerprint. If it changed since last time, clear the saved pages and code (photos stay)
+  // and reload once, so the phone shows the new version straight away.
+  (function () {
+    var K = "fa-ver", busy = false, last = 0;
+    function check() {
+      if (busy || Date.now() - last < 30000) return;
+      busy = true; last = Date.now();
+      fetch("/app/version.txt?t=" + Date.now(), { cache: "no-store" }).then(function (r) { return r.ok ? r.text() : ""; }).then(function (v) {
+        v = (v || "").trim(); busy = false;
+        if (!/^[0-9a-f]{6,}$/.test(v)) return;
+        var had = store.get(K, "");
+        store.set(K, v);
+        if (!had || had === v) return;
+        var wipe = window.caches ? caches.keys().then(function (ks) {
+          return Promise.all(ks.filter(function (k) { return k.indexOf("-images") < 0; }).map(function (k) { return caches.delete(k); }));
+        }) : Promise.resolve();
+        wipe.catch(function () {}).then(function () { location.reload(); });
+      }).catch(function () { busy = false; });
+    }
+    check();
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) check(); });
+    window.addEventListener("pageshow", function (e) { if (e.persisted) check(); });
+  })();
+
   // Speed: fetch the pages behind the tabs and the stories on screen ahead of the tap, so they open at once.
   (function () {
     var c = navigator.connection || {}, seen = {}, left = 14;
