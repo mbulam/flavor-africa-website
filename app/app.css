@@ -304,3 +304,15 @@ html.app .fa-fanseat-w{padding-top:18px}
 html.fa-d-open,html.fa-d-open body{background:#2A0174!important;overflow:hidden}
 html.fa-d-open body::before{background:#2A0174!important}
 html.fa-d-open body>*:not(.fa-daily){visibility:hidden}
+
+/* The Mix: DJ mix card at the top of Flavor FM (14 Nov 2026) */
+.fa-mix{margin:0 0 28px}
+.fa-mix .k{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:8px}
+.fa-mix-v{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:0;border-radius:14px;overflow:hidden;background:#2A0174;cursor:pointer}
+.fa-mix-v img{width:100%;height:100%;object-fit:cover;display:block}
+.fa-mix-v .pl{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:var(--yellow);color:#2A0174;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.fa-mix-v .pl svg{width:24px;height:24px;margin-left:3px}
+.fa-mix-v iframe{width:100%;height:100%;border:0;display:block}
+.fa-mix h3{margin:12px 0 2px;font-family:var(--head);font-weight:600;font-size:24px;line-height:1.05;text-transform:uppercase}
+.fa-mix p{margin:0;font-size:14px;color:var(--mute)}
+.fa-mix .yt{display:inline-flex;align-items:center;min-height:34px;margin-top:10px;padding:0 13px;border-radius:17px;background:var(--tint);color:var(--accent);font-size:13px;font-weight:600;text-decoration:none}

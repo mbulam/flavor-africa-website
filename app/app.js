@@ -242,6 +242,12 @@
       return '<li class="' + (cls || "") + '"><button type="button" data-tr="' + i + '"><span class="n">' + n + '</span><span class="fa-art" data-art="' + esc(k) + '"></span><span class="tx"><b>' + esc(t) + "</b><em>" + esc(a) + '</em></span><span class="pp" aria-hidden="true">' + PLAY + "</span></button></li>";
     }
     var html = '<div class="fa-fm-hd"><h2>Flavor FM</h2><p>' + (fm ? "Our picks this week, and what Kenya's playing." : "What Kenya's playing, updated every day.") + "</p></div>";
+    var mix = feed.mix;
+    if (mix && /^[\w-]{11}$/.test(mix.youtube || "")) {
+      html += '<section class="fa-mix"><span class="k">The Mix</span><button type="button" class="fa-mix-v" data-mix aria-label="Play the mix"><img alt="" loading="lazy" onerror="this.remove()" src="https://i.ytimg.com/vi/' + mix.youtube + '/hqdefault.jpg"><span class="pl">' + PLAY + "</span></button>" +
+        "<h3>" + esc(mix.title || "The Flavor Mix") + "</h3>" + (mix.dj ? "<p>" + esc(mix.dj) + "</p>" : "") +
+        '<a class="yt" href="https://www.youtube.com/watch?v=' + mix.youtube + '" target="_blank" rel="noopener">Open in YouTube</a></section>';
+    }
     if (fm && fm.songs && fm.songs.length) {
       html += '<section class="fa-fm-pl"><span class="k">This week' + (fm.dates ? " · " + esc(fm.dates) : "") + "</span><h3>" + esc(fm.title || "The Flavor FM playlist") + "</h3>" + (fm.blurb ? "<p>" + esc(fm.blurb) + "</p>" : "") + "<ol>";
       fm.songs.forEach(function (x, i) { html += row(x[0], x[1], i + 1); });
@@ -257,6 +263,17 @@
     }
     box.innerHTML = html;
     f10.insertBefore(box, f10.firstChild);
+
+    // the mix plays right here: tapping swaps the picture for YouTube's player (stops any song preview first)
+    var mv = box.querySelector("[data-mix]");
+    if (mv) mv.addEventListener("click", function () {
+      if (au) au.pause();
+      var f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + mix.youtube + "?autoplay=1&playsinline=1&rel=0&modestbranding=1";
+      f.title = mix.title || "The Flavor Mix"; f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen"; f.allowFullscreen = true;
+      var w = document.createElement("div"); w.className = "fa-mix-v on"; w.appendChild(f);
+      mv.parentNode.replaceChild(w, mv);
+    });
 
     // find each song's preview and cover on Apple Music, three at a time
     var queue = tracks.filter(function (t, i) { return tracks.findIndex(function (u) { return u.k === t.k; }) === i; }), busy = 0, n = 0;

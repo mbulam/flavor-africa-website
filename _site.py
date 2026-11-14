@@ -127,6 +127,10 @@ FLAVOR_FM = {"title": "Sunday Reset", "dates": "15 - 21 Nov", "blurb": "Slow it 
         ["Good Days", "SZA"],
     ],
     "spotify": "", "apple": "", "youtube": ""}
+# The Mix (added 14 Nov 2026): a DJ mix at the top of the Flavor FM tab in the app. "youtube" is the video id
+# (the part after youtu.be/). Leave title or dj blank and the card says "The Flavor Mix". Set FLAVOR_MIX = None to hide it.
+FLAVOR_MIX = {"youtube": "we_LnIwQO3g", "title": "Raw & Unkut x Kareka The Entertainer",
+              "dj": "Sami Flinch · Party Mix 2026, Dancehall x Afrobeats"}
 # Optional: "blurb" (the line under the heading) and "done" (shown after a fan's third question), for interviews etc.
 FAN_SEAT = {"show": "2026-11-anwar-saa-zone", "artist": "Anwar",
             "line": "We're sitting down with Anwar Hassanali of Saa Zone",
@@ -567,7 +571,7 @@ def build_app_feed():
         if ed.get("songs"):
             f10 = {"t": ed["songs"][0]["title"], "a": ed["songs"][0]["artist"], "label": ed.get("label", ""), "id": ed["songs"][0].get("apple", ""),
                    "songs": [{"t": x["title"], "a": x["artist"]} for x in ed["songs"]]}
-    out = {"hero": sorted(HERO)[0] if HERO else "", "f10": f10, "fanseat": FAN_SEAT, "fm": FLAVOR_FM,
+    out = {"hero": sorted(HERO)[0] if HERO else "", "f10": f10, "fanseat": FAN_SEAT, "fm": FLAVOR_FM, "mix": FLAVOR_MIX,
            "stories": [{"s": s[0], "c": s[1], "t": s[2], "h": s[3], "d": s[4], "i": "img/" + s[5], "p": s[6], "o": s[7]}
                        for s in newest(STORIES)]}
     with open(os.path.join(SITE, "app", "feed.json"), "w") as f:
