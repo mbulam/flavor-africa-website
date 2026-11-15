@@ -389,7 +389,7 @@
     function show() {
       closeSheets();
       if (home) { R.classList.toggle("fa-s-chart", chart()); R.classList.toggle("fa-s-today", !chart()); window.scrollTo(0, 0); }
-      setTab(home ? (chart() ? "f10" : "home") : page === "live" ? "live" : "");
+      setTab(home ? (chart() ? "f10" : "home") : page === "live" ? "live" : page === "trivia" ? "trivia" : "");
     }
     function go(hash) { history.replaceState(null, "", location.pathname + location.search + hash); show(); }
     function sheet(name, label) {
