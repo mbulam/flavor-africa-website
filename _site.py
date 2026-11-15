@@ -75,6 +75,7 @@ STORIES = [
  ("joshua-baraka-visa-ambassador", ["news", "music"], "The Wrap", "Joshua Baraka becomes Visa's first Ugandan brand ambassador", "The deal starts with his B'rakaland EA show in Kampala on 28 November.", "wr-joshua-baraka.jpg", "2026-11-06T17:20", "40% 25%"),
  ("kenyan-stars-latin-grammys-2026", ["news", "music"], "The Wrap", "Ssaru, Nikita Kering\u2019, Fancy Fingers and Azeezah at the 2026 Latin Grammys", "Four Kenyan names in Las Vegas for the 27th Latin Grammy Awards.", "wr-latin-grammys.jpg", "2026-11-14T12:00", "70% 30%"),
  ("fela-kuti-sade-rock-hall-of-fame-2026", ["news", "music"], "The Wrap", "Fela Kuti and Sade enter the Rock & Roll Hall of Fame", "Two Nigerian-born legends, honoured on the same night in Los Angeles. Fela is the first African-born solo artist in the Hall.", "rh2026-fela-fists.jpg", "2026-11-15T18:50", "center 30%"),
+ ("joshua-baraka-hipipo-artist-of-the-year-2026", ["news", "music"], "The Wrap", "Joshua Baraka is HiPipo's Artist of the Year, again", "Four awards at the 15th HiPipo Music Awards in Kampala, in the same week he released Recess II.", "wr-joshua-baraka-hipipo-2026.jpg", "2026-11-15T19:15", "center 25%"),
 ]
 
 SECTIONS = {  # slug: (heading on page, empty message)
@@ -96,6 +97,7 @@ EDITION = {
  "tems-children-of-blood-and-bone-soundtrack": "Continental",
  "kenyan-stars-latin-grammys-2026": "Local",
  "fela-kuti-sade-rock-hall-of-fame-2026": "Continental",
+ "joshua-baraka-hipipo-artist-of-the-year-2026": "Continental",
 }
 # Fan Seat in the app (added 10 Nov 2026): set this when a Flavor Artist Live artist is confirmed and the app's Live tab
 # starts taking fans' questions for them; set it back to None to close it. "show" is a short code for that show.
