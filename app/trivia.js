@@ -139,7 +139,7 @@
       "<p class=\"ln\">" + niceDate + (n ? " · " + n + "-day streak" : "") + ". Can you beat it?</p></div></div>" +
       '<button type="button" class="fa-tv-go" data-a="share">Share my score</button>' +
       (missed.length ? '<h3>' + (missed.length === 1 ? "The one you missed" : "The " + missed.length + " you missed") + '</h3><ul class="fa-tv-list">' + missed.join("") + "</ul>" : '<h3>A perfect ten.</h3>') +
-      '<button type="button" class="fa-tv-all" data-a="all">See all ten answers</button><ul class="fa-tv-list" hidden>' + all.join("") + "</ul></div>";
+      '<button type="button" class="fa-tv-all" data-a="all">See all ten answers</button><ul class="fa-tv-list" hidden>' + all.join("") + "</ul>" + '<a class="fa-tv-all" href="/connections.html" style="text-decoration:none">Play today\'s Flavor Connections</a></div>';
   }
 
   function share() {

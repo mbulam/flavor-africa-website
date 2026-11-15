@@ -175,3 +175,15 @@ APP UPDATES WITHOUT REINSTALLING (fixed 15 Nov 2026)
   screens reload themselves onto the new version.
 - version.txt is written by _site.py. If you change app files by hand without running _site.py, update
   version.txt too (any new value works), or phones won't know there's an update.
+
+FLAVOR CONNECTIONS (added 16 Nov 2026)
+- connections.html is the game's page (website and app); "Connections" sits after Trivia in every menu (_site.py fix_nav).
+  In the app, a "Today's puzzle" card on Today (under the Trivia card) links to it.
+- One puzzle a day: 16 tiles, four hidden groups of four, four mistakes allowed. "One away" shows when three of four
+  are right. Progress, results and streak stay on the phone. Results screen: share grid (coloured squares), each
+  group's answer with a one-line note, and a link across to Trivia (Trivia's results link back).
+- Puzzles live in app/connections.json, one per Nairobi date, groups easiest first (yellow, green, blue, purple).
+  Each group: t (the link), w (4 tiles in CAPS), x (one-line note), s (optional story slug). Claude writes the
+  puzzles; every fact is checked against 2+ sources. A day with no puzzle hides the Today card.
+- Code: app/connections.js + app/connections.css. Both are in sw.js, app.js's update list and _site.py's
+  write_version, so phones pick up changes on their own.

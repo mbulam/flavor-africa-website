@@ -1,0 +1,61 @@
+{
+  "_how": "Flavor Connections (added 16 Nov 2026). One puzzle per date (Nairobi time). Each puzzle has 4 groups, easiest first (the order sets the colour: yellow, green, blue, purple). Each group: t (the link, shown once solved), w (exactly 4 tiles, CAPS, no tile used twice in a puzzle), x (one line shown on the results screen), s (optional story slug for 'Read our story'). A tile may look like it fits two groups (a red herring), but only one way of splitting the 16 can be right. Every fact checked against 2+ sources before it goes in. A day with no puzzle hides the card on Today.",
+  "puzzles": {
+    "2026-11-16": {
+      "groups": [
+        {"t": "Sauti Sol's four members", "w": ["BIEN", "SAVARA", "CHIMANO", "POLYCARP"], "x": "Bien, Savara and Chimano started singing together at Upper Hill School. Polycarp brought the guitar.", "s": "savara"},
+        {"t": "Nairobi neighbourhoods", "w": ["KILIMANI", "KAREN", "LAVINGTON", "RUNDA"], "x": "Karen was the one hiding in plain sight among the names."},
+        {"t": "Wizkid albums", "w": ["AYO", "SUPERSTAR", "MORAYO", "MADE IN LAGOS"], "x": "From Superstar in 2011 to Morayo in 2024.", "s": "made-in-lagos"},
+        {"t": "Put AFRO in front", "w": ["BEATS", "PUNK", "NATION", "CHELLA"], "x": "Afrobeats, Afropunk, Afro Nation and Afrochella, the Accra festival that now goes by AfroFuture."}
+      ]
+    },
+    "2026-11-17": {
+      "groups": [
+        {"t": "African currencies", "w": ["NAIRA", "CEDI", "RAND", "KWACHA"], "x": "Nigeria, Ghana, South Africa and Zambia. Malawi pays in kwacha too."},
+        {"t": "African capitals", "w": ["ACCRA", "DAKAR", "KAMPALA", "LUSAKA"], "x": "Ghana, Senegal, Uganda and Zambia. Lusaka and the kwacha were the trap."},
+        {"t": "Plates from across the continent", "w": ["JOLLOF", "UGALI", "FUFU", "INJERA"], "x": "West Africa's rice, East Africa's staple, the pounded swallow and Ethiopia's spongy flatbread."},
+        {"t": "Lion King names that are Swahili words", "w": ["SIMBA", "RAFIKI", "PUMBAA", "SARABI"], "x": "Lion, friend, silly and mirage. Timon is one of the few names that isn't Swahili."}
+      ]
+    },
+    "2026-11-18": {
+      "groups": [
+        {"t": "Fashion houses", "w": ["GUCCI", "PRADA", "DIOR", "FENDI"], "x": "Chanel looked like it belonged here. It didn't."},
+        {"t": "Kenyan daily papers", "w": ["NATION", "STANDARD", "PEOPLE", "TAIFA LEO"], "x": "Daily Nation, The Standard, People Daily and Taifa Leo, the Swahili one. The Star was the other paper on the board."},
+        {"t": "African beers", "w": ["TUSKER", "CASTLE", "CLUB", "STAR"], "x": "Tusker from Kenya, Castle from South Africa, Club from Ghana and Star from Nigeria."},
+        {"t": "Tyla singles", "w": ["WATER", "ART", "JUMP", "CHANEL"], "x": "Water was the 2023 breakout. Chanel came out in October 2025."}
+      ]
+    },
+    "2026-11-19": {
+      "groups": [
+        {"t": "Numbers in Swahili", "w": ["MOJA", "TATU", "TANO", "SITA"], "x": "One, three, five and six."},
+        {"t": "Countries that border Kenya", "w": ["ETHIOPIA", "SOMALIA", "UGANDA", "SOUTH SUDAN"], "x": "Tanzania is the fifth neighbour."},
+        {"t": "Big African rivers", "w": ["NILE", "CONGO", "ZAMBEZI", "LIMPOPO"], "x": "Congo is a country too, but not one of Kenya's neighbours."},
+        {"t": "What a country used to be called", "w": ["GOLD COAST", "DAHOMEY", "UPPER VOLTA", "ABYSSINIA"], "x": "Ghana, Benin, Burkina Faso and Ethiopia. Abyssinia was the one that could have gone with the neighbours."}
+      ]
+    },
+    "2026-11-20": {
+      "groups": [
+        {"t": "The EGOT", "w": ["EMMY", "GRAMMY", "OSCAR", "TONY"], "x": "Win all four and you've got an EGOT."},
+        {"t": "National football team nicknames", "w": ["BLACK STARS", "SUPER EAGLES", "BAFANA BAFANA", "CHIPOLOPOLO"], "x": "Ghana, Nigeria, South Africa and Zambia, whose name means the copper bullets."},
+        {"t": "African Footballers of the Year", "w": ["SALAH", "MANE", "OSIMHEN", "LOOKMAN"], "x": "All have won CAF's top prize since 2017. Achraf Hakimi won the latest, for 2025."},
+        {"t": "African music awards", "w": ["HEADIES", "AFRIMA", "HIPIPO", "GROOVE"], "x": "The Headies in Nigeria, the pan-African AFRIMA, Uganda's HiPipo and Kenya's Groove Awards for gospel.", "s": "joshua-baraka-hipipo-artist-of-the-year-2026"}
+      ]
+    },
+    "2026-11-21": {
+      "groups": [
+        {"t": "Marathon Major cities", "w": ["BERLIN", "BOSTON", "CHICAGO", "TOKYO"], "x": "Four of the World Marathon Majors. London and New York are on the list too."},
+        {"t": "African football clubs", "w": ["AL AHLY", "KAIZER CHIEFS", "GOR MAHIA", "TP MAZEMBE"], "x": "Egypt, South Africa, Kenya and DR Congo."},
+        {"t": "Kenyan Olympic champions", "w": ["KIPCHOGE", "RUDISHA", "KIPYEGON", "KIPRUTO"], "x": "Marathon, 800m, 1500m and steeplechase. Brimin Kipruto (2008) and Conseslus Kipruto (2016) both won steeplechase gold."},
+        {"t": "Kenya's national teams", "w": ["SHUJAA", "SIMBAS", "MALKIA STRIKERS", "LIONESSES"], "x": "Rugby sevens, rugby fifteens, women's volleyball and women's rugby. England's footballers aren't the only Lionesses."}
+      ]
+    },
+    "2026-11-22": {
+      "groups": [
+        {"t": "Kenyan public holidays (add DAY)", "w": ["MADARAKA", "MASHUJAA", "JAMHURI", "LABOUR"], "x": "1 June, 20 October, 12 December and 1 May."},
+        {"t": "Led their country to independence", "w": ["KENYATTA", "NKRUMAH", "NYERERE", "KAUNDA"], "x": "Kenya, Ghana, Tanganyika and Zambia."},
+        {"t": "Pharaohs", "w": ["RAMESSES", "KHUFU", "AKHENATEN", "TUTANKHAMUN"], "x": "The Great Pyramid of Giza was built for Khufu."},
+        {"t": "Old African kingdoms and empires", "w": ["AKSUM", "SONGHAI", "KUSH", "BENIN"], "x": "Kush ruled Egypt for a time. The Kingdom of Benin was in what is now Nigeria, not the country Benin."}
+      ]
+    }
+  }
+}

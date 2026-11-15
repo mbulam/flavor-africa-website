@@ -37,7 +37,7 @@
   // (cache "reload" skips the phone's browser cache too, which on iPhone could hand back the old copy and leave
   // the app one update behind), then reload. Used by the update check and by pull to refresh (15 Nov 2026).
   function freshen() {
-    var core = ["/", "/index.html", "/app/app.js", "/app/app.css", "/app/fanseat.js", "/app/feed.json", "/app/trivia.js", "/app/trivia.json", "/app/trivia.css", "/style.css", location.pathname];
+    var core = ["/", "/index.html", "/app/app.js", "/app/app.css", "/app/fanseat.js", "/app/feed.json", "/app/trivia.js", "/app/trivia.json", "/app/trivia.css", "/app/connections.js", "/app/connections.json", "/app/connections.css", "/style.css", location.pathname];
     var wipe = window.caches ? caches.keys().then(function (ks) {
       return Promise.all(ks.filter(function (k) { return k.indexOf("-images") < 0; }).map(function (k) { return caches.delete(k); }));
     }) : Promise.resolve();
@@ -100,7 +100,7 @@
     var bySlug = {}; live.forEach(function (s) { bySlug[s.s] = s; });
     saved(bySlug);
     shell(feed, live, bySlug);
-    if (page === "index") { var tj = document.createElement("script"); tj.src = "/app/trivia.js"; document.body.appendChild(tj); } // Flavor Trivia (16 Nov 2026)
+    if (page === "index") { var tj = document.createElement("script"); tj.src = "/app/trivia.js"; document.body.appendChild(tj); var cj = document.createElement("script"); cj.src = "/app/connections.js"; document.body.appendChild(cj); } // Flavor Trivia and Connections (16 Nov 2026)
     if (page === "index") vote(feed);
     daily(feed, live);
   }).catch(function () {});
@@ -427,7 +427,7 @@
         if (hero) html += '<a class="fa-cv" href="/' + hero.s + '.html"><span class="cvp"><img src="/' + esc(hero.i) + '" alt="" style="object-position:' + esc(hero.o) + '"><span class="cvt"><b>' + esc(hero.h) + "</b><em>" + esc(hero.t) + " · " + shortDate(hero.p) + "</em></span></span></a>";
         if (feed.f10) html += '<a class="fa-n1" href="#flavor-10" data-f10><span class="sq">1</span><span><i>No. 1 in Kenya today</i><b>' + esc(feed.f10.t) + "</b><em>" + esc(feed.f10.a) + '</em></span><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></span></a>';
       }
-      html += '<div class="fa-tv-slot"></div>';
+      html += '<div class="fa-tv-slot"></div><div class="fa-cx-slot"></div>';
       var rest = live.filter(function (s) { return !hero || s.s !== hero.s; });
       var mine = fol.length ? rest.filter(function (s) { return fol.indexOf(s.t) > -1; }).slice(0, 4) : [];
       if (mine.length) {
@@ -447,6 +447,7 @@
       if (loose.length) html += '<div class="fa-hd fa-hd-r"><h2>More stories</h2><button type="button" data-view="*">See all</button></div><div class="fa-trl">' + loose.slice(0, 8).map(function (s) { return cardHtml(s, true); }).join("") + "</div>";
       box.innerHTML = html;
       if (window.faTriviaSlot) window.faTriviaSlot();
+      if (window.faCxSlot) window.faCxSlot();
     }
     if (home) {
       today();
