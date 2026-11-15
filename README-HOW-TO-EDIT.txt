@@ -177,8 +177,10 @@ APP UPDATES WITHOUT REINSTALLING (fixed 15 Nov 2026)
   version.txt too (any new value works), or phones won't know there's an update.
 
 FLAVOR CONNECTIONS (added 16 Nov 2026)
-- connections.html is the game's page (website and app); "Connections" sits after Trivia in every menu (_site.py fix_nav).
-  In the app, a "Today's puzzle" card on Today (under the Trivia card) links to it.
+- GAMES (changed 16 Nov 2026): menus and the app's bottom tab say "Games" (games.html), not Trivia. games.html shows
+  today's Trivia card and today's Connections card; each game keeps its own page (trivia.html, connections.html),
+  and the Games tab stays lit on all three. Today in the app shows the Trivia card only.
+- connections.html is the Connections game page (website and app).
 - One puzzle a day: 16 tiles, four hidden groups of four, four mistakes allowed. "One away" shows when three of four
   are right. Progress, results and streak stay on the phone. Results screen: share grid (coloured squares), each
   group's answer with a one-line note, and a link across to Trivia (Trivia's results link back).

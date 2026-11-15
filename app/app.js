@@ -100,7 +100,7 @@
     var bySlug = {}; live.forEach(function (s) { bySlug[s.s] = s; });
     saved(bySlug);
     shell(feed, live, bySlug);
-    if (page === "index") { var tj = document.createElement("script"); tj.src = "/app/trivia.js"; document.body.appendChild(tj); var cj = document.createElement("script"); cj.src = "/app/connections.js"; document.body.appendChild(cj); } // Flavor Trivia and Connections (16 Nov 2026)
+    if (page === "index") { var tj = document.createElement("script"); tj.src = "/app/trivia.js"; document.body.appendChild(tj); } // Flavor Trivia (16 Nov 2026)
     if (page === "index") vote(feed);
     daily(feed, live);
   }).catch(function () {});
@@ -389,7 +389,7 @@
     function show() {
       closeSheets();
       if (home) { R.classList.toggle("fa-s-chart", chart()); R.classList.toggle("fa-s-today", !chart()); window.scrollTo(0, 0); }
-      setTab(home ? (chart() ? "f10" : "home") : page === "live" ? "live" : page === "trivia" ? "trivia" : "");
+      setTab(home ? (chart() ? "f10" : "home") : page === "live" ? "live" : (page === "games" || page === "trivia" || page === "connections") ? "games" : "");
     }
     function go(hash) { history.replaceState(null, "", location.pathname + location.search + hash); show(); }
     function sheet(name, label) {
@@ -427,7 +427,7 @@
         if (hero) html += '<a class="fa-cv" href="/' + hero.s + '.html"><span class="cvp"><img src="/' + esc(hero.i) + '" alt="" style="object-position:' + esc(hero.o) + '"><span class="cvt"><b>' + esc(hero.h) + "</b><em>" + esc(hero.t) + " · " + shortDate(hero.p) + "</em></span></span></a>";
         if (feed.f10) html += '<a class="fa-n1" href="#flavor-10" data-f10><span class="sq">1</span><span><i>No. 1 in Kenya today</i><b>' + esc(feed.f10.t) + "</b><em>" + esc(feed.f10.a) + '</em></span><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></span></a>';
       }
-      html += '<div class="fa-tv-slot"></div><div class="fa-cx-slot"></div>';
+      html += '<div class="fa-tv-slot"></div>';
       var rest = live.filter(function (s) { return !hero || s.s !== hero.s; });
       var mine = fol.length ? rest.filter(function (s) { return fol.indexOf(s.t) > -1; }).slice(0, 4) : [];
       if (mine.length) {
@@ -447,7 +447,6 @@
       if (loose.length) html += '<div class="fa-hd fa-hd-r"><h2>More stories</h2><button type="button" data-view="*">See all</button></div><div class="fa-trl">' + loose.slice(0, 8).map(function (s) { return cardHtml(s, true); }).join("") + "</div>";
       box.innerHTML = html;
       if (window.faTriviaSlot) window.faTriviaSlot();
-      if (window.faCxSlot) window.faCxSlot();
     }
     if (home) {
       today();
