@@ -1,9 +1,12 @@
 // Flavor Trivia (added 16 Nov 2026): ten questions a day, 15 seconds each, one theme per day.
+// It has its own page, trivia.html (website and app); in the app, a card on Today links to it.
 // Questions live in /app/trivia.json, one set per Nairobi date. A day with no set hides the card on Today.
 // Scores, streak and answers are kept on the phone (localStorage); nothing is sent anywhere.
 (function () {
   var R = document.documentElement;
-  if (!R.classList.contains("app")) return;
+  // its own styles, so the page also works on the website (not just the app)
+  if (!document.querySelector('link[href="/app/trivia.css"]')) { var css = document.createElement("link"); css.rel = "stylesheet"; css.href = "/app/trivia.css"; document.head.appendChild(css); }
+  var PAGE = document.getElementById("fa-trivia-page");   // trivia.html: the game plays on the page itself
   var SECS = 15, DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   var store = {
     get: function (k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
@@ -30,38 +33,31 @@
     var slot = document.querySelector(".fa-tv-slot");
     if (!slot || !set) return;
     var r = result();
-    slot.innerHTML = '<button type="button" class="fa-tvc" style="background-image:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.7) 100%),url(/' + esc(set.img) + ')">' +
+    slot.innerHTML = '<a href="/trivia.html" class="fa-tvc" style="background-image:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.7) 100%),url(/' + esc(set.img) + ')">' +
       '<span class="k">Flavor Trivia</span><span class="t">' + title() + "</span>" +
-      '<span class="s">' + (r ? "You scored " + r.score + "/10 today. See your score" : "Ten questions. Fifteen seconds each.") + "</span></button>";
-    slot.querySelector("button").addEventListener("click", function () { open(); });
+      '<span class="s">' + (r ? "You scored " + r.score + "/10 today. See your score" : "Ten questions. Fifteen seconds each.") + "</span></a>";
   };
 
   fetch("/app/trivia.json").then(function (x) { return x.json(); }).then(function (d) {
     set = d && d.sets && d.sets[today];
-    if (set && set.qs && set.qs.length) window.faTriviaSlot(); else set = null;
-  }).catch(function () {});
+    if (!(set && set.qs && set.qs.length)) set = null;
+    if (set) window.faTriviaSlot();
+    if (PAGE) open();
+  }).catch(function () { if (PAGE) PAGE.innerHTML = '<p class="fa-tv-note">Couldn\'t load today\'s questions. Check your connection and try again.</p>'; });
 
-  // The full-screen game
+  // The game, on trivia.html
   function open() {
-    if (!box) {
-      box = document.createElement("div"); box.className = "fa-tv"; box.setAttribute("role", "dialog"); box.setAttribute("aria-label", "Flavor Trivia");
-      document.body.appendChild(box);
-      box.addEventListener("click", click);
-    }
-    box.hidden = false; document.body.style.overflow = "hidden";
+    box = PAGE;
+    if (!set) { box.innerHTML = '<div class="fa-tv-in"><h2 class="fa-tv-none">No trivia today.</h2><p class="fa-tv-note">A new ten lands every day. Check back tomorrow.</p></div>'; return; }
+    box.addEventListener("click", click);
     var r = result();
     if (r) { st = r; drawResults(); } else drawIntro();
   }
-  function close() {
-    clearInterval(timer); timer = null;
-    if (box) box.hidden = true; document.body.style.overflow = "";
-    if (st && !st.done) st = null; // leaving mid-game starts it fresh next time
-    window.faTriviaSlot();
-  }
-  var X = '<button type="button" class="fa-tv-x" data-a="close" aria-label="Close trivia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>';
+  function top() { window.scrollTo(0, 0); }
+  var X = "";
 
   function drawIntro() {
-    var n = streak();
+    var n = streak(); top();
     box.innerHTML = '<div class="fa-tv-top">' + X + "</div>" +
       '<div class="fa-tv-in"><div class="fa-tv-hero" style="background-image:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.65) 100%),url(/' + esc(set.img) + ')"><h2>' + title() + "</h2><p>Ten questions. Fifteen seconds each.</p></div>" +
       '<button type="button" class="fa-tv-go" data-a="start">Start</button>' +
@@ -80,7 +76,7 @@
 
   function ask() {
     var q = set.qs[st.i], left = SECS;
-    st.locked = false;
+    st.locked = false; top();
     box.innerHTML = '<div class="fa-tv-top">' + X + '<span class="fa-tv-where">' + esc(set.theme) + " " + esc(dayName) + " · Question " + (st.i + 1) + " of " + set.qs.length + '</span><span class="sp"></span></div>' +
       '<div class="fa-tv-q"><div class="fa-tv-ring" role="timer"><svg viewBox="0 0 112 112" aria-hidden="true"><circle cx="56" cy="56" r="50" class="bg"/><circle cx="56" cy="56" r="50" class="fg"/></svg><span><b>' + left + "</b><i>seconds</i></span></div>" +
       "<h2>" + esc(q.q) + '</h2><div class="fa-tv-opts">' +
@@ -129,7 +125,7 @@
   }
 
   function drawResults() {
-    var r = result() || st, n = streak(), missed = [], all = [];
+    var r = result() || st, n = streak(), missed = [], all = []; top();
     set.qs.forEach(function (q, j) {
       var k = r.ans[j], ok = k === q.c;
       var li = '<li class="' + (ok ? "ok" : "no") + '"><span class="m" aria-label="' + (ok ? "Right" : "Wrong") + '">' + (ok ? "✓" : "✕") + "</span><span><i>" + esc(q.q) + "</i><b>" + esc(q.a[q.c]) + "</b>" +
@@ -159,8 +155,7 @@
     if (o && st && !st.locked) return answer(+o.getAttribute("data-o"), st.left());
     var a = e.target.closest("[data-a]"); if (!a) return;
     var w = a.getAttribute("data-a");
-    if (w === "close") close();
-    else if (w === "start") start();
+    if (w === "start") start();
     else if (w === "next") next();
     else if (w === "share") share();
     else if (w === "all") { var l = box.querySelectorAll(".fa-tv-list"); var x = l[l.length - 1]; x.hidden = !x.hidden; a.textContent = x.hidden ? "See all ten answers" : "Hide the answers"; }

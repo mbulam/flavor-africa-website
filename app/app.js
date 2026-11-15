@@ -37,7 +37,7 @@
   // (cache "reload" skips the phone's browser cache too, which on iPhone could hand back the old copy and leave
   // the app one update behind), then reload. Used by the update check and by pull to refresh (15 Nov 2026).
   function freshen() {
-    var core = ["/", "/index.html", "/app/app.js", "/app/app.css", "/app/fanseat.js", "/app/feed.json", "/app/trivia.js", "/app/trivia.json", "/style.css", location.pathname];
+    var core = ["/", "/index.html", "/app/app.js", "/app/app.css", "/app/fanseat.js", "/app/feed.json", "/app/trivia.js", "/app/trivia.json", "/app/trivia.css", "/style.css", location.pathname];
     var wipe = window.caches ? caches.keys().then(function (ks) {
       return Promise.all(ks.filter(function (k) { return k.indexOf("-images") < 0; }).map(function (k) { return caches.delete(k); }));
     }) : Promise.resolve();

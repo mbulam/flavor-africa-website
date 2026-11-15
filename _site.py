@@ -398,6 +398,12 @@ NAV_DRW = '<div class="acc"><a href="news.html">News · The Wrap</a></div>'
 
 
 def fix_nav(f, h):
+    # Trivia (added 16 Nov 2026): after Live in the header/footer menus and the drawer, on every page
+    h = re.sub(r'(<a href="live\.html"(?: aria-current="page")?>Live</a>)(?!<a href="trivia\.html")', r'\1<a href="trivia.html">Trivia</a>', h)
+    if '<div class="acc"><a href="trivia.html">Trivia</a></div>' not in h:
+        h = h.replace('<div class="acc"><a href="about.html">About</a></div>', '<div class="acc"><a href="trivia.html">Trivia</a></div><div class="acc"><a href="about.html">About</a></div>', 1)
+    if f == "trivia.html":
+        h = h.replace('<a href="trivia.html">Trivia</a>', '<a href="trivia.html" aria-current="page">Trivia</a>', 1)
     if 'href="news.html">News</a><a href="music.html">' not in h:
         h = h.replace('<a href="music.html">Music</a>', NAV_SUB + '<a href="music.html">Music</a>')  # header + footer
         h = h.replace('<div class="acc"><a href="index.html">Home</a></div>', '<div class="acc"><a href="index.html">Home</a></div>' + NAV_DRW, 1)
@@ -564,7 +570,7 @@ def mark_scheduled():
 def build_sitemap():
     today = nairobi_today().isoformat()
     live = [s for s in STORIES if s[6][:10] <= today]  # scheduled stories join the sitemap on their date
-    pages = ["index.html", "news.html"] + [k + ".html" for k in SECTIONS if k != "news"] + ["about.html"] + [s[0] + ".html" for s in live]
+    pages = ["index.html", "news.html"] + [k + ".html" for k in SECTIONS if k != "news"] + ["about.html", "trivia.html"] + [s[0] + ".html" for s in live]
     seen, rows = set(), []
     for p in pages:
         if p in seen:
@@ -599,7 +605,7 @@ def write_version():
     # the app clears its saved pages and reloads, so updates arrive without reinstalling (14 Nov 2026).
     import hashlib
     h = hashlib.sha1()
-    files = sorted(f for f in os.listdir(SITE) if f.endswith(".html")) + ["style.css", "app/app.js", "app/app.css", "app/fanseat.js", "app/feed.json", "app/trivia.js", "app/trivia.json"]
+    files = sorted(f for f in os.listdir(SITE) if f.endswith(".html")) + ["style.css", "app/app.js", "app/app.css", "app/fanseat.js", "app/feed.json", "app/trivia.js", "app/trivia.json", "app/trivia.css"]
     for f in files:
         fp = os.path.join(SITE, f)
         if os.path.exists(fp):
