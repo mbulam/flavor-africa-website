@@ -358,7 +358,12 @@
     "The Flavor Cover": "Our monthly cover story", "The Watchlist": "What to watch this weekend", "Nairobi This Weekend": "Where to be, Friday to Sunday"
   };
   function rowHtml(s) {
-    return '<a class="fa-rw" href="/' + s.s + '.html"><img src="/' + esc(s.i) + '" alt="" loading="lazy" style="object-position:' + esc(s.o) + '"><span><i>' + esc(s.t) + "</i><b>" + esc(s.h) + "</b><em>" + nice(s.p) + "</em></span></a>";
+    return '<a class="fa-rw" href="/' + s.s + '.html"><img src="/' + esc(s.i) + '" alt="" loading="lazy" style="object-position:' + esc(s.o) + '"><span><i>' + esc(s.t) + " · " + shortDate(s.p) + "</i><b>" + esc(s.h) + "</b></span></a>";
+  }
+  function shortDate(p) { return nice(p).replace(/ \d{4}$/, ""); }
+  // a card in a sideways rail on Today (added 15 Nov 2026)
+  function cardHtml(s, tag) {
+    return '<a class="fa-rc" href="/' + s.s + '.html"><img src="/' + esc(s.i) + '" alt="" loading="lazy" style="object-position:' + esc(s.o) + '"><span>' + (tag ? "<i>" + esc(s.t) + "</i>" : "") + "<b>" + esc(s.h) + "</b></span></a>";
   }
   function shell(feed, live, bySlug) {
     var tabs = document.querySelector(".fa-tabs"), main = document.querySelector("main");
@@ -398,7 +403,8 @@
       if (!box) { box = el("div", "wrap"); box.id = "fa-today"; main.insertBefore(box, main.firstChild); }
       // the cover is always the newest story, so Today never looks stale
       var hero = live[0], fol = follows(), html = "";
-      if (hero) html += '<a class="fa-cv" href="/' + hero.s + '.html"><span class="cvp"><img src="/' + esc(hero.i) + '" alt="" style="object-position:' + esc(hero.o) + '"><i>' + esc(hero.t) + '</i></span><span class="cvt"><b>' + esc(hero.h) + "</b><em>" + esc(hero.d) + " · " + nice(hero.p).replace(/ \d{4}$/, "") + "</em></span></a>";
+      // Today was rebuilt shorter on 15 Nov 2026: headline on the cover photo, 4 Latest rows, then sideways rails by segment
+      if (hero) html += '<a class="fa-cv" href="/' + hero.s + '.html"><span class="cvp"><img src="/' + esc(hero.i) + '" alt="" style="object-position:' + esc(hero.o) + '"><span class="cvt"><b>' + esc(hero.h) + "</b><em>" + esc(hero.t) + " · " + shortDate(hero.p) + "</em></span></span></a>";
       if (feed.f10) html += '<a class="fa-n1" href="#flavor-10" data-f10><span class="sq">1</span><span><i>No. 1 in Kenya today</i><b>' + esc(feed.f10.t) + "</b><em>" + esc(feed.f10.a) + '</em></span><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></span></a>';
       var rest = live.filter(function (s) { return !hero || s.s !== hero.s; });
       var mine = fol.length ? rest.filter(function (s) { return fol.indexOf(s.t) > -1; }).slice(0, 4) : [];
@@ -406,14 +412,26 @@
         html += '<div class="fa-hd"><h2>For you</h2><button type="button" data-secs>Edit</button></div>' + mine.map(rowHtml).join("");
         rest = rest.filter(function (s) { return mine.indexOf(s) < 0; });
       }
-      html += '<div class="fa-hd"><h2>Latest</h2><button type="button" data-secs>All sections</button></div>' + rest.slice(0, 14).map(rowHtml).join("");
+      html += '<div class="fa-hd"><h2>Latest</h2><button type="button" data-view="*">See all</button></div>' + rest.slice(0, 4).map(rowHtml).join("");
+      // the rest go into sideways rails: one per segment with 2+ stories (newest segment first), singles share "More stories"
+      var groups = {}, order = [], loose = [];
+      rest.slice(4).forEach(function (s) { if (!groups[s.t]) { groups[s.t] = []; order.push(s.t); } groups[s.t].push(s); });
+      var rails = order.filter(function (t) { if (groups[t].length > 1) return true; loose = loose.concat(groups[t]); return false; }).slice(0, 3);
+      order.forEach(function (t) { if (groups[t].length > 1 && rails.indexOf(t) < 0) loose = loose.concat(groups[t]); });
+      rails.forEach(function (t) {
+        html += '<div class="fa-hd fa-hd-r"><h2>' + esc(t) + '</h2><button type="button" data-view="' + esc(t) + '">More</button></div><div class="fa-trl">' + groups[t].slice(0, 8).map(function (s) { return cardHtml(s, false); }).join("") + "</div>";
+      });
+      loose.sort(function (a, b) { return a.p < b.p ? 1 : -1; });
+      if (loose.length) html += '<div class="fa-hd fa-hd-r"><h2>More stories</h2><button type="button" data-view="*">See all</button></div><div class="fa-trl">' + loose.slice(0, 8).map(function (s) { return cardHtml(s, true); }).join("") + "</div>";
       box.innerHTML = html;
     }
     if (home) {
       today();
       main.addEventListener("click", function (e) {
+        var v;
         if (e.target.closest("[data-f10]")) { e.preventDefault(); go("#flavor-10"); }
-        else if (e.target.closest("[data-secs]")) open("sections", drawSections);
+        else if (e.target.closest("[data-secs]")) { viewing = null; open("sections", drawSections); }
+        else if ((v = e.target.closest("[data-view]"))) { viewing = v.getAttribute("data-view"); open("sections", drawSections); }
       });
       window.addEventListener("hashchange", show);
       window.addEventListener("load", function () { if (chart()) setTimeout(function () { window.scrollTo(0, 0); }, 0); });
@@ -426,8 +444,9 @@
     function drawSections() {
       var fol = follows(), html;
       if (viewing) {
-        html = '<div class="fa-scr-hd"><button type="button" class="bk" data-all>‹ Sections</button><h2>' + esc(viewing) + "</h2><p>" + esc(ABOUT[viewing] || "") + "</p></div>" +
-          '<div class="fa-rows">' + live.filter(function (s) { return s.t === viewing; }).map(rowHtml).join("") + "</div>";
+        var all = viewing === "*";
+        html = '<div class="fa-scr-hd"><button type="button" class="bk" data-all>‹ Sections</button><h2>' + (all ? "Latest" : esc(viewing)) + "</h2><p>" + (all ? "Every story, newest first" : esc(ABOUT[viewing] || "")) + "</p></div>" +
+          '<div class="fa-rows">' + live.filter(function (s) { return all || s.t === viewing; }).map(rowHtml).join("") + "</div>";
       } else {
         html = '<div class="fa-scr-hd"><span class="k">Sections</span><h2>Follow what you read</h2><p>What you follow comes first on Today.</p></div><ul class="fa-secs">';
         tags.forEach(function (t) {
