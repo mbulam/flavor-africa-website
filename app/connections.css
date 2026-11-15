@@ -1,0 +1,54 @@
+/* Flavor Connections (added 16 Nov 2026). Loaded by app/connections.js on connections.html (website and app) and on Today in the app. */
+.fa-cx-page{max-width:560px;margin:0 auto;padding-top:14px;padding-bottom:44px;font-family:var(--body);color:var(--ink);min-height:70vh}
+html.app .fa-cx-page{padding-left:16px;padding-right:16px}
+.fa-cx-head h1,.fa-cxc .t{font-family:var(--body);text-transform:uppercase;letter-spacing:-.02em;line-height:1;margin:0;color:var(--ink)}
+.fa-cx-head h1{font-size:clamp(26px,7.8vw,34px)}
+.fa-cx-head .l,.fa-cxc .l{font-weight:300}.fa-cx-head b,.fa-cxc .t b{font-weight:700}
+.fa-cx-head p{margin:8px 0 0;font-size:14px;line-height:1.5;color:var(--mute)}
+.fa-cx-board{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+.fa-cx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.fa-cx-tile{aspect-ratio:1/.82;min-height:64px;padding:4px;border:0;border-radius:12px;background:var(--tint);color:var(--ink);font-family:var(--body);font-weight:700;font-size:clamp(11px,3.9vw,16px);letter-spacing:-.02em;line-height:1.1;text-transform:uppercase;cursor:pointer;display:grid;place-items:center;text-align:center;-webkit-tap-highlight-color:transparent;transition:background .12s,color .12s,transform .12s}
+.fa-cx-tile.m{font-size:clamp(10px,3.3vw,14px)}.fa-cx-tile.long{font-size:clamp(9px,2.95vw,13px)}.fa-cx-tile.xl{font-size:clamp(8.5px,2.55vw,12px)}
+.fa-cx-tile:active{transform:scale(.96)}
+.fa-cx-tile.on{background:var(--ink);color:var(--paper)}
+.fa-cx-tile.bad{animation:fa-cx-shake .4s}
+@keyframes fa-cx-shake{20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-4px)}80%{transform:translateX(3px)}}
+.fa-cx-bar{border-radius:12px;padding:14px 12px;text-align:center;animation:fa-cx-in .3s ease-out}
+.fa-cx-bar b{display:block;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.01em}
+.fa-cx-bar span{display:block;margin-top:3px;font-size:13px;text-transform:uppercase}
+@keyframes fa-cx-in{from{transform:scale(.97);opacity:.4}to{transform:none;opacity:1}}
+.c0{background:#F5CC11;color:#15102A}.c1{background:#9FD9B4;color:#15102A}.c2{background:#A8C1F2;color:#15102A}.c3{background:#2A0174;color:#FFFFFF}
+html[data-theme="dark"] .c3{background:#5B3CC4}
+@media (prefers-color-scheme:dark){html:not([data-theme="light"]) .c3{background:#5B3CC4}}
+.fa-cx-lives{display:flex;align-items:center;justify-content:center;gap:7px;margin:18px 0 0;font-size:13px;color:var(--mute)}
+.fa-cx-lives span{margin-right:4px}
+.fa-cx-lives i{width:11px;height:11px;border-radius:50%;background:var(--line)}
+.fa-cx-lives i.on{background:var(--ink)}
+.fa-cx-ctrl{display:flex;gap:8px;justify-content:center;margin-top:16px}
+.fa-cx-ctrl button{height:46px;padding:0 18px;border-radius:23px;border:1.5px solid var(--ink);background:none;color:var(--ink);font-family:var(--body);font-size:14px;font-weight:600;cursor:pointer}
+.fa-cx-ctrl button.go{background:var(--ink);color:var(--paper)}
+.fa-cx-ctrl button:disabled{opacity:.35;cursor:default}
+.fa-cx-toast{margin-top:14px;min-height:20px;text-align:center;font-size:14px;font-weight:600;opacity:0;transition:opacity .2s}
+.fa-cx-toast.show{opacity:1}
+.fa-cx-note{margin:14px 0 0;font-size:13px;line-height:1.45;color:var(--mute);text-align:center}
+.fa-cx-note b{color:var(--ink)}
+.fa-cx-end{margin-top:18px;padding:22px 18px;border:1px solid var(--line);border-radius:18px;text-align:center}
+.fa-cx-end h2{margin:0;font-family:var(--body);font-size:26px;font-weight:700;letter-spacing:-.02em;text-transform:uppercase;color:var(--ink)}
+.fa-cx-end p{margin:6px 0 0;font-size:14px;color:var(--mute)}
+.fa-cx-sq{display:inline-flex;flex-direction:column;gap:4px;margin-top:16px}
+.fa-cx-sq div{display:flex;gap:4px}
+.fa-cx-sq i{width:22px;height:22px;border-radius:5px}
+.fa-cx-go{display:block;width:100%;height:52px;margin-top:12px;border:0;border-radius:26px;background:var(--ink);color:var(--paper);font-family:var(--body);font-size:15px;font-weight:700;cursor:pointer}
+.fa-cx-ans{margin-top:18px;display:flex;flex-direction:column;gap:14px}
+.fa-cx-a p{margin:8px 2px 0;font-size:14px;line-height:1.5;color:var(--ink)}
+.fa-cx-a a{font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
+.fa-cx-more{display:block;margin-top:22px;text-align:center;font-size:14px;font-weight:600;color:var(--accent);text-decoration:none}
+/* Today card (app) */
+.fa-cxc{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:10px 0 4px;padding:16px;border:1px solid var(--line);border-radius:16px;text-decoration:none;color:var(--ink);font-family:var(--body)}
+.fa-cxc .tx{display:flex;flex-direction:column;min-width:0}
+.fa-cxc .k{font-size:12px;font-weight:600;color:var(--mute)}
+.fa-cxc .t{font-size:22px;margin-top:4px}
+.fa-cxc .s{font-size:13px;margin-top:6px;color:var(--mute)}
+.fa-cxc .mini{flex:0 0 auto;display:grid;grid-template-columns:repeat(4,12px);gap:3px}
+.fa-cxc .mini i{width:12px;height:12px;border-radius:3px;background:var(--line)}
+.fa-cxc .mini i.c0{background:#F5CC11}.fa-cxc .mini i.c1{background:#9FD9B4}.fa-cxc .mini i.c2{background:#A8C1F2}.fa-cxc .mini i.c3{background:#2A0174}

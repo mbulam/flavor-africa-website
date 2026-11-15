@@ -4,13 +4,13 @@
 // then fall back to the saved copy, so a slow network never leaves a blank screen and saved stories open offline.
 // The stylesheet and app code are served from the phone and refreshed in the background. Photos likewise.
 // Bump VERSION if this file ever changes in a way that should clear old copies.
-var VERSION = "fa-v16";
+var VERSION = "fa-v17";
 var PAGES = VERSION + "-pages";
 var IMAGES = VERSION + "-images";
 var MAX_IMAGES = 80;
 
 self.addEventListener("install", function (e) {
-  var first = ["/", "/style.css", "/favicon.svg", "/icons/app-192.png", "/app/app.css", "/app/app.js", "/app/feed.json", "/app/trivia.js", "/app/trivia.json", "/app/trivia.css", "/live"];
+  var first = ["/", "/style.css", "/favicon.svg", "/icons/app-192.png", "/app/app.css", "/app/app.js", "/app/feed.json", "/app/trivia.js", "/app/trivia.json", "/app/trivia.css", "/app/connections.js", "/app/connections.json", "/app/connections.css", "/live"];
   // straight from the server, never the phone's browser cache (15 Nov 2026)
   e.waitUntil(caches.open(PAGES).then(function (c) {
     return Promise.all(first.map(function (u) {
