@@ -74,6 +74,7 @@ STORIES = [
  ("idris-elba-kenya-creative-economy", ["news", "money"], "The Wrap", "Kenya signs a creative economy deal with Idris Elba", "Funding, AI training and global market access for young Kenyan creatives.", "wr-idris-elba.jpg", "2026-11-06T17:10", "70% 25%"),
  ("joshua-baraka-visa-ambassador", ["news", "music"], "The Wrap", "Joshua Baraka becomes Visa's first Ugandan brand ambassador", "The deal starts with his B'rakaland EA show in Kampala on 28 November.", "wr-joshua-baraka.jpg", "2026-11-06T17:20", "40% 25%"),
  ("kenyan-stars-latin-grammys-2026", ["news", "music"], "The Wrap", "Ssaru, Nikita Kering\u2019, Fancy Fingers and Azeezah at the 2026 Latin Grammys", "Four Kenyan names in Las Vegas for the 27th Latin Grammy Awards.", "wr-latin-grammys.jpg", "2026-11-14T12:00", "70% 30%"),
+ ("fela-kuti-sade-rock-hall-of-fame-2026", ["news", "music"], "The Wrap", "Fela Kuti and Sade enter the Rock & Roll Hall of Fame", "Two Nigerian-born legends, honoured on the same night in Los Angeles. Fela is the first African-born solo artist in the Hall.", "rh2026-fela-fists.jpg", "2026-11-15T18:50", "center 30%"),
 ]
 
 SECTIONS = {  # slug: (heading on page, empty message)
@@ -94,6 +95,7 @@ EDITION = {
  "idris-elba-kenya-creative-economy": "Local", "joshua-baraka-visa-ambassador": "Continental",
  "tems-children-of-blood-and-bone-soundtrack": "Continental",
  "kenyan-stars-latin-grammys-2026": "Local",
+ "fela-kuti-sade-rock-hall-of-fame-2026": "Continental",
 }
 # Fan Seat in the app (added 10 Nov 2026): set this when a Flavor Artist Live artist is confirmed and the app's Live tab
 # starts taking fans' questions for them; set it back to None to close it. "show" is a short code for that show.
