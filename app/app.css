@@ -316,3 +316,7 @@ html.fa-d-open body>*:not(.fa-daily){visibility:hidden}
 .fa-mix h3{margin:12px 0 2px;font-family:var(--head);font-weight:600;font-size:24px;line-height:1.05;text-transform:uppercase}
 .fa-mix p{margin:0;font-size:14px;color:var(--mute)}
 .fa-mix .yt{display:inline-flex;align-items:center;min-height:34px;margin-top:10px;padding:0 13px;border-radius:17px;background:var(--tint);color:var(--accent);font-size:13px;font-weight:600;text-decoration:none}
+
+/* Featured track at the top of Flavor FM (15 Nov 2026) */
+.fa-feat li.one .n{display:none}
+.fa-feat>p{margin:8px 0 0;font-size:14px;line-height:1.5;color:var(--mute)}

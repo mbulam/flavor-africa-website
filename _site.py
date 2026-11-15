@@ -131,6 +131,11 @@ FLAVOR_FM = {"title": "Sunday Reset", "dates": "15 - 21 Nov", "blurb": "Slow it 
         ["Good Days", "SZA"],
     ],
     "spotify": "", "apple": "", "youtube": ""}
+# Featured track (added 15 Nov 2026): one song pinned at the top of Flavor FM in the app, e.g. a paid
+# "Flavor FM Featured Track" for an artist. Set to None to hide it. Use the artist's official streaming links.
+# Example: FLAVOR_FM_FEATURED = {"t": "Song", "a": "Artist", "dates": "16 - 22 Nov",
+#   "why": "One line on why we picked it.", "spotify": "https://open.spotify.com/track/...", "apple": "", "youtube": ""}
+FLAVOR_FM_FEATURED = None
 # The Mix (added 14 Nov 2026): a DJ mix at the top of the Flavor FM tab in the app. "youtube" is the video id
 # (the part after youtu.be/). Leave title or dj blank and the card says "The Flavor Mix". Set FLAVOR_MIX = None to hide it.
 FLAVOR_MIX = {"youtube": "we_LnIwQO3g", "title": "Raw & Unkut x Kareka The Entertainer",
@@ -575,7 +580,7 @@ def build_app_feed():
         if ed.get("songs"):
             f10 = {"t": ed["songs"][0]["title"], "a": ed["songs"][0]["artist"], "label": ed.get("label", ""), "id": ed["songs"][0].get("apple", ""),
                    "songs": [{"t": x["title"], "a": x["artist"]} for x in ed["songs"]]}
-    out = {"hero": sorted(HERO)[0] if HERO else "", "f10": f10, "fanseat": FAN_SEAT, "fm": FLAVOR_FM, "mix": FLAVOR_MIX,
+    out = {"hero": sorted(HERO)[0] if HERO else "", "f10": f10, "fanseat": FAN_SEAT, "fm": FLAVOR_FM, "feat": FLAVOR_FM_FEATURED, "mix": FLAVOR_MIX,
            "stories": [{"s": s[0], "c": s[1], "t": s[2], "h": s[3], "d": s[4], "i": "img/" + s[5], "p": s[6], "o": s[7]}
                        for s in newest(STORIES)]}
     with open(os.path.join(SITE, "app", "feed.json"), "w") as f:

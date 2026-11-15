@@ -242,6 +242,14 @@
       return '<li class="' + (cls || "") + '"><button type="button" data-tr="' + i + '"><span class="n">' + n + '</span><span class="fa-art" data-art="' + esc(k) + '"></span><span class="tx"><b>' + esc(t) + "</b><em>" + esc(a) + '</em></span><span class="pp" aria-hidden="true">' + PLAY + "</span></button></li>";
     }
     var html = '<div class="fa-fm-hd"><h2>Flavor FM</h2><p>' + (fm ? "Our picks this week, and what Kenya's playing." : "What Kenya's playing, updated every day.") + "</p></div>";
+    // Featured track (15 Nov 2026): one song pinned at the top of Flavor FM, set in FLAVOR_FM_FEATURED in _site.py
+    var ft = feed.feat;
+    if (ft && ft.t && ft.a) {
+      html += '<section class="fa-feat"><span class="k">Featured track' + (ft.dates ? " · " + esc(ft.dates) : "") + "</span><ol>" + row(ft.t, ft.a, "", "one") + "</ol>" + (ft.why ? "<p>" + esc(ft.why) + "</p>" : "");
+      var fo = [["spotify", "Spotify"], ["apple", "Apple Music"], ["youtube", "YouTube"]].filter(function (o) { return ft[o[0]]; });
+      if (fo.length) html += '<div class="fa-fm-out"><span>Listen on</span>' + fo.map(function (o) { return '<a href="' + esc(ft[o[0]]) + '" target="_blank" rel="noopener">' + o[1] + "</a>"; }).join("") + "</div>";
+      html += "</section>";
+    }
     var mix = feed.mix;
     if (mix && /^[\w-]{11}$/.test(mix.youtube || "")) {
       html += '<section class="fa-mix"><span class="k">The Mix</span><button type="button" class="fa-mix-v" data-mix aria-label="Play the mix"><img alt="" loading="lazy" onerror="this.remove()" src="https://i.ytimg.com/vi/' + mix.youtube + '/hqdefault.jpg"><span class="pl">' + PLAY + "</span></button>" +
