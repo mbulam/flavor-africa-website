@@ -164,3 +164,14 @@ APP: ALERTS, NOW-PLAYING BAR, PULL TO REFRESH (added 11 Nov 2026)
 - Fan Seat is app/fanseat.js and shows on the website too: a slim strip at the top of Home, the full form on Live.
 - The "add to home screen" banner (_site.py) tells people inside Instagram, the Google app etc. to open the page
   in Safari or Chrome first, because those mini browsers can't add to the home screen.
+
+APP UPDATES WITHOUT REINSTALLING (fixed 15 Nov 2026)
+- Each time the app opens or comes back to the front it asks for /app/version.txt. If it changed, the app
+  clears its saved pages and code (photos stay), fetches app.js, app.css, feed.json and the page straight from
+  the server (skipping the phone's own browser cache, which on iPhone could hand back the old copy and leave the
+  app one update behind), then reloads.
+- Pulling down to refresh does the same, so a pull always shows the newest version.
+- sw.js fetches with "no-cache" (always checks with the server). Bumping VERSION in sw.js also makes open app
+  screens reload themselves onto the new version.
+- version.txt is written by _site.py. If you change app files by hand without running _site.py, update
+  version.txt too (any new value works), or phones won't know there's an update.

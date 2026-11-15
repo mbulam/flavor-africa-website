@@ -33,6 +33,21 @@
 
   var page = (location.pathname.split("/").pop() || "index.html").replace(/\.html$/, "") || "index";
 
+  // Clear the phone's saved pages and code (photos stay), fetch the app's own files straight from the server
+  // (cache "reload" skips the phone's browser cache too, which on iPhone could hand back the old copy and leave
+  // the app one update behind), then reload. Used by the update check and by pull to refresh (15 Nov 2026).
+  function freshen() {
+    var core = ["/", "/index.html", "/app/app.js", "/app/app.css", "/app/fanseat.js", "/app/feed.json", "/style.css", location.pathname];
+    var wipe = window.caches ? caches.keys().then(function (ks) {
+      return Promise.all(ks.filter(function (k) { return k.indexOf("-images") < 0; }).map(function (k) { return caches.delete(k); }));
+    }) : Promise.resolve();
+    var go = function () { location.reload(); };
+    wipe.catch(function () {}).then(function () {
+      return Promise.all(core.map(function (u) { return fetch(u, { cache: "reload", credentials: "same-origin" }).catch(function () {}); }));
+    }).then(go, go);
+    setTimeout(go, 6000); // never leave the reader waiting on a slow network
+  }
+
   // Updates without reinstalling (14 Nov 2026): each time the app opens or comes back to the front, ask the
   // server for the site's fingerprint. If it changed since last time, clear the saved pages and code (photos stay)
   // and reload once, so the phone shows the new version straight away.
@@ -47,10 +62,7 @@
         var had = store.get(K, "");
         store.set(K, v);
         if (!had || had === v) return;
-        var wipe = window.caches ? caches.keys().then(function (ks) {
-          return Promise.all(ks.filter(function (k) { return k.indexOf("-images") < 0; }).map(function (k) { return caches.delete(k); }));
-        }) : Promise.resolve();
-        wipe.catch(function () {}).then(function () { location.reload(); });
+        freshen();
       }).catch(function () { busy = false; });
     }
     check();
@@ -565,9 +577,7 @@
     function open() { return [].some.call(document.querySelectorAll(".fa-daily,.fa-sheet,#drawer"), function (x) { return !x.hidden && x.offsetParent !== null; }); }
     function refresh() {
       busy = true; dot.classList.add("go");
-      var here = location.origin + (location.pathname.replace(/\.html$/, "").replace(/\/index$/, "/") || "/");
-      var wipe = window.caches ? caches.keys().then(function (ns) { return Promise.all(ns.filter(function (n) { return /-pages$/.test(n); }).map(function (n) { return caches.open(n).then(function (c) { return Promise.all([c.delete(here), c.delete(location.origin + "/app/feed.json")]); }); })); }) : Promise.resolve();
-      wipe.catch(function () {}).then(function () { location.reload(); });
+      freshen(); // a pull always brings the newest version of everything, app code included (15 Nov 2026)
     }
     document.addEventListener("touchstart", function (e) { y0 = (window.scrollY <= 0 && !busy && e.touches.length === 1 && !open()) ? e.touches[0].clientY : null; dy = 0; }, { passive: true });
     document.addEventListener("touchmove", function (e) {

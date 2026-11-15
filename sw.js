@@ -4,23 +4,34 @@
 // then fall back to the saved copy, so a slow network never leaves a blank screen and saved stories open offline.
 // The stylesheet and app code are served from the phone and refreshed in the background. Photos likewise.
 // Bump VERSION if this file ever changes in a way that should clear old copies.
-var VERSION = "fa-v13";
+var VERSION = "fa-v14";
 var PAGES = VERSION + "-pages";
 var IMAGES = VERSION + "-images";
 var MAX_IMAGES = 80;
 
 self.addEventListener("install", function (e) {
   var first = ["/", "/style.css", "/favicon.svg", "/icons/app-192.png", "/app/app.css", "/app/app.js", "/app/feed.json", "/live"];
+  // straight from the server, never the phone's browser cache (15 Nov 2026)
   e.waitUntil(caches.open(PAGES).then(function (c) {
-    return Promise.all(first.map(function (u) { return c.add(u).catch(function () {}); }));
+    return Promise.all(first.map(function (u) {
+      return fetch(u, { cache: "reload", credentials: "same-origin" }).then(function (r) { if (r.ok) return c.put(u, r); }).catch(function () {});
+    }));
   }).then(function () { return self.skipWaiting(); }));
 });
 
 self.addEventListener("activate", function (e) {
+  // When this replaces an older version, open app screens reload themselves onto the new one (15 Nov 2026).
+  var update = false;
   e.waitUntil(caches.keys().then(function (keys) {
-    return Promise.all(keys.filter(function (k) { return k.indexOf(VERSION) !== 0; })
-      .map(function (k) { return caches.delete(k); }));
-  }).then(function () { return self.clients.claim(); }));
+    var old = keys.filter(function (k) { return k.indexOf(VERSION) !== 0; });
+    update = old.length > 0;
+    return Promise.all(old.map(function (k) { return caches.delete(k); }));
+  }).then(function () { return self.clients.claim(); }).then(function () {
+    if (!update) return;
+    return self.clients.matchAll({ type: "window" }).then(function (list) {
+      list.forEach(function (c) { try { if ("navigate" in c) c.navigate(c.url).catch(function () {}); } catch (x) {} });
+    });
+  }));
 });
 
 function trim(name, max) {
@@ -46,7 +57,8 @@ var FRESH = 10 * 60 * 1000, WAIT = 1500, flying = {};
 // fetch a page or file, keep a time-stamped copy, and share the request if it is already under way
 function pull(key) {
   if (flying[key]) return flying[key].then(function (r) { return r.clone(); });
-  var p = fetch(key, { credentials: "same-origin" }).then(function (res) {
+  // "no-cache": always check with the server, so an old copy in the phone's browser cache can never come back (15 Nov 2026)
+  var p = fetch(key, { credentials: "same-origin", cache: "no-cache" }).then(function (res) {
     if (!res.ok) return res;
     return res.blob().then(function (body) {
       var h = new Headers(res.headers); h.set("x-fa-at", String(Date.now()));
