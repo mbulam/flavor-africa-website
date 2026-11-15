@@ -1,0 +1,35 @@
+{
+  "_how": "Flavor Trivia (added 16 Nov 2026). One set per date (Nairobi time). Each set: theme, img (photo for the card), qs = 10 questions. Each question: q, a (4 options), c (index of the right option, 0-3), x (one line shown after answering), s (optional story slug for 'Read our story'). Every answer checked against 2+ sources before it goes in. Week: Mon Music, Tue Art & Film, Wed African Brands, Thu Countries, Fri Awards, Sat Sport, Sun History. A day with no set simply hides the Trivia card.",
+  "sets": {
+    "2026-11-16": {
+      "theme": "Music", "img": "img/ay-live.jpg",
+      "qs": [
+        {"q": "Bien, Savara, Chimano and Polycarp made up which Kenyan band?", "a": ["Elani", "Sauti Sol", "H_art the Band", "Camp Mulla"], "c": 1, "x": "They started as an a cappella trio at Upper Hill School, and guitarist Polycarp joined later.", "s": "savara"},
+        {"q": "Manu Dibango's 1972 hit \"Soul Makossa\" came from which country?", "a": ["Nigeria", "Ghana", "Cameroon", "Senegal"], "c": 2, "x": "It started life as a B-side, recorded for Cameroon's hosting of the 1972 Africa Cup of Nations.", "s": "soul-makossa"},
+        {"q": "Which Afrobeat pioneer entered the Rock & Roll Hall of Fame in 2026?", "a": ["Tony Allen", "Fela Kuti", "King Sunny Adé", "Femi Kuti"], "c": 1, "x": "He went in under the Early Influence award. Sade was inducted the same year.", "s": "fela-kuti-sade-rock-hall-of-fame-2026"},
+        {"q": "Wizkid's \"Made in Lagos\" came out in which year?", "a": ["2019", "2020", "2021", "2018"], "c": 1, "x": "It was due on 15 October 2020, but he pushed it to 30 October because of the End SARS protests.", "s": "made-in-lagos"},
+        {"q": "The rapper and producer tg.blk is from which Kenyan city?", "a": ["Kisumu", "Nakuru", "Mombasa", "Eldoret"], "c": 2, "x": "She taught herself to rap and produce in her bedroom, on GarageBand.", "s": "tg-blk"},
+        {"q": "Which South African singer was known as \"Mama Africa\"?", "a": ["Brenda Fassie", "Miriam Makeba", "Yvonne Chaka Chaka", "Letta Mbulu"], "c": 1, "x": "Born in Johannesburg in 1932, she spent about 30 years in exile for speaking out against apartheid."},
+        {"q": "Burna Boy won his first Grammy with which album?", "a": ["African Giant", "Twice as Tall", "Love, Damini", "I Told Them..."], "c": 1, "x": "It won Best Global Music Album in 2021, a year after African Giant lost in the same category."},
+        {"q": "Tyla won the first-ever Grammy for Best African Music Performance with which song?", "a": ["Water", "Truth or Dare", "Jump", "Push 2 Start"], "c": 0, "x": "It was the category's first year, at the 2024 Grammys, and she beat Burna Boy and Davido to it."},
+        {"q": "\"Jerusalema\" by Master KG featuring Nomcebo is sung in which language?", "a": ["Xhosa", "Zulu", "Sotho", "Swahili"], "c": 1, "x": "Burna Boy later jumped on the song for its remix."},
+        {"q": "Diamond Platnumz founded which record label?", "a": ["Konde Music Worldwide", "WCB Wasafi", "Kings Music", "Sol Generation"], "c": 1, "x": "It's based in Dar es Salaam, and its artists have included Zuchu and Mbosso."}
+      ]
+    },
+    "2026-11-17": {
+      "theme": "Art & Film", "img": "img/tm-cover.jpg",
+      "qs": [
+        {"q": "Lupita Nyong'o won her Oscar for which film?", "a": ["Black Panther", "12 Years a Slave", "Us", "Queen of Katwe"], "c": 1, "x": "It was her first feature film role. She won Best Supporting Actress in 2014.", "s": "lupita-in-their-words"},
+        {"q": "Who directed \"Rafiki\", the first Kenyan feature film at Cannes?", "a": ["Wanuri Kahiu", "Likarion Wainaina", "Ng'endo Mukii", "Angela Wamai"], "c": 0, "x": "Kenya's film board banned it at home just before its 2018 Cannes premiere."},
+        {"q": "FESPACO, Africa's biggest and oldest film festival, is held in which city?", "a": ["Dakar", "Ouagadougou", "Lagos", "Marrakech"], "c": 1, "x": "It started in 1969 and runs every two years in Burkina Faso's capital."},
+        {"q": "In Thandiwe Muriu's photo series \"Camo\", the women…", "a": ["Wear only black and white", "Blend into a background of the same fabric", "Pose at famous landmarks", "Are painted gold"], "c": 1, "x": "She's a self-taught Nairobi photographer who picked up a camera at 14.", "s": "thandiwe-muriu"},
+        {"q": "Who directed the Kenyan film \"Supa Modo\"?", "a": ["Ng'endo Mukii", "Likarion Wainaina", "Wanuri Kahiu", "Biyi Bandele"], "c": 1, "x": "It premiered at the 2018 Berlin film festival and was Kenya's Oscar entry that year."},
+        {"q": "Ghanaian sculptor El Anatsui makes his famous shimmering tapestries out of…", "a": ["Glass beads", "Bottle caps", "Old phones", "Fabric scraps"], "c": 1, "x": "He flattens liquor-bottle caps and stitches them together with copper wire."},
+        {"q": "Ousmane Sembène, called the \"father of African cinema\", was from which country?", "a": ["Senegal", "Mali", "Burkina Faso", "Guinea"], "c": 0, "x": "He was a novelist first, and turned to film so more people could reach his stories."},
+        {"q": "Which South African film won the Oscar for Best Foreign Language Film in 2006?", "a": ["District 9", "Tsotsi", "Yesterday", "Sarafina!"], "c": 1, "x": "It was the first South African film ever to win an Oscar."},
+        {"q": "What was Netflix's first African original series?", "a": ["Blood & Water", "Queen Sono", "Shanty Town", "Savage Beauty"], "c": 1, "x": "The South African spy thriller, starring Pearl Thusi, premiered in February 2020."},
+        {"q": "Nollywood is the film industry of which country?", "a": ["Ghana", "Nigeria", "Kenya", "South Africa"], "c": 1, "x": "By number of films made, it's the second-biggest film industry in the world, after India's."}
+      ]
+    }
+  }
+}

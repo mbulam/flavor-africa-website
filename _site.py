@@ -146,6 +146,13 @@ FAN_SEAT = {"show": "2026-11-anwar-saa-zone", "artist": "Anwar",
             "blurb": "What should we ask him? The best questions go into the interview.",
             "done": "We'll take the best ones into the interview."}
 HERO = {"nairobi-new-sound"}   # the big top story (hand-set in index.html)
+# Today's picks (added 16 Nov 2026): the top of Today in the app. "Play this" is always the Flavor 10 No. 1.
+# "know" is a story slug (know_name / know_line override its headline and teaser). "show" is one thing to show up for:
+# t (name), d (one line), i (photo in img/), href (where the tap goes). Set TODAYS_PICKS = None to go back to the cover story.
+TODAYS_PICKS = {"know": "tg-blk", "know_name": "tg.blk",
+                "know_line": "The Mombasa bedroom producer opening doors for alternative music.",
+                "show": {"t": "Ngoma na Marafiki", "d": "Ayrosh is on the line-up. Date coming soon.",
+                         "i": "img/ay-live.jpg", "o": "center 40%", "href": "/live.html"}}
 # Editor's picks rotate every day from the long-form stories of the last PICK_DAYS days.
 PICK_TAGS = {"The Flavor Cover", "Flavor Feature", "Money Moves", "Flavor Roots", "Flavor Rewind", "Flavor Decoded",
              "The Verdict", "Flavor Spotlight", "In Their Words", "Flavor Fashion", "Flavor Artist Live"}
@@ -580,7 +587,7 @@ def build_app_feed():
         if ed.get("songs"):
             f10 = {"t": ed["songs"][0]["title"], "a": ed["songs"][0]["artist"], "label": ed.get("label", ""), "id": ed["songs"][0].get("apple", ""),
                    "songs": [{"t": x["title"], "a": x["artist"]} for x in ed["songs"]]}
-    out = {"hero": sorted(HERO)[0] if HERO else "", "f10": f10, "fanseat": FAN_SEAT, "fm": FLAVOR_FM, "feat": FLAVOR_FM_FEATURED, "mix": FLAVOR_MIX,
+    out = {"hero": sorted(HERO)[0] if HERO else "", "f10": f10, "fanseat": FAN_SEAT, "picks": TODAYS_PICKS, "fm": FLAVOR_FM, "feat": FLAVOR_FM_FEATURED, "mix": FLAVOR_MIX,
            "stories": [{"s": s[0], "c": s[1], "t": s[2], "h": s[3], "d": s[4], "i": "img/" + s[5], "p": s[6], "o": s[7]}
                        for s in newest(STORIES)]}
     with open(os.path.join(SITE, "app", "feed.json"), "w") as f:
@@ -592,7 +599,7 @@ def write_version():
     # the app clears its saved pages and reloads, so updates arrive without reinstalling (14 Nov 2026).
     import hashlib
     h = hashlib.sha1()
-    files = sorted(f for f in os.listdir(SITE) if f.endswith(".html")) + ["style.css", "app/app.js", "app/app.css", "app/fanseat.js", "app/feed.json"]
+    files = sorted(f for f in os.listdir(SITE) if f.endswith(".html")) + ["style.css", "app/app.js", "app/app.css", "app/fanseat.js", "app/feed.json", "app/trivia.js", "app/trivia.json"]
     for f in files:
         fp = os.path.join(SITE, f)
         if os.path.exists(fp):
