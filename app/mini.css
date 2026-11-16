@@ -1,0 +1,46 @@
+/* Flavor Mini (added 16 Nov 2026). Loaded by app/mini.js on mini.html (website and app) and on the Games page. Same look as Flavor Connections. */
+.fa-mn-page{max-width:560px;margin:0 auto;padding-top:14px;padding-bottom:44px;font-family:var(--fx-font,var(--body));color:var(--ink);min-height:70vh}
+html.app .fa-mn-page{padding-left:16px;padding-right:16px}
+.fa-mn-page button{font-family:inherit}
+.fa-mn-time{margin-top:14px;text-align:center;font-size:13px;color:var(--fx-mute,var(--mute))}
+.fa-mn-time b{font-size:17px;font-weight:700;color:var(--fx-ink,var(--ink));font-variant-numeric:tabular-nums;margin-left:4px}
+.fa-mn-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;padding:2px;margin:14px auto 0;max-width:360px;background:var(--fx-ink,#0b0b0b);border-radius:6px}
+.fa-mn-c{position:relative;aspect-ratio:1;border:0;padding:0;margin:0;background:var(--fx-bg,#fff);color:var(--fx-ink,#0b0b0b);font-weight:700;font-size:clamp(22px,7.5vw,32px);line-height:1;text-transform:uppercase;display:grid;place-items:center;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.fa-mn-c:first-child{border-top-left-radius:4px}.fa-mn-c:nth-child(5){border-top-right-radius:4px}.fa-mn-c:nth-child(21){border-bottom-left-radius:4px}.fa-mn-c:last-child{border-bottom-right-radius:4px}
+.fa-mn-c.b{background:var(--fx-ink,#0b0b0b);cursor:default}
+.fa-mn-c em{position:absolute;top:3px;left:5px;font-style:normal;font-size:11px;font-weight:600;color:var(--fx-mute,#6b6b6b)}
+.fa-mn-c.w{background:#FBEBB3;color:#0b0b0b}
+.fa-mn-c.on{background:#F5CC11;color:#0b0b0b}
+.fa-mn-c.w em,.fa-mn-c.on em{color:#3e3e48}
+.fa-mn-bar{display:flex;align-items:center;gap:6px;margin:14px auto 0;max-width:360px;padding:4px;border-radius:12px;background:var(--fx-soft,#f3f3f3)}
+.fa-mn-bar button{flex:0 0 44px;height:44px;border:0;background:none;color:var(--fx-ink,#0b0b0b);display:grid;place-items:center;cursor:pointer}
+.fa-mn-bar svg{width:18px;height:18px}
+.fa-mn-cl{flex:1;margin:0;font-size:15px;line-height:1.35;color:var(--fx-ink,#0b0b0b)}
+.fa-mn-cl b{margin-right:4px}
+.fa-mn-toast{margin-top:10px;min-height:20px;text-align:center;font-size:14px;font-weight:600;color:var(--fx-ink,#0b0b0b);opacity:0;transition:opacity .2s}
+.fa-mn-toast.show{opacity:1}
+.fa-mn-lists{margin-top:18px;display:flex;flex-direction:column;gap:16px}
+.fa-mn-lists h2{margin:0 0 4px 10px;font-size:13px;font-weight:700;color:var(--fx-mute,#6b6b6b);text-transform:none;letter-spacing:0;font-family:inherit}
+.fa-mn-lists ol{margin:0;padding:0;list-style:none}
+.fa-mn-lists button{display:flex;gap:12px;width:100%;padding:9px 10px;border:0;border-radius:8px;background:none;text-align:left;font-size:14px;line-height:1.4;color:var(--fx-ink,#0b0b0b);cursor:pointer}
+.fa-mn-lists button b{flex:0 0 14px}
+.fa-mn-lists button.on{background:#FBEBB3;color:#0b0b0b}
+.fa-mn-lists i{font-style:normal;font-weight:700;letter-spacing:.04em;margin-left:4px}
+.fa-mn-in{position:fixed;left:0;bottom:0;width:1px;height:1px;opacity:0;border:0;padding:0;font-size:16px}
+.fa-mn-end{margin-top:18px;padding:22px 18px;border:1px solid var(--fx-line,#ececec);border-radius:6px;text-align:center}
+.fa-mn-end h2{margin:0;font-size:26px;font-weight:700;letter-spacing:-.02em;text-transform:uppercase;color:var(--fx-ink,#0b0b0b)}
+.fa-mn-end p{margin:6px 0 0;font-size:15px;color:var(--fx-mute,#6b6b6b);font-variant-numeric:tabular-nums}
+.fa-mn-go{display:block;width:100%;height:52px;margin-top:12px;border:0;border-radius:26px;background:var(--fx-ink,#0b0b0b);color:var(--fx-bg,#fff);font-size:15px;font-weight:700;cursor:pointer}
+.fa-mn-more{display:block;margin-top:22px;text-align:center;font-size:14px;font-weight:600;color:var(--fx-ink,#0b0b0b);text-decoration:none}
+.fa-mn-note{margin:14px 0 0;font-size:13px;line-height:1.45;color:var(--fx-mute,#6b6b6b);text-align:center}
+.fa-mn-rem:not(:empty){margin-top:14px}
+.fa-mn-rem .fx-btn{min-height:38px;padding:0 16px;font-size:13px}
+/* the little grid on the Games card */
+.fa-mn-ic{flex:0 0 auto;display:grid;grid-template-columns:repeat(5,10px);gap:2px;padding:3px;border:1.5px solid var(--fx-ink,#0b0b0b);border-radius:3px}
+.fa-mn-ic i{width:10px;height:10px;background:var(--fx-line,#ececec)}
+.fa-mn-ic i.b{background:var(--fx-ink,#0b0b0b)}
+.fa-mn-ic i.y{background:#F5CC11}
+/* title, when Connections' styles aren't on the page */
+.fa-mn-page .fa-cx-head h1{font-family:var(--fx-font,var(--body));font-optical-sizing:auto;text-transform:uppercase;letter-spacing:-.015em;line-height:.98;margin:0;font-size:clamp(28px,8.5vw,38px);color:var(--fx-ink,var(--ink))}
+.fa-mn-page .fa-cx-head .l{font-weight:300}.fa-mn-page .fa-cx-head b{font-weight:700}
+.fa-mn-page .fa-cx-head p{margin:8px 0 0;font-size:14px;line-height:1.5;color:var(--fx-mute,var(--mute))}

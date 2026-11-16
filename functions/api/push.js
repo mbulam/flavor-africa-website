@@ -124,6 +124,7 @@ async function games(request, env, day) {
   const on = {};
   try { const d = await (await env.ASSETS.fetch(new URL("/app/trivia.json", request.url))).json(); const s = d && d.sets && d.sets[day]; if (s && s.qs && s.qs.length) on.trivia = s; } catch (e) {}
   try { const d = await (await env.ASSETS.fetch(new URL("/app/connections.json", request.url))).json(); const z = d && d.puzzles && d.puzzles[day]; if (z && z.groups) on.connections = z; } catch (e) {}
+  try { const d = await (await env.ASSETS.fetch(new URL("/app/mini.json", request.url))).json(); const m = d && d.puzzles && d.puzzles[day]; if (m && m.g) on.mini = m; } catch (e) {}
   return on;
 }
 // send the reminders whose hour has come; returns true if there are more to send
@@ -131,7 +132,7 @@ async function due(db, request, env) {
   const now = nairobi(), day = now.slice(0, 10), hour = +now.slice(11, 13);
   const on = await games(request, env, day);
   let more = false;
-  for (const game of ["trivia", "connections"]) {
+  for (const game of ["trivia", "connections", "mini"]) {
     if (!on[game]) continue;
     const rows = (await db.prepare("SELECT endpoint FROM rem WHERE game = ? AND hour <= ? AND sent <> ? AND last <> ? LIMIT ?").bind(game, hour, day, day, BATCH).all()).results || [];
     if (!rows.length) continue;
@@ -154,6 +155,12 @@ async function reminderWords(r, request, env) {
     const name = s ? clean(s.theme, 30) + " " + DAYS[new Date(Date.now() + 108e5).getUTCDay()] : "Today's Flavor Trivia";
     return { n: "tv-" + day, url: "/trivia", title: alive ? "Your " + r.streak + "-day streak ends at midnight" : "Today's ten close at midnight",
       body: name + " is still waiting. Ten questions, fifteen seconds each." };
+  }
+  if (r.game === "mini") {
+    const on = await games(request, env, day), m = on.mini;
+    return { n: "mn-" + day, url: "/mini",
+      title: alive ? "Your " + r.streak + "-day Mini streak ends at midnight" : r.started === day ? "Your crossword is half done" : "Today's Mini is still blank",
+      body: (m ? clean(m.theme, 30) + " theme. " : "") + "Five across, five down, and the grid closes at midnight." };
   }
   return { n: "cx-" + day, url: "/connections",
     title: alive ? "Your " + r.streak + "-day Connections streak ends at midnight" : r.started === day ? "Your Connections puzzle is still open" : "Sixteen tiles. Four groups. Zero found.",
@@ -252,7 +259,7 @@ export async function onRequest({ request, env }) {
     if (endpoint.length > 1000 || !allowed(endpoint, env)) return out({ ok: false, error: "bad-endpoint" }, 400);
     if (b.off) { await db.prepare("DELETE FROM subs WHERE endpoint = ?").bind(endpoint).run(); return out({ ok: true, on: false }); }
     const id = /^[a-z0-9]{16,40}$/.test(String(b.id || "")) ? String(b.id) : "";
-    const game = b.game === "connections" ? "connections" : b.game === "trivia" || b.remind !== undefined ? "trivia" : "";
+    const game = b.game === "connections" ? "connections" : b.game === "mini" ? "mini" : b.game === "trivia" || b.remind !== undefined ? "trivia" : "";
     if (game && b.played) {   // the phone finished (or started) today's game
       const p = b.played, day = /^\d{4}-\d\d-\d\d$/.test(String(p.day || "")) ? String(p.day) : nairobi().slice(0, 10);
       const n = Math.max(0, Math.min(9999, parseInt(p.streak, 10) || 0));

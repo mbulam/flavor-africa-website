@@ -189,3 +189,8 @@ FLAVOR CONNECTIONS (added 16 Nov 2026)
   puzzles; every fact is checked against 2+ sources. A day with no puzzle hides the Today card.
 - Code: app/connections.js + app/connections.css. Both are in sw.js, app.js's update list and _site.py's
   write_version, so phones pick up changes on their own.
+
+FLAVOR MINI (added 16 Nov 2026)
+A 5x5 crossword a day on the Games page, on the same theme as that day's Flavor Trivia but never reusing a trivia
+question. Page: mini.html. Code: app/mini.js, app/mini.css. Puzzles: app/mini.json, one per Nairobi date (how to
+write one is at the top of that file). A day with no puzzle hides the card. Reminders work like Trivia and Connections.

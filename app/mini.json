@@ -1,0 +1,41 @@
+{
+  "_how": "Flavor Mini (added 16 Nov 2026): a 5x5 crossword a day, on the same theme as that day's Flavor Trivia, but never reusing a trivia question or answer. One puzzle per date (Nairobi time). g = 5 rows of 5 letters, # for a black square. a and d = the Across and Down clues, keyed by the number in the grid (numbers run left to right, top to bottom, on any square that starts a word). Every fact in a clue is checked against 2+ sources before it goes in. A day with no puzzle hides the card.",
+  "puzzles": {
+    "2026-11-16": {
+      "theme": "Music",
+      "g": ["#ROHO", "SALON", "OTILE", "LIVES", "DOES#"],
+      "a": {
+        "1": "Swahili for soul, and love songs can't stop saying it",
+        "5": "Where the braids get done before the video shoot",
+        "6": "___ Brown, the voice behind \"Chaguo La Moyo\"",
+        "7": "IG ___, where artists tease songs that aren't out yet",
+        "8": "___ the most, like any good hype man"
+      },
+      "d": {
+        "1": "What a bad hot take gets on X",
+        "2": "___ branch, held out when two rappers end a beef",
+        "3": "A flute player covers these",
+        "4": "Number ___, where every single wants to land",
+        "5": "___ out: the best two words on a ticket page"
+      }
+    },
+    "2026-11-17": {
+      "theme": "Art & Film",
+      "g": ["#CAST", "MARCO", "ANGEL", "SOUND", "KNEE#"],
+      "a": {
+        "1": "Everyone who acts in the film, all together",
+        "5": "___ Polo, the explorer Netflix built a 2014 series around",
+        "6": "Winged figure all over Renaissance paintings",
+        "7": "The boom mic is there to catch it",
+        "8": "What a rom-com lead goes down on for the big proposal"
+      },
+      "d": {
+        "1": "Jim Carrey film with a green face, with \"The\"",
+        "2": "The films that officially count in a franchise",
+        "3": "What two critics do over Best Picture",
+        "4": "A director shoots one at a time",
+        "5": "A story well ___"
+      }
+    }
+  }
+}

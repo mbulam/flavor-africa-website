@@ -86,3 +86,11 @@ html.app .fa-tv-page{padding-left:16px;padding-right:16px}
 .fx-back{border:0;background:none;padding:10px 0;font:600 14px var(--fx-font);color:var(--fx-ink);cursor:pointer}
 html.app .fa-tv-page{padding-top:0}
 html.app .fa-tv-page .fx-games .fx-ttl{padding-top:6px}
+
+/* Trivia's card on the Games page, now the same white card as Connections and Mini (16 Nov 2026) */
+.fa-tv-dots{flex:0 0 auto;display:grid;grid-template-columns:repeat(5,12px);gap:4px}
+.fa-tv-dots i{width:12px;height:12px;border-radius:50%;background:var(--fx-line,#ececec)}
+.fa-tv-dots i.ok{background:#2A0174}
+.fa-tv-dots i.no{background:none;box-shadow:inset 0 0 0 2px var(--fx-line,#cfcfd8)}
+html[data-theme="dark"] .fa-tv-dots i.ok{background:#5B3CC4}
+@media (prefers-color-scheme:dark){html:not([data-theme="light"]) .fa-tv-dots i.ok{background:#5B3CC4}}

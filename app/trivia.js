@@ -30,13 +30,15 @@
   }
 
   // The card on Today
-  // The card on the Games page (v3, 16 Nov 2026): the app's photo card, with Play now and Remind me
+  // The card on the Games page (v4, 16 Nov 2026): the same white card as Connections and Mini. The ten dots are the ten
+  // questions; once you've played, the ones you got right fill in.
   window.faTriviaSlot = function () {
     var slot = document.querySelector(".fa-tv-slot");
     if (!slot || !set) return;
-    var r = result();
-    slot.innerHTML = '<div class="fx fx-card" style="height:340px;background-image:url(\'/' + esc(set.img) + '\');background-position:center 35%"><div class="in"><span class="k">Flavor Trivia · ' + (r ? "played today" : "today") + '</span><h2 class="fx-cap">' + title() + "</h2><p>" +
-      (r ? "You scored " + r.score + "/10 and " + r.pts + " points. A new ten lands tomorrow." : "Ten questions. Fifteen seconds each. Faster answers score more.") + '</p><div class="fx-btns"><a class="fx-btn" href="/trivia.html">' + (r ? "See your score" : "Play now") + "</a>" + remindBtn() + "</div></div></div>";
+    var r = result(), dots = "";
+    for (var i = 0; i < set.qs.length; i++) dots += "<i" + (r && r.ans ? ' class="' + (r.ans[i] === set.qs[i].c ? "ok" : "no") + '"' : "") + "></i>";
+    slot.innerHTML = '<div class="fa-cxc fx"><a href="/trivia.html" class="fa-cxc-in"><span class="tx"><span class="k">Flavor Trivia · ' + (r ? "played today" : "today") + '</span><span class="t">' + title() + '</span><span class="s">' +
+      (r ? "You scored " + r.score + "/10 and " + r.pts + " points. A new ten lands tomorrow." : "Ten questions. Fifteen seconds each. Faster answers score more.") + '</span></span><span class="fa-tv-dots" role="img" aria-label="' + (r ? r.score + " of " + set.qs.length + " right" : set.qs.length + " questions") + '">' + dots + '</span></a><div class="fx-btns"><a class="fx-btn d" href="/trivia.html">' + (r ? "See your score" : "Play now") + "</a>" + remindBtn("l") + "</div></div>";
   };
   document.addEventListener("click", function (e) { var a = e.target.closest(".fa-tv-slot [data-a=remind]"); if (a) remind(a); });
 
@@ -62,10 +64,10 @@
   var WEEK = [["Sunday", "History", "Weekly leaderboard results"], ["Monday", "Music", ""], ["Tuesday", "Art & Film", ""], ["Wednesday", "African Brands", ""], ["Thursday", "Countries", ""], ["Friday", "Awards", ""], ["Saturday", "Sport", ""]];
   var BELL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg>';
   function remindable() { return R.classList.contains("app") && window.faRemind && window.faRemind.ok; }
-  function remindBtn() {
+  function remindBtn(cls) {
     if (!remindable()) return "";
     var h = window.faRemind.is("trivia");
-    return '<button type="button" class="fx-btn o" data-a="remind" aria-pressed="' + !!h + '">' + BELL + (h ? "Reminder · " + window.faRemind.label(h) : "Remind me") + "</button>";
+    return '<button type="button" class="fx-btn ' + (cls || "o") + '" data-a="remind" aria-pressed="' + !!h + '">' + BELL + (h ? "Reminder · " + window.faRemind.label(h) : "Remind me") + "</button>";
   }
   function stats() {
     var best = 0, played = 0;
@@ -88,7 +90,7 @@
       next += '<div class="fx-row"><span class="fx-th">' + w[0].slice(0, 2) + '</span><span class="fx-tx"><i>' + (d === 1 ? "Tomorrow" : w[0]) + "</i><b>" + esc(w[1]) + "</b><em>" + (w[2] || "Ten questions") + "</em></span></div>";
     }
     box.innerHTML = '<div class="fx fx-games"><div class="fx-ttl"><h1 class="fx-cap"><span>Flavor</span> <b>Trivia</b></h1><p>A new ten every day. Same questions for everyone.</p></div>' + card + stats() +
-      '<div class="fx-sec"><h2 class="fx-cap"><b>Also</b> <span>today</span></h2></div><a class="fx-row" href="/connections.html"><span class="fx-th">?</span><span class="fx-tx"><i>Flavor Connections</i><b>Today\'s puzzle</b><em>Find the four groups of four.</em></span><span class="fx-ix"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>' +
+      '<div class="fx-sec"><h2 class="fx-cap"><b>Also</b> <span>today</span></h2></div><a class="fx-row" href="/connections.html"><span class="fx-th">?</span><span class="fx-tx"><i>Flavor Connections</i><b>Today\'s puzzle</b><em>Find the four groups of four.</em></span><span class="fx-ix"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="fx-row" href="/mini.html"><span class="fx-th">#</span><span class="fx-tx"><i>Flavor Mini</i><b>Today\'s crossword</b><em>Five across, five down, on today\'s theme.</em></span><span class="fx-ix"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>' +
       '<div class="fx-sec"><h2 class="fx-cap"><b>Coming</b> <span>up</span></h2></div>' + next + "</div>";
   }
   document.addEventListener("fa-remind-ready", function () { if (box && box.querySelector(".fx-games")) drawIntro(); if (window.faTriviaSlot) window.faTriviaSlot(); });

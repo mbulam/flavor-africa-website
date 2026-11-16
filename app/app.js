@@ -59,7 +59,7 @@
   // (cache "reload" skips the phone's browser cache too, which on iPhone could hand back the old copy and leave
   // the app one update behind), then reload. Used by the update check and by pull to refresh (15 Nov 2026).
   function freshen() {
-    var core = ["/", "/index.html", "/app/app.js", "/app/app.css", "/app/fanseat.js", "/app/feed.json", "/app/trivia.js", "/app/trivia.json", "/app/trivia.css", "/app/connections.js", "/app/connections.json", "/app/connections.css", "/app/fx.css", "/style.css", location.pathname];
+    var core = ["/", "/index.html", "/app/app.js", "/app/app.css", "/app/fanseat.js", "/app/feed.json", "/app/trivia.js", "/app/trivia.json", "/app/trivia.css", "/app/connections.js", "/app/connections.json", "/app/connections.css", "/app/mini.js", "/app/mini.json", "/app/mini.css", "/app/fx.css", "/style.css", location.pathname];
     var wipe = window.caches ? caches.keys().then(function (ks) {
       return Promise.all(ks.filter(function (k) { return k.indexOf("-images") < 0; }).map(function (k) { return caches.delete(k); }));
     }) : Promise.resolve();
@@ -293,7 +293,7 @@
   // Game reminders (16 Nov 2026): one for Flavor Trivia, one for Flavor Connections. Each has its own hour (7 pm unless
   // you pick another) and only goes out if you haven't played that game yet that day. The phone tells the server your
   // streak, so the nudge can say it ("Your 4-day streak ends at midnight"). app/trivia.js and app/connections.js use this.
-  var GAME = { trivia: { name: "Flavor Trivia", streak: "fa-tv-streak" }, connections: { name: "Flavor Connections", streak: "fa-cx-streak" } };
+  var GAME = { trivia: { name: "Flavor Trivia", streak: "fa-tv-streak" }, connections: { name: "Flavor Connections", streak: "fa-cx-streak" }, mini: { name: "Flavor Mini", streak: "fa-mn-streak" } };
   var HOURS = [7, 8, 12, 13, 17, 18, 19, 20, 21, 22];
   function hourLabel(h) { return (h % 12 || 12) + (h < 12 ? " am" : " pm"); }
   if (store.get("fa-remind", false) === true && !store.get("fa-rem-trivia", 0)) { store.set("fa-rem-trivia", 19); store.set("fa-remind", false); }
@@ -302,7 +302,7 @@
     games: GAME,
     label: hourLabel,
     is: function (g) { return +store.get("fa-rem-" + (g || "trivia"), 0) || 0; },
-    any: function () { return R2.is("trivia") || R2.is("connections"); },
+    any: function () { return R2.is("trivia") || R2.is("connections") || R2.is("mini"); },
     streak: function (g) { var s = store.get(GAME[g].streak, { last: "", n: 0 }) || {}; return { n: s.n || 0, last: s.last || "" }; },
     on: function (g, hour) {
       return push.sub().then(function (sub) { return api("/api/push", { endpoint: sub.endpoint, id: phoneId(), game: g, remind: true, hour: hour, streak: R2.streak(g) }); })
@@ -506,7 +506,7 @@
     function chart() { return home && location.hash === "#flavor-10"; }
     function setTab(t) { [].forEach.call(tabs.querySelectorAll("[data-t]"), function (x) { if (x.getAttribute("data-t") === t) x.setAttribute("aria-current", "page"); else x.removeAttribute("aria-current"); }); }
     function closeSheets() { for (var k in sheets) sheets[k].hidden = true; }
-    function curTab() { return home ? (chart() ? "f10" : "home") : page === "live" ? "live" : (page === "games" || page === "trivia" || page === "connections") ? "games" : ""; }
+    function curTab() { return home ? (chart() ? "f10" : "home") : page === "live" ? "live" : (page === "games" || page === "trivia" || page === "connections" || page === "mini") ? "games" : ""; }
     function show() {
       closeSheets();
       if (home) { R.classList.toggle("fa-s-chart", chart()); R.classList.toggle("fa-s-today", !chart()); window.scrollTo(0, 0); }
@@ -625,9 +625,9 @@
       html += sec("<b>Settings</b>") + '<div class="fx-rows">';
       if (push.ok && Notification.permission !== "denied") {
         html += sw("alerts", "Alerts", "A new No. 1 or a new Flavor Cover. Nothing else.", !!sub);
-        ["trivia", "connections"].forEach(function (g) {
+        ["trivia", "connections", "mini"].forEach(function (g) {
           var h = window.faRemind.is(g);
-          html += '<div class="fx-row"><span class="fx-tx" data-pick="' + g + '"><b>' + (g === "trivia" ? "Trivia" : "Connections") + " reminder</b><em>" + (h ? "Every day at " + window.faRemind.label(h) + ", only if you haven't played. Tap to change." : "A nudge to guard your streak, at a time you pick.") +
+          html += '<div class="fx-row"><span class="fx-tx" data-pick="' + g + '"><b>' + (g === "trivia" ? "Trivia" : g === "mini" ? "Mini crossword" : "Connections") + " reminder</b><em>" + (h ? "Every day at " + window.faRemind.label(h) + ", only if you haven't played. Tap to change." : "A nudge to guard your streak, at a time you pick.") +
             '</em></span><button type="button" class="fx-switch" role="switch" aria-checked="' + !!h + '" aria-label="' + g + ' reminder" data-sw="rem-' + g + '"></button></div>';
         });
       }
