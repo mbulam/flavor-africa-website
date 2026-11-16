@@ -147,7 +147,7 @@ FAN_SEAT = {"show": "2026-11-anwar-saa-zone", "artist": "Anwar",
             "line": "We're sitting down with Anwar Hassanali of Saa Zone",
             "blurb": "What should we ask him? The best questions go into the interview.",
             "done": "We'll take the best ones into the interview."}
-HERO = {"nairobi-new-sound"}   # the big top story (hand-set in index.html)
+HERO = {"grammys-2027-nominations"}   # the big top story (hand-set in index.html)
 # Today's picks (added 16 Nov 2026): the top of Today in the app. "Play this" is always the Flavor 10 No. 1.
 # "know" is a story slug (know_name / know_line override its headline and teaser). "show" is one thing to show up for:
 # t (name), d (one line), i (photo in img/), href (where the tap goes). Set TODAYS_PICKS = None to go back to the cover story.
