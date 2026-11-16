@@ -4,6 +4,10 @@
 //   GET  /api/push?key=<ADMIN_KEY>      -> how many phones have alerts on, and the last alerts sent (for the inbox page)
 //   POST /api/push {endpoint, id}       -> a phone switches alerts on;  {endpoint, off: true} switches them off
 //   POST /api/push {key, title, body, url}  -> the team sends an alert from the inbox page ({key, more: true} carries on a long send)
+//   POST /api/push {endpoint, id, remind: true|false} -> a phone switches the daily Flavor Trivia reminder on or off (16 Nov 2026)
+//   GET  /api/push?remind=trivia        -> sends today's trivia reminder once, from 7 pm Nairobi time (called by the
+//                                          "Trivia reminder" GitHub Action every evening; safe to call more than once)
+// Trivia reminders only go to phones that tapped "Remind me" (table remind); other alerts go to phones with alerts on (table subs).
 // Alerts also go out on their own, at most once each: when the Flavor 10 has a new No. 1 and when a new Flavor Cover
 // goes up. That check ("tick") runs whenever someone opens the app, so there is nothing to schedule.
 // Phones are only "poked" (no words travel with the poke); the phone then fetches the words from ?latest=1.
@@ -24,8 +28,15 @@ async function setup(db) {
     db.prepare("CREATE TABLE IF NOT EXISTS kv (k TEXT PRIMARY KEY, v TEXT NOT NULL)"),
     db.prepare("CREATE TABLE IF NOT EXISTS outbox (n INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, body TEXT NOT NULL, url TEXT NOT NULL, at TEXT NOT NULL, cursor TEXT NOT NULL DEFAULT '', done INTEGER NOT NULL DEFAULT 0, sent INTEGER NOT NULL DEFAULT 0)"),
     db.prepare("INSERT OR IGNORE INTO kv (k, v) VALUES ('lock', '0')"),
+    db.prepare("CREATE TABLE IF NOT EXISTS remind (endpoint TEXT PRIMARY KEY, phone TEXT, at TEXT NOT NULL)"),
   ]);
+  // each alert now says who it is for: '' = alerts list, 'trivia' = trivia reminder list (added 16 Nov 2026)
+  if ((await get(db, "schema")) !== "2") {
+    try { await db.prepare("ALTER TABLE outbox ADD COLUMN topic TEXT NOT NULL DEFAULT ''").run(); } catch (e) {}
+    await put(db, "schema", "2");
+  }
 }
+const LIST = (topic) => (topic === "trivia" ? "remind" : "subs");
 const get = async (db, k) => { const r = await db.prepare("SELECT v FROM kv WHERE k = ?").bind(k).first(); return r ? r.v : null; };
 const put = (db, k, v) => db.prepare("INSERT INTO kv (k, v) VALUES (?, ?) ON CONFLICT(k) DO UPDATE SET v = excluded.v").bind(k, String(v)).run();
 
@@ -58,9 +69,9 @@ function allowed(endpoint, env) {
 
 // send the oldest unfinished alert to the next batch of phones; returns true if there is more to do
 async function drain(db, env) {
-  const msg = await db.prepare("SELECT n, cursor FROM outbox WHERE done = 0 ORDER BY n LIMIT 1").first();
+  const msg = await db.prepare("SELECT n, cursor, topic FROM outbox WHERE done = 0 ORDER BY n LIMIT 1").first();
   if (!msg) return false;
-  const rows = (await db.prepare("SELECT endpoint FROM subs WHERE endpoint > ? ORDER BY endpoint LIMIT ?").bind(msg.cursor, BATCH).all()).results || [];
+  const rows = (await db.prepare("SELECT endpoint FROM " + LIST(msg.topic) + " WHERE endpoint > ? ORDER BY endpoint LIMIT ?").bind(msg.cursor, BATCH).all()).results || [];
   if (!rows.length) { await db.prepare("UPDATE outbox SET done = 1 WHERE n = ?").bind(msg.n).run(); return !!(await db.prepare("SELECT n FROM outbox WHERE done = 0 LIMIT 1").first()); }
   const k = await keys(db), tokens = {};
   let ok = 0; const gone = [];
@@ -75,12 +86,25 @@ async function drain(db, env) {
   }));
   const more = rows.length === BATCH;
   const work = [db.prepare("UPDATE outbox SET cursor = ?, sent = sent + ?, done = ? WHERE n = ?").bind(rows[rows.length - 1].endpoint, ok, more ? 0 : 1, msg.n)];
-  gone.forEach((e) => work.push(db.prepare("DELETE FROM subs WHERE endpoint = ?").bind(e)));
+  gone.forEach((e) => { work.push(db.prepare("DELETE FROM subs WHERE endpoint = ?").bind(e)); work.push(db.prepare("DELETE FROM remind WHERE endpoint = ?").bind(e)); });
   await db.batch(work);
   return more || !!(await db.prepare("SELECT n FROM outbox WHERE done = 0 LIMIT 1").first());
 }
 
-const queue = (db, title, body, url) => db.prepare("INSERT INTO outbox (title, body, url, at) VALUES (?, ?, ?, ?)").bind(title, body, url, new Date().toISOString()).run();
+const queue = (db, title, body, url, topic = "") => db.prepare("INSERT INTO outbox (title, body, url, at, topic) VALUES (?, ?, ?, ?, ?)").bind(title, body, url, new Date().toISOString(), topic).run();
+
+// the daily Flavor Trivia reminder: once a day, from 7 pm Nairobi time, only on days that have a set (16 Nov 2026)
+const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+async function trivia(db, request, env) {
+  const now = nairobi(), day = now.slice(0, 10), hour = +now.slice(11, 13);
+  if (hour < 19 || (await get(db, "tv-day")) === day) return;
+  let d; try { d = await (await env.ASSETS.fetch(new URL("/app/trivia.json", request.url))).json(); } catch (e) { return; }
+  const set = d && d.sets && d.sets[day];
+  await put(db, "tv-day", day);
+  if (!set || !set.qs || !set.qs.length) return;
+  const name = clean(set.theme, 30) + " " + DAYS[new Date(Date.now() + 108e5).getUTCDay()];
+  await queue(db, "Flavor Trivia is waiting", name + ": ten questions, fifteen seconds each. Play before midnight.", "/trivia", "trivia");
+}
 
 // has the site got something new worth an alert? (new No. 1, new Flavor Cover). The first run only takes note.
 async function news(db, request, env) {
@@ -107,9 +131,10 @@ export async function tick(request, env) {
     const t = Date.now();
     const lock = await db.prepare("UPDATE kv SET v = ? WHERE k = 'lock' AND CAST(v AS INTEGER) < ?").bind(String(t), t - 30000).run();
     if (!lock.meta || !lock.meta.changes) return;
-    if (!(await db.prepare("SELECT n FROM outbox WHERE done = 0 LIMIT 1").first())) await news(db, request, env);
-    await drain(db, env);
+    if (!(await db.prepare("SELECT n FROM outbox WHERE done = 0 LIMIT 1").first())) { await trivia(db, request, env); await news(db, request, env); }
+    const more = await drain(db, env);
     await put(db, "lock", "0");
+    return more;
   } catch (e) {}
 }
 
@@ -121,8 +146,16 @@ export async function onRequest({ request, env }) {
     const url = new URL(request.url);
 
     if (request.method === "GET") {
+      if (url.searchParams.get("remind") === "trivia") return out({ ok: true, more: !!(await tick(request, env)) });
       if (url.searchParams.get("latest")) {
-        const m = await db.prepare("SELECT n, title, body, url, at FROM outbox ORDER BY n DESC LIMIT 1").first();
+        // the phone says which subscription it is, so it gets the newest alert meant for it (alerts or trivia reminder)
+        const ep = String(url.searchParams.get("ep") || "").slice(0, 1000);
+        let m = null;
+        if (ep) {
+          const recent = (await db.prepare("SELECT n, title, body, url, at, topic FROM outbox ORDER BY n DESC LIMIT 6").all()).results || [];
+          for (const r of recent) { if (await db.prepare("SELECT 1 FROM " + LIST(r.topic) + " WHERE endpoint = ?").bind(ep).first()) { m = r; break; } }
+        }
+        if (!m) m = await db.prepare("SELECT n, title, body, url, at FROM outbox ORDER BY n DESC LIMIT 1").first();
         if (!m || Date.now() - Date.parse(m.at) > 3 * 864e5) return out({ ok: true, alert: null });
         return out({ ok: true, alert: { n: m.n, title: m.title, body: m.body, url: m.url } });
       }
@@ -157,6 +190,11 @@ export async function onRequest({ request, env }) {
     if (endpoint.length > 1000 || !allowed(endpoint, env)) return out({ ok: false, error: "bad-endpoint" }, 400);
     if (b.off) { await db.prepare("DELETE FROM subs WHERE endpoint = ?").bind(endpoint).run(); return out({ ok: true, on: false }); }
     const id = /^[a-z0-9]{16,40}$/.test(String(b.id || "")) ? String(b.id) : "";
+    if (b.remind !== undefined) {
+      if (b.remind) await db.prepare("INSERT INTO remind (endpoint, phone, at) VALUES (?, ?, ?) ON CONFLICT(endpoint) DO UPDATE SET at = excluded.at").bind(endpoint, id.slice(0, 8), new Date().toISOString()).run();
+      else await db.prepare("DELETE FROM remind WHERE endpoint = ?").bind(endpoint).run();
+      return out({ ok: true, remind: !!b.remind });
+    }
     await db.prepare("INSERT INTO subs (endpoint, phone, at) VALUES (?, ?, ?) ON CONFLICT(endpoint) DO UPDATE SET at = excluded.at").bind(endpoint, id.slice(0, 8), new Date().toISOString()).run();
     return out({ ok: true, on: true });
   } catch (e) {

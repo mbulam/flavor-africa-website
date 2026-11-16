@@ -68,3 +68,21 @@
 .fa-tv-page .fa-tv-top .sp{display:none}
 .fa-tv-none{font-family:var(--body);font-size:26px;font-weight:700;text-transform:uppercase;letter-spacing:-.02em;margin:24px 0 0;color:var(--ink)}
 html.app .fa-tv-page{padding-left:16px;padding-right:16px}
+
+/* v3 (16 Nov 2026): the game screens in the app's one design system (app/fx.css): black pills, no purple blocks */
+.fa-tv-page,.fa-tv-page *{font-family:var(--fx-font)}
+.fa-tv-page{color:var(--fx-ink)}
+.fx-games{padding-bottom:10px}
+.fa-tv-go{border-radius:24px;background:var(--fx-ink);color:var(--fx-bg);font:600 15px var(--fx-font);height:48px}
+.fa-tv-ring .fg{stroke:var(--fx-ink)}
+.fa-tv-ring.low .fg{stroke:#D22F35}
+.fa-tv-q h2{font-family:var(--fx-font);font-size:24px;font-weight:700;letter-spacing:-.01em}
+.fa-tv-opts button{border-radius:8px;border:1px solid var(--fx-line);background:var(--fx-bg);color:var(--fx-ink);font:600 15px/1.25 var(--fx-font)}
+.fa-tv-x2{border-radius:8px;background:var(--fx-soft)}
+.fa-tv-card{border-radius:6px}
+.fa-tv-card .th,.fa-tv-card .sc p{font-family:var(--fx-font)}
+.fa-tv-list a,.fa-tv-all{color:var(--fx-ink);text-decoration:underline;text-underline-offset:3px}
+.fa-tv-where{font-family:var(--fx-font)}
+.fx-back{border:0;background:none;padding:10px 0;font:600 14px var(--fx-font);color:var(--fx-ink);cursor:pointer}
+html.app .fa-tv-page{padding-top:0}
+html.app .fa-tv-page .fx-games .fx-ttl{padding-top:6px}

@@ -344,3 +344,122 @@ html.fa-d-open body>*:not(.fa-daily){visibility:hidden}
 .fa-pk .go.pl{background:#2A0174;border-color:#2A0174;color:#fff}
 .fa-pk .go svg{width:18px;height:18px}
 
+
+/* =====================================================================================================
+   App look v3 (16 Nov 2026): the whole app on ONE design system (app/fx.css). Everything below overrides
+   the older looks above. White screens, black text, the flavor.africa wordmark top-left, your circle top-right.
+   ===================================================================================================== */
+html.app,html.app body{background:var(--fx-bg);color:var(--fx-ink)}
+html.app body{font-family:var(--fx-font);font-optical-sizing:auto}
+html.app body::before{background:var(--fx-bg)}
+html.app header{background:var(--fx-bg);box-shadow:none;border-bottom:0}
+html.app .bar{min-height:56px;padding-block:6px;gap:4px}
+html.app .logo{color:var(--fx-ink);font-size:22px}
+html.app .fa-date,html.app header .fa-today{display:none!important}
+html.app .fa-back{color:var(--fx-ink)}
+.fx-me{display:none}
+html.app .fx-me{display:grid;place-items:center;width:44px;height:44px;margin-right:-6px;padding:0;border:0;background:none;cursor:pointer}
+html.app .fx-me span{width:32px;height:32px;border-radius:50%;background:var(--fx-ink);color:var(--fx-bg);display:grid;place-items:center}
+html.app .fx-me svg{width:17px;height:17px}
+/* tabs */
+html.app .fa-tabs{grid-template-columns:repeat(5,minmax(0,1fr));background:var(--fx-bg);border-top:1px solid var(--fx-line)}
+html.app .fa-tabs a,html.app .fa-tabs button{font-family:var(--fx-font);font-size:10.5px;font-weight:500;letter-spacing:0;text-transform:none;color:#9a9a9a}
+html.app .fa-tabs [aria-current="page"]{color:var(--fx-ink)}
+/* screens built by the app sit in the page column */
+.fx-screen{padding:0 20px 28px}
+html.app main .wrap.fx-screen,html.app .fx-screen{max-width:640px;margin:0 auto}
+html.app.fa-s-today main>*:not(#fa-today){display:none!important}
+html.app.fa-s-live main>*:not(#fa-live){display:none!important}
+html.app.fa-s-chart main>*:not(#flavor-10){display:none!important}
+html.app.fa-s-chart #flavor-10{display:block;padding:0;background:var(--fx-bg)}
+html.app.fa-s-chart #flavor-10>*:not(.fa-fm){display:none!important}
+#fa-today{padding-top:0}
+/* full screens (Discover, Me, Fan Seat) */
+html.app .fa-sheet.fa-scr{background:var(--fx-bg);padding:calc(8px + env(safe-area-inset-top,0px)) 20px calc(96px + env(safe-area-inset-bottom,0px))}
+.fx-shd{display:flex;align-items:center;justify-content:space-between;min-height:48px}
+.fx-shd .wm{font-family:var(--body);font-weight:700;font-size:22px;letter-spacing:-.04em;color:var(--fx-ink)}
+.fx-shd button{width:40px;height:40px;border-radius:50%;border:1px solid var(--fx-line);background:none;color:var(--fx-ink);display:grid;place-items:center;cursor:pointer}
+.fx-shd button svg{width:16px;height:16px}
+.fx-shd .bk{width:auto;border:0;border-radius:0;font:600 14px var(--fx-font);padding:0;display:flex;gap:4px;align-items:center}
+/* Flavor FM */
+.fa-fm{font-family:var(--fx-font)}
+.fa-fm .fx-th[data-art]{background-color:var(--fx-soft)}
+.fa-fm .fx-panel[hidden]{display:none}
+.fa-fm .fx-plh{margin:14px 0 2px;font:400 14px/1.45 var(--fx-font);color:var(--fx-mute)}
+.fa-fm .fa-fm-out{margin-top:14px}
+.fa-fm .fa-fm-out a,.fa-full a{background:none;border:1px solid var(--fx-line);color:var(--fx-ink);border-radius:17px}
+.fa-fm .fa-fm-out span{color:var(--fx-mute)}
+.fa-full{padding:2px 0 12px 78px;grid-template-columns:repeat(3,auto);justify-content:start}
+.fx-mix{margin-top:18px}
+.fx-mix .fa-mix-v{border-radius:6px;background:#111}
+.fx-mix .fa-mix-v .pl{background:#fff;color:#0b0b0b}
+.fx-mix h3{margin:14px 0 4px;font:700 20px/1.15 var(--fx-font);text-transform:uppercase;letter-spacing:-.01em}
+.fx-mix p{margin:0;font:400 14px var(--fx-font);color:var(--fx-mute)}
+.fx-mix .fx-btn{margin-top:14px}
+/* Fans' pick, inside the Flavor 10 tab */
+html.app .fa-vote{display:flex;align-items:center;gap:12px;margin:16px 0 4px;padding:14px 0;background:none;color:var(--fx-ink);border-top:1px solid var(--fx-line);border-bottom:1px solid var(--fx-line)}
+html.app .fa-vote[hidden]{display:none}
+html.app .fa-vote .k{display:none}
+html.app .fa-vote b{flex:1;font:600 15px/1.3 var(--fx-font);text-transform:none;margin:0;color:var(--fx-ink)}
+html.app .fa-vote p{display:none}
+html.app .fa-vote button{min-height:36px;padding:0 16px;border-radius:18px;background:var(--fx-ink);color:var(--fx-bg);font:600 13px var(--fx-font);letter-spacing:0;text-transform:none}
+html.app .fa-sheet:not(.fa-scr){background:var(--fx-bg);font-family:var(--fx-font)}
+html.app .fa-sheet-hd{background:var(--fx-bg);border-bottom-color:var(--fx-line);padding:14px 20px 12px}
+html.app .fa-sheet-hd h2{font:700 26px var(--fx-font);text-transform:uppercase}
+html.app .fa-pick{padding:0 20px}
+html.app .fa-pick button{border-radius:6px;border-color:var(--fx-line);background:var(--fx-bg);color:var(--fx-ink);font-family:var(--fx-font)}
+html.app .fa-pick button[aria-pressed="true"]{border-color:var(--fx-ink);box-shadow:inset 3px 0 0 var(--fx-yellow)}
+html.app .fa-pick em{font-family:var(--fx-font);color:var(--fx-ink)}
+html.app .fa-pick u{background:var(--fx-soft)}
+/* now playing bar */
+html.app .fa-now{left:12px;right:12px;bottom:calc(70px + env(safe-area-inset-bottom,0px));height:60px;border-radius:8px;background:var(--fx-bg);color:var(--fx-ink);border:1px solid var(--fx-line);box-shadow:0 6px 18px rgba(0,0,0,.08);overflow:hidden}
+html.app .fa-now img,html.app .fa-now .ph{border-radius:4px}
+html.app .fa-now .ph{background:var(--fx-ink);color:var(--fx-bg)}
+html.app .fa-now a{color:var(--fx-ink)}
+html.app .fa-now a b{font-family:var(--fx-font)}
+html.app .fa-now a span{color:var(--fx-mute)}
+html.app .fa-now button{color:var(--fx-ink)}
+html.app .fa-now [data-pp]{color:var(--fx-ink)}
+html.app .fa-now .pr{top:auto;bottom:0;background:var(--fx-yellow)}
+/* toast */
+html.app .fa-toast{background:var(--fx-ink);color:var(--fx-bg);border-top:0;border-radius:8px;font-family:var(--fx-font)}
+/* stories: the photo on top with the headline on it */
+html.app.fx-story header{display:none}
+.fx-hero{position:relative;height:min(68vh,600px);margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px)));background:#111 center/cover no-repeat;color:#fff}
+.fx-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.38) 0,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 42%,rgba(0,0,0,.78) 100%);pointer-events:none}
+.fx-hero>.in{position:absolute;left:20px;right:20px;bottom:22px;z-index:1}
+.fx-hero .k{font:500 12.5px var(--fx-font);color:rgba(255,255,255,.86)}
+.fx-hero h1{font-size:clamp(32px,9.4vw,46px);margin:8px 0 10px;color:#fff;border:0;padding:0}
+.fx-hero p{margin:0;font:400 15px/1.45 var(--fx-font);color:#ececec;max-width:36ch}
+.fx-hbar{position:absolute;z-index:2;top:calc(10px + env(safe-area-inset-top,0px));left:16px;right:16px;display:flex;justify-content:space-between;pointer-events:none}
+.fx-hbar>span{display:flex;gap:8px}
+.fx-hbar button{pointer-events:auto;position:static!important;width:40px;height:40px;border-radius:50%;border:0;background:#fff;color:#0b0b0b;display:grid;place-items:center;box-shadow:none;margin:0;cursor:pointer}
+.fx-hbar button svg{width:17px;height:17px}
+.fx-hbar .fa-save[aria-pressed="true"]{background:var(--fx-yellow);color:#0b0b0b}
+.fx-credit{margin:8px 0 0;font:400 12px/1.4 var(--fx-font);color:var(--fx-mute)}
+html.app.fx-story article .art{padding-top:0}
+html.app.fx-story article .body{font-family:var(--fx-font);font-size:17.5px;line-height:1.62;padding-top:14px}
+html.app.fx-story article .body h2{font-family:var(--fx-font);text-transform:uppercase;font-size:24px;line-height:1.05;letter-spacing:-.01em}
+html.app.fx-story article .body h2 .k{display:block;font:500 12.5px var(--fx-font);text-transform:none;color:var(--fx-label);letter-spacing:0;margin-bottom:6px}
+html.app.fx-story article .body h2 .hb{font-weight:300;background:none;color:inherit}
+html.app.fx-story .fa-share{display:none}
+/* Flavor Daily: same headline and buttons as everywhere else */
+html.fa-d-open,html.fa-d-open body,html.fa-d-open body::before{background:#000!important}
+.fa-daily{background:#000;font-family:var(--fx-font)}
+.fa-d-card.f10,.fa-d-card.pic.framed{background:#0b0b0b}
+.fa-d-head span{font-family:var(--fx-font);letter-spacing:0;text-transform:none;font-size:12.5px;color:rgba(255,255,255,.8)}
+.fa-d-head span b{font-family:var(--body)}
+.fa-d-body .tag{background:none;color:rgba(255,255,255,.86);padding:0;font:500 12.5px var(--fx-font);letter-spacing:0;text-transform:none;margin-bottom:8px;display:block}
+.fa-d-body h2{font-family:var(--fx-font);font-optical-sizing:auto;font-weight:700;font-size:clamp(32px,9vw,46px);line-height:.98;letter-spacing:-.015em}
+.fa-d-go{min-height:44px;padding:0 20px;border-radius:22px;background:#fff;color:#0b0b0b;font:600 14px var(--fx-font);letter-spacing:0;text-transform:none}
+.fa-d-f10 .k{font:500 12.5px var(--fx-font);letter-spacing:0;text-transform:none;color:rgba(255,255,255,.86)}
+.fa-d-f10 .n{font-family:var(--fx-font);font-weight:700}
+.fa-d-f10 .art.has .n{text-shadow:none;color:var(--fx-yellow)}
+/* cookie note: small, above the tabs */
+html.app .cookie-note{left:12px;right:12px;border-radius:8px;background:var(--fx-ink);color:var(--fx-bg);font-family:var(--fx-font);padding:12px 14px;border:0}
+html.app .cookie-note p{font-size:13px;margin:0 0 10px}
+html.app .cookie-note button{border-radius:16px;font-family:var(--fx-font);text-transform:none;letter-spacing:0;font-size:13px;min-height:34px}
+/* section pages opened inside the app use the same type */
+html.app .phead h1{font-family:var(--fx-font);font-weight:700;text-transform:uppercase;letter-spacing:-.015em;border-bottom:0}
+html.app .tag{font-family:var(--fx-font)}
+html.app h1,html.app h2,html.app h3{font-family:var(--fx-font)}

@@ -1,0 +1,82 @@
+/* flavor.africa app, look v3 (16 Nov 2026): ONE design system for every screen.
+   The same few pieces everywhere: the header, a big title, the photo card, the row, two kinds of button and the tabs.
+   White with black text; purple only on small row labels; yellow only for the No. 1 and the song that's playing.
+   Loaded in the app (all pages) and on the website's Trivia page. */
+:root{--fx-bg:#fff;--fx-ink:#0b0b0b;--fx-mute:#6b6b6b;--fx-line:#ececec;--fx-soft:#f3f3f3;--fx-label:#2A0174;--fx-yellow:#F5CC11;
+  --fx-font:"Inter Display","Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
+html[data-theme="dark"]{--fx-bg:#000;--fx-ink:#f2f2f2;--fx-mute:#9a9a9a;--fx-line:#222;--fx-soft:#151515;--fx-label:#C2B0FF}
+@media (prefers-color-scheme:dark){html:not([data-theme="light"]){--fx-bg:#000;--fx-ink:#f2f2f2;--fx-mute:#9a9a9a;--fx-line:#222;--fx-soft:#151515;--fx-label:#C2B0FF}}
+
+.fx{font-family:var(--fx-font);font-optical-sizing:auto;color:var(--fx-ink)}
+.fx *{box-sizing:border-box}
+/* big title: ALL CAPS, bold and light words mixed */
+.fx-cap{text-transform:uppercase;letter-spacing:-.015em;line-height:.98;font-family:var(--fx-font);font-optical-sizing:auto;margin:0}
+.fx-cap b,.fx-cap strong{font-weight:700}.fx-cap span{font-weight:300}
+.fx-ttl{padding:14px 0 0}
+.fx-ttl h1{font-size:38px;color:var(--fx-ink)}
+.fx-ttl p{margin:8px 0 0;font-size:14px;line-height:1.45;color:var(--fx-mute)}
+/* section heading */
+.fx-sec{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:30px 0 4px}
+.fx-sec h2{font-size:20px;color:var(--fx-ink)}
+.fx-sec button,.fx-sec a{border:0;background:none;padding:6px 0;font:500 13px/1 var(--fx-font);color:var(--fx-mute);text-decoration:none;cursor:pointer}
+/* photo card: full photo, headline on it, neutral darkening only at the bottom */
+.fx-card{position:relative;display:block;width:100%;margin-top:18px;border:0;border-radius:6px;overflow:hidden;background:#111 center/cover no-repeat;color:#fff;text-align:left;text-decoration:none;padding:0;cursor:pointer;font-family:var(--fx-font)}
+.fx-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 38%,rgba(0,0,0,.74) 100%);pointer-events:none}
+.fx-card>.in{position:absolute;left:18px;right:18px;bottom:18px;z-index:1}
+.fx-card .k{display:block;font:500 12.5px/1.3 var(--fx-font);color:rgba(255,255,255,.86)}
+.fx-card h2{font-size:32px;margin:6px 0 8px;color:#fff}
+.fx-card p{margin:0;font:400 14px/1.42 var(--fx-font);color:#ececec}
+.fx-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+/* buttons: white pill, outline pill (on photos); black pill (on white) */
+.fx-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border-radius:22px;border:1px solid #fff;background:#fff;color:#0b0b0b;font:600 14px/1 var(--fx-font);text-decoration:none;cursor:pointer}
+.fx-btn.o{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.fx-btn.d{background:var(--fx-ink);border-color:var(--fx-ink);color:var(--fx-bg)}
+.fx-btn.l{background:transparent;color:var(--fx-ink);border-color:var(--fx-line)}
+.fx-btn svg{width:15px;height:15px}
+.fx-btn[aria-pressed="true"]{background:var(--fx-yellow);border-color:var(--fx-yellow);color:#0b0b0b}
+/* row: square photo, small label, title, line, one round button */
+.fx-rows{margin:0;padding:0;list-style:none}
+.fx-row{display:flex;align-items:center;gap:14px;width:100%;padding:12px 0;border:0;border-bottom:1px solid var(--fx-line);background:none;color:var(--fx-ink);text-decoration:none;text-align:left;font-family:var(--fx-font);cursor:pointer}
+.fx-th{flex:0 0 64px;width:64px;height:64px;border-radius:4px;object-fit:cover;background:var(--fx-soft) center/cover no-repeat;display:flex;align-items:center;justify-content:center;font:700 24px/1 var(--fx-font);color:var(--fx-ink)}
+.fx-th.n1{background:#0b0b0b;color:var(--fx-yellow);font-size:32px}
+.fx-tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.fx-tx i{font:500 12.5px/1.3 var(--fx-font);font-style:normal;color:var(--fx-label)}
+.fx-tx b{font:600 16px/1.25 var(--fx-font);color:var(--fx-ink);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.fx-tx em{font:400 13px/1.35 var(--fx-font);font-style:normal;color:var(--fx-mute);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.fx-ix{flex:0 0 36px;width:36px;height:36px;border-radius:50%;border:1px solid var(--fx-line);display:grid;place-items:center;color:var(--fx-ink)}
+.fx-ix svg{width:15px;height:15px}
+.fx-ix.y,.fx-row.on .fx-ix{background:var(--fx-yellow);border-color:var(--fx-yellow);color:#0b0b0b}
+.fx-pill{flex:0 0 auto;min-height:34px;padding:0 14px;border-radius:17px;border:1px solid var(--fx-ink);background:none;color:var(--fx-ink);font:600 12.5px/1 var(--fx-font);cursor:pointer}
+.fx-pill[aria-pressed="true"]{background:var(--fx-ink);color:var(--fx-bg)}
+.fx-soon{flex:0 0 auto;font:500 12.5px/1 var(--fx-font);color:var(--fx-mute)}
+/* text tabs (Flavor FM, Discover filters) */
+.fx-tx-tabs{display:flex;gap:22px;margin-top:18px;border-bottom:1px solid var(--fx-line);overflow-x:auto;scrollbar-width:none}
+.fx-tx-tabs::-webkit-scrollbar{display:none}
+.fx-tx-tabs button{flex:0 0 auto;border:0;background:none;padding:0 0 10px;margin-bottom:-1px;font:600 14.5px/1.2 var(--fx-font);color:var(--fx-mute);border-bottom:2px solid transparent;cursor:pointer}
+.fx-tx-tabs button[aria-selected="true"]{color:var(--fx-ink);border-bottom-color:var(--fx-ink)}
+/* numbers strip (streak, scores) */
+.fx-stats{display:flex;margin-top:16px;border-top:1px solid var(--fx-line);border-bottom:1px solid var(--fx-line)}
+.fx-stats div{flex:1;padding:12px 0}
+.fx-stats b{display:block;font:700 22px/1.1 var(--fx-font);color:var(--fx-ink)}
+.fx-stats span{font:400 12.5px/1.3 var(--fx-font);color:var(--fx-mute)}
+.fx-note{margin:10px 0 0;font:400 13px/1.45 var(--fx-font);color:var(--fx-mute)}
+.fx-search{display:flex;align-items:center;gap:10px;margin-top:16px;height:46px;padding:0 16px;border-radius:23px;background:var(--fx-soft);color:var(--fx-mute)}
+.fx-search svg{width:18px;height:18px;flex:0 0 18px}
+.fx-search input{flex:1;min-width:0;border:0;background:none;outline:0;font:400 16px var(--fx-font);color:var(--fx-ink);-webkit-appearance:none;appearance:none}
+.fx-search input::placeholder{color:var(--fx-mute)}
+.fx-switch{flex:0 0 50px;width:50px;height:30px;border-radius:15px;border:0;background:#cfcfcf;position:relative;cursor:pointer;padding:0}
+.fx-switch::after{content:"";position:absolute;left:3px;top:3px;width:24px;height:24px;border-radius:50%;background:#fff;transition:left .15s}
+.fx-switch[aria-checked="true"]{background:var(--fx-ink)}
+.fx-switch[aria-checked="true"]::after{left:23px;background:var(--fx-bg)}
+/* Games page and Flavor Connections in the same look (16 Nov 2026) */
+.fa-games .fa-cx-head h1{font-family:var(--fx-font);font-optical-sizing:auto;font-size:38px;letter-spacing:-.015em;line-height:.98;color:var(--fx-ink)}
+.fa-games .fa-cx-head p,.fa-cx-head p{font-family:var(--fx-font);color:var(--fx-mute)}
+.fa-cx-head h1,.fa-cxc .t{font-family:var(--fx-font);font-optical-sizing:auto}
+.fa-games .fa-tv-slot .fx-card{margin-top:18px}
+.fa-cxc{border-radius:6px;border:1px solid var(--fx-line);padding:18px;margin-top:12px;font-family:var(--fx-font);color:var(--fx-ink)}
+.fa-cxc .k{font:500 12.5px var(--fx-font);color:var(--fx-label)}
+.fa-cxc .t{font-size:26px;color:var(--fx-ink)}
+.fa-cxc .s{font:400 13px var(--fx-font);color:var(--fx-mute)}
+.fa-cx-page,.fa-cx-page button{font-family:var(--fx-font)}
+.fa-cx-tile{border-radius:6px}
+.fa-cx-bar{border-radius:6px}

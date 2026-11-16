@@ -4,13 +4,13 @@
 // then fall back to the saved copy, so a slow network never leaves a blank screen and saved stories open offline.
 // The stylesheet and app code are served from the phone and refreshed in the background. Photos likewise.
 // Bump VERSION if this file ever changes in a way that should clear old copies.
-var VERSION = "fa-v17";
+var VERSION = "fa-v18";
 var PAGES = VERSION + "-pages";
 var IMAGES = VERSION + "-images";
 var MAX_IMAGES = 80;
 
 self.addEventListener("install", function (e) {
-  var first = ["/", "/style.css", "/favicon.svg", "/icons/app-192.png", "/app/app.css", "/app/app.js", "/app/feed.json", "/app/trivia.js", "/app/trivia.json", "/app/trivia.css", "/app/connections.js", "/app/connections.json", "/app/connections.css", "/live"];
+  var first = ["/", "/style.css", "/favicon.svg", "/icons/app-192.png", "/app/app.css", "/app/app.js", "/app/feed.json", "/app/trivia.js", "/app/trivia.json", "/app/trivia.css", "/app/connections.js", "/app/connections.json", "/app/connections.css", "/app/fx.css", "/live"];
   // straight from the server, never the phone's browser cache (15 Nov 2026)
   e.waitUntil(caches.open(PAGES).then(function (c) {
     return Promise.all(first.map(function (u) {
@@ -130,7 +130,10 @@ self.addEventListener("fetch", function (e) {
 
 // Alerts (added 11 Nov 2026). The phone is only poked; the words come from /api/push?latest=1.
 self.addEventListener("push", function (e) {
-  e.waitUntil(fetch("/api/push?latest=1", { cache: "no-store" }).then(function (r) { return r.json(); }).catch(function () { return {}; }).then(function (d) {
+  // say which subscription this is, so the phone shows the alert meant for it (alerts or the trivia reminder, 16 Nov 2026)
+  e.waitUntil(self.registration.pushManager.getSubscription().catch(function () { return null; }).then(function (s) {
+    return fetch("/api/push?latest=1" + (s ? "&ep=" + encodeURIComponent(s.endpoint) : ""), { cache: "no-store" });
+  }).then(function (r) { return r.json(); }).catch(function () { return {}; }).then(function (d) {
     var a = (d && d.alert) || { n: 0, title: "flavor.africa", body: "Something new just went up.", url: "/" };
     return self.registration.showNotification(a.title, { body: a.body, icon: "/icons/app-192.png", badge: "/icons/app-192.png", tag: "fa-" + a.n, data: { url: a.url || "/" } });
   }));
