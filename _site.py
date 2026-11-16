@@ -21,6 +21,7 @@ e = lambda s: html.escape(s, quote=True)
 
 # slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, or YYYY-MM-DDTHH:MM to go live at a set time; Nairobi), image focus
 STORIES = [
+ ("grammys-2027-nominations", ["news", "music"], "The Wrap", "Grammy nominations 2027: the main categories and the African races", "The nominees in the big four and the African races, plus Beyonc\u00e9's 100th nod.", "gr27-tems.jpg", "2026-11-16T17:30", "center 20%"),
  ("tems-children-of-blood-and-bone-soundtrack", ["news", "music", "screen"], "The Wrap", "Tems is curating the Children of Blood and Bone soundtrack", "Burna Boy, Ayra Starr and nine more are on it. Her own single lands 20 November.", "wr-tems-cobab.jpg", "2026-11-13T20:00", "center 30%"),
  ("ghana-must-go-decoded", ["culture", "fashion"], "Flavor Decoded", "Ghana Must Go, decoded", "How a cheap checked tote got its name in 1983, and ended up on Denim Tears' new adidas.", "gmg-lead.jpg", "2026-11-10T11:00", "center 25%"),
  ("ronaldo-retires-portugal", ["sport"], "Flavor Sports", "How Ronaldo's Portugal story ended", "The bust-up, the 146-goal record and what comes next.", "sp-ronaldo-retires.jpg", "2026-11-05T17:00", "center 20%"),
@@ -95,6 +96,7 @@ EDITION = {
  "patrick-stewart-dies-at-86": "Global",
  "idris-elba-kenya-creative-economy": "Local", "joshua-baraka-visa-ambassador": "Continental",
  "tems-children-of-blood-and-bone-soundtrack": "Continental",
+ "grammys-2027-nominations": "Global",
  "kenyan-stars-latin-grammys-2026": "Local",
  "fela-kuti-sade-rock-hall-of-fame-2026": "Continental",
  "joshua-baraka-hipipo-artist-of-the-year-2026": "Continental",

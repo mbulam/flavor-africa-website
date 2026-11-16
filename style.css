@@ -440,3 +440,11 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 .ab-note a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 @media (max-width:900px){.ab-work.ab-work3{grid-template-columns:minmax(0,1fr)}}
 
+
+/* nominee lists (awards stories) */
+.noms{list-style:none;padding:0;margin:6px 0 26px;border-top:1px solid var(--line)}
+.noms li{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:11px 0;border-bottom:1px solid var(--line)}
+.noms .t{font-family:var(--head);font-weight:600;font-size:20px;text-transform:uppercase;letter-spacing:.01em;line-height:1.15}
+.noms .a{color:var(--mute);font-size:14px;text-align:right;flex:0 1 46%}
+@media (max-width:520px){.noms li{flex-direction:column;gap:2px}.noms .a{text-align:left}}
+.art .body ul.noms{padding-left:0;margin-left:0}
