@@ -194,3 +194,15 @@ FLAVOR MINI (added 16 Nov 2026)
 A 5x5 crossword a day on the Games page, on the same theme as that day's Flavor Trivia but never reusing a trivia
 question. Page: mini.html. Code: app/mini.js, app/mini.css. Puzzles: app/mini.json, one per Nairobi date (how to
 write one is at the top of that file). A day with no puzzle hides the card. Reminders work like Trivia and Connections.
+
+THE FLAVOR BALLOT (added 16 Nov 2026)
+- Grammys 2027 prediction game. Page: ballot.html. Code: app/ballot.js, app/ballot.css. Nominees: app/ballot.json.
+  Fan ballots: functions/api/ballot.js (same D1 database as the Flavor 10 fans' pick, table "ballots").
+- Six categories: Album, Record and Song of the Year, Best New Artist, Best African Music Performance, Best Global
+  Music Album. For each, fans pick who WILL win and who SHOULD win. One ballot per phone; it can be changed until
+  "lock" in ballot.json (20:00 UTC = 11pm Nairobi, Sun 7 Feb 2027, before the Premiere Ceremony in LA).
+- Screens: ballot.html#c1 ... #c6 (pick a category), #mine (your ballot + share), #fans (fan totals per category).
+  The Games page shows the Ballot as a photo card at the top (.fa-bl-slot).
+- After the show: put each winner's nominee id in "winners" in ballot.json (e.g. "bamp": "bigdaddy"), run _site.py,
+  push. Every phone then sees its score, and What fans say marks the Grammy winner next to the fan vote.
+- Never change a nominee's id once voting has started (saved ballots point at the ids).

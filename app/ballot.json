@@ -1,0 +1,278 @@
+{
+ "_how": "The Flavor Ballot (added 16 Nov 2026). Nominees for the 2027 Grammys, announced 16 Nov 2026, checked against 2+ sources. 'lock' is when picks close (UTC; 20:00 UTC = 11pm Nairobi, 7 Feb 2027, before the Premiere Ceremony starts in LA). After the show, put each winning nominee's id in 'winners' (e.g. \"aoty\": \"raye\") and the app scores every ballot. Never change ids once people have voted.",
+ "title": "The Flavor Ballot",
+ "show": "Grammys 2027",
+ "lock": "2027-02-07T20:00:00Z",
+ "lockText": "11pm Nairobi time on Sunday 7 February",
+ "winners": {},
+ "cats": [
+  {
+   "id": "aoty",
+   "name": "Album of the Year",
+   "short": "Album",
+   "l": "Album of the",
+   "b": "Year",
+   "noms": [
+    {
+     "id": "bridgers",
+     "t": "Lost Weekend",
+     "a": "Phoebe Bridgers"
+    },
+    {
+     "id": "dean",
+     "t": "The Art of Loving",
+     "a": "Olivia Dean"
+    },
+    {
+     "id": "langley",
+     "t": "Dandelion",
+     "a": "Ella Langley"
+    },
+    {
+     "id": "mars",
+     "t": "The Romantic",
+     "a": "Bruno Mars"
+    },
+    {
+     "id": "raye",
+     "t": "This Music May Contain Hope.",
+     "a": "RAYE"
+    },
+    {
+     "id": "rodrigo",
+     "t": "You Seem Pretty Sad for a Girl So in Love",
+     "a": "Olivia Rodrigo"
+    },
+    {
+     "id": "rosalia",
+     "t": "Lux (Complete Works)",
+     "a": "Rosalía"
+    },
+    {
+     "id": "swift",
+     "t": "The Life of a Showgirl",
+     "a": "Taylor Swift"
+    }
+   ]
+  },
+  {
+   "id": "roty",
+   "name": "Record of the Year",
+   "short": "Record",
+   "l": "Record of the",
+   "b": "Year",
+   "noms": [
+    {
+     "id": "dean",
+     "t": "Man I Need",
+     "a": "Olivia Dean"
+    },
+    {
+     "id": "langley",
+     "t": "Choosin’ Texas",
+     "a": "Ella Langley"
+    },
+    {
+     "id": "mars",
+     "t": "I Just Might",
+     "a": "Bruno Mars"
+    },
+    {
+     "id": "raye",
+     "t": "Where Is My Husband!",
+     "a": "RAYE"
+    },
+    {
+     "id": "rodrigo",
+     "t": "The Cure",
+     "a": "Olivia Rodrigo"
+    },
+    {
+     "id": "rosalia",
+     "t": "Berghain",
+     "a": "Rosalía, Björk & Yves Tumor"
+    },
+    {
+     "id": "swift",
+     "t": "The Fate of Ophelia",
+     "a": "Taylor Swift"
+    },
+    {
+     "id": "tame",
+     "t": "Dracula",
+     "a": "Tame Impala with Jennie"
+    }
+   ]
+  },
+  {
+   "id": "soty",
+   "name": "Song of the Year",
+   "short": "Song",
+   "l": "Song of the",
+   "b": "Year",
+   "note": "A songwriting award. The artist who recorded each song is shown.",
+   "noms": [
+    {
+     "id": "berghain",
+     "t": "Berghain",
+     "a": "Rosalía, Björk & Yves Tumor"
+    },
+    {
+     "id": "texas",
+     "t": "Choosin’ Texas",
+     "a": "Ella Langley"
+    },
+    {
+     "id": "cure",
+     "t": "The Cure",
+     "a": "Olivia Rodrigo"
+    },
+    {
+     "id": "hate",
+     "t": "Hate That I Made You Love Me",
+     "a": "Ariana Grande"
+    },
+    {
+     "id": "knew",
+     "t": "I Knew It, I Knew You (from Toy Story 5)",
+     "a": "Taylor Swift"
+    },
+    {
+     "id": "manineed",
+     "t": "Man I Need",
+     "a": "Olivia Dean"
+    },
+    {
+     "id": "risk",
+     "t": "Risk It All",
+     "a": "Bruno Mars"
+    },
+    {
+     "id": "husband",
+     "t": "Where Is My Husband!",
+     "a": "RAYE"
+    }
+   ]
+  },
+  {
+   "id": "bna",
+   "name": "Best New Artist",
+   "short": "New Artist",
+   "l": "Best",
+   "b": "New Artist",
+   "noms": [
+    {
+     "id": "angine",
+     "t": "Angine de Poitrine",
+     "a": ""
+    },
+    {
+     "id": "geese",
+     "t": "Geese",
+     "a": ""
+    },
+    {
+     "id": "langley",
+     "t": "Ella Langley",
+     "a": ""
+    },
+    {
+     "id": "slayyyter",
+     "t": "Slayyyter",
+     "a": ""
+    },
+    {
+     "id": "spiro",
+     "t": "Sienna Spiro",
+     "a": ""
+    },
+    {
+     "id": "toliver",
+     "t": "Don Toliver",
+     "a": ""
+    },
+    {
+     "id": "wolf",
+     "t": "Remi Wolf",
+     "a": ""
+    },
+    {
+     "id": "womack",
+     "t": "The Womack Sisters",
+     "a": ""
+    }
+   ]
+  },
+  {
+   "id": "bamp",
+   "name": "Best African Music Performance",
+   "short": "African",
+   "l": "Best African",
+   "b": "Music Performance",
+   "noms": [
+    {
+     "id": "gratitude",
+     "t": "Gratitude",
+     "a": "Asake",
+     "i": "img/gr27-asake.jpg"
+    },
+    {
+     "id": "ayekan",
+     "t": "Aye Kan (Are You Coming Back?)",
+     "a": "Angélique Kidjo & Ayra Starr"
+    },
+    {
+     "id": "notradition",
+     "t": "No Tradition, No Africa",
+     "a": "King Ayisoba featuring Rocky Dawuni"
+    },
+    {
+     "id": "bigdaddy",
+     "t": "Big Daddy",
+     "a": "Tems",
+     "i": "img/gr27-tems.jpg"
+    },
+    {
+     "id": "jogodo",
+     "t": "Jogodo",
+     "a": "Wizkid & Asake"
+    }
+   ]
+  },
+  {
+   "id": "gma",
+   "name": "Best Global Music Album",
+   "short": "Global",
+   "l": "Best Global",
+   "b": "Music Album",
+   "noms": [
+    {
+     "id": "equilibrivm",
+     "t": "Equilibrivm",
+     "a": "Anitta"
+    },
+    {
+     "id": "oriade",
+     "t": "Oriadé",
+     "a": "Davido"
+    },
+    {
+     "id": "hope",
+     "t": "Hope!!",
+     "a": "Angélique Kidjo"
+    },
+    {
+     "id": "starrgirl",
+     "t": "Starrgirl",
+     "a": "Ayra Starr"
+    },
+    {
+     "id": "kingdom",
+     "t": "Love Is a Kingdom",
+     "a": "Tems",
+     "i": "img/gr27-tems.jpg"
+    }
+   ]
+  }
+ ]
+}
