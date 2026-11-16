@@ -1,0 +1,21 @@
+# Game reminders (Flavor Trivia and Flavor Connections), added 16 Nov 2026.
+# Every hour from 6 am to 10 pm Nairobi time (03:00-19:00 UTC) this asks the site to send the reminders whose
+# hour has come. Each phone picks its own hour (7 pm by default) and only gets nudged if it hasn't played that game
+# today. The site never sends the same reminder twice in a day, so a late or repeated run is harmless.
+name: Game reminders
+on:
+  schedule:
+    - cron: "2 3-19 * * *"
+  workflow_dispatch:
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send the reminders that are due
+        run: |
+          for i in $(seq 1 30); do
+            r=$(curl -fsS "https://flavorafricagroup.org/api/push?remind=due" || echo '{}')
+            echo "$r"
+            echo "$r" | grep -q '"more":true' || break
+            sleep 3
+          done

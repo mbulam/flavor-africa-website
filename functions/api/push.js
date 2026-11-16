@@ -4,10 +4,14 @@
 //   GET  /api/push?key=<ADMIN_KEY>      -> how many phones have alerts on, and the last alerts sent (for the inbox page)
 //   POST /api/push {endpoint, id}       -> a phone switches alerts on;  {endpoint, off: true} switches them off
 //   POST /api/push {key, title, body, url}  -> the team sends an alert from the inbox page ({key, more: true} carries on a long send)
-//   POST /api/push {endpoint, id, remind: true|false} -> a phone switches the daily Flavor Trivia reminder on or off (16 Nov 2026)
-//   GET  /api/push?remind=trivia        -> sends today's trivia reminder once, from 7 pm Nairobi time (called by the
-//                                          "Trivia reminder" GitHub Action every evening; safe to call more than once)
-// Trivia reminders only go to phones that tapped "Remind me" (table remind); other alerts go to phones with alerts on (table subs).
+// Game reminders (Flavor Trivia and Flavor Connections, 16 Nov 2026), table rem, one row per phone per game:
+//   POST /api/push {endpoint, id, game, remind: true, hour}  -> switch a game's reminder on, at that hour (Nairobi; default 19)
+//   POST /api/push {endpoint, game, remind: false}           -> switch it off
+//   POST /api/push {endpoint, game, played: {day, streak, state}} -> the phone says it played ("done") or started ("started")
+//   GET  /api/push?remind=due  -> pokes every phone whose reminder hour has come, once a day, only if it hasn't
+//                                 played that game today and the game has a set today. Called every hour by the
+//                                 "Game reminders" GitHub Action (and on app opens); safe to call any number of times.
+// The words are made when the phone asks (?latest=1&ep=...), so each one says that phone's own streak ("streak guard").
 // Alerts also go out on their own, at most once each: when the Flavor 10 has a new No. 1 and when a new Flavor Cover
 // goes up. That check ("tick") runs whenever someone opens the app, so there is nothing to schedule.
 // Phones are only "poked" (no words travel with the poke); the phone then fetches the words from ?latest=1.
@@ -29,11 +33,17 @@ async function setup(db) {
     db.prepare("CREATE TABLE IF NOT EXISTS outbox (n INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, body TEXT NOT NULL, url TEXT NOT NULL, at TEXT NOT NULL, cursor TEXT NOT NULL DEFAULT '', done INTEGER NOT NULL DEFAULT 0, sent INTEGER NOT NULL DEFAULT 0)"),
     db.prepare("INSERT OR IGNORE INTO kv (k, v) VALUES ('lock', '0')"),
     db.prepare("CREATE TABLE IF NOT EXISTS remind (endpoint TEXT PRIMARY KEY, phone TEXT, at TEXT NOT NULL)"),
+    db.prepare("CREATE TABLE IF NOT EXISTS rem (endpoint TEXT NOT NULL, game TEXT NOT NULL, hour INTEGER NOT NULL DEFAULT 19, streak INTEGER NOT NULL DEFAULT 0, last TEXT NOT NULL DEFAULT '', started TEXT NOT NULL DEFAULT '', sent TEXT NOT NULL DEFAULT '', sent_at TEXT NOT NULL DEFAULT '', shown TEXT NOT NULL DEFAULT '', phone TEXT, PRIMARY KEY (endpoint, game))"),
   ]);
   // each alert now says who it is for: '' = alerts list, 'trivia' = trivia reminder list (added 16 Nov 2026)
-  if ((await get(db, "schema")) !== "2") {
+  let v = (await get(db, "schema")) || "1";
+  if (v === "1") {
     try { await db.prepare("ALTER TABLE outbox ADD COLUMN topic TEXT NOT NULL DEFAULT ''").run(); } catch (e) {}
-    await put(db, "schema", "2");
+    await put(db, "schema", (v = "2"));
+  }
+  if (v === "2") {   // move any early trivia reminders into the per-game table
+    try { await db.prepare("INSERT OR IGNORE INTO rem (endpoint, game, hour, phone) SELECT endpoint, 'trivia', 19, phone FROM remind").run(); } catch (e) {}
+    await put(db, "schema", (v = "3"));
   }
 }
 const LIST = (topic) => (topic === "trivia" ? "remind" : "subs");
@@ -93,17 +103,61 @@ async function drain(db, env) {
 
 const queue = (db, title, body, url, topic = "") => db.prepare("INSERT INTO outbox (title, body, url, at, topic) VALUES (?, ?, ?, ?, ?)").bind(title, body, url, new Date().toISOString(), topic).run();
 
-// the daily Flavor Trivia reminder: once a day, from 7 pm Nairobi time, only on days that have a set (16 Nov 2026)
+// poke a list of phones (no words travel; the phone asks for them); returns the endpoints that are gone for good
+async function poke(db, endpoints, env) {
+  const k = await keys(db), tokens = {}, gone = [];
+  await Promise.all(endpoints.map(async (ep) => {
+    try {
+      if (!allowed(ep, env)) { gone.push(ep); return; }
+      const aud = new URL(ep).origin;
+      tokens[aud] = tokens[aud] || sign(aud, k);
+      const res = await fetch(ep, { method: "POST", headers: { Authorization: "vapid t=" + (await tokens[aud]) + ", k=" + k.pub, TTL: "14400", Urgency: "normal", "Content-Length": "0" } });
+      if (res.status === 404 || res.status === 410) gone.push(ep);
+    } catch (e) {}
+  }));
+  return gone;
+}
+
+// Game reminders (16 Nov 2026): what's on today, from the site's own files
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-async function trivia(db, request, env) {
+async function games(request, env, day) {
+  const on = {};
+  try { const d = await (await env.ASSETS.fetch(new URL("/app/trivia.json", request.url))).json(); const s = d && d.sets && d.sets[day]; if (s && s.qs && s.qs.length) on.trivia = s; } catch (e) {}
+  try { const d = await (await env.ASSETS.fetch(new URL("/app/connections.json", request.url))).json(); const z = d && d.puzzles && d.puzzles[day]; if (z && z.groups) on.connections = z; } catch (e) {}
+  return on;
+}
+// send the reminders whose hour has come; returns true if there are more to send
+async function due(db, request, env) {
   const now = nairobi(), day = now.slice(0, 10), hour = +now.slice(11, 13);
-  if (hour < 19 || (await get(db, "tv-day")) === day) return;
-  let d; try { d = await (await env.ASSETS.fetch(new URL("/app/trivia.json", request.url))).json(); } catch (e) { return; }
-  const set = d && d.sets && d.sets[day];
-  await put(db, "tv-day", day);
-  if (!set || !set.qs || !set.qs.length) return;
-  const name = clean(set.theme, 30) + " " + DAYS[new Date(Date.now() + 108e5).getUTCDay()];
-  await queue(db, "Flavor Trivia is waiting", name + ": ten questions, fifteen seconds each. Play before midnight.", "/trivia", "trivia");
+  const on = await games(request, env, day);
+  let more = false;
+  for (const game of ["trivia", "connections"]) {
+    if (!on[game]) continue;
+    const rows = (await db.prepare("SELECT endpoint FROM rem WHERE game = ? AND hour <= ? AND sent <> ? AND last <> ? LIMIT ?").bind(game, hour, day, day, BATCH).all()).results || [];
+    if (!rows.length) continue;
+    const eps = rows.map((r) => r.endpoint);
+    const work = eps.map((ep) => db.prepare("UPDATE rem SET sent = ?, sent_at = ? WHERE endpoint = ? AND game = ?").bind(day, new Date().toISOString(), ep, game));
+    await db.batch(work);
+    const gone = await poke(db, eps, env);
+    if (gone.length) await db.batch(gone.flatMap((ep) => [db.prepare("DELETE FROM rem WHERE endpoint = ?").bind(ep), db.prepare("DELETE FROM subs WHERE endpoint = ?").bind(ep)]));
+    if (rows.length === BATCH) more = true;
+  }
+  return more;
+}
+// the words of a game reminder for one phone, in the streak-guard voice
+async function reminderWords(r, request, env) {
+  const now = nairobi(), day = now.slice(0, 10);
+  const yday = new Date(Date.now() + 108e5 - 864e5).toISOString().slice(0, 10);
+  const alive = r.streak > 0 && r.last === yday;
+  if (r.game === "trivia") {
+    const on = await games(request, env, day), s = on.trivia;
+    const name = s ? clean(s.theme, 30) + " " + DAYS[new Date(Date.now() + 108e5).getUTCDay()] : "Today's Flavor Trivia";
+    return { n: "tv-" + day, url: "/trivia", title: alive ? "Your " + r.streak + "-day streak ends at midnight" : "Today's ten close at midnight",
+      body: name + " is still waiting. Ten questions, fifteen seconds each." };
+  }
+  return { n: "cx-" + day, url: "/connections",
+    title: alive ? "Your " + r.streak + "-day Connections streak ends at midnight" : r.started === day ? "Your Connections puzzle is still open" : "Sixteen tiles. Four groups. Zero found.",
+    body: alive ? "Sixteen tiles, four groups, and today's is still unsolved." : "Today's Connections is still unsolved." };
 }
 
 // has the site got something new worth an alert? (new No. 1, new Flavor Cover). The first run only takes note.
@@ -131,8 +185,8 @@ export async function tick(request, env) {
     const t = Date.now();
     const lock = await db.prepare("UPDATE kv SET v = ? WHERE k = 'lock' AND CAST(v AS INTEGER) < ?").bind(String(t), t - 30000).run();
     if (!lock.meta || !lock.meta.changes) return;
-    if (!(await db.prepare("SELECT n FROM outbox WHERE done = 0 LIMIT 1").first())) { await trivia(db, request, env); await news(db, request, env); }
-    const more = await drain(db, env);
+    if (!(await db.prepare("SELECT n FROM outbox WHERE done = 0 LIMIT 1").first())) await news(db, request, env);
+    const more = (await drain(db, env)) || (await due(db, request, env));
     await put(db, "lock", "0");
     return more;
   } catch (e) {}
@@ -146,7 +200,7 @@ export async function onRequest({ request, env }) {
     const url = new URL(request.url);
 
     if (request.method === "GET") {
-      if (url.searchParams.get("remind") === "trivia") return out({ ok: true, more: !!(await tick(request, env)) });
+      if (url.searchParams.get("remind")) return out({ ok: true, more: !!(await tick(request, env)) });
       if (url.searchParams.get("latest")) {
         // the phone says which subscription it is, so it gets the newest alert meant for it (alerts or trivia reminder)
         const ep = String(url.searchParams.get("ep") || "").slice(0, 1000);
@@ -156,6 +210,14 @@ export async function onRequest({ request, env }) {
           for (const r of recent) { if (await db.prepare("SELECT 1 FROM " + LIST(r.topic) + " WHERE endpoint = ?").bind(ep).first()) { m = r; break; } }
         }
         if (!m) m = await db.prepare("SELECT n, title, body, url, at FROM outbox ORDER BY n DESC LIMIT 1").first();
+        if (ep) {   // a game reminder sent to this phone today wins if it is newer
+          // two games due at the same time give two pokes: each poke takes the next reminder not yet shown
+          const day = nairobi().slice(0, 10);
+          let g = await db.prepare("SELECT game, streak, last, started, sent_at FROM rem WHERE endpoint = ? AND sent = ? AND shown <> ? ORDER BY sent_at, game LIMIT 1").bind(ep, day, day).first();
+          if (g) await db.prepare("UPDATE rem SET shown = ? WHERE endpoint = ? AND game = ?").bind(day, ep, g.game).run();
+          else g = await db.prepare("SELECT game, streak, last, started, sent_at FROM rem WHERE endpoint = ? AND sent = ? ORDER BY sent_at DESC LIMIT 1").bind(ep, day).first();
+          if (g && (!m || Date.parse(g.sent_at) >= Date.parse(m.at))) return out({ ok: true, alert: await reminderWords(g, request, env) });
+        }
         if (!m || Date.now() - Date.parse(m.at) > 3 * 864e5) return out({ ok: true, alert: null });
         return out({ ok: true, alert: { n: m.n, title: m.title, body: m.body, url: m.url } });
       }
@@ -190,10 +252,21 @@ export async function onRequest({ request, env }) {
     if (endpoint.length > 1000 || !allowed(endpoint, env)) return out({ ok: false, error: "bad-endpoint" }, 400);
     if (b.off) { await db.prepare("DELETE FROM subs WHERE endpoint = ?").bind(endpoint).run(); return out({ ok: true, on: false }); }
     const id = /^[a-z0-9]{16,40}$/.test(String(b.id || "")) ? String(b.id) : "";
-    if (b.remind !== undefined) {
-      if (b.remind) await db.prepare("INSERT INTO remind (endpoint, phone, at) VALUES (?, ?, ?) ON CONFLICT(endpoint) DO UPDATE SET at = excluded.at").bind(endpoint, id.slice(0, 8), new Date().toISOString()).run();
-      else await db.prepare("DELETE FROM remind WHERE endpoint = ?").bind(endpoint).run();
-      return out({ ok: true, remind: !!b.remind });
+    const game = b.game === "connections" ? "connections" : b.game === "trivia" || b.remind !== undefined ? "trivia" : "";
+    if (game && b.played) {   // the phone finished (or started) today's game
+      const p = b.played, day = /^\d{4}-\d\d-\d\d$/.test(String(p.day || "")) ? String(p.day) : nairobi().slice(0, 10);
+      const n = Math.max(0, Math.min(9999, parseInt(p.streak, 10) || 0));
+      if (p.state === "started") await db.prepare("UPDATE rem SET started = ? WHERE endpoint = ? AND game = ?").bind(day, endpoint, game).run();
+      else await db.prepare("UPDATE rem SET last = ?, streak = ? WHERE endpoint = ? AND game = ?").bind(day, n, endpoint, game).run();
+      return out({ ok: true });
+    }
+    if (game && b.remind !== undefined) {
+      if (!b.remind) { await db.prepare("DELETE FROM rem WHERE endpoint = ? AND game = ?").bind(endpoint, game).run(); return out({ ok: true, remind: false }); }
+      const hour = Math.max(6, Math.min(22, parseInt(b.hour, 10) || 19));
+      const s = b.streak || {}, n = Math.max(0, Math.min(9999, parseInt(s.n, 10) || 0)), last = /^\d{4}-\d\d-\d\d$/.test(String(s.last || "")) ? String(s.last) : "";
+      await db.prepare("INSERT INTO rem (endpoint, game, hour, streak, last, phone) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(endpoint, game) DO UPDATE SET hour = excluded.hour, streak = excluded.streak, last = excluded.last")
+        .bind(endpoint, game, hour, n, last, id.slice(0, 8)).run();
+      return out({ ok: true, remind: true, hour });
     }
     await db.prepare("INSERT INTO subs (endpoint, phone, at) VALUES (?, ?, ?) ON CONFLICT(endpoint) DO UPDATE SET at = excluded.at").bind(endpoint, id.slice(0, 8), new Date().toISOString()).run();
     return out({ ok: true, on: true });

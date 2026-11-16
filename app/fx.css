@@ -80,3 +80,9 @@ html[data-theme="dark"]{--fx-bg:#000;--fx-ink:#f2f2f2;--fx-mute:#9a9a9a;--fx-lin
 .fa-cx-page,.fa-cx-page button{font-family:var(--fx-font)}
 .fa-cx-tile{border-radius:6px}
 .fa-cx-bar{border-radius:6px}
+.fa-cxc.fx{display:block;border-radius:6px;padding:18px}
+.fa-cxc-in{display:flex;align-items:center;justify-content:space-between;gap:14px;color:var(--fx-ink);text-decoration:none}
+.fa-cxc-in .tx{display:flex;flex-direction:column;min-width:0}
+.fa-cxc .fx-btns{margin-top:16px}
+.fa-cx-rem:not(:empty){margin-top:14px}
+.fa-cx-rem .fx-btn{min-height:38px;padding:0 16px;font-size:13px}

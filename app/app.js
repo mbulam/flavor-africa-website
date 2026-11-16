@@ -290,25 +290,64 @@
       return api("/api/push", { endpoint: sub.endpoint, off: true }).catch(function () {}).then(function () { if (!store.get("fa-remind", false)) return sub.unsubscribe().catch(function () {}); });
     }
   };
-  // the daily Flavor Trivia reminder; app/trivia.js uses this for its "Remind me" button
-  window.faRemind = {
+  // Game reminders (16 Nov 2026): one for Flavor Trivia, one for Flavor Connections. Each has its own hour (7 pm unless
+  // you pick another) and only goes out if you haven't played that game yet that day. The phone tells the server your
+  // streak, so the nudge can say it ("Your 4-day streak ends at midnight"). app/trivia.js and app/connections.js use this.
+  var GAME = { trivia: { name: "Flavor Trivia", streak: "fa-tv-streak" }, connections: { name: "Flavor Connections", streak: "fa-cx-streak" } };
+  var HOURS = [7, 8, 12, 13, 17, 18, 19, 20, 21, 22];
+  function hourLabel(h) { return (h % 12 || 12) + (h < 12 ? " am" : " pm"); }
+  if (store.get("fa-remind", false) === true && !store.get("fa-rem-trivia", 0)) { store.set("fa-rem-trivia", 19); store.set("fa-remind", false); }
+  var R2 = window.faRemind = {
     ok: push.ok,
-    is: function () { return !!store.get("fa-remind", false); },
-    on: function () {
-      return push.sub().then(function (sub) { return api("/api/push", { endpoint: sub.endpoint, id: phoneId(), remind: true }); }).then(function (d) { if (!d.ok) throw new Error("save"); store.set("fa-remind", true); return true; });
+    games: GAME,
+    label: hourLabel,
+    is: function (g) { return +store.get("fa-rem-" + (g || "trivia"), 0) || 0; },
+    any: function () { return R2.is("trivia") || R2.is("connections"); },
+    streak: function (g) { var s = store.get(GAME[g].streak, { last: "", n: 0 }) || {}; return { n: s.n || 0, last: s.last || "" }; },
+    on: function (g, hour) {
+      return push.sub().then(function (sub) { return api("/api/push", { endpoint: sub.endpoint, id: phoneId(), game: g, remind: true, hour: hour, streak: R2.streak(g) }); })
+        .then(function (d) { if (!d.ok) throw new Error("save"); store.set("fa-rem-" + g, d.hour || hour); return d.hour || hour; });
     },
-    off: function () {
-      store.set("fa-remind", false);
+    off: function (g) {
+      store.set("fa-rem-" + g, 0);
       return push.get().then(function (sub) {
-        if (!sub) return false;
-        return api("/api/push", { endpoint: sub.endpoint, remind: false }).catch(function () {}).then(function () { if (!store.get("fa-alerts", false)) return sub.unsubscribe().catch(function () {}); }).then(function () { return false; });
-      }).catch(function () { return false; });
+        if (!sub) return 0;
+        return api("/api/push", { endpoint: sub.endpoint, game: g, remind: false }).catch(function () {}).then(function () { if (!store.get("fa-alerts", false) && !R2.any()) return sub.unsubscribe().catch(function () {}); }).then(function () { return 0; });
+      }).catch(function () { return 0; });
     },
-    toggle: function () {
-      var w = window.faRemind;
-      if (w.is()) return w.off().then(function () { toast("Trivia reminder is off."); return false; });
-      return w.on().then(function () { toast("Done. We'll remind you at 7 pm on trivia days."); return true; })
-        .catch(function (err) { toast(err && err.message === "denied" ? "Allow notifications for flavor.africa in your phone's settings, then try again." : "Couldn't set the reminder. Try again."); return false; });
+    // the game tells us it was played ("done") or started ("started"), so tonight's nudge is skipped or worded right
+    played: function (g, state) {
+      if (!R2.is(g)) return;
+      var s = R2.streak(g);
+      push.get().then(function (sub) { if (sub) api("/api/push", { endpoint: sub.endpoint, game: g, played: { day: nbo().slice(0, 10), streak: s.n, state: state || "done" } }).catch(function () {}); }).catch(function () {});
+    },
+    // the time picker: resolves with the hour that's set (0 = off)
+    pick: function (g) {
+      return new Promise(function (done) {
+        var cur = R2.is(g), want = cur || 19;
+        var bg = el("div", "fx-pick-bg fx"), box = el("div", "fx-pick");
+        bg.setAttribute("role", "dialog"); bg.setAttribute("aria-label", "Reminder for " + GAME[g].name);
+        function draw() {
+          box.innerHTML = '<div class="fx-shd"><span class="k">' + esc(GAME[g].name) + '</span><button type="button" data-x aria-label="Close">' + ICON.close + "</button></div>" +
+            '<h2 class="fx-cap"><span>Guard</span> <b>your streak</b></h2><p class="fx-note">We\'ll nudge you once a day, only if you haven\'t played yet. Pick a time.</p>' +
+            '<div class="fx-hours">' + HOURS.map(function (h) { return '<button type="button" data-h="' + h + '" aria-pressed="' + (h === want) + '">' + hourLabel(h) + "</button>"; }).join("") + "</div>" +
+            '<div class="fx-pick-go"><button type="button" class="fx-btn d" data-set>' + (cur ? "Change to " : "Remind me at ") + hourLabel(want) + "</button>" + (cur ? '<button type="button" class="fx-btn l" data-off>Turn off</button>' : "") + "</div>";
+        }
+        function end(v) { bg.classList.remove("on"); setTimeout(function () { bg.remove(); }, 200); done(v); }
+        draw(); bg.appendChild(box); document.body.appendChild(bg);
+        requestAnimationFrame(function () { bg.classList.add("on"); });
+        bg.addEventListener("click", function (e) {
+          var a;
+          if (e.target === bg || e.target.closest("[data-x]")) return end(cur);
+          if ((a = e.target.closest("[data-h]"))) { want = +a.getAttribute("data-h"); return draw(); }
+          if ((a = e.target.closest("[data-off]"))) { a.disabled = true; return R2.off(g).then(function () { toast(GAME[g].name + " reminder is off."); end(0); }); }
+          if ((a = e.target.closest("[data-set]"))) {
+            a.disabled = true; a.textContent = "Setting it up…";
+            R2.on(g, want).then(function (h) { toast("Done. " + GAME[g].name + " at " + hourLabel(h) + ", only if you haven't played."); end(h); })
+              .catch(function (err) { toast(err && err.message === "denied" ? "Allow notifications for flavor.africa in your phone's settings, then try again." : "Couldn't set the reminder. Try again."); end(cur); });
+          }
+        });
+      });
     }
   };
   try { document.dispatchEvent(new Event("fa-remind-ready")); } catch (e) {}
@@ -586,7 +625,11 @@
       html += sec("<b>Settings</b>") + '<div class="fx-rows">';
       if (push.ok && Notification.permission !== "denied") {
         html += sw("alerts", "Alerts", "A new No. 1 or a new Flavor Cover. Nothing else.", !!sub);
-        html += sw("remind", "Trivia reminder", "A nudge at 7 pm on days with new trivia.", window.faRemind.is());
+        ["trivia", "connections"].forEach(function (g) {
+          var h = window.faRemind.is(g);
+          html += '<div class="fx-row"><span class="fx-tx" data-pick="' + g + '"><b>' + (g === "trivia" ? "Trivia" : "Connections") + " reminder</b><em>" + (h ? "Every day at " + window.faRemind.label(h) + ", only if you haven't played. Tap to change." : "A nudge to guard your streak, at a time you pick.") +
+            '</em></span><button type="button" class="fx-switch" role="switch" aria-checked="' + !!h + '" aria-label="' + g + ' reminder" data-sw="rem-' + g + '"></button></div>';
+        });
       }
       html += sw("dark", "Dark mode", "Black, easier at night", R.getAttribute("data-theme") === "dark" || (!R.getAttribute("data-theme") && window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches));
       html += "</div>";
@@ -597,11 +640,12 @@
       var a;
       if (e.target.closest("[data-x]")) return show();
       if ((a = e.target.closest("[data-rm]"))) { store.set("fa-saved", store.get("fa-saved", []).filter(function (x) { return x !== a.getAttribute("data-rm"); })); drawMe(me._sub); toast("Removed from Saved"); return; }
+      if ((a = e.target.closest("[data-pick]"))) { var pg = a.getAttribute("data-pick"); if (window.faRemind.is(pg)) return window.faRemind.pick(pg).then(function () { drawMe(me._sub); }); return; }
       if ((a = e.target.closest("[data-sw]"))) {
         var w = a.getAttribute("data-sw");
         if (w === "dark") { var th2 = document.getElementById("theme"); if (th2) th2.click(); return drawMe(me._sub); }
         a.disabled = true;
-        if (w === "remind") return window.faRemind.toggle().then(function () { drawMe(me._sub); });
+        if (w.indexOf("rem-") === 0) { var g = w.slice(4); a.disabled = false; return (window.faRemind.is(g) ? window.faRemind.off(g).then(function () { toast("Reminder is off."); }) : window.faRemind.pick(g)).then(function () { drawMe(me._sub); }); }
         alertsToggle(me._sub).then(function (s) { drawMe(s); });
       }
     });

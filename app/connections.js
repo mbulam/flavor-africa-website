@@ -19,6 +19,20 @@
   var KEY = "fa-cx-" + today;
   var pz = null, st = null, box = null, sel = [], toastT = null;
   var TITLE = '<span class="l">Flavor</span> <b>Connections</b>';
+  // Remind me (16 Nov 2026): the app's reminder, set to the hour you pick, only if you haven't played (see app.js)
+  var R = document.documentElement;
+  var BELL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg>';
+  function remindBtn(cls) {
+    if (!(R.classList.contains("app") && window.faRemind && window.faRemind.ok)) return "";
+    var h = window.faRemind.is("connections");
+    return '<button type="button" class="fx-btn ' + cls + '" data-cx-remind aria-pressed="' + !!h + '">' + BELL + (h ? "Reminder · " + window.faRemind.label(h) : "Remind me") + "</button>";
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("[data-cx-remind]"); if (!a) return;
+    e.preventDefault(); a.disabled = true;
+    window.faRemind.pick("connections").then(function (h) { a.disabled = false; a.setAttribute("aria-pressed", !!h); a.innerHTML = BELL + (h ? "Reminder · " + window.faRemind.label(h) : "Remind me"); });
+  });
+  document.addEventListener("fa-remind-ready", function () { if (pz) window.faCxSlot(); var s = document.querySelector(".fa-cx-rem"); if (s) s.innerHTML = remindBtn("l"); });
 
   function streak() { var s = store.get("fa-cx-streak", { last: "", n: 0 }); return s.last === today || s.last === yday ? s.n : 0; }
   function group(w) { for (var g = 0; g < 4; g++) if (pz.groups[g].w.indexOf(w) > -1) return g; return -1; }
@@ -40,7 +54,7 @@
     else if (r && (r.solved.length || r.miss)) line = r.solved.length + " of 4 groups found. Keep going";
     else line = "Find four groups of four.";
     var mini = ""; for (var i = 0; i < 16; i++) mini += "<i" + (r && r.done ? ' class="c' + Math.floor(i / 4) + '"' : "") + "></i>";
-    slot.innerHTML = '<a href="/connections.html" class="fa-cxc"><span class="tx"><span class="k">Today\'s puzzle</span><span class="t">' + TITLE + '</span><span class="s">' + line + '</span></span><span class="mini" aria-hidden="true">' + mini + "</span></a>";
+    slot.innerHTML = '<div class="fa-cxc fx"><a href="/connections.html" class="fa-cxc-in"><span class="tx"><span class="k">Today\'s puzzle</span><span class="t">' + TITLE + '</span><span class="s">' + line + '</span></span><span class="mini" aria-hidden="true">' + mini + '</span></a><div class="fx-btns"><a class="fx-btn d" href="/connections.html">' + (r && r.done ? "See your grid" : r && r.solved && r.solved.length ? "Keep going" : "Play now") + "</a>" + remindBtn("l") + "</div></div>";
   };
 
   fetch("/app/connections.json").then(function (x) { return x.json(); }).then(function (d) {
@@ -65,7 +79,7 @@
     var left = st.order.filter(function (w) { return st.solved.indexOf(group(w)) < 0; });
     sel = sel.filter(function (w) { return left.indexOf(w) > -1; });
     var dots = ""; for (var i = 0; i < LIVES; i++) dots += '<i class="' + (i < LIVES - st.miss ? "on" : "") + '"></i>';
-    box.innerHTML = '<div class="fa-cx-head"><h1>' + TITLE + '</h1><p>Find four groups of four. Pick four tiles that share something, then submit.</p></div>' +
+    box.innerHTML = '<div class="fa-cx-head"><h1>' + TITLE + '</h1><p>Find four groups of four. Pick four tiles that share something, then submit.</p><div class="fa-cx-rem">' + remindBtn("l") + "</div></div>" +
       '<div class="fa-cx-board">' + st.solved.map(bar).join("") +
       '<div class="fa-cx-grid">' + left.map(function (w) {
         return '<button type="button" class="fa-cx-tile' + (sel.indexOf(w) > -1 ? " on" : "") + size(w) + '" data-w="' + esc(w) + '" aria-pressed="' + (sel.indexOf(w) > -1) + '"><span>' + esc(w) + "</span></button>";
@@ -101,6 +115,7 @@
     var key = sel.slice().sort().join("|");
     if (st.tries.some(function (t) { return t.slice().sort().join("|") === key; })) { toast("You've already tried that one."); return; }
     st.tries.push(sel.slice());
+    if (st.tries.length === 1 && window.faRemind && window.faRemind.played) window.faRemind.played("connections", "started");
     var count = [0, 0, 0, 0]; sel.forEach(function (w) { count[group(w)]++; });
     var best = Math.max.apply(null, count), g = count.indexOf(best);
     if (best === 4) {
@@ -128,6 +143,7 @@
       if (s.last !== today) { s.n = s.last === yday ? s.n + 1 : 1; s.last = today; store.set("fa-cx-streak", s); }
     } else store.set("fa-cx-streak", { last: "", n: 0 });
     save(); sel = []; drawEnd();
+    if (window.faRemind && window.faRemind.played) window.faRemind.played("connections", "done");   // no nudge tonight
   }
 
   function grid() { return st.tries.map(function (t) { return t.map(function (w) { return SQ[group(w)]; }).join(""); }).join("\n"); }

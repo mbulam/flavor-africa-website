@@ -64,8 +64,8 @@
   function remindable() { return R.classList.contains("app") && window.faRemind && window.faRemind.ok; }
   function remindBtn() {
     if (!remindable()) return "";
-    var on = window.faRemind.is();
-    return '<button type="button" class="fx-btn o" data-a="remind" aria-pressed="' + on + '">' + BELL + (on ? "Reminder on" : "Remind me") + "</button>";
+    var h = window.faRemind.is("trivia");
+    return '<button type="button" class="fx-btn o" data-a="remind" aria-pressed="' + !!h + '">' + BELL + (h ? "Reminder · " + window.faRemind.label(h) : "Remind me") + "</button>";
   }
   function stats() {
     var best = 0, played = 0;
@@ -95,7 +95,7 @@
   function remind(a) {
     if (!remindable()) return;
     a.disabled = true;
-    window.faRemind.toggle().then(function (on) { a.disabled = false; a.setAttribute("aria-pressed", on); a.innerHTML = BELL + (on ? "Reminder on" : "Remind me"); });
+    window.faRemind.pick("trivia").then(function (h) { a.disabled = false; a.setAttribute("aria-pressed", !!h); a.innerHTML = BELL + (h ? "Reminder · " + window.faRemind.label(h) : "Remind me"); });
   }
 
   // the options are shown in a mixed-up order (the same order for everyone that day), so the right answer isn't always in one spot
@@ -154,6 +154,7 @@
     var s = store.get("fa-tv-streak", { last: "", n: 0 });
     if (s.last !== today) { s.n = s.last === yday ? s.n + 1 : 1; s.last = today; store.set("fa-tv-streak", s); }
     store.set("fa-tv-" + today, { score: st.score, pts: st.pts, ans: st.ans, done: true });
+    if (window.faRemind && window.faRemind.played) window.faRemind.played("trivia", "done");   // no nudge tonight
     drawResults();
   }
 
