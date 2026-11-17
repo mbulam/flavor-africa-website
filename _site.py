@@ -21,6 +21,7 @@ e = lambda s: html.escape(s, quote=True)
 
 # slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, or YYYY-MM-DDTHH:MM to go live at a set time; Nairobi), image focus
 STORIES = [
+ ("one-woman-one-bra-amaa-best-film", ["news", "screen"], "The Wrap", "Kenya's One Woman One Bra wins Best Film at the AMAAs", "Vincho Nchogu's film took three awards in Lagos, including the top prize.", "wr-one-woman-one-bra-amaa.jpg", "2026-11-17T10:50", "center 25%"),
  ("lukaku-retires-belgium", ["sport"], "Flavor Sports", "Lukaku signs off for Belgium", "94 goals, four World Cups and a family story that runs back to Kinshasa.", "sp-lukaku-wave.jpg", "2026-11-17T10:30", "center 30%"),
  ("grammys-2027-nominations", ["news", "music"], "The Wrap", "Grammy nominations 2027: the main categories and the African races", "The nominees in the big four and the African races, plus Beyonc\u00e9's 100th nod.", "gr27-tems.jpg", "2026-11-16T17:30", "center 20%"),
  ("tems-children-of-blood-and-bone-soundtrack", ["news", "music", "screen"], "The Wrap", "Tems is curating the Children of Blood and Bone soundtrack", "Burna Boy, Ayra Starr and nine more are on it. Her own single lands 20 November.", "wr-tems-cobab.jpg", "2026-11-13T20:00", "center 30%"),
@@ -89,6 +90,7 @@ SECTIONS = {  # slug: (heading on page, empty message)
 }
 # The Wrap edition for each news story (filters News page chips: Local / Continental / Global)
 EDITION = {
+ "one-woman-one-bra-amaa-best-film": "Local",
  "tems-soul-train-2026": "Continental", "sofiya-nzau-world-tour": "Local", "drake-janice-stfu-lawsuit": "Global",
  "bien-alusa-continua": "Local", "bridget-blue-grammys": "Local", "tems-what-you-need-record": "Continental",
  "jay-z-super-bowl-lxi": "Global",
