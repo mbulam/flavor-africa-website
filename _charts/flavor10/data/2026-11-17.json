@@ -17,7 +17,7 @@
   {
    "title": "Chai ya Saa Kumi",
    "artist": "Ywaya Tajiri",
-   "points": 46,
+   "points": 48,
    "charts": "PYR",
    "apple": "6796900642"
   },
@@ -37,7 +37,7 @@
   {
    "title": "Oh No",
    "artist": "Rema",
-   "points": 35,
+   "points": 39,
    "charts": "PY"
   },
   {
@@ -45,6 +45,12 @@
    "artist": "Xenia Manasseh & Cracker Mallo",
    "points": 25,
    "charts": "R"
+  },
+  {
+   "title": "WHY LOVE",
+   "artist": "Asake",
+   "points": 25,
+   "charts": "P"
   },
   {
    "title": "Forgiveness",
@@ -62,12 +68,6 @@
    "title": "Final (Baba Nla)",
    "artist": "Wizkid",
    "points": 24,
-   "charts": "P"
-  },
-  {
-   "title": "Gratitude",
-   "artist": "Asake",
-   "points": 23,
    "charts": "P"
   }
  ]
