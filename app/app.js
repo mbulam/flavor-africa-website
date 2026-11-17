@@ -224,21 +224,21 @@
     function title(k) { for (var i = 0; i < songs.length; i++) if (songs[i].key === k) return songs[i].t; return ""; }
     function leader() { var best = null; songs.forEach(function (s) { var n = st.tally[s.key] || 0; if (n && (!best || n > best.n)) best = { t: s.t, n: n }; }); return best; }
     function panel() {
-      var html = '<span class="k">Fans\' pick · this week</span>';
+      var html = '<span class="k">Fans\' pick · today</span>';
       if (st.mine && title(st.mine)) {
         html += "<b>You picked " + esc(title(st.mine)) + "</b>";
         var l = st.total >= MIN ? leader() : null;
         html += "<p>" + (l ? "Out in front: " + esc(l.t) + ", with " + Math.round(l.n / st.total * 100) + "% of picks." : "Picks are still coming in. The fans' No. 1 shows here once enough of you have chosen.") + "</p>";
         html += '<button type="button" data-pick>' + (st.total >= MIN ? "See the picks" : "Change my pick") + "</button>";
       } else {
-        html += "<b>Which one's your No. 1?</b><p>The chart counts streams and airplay. This one's just you. One pick a day.</p><button type=\"button\" data-pick>Pick yours</button>";
+        html += "<b>Which one's your No. 1?</b><p>Today's 10 is ours. The No. 1 is yours. One pick a day.</p><button type=\"button\" data-pick>Pick yours</button>";
       }
       box.innerHTML = html; box.hidden = false;
     }
     function list() {
       var show = st.total >= MIN && st.mine;
       var html = '<div class="fa-sheet-hd"><h2>Your No. 1</h2><button type="button" data-x aria-label="Close">' + ICON.close + '</button></div><p class="fa-sheet-sub">' +
-        (show ? "This week's picks so far. Tap another song to change yours." : "Tap the one you'd put at the top. You can pick again tomorrow.") + '</p><ul class="fa-pick">';
+        (show ? "Today's picks so far. Tap another song to change yours." : "Tap the one you'd put at the top. Tomorrow's a new 10.") + '</p><ul class="fa-pick">';
       songs.forEach(function (s) {
         var n = st.tally[s.key] || 0, pc = st.total ? Math.round(n / st.total * 100) : 0;
         html += '<li><button type="button" data-song="' + esc(s.key) + '" aria-pressed="' + (st.mine === s.key) + '"><span><b>' + esc(s.t) + "</b><i>" + esc(s.a) + "</i></span>" +
@@ -371,7 +371,7 @@
       return l.length ? '<div class="fa-fm-out"><span>' + label + "</span>" + l.map(function (x) { return '<a href="' + esc(o[x[0]]) + '" target="_blank" rel="noopener">' + x[1] + "</a>"; }).join("") + "</div>" : "";
     }
     function two(n) { return (n < 10 ? "0" : "") + n; }
-    var html = ttl("<b>Flavor</b> <span>FM</span>", fm ? "Our picks this week, and what Kenya's playing." : "What Kenya's playing, updated every day.");
+    var html = ttl("<b>Flavor</b> <span>FM</span>", fm ? "Our picks this week, and a new Flavor 10 every day." : "A new Flavor 10 every day.");
     // Featured track: the paid artist spot (FLAVOR_FM_FEATURED in _site.py). Hidden when no one has booked it.
     if (ft && ft.t && ft.a) {
       var fi = tracks.length; tracks.push({ t: ft.t, a: ft.a, k: key(ft.t, ft.a) });
@@ -379,7 +379,7 @@
     }
     var tabs = [];
     if (fm && fm.songs && fm.songs.length) tabs.push(["pl", fm.title || "Our playlist"]);
-    if (chart.length) tabs.push(["ch", "The Flavor 10"]);
+    if (chart.length) tabs.push(["ch", "Flavor 10 · " + (feed.f10.name || "Kenya")]);
     if (mix && /^[\w-]{11}$/.test(mix.youtube || "")) tabs.push(["mx", "The Mix"]);
     html += '<div class="fx-tx-tabs" role="tablist">' + tabs.map(function (t, i) { return '<button type="button" role="tab" data-panel="' + t[0] + '" aria-selected="' + (i === 0) + '">' + esc(t[1]) + "</button>"; }).join("") + "</div>";
     if (fm && fm.songs && fm.songs.length) {
@@ -389,7 +389,7 @@
     }
     if (chart.length) {
       var lab = feed.f10.label ? feed.f10.label.replace(/\s+\d{4}$/, "").toLowerCase().replace(/(^|\s)\S/g, function (c) { return c.toUpperCase(); }) : "";
-      html += '<div class="fx-panel" data-p="ch" hidden><p class="fx-plh">What Kenya\'s playing. Updated every morning' + (lab ? ", last on " + esc(lab) : "") + '.</p><div id="fx-f10-vote"></div><ol class="fx-rows">';
+      html += '<div class="fx-panel" data-p="ch" hidden><p class="fx-plh">' + esc((feed.f10.theme ? feed.f10.theme + ". " : "") + (feed.f10.line || "What Kenya\'s playing.")) + ' A new 10 every morning' + (lab ? ", this one from " + esc(lab) : "") + '.</p><div id="fx-f10-vote"></div><ol class="fx-rows">';
       chart.forEach(function (x, i) { html += row(x.t, x.a, "No. " + (i + 1), i === 0); });
       html += "</ol></div>";
     }
@@ -530,7 +530,7 @@
       if (!box) { box = el("div", "fx fx-screen"); box.id = "fa-today"; main.insertBefore(box, main.firstChild); }
       var pk = feed.picks || {}, fol = follows(), html = "";
       html += ttl("<span>Today's</span> <b>picks</b>", "Three things. About a minute.") + '<div class="fx-rows">';
-      if (feed.f10) html += '<a class="fx-row" href="#flavor-10" data-f10><span class="fx-th n1">1</span><span class="fx-tx"><i>Play this</i><b>' + esc(feed.f10.t) + "</b><em>" + esc(feed.f10.a) + ' · No. 1 on the Flavor 10</em></span><span class="fx-ix y">' + ICON.play + "</span></a>";
+      if (feed.f10) html += '<a class="fx-row" href="#flavor-10" data-f10><span class="fx-th n1">1</span><span class="fx-tx"><i>Play this</i><b>' + esc(feed.f10.t) + "</b><em>" + esc(feed.f10.a) + ' · No. 1 on today\'s Flavor 10' + (feed.f10.name ? " · " + esc(feed.f10.name) : "") + '</em></span><span class="fx-ix y">' + ICON.play + "</span></a>";
       var kn = pk.know && bySlug[pk.know];
       if (kn) html += '<a class="fx-row" href="/' + kn.s + '.html">' + th(kn.i, kn.o) + '<span class="fx-tx"><i>Know this name</i><b>' + esc(pk.know_name || kn.h) + "</b><em>" + esc(pk.know_line || kn.d) + '</em></span><span class="fx-ix">' + ICON.go + "</span></a>";
       var sh = pk.show;
@@ -815,8 +815,8 @@
           '<div class="fa-d-body"><span class="tag">Fan Seat</span><h2>Ask ' + esc(c.fs.artist) + "</h2><p>" + esc(c.fs.line || "") + (c.fs.line ? ". " : "") + esc(c.fs.blurb || "Send us your question.") + '</p><a class="fa-d-go" href="/live.html#fan-seat">Ask your question</a></div>';
       } else if (c.f10) {
         html = '<div class="fa-d-card f10"></div><div class="fa-d-tap"><button type="button" data-prev aria-label="Previous"></button><button type="button" data-next aria-label="Next"></button></div>' + head +
-          '<div class="fa-d-f10"><span class="k">The Flavor 10 · Kenya</span><div class="art"><div class="n">1</div></div></div><div class="fa-d-body"><span class="tag">Number one today</span><h2>' + esc(c.f10.t) + "</h2><p>" + esc(c.f10.a) +
-          '. What Kenya is playing most right now.</p><a class="fa-d-go" href="/index.html#flavor-10">See the full chart</a></div>';
+          '<div class="fa-d-f10"><span class="k">The Flavor 10 · ' + esc(c.f10.name || "Kenya") + '</span><div class="art"><div class="n">1</div></div></div><div class="fa-d-body"><span class="tag">Number one today</span><h2>' + esc(c.f10.t) + "</h2><p>" + esc(c.f10.a) +
+          '. ' + esc(c.f10.line || "What Kenya is playing most right now.") + '</p><a class="fa-d-go" href="/index.html#flavor-10">See today\'s 10</a></div>';
       } else {
         html = '<div class="fa-d-card pic"><div class="bg" style="background-image:url(\'/' + esc(c.i) + '\')"></div><img alt="" src="/' + esc(c.i) + '" style="object-position:' + esc(c.o) + '"></div><div class="fa-d-tap"><button type="button" data-prev aria-label="Previous"></button><button type="button" data-next aria-label="Next"></button></div>' + head +
           '<div class="fa-d-body"><span class="tag">' + esc(c.t) + "</span><h2>" + esc(c.h) + "</h2><p>" + esc(c.d) + '</p><a class="fa-d-go" href="/' + c.s + '.html">Read the story</a></div>';

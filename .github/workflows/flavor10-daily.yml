@@ -30,6 +30,10 @@ jobs:
       - name: Rank today's chart
         if: steps.fetch.outputs.code == '0'
         run: python3 _charts/flavor10/daily.py
+      - name: Build today's Flavor 10 for Tuesday to Sunday (West, South, East & Central, Fresh, Rewind, Reset)
+        # Monday is the Kenya chart above. A day whose sources are down simply keeps the newest list.
+        continue-on-error: true
+        run: python3 _charts/flavor10/week.py
       - name: Rebuild the site (homepage, sitemap, scheduled stories)
         # Runs even if a chart source is down, so scheduled stories still join the
         # sitemap and lose their noindex tag on their date.

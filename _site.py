@@ -479,56 +479,138 @@ def build_home():
     wr("index.html", add_sched(h))
 
 
-# ---- The Flavor 10 · Kenya (homepage chart, from _charts/flavor10/data/*.json) ----
-def flavor10_html():
-    import glob, json, random
-    files = sorted(glob.glob(os.path.join(SITE, "_charts", "flavor10", "data", "*.json")))
+# ---- The Flavor 10 week (homepage chart; a different 10 every day from 17 Nov 2026) ----
+# Mon = the Kenya chart (_charts/flavor10/data/*.json, ranked by daily.py). Tue-Sun = _charts/flavor10/days/*.json,
+# written once each morning by week.py (Tue West Africa, Wed South, Thu East & Central, Fri Fresh, Sat Rewind,
+# Sun Reset). The homepage shows today's list, with a strip of this week's days so earlier lists stay one tap away.
+F10_DAYS = ["Kenya", "West Africa", "South", "East & Central", "Fresh", "Rewind", "Reset"]
+F10_SHORT = ["Kenya", "West", "South", "East", "Fresh", "Rewind", "Reset"]
+
+
+def f10_kenya(upto):
+    """The Kenya chart edition for a date (or the newest one before it), with climb/drop marks."""
+    import glob, json
+    files = sorted(f for f in glob.glob(os.path.join(SITE, "_charts", "flavor10", "data", "*.json")) if os.path.basename(f)[:-5] <= upto)
     if not files:
-        return ""
+        return None
     ed = json.load(open(files[-1]))
     prev = json.load(open(files[-2]))["songs"] if len(files) > 1 else None
-    ever = {(s["title"].lower(), s["artist"].lower()) for f in files[:-1] for s in json.load(open(f))["songs"]}
-    last = {(s["title"].lower(), s["artist"].lower()): i for i, s in enumerate(prev or [], 1)}
-    top = max(s["points"] for s in ed["songs"])
-    rows = []
-    for i, s in enumerate(ed["songs"], 1):
-        k = (s["title"].lower(), s["artist"].lower())
-        if prev is None: mv = ""
+    ever = {(x["title"].lower(), x["artist"].lower()) for f in files[:-1] for x in json.load(open(f))["songs"]}
+    last = {(x["title"].lower(), x["artist"].lower()): i for i, x in enumerate(prev or [], 1)}
+    for i, x in enumerate(ed["songs"], 1):
+        k = (x["title"].lower(), x["artist"].lower())
+        if prev is None: x["mv"] = ""
         elif k in last:
             d = last[k] - i
-            mv = ('<span class="mv up">▲%d</span>' % d) if d > 0 else ('<span class="mv down">▼%d</span>' % -d) if d < 0 else '<span class="mv">–</span>'
+            x["mv"] = ('<span class="mv up">▲%d</span>' % d) if d > 0 else ('<span class="mv down">▼%d</span>' % -d) if d < 0 else '<span class="mv">–</span>'
         else:
-            mv = '<span class="mv re">RE</span>' if k in ever else '<span class="mv new">FRESH</span>'
-        W = 300 * s["points"] / top
-        random.seed(i * 7 + 3)
-        bars = "".join('<rect x="%d" y="%.1f" width="2.4" height="%.1f" rx="1.2"/>' % (x, (24 - v) / 2, v)
-                       for x in range(0, int(W), 5) for v in [min(24, 6 + 18 * abs(random.gauss(.55, .28)))])
-        lead = re.split(r" ft\. |, | & ", s["artist"])[0]
-        q = "%s %s" % (s["title"], lead)
+            x["mv"] = '<span class="mv re">RE</span>' if k in ever else '<span class="mv new">FRESH</span>'
+    ed.update(kind="kenya", name="Kenya", line="What Kenya is playing today, from streams and radio.",
+              sources=" · ".join(SRC_LABEL[c] for c in "PFSYRAM" if c in ed.get("sources", {})) + ". Updated daily")
+    return ed
+
+
+def f10_week():
+    """(today's date, [7 editions or None, Monday first]) for the current Nairobi week."""
+    import json
+    today = nairobi_today()
+    mon = today - datetime.timedelta(days=today.weekday())
+    week = []
+    for n in range(7):
+        d = (mon + datetime.timedelta(days=n)).isoformat()
+        if d > today.isoformat():
+            week.append(None); continue
+        if n == 0:   # the Kenya tab always holds the newest Kenya chart (it still updates every morning)
+            week.append(f10_kenya(today.isoformat())); continue
+        fp = os.path.join(SITE, "_charts", "flavor10", "days", d + ".json")
+        week.append(json.load(open(fp)) if os.path.exists(fp) else None)
+    return today, week
+
+
+def f10_today():
+    """Today's edition; if today's list didn't build (a source was down), the newest one this week, else Kenya."""
+    today, week = f10_week()
+    for ed in reversed(week[:today.weekday() + 1]):
+        if ed and ed.get("songs"):
+            return ed
+    return f10_kenya(today.isoformat())
+
+
+def f10_list(ed, n, show):
+    import random
+    chart = ed["kind"] in ("kenya", "west", "south", "east", "fresh")
+    top = max([x.get("points", 0) for x in ed["songs"]] + [1])
+    rows = []
+    for i, x in enumerate(ed["songs"], 1):
+        lead = re.split(r" ft\. |, | & ", x["artist"])[0]
+        q = "%s %s" % (x["title"], lead)
+        note = ""
+        if x.get("out"):
+            note = " · out " + datetime.date.fromisoformat(x["out"]).strftime("%-d %b")
+        elif x.get("year"):
+            note = " · " + x["year"]
+        wave = ""
+        if chart and x.get("points"):
+            W = 300 * x["points"] / top
+            random.seed(i * 7 + 3)
+            bars = "".join('<rect x="%d" y="%.1f" width="2.4" height="%.1f" rx="1.2"/>' % (xx, (24 - v) / 2, v)
+                           for xx in range(0, int(W), 5) for v in [min(24, 6 + 18 * abs(random.gauss(.55, .28)))])
+            wave = '<svg class="f10-wave" viewBox="0 0 %.0f 24" preserveAspectRatio="none" style="width:%.0f%%" aria-hidden="true">%s</svg>' % (W, 100 * x["points"] / top, bars)
         rows.append('<li%s data-q="%s" data-id="%s" data-t="%s" data-a="%s"><span class="f10-rk">%02d%s</span>'
-                    '<div class="f10-t"><b>%s</b><span>%s</span><svg class="f10-wave" viewBox="0 0 %.0f 24" preserveAspectRatio="none" style="width:%.0f%%" aria-hidden="true">%s</svg></div>'
+                    '<div class="f10-t"><b>%s</b><span>%s%s</span>%s</div>'
                     '<button class="f10-btn" type="button" aria-label="Play %s"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="pl" d="M8 5.5v13l11-6.5z"/><path class="pa" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button></li>'
-                    % (' class="one"' if i == 1 else "", e(q), e(s.get("apple", "")), e(s["title"]), e(s["artist"]), i, mv,
-                       e(s["title"]), e(s["artist"]), W, 100 * s["points"] / top, bars, e(s["title"])))
+                    % (' class="one"' if i == 1 else "", e(q), e(x.get("apple", "")), e(x["title"]), e(x["artist"]), i, x.get("mv", ""),
+                       e(x["title"]), e(x["artist"]), e(note), wave, e(x["title"])))
+    when = datetime.date.fromisoformat(ed["date"]).strftime("%A %-d %B")
+    sub = (ed.get("theme") + ". " if ed.get("theme") else "") + ed.get("line", "")
+    return ('<ol class="f10" data-n="%d" data-name="%s" data-sub="%s" data-src="%s"%s>%s</ol>'
+            % (n, e(ed["name"]), e(when + " · " + sub), e(ed.get("sources", "")), "" if show else " hidden", "".join(rows)))
+
+
+def flavor10_html():
+    today, week = f10_week()
+    ed = next((x for x in reversed(week[:today.weekday() + 1]) if x and x.get("songs")), None) or f10_kenya(today.isoformat())
+    if not ed:
+        return ""
+    lists, tabs = [], []
+    shown = None
+    for n in range(7):
+        x = week[n]
+        day = (today - datetime.timedelta(days=today.weekday() - n)).strftime("%a")
+        if x and x.get("songs"):
+            on = x is ed
+            if on: shown = n
+            lists.append(f10_list(x, n, on))
+            tabs.append('<button type="button" role="tab" data-n="%d" aria-selected="%s"><b>%s</b><span>%s</span></button>' % (n, "true" if on else "false", day, F10_SHORT[n]))
+        else:
+            soon = n > today.weekday()
+            tabs.append('<button type="button" role="tab" disabled title="%s"><b>%s</b><span>%s</span></button>' % ("Drops " + day if soon else "No list", day, F10_SHORT[n] if soon else "—"))
+    if shown is None:   # today's list is Kenya from an earlier date (Monday's list missing)
+        lists.insert(0, f10_list(ed, today.weekday(), True))
     player = ('<aside class="f10-pl" aria-label="Flavor 10 player"><div class="f10-art"><img alt="" hidden><span class="f10-ph">flavor.<b>10</b></span></div>'
               '<div class="f10-now"><span class="tag">Now playing</span><b id="f10-title">%s</b><span id="f10-artist">%s</span></div>'
               '<div class="f10-ctl"><button class="f10-big" type="button" aria-label="Play preview"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="pl" d="M8 5.5v13l11-6.5z"/><path class="pa" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>'
               '<div class="f10-prog"><i></i></div><span class="f10-time">0:30</span></div>'
               '<p class="f10-note">30-second previews. Listen in full:</p><div class="f10-links"><a id="f10-sp" target="_blank" rel="noopener">Spotify</a><a id="f10-am" target="_blank" rel="noopener">Apple Music</a><a id="f10-yt" target="_blank" rel="noopener">YouTube</a></div>'
               '<audio preload="none"></audio></aside>' % (e(ed["songs"][0]["title"]), e(ed["songs"][0]["artist"])))
-    return ('<section class="wrap block" id="flavor-10"><div class="secbar"><h2>The Flavor 10 · Kenya</h2>'
-            '<a href="charts.html">More charts »</a></div><p class="f10-sub">%s · What Kenya is playing today. Tap a song to listen.</p>'
-            '<div class="f10-grid"><ol class="f10">%s</ol>%s</div>'
-            '<p class="f10-src"><b>Sources:</b> %s. Updated daily.</p></section>%s'
-            % (e(ed["label"].title().replace("Of", "of")), "".join(rows), player,
-               " · ".join(SRC_LABEL[c] for c in "PFSYRAM" if c in ed.get("sources", {})), F10JS))
+    when = datetime.date.fromisoformat(ed["date"]).strftime("%A %-d %B")
+    sub = (ed.get("theme") + ". " if ed.get("theme") else "") + ed.get("line", "")
+    return ('<section class="wrap block" id="flavor-10"><div class="secbar"><h2>The Flavor 10 · <span class="f10-name">%s</span></h2>'
+            '<a href="charts.html">More charts »</a></div>'
+            '<div class="f10-week" role="tablist" aria-label="This week\'s Flavor 10s">%s</div>'
+            '<p class="f10-sub">%s</p>'
+            '<div class="f10-grid"><div class="f10-lists">%s</div>%s</div>'
+            '<p class="f10-src"><b>Sources:</b> <span>%s</span>.</p>'
+            '<p class="f10-how">A new 10 every day: Kenya on Monday, West Africa Tuesday, South Wednesday, East &amp; Central Thursday, '
+            'Fresh Friday, Rewind Saturday, Reset Sunday. Tuesday to Friday only count songs out in the last month, and no song comes back for four weeks.</p></section>%s'
+            % (e(ed["name"]), "".join(tabs), e(when + " · " + sub), "".join(lists), player, e(ed.get("sources", "")), F10JS))
 
 
 SRC_LABEL = {"P": "Apple Music", "F": "Spotify", "S": "Shazam", "Y": "YouTube", "R": "Kenyan radio", "A": "Audiomack", "M": "Mdundo"}
 
 
 F10JS = r"""<script>(function(){var sec=document.getElementById("flavor-10");if(!sec)return;
-var rows=[].slice.call(sec.querySelectorAll(".f10 li")),au=sec.querySelector("audio"),img=sec.querySelector(".f10-art img"),ph=sec.querySelector(".f10-ph"),
+var all=[].slice.call(sec.querySelectorAll(".f10 li")),vis=sec.querySelector(".f10:not([hidden])")||sec.querySelector(".f10"),rows=[].slice.call(vis.querySelectorAll("li")),au=sec.querySelector("audio"),img=sec.querySelector(".f10-art img"),ph=sec.querySelector(".f10-ph"),
 big=sec.querySelector(".f10-big"),bar=sec.querySelector(".f10-prog i"),tm=sec.querySelector(".f10-time"),cur=null,cache={},n=0;
 function jsonp(u,cb){var k="f10cb"+(n++),s=document.createElement("script"),done=false;window[k]=function(d){done=true;delete window[k];s.remove();cb(d)};
 s.onerror=function(){if(!done){delete window[k];cb(null)}};s.src=u+"&callback="+k;document.body.appendChild(s);setTimeout(function(){if(!done){done=true;cb(null)}},8000)}
@@ -545,7 +627,12 @@ function state(){rows.forEach(function(x){x.classList.toggle("on",x===cur&&!au.p
 function play(li){if(cur===li&&au.src){au.paused?au.play():au.pause();return}cur=li;au.pause();bar.style.width="0";rows.forEach(function(x){x.classList.toggle("sel",x===li)});
 li.classList.add("load");find(li,function(r){li.classList.remove("load");show(li,r);if(cur!==li)return;
 if(r){au.src=r.previewUrl;au.play().catch(function(){})}else{au.removeAttribute("src");sec.querySelector(".f10-note").textContent="No preview for this one. Listen in full:"}})}
-rows.forEach(function(li){li.addEventListener("click",function(ev){if(ev.target.closest("a"))return;play(li)})});
+all.forEach(function(li){li.addEventListener("click",function(ev){if(ev.target.closest("a"))return;play(li)})});
+[].slice.call(sec.querySelectorAll(".f10-week button:not([disabled])")).forEach(function(b){b.addEventListener("click",function(){var ol=sec.querySelector('.f10[data-n="'+b.dataset.n+'"]');if(!ol||!ol.hidden)return;
+[].slice.call(sec.querySelectorAll(".f10")).forEach(function(o){o.hidden=o!==ol});[].slice.call(sec.querySelectorAll(".f10-week button")).forEach(function(o){o.setAttribute("aria-selected",o===b?"true":"false")});
+sec.querySelector(".f10-name").textContent=ol.dataset.name;sec.querySelector(".f10-sub").textContent=ol.dataset.sub;sec.querySelector(".f10-src span").textContent=ol.dataset.src;
+au.pause();au.removeAttribute("src");bar.style.width="0";cur=null;all.forEach(function(x){x.classList.remove("sel","on")});rows=[].slice.call(ol.querySelectorAll("li"));rows[0].classList.add("sel");state();
+links(rows[0],null);find(rows[0],function(r){if(!cur)show(rows[0],r)})})});
 big.addEventListener("click",function(){play(cur||rows[0])});
 au.addEventListener("play",state);au.addEventListener("pause",state);au.addEventListener("ended",function(){var i=rows.indexOf(cur);state();if(i<rows.length-1)play(rows[i+1])});
 au.addEventListener("timeupdate",function(){if(au.duration){bar.style.width=(100*au.currentTime/au.duration)+"%";tm.textContent="0:"+("0"+Math.max(0,Math.ceil(au.duration-au.currentTime))).slice(-2)}});
@@ -608,14 +695,17 @@ def build_app_feed():
     Every story is listed with its date; the app itself hides stories dated in the future."""
     import glob, json
     os.makedirs(os.path.join(SITE, "app"), exist_ok=True)
-    f10 = None
-    files = sorted(glob.glob(os.path.join(SITE, "_charts", "flavor10", "data", "*.json")))
-    if files:
-        ed = json.load(open(files[-1]))
-        if ed.get("songs"):
-            f10 = {"t": ed["songs"][0]["title"], "a": ed["songs"][0]["artist"], "label": ed.get("label", ""), "id": ed["songs"][0].get("apple", ""),
-                   "songs": [{"t": x["title"], "a": x["artist"]} for x in ed["songs"]]}
-    out = {"hero": sorted(HERO)[0] if HERO else "", "f10": f10, "fanseat": FAN_SEAT, "picks": TODAYS_PICKS, "fm": FLAVOR_FM, "feat": FLAVOR_FM_FEATURED, "mix": FLAVOR_MIX,
+    # f10 = TODAY's Flavor 10 (a different list each day from 17 Nov 2026): Play this, Flavor Daily, Flavor FM and the
+    # fans' pick all use it. kenya = the Kenya chart; the "New No. 1 in Kenya" alert (functions/api/push.js) reads that.
+    def pack(ed):
+        if not ed or not ed.get("songs"):
+            return None
+        return {"t": ed["songs"][0]["title"], "a": ed["songs"][0]["artist"], "label": ed.get("label", ""), "id": ed["songs"][0].get("apple", ""),
+                "kind": ed.get("kind", "kenya"), "name": ed.get("name", "Kenya"), "line": ed.get("line", ""), "theme": ed.get("theme", ""),
+                "songs": [{"t": x["title"], "a": x["artist"]} for x in ed["songs"]]}
+    f10 = pack(f10_today())
+    kenya = pack(f10_kenya(nairobi_today().isoformat()))
+    out = {"hero": sorted(HERO)[0] if HERO else "", "f10": f10, "kenya": kenya, "fanseat": FAN_SEAT, "picks": TODAYS_PICKS, "fm": FLAVOR_FM, "feat": FLAVOR_FM_FEATURED, "mix": FLAVOR_MIX,
            "stories": [{"s": s[0], "c": s[1], "t": s[2], "h": s[3], "d": s[4], "i": "img/" + s[5], "p": s[6], "o": s[7]}
                        for s in newest(STORIES)]}
     with open(os.path.join(SITE, "app", "feed.json"), "w") as f:
