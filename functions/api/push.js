@@ -171,12 +171,13 @@ async function reminderWords(r, request, env) {
 async function news(db, request, env) {
   let f; try { f = await (await env.ASSETS.fetch(new URL("/app/feed.json", request.url))).json(); } catch (e) { return; }
   const now = nairobi().slice(0, 16);
-  const top = f.f10 && f.f10.t ? f.f10.t + " — " + f.f10.a : "";
+  const k = f.kenya || f.f10;   // the Kenya chart only (the other days' lists change daily by design, 17 Nov 2026)
+  const top = k && k.t ? k.t + " — " + k.a : "";
   const cover = (f.stories || []).filter((s) => s.t === "The Flavor Cover" && s.p <= now)[0];
   const [n1, cv] = [await get(db, "n1"), await get(db, "cover")];
   if (top && top !== n1) {
     await put(db, "n1", top);
-    if (n1 !== null) await queue(db, "New No. 1 in Kenya", f.f10.t + " by " + f.f10.a + " tops the Flavor 10 today.", "/#flavor-10");
+    if (n1 !== null) await queue(db, "New No. 1 in Kenya", k.t + " by " + k.a + " tops the Kenya chart today.", "/#flavor-10");
   }
   if (cover && cover.s !== cv) {
     await put(db, "cover", cover.s);

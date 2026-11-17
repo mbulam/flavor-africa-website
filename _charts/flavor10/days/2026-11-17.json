@@ -1,0 +1,112 @@
+{
+ "date": "2026-11-17",
+ "label": "17 NOV 2026",
+ "kind": "west",
+ "name": "West Africa",
+ "line": "The biggest new songs in Nigeria, Ghana, Côte d'Ivoire and Senegal, all out in the last month.",
+ "window": 30,
+ "sources": "Apple Music most played: Nigeria, Ghana, Côte d'Ivoire, Senegal",
+ "songs": [
+  {
+   "title": "INFERNO",
+   "artist": "Peruzzi, Zlatan & Shoday",
+   "apple": "6826638612",
+   "out": "2026-10-29",
+   "points": 102,
+   "where": [
+    "ng",
+    "gh"
+   ]
+  },
+  {
+   "title": "PARTY",
+   "artist": "Didi B & Davido",
+   "apple": "6825864313",
+   "out": "2026-11-05",
+   "points": 100,
+   "where": [
+    "ci"
+   ]
+  },
+  {
+   "title": "ADIOS",
+   "artist": "Didi B & Qing Madi",
+   "apple": "6825864318",
+   "out": "2026-11-05",
+   "points": 99,
+   "where": [
+    "ci"
+   ]
+  },
+  {
+   "title": "REPAIR",
+   "artist": "O'Kenneth",
+   "apple": "6825928761",
+   "out": "2026-11-13",
+   "points": 97,
+   "where": [
+    "gh"
+   ]
+  },
+  {
+   "title": "ME NSAN",
+   "artist": "O'Kenneth",
+   "apple": "6825928762",
+   "out": "2026-11-13",
+   "points": 95,
+   "where": [
+    "gh"
+   ]
+  },
+  {
+   "title": "DRTY",
+   "artist": "Ruger ft. ODUMODUBLVCK",
+   "apple": "6827296694",
+   "out": "2026-11-11",
+   "points": 86,
+   "where": [
+    "ng"
+   ]
+  },
+  {
+   "title": "Omo Ologo",
+   "artist": "Zinoleesky",
+   "apple": "6831226514",
+   "out": "2026-11-13",
+   "points": 82,
+   "where": [
+    "ng"
+   ]
+  },
+  {
+   "title": "Home Training",
+   "artist": "Mayorkun",
+   "apple": "6827146556",
+   "out": "2026-10-29",
+   "points": 59,
+   "where": [
+    "ng"
+   ]
+  },
+  {
+   "title": "Living Thing",
+   "artist": "T.I BLAZE",
+   "apple": "6830228686",
+   "out": "2026-11-13",
+   "points": 48,
+   "where": [
+    "ng"
+   ]
+  },
+  {
+   "title": "Melody",
+   "artist": "King Promise",
+   "apple": "6819711991",
+   "out": "2026-10-22",
+   "points": 47,
+   "where": [
+    "gh"
+   ]
+  }
+ ]
+}

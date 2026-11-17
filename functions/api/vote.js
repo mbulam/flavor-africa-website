@@ -1,5 +1,5 @@
 // Fans' pick for the Flavor 10 (added 10 Nov 2026), used by the home-screen app.
-//   GET  /api/vote?id=<phone code>   -> this week's tally, and what this phone picked today
+//   GET  /api/vote?id=<phone code>   -> today's tally, and what this phone picked today
 //   POST /api/vote {song, id}        -> one pick per phone per day (picking again changes it)
 // A week runs Monday to Sunday, Nairobi time. Votes live in the Cloudflare D1 database bound to
 // this Pages project as DB. The fans' pick is shown on its own and never changes the Flavor 10 ranking.
@@ -29,7 +29,8 @@ async function hash(text) {
 }
 
 async function state(db, week, day, phone) {
-  const rows = (await db.prepare("SELECT song, COUNT(*) AS n FROM votes WHERE week = ? GROUP BY song").bind(week).all()).results || [];
+  // counted per day from 17 Nov 2026: the Flavor 10 is a different list every day
+  const rows = (await db.prepare("SELECT song, COUNT(*) AS n FROM votes WHERE day = ? GROUP BY song").bind(day).all()).results || [];
   const tally = {}; let total = 0;
   rows.forEach((r) => { tally[r.song] = r.n; total += r.n; });
   let mine = null;

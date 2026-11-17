@@ -1,0 +1,33 @@
+{
+ "_how": "Hand-picked Flavor 10s for Saturday (Rewind) and Sunday (Reset), one per Nairobi date. Every credit and year is checked against 2+ sources before it goes in. A song can't come back on any Flavor 10 for 28 days. week.py publishes the list on its date; a weekend with no entry here shows Monday-to-Friday lists only.",
+ "2026-11-21": {"kind": "rewind", "theme": "Crossing borders, 2010–2015",
+   "line": "Ten songs from the years African pop stopped staying home.",
+   "songs": [
+     ["Party Don't Stop", "Camp Mulla ft. Collo", "2010"],
+     ["Oliver Twist", "D'banj", "2011"],
+     ["Dami Duro", "Davido", "2011"],
+     ["Khona", "Mafikizolo ft. Uhuru", "2013"],
+     ["Number One", "Diamond Platnumz", "2013"],
+     ["Johnny", "Yemi Alade", "2013"],
+     ["Sitya Loss", "Eddy Kenzo", "2014"],
+     ["Adonai (Remix)", "Sarkodie ft. Castro", "2014"],
+     ["Ojuelegba", "Wizkid", "2014"],
+     ["Sura Yako", "Sauti Sol", "2014"]
+   ],
+   "sources": "Wikipedia, Music in Africa, OkayAfrica, Pulse, The Citizen (TZ), Daily Monitor, citifmonline, NotJustOk"},
+ "2026-11-22": {"kind": "reset", "theme": "Slow Sunday",
+   "line": "Quiet ones for the last day of the week.",
+   "songs": [
+     ["Kothbiro", "Ayub Ogada"],
+     ["Zange", "Bongeziwe Mabandla"],
+     ["Down on My Knees", "Ayọ"],
+     ["Orente", "Adekunle Gold"],
+     ["Umama", "Sjava"],
+     ["Malaika", "Miriam Makeba"],
+     ["Kala", "Ali Farka Touré & Toumani Diabaté"],
+     ["Bittersweet", "Lianne La Havas"],
+     ["Turn Your Lights Down Low", "Bob Marley & The Wailers"],
+     ["Fast Car", "Tracy Chapman"]
+   ],
+   "sources": "Wikipedia, Music in Africa, Nation, OkayAfrica, Nonesuch, BellaNaija, Channels TV, World Circuit"}
+}
