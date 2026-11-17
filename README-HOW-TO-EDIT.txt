@@ -111,8 +111,11 @@ AUTOMATIC UPDATES (added 29 Oct 2026)
   If a source can't be reached, its last good copy is reused for a few days, then dropped.
   It runs once a day only. To force an extra run: "Run workflow" on GitHub (Actions tab).
 - Climb arrows are green, drop arrows are red (style.css: --climb / --fall).
-- Editor's picks on the homepage rotate every day from the long-form stories of the last
-  30 days (PICK_TAGS in _site.py). The big hero story is still set by hand in index.html.
+- Editor's picks on the homepage change every day at midnight (Nairobi), from the long-form
+  and Flavor Sports stories of the last 30 days (PICK_TAGS in _site.py). Nothing shown in the
+  last two days repeats. Two slots go to the newest stories, so a new story is picked on its
+  first day; the third slot rotates through older ones. The big hero story is still set by
+  hand in index.html.
 
 GOOGLE ANALYTICS + COOKIE NOTICE (added 30 Oct 2026)
 - Google Analytics 4, Measurement ID G-DXW50Q0F0K (property "flavorafricagroup.org",

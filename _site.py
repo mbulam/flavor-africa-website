@@ -160,15 +160,25 @@ TODAYS_PICKS = {"know": "tg-blk", "know_name": "tg.blk",
                 "know_line": "The Mombasa bedroom producer opening doors for alternative music.",
                 "show": {"t": "Ngoma na Marafiki", "d": "Ayrosh is on the line-up. Date coming soon.",
                          "i": "img/ay-live.jpg", "o": "center 40%", "href": "/live.html"}}
-# Editor's picks rotate every day from the long-form stories of the last PICK_DAYS days.
+# Editor's picks (changed 17 Nov 2026): three a day, never repeating anything shown in the
+# last two days. Two slots go to the newest stories not shown recently, so a new story
+# shows up on its first day; the third slot rotates through older stories in the pool.
+# Worked out in the browser on Nairobi time, so it changes at midnight and picks up
+# scheduled stories the moment they go live.
 PICK_TAGS = {"The Flavor Cover", "Flavor Feature", "Money Moves", "Flavor Roots", "Flavor Rewind", "Flavor Decoded",
-             "The Verdict", "Flavor Spotlight", "In Their Words", "Flavor Fashion", "Flavor Artist Live"}
+             "The Verdict", "Flavor Spotlight", "In Their Words", "Flavor Fashion", "Flavor Artist Live",
+             "Flavor Sports"}
 PICK_DAYS = 30
 PICKJS = ('<script>(function(){var g=document.querySelector(".sides[data-pool]");if(!g)return;'
-          'var now=new Date(Date.now()+108e5),d=now.toISOString().slice(0,16),day=Math.floor(now.getTime()/864e5);'
-          'var k=[].slice.call(g.children).filter(function(c){if(c.getAttribute("data-pub")>d){c.remove();return false}return true});'
-          'var n=k.length;if(n<4)return;var st=(day*3)%n;'
-          'for(var i=0;i<n;i++)g.appendChild(k[(st+i)%n])})();</script>')
+          'var all=[].slice.call(g.children),D=864e5,now=Date.now()+108e5,T=Math.floor(now/D),memo={};'
+          'function lim(d){return new Date(d===T?now:(d+1)*D-6e4).toISOString().slice(0,16)}'
+          'function href(c){return c.getAttribute("href")}'
+          'function pick(d){if(memo[d])return memo[d];var L=lim(d),p=all.filter(function(c){return c.getAttribute("data-pub")<=L}),b1={},b2={};'
+          'if(d>T-28){pick(d-1).forEach(function(h){b1[h]=b2[h]=1});pick(d-2).forEach(function(h){b2[h]=1})}'
+          'var f=p.filter(function(c){return!b2[href(c)]});if(f.length<3)f=p.filter(function(c){return!b1[href(c)]});if(f.length<3)f=p;'
+          'var o=f.slice(0,2);if(f.length>2)o.push(f[2+d%(f.length-2)]);return memo[d]=o.map(href)}'
+          'all.forEach(function(c){if(c.getAttribute("data-pub")>lim(T))c.remove()});'
+          'pick(T).slice().reverse().forEach(function(h){var c=g.querySelector(\'a[href="\'+h+\'"]\');if(c)g.insertBefore(c,g.firstChild)})})();</script>')
 
 
 def nice(d):
