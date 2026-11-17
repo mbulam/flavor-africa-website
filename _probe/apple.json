@@ -1,0 +1,6365 @@
+{
+"ke": {
+"error": "HTTP Error 504: Gateway Time-out"
+},
+"ng": {
+"updated": "Tue, 17 Nov 2026 07:50:52 +0000",
+"songs": [
+{
+"id": "6794221509",
+"name": "If You Like",
+"artistName": "BNXN",
+"releaseDate": "2026-10-01",
+"url": "https://music.apple.com/ng/album/if-you-like/6794221106?i=6794221509"
+},
+{
+"id": "6784221149",
+"name": "B4 B4",
+"artistName": "Davido, FOLA & Mayorkun",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/ng/album/b4-b4/6784220944?i=6784221149"
+},
+{
+"id": "6826638612",
+"name": "INFERNO",
+"artistName": "Peruzzi, Zlatan & Shoday",
+"releaseDate": "2026-10-29",
+"url": "https://music.apple.com/ng/album/inferno/6826638611?i=6826638612"
+},
+{
+"id": "1891869454",
+"name": "Forgiveness",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/ng/album/forgiveness/1891869190?i=1891869454"
+},
+{
+"id": "6803950471",
+"name": "Back 2 U",
+"artistName": "Seyi Vibez",
+"releaseDate": "2026-09-17",
+"url": "https://music.apple.com/ng/album/back-2-u/6803950183?i=6803950471"
+},
+{
+"id": "6788498990",
+"name": "Eja Meja (feat. Asake)",
+"artistName": "BNXN",
+"releaseDate": "2026-07-29",
+"url": "https://music.apple.com/ng/album/eja-meja-feat-asake/6788498989?i=6788498990"
+},
+{
+"id": "6781408107",
+"name": "GTA",
+"artistName": "Seyi Vibez",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/ng/album/gta/6781408104?i=6781408107"
+},
+{
+"id": "1794619835",
+"name": "WHY LOVE",
+"artistName": "Asake",
+"releaseDate": "2025-02-12",
+"url": "https://music.apple.com/ng/album/why-love/1794619833?i=1794619835"
+},
+{
+"id": "6812516760",
+"name": "IKEBE 3000",
+"artistName": "Blaqbonez & Asake",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/ng/album/ikebe-3000/6812516643?i=6812516760"
+},
+{
+"id": "6810267047",
+"name": "miss u ii (nriri)",
+"artistName": "FOLA",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/ng/album/miss-u-ii-nriri/6810267024?i=6810267047"
+},
+{
+"id": "6803660491",
+"name": "Online",
+"artistName": "BNXN",
+"releaseDate": "2026-09-17",
+"url": "https://music.apple.com/ng/album/online/6803660489?i=6803660491"
+},
+{
+"id": "6801222401",
+"name": "attention!",
+"artistName": "FOLA",
+"releaseDate": "2026-08-12",
+"url": "https://music.apple.com/ng/album/attention/6801222400?i=6801222401"
+},
+{
+"id": "6778493193",
+"name": "treat u right",
+"artistName": "FOLA & Ayra Starr",
+"releaseDate": "2026-07-02",
+"url": "https://music.apple.com/ng/album/treat-u-right/6778493192?i=6778493193"
+},
+{
+"id": "1501482323",
+"name": "Mushin",
+"artistName": "Terry Apala",
+"releaseDate": "2018-08-10",
+"url": "https://music.apple.com/ng/album/mushin/1501482321?i=1501482323"
+},
+{
+"id": "6827296694",
+"name": "DRTY (feat. ODUMODUBLVCK)",
+"artistName": "Ruger",
+"releaseDate": "2026-11-11",
+"url": "https://music.apple.com/ng/album/drty-feat-odumodublvck/6827296682?i=6827296694"
+},
+{
+"id": "6810267364",
+"name": "waf",
+"artistName": "FOLA",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/ng/album/waf/6810267024?i=6810267364"
+},
+{
+"id": "6784221150",
+"name": "Already Falling",
+"artistName": "Davido",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/ng/album/already-falling/6784220944?i=6784221150"
+},
+{
+"id": "6810267040",
+"name": "2am in toronto",
+"artistName": "FOLA & Davido",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/ng/album/2am-in-toronto/6810267024?i=6810267040"
+},
+{
+"id": "6831226514",
+"name": "Omo Ologo",
+"artistName": "Zinoleesky",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ng/album/omo-ologo/6831226246?i=6831226514"
+},
+{
+"id": "6803950190",
+"name": "Diamonds",
+"artistName": "Seyi Vibez",
+"releaseDate": "2026-09-17",
+"url": "https://music.apple.com/ng/album/diamonds/6803950183?i=6803950190"
+},
+{
+"id": "6803950191",
+"name": "Melanin",
+"artistName": "Seyi Vibez",
+"releaseDate": "2026-09-17",
+"url": "https://music.apple.com/ng/album/melanin/6803950183?i=6803950191"
+},
+{
+"id": "1703820453",
+"name": "Pidgin & English",
+"artistName": "BNXN",
+"releaseDate": "2023-10-05",
+"url": "https://music.apple.com/ng/album/pidgin-english/1703820043?i=1703820453"
+},
+{
+"id": "1891869198",
+"name": "Gratitude",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/ng/album/gratitude/1891869190?i=1891869198"
+},
+{
+"id": "1245549980",
+"name": "Come Closer (feat. Drake)",
+"artistName": "Wizkid",
+"releaseDate": "2017-06-09",
+"url": "https://music.apple.com/ng/album/come-closer-feat-drake/1245549634?i=1245549980"
+},
+{
+"id": "1537897356",
+"name": "20 10 20",
+"artistName": "Burna Boy",
+"releaseDate": "2020-10-29",
+"url": "https://music.apple.com/ng/album/20-10-20/1537897085?i=1537897356"
+},
+{
+"id": "1888287490",
+"name": "fine ting (fine $hit)",
+"artistName": "FOLA",
+"releaseDate": "2026-08-12",
+"url": "https://music.apple.com/ng/album/fine-ting-fine-%24hit/1888287484?i=1888287490"
+},
+{
+"id": "1531532312",
+"name": "Ginger (feat. Burna Boy)",
+"artistName": "Wizkid",
+"releaseDate": "2020-10-29",
+"url": "https://music.apple.com/ng/album/ginger-feat-burna-boy/1531532301?i=1531532312"
+},
+{
+"id": "1882144650",
+"name": "WORSHIP",
+"artistName": "Asake & DJ Snake",
+"releaseDate": "2026-03-19",
+"url": "https://music.apple.com/ng/album/worship/1882144646?i=1882144650"
+},
+{
+"id": "6803950469",
+"name": "Ilome",
+"artistName": "Seyi Vibez",
+"releaseDate": "2026-09-17",
+"url": "https://music.apple.com/ng/album/ilome/6803950183?i=6803950469"
+},
+{
+"id": "1882878448",
+"name": "I AM",
+"artistName": "OMAH LAY",
+"releaseDate": "2026-04-03",
+"url": "https://music.apple.com/ng/album/i-am/1882878438?i=1882878448"
+},
+{
+"id": "1688641993",
+"name": "Amapiano",
+"artistName": "Asake & Olamide",
+"releaseDate": "2023-05-23",
+"url": "https://music.apple.com/ng/album/amapiano/1688641478?i=1688641993"
+},
+{
+"id": "6810267607",
+"name": "it's over",
+"artistName": "FOLA, Bella Shmurda & Zlatan",
+"releaseDate": "2026-09-11",
+"url": "https://music.apple.com/ng/album/its-over/6810267024?i=6810267607"
+},
+{
+"id": "1471034860",
+"name": "Joro",
+"artistName": "Wizkid",
+"releaseDate": "2019-09-30",
+"url": "https://music.apple.com/ng/album/joro/1471034859?i=1471034860"
+},
+{
+"id": "6805176803",
+"name": "Oh No",
+"artistName": "Rema",
+"releaseDate": "2026-09-11",
+"url": "https://music.apple.com/ng/album/oh-no/6805176799?i=6805176803"
+},
+{
+"id": "6810267376",
+"name": "my type",
+"artistName": "FOLA & BNXN",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/ng/album/my-type/6810267024?i=6810267376"
+},
+{
+"id": "1534199534",
+"name": "Holy Ground (feat. Nicki Minaj)",
+"artistName": "Davido",
+"releaseDate": "2020-11-13",
+"url": "https://music.apple.com/ng/album/holy-ground-feat-nicki-minaj/1534199325?i=1534199534"
+},
+{
+"id": "1675379749",
+"name": "UNAVAILABLE (feat. Musa Keys)",
+"artistName": "Davido",
+"releaseDate": "2023-03-31",
+"url": "https://music.apple.com/ng/album/unavailable-feat-musa-keys/1675379314?i=1675379749"
+},
+{
+"id": "1833268715",
+"name": "Bad Influence",
+"artistName": "OMAH LAY",
+"releaseDate": "2020-01-16",
+"url": "https://music.apple.com/ng/album/bad-influence/1833268708?i=1833268715"
+},
+{
+"id": "1527475996",
+"name": "23",
+"artistName": "Burna Boy",
+"releaseDate": "2020-08-14",
+"url": "https://music.apple.com/ng/album/23/1527475833?i=1527475996"
+},
+{
+"id": "6794221110",
+"name": "16",
+"artistName": "BNXN",
+"releaseDate": "2026-10-01",
+"url": "https://music.apple.com/ng/album/16/6794221106?i=6794221110"
+},
+{
+"id": "6766887609",
+"name": "Chanel (feat. Asake)",
+"artistName": "Blaqbonez",
+"releaseDate": "2026-05-21",
+"url": "https://music.apple.com/ng/album/chanel-feat-asake/6766887607?i=6766887609"
+},
+{
+"id": "6827146556",
+"name": "Home Training",
+"artistName": "Mayorkun",
+"releaseDate": "2026-10-29",
+"url": "https://music.apple.com/ng/album/home-training/6827146268?i=6827146556"
+},
+{
+"id": "1878826028",
+"name": "Big Bum Bum",
+"artistName": "Kidd Carder & Mavo",
+"releaseDate": "2026-02-27",
+"url": "https://music.apple.com/ng/album/big-bum-bum/1878826027?i=1878826028"
+},
+{
+"id": "1760853692",
+"name": "MMS",
+"artistName": "Asake & Wizkid",
+"releaseDate": "2024-08-09",
+"url": "https://music.apple.com/ng/album/mms/1760853689?i=1760853692"
+},
+{
+"id": "1890335505",
+"name": "Back Outside",
+"artistName": "BNXN & Sarz",
+"releaseDate": "2026-04-20",
+"url": "https://music.apple.com/ng/album/back-outside/1890335503?i=1890335505"
+},
+{
+"id": "1527475986",
+"name": "Way Too Big",
+"artistName": "Burna Boy",
+"releaseDate": "2020-08-14",
+"url": "https://music.apple.com/ng/album/way-too-big/1527475833?i=1527475986"
+},
+{
+"id": "6803950466",
+"name": "Pansa",
+"artistName": "Seyi Vibez",
+"releaseDate": "2026-09-17",
+"url": "https://music.apple.com/ng/album/pansa/6803950183?i=6803950466"
+},
+{
+"id": "6787949593",
+"name": "Ice Cream",
+"artistName": "Mavo",
+"releaseDate": "2026-07-24",
+"url": "https://music.apple.com/ng/album/ice-cream/6787949544?i=6787949593"
+},
+{
+"id": "6794221442",
+"name": "Shamaya",
+"artistName": "BNXN & FOLA",
+"releaseDate": "2026-10-01",
+"url": "https://music.apple.com/ng/album/shamaya/6794221106?i=6794221442"
+},
+{
+"id": "6810267048",
+"name": "in order",
+"artistName": "FOLA",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/ng/album/in-order/6810267024?i=6810267048"
+},
+{
+"id": "1817243822",
+"name": "Very Soon",
+"artistName": "BNXN & FOLA",
+"releaseDate": "2025-07-03",
+"url": "https://music.apple.com/ng/album/very-soon/1817243687?i=1817243822"
+},
+{
+"id": "1067103276",
+"name": "Final (Baba Nla)",
+"artistName": "Wizkid",
+"releaseDate": "2015-11-14",
+"url": "https://music.apple.com/ng/album/final-baba-nla/1067102814?i=1067103276"
+},
+{
+"id": "6830228686",
+"name": "Living Thing",
+"artistName": "T.I BLAZE",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ng/album/living-thing/6830228683?i=6830228686"
+},
+{
+"id": "6803950184",
+"name": "Volume",
+"artistName": "Seyi Vibez",
+"releaseDate": "2026-09-17",
+"url": "https://music.apple.com/ng/album/volume/6803950183?i=6803950184"
+},
+{
+"id": "6803950195",
+"name": "GOD",
+"artistName": "Seyi Vibez",
+"releaseDate": "2026-09-17",
+"url": "https://music.apple.com/ng/album/god/6803950183?i=6803950195"
+},
+{
+"id": "6823312092",
+"name": "Burukutu",
+"artistName": "Olamide",
+"releaseDate": "2026-10-21",
+"url": "https://music.apple.com/ng/album/burukutu/6823312075?i=6823312092"
+},
+{
+"id": "1616599764",
+"name": "For Days",
+"artistName": "BNXN",
+"releaseDate": "2022-03-30",
+"url": "https://music.apple.com/ng/album/for-days/1616599759?i=1616599764"
+},
+{
+"id": "1826616013",
+"name": "you",
+"artistName": "FOLA",
+"releaseDate": "2025-08-08",
+"url": "https://music.apple.com/ng/album/you/1826616009?i=1826616013"
+},
+{
+"id": "1368226457",
+"name": "Ye",
+"artistName": "Burna Boy",
+"releaseDate": "2019-12-20",
+"url": "https://music.apple.com/ng/album/ye/1368225583?i=1368226457"
+},
+{
+"id": "6810267368",
+"name": "crime",
+"artistName": "FOLA",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/ng/album/crime/6810267024?i=6810267368"
+},
+{
+"id": "6794221421",
+"name": "Deliberate Work",
+"artistName": "BNXN",
+"releaseDate": "2026-10-01",
+"url": "https://music.apple.com/ng/album/deliberate-work/6794221106?i=6794221421"
+},
+{
+"id": "6810267034",
+"name": "how many?",
+"artistName": "FOLA",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/ng/album/how-many/6810267024?i=6810267034"
+},
+{
+"id": "1891869441",
+"name": "MCBH",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/ng/album/mcbh/1891869190?i=1891869441"
+},
+{
+"id": "6802712557",
+"name": "BIG PERFORMER",
+"artistName": "Blaqbonez",
+"releaseDate": "2026-08-28",
+"url": "https://music.apple.com/ng/album/big-performer/6802712555?i=6802712557"
+},
+{
+"id": "6823312373",
+"name": "Jaiye (feat. FOLA)",
+"artistName": "Olamide",
+"releaseDate": null,
+"url": "https://music.apple.com/ng/album/jaiye-feat-fola/6823312075?i=6823312373"
+},
+{
+"id": "6823312082",
+"name": "Elohim",
+"artistName": "Olamide",
+"releaseDate": null,
+"url": "https://music.apple.com/ng/album/elohim/6823312075?i=6823312082"
+},
+{
+"id": "6829854320",
+"name": "Ore Agbako",
+"artistName": "Double Gee2x",
+"releaseDate": "2026-10-14",
+"url": "https://music.apple.com/ng/album/ore-agbako/6829854318?i=6829854320"
+},
+{
+"id": "1817243700",
+"name": "Jies",
+"artistName": "BNXN",
+"releaseDate": "2025-07-03",
+"url": "https://music.apple.com/ng/album/jies/1817243687?i=1817243700"
+},
+{
+"id": "1864084169",
+"name": "MY HEALER",
+"artistName": "Seyi Vibez & OMAH LAY",
+"releaseDate": "2026-01-15",
+"url": "https://music.apple.com/ng/album/my-healer/1864084168?i=1864084169"
+},
+{
+"id": "1848130579",
+"name": "MONEY CONSTANT",
+"artistName": "DJ Maphorisa, DJ Tunez, Wizkid & Mavo",
+"releaseDate": "2025-10-24",
+"url": "https://music.apple.com/ng/album/money-constant/1848130578?i=1848130579"
+},
+{
+"id": "1867908454",
+"name": "Jogodo",
+"artistName": "Wizkid & Asake",
+"releaseDate": "2026-01-15",
+"url": "https://music.apple.com/ng/album/jogodo/1867908237?i=1867908454"
+},
+{
+"id": "6810267044",
+"name": "stubborn",
+"artistName": "FOLA",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/ng/album/stubborn/6810267024?i=6810267044"
+},
+{
+"id": "1565430022",
+"name": "Outside",
+"artistName": "BNXN",
+"releaseDate": "2021-05-19",
+"url": "https://music.apple.com/ng/album/outside/1565430016?i=1565430022"
+},
+{
+"id": "6810267029",
+"name": "awade",
+"artistName": "FOLA",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/ng/album/awade/6810267024?i=6810267029"
+},
+{
+"id": "6819264519",
+"name": "Elle Mummy",
+"artistName": "T.I BLAZE",
+"releaseDate": "2026-10-16",
+"url": "https://music.apple.com/ng/album/elle-mummy/6819264517?i=6819264519"
+},
+{
+"id": "6803950490",
+"name": "Akpan Akpari",
+"artistName": "Seyi Vibez",
+"releaseDate": "2026-09-17",
+"url": "https://music.apple.com/ng/album/akpan-akpari/6803950183?i=6803950490"
+},
+{
+"id": "6828232001",
+"name": "Take Away",
+"artistName": "Ayo Maff & Naira Marley",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ng/album/take-away/6828231999?i=6828232001"
+},
+{
+"id": "1711579521",
+"name": "i’m a mess",
+"artistName": "OMAH LAY",
+"releaseDate": "2022-07-14",
+"url": "https://music.apple.com/ng/album/im-a-mess/1711579209?i=1711579521"
+},
+{
+"id": "6807817641",
+"name": "Find My Babe",
+"artistName": "Mavo",
+"releaseDate": "2026-09-04",
+"url": "https://music.apple.com/ng/album/find-my-babe/6807817364?i=6807817641"
+},
+{
+"id": "6823312086",
+"name": "Skoskola",
+"artistName": "Olamide",
+"releaseDate": null,
+"url": "https://music.apple.com/ng/album/skoskola/6823312075?i=6823312086"
+},
+{
+"id": "1849499784",
+"name": "Waist",
+"artistName": "OMAH LAY",
+"releaseDate": "2025-11-13",
+"url": "https://music.apple.com/ng/album/waist/1849499783?i=1849499784"
+},
+{
+"id": "6830228688",
+"name": "Lucid",
+"artistName": "T.I BLAZE",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ng/album/lucid/6830228683?i=6830228688"
+},
+{
+"id": "6803950481",
+"name": "El Jaja",
+"artistName": "Seyi Vibez",
+"releaseDate": "2026-09-17",
+"url": "https://music.apple.com/ng/album/el-jaja/6803950183?i=6803950481"
+},
+{
+"id": "1831623494",
+"name": "eko",
+"artistName": "FOLA",
+"releaseDate": "2025-09-01",
+"url": "https://music.apple.com/ng/album/eko/1831623489?i=1831623494"
+},
+{
+"id": "6816020480",
+"name": "Goyard",
+"artistName": "Mavo",
+"releaseDate": "2026-10-23",
+"url": "https://music.apple.com/ng/album/goyard/6816020475?i=6816020480"
+},
+{
+"id": "6810768362",
+"name": "Glass in the Air",
+"artistName": "Young Jonn",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/ng/album/glass-in-the-air/6810768354?i=6810768362"
+},
+{
+"id": "6823312088",
+"name": "Say Less",
+"artistName": "Olamide",
+"releaseDate": null,
+"url": "https://music.apple.com/ng/album/say-less/6823312075?i=6823312088"
+},
+{
+"id": "6787949964",
+"name": "BB Lifestyle",
+"artistName": "Mavo & SSSoundGawd",
+"releaseDate": "2026-07-17",
+"url": "https://music.apple.com/ng/album/bb-lifestyle/6787949544?i=6787949964"
+},
+{
+"id": "6771700197",
+"name": "Elumelu",
+"artistName": "Young Jonn",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/ng/album/elumelu/6771699833?i=6771700197"
+},
+{
+"id": "1591587795",
+"name": "Champion Sound",
+"artistName": "Davido & Focalistic",
+"releaseDate": "2021-11-19",
+"url": "https://music.apple.com/ng/album/champion-sound/1591587786?i=1591587795"
+},
+{
+"id": "6810267598",
+"name": "hold u down",
+"artistName": "FOLA & Darkoo",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/ng/album/hold-u-down/6810267024?i=6810267598"
+},
+{
+"id": "6786449714",
+"name": "SLICK",
+"artistName": "Victony",
+"releaseDate": "2026-07-08",
+"url": "https://music.apple.com/ng/album/slick/6786449711?i=6786449714"
+},
+{
+"id": "1710232218",
+"name": "Karma",
+"artistName": "Seyi Vibez",
+"releaseDate": "2023-06-23",
+"url": "https://music.apple.com/ng/album/karma/1710231871?i=1710232218"
+},
+{
+"id": "1721591731",
+"name": "DOG EAT DOG II",
+"artistName": "ODUMODUBLVCK, Cruel Santino & Bella Shmurda",
+"releaseDate": "2023-05-30",
+"url": "https://music.apple.com/ng/album/dog-eat-dog-ii/1721590900?i=1721591731"
+},
+{
+"id": "6823312366",
+"name": "Alujon",
+"artistName": "Olamide",
+"releaseDate": null,
+"url": "https://music.apple.com/ng/album/alujon/6823312075?i=6823312366"
+},
+{
+"id": "1530136980",
+"name": "Infinity (feat. Omah Lay)",
+"artistName": "Olamide",
+"releaseDate": "2020-08-24",
+"url": "https://music.apple.com/ng/album/infinity-feat-omah-lay/1530136977?i=1530136980"
+},
+{
+"id": "6825989116",
+"name": "Na Money",
+"artistName": "DJ Tunez & Shoday",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ng/album/na-money/6825989108?i=6825989116"
+},
+{
+"id": "1823289066",
+"name": "BADMAN GANGSTA",
+"artistName": "Asake & Tiakola",
+"releaseDate": "2025-07-25",
+"url": "https://music.apple.com/ng/album/badman-gangsta/1823289065?i=1823289066"
+},
+{
+"id": "6807223081",
+"name": "Owo Oluwa (feat. Young Jonn, Krizbeatz & Wave Choir)",
+"artistName": "Kizz Daniel",
+"releaseDate": "2026-09-15",
+"url": "https://music.apple.com/ng/album/owo-oluwa-feat-young-jonn-krizbeatz-wave-choir/6807223079?i=6807223081"
+},
+{
+"id": "1534199543",
+"name": "The Best (feat. Mayorkun)",
+"artistName": "Davido",
+"releaseDate": "2020-11-13",
+"url": "https://music.apple.com/ng/album/the-best-feat-mayorkun/1534199325?i=1534199543"
+}
+]
+},
+"gh": {
+"error": "HTTP Error 504: Gateway Time-out"
+},
+"za": {
+"updated": "Tue, 17 Nov 2026 07:51:24 +0000",
+"songs": [
+{
+"id": "6813137805",
+"name": "Nayvee's Prayer",
+"artistName": "DJ Zinhle, Nayvee Womculo & Young Stunna",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/za/album/nayvees-prayer/6813137378?i=6813137805"
+},
+{
+"id": "6771270818",
+"name": "Remember",
+"artistName": "Tman Xpress & Mellow & Sleazy",
+"releaseDate": "2026-05-22",
+"url": "https://music.apple.com/za/album/remember/6771270415?i=6771270818"
+},
+{
+"id": "6807779984",
+"name": "uMoya 2.0 (feat. Soulful Disciple) [Tycoon Remix]",
+"artistName": "Darque, Atmos Blaq, Zawadi Yamungu & Tycoon",
+"releaseDate": "2026-09-11",
+"url": "https://music.apple.com/za/album/umoya-2-0-feat-soulful-disciple-tycoon-remix/6807779982?i=6807779984"
+},
+{
+"id": "6787980437",
+"name": "Ama hem hem (feat. ShaunMusiq)",
+"artistName": "Thatohatsi & Sjava",
+"releaseDate": "2026-07-10",
+"url": "https://music.apple.com/za/album/ama-hem-hem-feat-shaunmusiq/6787980430?i=6787980437"
+},
+{
+"id": "6833972915",
+"name": "Ubaba wakho (feat. Naledi Aphiwe)",
+"artistName": "Mzukulu",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/za/album/ubaba-wakho-feat-naledi-aphiwe/6833972914?i=6833972915"
+},
+{
+"id": "6829764794",
+"name": "4EVA (feat. Lowfeye)",
+"artistName": "Dj Clen & A-Reece",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/za/album/4eva-feat-lowfeye/6829764789?i=6829764794"
+},
+{
+"id": "6791006351",
+"name": "Luqale sakudlala (feat. KaMaphanga)",
+"artistName": "G-Jealous",
+"releaseDate": "2026-07-09",
+"url": "https://music.apple.com/za/album/luqale-sakudlala-feat-kamaphanga/6791006350?i=6791006351"
+},
+{
+"id": "6799237749",
+"name": "Isesheli (feat. OmaThwala)",
+"artistName": "Mzukulu",
+"releaseDate": "2026-08-07",
+"url": "https://music.apple.com/za/album/isesheli-feat-omathwala/6799237741?i=6799237749"
+},
+{
+"id": "6774520027",
+"name": "Wo Lo (feat. Sino Msolo & Konke)",
+"artistName": "Mihlali The Guy, Dankie Boi, Mr Thela & Cairo CPT",
+"releaseDate": "2026-06-26",
+"url": "https://music.apple.com/za/album/wo-lo-feat-sino-msolo-konke/6774520026?i=6774520027"
+},
+{
+"id": "6833867238",
+"name": "Sorry Batswadi Baka (feat. Sia_TheBee, BeeKayrsa28, Key Tech, Zela Force, Terra Fontain & Tyler ICU)",
+"artistName": "DJ Maphorisa, Xduppy, Focalistic & Optimist Music ZA",
+"releaseDate": "2026-11-12",
+"url": "https://music.apple.com/za/album/sorry-batswadi-baka-feat-sia-thebee-beekayrsa28-key/6833867011?i=6833867238"
+},
+{
+"id": "1886824548",
+"name": "Usungikhombisile",
+"artistName": "Nkeshemba",
+"releaseDate": "2026-03-20",
+"url": "https://music.apple.com/za/album/usungikhombisile/1886824542?i=1886824548"
+},
+{
+"id": "1440642731",
+"name": "Headlines",
+"artistName": "Drake",
+"releaseDate": "2011-08-09",
+"url": "https://music.apple.com/za/album/headlines/1440642493?i=1440642731"
+},
+{
+"id": "1823042226",
+"name": "Ngyozama (feat. Sykes, Young Stunna, Nkosazana Daughter, Tracy & Thatohatsi)",
+"artistName": "Kabza De Small & Dlala Thukzin",
+"releaseDate": "2025-07-18",
+"url": "https://music.apple.com/za/album/ngyozama-feat-sykes-young-stunna-nkosazana-daughter/1823042064?i=1823042226"
+},
+{
+"id": "1854499661",
+"name": "Ungenzani",
+"artistName": "Dlala Thukzin, MK Productions & Blaq Seed",
+"releaseDate": "2025-11-28",
+"url": "https://music.apple.com/za/album/ungenzani/1854499549?i=1854499661"
+},
+{
+"id": "6830197524",
+"name": "Lets Go Brother",
+"artistName": "Skroef 28 & MDU aka TRP",
+"releaseDate": "2023-09-26",
+"url": "https://music.apple.com/za/album/lets-go-brother/6830197243?i=6830197524"
+},
+{
+"id": "1883062008",
+"name": "Khanya Njalo",
+"artistName": "Kabza De Small & Zawadi Yamungu",
+"releaseDate": "2026-03-10",
+"url": "https://music.apple.com/za/album/khanya-njalo/1883062006?i=1883062008"
+},
+{
+"id": "6796603443",
+"name": "H’s On The Table",
+"artistName": "Royal Musiq",
+"releaseDate": "2026-08-03",
+"url": "https://music.apple.com/za/album/hs-on-the-table/6796603229?i=6796603443"
+},
+{
+"id": "1440873033",
+"name": "Hold On, We're Going Home",
+"artistName": "Drake & Majid Jordan",
+"releaseDate": "2013-08-07",
+"url": "https://music.apple.com/za/album/hold-on-were-going-home/1440872495?i=1440873033"
+},
+{
+"id": "1802816580",
+"name": "Abantwana Bakho (feat. Thatohatsi, Young Stunna & Nkosazana Daughter)",
+"artistName": "DJ Maphorisa, Xduppy & Kabza De Small",
+"releaseDate": "2025-03-28",
+"url": "https://music.apple.com/za/album/abantwana-bakho-feat-thatohatsi-young-stunna-nkosazana/1802816578?i=1802816580"
+},
+{
+"id": "1688706874",
+"name": "Ufunani (feat. Aymos, Kelvin Momo & Jay Sax)",
+"artistName": "Kabza De Small",
+"releaseDate": "2023-05-19",
+"url": "https://music.apple.com/za/album/ufunani-feat-aymos-kelvin-momo-jay-sax/1688706864?i=1688706874"
+},
+{
+"id": "6829764790",
+"name": "REALLY A LOT",
+"artistName": "Dj Clen & A-Reece",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/za/album/really-a-lot/6829764789?i=6829764790"
+},
+{
+"id": "6829804982",
+"name": "Amablomo (feat. De Rose)",
+"artistName": "Stixx & Babalwa M",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/za/album/amablomo-feat-de-rose/6829804968?i=6829804982"
+},
+{
+"id": "6794249810",
+"name": "TEZE",
+"artistName": "W4DE & Royal Musiq",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/za/album/teze/6794249807?i=6794249810"
+},
+{
+"id": "6829764799",
+"name": "DRIVE ME CRAZY",
+"artistName": "Dj Clen & A-Reece",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/za/album/drive-me-crazy/6829764789?i=6829764799"
+},
+{
+"id": "1817609514",
+"name": "A Couple Minutes",
+"artistName": "Olivia Dean",
+"releaseDate": "2025-09-26",
+"url": "https://music.apple.com/za/album/a-couple-minutes/1817609404?i=1817609514"
+},
+{
+"id": "6820110376",
+"name": "Myeke (feat. Sne Ntuli)",
+"artistName": "MSHINWEMALI",
+"releaseDate": "2026-10-03",
+"url": "https://music.apple.com/za/album/myeke-feat-sne-ntuli/6820110365?i=6820110376"
+},
+{
+"id": "6829764793",
+"name": "MENACE (feat. Loatinover Pounds)",
+"artistName": "Dj Clen & A-Reece",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/za/album/menace-feat-loatinover-pounds/6829764789?i=6829764793"
+},
+{
+"id": "6822497774",
+"name": "Housewife",
+"artistName": "Tate McRae",
+"releaseDate": "2026-10-15",
+"url": "https://music.apple.com/za/album/housewife/6822497770?i=6822497774"
+},
+{
+"id": "1817609509",
+"name": "Man I Need",
+"artistName": "Olivia Dean",
+"releaseDate": "2025-09-26",
+"url": "https://music.apple.com/za/album/man-i-need/1817609404?i=1817609509"
+},
+{
+"id": "1440642743",
+"name": "Marvins Room",
+"artistName": "Drake",
+"releaseDate": "2011-06-28",
+"url": "https://music.apple.com/za/album/marvins-room/1440642493?i=1440642743"
+},
+{
+"id": "6829764792",
+"name": "YAMAL (feat. Kid Kaydence)",
+"artistName": "Dj Clen & A-Reece",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/za/album/yamal-feat-kid-kaydence/6829764789?i=6829764792"
+},
+{
+"id": "6814529458",
+"name": "EDUZE KWAMI (feat. Nontokozo Mkhize, CowBoii & Thatohatsi)",
+"artistName": "Young Stunna, SLY & Kabza De Small",
+"releaseDate": "2026-10-20",
+"url": "https://music.apple.com/za/album/eduze-kwami-feat-nontokozo-mkhize-cowboii-thatohatsi/6814529239?i=6814529458"
+},
+{
+"id": "6769568596",
+"name": "Janice STFU",
+"artistName": "Drake",
+"releaseDate": "2026-05-15",
+"url": "https://music.apple.com/za/album/janice-stfu/6769568449?i=6769568596"
+},
+{
+"id": "1821367342",
+"name": "datpiffdotcom (feat. Jay Jody & Luna Florentino)",
+"artistName": "Dj Clen",
+"releaseDate": "2025-06-23",
+"url": "https://music.apple.com/za/album/datpiffdotcom-feat-jay-jody-luna-florentino/1821367341?i=1821367342"
+},
+{
+"id": "1852838299",
+"name": "Phumelela",
+"artistName": "Skillz, Simmy & Zeh McGeba",
+"releaseDate": "2025-11-28",
+"url": "https://music.apple.com/za/album/phumelela/1852838294?i=1852838299"
+},
+{
+"id": "6829764800",
+"name": "FIND MY WAY (feat. Kwazi M)",
+"artistName": "Dj Clen & A-Reece",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/za/album/find-my-way-feat-kwazi-m/6829764789?i=6829764800"
+},
+{
+"id": "1803463316",
+"name": "Bo Thata (feat. Stixx & Nvcho)",
+"artistName": "Babalwa M",
+"releaseDate": "2024-10-25",
+"url": "https://music.apple.com/za/album/bo-thata-feat-stixx-nvcho/1803463311?i=1803463316"
+},
+{
+"id": "6822654216",
+"name": "Sobuye Sbonane",
+"artistName": "Dlala Thukzin & Zeh McGeba",
+"releaseDate": "2026-10-30",
+"url": "https://music.apple.com/za/album/sobuye-sbonane/6822654209?i=6822654216"
+},
+{
+"id": "1817609507",
+"name": "So Easy (To Fall In Love)",
+"artistName": "Olivia Dean",
+"releaseDate": "2026-09-26",
+"url": "https://music.apple.com/za/album/so-easy-to-fall-in-love/1817609404?i=1817609507"
+},
+{
+"id": "1892100622",
+"name": "Ngithathiwe (feat. Dlala Thukzin)",
+"artistName": "Zee Nxumalo & Funky Qla",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/za/album/ngithathiwe-feat-dlala-thukzin/1892100618?i=1892100622"
+},
+{
+"id": "6807174987",
+"name": "Setla (feat. Focalistic & Shaun 101)",
+"artistName": "Uncool MC, DJ Maphorisa & N T S A K O XVI",
+"releaseDate": "2026-09-04",
+"url": "https://music.apple.com/za/album/setla-feat-focalistic-shaun-101/6807174983?i=6807174987"
+},
+{
+"id": "6828537514",
+"name": "Shotta's.",
+"artistName": "Season 25",
+"releaseDate": "2026-09-20",
+"url": "https://music.apple.com/za/album/shottas/6828537513?i=6828537514"
+},
+{
+"id": "6822656181",
+"name": "Mmeli Wami (Live) [feat. Nothando Hlophe]",
+"artistName": "Spirit of Praise",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/za/album/mmeli-wami-live-feat-nothando-hlophe/6822654963?i=6822656181"
+},
+{
+"id": "1850161349",
+"name": "Umaqondana",
+"artistName": "Feza",
+"releaseDate": "2025-10-28",
+"url": "https://music.apple.com/za/album/umaqondana/1850161105?i=1850161349"
+},
+{
+"id": "1440873182",
+"name": "Pound Cake / Paris Morton Music 2 (feat. JAŸ-Z)",
+"artistName": "Drake",
+"releaseDate": "2013-09-23",
+"url": "https://music.apple.com/za/album/pound-cake-paris-morton-music-2-feat-ja%C3%BF-z/1440872495?i=1440873182"
+},
+{
+"id": "1831450787",
+"name": "Shela (feat. Mano)",
+"artistName": "Sam Deep, Nia Pearl & Boohle",
+"releaseDate": "2025-08-08",
+"url": "https://music.apple.com/za/album/shela-feat-mano/1831450786?i=1831450787"
+},
+{
+"id": "6829764796",
+"name": "IZ U WIMME? (feat. Luna Florentino & Jay Jody)",
+"artistName": "Dj Clen & A-Reece",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/za/album/iz-u-wimme-feat-luna-florentino-jay-jody/6829764789?i=6829764796"
+},
+{
+"id": "6818209989",
+"name": "Solar Eclipse",
+"artistName": "Drake & Don Toliver",
+"releaseDate": "2026-10-02",
+"url": "https://music.apple.com/za/album/solar-eclipse/6818209777?i=6818209989"
+},
+{
+"id": "1438765134",
+"name": "Girls Need Love",
+"artistName": "Summer Walker",
+"releaseDate": "2018-07-26",
+"url": "https://music.apple.com/za/album/girls-need-love/1438765128?i=1438765134"
+},
+{
+"id": "6802567769",
+"name": "Distance",
+"artistName": "Zulu Queens, Lwah Ndlunkulu, MaWhoo & Feza",
+"releaseDate": "2026-08-18",
+"url": "https://music.apple.com/za/album/distance/6802567634?i=6802567769"
+},
+{
+"id": "6805064298",
+"name": "Gumba Fire (feat. Mr JazziQ)",
+"artistName": "Focalistic, Optimist Music ZA, Benzoo & Mellow & Sleazy",
+"releaseDate": "2026-09-04",
+"url": "https://music.apple.com/za/album/gumba-fire-feat-mr-jazziq/6805064296?i=6805064298"
+},
+{
+"id": "1817503213",
+"name": "Izono (feat. Mawhoo & Babalwa M & Chley)",
+"artistName": "Kelvin Momo",
+"releaseDate": "2022-12-09",
+"url": "https://music.apple.com/za/album/izono-feat-mawhoo-babalwa-m-chley/1817503001?i=1817503213"
+},
+{
+"id": "6810716062",
+"name": "So Good (feat. Kendrick Lamar)",
+"artistName": "Jhené Aiko",
+"releaseDate": "2026-09-11",
+"url": "https://music.apple.com/za/album/so-good-feat-kendrick-lamar/6810715695?i=6810716062"
+},
+{
+"id": "6829764801",
+"name": "SOMETHING TO TALK ABOUT (feat. Nadia Nakai)",
+"artistName": "Dj Clen & A-Reece",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/za/album/something-to-talk-about-feat-nadia-nakai/6829764789?i=6829764801"
+},
+{
+"id": "6811206687",
+"name": "Ndembathe Nkosi",
+"artistName": "Mlindo The Vocalist & Duduza Serenade",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/za/album/ndembathe-nkosi/6811206685?i=6811206687"
+},
+{
+"id": "1847992612",
+"name": "Raindance",
+"artistName": "Dave & Tems",
+"releaseDate": "2025-10-24",
+"url": "https://music.apple.com/za/album/raindance/1847992481?i=1847992612"
+},
+{
+"id": "6789098912",
+"name": "Rapela (feat. Thatohatsi)",
+"artistName": "Sam Deep, Aidah & Njelic",
+"releaseDate": "2026-07-17",
+"url": "https://music.apple.com/za/album/rapela-feat-thatohatsi/6789098909?i=6789098912"
+},
+{
+"id": "6795697687",
+"name": "Stop The Wedding!",
+"artistName": "Ashe",
+"releaseDate": "2026-08-07",
+"url": "https://music.apple.com/za/album/stop-the-wedding/6795697684?i=6795697687"
+},
+{
+"id": "6818147532",
+"name": "BETHII BETHII (feat. Anathii Deejay & FROSTIYANO)",
+"artistName": "Bello B & Dladla Mshunqisi",
+"releaseDate": "2026-10-02",
+"url": "https://music.apple.com/za/album/bethii-bethii-feat-anathii-deejay-frostiyano/6818147215?i=6818147532"
+},
+{
+"id": "6774382134",
+"name": "Vuma",
+"artistName": "MENZI MUSIC",
+"releaseDate": "2026-05-19",
+"url": "https://music.apple.com/za/album/vuma/6774382130?i=6774382134"
+},
+{
+"id": "6797516882",
+"name": "Ubukho Bakhe",
+"artistName": "Jabulile Majola & Thando Zide",
+"releaseDate": "2026-09-11",
+"url": "https://music.apple.com/za/album/ubukho-bakhe/6797516880?i=6797516882"
+},
+{
+"id": "1529510489",
+"name": "Power Trip (feat. Miguel)",
+"artistName": "J. Cole",
+"releaseDate": "2013-02-14",
+"url": "https://music.apple.com/za/album/power-trip-feat-miguel/1529510479?i=1529510489"
+},
+{
+"id": "1680728759",
+"name": "Sponono (feat. Wizkid, Burna Boy, Cassper Nyovest & Madumane)",
+"artistName": "Kabza De Small",
+"releaseDate": "2020-06-26",
+"url": "https://music.apple.com/za/album/sponono-feat-wizkid-burna-boy-cassper-nyovest-madumane/1680728473?i=1680728759"
+},
+{
+"id": "6769825483",
+"name": "Izospana (feat. Marvin)",
+"artistName": "Sam Deep, Thatohatsi & Zuma",
+"releaseDate": "2026-05-21",
+"url": "https://music.apple.com/za/album/izospana-feat-marvin/6769825480?i=6769825483"
+},
+{
+"id": "6817919149",
+"name": "Xigubu (feat. Ag’zo & Djy Mash SA)",
+"artistName": "ShakaMan YKTV, Lowbass Djy & Royal Musiq",
+"releaseDate": "2026-10-02",
+"url": "https://music.apple.com/za/album/xigubu-feat-agzo-djy-mash-sa/6817919146?i=6817919149"
+},
+{
+"id": "6785525954",
+"name": "Sosha Nendlu (feat. Bron)",
+"artistName": "Ricky Lenyora, Candy Flow RSA, DJ Maphorisa & Benzoo",
+"releaseDate": "2026-06-25",
+"url": "https://music.apple.com/za/album/sosha-nendlu-feat-bron/6785525953?i=6785525954"
+},
+{
+"id": "1707025087",
+"name": "iPlan (feat. Zaba & Sykes)",
+"artistName": "Dlala Thukzin",
+"releaseDate": "2023-09-15",
+"url": "https://music.apple.com/za/album/iplan-feat-zaba-sykes/1707025080?i=1707025087"
+},
+{
+"id": "1817504339",
+"name": "Amalobolo (feat. Stixx, Nia Pearl)",
+"artistName": "Kelvin Momo & Babalwa M",
+"releaseDate": "2023-12-08",
+"url": "https://music.apple.com/za/album/amalobolo-feat-stixx-nia-pearl/1817504149?i=1817504339"
+},
+{
+"id": "1876883870",
+"name": "UKHETHE MINA",
+"artistName": "Ntencane",
+"releaseDate": "2026-02-13",
+"url": "https://music.apple.com/za/album/ukhethe-mina/1876883674?i=1876883870"
+},
+{
+"id": "1824543092",
+"name": "Is It a Crime",
+"artistName": "Mariah the Scientist & Kali Uchis",
+"releaseDate": "2025-08-01",
+"url": "https://music.apple.com/za/album/is-it-a-crime/1824543088?i=1824543092"
+},
+{
+"id": "6831506154",
+"name": "Ya Hit (feat. Drake, Travis Scott & Loe Shimmy)",
+"artistName": "Future",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/za/album/ya-hit-feat-drake-travis-scott-loe-shimmy/6831506152?i=6831506154"
+},
+{
+"id": "1817985951",
+"name": "Bala (feat. SYKES)",
+"artistName": "Kelvin Momo",
+"releaseDate": "2024-08-02",
+"url": "https://music.apple.com/za/album/bala-feat-sykes/1817985873?i=1817985951"
+},
+{
+"id": "1844964965",
+"name": "Methodist Medley",
+"artistName": "Nothando Hlophe",
+"releaseDate": "2025-10-07",
+"url": "https://music.apple.com/za/album/methodist-medley/1844964919?i=1844964965"
+},
+{
+"id": "626205222",
+"name": "Dance For You",
+"artistName": "Beyoncé",
+"releaseDate": "2011-06-24",
+"url": "https://music.apple.com/za/album/dance-for-you/626204707?i=626205222"
+},
+{
+"id": "1889171367",
+"name": "Ithuba (feat. Q Bonke)",
+"artistName": "Felo Le Tee, Miikey Ndlovu & Mlooda",
+"releaseDate": "2026-04-13",
+"url": "https://music.apple.com/za/album/ithuba-feat-q-bonke/1889171062?i=1889171367"
+},
+{
+"id": "6806253739",
+"name": "My Life",
+"artistName": "Loatinover Pounds",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/za/album/my-life/6806253735?i=6806253739"
+},
+{
+"id": "6767356327",
+"name": "Ingelosi (feat. Malebuli)",
+"artistName": "Skopoloti",
+"releaseDate": "2026-05-08",
+"url": "https://music.apple.com/za/album/ingelosi-feat-malebuli/6767356326?i=6767356327"
+},
+{
+"id": "1817032615",
+"name": "Amalanga (feat. Major League Djz, Tracy & PYY Log Drum King)",
+"artistName": "Piano City, Kelvin Momo & Thatohatsi",
+"releaseDate": "2025-06-20",
+"url": "https://music.apple.com/za/album/amalanga-feat-major-league-djz-tracy-pyy-log-drum-king/1817032613?i=1817032615"
+},
+{
+"id": "6824715160",
+"name": "iXesha (feat. JAZZWRLD)",
+"artistName": "Funky Qla, Thukuthela, Babalwa M & GL_Ceejay",
+"releaseDate": null,
+"url": "https://music.apple.com/za/album/ixesha-feat-jazzwrld/6824715157?i=6824715160"
+},
+{
+"id": "1418213269",
+"name": "God's Plan",
+"artistName": "Drake",
+"releaseDate": "2018-01-19",
+"url": "https://music.apple.com/za/album/gods-plan/1418213110?i=1418213269"
+},
+{
+"id": "1249168253",
+"name": "Wild Thoughts (feat. Rihanna & Bryson Tiller)",
+"artistName": "DJ Khaled",
+"releaseDate": "2017-06-16",
+"url": "https://music.apple.com/za/album/wild-thoughts-feat-rihanna-bryson-tiller/1249168247?i=1249168253"
+},
+{
+"id": "1890494388",
+"name": "Ningikhonzele",
+"artistName": "JAZZWRLD, Thatohatsi & Thukuthela",
+"releaseDate": "2026-07-30",
+"url": "https://music.apple.com/za/album/ningikhonzele/1890494383?i=1890494388"
+},
+{
+"id": "1817609513",
+"name": "Baby Steps",
+"artistName": "Olivia Dean",
+"releaseDate": "2025-09-26",
+"url": "https://music.apple.com/za/album/baby-steps/1817609404?i=1817609513"
+},
+{
+"id": "6764045503",
+"name": "Everybody Wanna Be In Love",
+"artistName": "Calvin Fallo",
+"releaseDate": "2026-04-17",
+"url": "https://music.apple.com/za/album/everybody-wanna-be-in-love/1895611337?i=6764045503"
+},
+{
+"id": "6779732551",
+"name": "SASEZOLA",
+"artistName": "Novex, Born Kxng, MOONLIGHT AFRIQA & S.N.E",
+"releaseDate": "2026-06-19",
+"url": "https://music.apple.com/za/album/sasezola/6779732549?i=6779732551"
+},
+{
+"id": "1443200606",
+"name": "The Worst",
+"artistName": "Jhené Aiko",
+"releaseDate": "2013-11-12",
+"url": "https://music.apple.com/za/album/the-worst/1443200234?i=1443200606"
+},
+{
+"id": "1847520107",
+"name": "Thandolwethu (feat. Zamambo Mkhize & Umfana weKhansela)",
+"artistName": "Mzukulu",
+"releaseDate": "2025-10-17",
+"url": "https://music.apple.com/za/album/thandolwethu-feat-zamambo-mkhize-umfana-wekhansela/1847520097?i=1847520107"
+},
+{
+"id": "1712484113",
+"name": "Amazwe (feat. MaWhoo)",
+"artistName": "Kabza De Small & Mthunzi",
+"releaseDate": "2023-10-27",
+"url": "https://music.apple.com/za/album/amazwe-feat-mawhoo/1712483856?i=1712484113"
+},
+{
+"id": "1823042230",
+"name": "Siyabonga (feat. Nontokozo Mkhize & Mthunzi)",
+"artistName": "Kabza De Small",
+"releaseDate": "2025-07-18",
+"url": "https://music.apple.com/za/album/siyabonga-feat-nontokozo-mkhize-mthunzi/1823042064?i=1823042230"
+},
+{
+"id": "1440860400",
+"name": "Money Trees (feat. Jay Rock)",
+"artistName": "Kendrick Lamar",
+"releaseDate": "2012-10-22",
+"url": "https://music.apple.com/za/album/money-trees-feat-jay-rock/1440860389?i=1440860400"
+},
+{
+"id": "6829804976",
+"name": "B's Groove",
+"artistName": "Stixx & Babalwa M",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/za/album/bs-groove/6829804968?i=6829804976"
+},
+{
+"id": "1817503431",
+"name": "Sukakude (feat. Sfarzo Rtee)",
+"artistName": "Kelvin Momo & Babalwa M",
+"releaseDate": "2022-12-09",
+"url": "https://music.apple.com/za/album/sukakude-feat-sfarzo-rtee/1817503001?i=1817503431"
+},
+{
+"id": "1712484121",
+"name": "Imithandazo (feat. Young Stunna, DJ Maphorisa, Sizwe Alakine & Umthakathi Kush)",
+"artistName": "Kabza De Small & Mthunzi",
+"releaseDate": "2023-10-27",
+"url": "https://music.apple.com/za/album/imithandazo-feat-young-stunna-dj-maphorisa-sizwe-alakine/1712483856?i=1712484121"
+},
+{
+"id": "1642688618",
+"name": "Thath'Indawo (Live) [feat. Mpumi Mtsweni]",
+"artistName": "Spirit of Praise",
+"releaseDate": "2022-09-16",
+"url": "https://music.apple.com/za/album/thathindawo-live-feat-mpumi-mtsweni/1642687947?i=1642688618"
+},
+{
+"id": "1657869492",
+"name": "Snooze",
+"artistName": "SZA",
+"releaseDate": "2022-12-08",
+"url": "https://music.apple.com/za/album/snooze/1657869377?i=1657869492"
+},
+{
+"id": "6794168373",
+"name": "Babydoll",
+"artistName": "Jamie Miller",
+"releaseDate": "2026-08-07",
+"url": "https://music.apple.com/za/album/babydoll/6794168372?i=6794168373"
+},
+{
+"id": "1535816932",
+"name": "Ungukuphila",
+"artistName": "Xolly Mncwango",
+"releaseDate": "2020-10-16",
+"url": "https://music.apple.com/za/album/ungukuphila/1535816700?i=1535816932"
+},
+{
+"id": "1621119447",
+"name": "WAIT FOR U (feat. Drake & Tems)",
+"artistName": "Future",
+"releaseDate": "2022-04-29",
+"url": "https://music.apple.com/za/album/wait-for-u-feat-drake-tems/1621119097?i=1621119447"
+},
+{
+"id": "1799080775",
+"name": "Get You (feat. Kali Uchis)",
+"artistName": "Daniel Caesar",
+"releaseDate": "2016-10-21",
+"url": "https://music.apple.com/za/album/get-you-feat-kali-uchis/1799080774?i=1799080775"
+},
+{
+"id": "6823638517",
+"name": "Polo",
+"artistName": "Empro & Mlindo The Vocalist",
+"releaseDate": "2026-10-23",
+"url": "https://music.apple.com/za/album/polo/6823638510?i=6823638517"
+}
+]
+},
+"tz": {
+"updated": "Tue, 17 Nov 2026 07:51:26 +0000",
+"songs": [
+{
+"id": "6824536981",
+"name": "Mvua Ya Baraka (feat. Diamond Platnumz)",
+"artistName": "Zuchu",
+"releaseDate": "2026-10-23",
+"url": "https://music.apple.com/tz/album/mvua-ya-baraka-feat-diamond-platnumz/6824536978?i=6824536981"
+},
+{
+"id": "6825750250",
+"name": "Tse Monate (feat. Focalistic, Uncool MC, Angekebabuye mc & Ricky Lenyora)",
+"artistName": "Diamond Platnumz, Xduppy & DJ Maphorisa",
+"releaseDate": "2026-10-13",
+"url": "https://music.apple.com/tz/album/tse-monate-feat-focalistic-uncool-mc-angekebabuye-mc/6825750247?i=6825750250"
+},
+{
+"id": "6824504051",
+"name": "Usela",
+"artistName": "Ibraah",
+"releaseDate": "2026-10-16",
+"url": "https://music.apple.com/tz/album/usela/6824504050?i=6824504051"
+},
+{
+"id": "6816237760",
+"name": "I'll Be Okay",
+"artistName": "Bien",
+"releaseDate": "2026-10-09",
+"url": "https://music.apple.com/tz/album/ill-be-okay/6816237758?i=6816237760"
+},
+{
+"id": "6796539210",
+"name": "Heaven Baby (feat. ZAYN)",
+"artistName": "Ayra Starr",
+"releaseDate": "2026-08-14",
+"url": "https://music.apple.com/tz/album/heaven-baby-feat-zayn/6796539188?i=6796539210"
+},
+{
+"id": "6808785271",
+"name": "Nikumbuke",
+"artistName": "Joel Lwaga & Diamond Platnumz",
+"releaseDate": "2026-09-24",
+"url": "https://music.apple.com/tz/album/nikumbuke/6808785270?i=6808785271"
+},
+{
+"id": "6812873300",
+"name": "Yu Upande Wangu (Daddy)",
+"artistName": "Neema Gospel Choir",
+"releaseDate": "2026-09-16",
+"url": "https://music.apple.com/tz/album/yu-upande-wangu-daddy/6812873297?i=6812873300"
+},
+{
+"id": "1891869198",
+"name": "Gratitude",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/tz/album/gratitude/1891869190?i=1891869198"
+},
+{
+"id": "1891869454",
+"name": "Forgiveness",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/tz/album/forgiveness/1891869190?i=1891869454"
+},
+{
+"id": "6764882556",
+"name": "Ozalima",
+"artistName": "Mbosso",
+"releaseDate": "2026-05-21",
+"url": "https://music.apple.com/tz/album/ozalima/1895948549?i=6764882556"
+},
+{
+"id": "6824504052",
+"name": "Nitunzie",
+"artistName": "Ibraah",
+"releaseDate": "2026-10-16",
+"url": "https://music.apple.com/tz/album/nitunzie/6824504050?i=6824504052"
+},
+{
+"id": "6800649505",
+"name": "Baraka Nyingi",
+"artistName": "MwanaFA",
+"releaseDate": "2026-08-17",
+"url": "https://music.apple.com/tz/album/baraka-nyingi/6800649489?i=6800649505"
+},
+{
+"id": "6826638612",
+"name": "INFERNO",
+"artistName": "Peruzzi, Zlatan & Shoday",
+"releaseDate": "2026-10-29",
+"url": "https://music.apple.com/tz/album/inferno/6826638611?i=6826638612"
+},
+{
+"id": "6816941367",
+"name": "Mtu Mzima",
+"artistName": "Marioo",
+"releaseDate": "2026-10-09",
+"url": "https://music.apple.com/tz/album/mtu-mzima/6816941365?i=6816941367"
+},
+{
+"id": "6778111039",
+"name": "DJ",
+"artistName": "Mbosso",
+"releaseDate": "2026-06-19",
+"url": "https://music.apple.com/tz/album/dj/6778110766?i=6778111039"
+},
+{
+"id": "6824504053",
+"name": "Imani",
+"artistName": "Ibraah",
+"releaseDate": "2026-10-16",
+"url": "https://music.apple.com/tz/album/imani/6824504050?i=6824504053"
+},
+{
+"id": "1802816580",
+"name": "Abantwana Bakho (feat. Thatohatsi, Young Stunna & Nkosazana Daughter)",
+"artistName": "DJ Maphorisa, Xduppy & Kabza De Small",
+"releaseDate": "2025-03-28",
+"url": "https://music.apple.com/tz/album/abantwana-bakho-feat-thatohatsi-young-stunna-nkosazana/1802816578?i=1802816580"
+},
+{
+"id": "1855591057",
+"name": "Nakupenda (feat. Al Xapo & Zlatan)",
+"artistName": "TxC, Davido, Scotts Maphuma & Shoday",
+"releaseDate": "2025-12-12",
+"url": "https://music.apple.com/tz/album/nakupenda-feat-al-xapo-zlatan/1855591054?i=1855591057"
+},
+{
+"id": "6787656272",
+"name": "Uhakika (feat. Zuchu) [Remix]",
+"artistName": "Ibraah",
+"releaseDate": "2026-07-05",
+"url": "https://music.apple.com/tz/album/uhakika-feat-zuchu-remix/6787656271?i=6787656272"
+},
+{
+"id": "1846452662",
+"name": "Finale",
+"artistName": "Bien & Alikiba",
+"releaseDate": "2026-03-25",
+"url": "https://music.apple.com/tz/album/finale/1846452657?i=1846452662"
+},
+{
+"id": "6796933423",
+"name": "Lango",
+"artistName": "Neema Gospel Choir",
+"releaseDate": "2026-07-28",
+"url": "https://music.apple.com/tz/album/lango/6796933422?i=6796933423"
+},
+{
+"id": "6762848626",
+"name": "Mombasa",
+"artistName": "Marioo",
+"releaseDate": "2026-04-29",
+"url": "https://music.apple.com/tz/album/mombasa/1895041514?i=6762848626"
+},
+{
+"id": "1890348469",
+"name": "Uhakika",
+"artistName": "Ibraah",
+"releaseDate": "2026-04-10",
+"url": "https://music.apple.com/tz/album/uhakika/1890348465?i=1890348469"
+},
+{
+"id": "1848130579",
+"name": "MONEY CONSTANT",
+"artistName": "DJ Maphorisa, DJ Tunez, Wizkid & Mavo",
+"releaseDate": "2025-10-24",
+"url": "https://music.apple.com/tz/album/money-constant/1848130578?i=1848130579"
+},
+{
+"id": "6824504055",
+"name": "Tumeachana",
+"artistName": "Ibraah",
+"releaseDate": "2026-10-16",
+"url": "https://music.apple.com/tz/album/tumeachana/6824504050?i=6824504055"
+},
+{
+"id": "6805176803",
+"name": "Oh No",
+"artistName": "Rema",
+"releaseDate": "2026-09-11",
+"url": "https://music.apple.com/tz/album/oh-no/6805176799?i=6805176803"
+},
+{
+"id": "1862532057",
+"name": "Leo (feat. Mbosso)",
+"artistName": "Harmonize",
+"releaseDate": "2025-12-26",
+"url": "https://music.apple.com/tz/album/leo-feat-mbosso/1862532055?i=1862532057"
+},
+{
+"id": "6833867238",
+"name": "Sorry Batswadi Baka (feat. Sia_TheBee, BeeKayrsa28, Key Tech, Zela Force, Terra Fontain & Tyler ICU)",
+"artistName": "DJ Maphorisa, Xduppy, Focalistic & Optimist Music ZA",
+"releaseDate": "2026-11-12",
+"url": "https://music.apple.com/tz/album/sorry-batswadi-baka-feat-sia-thebee-beekayrsa28-key/6833867011?i=6833867238"
+},
+{
+"id": "6786543889",
+"name": "Malaika",
+"artistName": "Mbosso, Nandy & S2Kizzy",
+"releaseDate": "2026-08-21",
+"url": "https://music.apple.com/tz/album/malaika/6786543887?i=6786543889"
+},
+{
+"id": "1817719849",
+"name": "Nairobi",
+"artistName": "Marioo & Bien",
+"releaseDate": "2025-11-20",
+"url": "https://music.apple.com/tz/album/nairobi/1817719418?i=1817719849"
+},
+{
+"id": "1882650280",
+"name": "Wewe",
+"artistName": "Harmonize",
+"releaseDate": "2026-03-15",
+"url": "https://music.apple.com/tz/album/wewe/1882650277?i=1882650280"
+},
+{
+"id": "1794619835",
+"name": "WHY LOVE",
+"artistName": "Asake",
+"releaseDate": "2025-02-12",
+"url": "https://music.apple.com/tz/album/why-love/1794619833?i=1794619835"
+},
+{
+"id": "1882144650",
+"name": "WORSHIP",
+"artistName": "Asake & DJ Snake",
+"releaseDate": "2026-03-19",
+"url": "https://music.apple.com/tz/album/worship/1882144646?i=1882144650"
+},
+{
+"id": "6784221149",
+"name": "B4 B4",
+"artistName": "Davido, FOLA & Mayorkun",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/tz/album/b4-b4/6784220944?i=6784221149"
+},
+{
+"id": "1847992612",
+"name": "Raindance",
+"artistName": "Dave & Tems",
+"releaseDate": "2025-10-24",
+"url": "https://music.apple.com/tz/album/raindance/1847992481?i=1847992612"
+},
+{
+"id": "6818263652",
+"name": "Kucheza Unajua",
+"artistName": "Zuchu, MATUA TZ & Desmile TZ",
+"releaseDate": "2026-09-30",
+"url": "https://music.apple.com/tz/album/kucheza-unajua/6818263560?i=6818263652"
+},
+{
+"id": "6768700927",
+"name": "UA",
+"artistName": "Marioo & Sofiya Nzau",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/tz/album/ua/6768700601?i=6768700927"
+},
+{
+"id": "6805629867",
+"name": "Imeshindikana",
+"artistName": "Harmonize & Jay Melody",
+"releaseDate": "2026-09-04",
+"url": "https://music.apple.com/tz/album/imeshindikana/6805629535?i=6805629867"
+},
+{
+"id": "6822726595",
+"name": "My Fever",
+"artistName": "Malaika Gray & Marioo",
+"releaseDate": "2026-10-30",
+"url": "https://music.apple.com/tz/album/my-fever/6822726593?i=6822726595"
+},
+{
+"id": "1886738960",
+"name": "Lwetse (feat. DJ Maphorisa & Mluusician)",
+"artistName": "Xduppy & Angekebabuye mc",
+"releaseDate": "2026-03-27",
+"url": "https://music.apple.com/tz/album/lwetse-feat-dj-maphorisa-mluusician/1886738959?i=1886738960"
+},
+{
+"id": "6786449714",
+"name": "SLICK",
+"artistName": "Victony",
+"releaseDate": "2026-07-08",
+"url": "https://music.apple.com/tz/album/slick/6786449711?i=6786449714"
+},
+{
+"id": "1245549980",
+"name": "Come Closer (feat. Drake)",
+"artistName": "Wizkid",
+"releaseDate": "2017-06-09",
+"url": "https://music.apple.com/tz/album/come-closer-feat-drake/1245549634?i=1245549980"
+},
+{
+"id": "6784221150",
+"name": "Already Falling",
+"artistName": "Davido",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/tz/album/already-falling/6784220944?i=6784221150"
+},
+{
+"id": "6768700936",
+"name": "Pombe I",
+"artistName": "Marioo & Harmonize",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/tz/album/pombe-i/6768700601?i=6768700936"
+},
+{
+"id": "1873899180",
+"name": "Natulizana",
+"artistName": "Diamond Platnumz",
+"releaseDate": "2026-02-10",
+"url": "https://music.apple.com/tz/album/natulizana/1873899178?i=1873899180"
+},
+{
+"id": "1882878448",
+"name": "I AM",
+"artistName": "OMAH LAY",
+"releaseDate": "2026-04-03",
+"url": "https://music.apple.com/tz/album/i-am/1882878438?i=1882878448"
+},
+{
+"id": "6793414770",
+"name": "Beautiful",
+"artistName": "Harmonize",
+"releaseDate": "2026-07-24",
+"url": "https://music.apple.com/tz/album/beautiful/6793414767?i=6793414770"
+},
+{
+"id": "1715744237",
+"name": "Angel Numbers / Ten Toes",
+"artistName": "Chris Brown",
+"releaseDate": "2023-11-10",
+"url": "https://music.apple.com/tz/album/angel-numbers-ten-toes/1715744071?i=1715744237"
+},
+{
+"id": "1867908454",
+"name": "Jogodo",
+"artistName": "Wizkid & Asake",
+"releaseDate": "2026-01-15",
+"url": "https://music.apple.com/tz/album/jogodo/1867908237?i=1867908454"
+},
+{
+"id": "1856865214",
+"name": "ZEP (feat. Uncool MC)",
+"artistName": "DJ Smallz, ZinedinexSguche & 031choppa",
+"releaseDate": "2025-12-05",
+"url": "https://music.apple.com/tz/album/zep-feat-uncool-mc/1856865213?i=1856865214"
+},
+{
+"id": "6796900642",
+"name": "Chai ya saa kumi",
+"artistName": "Ywaya Tajiri",
+"releaseDate": "2026-02-23",
+"url": "https://music.apple.com/tz/album/chai-ya-saa-kumi/6796900579?i=6796900642"
+},
+{
+"id": "1822813292",
+"name": "uValo (feat. Dlala Thukzin)",
+"artistName": "JAZZWRLD, Thukuthela & Babalwa M",
+"releaseDate": "2025-08-08",
+"url": "https://music.apple.com/tz/album/uvalo-feat-dlala-thukzin/1822813291?i=1822813292"
+},
+{
+"id": "6821044268",
+"name": "Pretty Girls",
+"artistName": "Joeboy",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/tz/album/pretty-girls/6821044267?i=6821044268"
+},
+{
+"id": "1675379749",
+"name": "UNAVAILABLE (feat. Musa Keys)",
+"artistName": "Davido",
+"releaseDate": "2023-03-31",
+"url": "https://music.apple.com/tz/album/unavailable-feat-musa-keys/1675379314?i=1675379749"
+},
+{
+"id": "6812516760",
+"name": "IKEBE 3000",
+"artistName": "Blaqbonez & Asake",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/tz/album/ikebe-3000/6812516643?i=6812516760"
+},
+{
+"id": "1833268715",
+"name": "Bad Influence",
+"artistName": "OMAH LAY",
+"releaseDate": "2020-01-16",
+"url": "https://music.apple.com/tz/album/bad-influence/1833268708?i=1833268715"
+},
+{
+"id": "1817719085",
+"name": "Hakuna Matata",
+"artistName": "Marioo",
+"releaseDate": "2025-11-20",
+"url": "https://music.apple.com/tz/album/hakuna-matata/1817719081?i=1817719085"
+},
+{
+"id": "1846388904",
+"name": "Friend Zone",
+"artistName": "Harmonize & Ibraah",
+"releaseDate": "2025-10-17",
+"url": "https://music.apple.com/tz/album/friend-zone/1846388903?i=1846388904"
+},
+{
+"id": "1440984708",
+"name": "03' Bonnie & Clyde (feat. Beyoncé Knowles)",
+"artistName": "JAŸ-Z",
+"releaseDate": "2002-10-10",
+"url": "https://music.apple.com/tz/album/03-bonnie-clyde-feat-beyonc%C3%A9-knowles/1440984578?i=1440984708"
+},
+{
+"id": "1868339364",
+"name": "Darasa La Saba",
+"artistName": "Mbosso",
+"releaseDate": "2026-01-27",
+"url": "https://music.apple.com/tz/album/darasa-la-saba/1868339242?i=1868339364"
+},
+{
+"id": "6794361574",
+"name": "Somebody",
+"artistName": "Nandy & Marioo",
+"releaseDate": "2026-08-07",
+"url": "https://music.apple.com/tz/album/somebody/6794361573?i=6794361574"
+},
+{
+"id": "6766262293",
+"name": "Yazoee",
+"artistName": "Harmonize",
+"releaseDate": "2026-05-08",
+"url": "https://music.apple.com/tz/album/yazoee/1896257424?i=6766262293"
+},
+{
+"id": "1794323336",
+"name": "Furaha",
+"artistName": "Harmonize",
+"releaseDate": "2025-02-14",
+"url": "https://music.apple.com/tz/album/furaha/1794323334?i=1794323336"
+},
+{
+"id": "1844972974",
+"name": "Who’s Dat Girl",
+"artistName": "Ayra Starr & Rema",
+"releaseDate": "2026-08-05",
+"url": "https://music.apple.com/tz/album/whos-dat-girl/1844972971?i=1844972974"
+},
+{
+"id": "6824504058",
+"name": "Una",
+"artistName": "Ibraah",
+"releaseDate": "2026-10-16",
+"url": "https://music.apple.com/tz/album/una/6824504050?i=6824504058"
+},
+{
+"id": "1893449033",
+"name": "BELE (feat. Vetkuk, Sheshy, Jaiva Sox, Druza, Sino Ndofaya & Sportman Striker)",
+"artistName": "Mahoota, Mark Khoza, Uncool MC & Candy Flow RSA",
+"releaseDate": "2026-04-15",
+"url": "https://music.apple.com/tz/album/bele-feat-vetkuk-sheshy-jaiva-sox-druza-sino-ndofaya/1893449022?i=1893449033"
+},
+{
+"id": "1740206163",
+"name": "Delusional",
+"artistName": "Chris Brown",
+"releaseDate": "2024-04-11",
+"url": "https://music.apple.com/tz/album/delusional/1740205873?i=1740206163"
+},
+{
+"id": "6768700933",
+"name": "Watu",
+"artistName": "Marioo & D Voice",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/tz/album/watu/6768700601?i=6768700933"
+},
+{
+"id": "1471034860",
+"name": "Joro",
+"artistName": "Wizkid",
+"releaseDate": "2019-09-30",
+"url": "https://music.apple.com/tz/album/joro/1471034859?i=1471034860"
+},
+{
+"id": "6790757047",
+"name": "Buku Jero",
+"artistName": "Mbosso",
+"releaseDate": "2026-08-07",
+"url": "https://music.apple.com/tz/album/buku-jero/6790757045?i=6790757047"
+},
+{
+"id": "1817719405",
+"name": "Ogechi (feat. Davido) [Remix]",
+"artistName": "BoyPee, HYCE & Brown Joel",
+"releaseDate": "2024-09-20",
+"url": "https://music.apple.com/tz/album/ogechi-feat-davido-remix/1817719404?i=1817719405"
+},
+{
+"id": "1740206493",
+"name": "Residuals",
+"artistName": "Chris Brown",
+"releaseDate": "2024-04-11",
+"url": "https://music.apple.com/tz/album/residuals/1740205873?i=1740206493"
+},
+{
+"id": "1440642731",
+"name": "Headlines",
+"artistName": "Drake",
+"releaseDate": "2011-08-09",
+"url": "https://music.apple.com/tz/album/headlines/1440642493?i=1440642731"
+},
+{
+"id": "1780380430",
+"name": "With You (feat. Omah Lay)",
+"artistName": "Davido",
+"releaseDate": "2025-02-07",
+"url": "https://music.apple.com/tz/album/with-you-feat-omah-lay/1780380016?i=1780380430"
+},
+{
+"id": "1810459138",
+"name": "Pawa",
+"artistName": "Mbosso",
+"releaseDate": "2025-06-13",
+"url": "https://music.apple.com/tz/album/pawa/1810459136?i=1810459138"
+},
+{
+"id": "1826530261",
+"name": "UNETHICAL",
+"artistName": "Faouzia",
+"releaseDate": "2025-08-01",
+"url": "https://music.apple.com/tz/album/unethical/1826530260?i=1826530261"
+},
+{
+"id": "1816339802",
+"name": "TETE",
+"artistName": "Marioo",
+"releaseDate": "2025-11-20",
+"url": "https://music.apple.com/tz/album/tete/1816339800?i=1816339802"
+},
+{
+"id": "1817441744",
+"name": "Bengicela (feat. JAZZWRLD)",
+"artistName": "MaWhoo, GL_Ceejay & Thukuthela",
+"releaseDate": "2025-06-13",
+"url": "https://music.apple.com/tz/album/bengicela-feat-jazzwrld/1817441454?i=1817441744"
+},
+{
+"id": "1243164657",
+"name": "Fall",
+"artistName": "Davido",
+"releaseDate": "2017-06-02",
+"url": "https://music.apple.com/tz/album/fall/1243164651?i=1243164657"
+},
+{
+"id": "1890335505",
+"name": "Back Outside",
+"artistName": "BNXN & Sarz",
+"releaseDate": "2026-04-20",
+"url": "https://music.apple.com/tz/album/back-outside/1890335503?i=1890335505"
+},
+{
+"id": "1797538349",
+"name": "Me too",
+"artistName": "Abigail Chams & Harmonize",
+"releaseDate": "2025-02-27",
+"url": "https://music.apple.com/tz/album/me-too/1797538347?i=1797538349"
+},
+{
+"id": "1848285055",
+"name": "Loyalty (feat. Marioo & Nandy)",
+"artistName": "Darassa",
+"releaseDate": "2020-12-24",
+"url": "https://music.apple.com/tz/album/loyalty-feat-marioo-nandy/1848285028?i=1848285055"
+},
+{
+"id": "6815297693",
+"name": "Askies I'm Sorry (feat. Ndade smash)",
+"artistName": "House Of ESAMA, Nevrr49, Jay Music & Loony Q",
+"releaseDate": "2026-10-02",
+"url": "https://music.apple.com/tz/album/askies-im-sorry-feat-ndade-smash/6815297686?i=6815297693"
+},
+{
+"id": "1633281954",
+"name": "Bandana",
+"artistName": "Fireboy DML & Asake",
+"releaseDate": "2022-07-16",
+"url": "https://music.apple.com/tz/album/bandana/1633281947?i=1633281954"
+},
+{
+"id": "1534199534",
+"name": "Holy Ground (feat. Nicki Minaj)",
+"artistName": "Davido",
+"releaseDate": "2020-11-13",
+"url": "https://music.apple.com/tz/album/holy-ground-feat-nicki-minaj/1534199325?i=1534199534"
+},
+{
+"id": "6805629842",
+"name": "Kudos",
+"artistName": "Harmonize",
+"releaseDate": "2026-09-04",
+"url": "https://music.apple.com/tz/album/kudos/6805629535?i=6805629842"
+},
+{
+"id": "1675379770",
+"name": "KANTE (feat. Fave)",
+"artistName": "Davido",
+"releaseDate": "2023-03-31",
+"url": "https://music.apple.com/tz/album/kante-feat-fave/1675379314?i=1675379770"
+},
+{
+"id": "1826558599",
+"name": "MVUA",
+"artistName": "Marioo",
+"releaseDate": "2025-11-20",
+"url": "https://music.apple.com/tz/album/mvua/1826558595?i=1826558599"
+},
+{
+"id": "1821258889",
+"name": "Tholukuthi (Clap Song) [feat. MaWhoo]",
+"artistName": "JAZZWRLD, GL_Ceejay & Thukuthela",
+"releaseDate": "2025-06-27",
+"url": "https://music.apple.com/tz/album/tholukuthi-clap-song-feat-mawhoo/1821258884?i=1821258889"
+},
+{
+"id": "1585843153",
+"name": "Abalele",
+"artistName": "Kabza De Small, DJ Maphorisa & Ami Faku",
+"releaseDate": "2021-09-17",
+"url": "https://music.apple.com/tz/album/abalele/1585843147?i=1585843153"
+},
+{
+"id": "6790787520",
+"name": "Love Design",
+"artistName": "Darassa & Harmonize",
+"releaseDate": "2026-07-24",
+"url": "https://music.apple.com/tz/album/love-design/6790787519?i=6790787520"
+},
+{
+"id": "1594850581",
+"name": "Asibe Happy",
+"artistName": "Kabza De Small, DJ Maphorisa & Ami Faku",
+"releaseDate": "2021-11-12",
+"url": "https://music.apple.com/tz/album/asibe-happy/1594850578?i=1594850581"
+},
+{
+"id": "1732912180",
+"name": "Nitachelewa",
+"artistName": "Ibraah",
+"releaseDate": "2020-09-04",
+"url": "https://music.apple.com/tz/album/nitachelewa/1732912179?i=1732912180"
+},
+{
+"id": "1639087550",
+"name": "Mi Amor (feat. Jovial)",
+"artistName": "Marioo",
+"releaseDate": "2021-12-23",
+"url": "https://music.apple.com/tz/album/mi-amor-feat-jovial/1639087417?i=1639087550"
+},
+{
+"id": "6805629864",
+"name": "Loser",
+"artistName": "Harmonize & Sofiya Nzau",
+"releaseDate": "2026-09-04",
+"url": "https://music.apple.com/tz/album/loser/6805629535?i=6805629864"
+},
+{
+"id": "1683359955",
+"name": "Charm",
+"artistName": "Rema",
+"releaseDate": "2023-04-27",
+"url": "https://music.apple.com/tz/album/charm/1683358108?i=1683359955"
+},
+{
+"id": "1888940400",
+"name": "Colorado",
+"artistName": "Johnny Drille, Ayra Starr & Young Jonn",
+"releaseDate": "2026-04-10",
+"url": "https://music.apple.com/tz/album/colorado/1888940399?i=1888940400"
+},
+{
+"id": "1688641993",
+"name": "Amapiano",
+"artistName": "Asake & Olamide",
+"releaseDate": "2023-05-23",
+"url": "https://music.apple.com/tz/album/amapiano/1688641478?i=1688641993"
+},
+{
+"id": "1793361902",
+"name": "Ngibolekeni (feat. Sean 1401, Leemckrazy, Blxckie, Pcee, Madumane & Kabelo Sings)",
+"artistName": "DJ Maphorisa, Xduppy & Scotts Maphuma",
+"releaseDate": "2025-01-31",
+"url": "https://music.apple.com/tz/album/ngibolekeni-feat-sean-1401-leemckrazy-blxckie-pcee/1793361896?i=1793361902"
+},
+{
+"id": "6824504054",
+"name": "Mazoea",
+"artistName": "Ibraah",
+"releaseDate": "2026-10-16",
+"url": "https://music.apple.com/tz/album/mazoea/6824504050?i=6824504054"
+}
+]
+},
+"ug": {
+"updated": "Tue, 17 Nov 2026 07:51:27 +0000",
+"songs": [
+{
+"id": "6797879230",
+"name": "YoYo",
+"artistName": "Joshua Baraka",
+"releaseDate": "2026-08-26",
+"url": "https://music.apple.com/ug/album/yoyo/6797879229?i=6797879230"
+},
+{
+"id": "6821977263",
+"name": "Call On Me / Jowo",
+"artistName": "Joshua Baraka & Watendawili",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/ug/album/call-on-me-jowo/6821976899?i=6821977263"
+},
+{
+"id": "6769475474",
+"name": "what do i know",
+"artistName": "Joshua Baraka",
+"releaseDate": "2026-07-01",
+"url": "https://music.apple.com/ug/album/what-do-i-know/6769475473?i=6769475474"
+},
+{
+"id": "6821976901",
+"name": "Commando",
+"artistName": "Joshua Baraka & Tiwa Savage",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/ug/album/commando/6821976899?i=6821976901"
+},
+{
+"id": "6805176803",
+"name": "Oh No",
+"artistName": "Rema",
+"releaseDate": "2026-09-11",
+"url": "https://music.apple.com/ug/album/oh-no/6805176799?i=6805176803"
+},
+{
+"id": "6821977266",
+"name": "BeBe",
+"artistName": "Joshua Baraka & Mr Eazi",
+"releaseDate": "2026-11-12",
+"url": "https://music.apple.com/ug/album/bebe/6821976899?i=6821977266"
+},
+{
+"id": "1891869198",
+"name": "Gratitude",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/ug/album/gratitude/1891869190?i=1891869198"
+},
+{
+"id": "1891869454",
+"name": "Forgiveness",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/ug/album/forgiveness/1891869190?i=1891869454"
+},
+{
+"id": "6821044268",
+"name": "Pretty Girls",
+"artistName": "Joeboy",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/ug/album/pretty-girls/6821044267?i=6821044268"
+},
+{
+"id": "6821977267",
+"name": "Army",
+"artistName": "Joshua Baraka & Axon",
+"releaseDate": "2026-11-12",
+"url": "https://music.apple.com/ug/album/army/6821976899?i=6821977267"
+},
+{
+"id": "1245549980",
+"name": "Come Closer (feat. Drake)",
+"artistName": "Wizkid",
+"releaseDate": "2017-06-09",
+"url": "https://music.apple.com/ug/album/come-closer-feat-drake/1245549634?i=1245549980"
+},
+{
+"id": "6775813177",
+"name": "Wewe",
+"artistName": "King Saha",
+"releaseDate": "2026-06-01",
+"url": "https://music.apple.com/ug/album/wewe/6775813172?i=6775813177"
+},
+{
+"id": "6816237760",
+"name": "I'll Be Okay",
+"artistName": "Bien",
+"releaseDate": "2026-10-09",
+"url": "https://music.apple.com/ug/album/ill-be-okay/6816237758?i=6816237760"
+},
+{
+"id": "1794619835",
+"name": "WHY LOVE",
+"artistName": "Asake",
+"releaseDate": "2025-02-12",
+"url": "https://music.apple.com/ug/album/why-love/1794619833?i=1794619835"
+},
+{
+"id": "6821976900",
+"name": "Home",
+"artistName": "Joshua Baraka",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/ug/album/home/6821976899?i=6821976900"
+},
+{
+"id": "1848130579",
+"name": "MONEY CONSTANT",
+"artistName": "DJ Maphorisa, DJ Tunez, Wizkid & Mavo",
+"releaseDate": "2025-10-24",
+"url": "https://music.apple.com/ug/album/money-constant/1848130578?i=1848130579"
+},
+{
+"id": "1890335505",
+"name": "Back Outside",
+"artistName": "BNXN & Sarz",
+"releaseDate": "2026-04-20",
+"url": "https://music.apple.com/ug/album/back-outside/1890335503?i=1890335505"
+},
+{
+"id": "1843397731",
+"name": "This Time",
+"artistName": "Joshua Baraka & JAE5",
+"releaseDate": "2025-11-28",
+"url": "https://music.apple.com/ug/album/this-time/1843397725?i=1843397731"
+},
+{
+"id": "1833268715",
+"name": "Bad Influence",
+"artistName": "OMAH LAY",
+"releaseDate": "2020-01-16",
+"url": "https://music.apple.com/ug/album/bad-influence/1833268708?i=1833268715"
+},
+{
+"id": "6812357116",
+"name": "Comfort",
+"artistName": "Mr Eazi & MOLIY",
+"releaseDate": "2026-10-02",
+"url": "https://music.apple.com/ug/album/comfort/6812357115?i=6812357116"
+},
+{
+"id": "1471034860",
+"name": "Joro",
+"artistName": "Wizkid",
+"releaseDate": "2019-09-30",
+"url": "https://music.apple.com/ug/album/joro/1471034859?i=1471034860"
+},
+{
+"id": "1808449129",
+"name": "Wrong Places",
+"artistName": "Joshua Baraka",
+"releaseDate": "2025-05-16",
+"url": "https://music.apple.com/ug/album/wrong-places/1808449124?i=1808449129"
+},
+{
+"id": "1882144650",
+"name": "WORSHIP",
+"artistName": "Asake & DJ Snake",
+"releaseDate": "2026-03-19",
+"url": "https://music.apple.com/ug/album/worship/1882144646?i=1882144650"
+},
+{
+"id": "6796539210",
+"name": "Heaven Baby (feat. ZAYN)",
+"artistName": "Ayra Starr",
+"releaseDate": "2026-08-14",
+"url": "https://music.apple.com/ug/album/heaven-baby-feat-zayn/6796539188?i=6796539210"
+},
+{
+"id": "1855591057",
+"name": "Nakupenda (feat. Al Xapo & Zlatan)",
+"artistName": "TxC, Davido, Scotts Maphuma & Shoday",
+"releaseDate": "2025-12-12",
+"url": "https://music.apple.com/ug/album/nakupenda-feat-al-xapo-zlatan/1855591054?i=1855591057"
+},
+{
+"id": "6786449714",
+"name": "SLICK",
+"artistName": "Victony",
+"releaseDate": "2026-07-08",
+"url": "https://music.apple.com/ug/album/slick/6786449711?i=6786449714"
+},
+{
+"id": "1531532312",
+"name": "Ginger (feat. Burna Boy)",
+"artistName": "Wizkid",
+"releaseDate": "2020-10-29",
+"url": "https://music.apple.com/ug/album/ginger-feat-burna-boy/1531532301?i=1531532312"
+},
+{
+"id": "1867908454",
+"name": "Jogodo",
+"artistName": "Wizkid & Asake",
+"releaseDate": "2026-01-15",
+"url": "https://music.apple.com/ug/album/jogodo/1867908237?i=1867908454"
+},
+{
+"id": "1847992612",
+"name": "Raindance",
+"artistName": "Dave & Tems",
+"releaseDate": "2025-10-24",
+"url": "https://music.apple.com/ug/album/raindance/1847992481?i=1847992612"
+},
+{
+"id": "6784221149",
+"name": "B4 B4",
+"artistName": "Davido, FOLA & Mayorkun",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/ug/album/b4-b4/6784220944?i=6784221149"
+},
+{
+"id": "6812516760",
+"name": "IKEBE 3000",
+"artistName": "Blaqbonez & Asake",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/ug/album/ikebe-3000/6812516643?i=6812516760"
+},
+{
+"id": "1888940400",
+"name": "Colorado",
+"artistName": "Johnny Drille, Ayra Starr & Young Jonn",
+"releaseDate": "2026-04-10",
+"url": "https://music.apple.com/ug/album/colorado/1888940399?i=1888940400"
+},
+{
+"id": "1877642690",
+"name": "Aura Salad",
+"artistName": "SSSoundGawd & Mavo",
+"releaseDate": "2026-02-20",
+"url": "https://music.apple.com/ug/album/aura-salad/1877642678?i=1877642690"
+},
+{
+"id": "6791794029",
+"name": "TEA",
+"artistName": "Rema",
+"releaseDate": "2026-08-07",
+"url": "https://music.apple.com/ug/album/tea/6791794028?i=6791794029"
+},
+{
+"id": "1843397732",
+"name": "State Of My Heart",
+"artistName": "Joshua Baraka & Bien",
+"releaseDate": "2025-11-28",
+"url": "https://music.apple.com/ug/album/state-of-my-heart/1843397725?i=1843397732"
+},
+{
+"id": "1440642731",
+"name": "Headlines",
+"artistName": "Drake",
+"releaseDate": "2011-08-09",
+"url": "https://music.apple.com/ug/album/headlines/1440642493?i=1440642731"
+},
+{
+"id": "1584281493",
+"name": "Fair Trade (feat. Travis Scott)",
+"artistName": "Drake",
+"releaseDate": "2021-09-03",
+"url": "https://music.apple.com/ug/album/fair-trade-feat-travis-scott/1584281467?i=1584281493"
+},
+{
+"id": "1484518882",
+"name": "D & G (feat. Summer Walker)",
+"artistName": "Davido",
+"releaseDate": "2019-11-22",
+"url": "https://music.apple.com/ug/album/d-g-feat-summer-walker/1484518867?i=1484518882"
+},
+{
+"id": "1633281954",
+"name": "Bandana",
+"artistName": "Fireboy DML & Asake",
+"releaseDate": "2022-07-16",
+"url": "https://music.apple.com/ug/album/bandana/1633281947?i=1633281954"
+},
+{
+"id": "1675379749",
+"name": "UNAVAILABLE (feat. Musa Keys)",
+"artistName": "Davido",
+"releaseDate": "2023-03-31",
+"url": "https://music.apple.com/ug/album/unavailable-feat-musa-keys/1675379314?i=1675379749"
+},
+{
+"id": "1536435451",
+"name": "Away",
+"artistName": "Ayra Starr",
+"releaseDate": "2020-10-19",
+"url": "https://music.apple.com/ug/album/away/1536435450?i=1536435451"
+},
+{
+"id": "1844972974",
+"name": "Who’s Dat Girl",
+"artistName": "Ayra Starr & Rema",
+"releaseDate": "2026-08-05",
+"url": "https://music.apple.com/ug/album/whos-dat-girl/1844972971?i=1844972974"
+},
+{
+"id": "1688641993",
+"name": "Amapiano",
+"artistName": "Asake & Olamide",
+"releaseDate": "2023-05-23",
+"url": "https://music.apple.com/ug/album/amapiano/1688641478?i=1688641993"
+},
+{
+"id": "1534199534",
+"name": "Holy Ground (feat. Nicki Minaj)",
+"artistName": "Davido",
+"releaseDate": "2020-11-13",
+"url": "https://music.apple.com/ug/album/holy-ground-feat-nicki-minaj/1534199325?i=1534199534"
+},
+{
+"id": "1843397728",
+"name": "Dive In",
+"artistName": "Joshua Baraka & JAE5",
+"releaseDate": "2025-10-09",
+"url": "https://music.apple.com/ug/album/dive-in/1843397725?i=1843397728"
+},
+{
+"id": "1537897356",
+"name": "20 10 20",
+"artistName": "Burna Boy",
+"releaseDate": "2020-10-29",
+"url": "https://music.apple.com/ug/album/20-10-20/1537897085?i=1537897356"
+},
+{
+"id": "1683359955",
+"name": "Charm",
+"artistName": "Rema",
+"releaseDate": "2023-04-27",
+"url": "https://music.apple.com/ug/album/charm/1683358108?i=1683359955"
+},
+{
+"id": "1584281482",
+"name": "Girls Want Girls (feat. Lil Baby)",
+"artistName": "Drake",
+"releaseDate": "2021-09-03",
+"url": "https://music.apple.com/ug/album/girls-want-girls-feat-lil-baby/1584281467?i=1584281482"
+},
+{
+"id": "1067103276",
+"name": "Final (Baba Nla)",
+"artistName": "Wizkid",
+"releaseDate": "2015-11-14",
+"url": "https://music.apple.com/ug/album/final-baba-nla/1067102814?i=1067103276"
+},
+{
+"id": "1440642743",
+"name": "Marvins Room",
+"artistName": "Drake",
+"releaseDate": "2011-06-28",
+"url": "https://music.apple.com/ug/album/marvins-room/1440642493?i=1440642743"
+},
+{
+"id": "6769568596",
+"name": "Janice STFU",
+"artistName": "Drake",
+"releaseDate": "2026-05-15",
+"url": "https://music.apple.com/ug/album/janice-stfu/6769568449?i=6769568596"
+},
+{
+"id": "6826638612",
+"name": "INFERNO",
+"artistName": "Peruzzi, Zlatan & Shoday",
+"releaseDate": "2026-10-29",
+"url": "https://music.apple.com/ug/album/inferno/6826638611?i=6826638612"
+},
+{
+"id": "1521265053",
+"name": "Beamer (Bad Boys)",
+"artistName": "Rema & Rvssian",
+"releaseDate": "2020-02-20",
+"url": "https://music.apple.com/ug/album/beamer-bad-boys/1521265051?i=1521265053"
+},
+{
+"id": "1568149457",
+"name": "Soundgasm",
+"artistName": "Rema",
+"releaseDate": "2021-06-10",
+"url": "https://music.apple.com/ug/album/soundgasm/1568149456?i=1568149457"
+},
+{
+"id": "6794283641",
+"name": "THAT GIRL!",
+"artistName": "Darkoo & Asake",
+"releaseDate": "2026-08-07",
+"url": "https://music.apple.com/ug/album/that-girl/6794283635?i=6794283641"
+},
+{
+"id": "1571840194",
+"name": "Promises (feat. Joe L Barnes)",
+"artistName": "Maverick City Music & Naomi Raine",
+"releaseDate": "2020-04-17",
+"url": "https://music.apple.com/ug/album/promises-feat-joe-l-barnes/1571839845?i=1571840194"
+},
+{
+"id": "1521274972",
+"name": "Okay",
+"artistName": "Adekunle Gold",
+"releaseDate": "2020-08-21",
+"url": "https://music.apple.com/ug/album/okay/1521274283?i=1521274972"
+},
+{
+"id": "1675379316",
+"name": "OVER DEM",
+"artistName": "Davido",
+"releaseDate": "2023-03-31",
+"url": "https://music.apple.com/ug/album/over-dem/1675379314?i=1675379316"
+},
+{
+"id": "6794221509",
+"name": "If You Like",
+"artistName": "BNXN",
+"releaseDate": "2026-10-01",
+"url": "https://music.apple.com/ug/album/if-you-like/6794221106?i=6794221509"
+},
+{
+"id": "1740206493",
+"name": "Residuals",
+"artistName": "Chris Brown",
+"releaseDate": "2024-04-11",
+"url": "https://music.apple.com/ug/album/residuals/1740205873?i=1740206493"
+},
+{
+"id": "1441154568",
+"name": "Rehab",
+"artistName": "Rihanna",
+"releaseDate": "2007-05-31",
+"url": "https://music.apple.com/ug/album/rehab/1441154435?i=1441154568"
+},
+{
+"id": "1882878448",
+"name": "I AM",
+"artistName": "OMAH LAY",
+"releaseDate": "2026-04-03",
+"url": "https://music.apple.com/ug/album/i-am/1882878438?i=1882878448"
+},
+{
+"id": "1740206163",
+"name": "Delusional",
+"artistName": "Chris Brown",
+"releaseDate": "2024-04-11",
+"url": "https://music.apple.com/ug/album/delusional/1740205873?i=1740206163"
+},
+{
+"id": "1440934019",
+"name": "Work (feat. Drake)",
+"artistName": "Rihanna",
+"releaseDate": "2016-01-27",
+"url": "https://music.apple.com/ug/album/work-feat-drake/1440933869?i=1440934019"
+},
+{
+"id": "1527475996",
+"name": "23",
+"artistName": "Burna Boy",
+"releaseDate": "2020-08-14",
+"url": "https://music.apple.com/ug/album/23/1527475833?i=1527475996"
+},
+{
+"id": "1521265346",
+"name": "Ginger Me",
+"artistName": "Rema",
+"releaseDate": "2020-06-18",
+"url": "https://music.apple.com/ug/album/ginger-me/1521265051?i=1521265346"
+},
+{
+"id": "1675380059",
+"name": "NO COMPETITION (feat. Asake)",
+"artistName": "Davido",
+"releaseDate": "2023-03-31",
+"url": "https://music.apple.com/ug/album/no-competition-feat-asake/1675379314?i=1675380059"
+},
+{
+"id": "6787949964",
+"name": "BB Lifestyle",
+"artistName": "Mavo & SSSoundGawd",
+"releaseDate": "2026-07-17",
+"url": "https://music.apple.com/ug/album/bb-lifestyle/6787949544?i=6787949964"
+},
+{
+"id": "1822813292",
+"name": "uValo (feat. Dlala Thukzin)",
+"artistName": "JAZZWRLD, Thukuthela & Babalwa M",
+"releaseDate": "2025-08-08",
+"url": "https://music.apple.com/ug/album/uvalo-feat-dlala-thukzin/1822813291?i=1822813292"
+},
+{
+"id": "6810716062",
+"name": "So Good (feat. Kendrick Lamar)",
+"artistName": "Jhené Aiko",
+"releaseDate": "2026-09-11",
+"url": "https://music.apple.com/ug/album/so-good-feat-kendrick-lamar/6810715695?i=6810716062"
+},
+{
+"id": "6817413287",
+"name": "Coachella",
+"artistName": "NO11 & Gabzy",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/ug/album/coachella/6817413280?i=6817413287"
+},
+{
+"id": "1889852762",
+"name": "AYAYAAH",
+"artistName": "ELEMENT EleéeH, Joshua Baraka & Bien",
+"releaseDate": "2026-04-22",
+"url": "https://music.apple.com/ug/album/ayayaah/1889852761?i=1889852762"
+},
+{
+"id": "1703820453",
+"name": "Pidgin & English",
+"artistName": "BNXN",
+"releaseDate": "2023-10-05",
+"url": "https://music.apple.com/ug/album/pidgin-english/1703820043?i=1703820453"
+},
+{
+"id": "1634768784",
+"name": "Propeller (feat. Dave & BNXN fka Buju)",
+"artistName": "JAE5",
+"releaseDate": "2022-07-22",
+"url": "https://music.apple.com/ug/album/propeller-feat-dave-bnxn-fka-buju/1634768780?i=1634768784"
+},
+{
+"id": "1715744237",
+"name": "Angel Numbers / Ten Toes",
+"artistName": "Chris Brown",
+"releaseDate": "2023-11-10",
+"url": "https://music.apple.com/ug/album/angel-numbers-ten-toes/1715744071?i=1715744237"
+},
+{
+"id": "1613840533",
+"name": "Playboy",
+"artistName": "Fireboy DML",
+"releaseDate": "2022-03-24",
+"url": "https://music.apple.com/ug/album/playboy/1613840531?i=1613840533"
+},
+{
+"id": "6794249810",
+"name": "TEZE",
+"artistName": "W4DE & Royal Musiq",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/ug/album/teze/6794249807?i=6794249810"
+},
+{
+"id": "1525628701",
+"name": "Twinkle",
+"artistName": "Dexta Daps",
+"releaseDate": "2020-07-17",
+"url": "https://music.apple.com/ug/album/twinkle/1525628697?i=1525628701"
+},
+{
+"id": "1827385189",
+"name": "Hot Body",
+"artistName": "Ayra Starr",
+"releaseDate": "2026-08-05",
+"url": "https://music.apple.com/ug/album/hot-body/1827385188?i=1827385189"
+},
+{
+"id": "1859899000",
+"name": "Kunsi",
+"artistName": "Vyroota",
+"releaseDate": "2025-12-12",
+"url": "https://music.apple.com/ug/album/kunsi/1859898999?i=1859899000"
+},
+{
+"id": "1557087898",
+"name": "Jireh (feat. Chandler Moore & Naomi Raine)",
+"artistName": "Elevation Worship & Maverick City Music",
+"releaseDate": "2021-03-26",
+"url": "https://music.apple.com/ug/album/jireh-feat-chandler-moore-naomi-raine/1557087895?i=1557087898"
+},
+{
+"id": "6815123468",
+"name": "Wanyonona",
+"artistName": "Geosteady",
+"releaseDate": "2026-10-02",
+"url": "https://music.apple.com/ug/album/wanyonona/6815123465?i=6815123468"
+},
+{
+"id": "1809760892",
+"name": "Ni**as In Fashion (feat. Soundlykbb & Tai Dai)",
+"artistName": "Axon & Denim Cartel",
+"releaseDate": "2025-07-23",
+"url": "https://music.apple.com/ug/album/ni-as-in-fashion-feat-soundlykbb-tai-dai/1809760591?i=1809760892"
+},
+{
+"id": "1527475986",
+"name": "Way Too Big",
+"artistName": "Burna Boy",
+"releaseDate": "2020-08-14",
+"url": "https://music.apple.com/ug/album/way-too-big/1527475833?i=1527475986"
+},
+{
+"id": "1249168253",
+"name": "Wild Thoughts (feat. Rihanna & Bryson Tiller)",
+"artistName": "DJ Khaled",
+"releaseDate": "2017-06-16",
+"url": "https://music.apple.com/ug/album/wild-thoughts-feat-rihanna-bryson-tiller/1249168247?i=1249168253"
+},
+{
+"id": "1818647112",
+"name": "Risk",
+"artistName": "Victony",
+"releaseDate": "2024-06-21",
+"url": "https://music.apple.com/ug/album/risk/1818647091?i=1818647112"
+},
+{
+"id": "1777741395",
+"name": "Blame U",
+"artistName": "Odeal",
+"releaseDate": "2024-11-13",
+"url": "https://music.apple.com/ug/album/blame-u/1777741383?i=1777741395"
+},
+{
+"id": "1440899467",
+"name": "ocean eyes",
+"artistName": "Billie Eilish",
+"releaseDate": "2016-05-18",
+"url": "https://music.apple.com/ug/album/ocean-eyes/1440898929?i=1440899467"
+},
+{
+"id": "1059869490",
+"name": "Back to Sleep",
+"artistName": "Chris Brown",
+"releaseDate": "2015-11-09",
+"url": "https://music.apple.com/ug/album/back-to-sleep/1059869479?i=1059869490"
+},
+{
+"id": "1821564645",
+"name": "Passenger Princess",
+"artistName": "Valiant & Rvssian",
+"releaseDate": "2025-06-20",
+"url": "https://music.apple.com/ug/album/passenger-princess/1821564642?i=1821564645"
+},
+{
+"id": "1878826028",
+"name": "Big Bum Bum",
+"artistName": "Kidd Carder & Mavo",
+"releaseDate": "2026-02-27",
+"url": "https://music.apple.com/ug/album/big-bum-bum/1878826027?i=1878826028"
+},
+{
+"id": "6807817641",
+"name": "Find My Babe",
+"artistName": "Mavo",
+"releaseDate": "2026-09-04",
+"url": "https://music.apple.com/ug/album/find-my-babe/6807817364?i=6807817641"
+},
+{
+"id": "1688642490",
+"name": "Remember",
+"artistName": "Asake",
+"releaseDate": "2023-06-16",
+"url": "https://music.apple.com/ug/album/remember/1688641478?i=1688642490"
+},
+{
+"id": "579664632",
+"name": "When U Feel Lonely",
+"artistName": "Mavado",
+"releaseDate": "2012-11-27",
+"url": "https://music.apple.com/ug/album/when-u-feel-lonely/579664368?i=579664632"
+},
+{
+"id": "1394676097",
+"name": "Biri Biri",
+"artistName": "King Saha",
+"releaseDate": "2018-06-05",
+"url": "https://music.apple.com/ug/album/biri-biri/1394675925?i=1394676097"
+},
+{
+"id": "1875671624",
+"name": "HOW FAR (feat. Monochrome)",
+"artistName": "NO11 & Ayjay bobo",
+"releaseDate": "2025-12-31",
+"url": "https://music.apple.com/ug/album/how-far-feat-monochrome/1875671623?i=1875671624"
+},
+{
+"id": "1675379770",
+"name": "KANTE (feat. Fave)",
+"artistName": "Davido",
+"releaseDate": "2023-03-31",
+"url": "https://music.apple.com/ug/album/kante-feat-fave/1675379314?i=1675379770"
+},
+{
+"id": "1745016381",
+"name": "Last Heartbreak Song",
+"artistName": "Ayra Starr & GIVĒON",
+"releaseDate": "2024-05-30",
+"url": "https://music.apple.com/ug/album/last-heartbreak-song/1745016086?i=1745016381"
+},
+{
+"id": "1440841382",
+"name": "Controlla",
+"artistName": "Drake",
+"releaseDate": "2016-04-29",
+"url": "https://music.apple.com/ug/album/controlla/1440841363?i=1440841382"
+},
+{
+"id": "1821258889",
+"name": "Tholukuthi (Clap Song) [feat. MaWhoo]",
+"artistName": "JAZZWRLD, GL_Ceejay & Thukuthela",
+"releaseDate": "2025-06-27",
+"url": "https://music.apple.com/ug/album/tholukuthi-clap-song-feat-mawhoo/1821258884?i=1821258889"
+}
+]
+},
+"rw": {
+"updated": "Tue, 17 Nov 2026 07:51:27 +0000",
+"songs": [
+{
+"id": "1891869454",
+"name": "Forgiveness",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/rw/album/forgiveness/1891869190?i=1891869454"
+},
+{
+"id": "6805176803",
+"name": "Oh No",
+"artistName": "Rema",
+"releaseDate": "2026-09-11",
+"url": "https://music.apple.com/rw/album/oh-no/6805176799?i=6805176803"
+},
+{
+"id": "1891869198",
+"name": "Gratitude",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/rw/album/gratitude/1891869190?i=1891869198"
+},
+{
+"id": "6829791285",
+"name": "Okay",
+"artistName": "Zuba Ray",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/rw/album/okay/6829791277?i=6829791285"
+},
+{
+"id": "1848130579",
+"name": "MONEY CONSTANT",
+"artistName": "DJ Maphorisa, DJ Tunez, Wizkid & Mavo",
+"releaseDate": "2025-10-24",
+"url": "https://music.apple.com/rw/album/money-constant/1848130578?i=1848130579"
+},
+{
+"id": "1794619835",
+"name": "WHY LOVE",
+"artistName": "Asake",
+"releaseDate": "2025-02-12",
+"url": "https://music.apple.com/rw/album/why-love/1794619833?i=1794619835"
+},
+{
+"id": "6812516760",
+"name": "IKEBE 3000",
+"artistName": "Blaqbonez & Asake",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/rw/album/ikebe-3000/6812516643?i=6812516760"
+},
+{
+"id": "1867908454",
+"name": "Jogodo",
+"artistName": "Wizkid & Asake",
+"releaseDate": "2026-01-15",
+"url": "https://music.apple.com/rw/album/jogodo/1867908237?i=1867908454"
+},
+{
+"id": "1245549980",
+"name": "Come Closer (feat. Drake)",
+"artistName": "Wizkid",
+"releaseDate": "2017-06-09",
+"url": "https://music.apple.com/rw/album/come-closer-feat-drake/1245549634?i=1245549980"
+},
+{
+"id": "6786449714",
+"name": "SLICK",
+"artistName": "Victony",
+"releaseDate": "2026-07-08",
+"url": "https://music.apple.com/rw/album/slick/6786449711?i=6786449714"
+},
+{
+"id": "6829004300",
+"name": "Dedans",
+"artistName": "L2B",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/rw/album/dedans/6829004154?i=6829004300"
+},
+{
+"id": "1890335505",
+"name": "Back Outside",
+"artistName": "BNXN & Sarz",
+"releaseDate": "2026-04-20",
+"url": "https://music.apple.com/rw/album/back-outside/1890335503?i=1890335505"
+},
+{
+"id": "1855591057",
+"name": "Nakupenda (feat. Al Xapo & Zlatan)",
+"artistName": "TxC, Davido, Scotts Maphuma & Shoday",
+"releaseDate": "2025-12-12",
+"url": "https://music.apple.com/rw/album/nakupenda-feat-al-xapo-zlatan/1855591054?i=1855591057"
+},
+{
+"id": "6816237760",
+"name": "I'll Be Okay",
+"artistName": "Bien",
+"releaseDate": "2026-10-09",
+"url": "https://music.apple.com/rw/album/ill-be-okay/6816237758?i=6816237760"
+},
+{
+"id": "1440642731",
+"name": "Headlines",
+"artistName": "Drake",
+"releaseDate": "2011-08-09",
+"url": "https://music.apple.com/rw/album/headlines/1440642493?i=1440642731"
+},
+{
+"id": "6809755256",
+"name": "Jet Lag",
+"artistName": "Tiakola & Jorja Smith",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/rw/album/jet-lag/6809754889?i=6809755256"
+},
+{
+"id": "1847992612",
+"name": "Raindance",
+"artistName": "Dave & Tems",
+"releaseDate": "2025-10-24",
+"url": "https://music.apple.com/rw/album/raindance/1847992481?i=1847992612"
+},
+{
+"id": "1877642690",
+"name": "Aura Salad",
+"artistName": "SSSoundGawd & Mavo",
+"releaseDate": "2026-02-20",
+"url": "https://music.apple.com/rw/album/aura-salad/1877642678?i=1877642690"
+},
+{
+"id": "6796539210",
+"name": "Heaven Baby (feat. ZAYN)",
+"artistName": "Ayra Starr",
+"releaseDate": "2026-08-14",
+"url": "https://music.apple.com/rw/album/heaven-baby-feat-zayn/6796539188?i=6796539210"
+},
+{
+"id": "1882144650",
+"name": "WORSHIP",
+"artistName": "Asake & DJ Snake",
+"releaseDate": "2026-03-19",
+"url": "https://music.apple.com/rw/album/worship/1882144646?i=1882144650"
+},
+{
+"id": "1471034860",
+"name": "Joro",
+"artistName": "Wizkid",
+"releaseDate": "2019-09-30",
+"url": "https://music.apple.com/rw/album/joro/1471034859?i=1471034860"
+},
+{
+"id": "6797445653",
+"name": "My Dear",
+"artistName": "ELEMENT EleéeH",
+"releaseDate": "2026-09-17",
+"url": "https://music.apple.com/rw/album/my-dear/6797445652?i=6797445653"
+},
+{
+"id": "6794221509",
+"name": "If You Like",
+"artistName": "BNXN",
+"releaseDate": "2026-10-01",
+"url": "https://music.apple.com/rw/album/if-you-like/6794221106?i=6794221509"
+},
+{
+"id": "1878826028",
+"name": "Big Bum Bum",
+"artistName": "Kidd Carder & Mavo",
+"releaseDate": "2026-02-27",
+"url": "https://music.apple.com/rw/album/big-bum-bum/1878826027?i=1878826028"
+},
+{
+"id": "1844672816",
+"name": "Jesus Be The Name (feat. Tiffany Hudson)",
+"artistName": "Elevation Worship",
+"releaseDate": "2026-01-23",
+"url": "https://music.apple.com/rw/album/jesus-be-the-name-feat-tiffany-hudson/1844672815?i=1844672816"
+},
+{
+"id": "1531532312",
+"name": "Ginger (feat. Burna Boy)",
+"artistName": "Wizkid",
+"releaseDate": "2020-10-29",
+"url": "https://music.apple.com/rw/album/ginger-feat-burna-boy/1531532301?i=1531532312"
+},
+{
+"id": "1777741395",
+"name": "Blame U",
+"artistName": "Odeal",
+"releaseDate": "2024-11-13",
+"url": "https://music.apple.com/rw/album/blame-u/1777741383?i=1777741395"
+},
+{
+"id": "1688641993",
+"name": "Amapiano",
+"artistName": "Asake & Olamide",
+"releaseDate": "2023-05-23",
+"url": "https://music.apple.com/rw/album/amapiano/1688641478?i=1688641993"
+},
+{
+"id": "1833268715",
+"name": "Bad Influence",
+"artistName": "OMAH LAY",
+"releaseDate": "2020-01-16",
+"url": "https://music.apple.com/rw/album/bad-influence/1833268708?i=1833268715"
+},
+{
+"id": "6797879230",
+"name": "YoYo",
+"artistName": "Joshua Baraka",
+"releaseDate": "2026-08-26",
+"url": "https://music.apple.com/rw/album/yoyo/6797879229?i=6797879230"
+},
+{
+"id": "1882878448",
+"name": "I AM",
+"artistName": "OMAH LAY",
+"releaseDate": "2026-04-03",
+"url": "https://music.apple.com/rw/album/i-am/1882878438?i=1882878448"
+},
+{
+"id": "6809755037",
+"name": "Caméléon",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/rw/album/cam%C3%A9l%C3%A9on/6809754889?i=6809755037"
+},
+{
+"id": "6784221149",
+"name": "B4 B4",
+"artistName": "Davido, FOLA & Mayorkun",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/rw/album/b4-b4/6784220944?i=6784221149"
+},
+{
+"id": "6816216698",
+"name": "BANTU MENTALITÉ",
+"artistName": "SDM & Ninho",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/rw/album/bantu-mentalit%C3%A9/6816215989?i=6816216698"
+},
+{
+"id": "1736757003",
+"name": "Gaslight 101",
+"artistName": "Odeal",
+"releaseDate": "2024-03-15",
+"url": "https://music.apple.com/rw/album/gaslight-101/1736756999?i=1736757003"
+},
+{
+"id": "6781624710",
+"name": "Soldier II (feat. KidFromKigali)",
+"artistName": "TiMi, Kpee, Priesst & Ish Kevin",
+"releaseDate": "2026-06-19",
+"url": "https://music.apple.com/rw/album/soldier-ii-feat-kidfromkigali/6781624709?i=6781624710"
+},
+{
+"id": "6818209989",
+"name": "Solar Eclipse",
+"artistName": "Drake & Don Toliver",
+"releaseDate": "2026-10-02",
+"url": "https://music.apple.com/rw/album/solar-eclipse/6818209777?i=6818209989"
+},
+{
+"id": "1568149457",
+"name": "Soundgasm",
+"artistName": "Rema",
+"releaseDate": "2021-06-10",
+"url": "https://music.apple.com/rw/album/soundgasm/1568149456?i=1568149457"
+},
+{
+"id": "6831506154",
+"name": "Ya Hit (feat. Drake, Travis Scott & Loe Shimmy)",
+"artistName": "Future",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/rw/album/ya-hit-feat-drake-travis-scott-loe-shimmy/6831506152?i=6831506154"
+},
+{
+"id": "6778493193",
+"name": "treat u right",
+"artistName": "FOLA & Ayra Starr",
+"releaseDate": "2026-07-02",
+"url": "https://music.apple.com/rw/album/treat-u-right/6778493192?i=6778493193"
+},
+{
+"id": "1633281954",
+"name": "Bandana",
+"artistName": "Fireboy DML & Asake",
+"releaseDate": "2022-07-16",
+"url": "https://music.apple.com/rw/album/bandana/1633281947?i=1633281954"
+},
+{
+"id": "6817413287",
+"name": "Coachella",
+"artistName": "NO11 & Gabzy",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/rw/album/coachella/6817413280?i=6817413287"
+},
+{
+"id": "6817988512",
+"name": "Nsanze",
+"artistName": "DIRATS",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/rw/album/nsanze/6817988511?i=6817988512"
+},
+{
+"id": "6828537514",
+"name": "Shotta's.",
+"artistName": "Season 25",
+"releaseDate": "2026-09-20",
+"url": "https://music.apple.com/rw/album/shottas/6828537513?i=6828537514"
+},
+{
+"id": "6791794029",
+"name": "TEA",
+"artistName": "Rema",
+"releaseDate": "2026-08-07",
+"url": "https://music.apple.com/rw/album/tea/6791794028?i=6791794029"
+},
+{
+"id": "6821977263",
+"name": "Call On Me / Jowo",
+"artistName": "Joshua Baraka & Watendawili",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/rw/album/call-on-me-jowo/6821976899?i=6821977263"
+},
+{
+"id": "1621119447",
+"name": "WAIT FOR U (feat. Drake & Tems)",
+"artistName": "Future",
+"releaseDate": "2022-04-29",
+"url": "https://music.apple.com/rw/album/wait-for-u-feat-drake-tems/1621119097?i=1621119447"
+},
+{
+"id": "1870984045",
+"name": "Coming Up Roses",
+"artistName": "Harry Styles",
+"releaseDate": "2026-03-06",
+"url": "https://music.apple.com/rw/album/coming-up-roses/1870984032?i=1870984045"
+},
+{
+"id": "6808590514",
+"name": "Greatness",
+"artistName": "Ish Kevin",
+"releaseDate": "2026-09-18",
+"url": "https://music.apple.com/rw/album/greatness/6808590239?i=6808590514"
+},
+{
+"id": "1031354882",
+"name": "Don't",
+"artistName": "Bryson Tiller",
+"releaseDate": "2015-05-20",
+"url": "https://music.apple.com/rw/album/dont/1031354875?i=1031354882"
+},
+{
+"id": "1243164657",
+"name": "Fall",
+"artistName": "Davido",
+"releaseDate": "2017-06-02",
+"url": "https://music.apple.com/rw/album/fall/1243164651?i=1243164657"
+},
+{
+"id": "1683359955",
+"name": "Charm",
+"artistName": "Rema",
+"releaseDate": "2023-04-27",
+"url": "https://music.apple.com/rw/album/charm/1683358108?i=1683359955"
+},
+{
+"id": "1146195720",
+"name": "Nights",
+"artistName": "Frank Ocean",
+"releaseDate": "2016-08-20",
+"url": "https://music.apple.com/rw/album/nights/1146195596?i=1146195720"
+},
+{
+"id": "1875671624",
+"name": "HOW FAR (feat. Monochrome)",
+"artistName": "NO11 & Ayjay bobo",
+"releaseDate": "2025-12-31",
+"url": "https://music.apple.com/rw/album/how-far-feat-monochrome/1875671623?i=1875671624"
+},
+{
+"id": "1067103276",
+"name": "Final (Baba Nla)",
+"artistName": "Wizkid",
+"releaseDate": "2015-11-14",
+"url": "https://music.apple.com/rw/album/final-baba-nla/1067102814?i=1067103276"
+},
+{
+"id": "6814096111",
+"name": "SOMEBODY LOVES ME",
+"artistName": "PARTYNEXTDOOR & Drake",
+"releaseDate": "2025-02-14",
+"url": "https://music.apple.com/rw/album/somebody-loves-me/6814095592?i=6814096111"
+},
+{
+"id": "6769568596",
+"name": "Janice STFU",
+"artistName": "Drake",
+"releaseDate": "2026-05-15",
+"url": "https://music.apple.com/rw/album/janice-stfu/6769568449?i=6769568596"
+},
+{
+"id": "1648587330",
+"name": "In A Minute",
+"artistName": "Lil Baby",
+"releaseDate": "2022-04-08",
+"url": "https://music.apple.com/rw/album/in-a-minute/1648587138?i=1648587330"
+},
+{
+"id": "1627800107",
+"name": "Ojuelegba",
+"artistName": "Wizkid",
+"releaseDate": "2014-09-17",
+"url": "https://music.apple.com/rw/album/ojuelegba/1627800102?i=1627800107"
+},
+{
+"id": "1537897356",
+"name": "20 10 20",
+"artistName": "Burna Boy",
+"releaseDate": "2020-10-29",
+"url": "https://music.apple.com/rw/album/20-10-20/1537897085?i=1537897356"
+},
+{
+"id": "1452636888",
+"name": "Chorale / glow (Pt. 1)",
+"artistName": "Max Richter, Ben Russell, Yuki Numata Resnick, Caleb Burhans, Clarice Jensen & Brian Snow",
+"releaseDate": "2015-09-04",
+"url": "https://music.apple.com/rw/album/chorale-glow-pt-1/1452629309?i=1452636888"
+},
+{
+"id": "6811965385",
+"name": "Capable",
+"artistName": "Utah Nice",
+"releaseDate": "2026-09-19",
+"url": "https://music.apple.com/rw/album/capable/6811965376?i=6811965385"
+},
+{
+"id": "1440642743",
+"name": "Marvins Room",
+"artistName": "Drake",
+"releaseDate": "2011-06-28",
+"url": "https://music.apple.com/rw/album/marvins-room/1440642493?i=1440642743"
+},
+{
+"id": "1521265346",
+"name": "Ginger Me",
+"artistName": "Rema",
+"releaseDate": "2020-06-18",
+"url": "https://music.apple.com/rw/album/ginger-me/1521265051?i=1521265346"
+},
+{
+"id": "1440841382",
+"name": "Controlla",
+"artistName": "Drake",
+"releaseDate": "2016-04-29",
+"url": "https://music.apple.com/rw/album/controlla/1440841363?i=1440841382"
+},
+{
+"id": "1440860400",
+"name": "Money Trees (feat. Jay Rock)",
+"artistName": "Kendrick Lamar",
+"releaseDate": "2012-10-22",
+"url": "https://music.apple.com/rw/album/money-trees-feat-jay-rock/1440860389?i=1440860400"
+},
+{
+"id": "6766887609",
+"name": "Chanel (feat. Asake)",
+"artistName": "Blaqbonez",
+"releaseDate": "2026-05-21",
+"url": "https://music.apple.com/rw/album/chanel-feat-asake/6766887607?i=6766887609"
+},
+{
+"id": "6781408107",
+"name": "GTA",
+"artistName": "Seyi Vibez",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/rw/album/gta/6781408104?i=6781408107"
+},
+{
+"id": "1603628311",
+"name": "Rain Sleep",
+"artistName": "Sleeping Playlist",
+"releaseDate": "2022-01-06",
+"url": "https://music.apple.com/rw/album/rain-sleep/1603628307?i=1603628311"
+},
+{
+"id": "6775967738",
+"name": "Mélo Décalé",
+"artistName": "Tiakola",
+"releaseDate": "2026-06-12",
+"url": "https://music.apple.com/rw/album/m%C3%A9lo-d%C3%A9cal%C3%A9/6775967737?i=6775967738"
+},
+{
+"id": "1883814607",
+"name": "Jam",
+"artistName": "Fally Ipupa & Wizkid",
+"releaseDate": "2026-04-16",
+"url": "https://music.apple.com/rw/album/jam/1883814357?i=1883814607"
+},
+{
+"id": "6790569133",
+"name": "Dead Fresh",
+"artistName": "Lil Baby",
+"releaseDate": "2026-07-17",
+"url": "https://music.apple.com/rw/album/dead-fresh/6790569132?i=6790569133"
+},
+{
+"id": "1368226457",
+"name": "Ye",
+"artistName": "Burna Boy",
+"releaseDate": "2019-12-20",
+"url": "https://music.apple.com/rw/album/ye/1368225583?i=1368226457"
+},
+{
+"id": "1802283801",
+"name": "Soweto (feat. Don Toliver)",
+"artistName": "Victony, Rema & Tempoe",
+"releaseDate": "2023-03-22",
+"url": "https://music.apple.com/rw/album/soweto-feat-don-toliver/1802283557?i=1802283801"
+},
+{
+"id": "1871258333",
+"name": "Secondhand (feat. Rema)",
+"artistName": "Don Toliver",
+"releaseDate": "2026-01-22",
+"url": "https://music.apple.com/rw/album/secondhand-feat-rema/1871258329?i=1871258333"
+},
+{
+"id": "1675379749",
+"name": "UNAVAILABLE (feat. Musa Keys)",
+"artistName": "Davido",
+"releaseDate": "2023-03-31",
+"url": "https://music.apple.com/rw/album/unavailable-feat-musa-keys/1675379314?i=1675379749"
+},
+{
+"id": "1799080775",
+"name": "Get You (feat. Kali Uchis)",
+"artistName": "Daniel Caesar",
+"releaseDate": "2016-10-21",
+"url": "https://music.apple.com/rw/album/get-you-feat-kali-uchis/1799080774?i=1799080775"
+},
+{
+"id": "1823289066",
+"name": "BADMAN GANGSTA",
+"artistName": "Asake & Tiakola",
+"releaseDate": "2025-07-25",
+"url": "https://music.apple.com/rw/album/badman-gangsta/1823289065?i=1823289066"
+},
+{
+"id": "1891869441",
+"name": "MCBH",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/rw/album/mcbh/1891869190?i=1891869441"
+},
+{
+"id": "1844972974",
+"name": "Who’s Dat Girl",
+"artistName": "Ayra Starr & Rema",
+"releaseDate": "2026-08-05",
+"url": "https://music.apple.com/rw/album/whos-dat-girl/1844972971?i=1844972974"
+},
+{
+"id": "6816216709",
+"name": "ÇA CHAUFFE",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/rw/album/%C3%A7a-chauffe/6816215989?i=6816216709"
+},
+{
+"id": "1559889477",
+"name": "Ndagukumbuye",
+"artistName": "King James & Ariel Wayz",
+"releaseDate": "2021-01-28",
+"url": "https://music.apple.com/rw/album/ndagukumbuye/1559889466?i=1559889477"
+},
+{
+"id": "1894260058",
+"name": "Rihanna",
+"artistName": "Joé Dwèt Filé",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/rw/album/rihanna/1894259937?i=1894260058"
+},
+{
+"id": "1418213269",
+"name": "God's Plan",
+"artistName": "Drake",
+"releaseDate": "2018-01-19",
+"url": "https://music.apple.com/rw/album/gods-plan/1418213110?i=1418213269"
+},
+{
+"id": "6821044268",
+"name": "Pretty Girls",
+"artistName": "Joeboy",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/rw/album/pretty-girls/6821044267?i=6821044268"
+},
+{
+"id": "1031354880",
+"name": "Exchange",
+"artistName": "Bryson Tiller",
+"releaseDate": "2015-09-25",
+"url": "https://music.apple.com/rw/album/exchange/1031354875?i=1031354880"
+},
+{
+"id": "1657869492",
+"name": "Snooze",
+"artistName": "SZA",
+"releaseDate": "2022-12-08",
+"url": "https://music.apple.com/rw/album/snooze/1657869377?i=1657869492"
+},
+{
+"id": "1760853692",
+"name": "MMS",
+"artistName": "Asake & Wizkid",
+"releaseDate": "2024-08-09",
+"url": "https://music.apple.com/rw/album/mms/1760853689?i=1760853692"
+},
+{
+"id": "6813131762",
+"name": "4",
+"artistName": "Mauvais Djo",
+"releaseDate": "2026-09-21",
+"url": "https://music.apple.com/rw/album/4/6813131391?i=6813131762"
+},
+{
+"id": "1675379770",
+"name": "KANTE (feat. Fave)",
+"artistName": "Davido",
+"releaseDate": "2023-03-31",
+"url": "https://music.apple.com/rw/album/kante-feat-fave/1675379314?i=1675379770"
+},
+{
+"id": "1822666384",
+"name": "Miami",
+"artistName": "Odeal & Leon Thomas",
+"releaseDate": "2025-07-11",
+"url": "https://music.apple.com/rw/album/miami/1822666383?i=1822666384"
+},
+{
+"id": "1557087898",
+"name": "Jireh (feat. Chandler Moore & Naomi Raine)",
+"artistName": "Elevation Worship & Maverick City Music",
+"releaseDate": "2021-03-26",
+"url": "https://music.apple.com/rw/album/jireh-feat-chandler-moore-naomi-raine/1557087895?i=1557087898"
+},
+{
+"id": "6803950471",
+"name": "Back 2 U",
+"artistName": "Seyi Vibez",
+"releaseDate": "2026-09-17",
+"url": "https://music.apple.com/rw/album/back-2-u/6803950183?i=6803950471"
+},
+{
+"id": "6802712557",
+"name": "BIG PERFORMER",
+"artistName": "Blaqbonez",
+"releaseDate": "2026-08-28",
+"url": "https://music.apple.com/rw/album/big-performer/6802712555?i=6802712557"
+},
+{
+"id": "1600766450",
+"name": "Love Yourz",
+"artistName": "J. Cole",
+"releaseDate": "2014-12-09",
+"url": "https://music.apple.com/rw/album/love-yourz/1600766204?i=1600766450"
+},
+{
+"id": "1603628308",
+"name": "Rain To Sleep To",
+"artistName": "Sleeping Playlist",
+"releaseDate": "2022-01-06",
+"url": "https://music.apple.com/rw/album/rain-to-sleep-to/1603628307?i=1603628308"
+},
+{
+"id": "1603628602",
+"name": "Rain Noise",
+"artistName": "Sleeping Playlist",
+"releaseDate": "2022-01-06",
+"url": "https://music.apple.com/rw/album/rain-noise/1603628307?i=1603628602"
+},
+{
+"id": "1468618077",
+"name": "Money In The Grave (feat. Rick Ross)",
+"artistName": "Drake",
+"releaseDate": "2019-06-15",
+"url": "https://music.apple.com/rw/album/money-in-the-grave-feat-rick-ross/1468617896?i=1468618077"
+},
+{
+"id": "1783384632",
+"name": "Forévà",
+"artistName": "Tayc",
+"releaseDate": "2024-12-13",
+"url": "https://music.apple.com/rw/album/for%C3%A9v%C3%A0/1783384333?i=1783384632"
+},
+{
+"id": "1527584879",
+"name": "Laugh Now Cry Later (feat. Lil Durk)",
+"artistName": "Drake",
+"releaseDate": "2020-08-14",
+"url": "https://music.apple.com/rw/album/laugh-now-cry-later-feat-lil-durk/1527584873?i=1527584879"
+}
+]
+},
+"ci": {
+"updated": "Tue, 17 Nov 2026 07:51:29 +0000",
+"songs": [
+{
+"id": "6825864313",
+"name": "PARTY",
+"artistName": "Didi B & Davido",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/party/6825863696?i=6825864313"
+},
+{
+"id": "6825864318",
+"name": "ADIOS",
+"artistName": "Didi B & Qing Madi",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/adios/6825863696?i=6825864318"
+},
+{
+"id": "6791696966",
+"name": "BIRDMAN & WEEZY (feat. Himra)",
+"artistName": "AsapJo",
+"releaseDate": "2026-07-17",
+"url": "https://music.apple.com/ci/album/birdman-weezy-feat-himra/6791696756?i=6791696966"
+},
+{
+"id": "6816216698",
+"name": "BANTU MENTALITÉ",
+"artistName": "SDM & Ninho",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/bantu-mentalit%C3%A9/6816215989?i=6816216698"
+},
+{
+"id": "6825863697",
+"name": "FREE",
+"artistName": "Didi B",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/free/6825863696?i=6825863697"
+},
+{
+"id": "6771425457",
+"name": "DJOROBITE",
+"artistName": "Himra",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/ci/album/djorobite/6771425191?i=6771425457"
+},
+{
+"id": "6825864126",
+"name": "MALADE",
+"artistName": "Didi B & Khaid",
+"releaseDate": "2026-10-27",
+"url": "https://music.apple.com/ci/album/malade/6825863696?i=6825864126"
+},
+{
+"id": "6800025934",
+"name": "GAOU LA (feat. 6uff)",
+"artistName": "Didi B",
+"releaseDate": "2026-08-21",
+"url": "https://music.apple.com/ci/album/gaou-la-feat-6uff/6800025933?i=6800025934"
+},
+{
+"id": "6825864131",
+"name": "GBEDU",
+"artistName": "Didi B & Phyno",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/gbedu/6825863696?i=6825864131"
+},
+{
+"id": "6771425207",
+"name": "STRIP",
+"artistName": "Himra & Gazo",
+"releaseDate": "2026-05-28",
+"url": "https://music.apple.com/ci/album/strip/6771425191?i=6771425207"
+},
+{
+"id": "6809755020",
+"name": "cœur De Pirate",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/ci/album/c%C5%93ur-de-pirate/6809754889?i=6809755020"
+},
+{
+"id": "6771425205",
+"name": "PLUS DE LOVE",
+"artistName": "Himra",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/ci/album/plus-de-love/6771425191?i=6771425205"
+},
+{
+"id": "6809755256",
+"name": "Jet Lag",
+"artistName": "Tiakola & Jorja Smith",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/ci/album/jet-lag/6809754889?i=6809755256"
+},
+{
+"id": "6825864305",
+"name": "JURU",
+"artistName": "Didi B & Tayc",
+"releaseDate": "2026-09-24",
+"url": "https://music.apple.com/ci/album/juru/6825863696?i=6825864305"
+},
+{
+"id": "6771425208",
+"name": "CANALISER",
+"artistName": "Himra",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/ci/album/canaliser/6771425191?i=6771425208"
+},
+{
+"id": "6825864134",
+"name": "CEMAGO",
+"artistName": "Didi B",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/cemago/6825863696?i=6825864134"
+},
+{
+"id": "6825813373",
+"name": "Je m'appelle (feat. Zlatan & Chley)",
+"artistName": "Didi B",
+"releaseDate": "2026-04-03",
+"url": "https://music.apple.com/ci/album/je-mappelle-feat-zlatan-chley/6825813371?i=6825813373"
+},
+{
+"id": "6825864321",
+"name": "HUM HUM",
+"artistName": "Didi B & NSG",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/hum-hum/6825863696?i=6825864321"
+},
+{
+"id": "6771425204",
+"name": "BARA BARA",
+"artistName": "Himra",
+"releaseDate": "2026-05-15",
+"url": "https://music.apple.com/ci/album/bara-bara/6771425191?i=6771425204"
+},
+{
+"id": "6825864139",
+"name": "MAMACITA",
+"artistName": "Didi B",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/mamacita/6825863696?i=6825864139"
+},
+{
+"id": "6778049350",
+"name": "IGBO",
+"artistName": "Didi B",
+"releaseDate": "2026-06-12",
+"url": "https://music.apple.com/ci/album/igbo/6778049348?i=6778049350"
+},
+{
+"id": "6825864146",
+"name": "JAIYE",
+"artistName": "Didi B",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/jaiye/6825863696?i=6825864146"
+},
+{
+"id": "6775967738",
+"name": "Mélo Décalé",
+"artistName": "Tiakola",
+"releaseDate": "2026-06-12",
+"url": "https://music.apple.com/ci/album/m%C3%A9lo-d%C3%A9cal%C3%A9/6775967737?i=6775967738"
+},
+{
+"id": "6809755037",
+"name": "Caméléon",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/ci/album/cam%C3%A9l%C3%A9on/6809754889?i=6809755037"
+},
+{
+"id": "6816216709",
+"name": "ÇA CHAUFFE",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/%C3%A7a-chauffe/6816215989?i=6816216709"
+},
+{
+"id": "6825814021",
+"name": "Fire in your Eyes (feat. Mavo)",
+"artistName": "Didi B",
+"releaseDate": "2026-04-20",
+"url": "https://music.apple.com/ci/album/fire-in-your-eyes-feat-mavo/6825814020?i=6825814021"
+},
+{
+"id": "1709568721",
+"name": "Tonnerre Lointain pour Bien Dormir (P01)",
+"artistName": "Pluie et Tonnerre de TraxLab",
+"releaseDate": "2023-09-29",
+"url": "https://music.apple.com/ci/album/tonnerre-lointain-pour-bien-dormir-p01/1709568720?i=1709568721"
+},
+{
+"id": "6825864437",
+"name": "MY BABY",
+"artistName": "Didi B",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/my-baby/6825863696?i=6825864437"
+},
+{
+"id": "6809755014",
+"name": "Mode de vie",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/ci/album/mode-de-vie/6809754889?i=6809755014"
+},
+{
+"id": "6816216702",
+"name": "GRAND PALACE",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/grand-palace/6816215989?i=6816216702"
+},
+{
+"id": "1748062148",
+"name": "Bruits de Pluie et Vent (01)",
+"artistName": "Pluie et Tonnerre de TraxLab",
+"releaseDate": "2024-06-03",
+"url": "https://music.apple.com/ci/album/bruits-de-pluie-et-vent-01/1748062146?i=1748062148"
+},
+{
+"id": "6825813614",
+"name": "Raba",
+"artistName": "Didi B & Young Jonn",
+"releaseDate": "2026-05-15",
+"url": "https://music.apple.com/ci/album/raba/6825813612?i=6825813614"
+},
+{
+"id": "6825864327",
+"name": "MONA LISA",
+"artistName": "Didi B",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/mona-lisa/6825863696?i=6825864327"
+},
+{
+"id": "6825864436",
+"name": "OH MAMA",
+"artistName": "Didi B",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/oh-mama/6825863696?i=6825864436"
+},
+{
+"id": "6771425454",
+"name": "BITCH & MONEY",
+"artistName": "Himra, BabyDaiz & Zlatan",
+"releaseDate": "2026-05-28",
+"url": "https://music.apple.com/ci/album/bitch-money/6771425191?i=6771425454"
+},
+{
+"id": "6809755258",
+"name": "La Nocturne",
+"artistName": "Tiakola & Theodora",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/ci/album/la-nocturne/6809754889?i=6809755258"
+},
+{
+"id": "6809755024",
+"name": "Sans toi",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/ci/album/sans-toi/6809754889?i=6809755024"
+},
+{
+"id": "6816216434",
+"name": "I.G",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/i-g/6816215989?i=6816216434"
+},
+{
+"id": "6771425452",
+"name": "NAIGAIDJAN",
+"artistName": "Himra",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/ci/album/naigaidjan/6771425191?i=6771425452"
+},
+{
+"id": "6825864433",
+"name": "HOLIDAY",
+"artistName": "Didi B & King Promise",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/holiday/6825863696?i=6825864433"
+},
+{
+"id": "6771425449",
+"name": "ANXIETE",
+"artistName": "Himra, ElGrandeToto & La Fouine",
+"releaseDate": "2026-05-28",
+"url": "https://music.apple.com/ci/album/anxiete/6771425191?i=6771425449"
+},
+{
+"id": "6825864429",
+"name": "FASHION NOVA",
+"artistName": "Didi B & Focalistic",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/fashion-nova/6825863696?i=6825864429"
+},
+{
+"id": "6771425450",
+"name": "DESTRESSE JAZZ",
+"artistName": "Himra",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/ci/album/destresse-jazz/6771425191?i=6771425450"
+},
+{
+"id": "6825864431",
+"name": "HONEY",
+"artistName": "Didi B",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/honey/6825863696?i=6825864431"
+},
+{
+"id": "6825864310",
+"name": "SKIT (Adesope)",
+"artistName": "Didi B",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/skit-adesope/6825863696?i=6825864310"
+},
+{
+"id": "6816216414",
+"name": "QUAND LE SOLEIL SE LÈVE",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/quand-le-soleil-se-l%C3%A8ve/6816215989?i=6816216414"
+},
+{
+"id": "6771425193",
+"name": "KABA",
+"artistName": "Himra",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/ci/album/kaba/6771425191?i=6771425193"
+},
+{
+"id": "6809755017",
+"name": "Bottega",
+"artistName": "Tiakola, Kuluna, TVLM & Nooche",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/ci/album/bottega/6809754889?i=6809755017"
+},
+{
+"id": "6816216006",
+"name": "RÉEL",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/r%C3%A9el/6816215989?i=6816216006"
+},
+{
+"id": "6771425206",
+"name": "MA HAINE",
+"artistName": "Himra",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/ci/album/ma-haine/6771425191?i=6771425206"
+},
+{
+"id": "6816216707",
+"name": "6.35",
+"artistName": "SDM & SCH",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/6-35/6816215989?i=6816216707"
+},
+{
+"id": "6771425455",
+"name": "YOUNG RICH PAPI",
+"artistName": "Himra & Leto",
+"releaseDate": "2026-05-28",
+"url": "https://music.apple.com/ci/album/young-rich-papi/6771425191?i=6771425455"
+},
+{
+"id": "6809755030",
+"name": "Vrai OG",
+"artistName": "Tiakola & Bné",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/ci/album/vrai-og/6809754889?i=6809755030"
+},
+{
+"id": "6816216719",
+"name": "LE MSG",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/le-msg/6816215989?i=6816216719"
+},
+{
+"id": "6816216912",
+"name": "LE NINE",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/le-nine/6816215989?i=6816216912"
+},
+{
+"id": "6807212056",
+"name": "COCODY",
+"artistName": "KRM",
+"releaseDate": "2026-09-04",
+"url": "https://music.apple.com/ci/album/cocody/6807212050?i=6807212056"
+},
+{
+"id": "1852485651",
+"name": "NOSTALGIE",
+"artistName": "Himra",
+"releaseDate": "2025-11-13",
+"url": "https://music.apple.com/ci/album/nostalgie/1852485404?i=1852485651"
+},
+{
+"id": "6828347867",
+"name": "PHÉNOMÈNE",
+"artistName": "KRM",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/ci/album/phe-nome-ne/6828347843?i=6828347867"
+},
+{
+"id": "6826564120",
+"name": "DIEUDONNÉ",
+"artistName": "LA B7",
+"releaseDate": "2026-10-28",
+"url": "https://music.apple.com/ci/album/dieudonn%C3%A9/6826564119?i=6826564120"
+},
+{
+"id": "6809755019",
+"name": "Best",
+"artistName": "Tiakola & Rema",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/ci/album/best/6809754889?i=6809755019"
+},
+{
+"id": "6771425461",
+"name": "DYCOCO",
+"artistName": "Himra",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/ci/album/dycoco/6771425191?i=6771425461"
+},
+{
+"id": "1804128941",
+"name": "NUMBER ONE (feat. Minz)",
+"artistName": "Himra",
+"releaseDate": "2025-03-30",
+"url": "https://music.apple.com/ci/album/number-one-feat-minz/1804128938?i=1804128941"
+},
+{
+"id": "6809755018",
+"name": "Juda",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/ci/album/juda/6809754889?i=6809755018"
+},
+{
+"id": "1852485472",
+"name": "HÉ TCHAI (feat. Jojo le Barbu & Suspect 95)",
+"artistName": "Himra",
+"releaseDate": "2025-11-14",
+"url": "https://music.apple.com/ci/album/h%C3%A9-tchai-feat-jojo-le-barbu-suspect-95/1852485404?i=1852485472"
+},
+{
+"id": "6829004300",
+"name": "Dedans",
+"artistName": "L2B",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/ci/album/dedans/6829004154?i=6829004300"
+},
+{
+"id": "6816216913",
+"name": "38. SPÉ",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/38-sp%C3%A9/6816215989?i=6816216913"
+},
+{
+"id": "6771425451",
+"name": "TRANSITION",
+"artistName": "Himra",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/ci/album/transition/6771425191?i=6771425451"
+},
+{
+"id": "6828439104",
+"name": "DEUX MONDES",
+"artistName": "Philipayne & THB",
+"releaseDate": "2026-10-31",
+"url": "https://music.apple.com/ci/album/deux-mondes/6828438577?i=6828439104"
+},
+{
+"id": "6821129941",
+"name": "Accélération (feat. La B 7)",
+"artistName": "CØCA",
+"releaseDate": "2026-10-09",
+"url": "https://music.apple.com/ci/album/acc%C3%A9l%C3%A9ration-feat-la-b-7/6821129933?i=6821129941"
+},
+{
+"id": "6828348107",
+"name": "BABI LA NUIT",
+"artistName": "KRM",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/ci/album/babi-la-nuit/6828347843?i=6828348107"
+},
+{
+"id": "1597121648",
+"name": "VVS",
+"artistName": "Ninho",
+"releaseDate": "2021-12-03",
+"url": "https://music.apple.com/ci/album/vvs/1597121321?i=1597121648"
+},
+{
+"id": "6828348105",
+"name": "AKWABA",
+"artistName": "KRM & TRK.",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/ci/album/akwaba/6828347843?i=6828348105"
+},
+{
+"id": "6771425472",
+"name": "N'TAXAIRE",
+"artistName": "Himra, Enfant Noir & Philipayne",
+"releaseDate": "2026-05-28",
+"url": "https://music.apple.com/ci/album/ntaxaire/6771425191?i=6771425472"
+},
+{
+"id": "6830151960",
+"name": "QABBALA MAASIT",
+"artistName": "Jeune Lion & LALIE",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/qabbala-maasit/6830151746?i=6830151960"
+},
+{
+"id": "6816217185",
+"name": "DES PHOTOS DE TOI",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/des-photos-de-toi/6816215989?i=6816217185"
+},
+{
+"id": "6825864439",
+"name": "SKIT 2 (Liban)",
+"artistName": "Didi B",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/ci/album/skit-2-liban/6825863696?i=6825864439"
+},
+{
+"id": "6816216915",
+"name": "RIEN DE PERSONNEL",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/rien-de-personnel/6816215989?i=6816216915"
+},
+{
+"id": "6828348219",
+"name": "BONS PAYEURS",
+"artistName": "KRM & THB",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/ci/album/bons-payeurs/6828347843?i=6828348219"
+},
+{
+"id": "6816217273",
+"name": "LE GANG À L'INFINI",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/le-gang-%C3%A0-linfini/6816215989?i=6816217273"
+},
+{
+"id": "6809755039",
+"name": "La vie d’un Homme",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/ci/album/la-vie-dun-homme/6809754889?i=6809755039"
+},
+{
+"id": "6791696968",
+"name": "DÉCALÉ TRAP (feat. Himra)",
+"artistName": "AsapJo",
+"releaseDate": "2026-07-17",
+"url": "https://music.apple.com/ci/album/d%C3%A9cal%C3%A9-trap-feat-himra/6791696756?i=6791696968"
+},
+{
+"id": "6764352462",
+"name": "Savage",
+"artistName": "Tiakola",
+"releaseDate": "2026-05-07",
+"url": "https://music.apple.com/ci/album/savage/1895744663?i=6764352462"
+},
+{
+"id": "1888474864",
+"name": "Adriano",
+"artistName": "Ameka Zrai",
+"releaseDate": "2026-04-11",
+"url": "https://music.apple.com/ci/album/adriano/1888474670?i=1888474864"
+},
+{
+"id": "1536468983",
+"name": "Tout en Gucci",
+"artistName": "Ninho",
+"releaseDate": "2020-03-07",
+"url": "https://music.apple.com/ci/album/tout-en-gucci/1536468979?i=1536468983"
+},
+{
+"id": "1597121344",
+"name": "Jefe",
+"artistName": "Ninho",
+"releaseDate": "2021-12-03",
+"url": "https://music.apple.com/ci/album/jefe/1597121321?i=1597121344"
+},
+{
+"id": "6785634452",
+"name": "Deutsche Qualitat",
+"artistName": "TRK.",
+"releaseDate": "2026-07-18",
+"url": "https://music.apple.com/ci/album/deutsche-qualitat/6785634444?i=6785634452"
+},
+{
+"id": "6813786935",
+"name": "Right Now",
+"artistName": "KAGE",
+"releaseDate": "2026-09-24",
+"url": "https://music.apple.com/ci/album/right-now/6813786933?i=6813786935"
+},
+{
+"id": "1834516792",
+"name": "CA GLOW",
+"artistName": "Himra",
+"releaseDate": "2025-08-22",
+"url": "https://music.apple.com/ci/album/ca-glow/1834516791?i=1834516792"
+},
+{
+"id": "6828963299",
+"name": "Loli Rock",
+"artistName": "Jeune Morty",
+"releaseDate": "2026-11-12",
+"url": "https://music.apple.com/ci/album/loli-rock/6828963290?i=6828963299"
+},
+{
+"id": "1823289066",
+"name": "BADMAN GANGSTA",
+"artistName": "Asake & Tiakola",
+"releaseDate": "2025-07-25",
+"url": "https://music.apple.com/ci/album/badman-gangsta/1823289065?i=1823289066"
+},
+{
+"id": "6809754890",
+"name": "Les misérables",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/ci/album/les-mis%C3%A9rables/6809754889?i=6809754890"
+},
+{
+"id": "6828348414",
+"name": "ZAMBELEMAN",
+"artistName": "KRM & YJICK",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/ci/album/zambeleman/6828347843?i=6828348414"
+},
+{
+"id": "6828439101",
+"name": "GNAGAMI",
+"artistName": "Philipayne & Himra",
+"releaseDate": "2026-10-31",
+"url": "https://music.apple.com/ci/album/gnagami/6828438577?i=6828439101"
+},
+{
+"id": "6771425458",
+"name": "NO FIFA",
+"artistName": "Himra & M24",
+"releaseDate": "2026-05-28",
+"url": "https://music.apple.com/ci/album/no-fifa/6771425191?i=6771425458"
+},
+{
+"id": "1891869198",
+"name": "Gratitude",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/ci/album/gratitude/1891869190?i=1891869198"
+},
+{
+"id": "6784674549",
+"name": "FREESTYLE SGL #1",
+"artistName": "La b 7",
+"releaseDate": "2026-07-09",
+"url": "https://music.apple.com/ci/album/freestyle-sgl-1/6784674546?i=6784674549"
+},
+{
+"id": "6816217192",
+"name": "CHICHARITO",
+"artistName": "SDM, 2 Mètres & Vitoo",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/ci/album/chicharito/6816215989?i=6816217192"
+},
+{
+"id": "6813131762",
+"name": "4",
+"artistName": "Mauvais Djo",
+"releaseDate": "2026-09-21",
+"url": "https://music.apple.com/ci/album/4/6813131391?i=6813131762"
+},
+{
+"id": "6824554505",
+"name": "El Classico",
+"artistName": "BabyDaiz & Tiakola",
+"releaseDate": null,
+"url": "https://music.apple.com/ci/album/el-classico/6824554504?i=6824554505"
+},
+{
+"id": "6825562139",
+"name": "AVG CLAN",
+"artistName": "gbon lion, PERENIMO & 6kohsly",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/ci/album/avg-clan/6825562125?i=6825562139"
+}
+]
+},
+"sn": {
+"error": "HTTP Error 502: Bad Gateway"
+},
+"cm": {
+"updated": "Tue, 17 Nov 2026 07:51:29 +0000",
+"songs": [
+{
+"id": "6816216698",
+"name": "BANTU MENTALITÉ",
+"artistName": "SDM & Ninho",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/bantu-mentalit%C3%A9/6816215989?i=6816216698"
+},
+{
+"id": "6809755256",
+"name": "Jet Lag",
+"artistName": "Tiakola & Jorja Smith",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/cm/album/jet-lag/6809754889?i=6809755256"
+},
+{
+"id": "6809755020",
+"name": "cœur De Pirate",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cm/album/c%C5%93ur-de-pirate/6809754889?i=6809755020"
+},
+{
+"id": "6775967738",
+"name": "Mélo Décalé",
+"artistName": "Tiakola",
+"releaseDate": "2026-06-12",
+"url": "https://music.apple.com/cm/album/m%C3%A9lo-d%C3%A9cal%C3%A9/6775967737?i=6775967738"
+},
+{
+"id": "6809755037",
+"name": "Caméléon",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cm/album/cam%C3%A9l%C3%A9on/6809754889?i=6809755037"
+},
+{
+"id": "6816216709",
+"name": "ÇA CHAUFFE",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/%C3%A7a-chauffe/6816215989?i=6816216709"
+},
+{
+"id": "6809755258",
+"name": "La Nocturne",
+"artistName": "Tiakola & Theodora",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/cm/album/la-nocturne/6809754889?i=6809755258"
+},
+{
+"id": "6816216702",
+"name": "GRAND PALACE",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/grand-palace/6816215989?i=6816216702"
+},
+{
+"id": "6813131762",
+"name": "4",
+"artistName": "Mauvais Djo",
+"releaseDate": "2026-09-21",
+"url": "https://music.apple.com/cm/album/4/6813131391?i=6813131762"
+},
+{
+"id": "6809755014",
+"name": "Mode de vie",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cm/album/mode-de-vie/6809754889?i=6809755014"
+},
+{
+"id": "6816216414",
+"name": "QUAND LE SOLEIL SE LÈVE",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/quand-le-soleil-se-l%C3%A8ve/6816215989?i=6816216414"
+},
+{
+"id": "1891869198",
+"name": "Gratitude",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/cm/album/gratitude/1891869190?i=1891869198"
+},
+{
+"id": "6816216434",
+"name": "I.G",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/i-g/6816215989?i=6816216434"
+},
+{
+"id": "6809755030",
+"name": "Vrai OG",
+"artistName": "Tiakola & Bné",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cm/album/vrai-og/6809754889?i=6809755030"
+},
+{
+"id": "6816216707",
+"name": "6.35",
+"artistName": "SDM & SCH",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/6-35/6816215989?i=6816216707"
+},
+{
+"id": "6816216719",
+"name": "LE MSG",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/le-msg/6816215989?i=6816216719"
+},
+{
+"id": "6816216006",
+"name": "RÉEL",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/r%C3%A9el/6816215989?i=6816216006"
+},
+{
+"id": "6809755024",
+"name": "Sans toi",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cm/album/sans-toi/6809754889?i=6809755024"
+},
+{
+"id": "1891869454",
+"name": "Forgiveness",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/cm/album/forgiveness/1891869190?i=1891869454"
+},
+{
+"id": "6809755017",
+"name": "Bottega",
+"artistName": "Tiakola, Kuluna, TVLM & Nooche",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cm/album/bottega/6809754889?i=6809755017"
+},
+{
+"id": "6816216912",
+"name": "LE NINE",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/le-nine/6816215989?i=6816216912"
+},
+{
+"id": "6791696966",
+"name": "BIRDMAN & WEEZY (feat. Himra)",
+"artistName": "AsapJo",
+"releaseDate": "2026-07-17",
+"url": "https://music.apple.com/cm/album/birdman-weezy-feat-himra/6791696756?i=6791696966"
+},
+{
+"id": "6809755018",
+"name": "Juda",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cm/album/juda/6809754889?i=6809755018"
+},
+{
+"id": "6816216913",
+"name": "38. SPÉ",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/38-sp%C3%A9/6816215989?i=6816216913"
+},
+{
+"id": "6824554505",
+"name": "El Classico",
+"artistName": "BabyDaiz & Tiakola",
+"releaseDate": null,
+"url": "https://music.apple.com/cm/album/el-classico/6824554504?i=6824554505"
+},
+{
+"id": "6809755019",
+"name": "Best",
+"artistName": "Tiakola & Rema",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cm/album/best/6809754889?i=6809755019"
+},
+{
+"id": "6816217185",
+"name": "DES PHOTOS DE TOI",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/des-photos-de-toi/6816215989?i=6816217185"
+},
+{
+"id": "6816216915",
+"name": "RIEN DE PERSONNEL",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/rien-de-personnel/6816215989?i=6816216915"
+},
+{
+"id": "6803864930",
+"name": "12",
+"artistName": "Mauvais Djo",
+"releaseDate": "2026-09-04",
+"url": "https://music.apple.com/cm/album/12/6803864921?i=6803864930"
+},
+{
+"id": "6804638269",
+"name": "Wagyu",
+"artistName": "Mauvais Djo",
+"releaseDate": "2026-08-07",
+"url": "https://music.apple.com/cm/album/wagyu/6804638267?i=6804638269"
+},
+{
+"id": "1823289066",
+"name": "BADMAN GANGSTA",
+"artistName": "Asake & Tiakola",
+"releaseDate": "2025-07-25",
+"url": "https://music.apple.com/cm/album/badman-gangsta/1823289065?i=1823289066"
+},
+{
+"id": "6829004300",
+"name": "Dedans",
+"artistName": "L2B",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/cm/album/dedans/6829004154?i=6829004300"
+},
+{
+"id": "6791127322",
+"name": "VIVE LA MONNAIE",
+"artistName": "GIMS & Mauvais Djo",
+"releaseDate": "2026-07-17",
+"url": "https://music.apple.com/cm/album/vive-la-monnaie/6791127314?i=6791127322"
+},
+{
+"id": "6816217273",
+"name": "LE GANG À L'INFINI",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/le-gang-%C3%A0-linfini/6816215989?i=6816217273"
+},
+{
+"id": "6809781929",
+"name": "Fille à Papa",
+"artistName": "Vacra & La Rvfleuze",
+"releaseDate": "2026-09-18",
+"url": "https://music.apple.com/cm/album/fille-a-papa/6809781922?i=6809781929"
+},
+{
+"id": "6813151957",
+"name": "Cléopâtre",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-24",
+"url": "https://music.apple.com/cm/album/cl%C3%A9op%C3%A2tre/6813151942?i=6813151957"
+},
+{
+"id": "1794619835",
+"name": "WHY LOVE",
+"artistName": "Asake",
+"releaseDate": "2025-02-12",
+"url": "https://music.apple.com/cm/album/why-love/1794619833?i=1794619835"
+},
+{
+"id": "6809755039",
+"name": "La vie d’un Homme",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/cm/album/la-vie-dun-homme/6809754889?i=6809755039"
+},
+{
+"id": "6826638612",
+"name": "INFERNO",
+"artistName": "Peruzzi, Zlatan & Shoday",
+"releaseDate": "2026-10-29",
+"url": "https://music.apple.com/cm/album/inferno/6826638611?i=6826638612"
+},
+{
+"id": "6816217291",
+"name": "DERNIER DUEL",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/dernier-duel/6816215989?i=6816217291"
+},
+{
+"id": "1889302578",
+"name": "Pineapple",
+"artistName": "Leto",
+"releaseDate": "2026-04-10",
+"url": "https://music.apple.com/cm/album/pineapple/1889302574?i=1889302578"
+},
+{
+"id": "6764352462",
+"name": "Savage",
+"artistName": "Tiakola",
+"releaseDate": "2026-05-07",
+"url": "https://music.apple.com/cm/album/savage/1895744663?i=6764352462"
+},
+{
+"id": "6816217192",
+"name": "CHICHARITO",
+"artistName": "SDM, 2 Mètres & Vitoo",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cm/album/chicharito/6816215989?i=6816217192"
+},
+{
+"id": "6809754890",
+"name": "Les misérables",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cm/album/les-mis%C3%A9rables/6809754889?i=6809754890"
+},
+{
+"id": "6781408107",
+"name": "GTA",
+"artistName": "Seyi Vibez",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/cm/album/gta/6781408104?i=6781408107"
+},
+{
+"id": "6809755042",
+"name": "AF1 NOUVO",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cm/album/af1-nouvo/6809754889?i=6809755042"
+},
+{
+"id": "6778879023",
+"name": "Uber",
+"artistName": "Franglish, KeBlack & Mauvais Djo",
+"releaseDate": "2026-06-19",
+"url": "https://music.apple.com/cm/album/uber/6778878152?i=6778879023"
+},
+{
+"id": "6812516760",
+"name": "IKEBE 3000",
+"artistName": "Blaqbonez & Asake",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/cm/album/ikebe-3000/6812516643?i=6812516760"
+},
+{
+"id": "6778005583",
+"name": "Miss Lolo",
+"artistName": "Fally Ipupa",
+"releaseDate": "2026-09-18",
+"url": "https://music.apple.com/cm/album/miss-lolo/6778004934?i=6778005583"
+},
+{
+"id": "6803950471",
+"name": "Back 2 U",
+"artistName": "Seyi Vibez",
+"releaseDate": "2026-09-17",
+"url": "https://music.apple.com/cm/album/back-2-u/6803950183?i=6803950471"
+},
+{
+"id": "6818551658",
+"name": "CYBERTESLA",
+"artistName": "L2B",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/cm/album/cybertesla/6818551657?i=6818551658"
+},
+{
+"id": "6809755260",
+"name": "Mission",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cm/album/mission/6809754889?i=6809755260"
+},
+{
+"id": "6825864313",
+"name": "PARTY",
+"artistName": "Didi B & Davido",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/cm/album/party/6825863696?i=6825864313"
+},
+{
+"id": "1848130579",
+"name": "MONEY CONSTANT",
+"artistName": "DJ Maphorisa, DJ Tunez, Wizkid & Mavo",
+"releaseDate": "2025-10-24",
+"url": "https://music.apple.com/cm/album/money-constant/1848130578?i=1848130579"
+},
+{
+"id": "6784221149",
+"name": "B4 B4",
+"artistName": "Davido, FOLA & Mayorkun",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/cm/album/b4-b4/6784220944?i=6784221149"
+},
+{
+"id": "6804638350",
+"name": "Maladie",
+"artistName": "Mauvais Djo",
+"releaseDate": "2026-03-20",
+"url": "https://music.apple.com/cm/album/maladie/6804638349?i=6804638350"
+},
+{
+"id": "1883814612",
+"name": "Doucement",
+"artistName": "Fally Ipupa & Joé Dwèt Filé",
+"releaseDate": "2026-04-10",
+"url": "https://music.apple.com/cm/album/doucement/1883814357?i=1883814612"
+},
+{
+"id": "1597121344",
+"name": "Jefe",
+"artistName": "Ninho",
+"releaseDate": "2021-12-03",
+"url": "https://music.apple.com/cm/album/jefe/1597121321?i=1597121344"
+},
+{
+"id": "6809755027",
+"name": "WpointM",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/cm/album/wpointm/6809754889?i=6809755027"
+},
+{
+"id": "6796539210",
+"name": "Heaven Baby (feat. ZAYN)",
+"artistName": "Ayra Starr",
+"releaseDate": "2026-08-14",
+"url": "https://music.apple.com/cm/album/heaven-baby-feat-zayn/6796539188?i=6796539210"
+},
+{
+"id": "1882144650",
+"name": "WORSHIP",
+"artistName": "Asake & DJ Snake",
+"releaseDate": "2026-03-19",
+"url": "https://music.apple.com/cm/album/worship/1882144646?i=1882144650"
+},
+{
+"id": "6794221509",
+"name": "If You Like",
+"artistName": "BNXN",
+"releaseDate": "2026-10-01",
+"url": "https://music.apple.com/cm/album/if-you-like/6794221106?i=6794221509"
+},
+{
+"id": "1536468983",
+"name": "Tout en Gucci",
+"artistName": "Ninho",
+"releaseDate": "2020-03-07",
+"url": "https://music.apple.com/cm/album/tout-en-gucci/1536468979?i=1536468983"
+},
+{
+"id": "1858373373",
+"name": "Deux êtres",
+"artistName": "Fally Ipupa",
+"releaseDate": "2025-12-09",
+"url": "https://music.apple.com/cm/album/deux-%C3%AAtres/1858373372?i=1858373373"
+},
+{
+"id": "1597121648",
+"name": "VVS",
+"artistName": "Ninho",
+"releaseDate": "2021-12-03",
+"url": "https://music.apple.com/cm/album/vvs/1597121321?i=1597121648"
+},
+{
+"id": "1883814596",
+"name": "Pépélé",
+"artistName": "Fally Ipupa & Guy2Bezbar",
+"releaseDate": "2026-04-16",
+"url": "https://music.apple.com/cm/album/p%C3%A9p%C3%A9l%C3%A9/1883814357?i=1883814596"
+},
+{
+"id": "6805176803",
+"name": "Oh No",
+"artistName": "Rema",
+"releaseDate": "2026-09-11",
+"url": "https://music.apple.com/cm/album/oh-no/6805176799?i=6805176803"
+},
+{
+"id": "6825908756",
+"name": "TAKE",
+"artistName": "OMAH LAY & Tiakola",
+"releaseDate": "2026-10-30",
+"url": "https://music.apple.com/cm/album/take/6825908603?i=6825908756"
+},
+{
+"id": "1847992612",
+"name": "Raindance",
+"artistName": "Dave & Tems",
+"releaseDate": "2025-10-24",
+"url": "https://music.apple.com/cm/album/raindance/1847992481?i=1847992612"
+},
+{
+"id": "1883814706",
+"name": "Lost",
+"artistName": "Fally Ipupa",
+"releaseDate": "2026-04-17",
+"url": "https://music.apple.com/cm/album/lost/1883814357?i=1883814706"
+},
+{
+"id": "6786449714",
+"name": "SLICK",
+"artistName": "Victony",
+"releaseDate": "2026-07-08",
+"url": "https://music.apple.com/cm/album/slick/6786449711?i=6786449714"
+},
+{
+"id": "6771425457",
+"name": "DJOROBITE",
+"artistName": "Himra",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/cm/album/djorobite/6771425191?i=6771425457"
+},
+{
+"id": "6771425205",
+"name": "PLUS DE LOVE",
+"artistName": "Himra",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/cm/album/plus-de-love/6771425191?i=6771425205"
+},
+{
+"id": "1471034860",
+"name": "Joro",
+"artistName": "Wizkid",
+"releaseDate": "2019-09-30",
+"url": "https://music.apple.com/cm/album/joro/1471034859?i=1471034860"
+},
+{
+"id": "1621517615",
+"name": "Meuda",
+"artistName": "Tiakola",
+"releaseDate": "2022-05-27",
+"url": "https://music.apple.com/cm/album/meuda/1621517604?i=1621517615"
+},
+{
+"id": "1453399179",
+"name": "La vie qu'on mène",
+"artistName": "Ninho",
+"releaseDate": "2019-03-22",
+"url": "https://music.apple.com/cm/album/la-vie-quon-m%C3%A8ne/1453399177?i=1453399179"
+},
+{
+"id": "6766887609",
+"name": "Chanel (feat. Asake)",
+"artistName": "Blaqbonez",
+"releaseDate": "2026-05-21",
+"url": "https://music.apple.com/cm/album/chanel-feat-asake/6766887607?i=6766887609"
+},
+{
+"id": "1757803302",
+"name": "CARTIER SANTOS",
+"artistName": "SDM",
+"releaseDate": "2024-09-27",
+"url": "https://music.apple.com/cm/album/cartier-santos/1757802855?i=1757803302"
+},
+{
+"id": "1826530261",
+"name": "UNETHICAL",
+"artistName": "Faouzia",
+"releaseDate": "2025-08-01",
+"url": "https://music.apple.com/cm/album/unethical/1826530260?i=1826530261"
+},
+{
+"id": "6788498990",
+"name": "Eja Meja (feat. Asake)",
+"artistName": "BNXN",
+"releaseDate": "2026-07-29",
+"url": "https://music.apple.com/cm/album/eja-meja-feat-asake/6788498989?i=6788498990"
+},
+{
+"id": "1882878448",
+"name": "I AM",
+"artistName": "OMAH LAY",
+"releaseDate": "2026-04-03",
+"url": "https://music.apple.com/cm/album/i-am/1882878438?i=1882878448"
+},
+{
+"id": "1688642490",
+"name": "Remember",
+"artistName": "Asake",
+"releaseDate": "2023-06-16",
+"url": "https://music.apple.com/cm/album/remember/1688641478?i=1688642490"
+},
+{
+"id": "6825864318",
+"name": "ADIOS",
+"artistName": "Didi B & Qing Madi",
+"releaseDate": "2026-11-05",
+"url": "https://music.apple.com/cm/album/adios/6825863696?i=6825864318"
+},
+{
+"id": "6771425204",
+"name": "BARA BARA",
+"artistName": "Himra",
+"releaseDate": "2026-05-15",
+"url": "https://music.apple.com/cm/album/bara-bara/6771425191?i=6771425204"
+},
+{
+"id": "6771425208",
+"name": "CANALISER",
+"artistName": "Himra",
+"releaseDate": "2026-05-29",
+"url": "https://music.apple.com/cm/album/canaliser/6771425191?i=6771425208"
+},
+{
+"id": "1833268715",
+"name": "Bad Influence",
+"artistName": "OMAH LAY",
+"releaseDate": "2020-01-16",
+"url": "https://music.apple.com/cm/album/bad-influence/1833268708?i=1833268715"
+},
+{
+"id": "1688641993",
+"name": "Amapiano",
+"artistName": "Asake & Olamide",
+"releaseDate": "2023-05-23",
+"url": "https://music.apple.com/cm/album/amapiano/1688641478?i=1688641993"
+},
+{
+"id": "1883814607",
+"name": "Jam",
+"artistName": "Fally Ipupa & Wizkid",
+"releaseDate": "2026-04-16",
+"url": "https://music.apple.com/cm/album/jam/1883814357?i=1883814607"
+},
+{
+"id": "1891869441",
+"name": "MCBH",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/cm/album/mcbh/1891869190?i=1891869441"
+},
+{
+"id": "1245549980",
+"name": "Come Closer (feat. Drake)",
+"artistName": "Wizkid",
+"releaseDate": "2017-06-09",
+"url": "https://music.apple.com/cm/album/come-closer-feat-drake/1245549634?i=1245549980"
+},
+{
+"id": "1890335505",
+"name": "Back Outside",
+"artistName": "BNXN & Sarz",
+"releaseDate": "2026-04-20",
+"url": "https://music.apple.com/cm/album/back-outside/1890335503?i=1890335505"
+},
+{
+"id": "1867908454",
+"name": "Jogodo",
+"artistName": "Wizkid & Asake",
+"releaseDate": "2026-01-15",
+"url": "https://music.apple.com/cm/album/jogodo/1867908237?i=1867908454"
+},
+{
+"id": "6830949275",
+"name": "Mr. Laté (feat. D2R)",
+"artistName": "Bigg $am",
+"releaseDate": "2026-11-09",
+"url": "https://music.apple.com/cm/album/mr-lat%C3%A9-feat-d2r/6830949274?i=6830949275"
+},
+{
+"id": "1501482323",
+"name": "Mushin",
+"artistName": "Terry Apala",
+"releaseDate": "2018-08-10",
+"url": "https://music.apple.com/cm/album/mushin/1501482321?i=1501482323"
+},
+{
+"id": "6828807773",
+"name": "Chanel",
+"artistName": "L2B",
+"releaseDate": "2026-11-04",
+"url": "https://music.apple.com/cm/album/chanel/6828807772?i=6828807773"
+},
+{
+"id": "1876522627",
+"name": "Argent Sale - A COLORS SHOW",
+"artistName": "La Rvfleuze",
+"releaseDate": "2026-02-16",
+"url": "https://music.apple.com/cm/album/argent-sale-a-colors-show/1876522624?i=1876522627"
+},
+{
+"id": "1621517920",
+"name": "Gasolina (feat. Rsko)",
+"artistName": "Tiakola",
+"releaseDate": "2022-05-27",
+"url": "https://music.apple.com/cm/album/gasolina-feat-rsko/1621517604?i=1621517920"
+},
+{
+"id": "1368226457",
+"name": "Ye",
+"artistName": "Burna Boy",
+"releaseDate": "2019-12-20",
+"url": "https://music.apple.com/cm/album/ye/1368225583?i=1368226457"
+},
+{
+"id": "1855892038",
+"name": "DES PIGES",
+"artistName": "Ninho",
+"releaseDate": "2026-01-09",
+"url": "https://music.apple.com/cm/album/des-piges/1855891555?i=1855892038"
+},
+{
+"id": "6772090110",
+"name": "No No No",
+"artistName": "Beri Boys Club",
+"releaseDate": "2026-05-12",
+"url": "https://music.apple.com/cm/album/no-no-no/6772089928?i=6772090110"
+}
+]
+},
+"cd": {
+"updated": "Tue, 17 Nov 2026 07:51:31 +0000",
+"songs": [
+{
+"id": "6816216698",
+"name": "BANTU MENTALITÉ",
+"artistName": "SDM & Ninho",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/bantu-mentalit%C3%A9/6816215989?i=6816216698"
+},
+{
+"id": "6809755256",
+"name": "Jet Lag",
+"artistName": "Tiakola & Jorja Smith",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/cd/album/jet-lag/6809754889?i=6809755256"
+},
+{
+"id": "6816216709",
+"name": "ÇA CHAUFFE",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/%C3%A7a-chauffe/6816215989?i=6816216709"
+},
+{
+"id": "6809755020",
+"name": "cœur De Pirate",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cd/album/c%C5%93ur-de-pirate/6809754889?i=6809755020"
+},
+{
+"id": "6816216702",
+"name": "GRAND PALACE",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/grand-palace/6816215989?i=6816216702"
+},
+{
+"id": "6816216434",
+"name": "I.G",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/i-g/6816215989?i=6816216434"
+},
+{
+"id": "6829004300",
+"name": "Dedans",
+"artistName": "L2B",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/cd/album/dedans/6829004154?i=6829004300"
+},
+{
+"id": "6809755037",
+"name": "Caméléon",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cd/album/cam%C3%A9l%C3%A9on/6809754889?i=6809755037"
+},
+{
+"id": "6816216414",
+"name": "QUAND LE SOLEIL SE LÈVE",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/quand-le-soleil-se-l%C3%A8ve/6816215989?i=6816216414"
+},
+{
+"id": "6809755258",
+"name": "La Nocturne",
+"artistName": "Tiakola & Theodora",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/cd/album/la-nocturne/6809754889?i=6809755258"
+},
+{
+"id": "6775967738",
+"name": "Mélo Décalé",
+"artistName": "Tiakola",
+"releaseDate": "2026-06-12",
+"url": "https://music.apple.com/cd/album/m%C3%A9lo-d%C3%A9cal%C3%A9/6775967737?i=6775967738"
+},
+{
+"id": "6830463447",
+"name": "KIZOBA ZOBA (yes)",
+"artistName": "Zozo machine king",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/cd/album/kizoba-zoba-yes/6830463446?i=6830463447"
+},
+{
+"id": "6816216719",
+"name": "LE MSG",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/le-msg/6816215989?i=6816216719"
+},
+{
+"id": "6816216707",
+"name": "6.35",
+"artistName": "SDM & SCH",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/6-35/6816215989?i=6816216707"
+},
+{
+"id": "6824554505",
+"name": "El Classico",
+"artistName": "BabyDaiz & Tiakola",
+"releaseDate": null,
+"url": "https://music.apple.com/cd/album/el-classico/6824554504?i=6824554505"
+},
+{
+"id": "6816216912",
+"name": "LE NINE",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/le-nine/6816215989?i=6816216912"
+},
+{
+"id": "6816216006",
+"name": "RÉEL",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/r%C3%A9el/6816215989?i=6816216006"
+},
+{
+"id": "6778005429",
+"name": "Un Jour",
+"artistName": "Fally Ipupa",
+"releaseDate": "2026-09-18",
+"url": "https://music.apple.com/cd/album/un-jour/6778004934?i=6778005429"
+},
+{
+"id": "6778005260",
+"name": "Delirium",
+"artistName": "Fally Ipupa",
+"releaseDate": "2026-09-18",
+"url": "https://music.apple.com/cd/album/delirium/6778004934?i=6778005260"
+},
+{
+"id": "6813131762",
+"name": "4",
+"artistName": "Mauvais Djo",
+"releaseDate": "2026-09-21",
+"url": "https://music.apple.com/cd/album/4/6813131391?i=6813131762"
+},
+{
+"id": "6812022789",
+"name": "Permanent (feat. Moise Ngofo)",
+"artistName": "David Ize",
+"releaseDate": "2026-09-13",
+"url": "https://music.apple.com/cd/album/permanent-feat-moise-ngofo/6812022511?i=6812022789"
+},
+{
+"id": "6806962968",
+"name": "Couper-court (feat. Bolémvn)",
+"artistName": "SLK",
+"releaseDate": "2026-09-14",
+"url": "https://music.apple.com/cd/album/couper-court-feat-bol%C3%A9mvn/6806962694?i=6806962968"
+},
+{
+"id": "6816216913",
+"name": "38. SPÉ",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/38-sp%C3%A9/6816215989?i=6816216913"
+},
+{
+"id": "6809755017",
+"name": "Bottega",
+"artistName": "Tiakola, Kuluna, TVLM & Nooche",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cd/album/bottega/6809754889?i=6809755017"
+},
+{
+"id": "6816217273",
+"name": "LE GANG À L'INFINI",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/le-gang-%C3%A0-linfini/6816215989?i=6816217273"
+},
+{
+"id": "6809755024",
+"name": "Sans toi",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cd/album/sans-toi/6809754889?i=6809755024"
+},
+{
+"id": "6791696966",
+"name": "BIRDMAN & WEEZY (feat. Himra)",
+"artistName": "AsapJo",
+"releaseDate": "2026-07-17",
+"url": "https://music.apple.com/cd/album/birdman-weezy-feat-himra/6791696756?i=6791696966"
+},
+{
+"id": "6821892250",
+"name": "RR (feat. Flacko cram)",
+"artistName": "La Fève",
+"releaseDate": "2026-10-22",
+"url": "https://music.apple.com/cd/album/rr-feat-flacko-cram/6821892061?i=6821892250"
+},
+{
+"id": "6816217185",
+"name": "DES PHOTOS DE TOI",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/des-photos-de-toi/6816215989?i=6816217185"
+},
+{
+"id": "6818551658",
+"name": "CYBERTESLA",
+"artistName": "L2B",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/cd/album/cybertesla/6818551657?i=6818551658"
+},
+{
+"id": "6803864930",
+"name": "12",
+"artistName": "Mauvais Djo",
+"releaseDate": "2026-09-04",
+"url": "https://music.apple.com/cd/album/12/6803864921?i=6803864930"
+},
+{
+"id": "6809755014",
+"name": "Mode de vie",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cd/album/mode-de-vie/6809754889?i=6809755014"
+},
+{
+"id": "6816216915",
+"name": "RIEN DE PERSONNEL",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/rien-de-personnel/6816215989?i=6816216915"
+},
+{
+"id": "6813151957",
+"name": "Cléopâtre",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-24",
+"url": "https://music.apple.com/cd/album/cl%C3%A9op%C3%A2tre/6813151942?i=6813151957"
+},
+{
+"id": "6822416537",
+"name": "Kumbele",
+"artistName": "PSON",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/cd/album/kumbele/6822416530?i=6822416537"
+},
+{
+"id": "6816217192",
+"name": "CHICHARITO",
+"artistName": "SDM, 2 Mètres & Vitoo",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/chicharito/6816215989?i=6816217192"
+},
+{
+"id": "6812792813",
+"name": "QUE TOI",
+"artistName": "Gally Garvey",
+"releaseDate": "2026-10-16",
+"url": "https://music.apple.com/cd/album/que-toi/6812792662?i=6812792813"
+},
+{
+"id": "6809755030",
+"name": "Vrai OG",
+"artistName": "Tiakola & Bné",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cd/album/vrai-og/6809754889?i=6809755030"
+},
+{
+"id": "6809755039",
+"name": "La vie d’un Homme",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-23",
+"url": "https://music.apple.com/cd/album/la-vie-dun-homme/6809754889?i=6809755039"
+},
+{
+"id": "6816217291",
+"name": "DERNIER DUEL",
+"artistName": "SDM",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/cd/album/dernier-duel/6816215989?i=6816217291"
+},
+{
+"id": "6809755018",
+"name": "Juda",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cd/album/juda/6809754889?i=6809755018"
+},
+{
+"id": "6809755019",
+"name": "Best",
+"artistName": "Tiakola & Rema",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cd/album/best/6809754889?i=6809755019"
+},
+{
+"id": "6778005574",
+"name": "Kitamata",
+"artistName": "Fally Ipupa",
+"releaseDate": "2026-06-10",
+"url": "https://music.apple.com/cd/album/kitamata/6778004934?i=6778005574"
+},
+{
+"id": "1883814706",
+"name": "Lost",
+"artistName": "Fally Ipupa",
+"releaseDate": "2026-04-17",
+"url": "https://music.apple.com/cd/album/lost/1883814357?i=1883814706"
+},
+{
+"id": "1869990396",
+"name": "Esili",
+"artistName": "Moise Mbiye",
+"releaseDate": "2026-01-20",
+"url": "https://music.apple.com/cd/album/esili/1869990132?i=1869990396"
+},
+{
+"id": "6791127322",
+"name": "VIVE LA MONNAIE",
+"artistName": "GIMS & Mauvais Djo",
+"releaseDate": "2026-07-17",
+"url": "https://music.apple.com/cd/album/vive-la-monnaie/6791127314?i=6791127322"
+},
+{
+"id": "1536468983",
+"name": "Tout en Gucci",
+"artistName": "Ninho",
+"releaseDate": "2020-03-07",
+"url": "https://music.apple.com/cd/album/tout-en-gucci/1536468979?i=1536468983"
+},
+{
+"id": "6825908756",
+"name": "TAKE",
+"artistName": "OMAH LAY & Tiakola",
+"releaseDate": "2026-10-30",
+"url": "https://music.apple.com/cd/album/take/6825908603?i=6825908756"
+},
+{
+"id": "1597121648",
+"name": "VVS",
+"artistName": "Ninho",
+"releaseDate": "2021-12-03",
+"url": "https://music.apple.com/cd/album/vvs/1597121321?i=1597121648"
+},
+{
+"id": "1889302578",
+"name": "Pineapple",
+"artistName": "Leto",
+"releaseDate": "2026-04-10",
+"url": "https://music.apple.com/cd/album/pineapple/1889302574?i=1889302578"
+},
+{
+"id": "6828807773",
+"name": "Chanel",
+"artistName": "L2B",
+"releaseDate": "2026-11-04",
+"url": "https://music.apple.com/cd/album/chanel/6828807772?i=6828807773"
+},
+{
+"id": "6813493821",
+"name": "DJOROBITER",
+"artistName": "JP N'DA & Wantché",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cd/album/djorobiter/6813493819?i=6813493821"
+},
+{
+"id": "6824888246",
+"name": "Wetin Day",
+"artistName": "Zed",
+"releaseDate": "2026-10-28",
+"url": "https://music.apple.com/cd/album/wetin-day/6824888227?i=6824888246"
+},
+{
+"id": "1597121344",
+"name": "Jefe",
+"artistName": "Ninho",
+"releaseDate": "2021-12-03",
+"url": "https://music.apple.com/cd/album/jefe/1597121321?i=1597121344"
+},
+{
+"id": "6778879023",
+"name": "Uber",
+"artistName": "Franglish, KeBlack & Mauvais Djo",
+"releaseDate": "2026-06-19",
+"url": "https://music.apple.com/cd/album/uber/6778878152?i=6778879023"
+},
+{
+"id": "6795693364",
+"name": "Spirits",
+"artistName": "PSON",
+"releaseDate": "2026-08-07",
+"url": "https://music.apple.com/cd/album/spirits/6795693359?i=6795693364"
+},
+{
+"id": "6762832207",
+"name": "BILOLO",
+"artistName": "Transco Leopard",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/cd/album/bilolo/1895033634?i=6762832207"
+},
+{
+"id": "6822416531",
+"name": "Forgiveness",
+"artistName": "PSON",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/cd/album/forgiveness/6822416530?i=6822416531"
+},
+{
+"id": "1883814607",
+"name": "Jam",
+"artistName": "Fally Ipupa & Wizkid",
+"releaseDate": "2026-04-16",
+"url": "https://music.apple.com/cd/album/jam/1883814357?i=1883814607"
+},
+{
+"id": "1858373373",
+"name": "Deux êtres",
+"artistName": "Fally Ipupa",
+"releaseDate": "2025-12-09",
+"url": "https://music.apple.com/cd/album/deux-%C3%AAtres/1858373372?i=1858373373"
+},
+{
+"id": "1883814612",
+"name": "Doucement",
+"artistName": "Fally Ipupa & Joé Dwèt Filé",
+"releaseDate": "2026-04-10",
+"url": "https://music.apple.com/cd/album/doucement/1883814357?i=1883814612"
+},
+{
+"id": "1879464650",
+"name": "Tuta OMBA",
+"artistName": "Anthony seya",
+"releaseDate": "2026-02-28",
+"url": "https://music.apple.com/cd/album/tuta-omba/1879464647?i=1879464650"
+},
+{
+"id": "6834827447",
+"name": "VISION",
+"artistName": "Bogo thegoat & PSON",
+"releaseDate": "2026-11-16",
+"url": "https://music.apple.com/cd/album/vision/6834827446?i=6834827447"
+},
+{
+"id": "6828875362",
+"name": "CAILLER",
+"artistName": "yanlml",
+"releaseDate": "2026-11-07",
+"url": "https://music.apple.com/cd/album/cailler/6828875359?i=6828875362"
+},
+{
+"id": "6796539210",
+"name": "Heaven Baby (feat. ZAYN)",
+"artistName": "Ayra Starr",
+"releaseDate": "2026-08-14",
+"url": "https://music.apple.com/cd/album/heaven-baby-feat-zayn/6796539188?i=6796539210"
+},
+{
+"id": "1621517615",
+"name": "Meuda",
+"artistName": "Tiakola",
+"releaseDate": "2022-05-27",
+"url": "https://music.apple.com/cd/album/meuda/1621517604?i=1621517615"
+},
+{
+"id": "6809755042",
+"name": "AF1 NOUVO",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cd/album/af1-nouvo/6809754889?i=6809755042"
+},
+{
+"id": "6764352462",
+"name": "Savage",
+"artistName": "Tiakola",
+"releaseDate": "2026-05-07",
+"url": "https://music.apple.com/cd/album/savage/1895744663?i=6764352462"
+},
+{
+"id": "6809781929",
+"name": "Fille à Papa",
+"artistName": "Vacra & La Rvfleuze",
+"releaseDate": "2026-09-18",
+"url": "https://music.apple.com/cd/album/fille-a-papa/6809781922?i=6809781929"
+},
+{
+"id": "6804638269",
+"name": "Wagyu",
+"artistName": "Mauvais Djo",
+"releaseDate": "2026-08-07",
+"url": "https://music.apple.com/cd/album/wagyu/6804638267?i=6804638269"
+},
+{
+"id": "1440888894",
+"name": "Ε. Signaler",
+"artistName": "Damso",
+"releaseDate": "2017-04-28",
+"url": "https://music.apple.com/cd/album/%CE%B5-signaler/1440888455?i=1440888894"
+},
+{
+"id": "6813151954",
+"name": "Wu Tang Clan",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-24",
+"url": "https://music.apple.com/cd/album/wu-tang-clan/6813151942?i=6813151954"
+},
+{
+"id": "6778005261",
+"name": "Complices",
+"artistName": "Fally Ipupa",
+"releaseDate": "2026-06-10",
+"url": "https://music.apple.com/cd/album/complices/6778004934?i=6778005261"
+},
+{
+"id": "1605596756",
+"name": "Prince de la Calle",
+"artistName": "SDM",
+"releaseDate": "2020-11-19",
+"url": "https://music.apple.com/cd/album/prince-de-la-calle/1605596195?i=1605596756"
+},
+{
+"id": "1621517920",
+"name": "Gasolina (feat. Rsko)",
+"artistName": "Tiakola",
+"releaseDate": "2022-05-27",
+"url": "https://music.apple.com/cd/album/gasolina-feat-rsko/1621517604?i=1621517920"
+},
+{
+"id": "1851981318",
+"name": "Ngolu",
+"artistName": "David Ize",
+"releaseDate": "2025-11-14",
+"url": "https://music.apple.com/cd/album/ngolu/1851981151?i=1851981318"
+},
+{
+"id": "6778005263",
+"name": "Figure de style",
+"artistName": "Fally Ipupa",
+"releaseDate": "2026-09-18",
+"url": "https://music.apple.com/cd/album/figure-de-style/6778004934?i=6778005263"
+},
+{
+"id": "1885121099",
+"name": "Nao entende (feat. Francis Mercier, MC YOSHI, Mauvais Djo & Kokosvoice)",
+"artistName": "TRIANGLE DES BERMUDES",
+"releaseDate": "2026-04-03",
+"url": "https://music.apple.com/cd/album/nao-entende-feat-francis-mercier-mc-yoshi-mauvais-djo/1885120906?i=1885121099"
+},
+{
+"id": "1600705184",
+"name": "Compliqué",
+"artistName": "Dadju",
+"releaseDate": "2019-11-14",
+"url": "https://music.apple.com/cd/album/compliqu%C3%A9/1600704129?i=1600705184"
+},
+{
+"id": "1757803302",
+"name": "CARTIER SANTOS",
+"artistName": "SDM",
+"releaseDate": "2024-09-27",
+"url": "https://music.apple.com/cd/album/cartier-santos/1757802855?i=1757803302"
+},
+{
+"id": "1823289066",
+"name": "BADMAN GANGSTA",
+"artistName": "Asake & Tiakola",
+"releaseDate": "2025-07-25",
+"url": "https://music.apple.com/cd/album/badman-gangsta/1823289065?i=1823289066"
+},
+{
+"id": "1157195547",
+"name": "Dis-moi que tu m'aimes",
+"artistName": "Ninho",
+"releaseDate": "2016-10-21",
+"url": "https://music.apple.com/cd/album/dis-moi-que-tu-maimes/1157195356?i=1157195547"
+},
+{
+"id": "6804638350",
+"name": "Maladie",
+"artistName": "Mauvais Djo",
+"releaseDate": "2026-03-20",
+"url": "https://music.apple.com/cd/album/maladie/6804638349?i=6804638350"
+},
+{
+"id": "6822416543",
+"name": "Bébé (feat. Gally)",
+"artistName": "PSON",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/cd/album/b%C3%A9b%C3%A9-feat-gally/6822416530?i=6822416543"
+},
+{
+"id": "1453399179",
+"name": "La vie qu'on mène",
+"artistName": "Ninho",
+"releaseDate": "2019-03-22",
+"url": "https://music.apple.com/cd/album/la-vie-quon-m%C3%A8ne/1453399177?i=1453399179"
+},
+{
+"id": "6809755260",
+"name": "Mission",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cd/album/mission/6809754889?i=6809755260"
+},
+{
+"id": "1883814596",
+"name": "Pépélé",
+"artistName": "Fally Ipupa & Guy2Bezbar",
+"releaseDate": "2026-04-16",
+"url": "https://music.apple.com/cd/album/p%C3%A9p%C3%A9l%C3%A9/1883814357?i=1883814596"
+},
+{
+"id": "6809754890",
+"name": "Les misérables",
+"artistName": "Tiakola",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/cd/album/les-mis%C3%A9rables/6809754889?i=6809754890"
+},
+{
+"id": "6812795998",
+"name": "LINDANDA (LIVE)",
+"artistName": "Mafukua Nathan Jordy",
+"releaseDate": "2026-09-20",
+"url": "https://music.apple.com/cd/album/lindanda-live/6812795995?i=6812795998"
+},
+{
+"id": "6803865145",
+"name": "Dingari",
+"artistName": "Mauvais Djo",
+"releaseDate": "2026-09-04",
+"url": "https://music.apple.com/cd/album/dingari/6803864921?i=6803865145"
+},
+{
+"id": "6807483016",
+"name": "Zoblazo",
+"artistName": "Ruthee",
+"releaseDate": "2026-09-11",
+"url": "https://music.apple.com/cd/album/zoblazo/6807483001?i=6807483016"
+},
+{
+"id": "1614063481",
+"name": "Wine",
+"artistName": "Rema & Yseult",
+"releaseDate": "2022-03-25",
+"url": "https://music.apple.com/cd/album/wine/1614063395?i=1614063481"
+},
+{
+"id": "1893449033",
+"name": "BELE (feat. Vetkuk, Sheshy, Jaiva Sox, Druza, Sino Ndofaya & Sportman Striker)",
+"artistName": "Mahoota, Mark Khoza, Uncool MC & Candy Flow RSA",
+"releaseDate": "2026-04-15",
+"url": "https://music.apple.com/cd/album/bele-feat-vetkuk-sheshy-jaiva-sox-druza-sino-ndofaya/1893449022?i=1893449033"
+},
+{
+"id": "6829799729",
+"name": "Quotidien du bendo",
+"artistName": "Leto",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/cd/album/quotidien-du-bendo/6829799720?i=6829799729"
+},
+{
+"id": "6828963299",
+"name": "Loli Rock",
+"artistName": "Jeune Morty",
+"releaseDate": "2026-11-12",
+"url": "https://music.apple.com/cd/album/loli-rock/6828963290?i=6828963299"
+},
+{
+"id": "1885121091",
+"name": "À l'aise (feat. L2B, MC YOSHI, Mauvais Djo & Kokosvoice)",
+"artistName": "TRIANGLE DES BERMUDES",
+"releaseDate": "2026-04-03",
+"url": "https://music.apple.com/cd/album/%C3%A0-laise-feat-l2b-mc-yoshi-mauvais-djo-kokosvoice/1885120906?i=1885121091"
+},
+{
+"id": "1440888888",
+"name": "Γ. Mosaïque solitaire",
+"artistName": "Damso",
+"releaseDate": "2017-04-28",
+"url": "https://music.apple.com/cd/album/%CE%B3-mosa%C3%AFque-solitaire/1440888455?i=1440888888"
+},
+{
+"id": "6812792926",
+"name": "LELO",
+"artistName": "Gally Garvey & JB Mpiana",
+"releaseDate": "2026-10-16",
+"url": "https://music.apple.com/cd/album/lelo/6812792662?i=6812792926"
+},
+{
+"id": "1869990385",
+"name": "Ya Nga Na Yaweh",
+"artistName": "Moise Mbiye",
+"releaseDate": "2026-01-20",
+"url": "https://music.apple.com/cd/album/ya-nga-na-yaweh/1869990132?i=1869990385"
+},
+{
+"id": "1891869198",
+"name": "Gratitude",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/cd/album/gratitude/1891869190?i=1891869198"
+}
+]
+},
+"bw": {
+"error": "The read operation timed out"
+},
+"zm": {
+"updated": "Tue, 17 Nov 2026 07:52:03 +0000",
+"songs": [
+{
+"id": "6828562212",
+"name": "Bitter Truth",
+"artistName": "Yo Maps",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/zm/album/bitter-truth/6828562211?i=6828562212"
+},
+{
+"id": "6834089052",
+"name": "Honda Fit (feat. Way Dee, Chanda na Kay & Frank Ro)",
+"artistName": "Ndine Emma",
+"releaseDate": "2026-11-14",
+"url": "https://music.apple.com/zm/album/honda-fit-feat-way-dee-chanda-na-kay-frank-ro/6834089048?i=6834089052"
+},
+{
+"id": "1893808044",
+"name": "Its Over",
+"artistName": "Yo Maps & Makhadzi",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/its-over/1893808032?i=1893808044"
+},
+{
+"id": "1893808039",
+"name": "Bae Bae",
+"artistName": "Yo Maps",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/bae-bae/1893808032?i=1893808039"
+},
+{
+"id": "6817016657",
+"name": "Cut (feat. Bobby East)",
+"artistName": "Way Dee",
+"releaseDate": "2026-10-02",
+"url": "https://music.apple.com/zm/album/cut-feat-bobby-east/6817016656?i=6817016657"
+},
+{
+"id": "6831707141",
+"name": "Nkankala Free (feat. Xaven)",
+"artistName": "Way Dee",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/zm/album/nkankala-free-feat-xaven/6831707136?i=6831707141"
+},
+{
+"id": "6809388148",
+"name": "40 Ng'ombe (feat. Chanda na Kay & SHANGA love)",
+"artistName": "76 Drums",
+"releaseDate": "2026-09-11",
+"url": "https://music.apple.com/zm/album/40-ngombe-feat-chanda-na-kay-shanga-love/6809388147?i=6809388148"
+},
+{
+"id": "1891869198",
+"name": "Gratitude",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/zm/album/gratitude/1891869190?i=1891869198"
+},
+{
+"id": "1893808043",
+"name": "Chafina",
+"artistName": "Yo Maps & Muzo",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/chafina/1893808032?i=1893808043"
+},
+{
+"id": "1891869454",
+"name": "Forgiveness",
+"artistName": "Asake",
+"releaseDate": "2026-04-30",
+"url": "https://music.apple.com/zm/album/forgiveness/1891869190?i=1891869454"
+},
+{
+"id": "1893808045",
+"name": "If You Like",
+"artistName": "Yo Maps & Digo",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/if-you-like/1893808032?i=1893808045"
+},
+{
+"id": "6786875704",
+"name": "Beauty Station (feat. Jc Kalinks)",
+"artistName": "76 Drums",
+"releaseDate": "2026-07-16",
+"url": "https://music.apple.com/zm/album/beauty-station-feat-jc-kalinks/6786875703?i=6786875704"
+},
+{
+"id": "1893808036",
+"name": "Hello",
+"artistName": "Yo Maps",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/hello/1893808032?i=1893808036"
+},
+{
+"id": "6813137805",
+"name": "Nayvee's Prayer",
+"artistName": "DJ Zinhle, Nayvee Womculo & Young Stunna",
+"releaseDate": "2026-09-25",
+"url": "https://music.apple.com/zm/album/nayvees-prayer/6813137378?i=6813137805"
+},
+{
+"id": "1893808040",
+"name": "Condom",
+"artistName": "Yo Maps & Bobby East",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/condom/1893808032?i=1893808040"
+},
+{
+"id": "1893808033",
+"name": "Negative Energy",
+"artistName": "Yo Maps",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/negative-energy/1893808032?i=1893808033"
+},
+{
+"id": "6784221150",
+"name": "Already Falling",
+"artistName": "Davido",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/zm/album/already-falling/6784220944?i=6784221150"
+},
+{
+"id": "6822075432",
+"name": "Nga Nakumona (feat. t-low)",
+"artistName": "Macky2",
+"releaseDate": "2026-10-10",
+"url": "https://music.apple.com/zm/album/nga-nakumona-feat-t-low/6822075425?i=6822075432"
+},
+{
+"id": "1893808034",
+"name": "Budget",
+"artistName": "Yo Maps, Frank Ro, Dizmo & Kingtec",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/budget/1893808032?i=1893808034"
+},
+{
+"id": "6826012883",
+"name": "International Baby",
+"artistName": "76 Drums & BLOOD KID yvok",
+"releaseDate": "2026-11-03",
+"url": "https://music.apple.com/zm/album/international-baby/6826012882?i=6826012883"
+},
+{
+"id": "6784221149",
+"name": "B4 B4",
+"artistName": "Davido, FOLA & Mayorkun",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/zm/album/b4-b4/6784220944?i=6784221149"
+},
+{
+"id": "1802816580",
+"name": "Abantwana Bakho (feat. Thatohatsi, Young Stunna & Nkosazana Daughter)",
+"artistName": "DJ Maphorisa, Xduppy & Kabza De Small",
+"releaseDate": "2025-03-28",
+"url": "https://music.apple.com/zm/album/abantwana-bakho-feat-thatohatsi-young-stunna-nkosazana/1802816578?i=1802816580"
+},
+{
+"id": "6771270818",
+"name": "Remember",
+"artistName": "Tman Xpress & Mellow & Sleazy",
+"releaseDate": "2026-05-22",
+"url": "https://music.apple.com/zm/album/remember/6771270415?i=6771270818"
+},
+{
+"id": "1893808041",
+"name": "Am Begging",
+"artistName": "Yo Maps",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/am-begging/1893808032?i=1893808041"
+},
+{
+"id": "6804362547",
+"name": "Eazzy",
+"artistName": "Way Dee",
+"releaseDate": "2026-08-28",
+"url": "https://music.apple.com/zm/album/eazzy/6804362546?i=6804362547"
+},
+{
+"id": "1893808037",
+"name": "Touch Me",
+"artistName": "Yo Maps & Rotimi",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/touch-me/1893808032?i=1893808037"
+},
+{
+"id": "6805176803",
+"name": "Oh No",
+"artistName": "Rema",
+"releaseDate": "2026-09-11",
+"url": "https://music.apple.com/zm/album/oh-no/6805176799?i=6805176803"
+},
+{
+"id": "1794619835",
+"name": "WHY LOVE",
+"artistName": "Asake",
+"releaseDate": "2025-02-12",
+"url": "https://music.apple.com/zm/album/why-love/1794619833?i=1794619835"
+},
+{
+"id": "1440642731",
+"name": "Headlines",
+"artistName": "Drake",
+"releaseDate": "2011-08-09",
+"url": "https://music.apple.com/zm/album/headlines/1440642493?i=1440642731"
+},
+{
+"id": "6797454581",
+"name": "Let's Have It (feat. Way Dee)",
+"artistName": "Jay Rox",
+"releaseDate": "2026-08-07",
+"url": "https://music.apple.com/zm/album/lets-have-it-feat-way-dee/6797454576?i=6797454581"
+},
+{
+"id": "6811846032",
+"name": "Love You More (feat. Jorzzi & Mordecaii)",
+"artistName": "Wolfpack OPG",
+"releaseDate": "2026-09-11",
+"url": "https://music.apple.com/zm/album/love-you-more-feat-jorzzi-mordecaii/6811846031?i=6811846032"
+},
+{
+"id": "1245549980",
+"name": "Come Closer (feat. Drake)",
+"artistName": "Wizkid",
+"releaseDate": "2017-06-09",
+"url": "https://music.apple.com/zm/album/come-closer-feat-drake/1245549634?i=1245549980"
+},
+{
+"id": "1855591057",
+"name": "Nakupenda (feat. Al Xapo & Zlatan)",
+"artistName": "TxC, Davido, Scotts Maphuma & Shoday",
+"releaseDate": "2025-12-12",
+"url": "https://music.apple.com/zm/album/nakupenda-feat-al-xapo-zlatan/1855591054?i=1855591057"
+},
+{
+"id": "1584281482",
+"name": "Girls Want Girls (feat. Lil Baby)",
+"artistName": "Drake",
+"releaseDate": "2021-09-03",
+"url": "https://music.apple.com/zm/album/girls-want-girls-feat-lil-baby/1584281467?i=1584281482"
+},
+{
+"id": "1893808047",
+"name": "Miracle (Bonus)",
+"artistName": "Yo Maps",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/miracle-bonus/1893808032?i=1893808047"
+},
+{
+"id": "1882144650",
+"name": "WORSHIP",
+"artistName": "Asake & DJ Snake",
+"releaseDate": "2026-03-19",
+"url": "https://music.apple.com/zm/album/worship/1882144646?i=1882144650"
+},
+{
+"id": "6782838570",
+"name": "Last Man Standing (feat. BrokenHill Emmy)",
+"artistName": "Way Dee",
+"releaseDate": "2026-06-26",
+"url": "https://music.apple.com/zm/album/last-man-standing-feat-brokenhill-emmy/6782838559?i=6782838570"
+},
+{
+"id": "1440642743",
+"name": "Marvins Room",
+"artistName": "Drake",
+"releaseDate": "2011-06-28",
+"url": "https://music.apple.com/zm/album/marvins-room/1440642493?i=1440642743"
+},
+{
+"id": "6794249810",
+"name": "TEZE",
+"artistName": "W4DE & Royal Musiq",
+"releaseDate": "2026-07-31",
+"url": "https://music.apple.com/zm/album/teze/6794249807?i=6794249810"
+},
+{
+"id": "6831506154",
+"name": "Ya Hit (feat. Drake, Travis Scott & Loe Shimmy)",
+"artistName": "Future",
+"releaseDate": "2026-11-06",
+"url": "https://music.apple.com/zm/album/ya-hit-feat-drake-travis-scott-loe-shimmy/6831506152?i=6831506154"
+},
+{
+"id": "1893808038",
+"name": "Sanity",
+"artistName": "Yo Maps & Innoss'B",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/sanity/1893808032?i=1893808038"
+},
+{
+"id": "1893808046",
+"name": "Charley (Bonus)",
+"artistName": "Yo Maps & Stonebwoy",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/charley-bonus/1893808032?i=1893808046"
+},
+{
+"id": "1893808035",
+"name": "My Darling",
+"artistName": "Yo Maps & Mafikizolo",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/my-darling/1893808032?i=1893808035"
+},
+{
+"id": "1818002056",
+"name": "Ex Wamunandi",
+"artistName": "Yo Maps",
+"releaseDate": "2024-11-08",
+"url": "https://music.apple.com/zm/album/ex-wamunandi/1818002051?i=1818002056"
+},
+{
+"id": "1835503997",
+"name": "Lwambo",
+"artistName": "Yo Maps",
+"releaseDate": "2025-08-27",
+"url": "https://music.apple.com/zm/album/lwambo/1835503994?i=1835503997"
+},
+{
+"id": "6769568596",
+"name": "Janice STFU",
+"artistName": "Drake",
+"releaseDate": "2026-05-15",
+"url": "https://music.apple.com/zm/album/janice-stfu/6769568449?i=6769568596"
+},
+{
+"id": "6817413287",
+"name": "Coachella",
+"artistName": "NO11 & Gabzy",
+"releaseDate": "2026-10-08",
+"url": "https://music.apple.com/zm/album/coachella/6817413280?i=6817413287"
+},
+{
+"id": "1830591149",
+"name": "Different Species",
+"artistName": "Offset & Gunna",
+"releaseDate": "2025-08-22",
+"url": "https://music.apple.com/zm/album/different-species/1830591137?i=1830591149"
+},
+{
+"id": "1848130579",
+"name": "MONEY CONSTANT",
+"artistName": "DJ Maphorisa, DJ Tunez, Wizkid & Mavo",
+"releaseDate": "2025-10-24",
+"url": "https://music.apple.com/zm/album/money-constant/1848130578?i=1848130579"
+},
+{
+"id": "6831184874",
+"name": "Jewa (feat. CarterIV & DJ Tshegu)",
+"artistName": "Ez Maestro, Statik_012 & Ch'cco",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/zm/album/jewa-feat-carteriv-dj-tshegu/6831184861?i=6831184874"
+},
+{
+"id": "6832784252",
+"name": "Spit Propane",
+"artistName": "Offset & Gunna",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/zm/album/spit-propane/6832783991?i=6832784252"
+},
+{
+"id": "1621119447",
+"name": "WAIT FOR U (feat. Drake & Tems)",
+"artistName": "Future",
+"releaseDate": "2022-04-29",
+"url": "https://music.apple.com/zm/album/wait-for-u-feat-drake-tems/1621119097?i=1621119447"
+},
+{
+"id": "1893808042",
+"name": "Moses",
+"artistName": "Yo Maps & Harmonize",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/moses/1893808032?i=1893808042"
+},
+{
+"id": "1822813292",
+"name": "uValo (feat. Dlala Thukzin)",
+"artistName": "JAZZWRLD, Thukuthela & Babalwa M",
+"releaseDate": "2025-08-08",
+"url": "https://music.apple.com/zm/album/uvalo-feat-dlala-thukzin/1822813291?i=1822813292"
+},
+{
+"id": "1821258889",
+"name": "Tholukuthi (Clap Song) [feat. MaWhoo]",
+"artistName": "JAZZWRLD, GL_Ceejay & Thukuthela",
+"releaseDate": "2025-06-27",
+"url": "https://music.apple.com/zm/album/tholukuthi-clap-song-feat-mawhoo/1821258884?i=1821258889"
+},
+{
+"id": "1847992612",
+"name": "Raindance",
+"artistName": "Dave & Tems",
+"releaseDate": "2025-10-24",
+"url": "https://music.apple.com/zm/album/raindance/1847992481?i=1847992612"
+},
+{
+"id": "6796539210",
+"name": "Heaven Baby (feat. ZAYN)",
+"artistName": "Ayra Starr",
+"releaseDate": "2026-08-14",
+"url": "https://music.apple.com/zm/album/heaven-baby-feat-zayn/6796539188?i=6796539210"
+},
+{
+"id": "1688642490",
+"name": "Remember",
+"artistName": "Asake",
+"releaseDate": "2023-06-16",
+"url": "https://music.apple.com/zm/album/remember/1688641478?i=1688642490"
+},
+{
+"id": "1664110552",
+"name": "Nobody (feat. Blake)",
+"artistName": "Chef 187",
+"releaseDate": "2023-01-13",
+"url": "https://music.apple.com/zm/album/nobody-feat-blake/1664110312?i=1664110552"
+},
+{
+"id": "1817441744",
+"name": "Bengicela (feat. JAZZWRLD)",
+"artistName": "MaWhoo, GL_Ceejay & Thukuthela",
+"releaseDate": "2025-06-13",
+"url": "https://music.apple.com/zm/album/bengicela-feat-jazzwrld/1817441454?i=1817441744"
+},
+{
+"id": "1831450787",
+"name": "Shela (feat. Mano)",
+"artistName": "Sam Deep, Nia Pearl & Boohle",
+"releaseDate": "2025-08-08",
+"url": "https://music.apple.com/zm/album/shela-feat-mano/1831450786?i=1831450787"
+},
+{
+"id": "1484518882",
+"name": "D & G (feat. Summer Walker)",
+"artistName": "Davido",
+"releaseDate": "2019-11-22",
+"url": "https://music.apple.com/zm/album/d-g-feat-summer-walker/1484518867?i=1484518882"
+},
+{
+"id": "6793753979",
+"name": "Wele (feat. Jay Rox)",
+"artistName": "Way Dee",
+"releaseDate": "2026-07-24",
+"url": "https://music.apple.com/zm/album/wele-feat-jay-rox/6793753970?i=6793753979"
+},
+{
+"id": "6815297693",
+"name": "Askies I'm Sorry (feat. Ndade smash)",
+"artistName": "House Of ESAMA, Nevrr49, Jay Music & Loony Q",
+"releaseDate": "2026-10-02",
+"url": "https://music.apple.com/zm/album/askies-im-sorry-feat-ndade-smash/6815297686?i=6815297693"
+},
+{
+"id": "6832783992",
+"name": "R4W",
+"artistName": "Offset & Quavo",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/zm/album/r4w/6832783991?i=6832783992"
+},
+{
+"id": "1893808048",
+"name": "So Deep  (Bonus)",
+"artistName": "Yo Maps",
+"releaseDate": "2026-04-24",
+"url": "https://music.apple.com/zm/album/so-deep-bonus/1893808032?i=1893808048"
+},
+{
+"id": "1527475996",
+"name": "23",
+"artistName": "Burna Boy",
+"releaseDate": "2020-08-14",
+"url": "https://music.apple.com/zm/album/23/1527475833?i=1527475996"
+},
+{
+"id": "1804608078",
+"name": "Uzizwa Kanjan",
+"artistName": "JAZZWRLD, MaWhoo, Thukuthela & GL_Ceejay",
+"releaseDate": "2025-04-25",
+"url": "https://music.apple.com/zm/album/uzizwa-kanjan/1804608073?i=1804608078"
+},
+{
+"id": "1712484121",
+"name": "Imithandazo (feat. Young Stunna, DJ Maphorisa, Sizwe Alakine & Umthakathi Kush)",
+"artistName": "Kabza De Small & Mthunzi",
+"releaseDate": "2023-10-27",
+"url": "https://music.apple.com/zm/album/imithandazo-feat-young-stunna-dj-maphorisa-sizwe-alakine/1712483856?i=1712484121"
+},
+{
+"id": "1537897356",
+"name": "20 10 20",
+"artistName": "Burna Boy",
+"releaseDate": "2020-10-29",
+"url": "https://music.apple.com/zm/album/20-10-20/1537897085?i=1537897356"
+},
+{
+"id": "1837392748",
+"name": "Aye",
+"artistName": "Nez Long, Xaven & Yo Maps",
+"releaseDate": "2025-09-12",
+"url": "https://music.apple.com/zm/album/aye/1837392747?i=1837392748"
+},
+{
+"id": "1534199534",
+"name": "Holy Ground (feat. Nicki Minaj)",
+"artistName": "Davido",
+"releaseDate": "2020-11-13",
+"url": "https://music.apple.com/zm/album/holy-ground-feat-nicki-minaj/1534199325?i=1534199534"
+},
+{
+"id": "1816442265",
+"name": "Kale Naleka (feat. Yo Maps)",
+"artistName": "Jae Cash",
+"releaseDate": "2025-03-02",
+"url": "https://music.apple.com/zm/album/kale-naleka-feat-yo-maps/1816442263?i=1816442265"
+},
+{
+"id": "1688641993",
+"name": "Amapiano",
+"artistName": "Asake & Olamide",
+"releaseDate": "2023-05-23",
+"url": "https://music.apple.com/zm/album/amapiano/1688641478?i=1688641993"
+},
+{
+"id": "6829698793",
+"name": "Over",
+"artistName": "PRINCE LUV & Yo Maps",
+"releaseDate": "2026-11-13",
+"url": "https://music.apple.com/zm/album/over/6829698790?i=6829698793"
+},
+{
+"id": "6796603443",
+"name": "H’s On The Table",
+"artistName": "Royal Musiq",
+"releaseDate": "2026-08-03",
+"url": "https://music.apple.com/zm/album/hs-on-the-table/6796603229?i=6796603443"
+},
+{
+"id": "1893449033",
+"name": "BELE (feat. Vetkuk, Sheshy, Jaiva Sox, Druza, Sino Ndofaya & Sportman Striker)",
+"artistName": "Mahoota, Mark Khoza, Uncool MC & Candy Flow RSA",
+"releaseDate": "2026-04-15",
+"url": "https://music.apple.com/zm/album/bele-feat-vetkuk-sheshy-jaiva-sox-druza-sino-ndofaya/1893449022?i=1893449033"
+},
+{
+"id": "1833268715",
+"name": "Bad Influence",
+"artistName": "OMAH LAY",
+"releaseDate": "2020-01-16",
+"url": "https://music.apple.com/zm/album/bad-influence/1833268708?i=1833268715"
+},
+{
+"id": "1675379749",
+"name": "UNAVAILABLE (feat. Musa Keys)",
+"artistName": "Davido",
+"releaseDate": "2023-03-31",
+"url": "https://music.apple.com/zm/album/unavailable-feat-musa-keys/1675379314?i=1675379749"
+},
+{
+"id": "6769568604",
+"name": "B’s On The Table",
+"artistName": "Drake & 21 Savage",
+"releaseDate": "2026-05-15",
+"url": "https://music.apple.com/zm/album/bs-on-the-table/6769568449?i=6769568604"
+},
+{
+"id": "1890335505",
+"name": "Back Outside",
+"artistName": "BNXN & Sarz",
+"releaseDate": "2026-04-20",
+"url": "https://music.apple.com/zm/album/back-outside/1890335503?i=1890335505"
+},
+{
+"id": "1744458268",
+"name": "prada dem (feat. Offset)",
+"artistName": "Gunna",
+"releaseDate": "2024-03-15",
+"url": "https://music.apple.com/zm/album/prada-dem-feat-offset/1744458034?i=1744458268"
+},
+{
+"id": "1883814607",
+"name": "Jam",
+"artistName": "Fally Ipupa & Wizkid",
+"releaseDate": "2026-04-16",
+"url": "https://music.apple.com/zm/album/jam/1883814357?i=1883814607"
+},
+{
+"id": "6833867238",
+"name": "Sorry Batswadi Baka (feat. Sia_TheBee, BeeKayrsa28, Key Tech, Zela Force, Terra Fontain & Tyler ICU)",
+"artistName": "DJ Maphorisa, Xduppy, Focalistic & Optimist Music ZA",
+"releaseDate": "2026-11-12",
+"url": "https://music.apple.com/zm/album/sorry-batswadi-baka-feat-sia-thebee-beekayrsa28-key/6833867011?i=6833867238"
+},
+{
+"id": "6818209989",
+"name": "Solar Eclipse",
+"artistName": "Drake & Don Toliver",
+"releaseDate": "2026-10-02",
+"url": "https://music.apple.com/zm/album/solar-eclipse/6818209777?i=6818209989"
+},
+{
+"id": "6784221147",
+"name": "I Know Who I Be",
+"artistName": "Davido, JAZZWRLD & GL_Ceejay",
+"releaseDate": "2026-06-26",
+"url": "https://music.apple.com/zm/album/i-know-who-i-be/6784220944?i=6784221147"
+},
+{
+"id": "1585843153",
+"name": "Abalele",
+"artistName": "Kabza De Small, DJ Maphorisa & Ami Faku",
+"releaseDate": "2021-09-17",
+"url": "https://music.apple.com/zm/album/abalele/1585843147?i=1585843153"
+},
+{
+"id": "6818209990",
+"name": "Quebec",
+"artistName": "Drake",
+"releaseDate": "2026-10-02",
+"url": "https://music.apple.com/zm/album/quebec/6818209777?i=6818209990"
+},
+{
+"id": "1836284486",
+"name": "Dzaddy (feat. Shokki Mwana Chibolya, Kayz Adams & Mwaka Hal)",
+"artistName": "Ndine Emma",
+"releaseDate": "2025-08-30",
+"url": "https://music.apple.com/zm/album/dzaddy-feat-shokki-mwana-chibolya-kayz-adams-mwaka-hal/1836284154?i=1836284486"
+},
+{
+"id": "1471034860",
+"name": "Joro",
+"artistName": "Wizkid",
+"releaseDate": "2019-09-30",
+"url": "https://music.apple.com/zm/album/joro/1471034859?i=1471034860"
+},
+{
+"id": "6782267571",
+"name": "Assurance (feat. Blood Kid)",
+"artistName": "Victor kingley",
+"releaseDate": "2026-06-18",
+"url": "https://music.apple.com/zm/album/assurance-feat-blood-kid/6782267570?i=6782267571"
+},
+{
+"id": "1368226457",
+"name": "Ye",
+"artistName": "Burna Boy",
+"releaseDate": "2019-12-20",
+"url": "https://music.apple.com/zm/album/ye/1368225583?i=1368226457"
+},
+{
+"id": "1604945204",
+"name": "how you did that (feat. Kodak Black)",
+"artistName": "Gunna",
+"releaseDate": "2022-01-07",
+"url": "https://music.apple.com/zm/album/how-you-did-that-feat-kodak-black/1604944424?i=1604945204"
+},
+{
+"id": "6786449714",
+"name": "SLICK",
+"artistName": "Victony",
+"releaseDate": "2026-07-08",
+"url": "https://music.apple.com/zm/album/slick/6786449711?i=6786449714"
+},
+{
+"id": "1648587330",
+"name": "In A Minute",
+"artistName": "Lil Baby",
+"releaseDate": "2022-04-08",
+"url": "https://music.apple.com/zm/album/in-a-minute/1648587138?i=1648587330"
+},
+{
+"id": "1527475986",
+"name": "Way Too Big",
+"artistName": "Burna Boy",
+"releaseDate": "2020-08-14",
+"url": "https://music.apple.com/zm/album/way-too-big/1527475833?i=1527475986"
+},
+{
+"id": "1556670532",
+"name": "Wants and Needs (feat. Lil Baby)",
+"artistName": "Drake",
+"releaseDate": "2021-03-05",
+"url": "https://music.apple.com/zm/album/wants-and-needs-feat-lil-baby/1556669854?i=1556670532"
+},
+{
+"id": "6814096111",
+"name": "SOMEBODY LOVES ME",
+"artistName": "PARTYNEXTDOOR & Drake",
+"releaseDate": "2025-02-14",
+"url": "https://music.apple.com/zm/album/somebody-loves-me/6814095592?i=6814096111"
+},
+{
+"id": "6787980437",
+"name": "Ama hem hem (feat. ShaunMusiq)",
+"artistName": "Thatohatsi & Sjava",
+"releaseDate": "2026-07-10",
+"url": "https://music.apple.com/zm/album/ama-hem-hem-feat-shaunmusiq/6787980430?i=6787980437"
+},
+{
+"id": "1715744237",
+"name": "Angel Numbers / Ten Toes",
+"artistName": "Chris Brown",
+"releaseDate": "2023-11-10",
+"url": "https://music.apple.com/zm/album/angel-numbers-ten-toes/1715744071?i=1715744237"
+}
+]
+},
+"zw": {
+"error": "HTTP Error 504: Gateway Time-out"
+},
+"et": {
+"error": "HTTP Error 500: Internal Server Error"
+}
+}
