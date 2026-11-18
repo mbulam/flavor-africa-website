@@ -1,6 +1,7 @@
-Flavor 10 fetch for 2026-11-17 · run 17 Nov 2026 14:45 EAT · fresh: PYR
+Flavor 10 fetch for 2026-11-18 · run 18 Nov 2026 14:34 EAT · fresh: PR
 P OK    50 songs  via rss.applemarketingtools.com
 S FAIL HTTPError: HTTP Error 403: Forbidden
 S DROPPED (no copy newer than 3 days)
-Y OK    50 songs  via charts.youtube.com
+Y FAIL HTTPError: HTTP Error 403: Forbidden
+Y KEPT copy from 2026-11-17
 R OK    50 songs  via soundcharts.com/en/charts/airplay/kenya
