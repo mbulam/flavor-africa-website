@@ -355,6 +355,470 @@
           "x": "Dangote Cement runs in 10 African countries. Rabiu's BUA is a big rival."
         }
       ]
+    },
+    "2026-11-19": {
+      "theme": "Countries",
+      "img": "img/nw-skyline.jpg",
+      "qs": [
+        {
+          "q": "Which African country has the most people?",
+          "a": [
+            "Ethiopia",
+            "Egypt",
+            "Nigeria",
+            "DR Congo"
+          ],
+          "c": 2,
+          "x": "Over 230 million people at the last count, the biggest population on the continent by a long way."
+        },
+        {
+          "q": "What is the official capital of Tanzania?",
+          "a": [
+            "Dar es Salaam",
+            "Dodoma",
+            "Arusha",
+            "Zanzibar City"
+          ],
+          "c": 1,
+          "x": "Dar is still the biggest city and business hub, but parliament moved to Dodoma in 1996."
+        },
+        {
+          "q": "Which is Africa's biggest country by land area?",
+          "a": [
+            "Sudan",
+            "DR Congo",
+            "Algeria",
+            "Libya"
+          ],
+          "c": 2,
+          "x": "About 2.38 million km², most of it Sahara. DR Congo is a close second."
+        },
+        {
+          "q": "Which country is completely surrounded by South Africa?",
+          "a": [
+            "Eswatini",
+            "Botswana",
+            "Lesotho",
+            "Namibia"
+          ],
+          "c": 2,
+          "x": "Lesotho is an enclave, a whole country sitting inside another one."
+        },
+        {
+          "q": "Africa's newest country became independent in 2011. Which one?",
+          "a": [
+            "Eritrea",
+            "South Sudan",
+            "Namibia",
+            "Somaliland"
+          ],
+          "c": 1,
+          "x": "It split from Sudan on 9 July 2011 after a referendum where nearly 99% voted to leave."
+        },
+        {
+          "q": "South Africa has how many capital cities?",
+          "a": [
+            "One",
+            "Two",
+            "Three",
+            "Four"
+          ],
+          "c": 2,
+          "x": "Pretoria runs the government, Cape Town has parliament, and Bloemfontein has the courts."
+        },
+        {
+          "q": "Which country grows the most cocoa in the world?",
+          "a": [
+            "Ghana",
+            "Nigeria",
+            "Côte d'Ivoire",
+            "Cameroon"
+          ],
+          "c": 2,
+          "x": "It has led world production since the late 1970s, well ahead of neighbouring Ghana."
+        },
+        {
+          "q": "Which country's flag has an AK-47 on it?",
+          "a": [
+            "Angola",
+            "Mozambique",
+            "Zimbabwe",
+            "Eritrea"
+          ],
+          "c": 1,
+          "x": "It's the only national flag in the world with a modern rifle, crossed with a hoe on an open book."
+        },
+        {
+          "q": "Which country is known as the \"Land of a Thousand Hills\"?",
+          "a": [
+            "Burundi",
+            "Uganda",
+            "Rwanda",
+            "Malawi"
+          ],
+          "c": 2,
+          "x": "In French it's \"Pays des Mille Collines\"."
+        },
+        {
+          "q": "Mount Kilimanjaro, Africa's highest mountain, is in which country?",
+          "a": [
+            "Kenya",
+            "Tanzania",
+            "Uganda",
+            "Both Kenya and Tanzania"
+          ],
+          "c": 1,
+          "x": "It sits right by the Kenyan border, but the whole mountain is in Tanzania. It stands 5,895 m tall."
+        }
+      ]
+    },
+    "2026-11-20": {
+      "theme": "Awards",
+      "img": "img/gr27-tems.jpg",
+      "qs": [
+        {
+          "q": "Burna Boy won his first Grammy for which album?",
+          "a": [
+            "African Giant",
+            "Twice as Tall",
+            "Love, Damini",
+            "I Told Them..."
+          ],
+          "c": 1,
+          "x": "It won Best Global Music Album in 2021, a year after African Giant lost to Angélique Kidjo."
+        },
+        {
+          "q": "Wizkid got his first Grammy for his part on which song?",
+          "a": [
+            "Essence",
+            "Ojuelegba",
+            "Brown Skin Girl",
+            "Come Closer"
+          ],
+          "c": 2,
+          "x": "Beyoncé's \"Brown Skin Girl\" won Best Music Video in 2021, the same night Burna won his first."
+        },
+        {
+          "q": "Tems won her first Grammy for which song?",
+          "a": [
+            "Wait for U",
+            "Free Mind",
+            "Love Me JeJe",
+            "Essence"
+          ],
+          "c": 0,
+          "x": "The Future and Drake song samples her track \"Higher\". It won Best Melodic Rap Performance in 2023."
+        },
+        {
+          "q": "Who won the very first Grammy for Best African Music Performance, in 2024?",
+          "a": [
+            "Burna Boy",
+            "Davido",
+            "Ayra Starr",
+            "Tyla"
+          ],
+          "c": 3,
+          "x": "\"Water\" beat Burna Boy, Davido, Asake, Olamide and Ayra Starr in the category's first year."
+        },
+        {
+          "q": "South Africa's Black Coffee won a Grammy in 2022 in which category?",
+          "a": [
+            "Best Global Music Album",
+            "Best Dance/Electronic Album",
+            "Best New Artist",
+            "Best Remixed Recording"
+          ],
+          "c": 1,
+          "x": "He won for \"Subconsciously\", his first nomination and first win."
+        },
+        {
+          "q": "Who is the only African player ever to win the Ballon d'Or?",
+          "a": [
+            "Didier Drogba",
+            "Samuel Eto'o",
+            "George Weah",
+            "Mohamed Salah"
+          ],
+          "c": 2,
+          "x": "He won it in 1995, the first year non-Europeans could be voted for. He later became Liberia's president."
+        },
+        {
+          "q": "Who was the first African woman to win the Nobel Peace Prize?",
+          "a": [
+            "Wangari Maathai",
+            "Ellen Johnson Sirleaf",
+            "Leymah Gbowee",
+            "Graça Machel"
+          ],
+          "c": 0,
+          "x": "The Kenyan environmentalist won it in 2004 for her work on sustainable development, democracy and peace."
+        },
+        {
+          "q": "Who was the first Black African to win the Nobel Prize in Literature?",
+          "a": [
+            "Chinua Achebe",
+            "Ngũgĩ wa Thiong'o",
+            "Wole Soyinka",
+            "Ben Okri"
+          ],
+          "c": 2,
+          "x": "The Nigerian playwright won it in 1986."
+        },
+        {
+          "q": "Abdulrazak Gurnah, the 2021 Nobel Literature winner, was born on which island?",
+          "a": [
+            "Madagascar",
+            "Zanzibar",
+            "Mauritius",
+            "Lamu"
+          ],
+          "c": 1,
+          "x": "He left Zanzibar at 18 after the 1964 revolution and became a writer and professor in England."
+        },
+        {
+          "q": "Five-time Grammy winner Angélique Kidjo is from which country?",
+          "a": [
+            "Senegal",
+            "Benin",
+            "Mali",
+            "Togo"
+          ],
+          "c": 1,
+          "x": "She was born in 1960, when the country was still called Dahomey."
+        }
+      ]
+    },
+    "2026-11-21": {
+      "theme": "Sport",
+      "img": "img/nw-marathon.jpg",
+      "qs": [
+        {
+          "q": "Eliud Kipchoge ran the first marathon under two hours in which city?",
+          "a": [
+            "Berlin",
+            "London",
+            "Vienna",
+            "Nairobi"
+          ],
+          "c": 2,
+          "x": "He ran 1:59:40 on 12 October 2019. It doesn't count as a world record because of the special pacing."
+        },
+        {
+          "q": "Abebe Bikila won the 1960 Olympic marathon in Rome running…",
+          "a": [
+            "Barefoot",
+            "In borrowed spikes",
+            "With a broken toe",
+            "In sandals"
+          ],
+          "c": 0,
+          "x": "He was the first Black African to win Olympic gold, and he won again in Tokyo four years later."
+        },
+        {
+          "q": "Which was the first African team to reach a men's World Cup semi-final?",
+          "a": [
+            "Cameroon",
+            "Senegal",
+            "Ghana",
+            "Morocco"
+          ],
+          "c": 3,
+          "x": "They beat Portugal 1-0 in the 2022 quarter-final in Qatar."
+        },
+        {
+          "q": "Which country has won the most Africa Cup of Nations titles?",
+          "a": [
+            "Cameroon",
+            "Ghana",
+            "Egypt",
+            "Nigeria"
+          ],
+          "c": 2,
+          "x": "Seven titles, the last in 2010. Cameroon are next with five."
+        },
+        {
+          "q": "David Rudisha set his 1:40.91 800m world record at which Olympics?",
+          "a": [
+            "Beijing 2008",
+            "London 2012",
+            "Rio 2016",
+            "Tokyo 2020"
+          ],
+          "c": 1,
+          "x": "He led from start to finish and became the first man to run 800m under 1:41."
+        },
+        {
+          "q": "Kenya's men's rugby sevens team is nicknamed…",
+          "a": [
+            "Simbas",
+            "Shujaa",
+            "Lionesses",
+            "Harambee Stars"
+          ],
+          "c": 1,
+          "x": "Shujaa is Swahili for courage or heroism."
+        },
+        {
+          "q": "Faith Kipyegon has won three Olympic golds in which event?",
+          "a": [
+            "800m",
+            "1500m",
+            "5000m",
+            "10,000m"
+          ],
+          "c": 1,
+          "x": "Rio 2016, Tokyo 2020 and Paris 2024, the first athlete to win three Olympic 1500m titles."
+        },
+        {
+          "q": "Which three countries will co-host AFCON 2027?",
+          "a": [
+            "Kenya, Uganda and Tanzania",
+            "Kenya, Rwanda and Tanzania",
+            "Uganda, Tanzania and Ethiopia",
+            "Kenya, Uganda and Rwanda"
+          ],
+          "c": 0,
+          "x": "The Pamoja bid won in September 2023. It's the first time any of the three will host."
+        },
+        {
+          "q": "What is the nickname of Kenya's national football team?",
+          "a": [
+            "The Simbas",
+            "Shujaa",
+            "Harambee Stars",
+            "The Cranes"
+          ],
+          "c": 2,
+          "x": "It comes from harambee, the Kenyan tradition of pulling together for a common cause."
+        },
+        {
+          "q": "Before the 2022 semi-final, which African teams had reached a World Cup quarter-final?",
+          "a": [
+            "Nigeria, Egypt and Algeria",
+            "Cameroon, Senegal and Ghana",
+            "Ghana, Nigeria and Morocco",
+            "Cameroon, Tunisia and Senegal"
+          ],
+          "c": 1,
+          "x": "Cameroon in 1990, Senegal in 2002 and Ghana in 2010 all went out at that stage."
+        }
+      ]
+    },
+    "2026-11-22": {
+      "theme": "History",
+      "img": "img/fr2-standard-1980.jpg",
+      "qs": [
+        {
+          "q": "On what date did Kenya become independent?",
+          "a": [
+            "1 June 1963",
+            "12 December 1963",
+            "20 October 1963",
+            "12 December 1964"
+          ],
+          "c": 1,
+          "x": "June 1963 was self-rule (Madaraka). Kenya became a republic exactly a year after independence, in 1964."
+        },
+        {
+          "q": "In 1957, which became the first sub-Saharan African country to win independence?",
+          "a": [
+            "Nigeria",
+            "Kenya",
+            "Ghana",
+            "Senegal"
+          ],
+          "c": 2,
+          "x": "Kwame Nkrumah led the Gold Coast to independence on 6 March 1957 and renamed it Ghana."
+        },
+        {
+          "q": "Nelson Mandela spent 18 of his 27 prison years on which island?",
+          "a": [
+            "Robben Island",
+            "Goree Island",
+            "Lamu Island",
+            "Zanzibar"
+          ],
+          "c": 0,
+          "x": "The island sits off Cape Town. He walked free in 1990."
+        },
+        {
+          "q": "At the Battle of Adwa in 1896, Ethiopia defeated which European army?",
+          "a": [
+            "Britain",
+            "France",
+            "Italy",
+            "Portugal"
+          ],
+          "c": 2,
+          "x": "Emperor Menelik II's victory on 1 March 1896 kept Ethiopia independent."
+        },
+        {
+          "q": "The Organisation of African Unity was founded in 1963 in which city?",
+          "a": [
+            "Accra",
+            "Cairo",
+            "Addis Ababa",
+            "Nairobi"
+          ],
+          "c": 2,
+          "x": "32 countries signed its charter on 25 May 1963, which is why 25 May is Africa Day."
+        },
+        {
+          "q": "Mansa Musa, famous for his gold-filled trip to Mecca in 1324, ruled which empire?",
+          "a": [
+            "Songhai",
+            "Mali",
+            "Ghana",
+            "Kanem-Bornu"
+          ],
+          "c": 1,
+          "x": "He handed out so much gold passing through Cairo that people talked about it for generations."
+        },
+        {
+          "q": "Zimbabwe takes its name from…",
+          "a": [
+            "A river",
+            "A Shona king",
+            "Ancient stone ruins",
+            "A mountain"
+          ],
+          "c": 2,
+          "x": "Great Zimbabwe, the stone city near Masvingo. The name is usually traced to the Shona for \"houses of stone\"."
+        },
+        {
+          "q": "Which Kenyan town is called the oldest and best-preserved Swahili settlement in East Africa?",
+          "a": [
+            "Malindi",
+            "Mombasa",
+            "Lamu",
+            "Gedi"
+          ],
+          "c": 2,
+          "x": "Lamu Old Town has been a UNESCO World Heritage Site since 2001."
+        },
+        {
+          "q": "The railway from Mombasa to Lake Victoria got which nickname?",
+          "a": [
+            "The Iron Horse",
+            "The Lunatic Express",
+            "The Coast Line",
+            "The Safari Train"
+          ],
+          "c": 1,
+          "x": "Critics in Britain called it a lunatic line because of its cost and the lives lost building it."
+        },
+        {
+          "q": "Which Mau Mau leader has a statue on Kimathi Street in Nairobi?",
+          "a": [
+            "Dedan Kimathi",
+            "Field Marshal Mwariama",
+            "Waruhiu Itote",
+            "Stanley Mathenge"
+          ],
+          "c": 0,
+          "x": "He was hanged at Kamiti Prison on 18 February 1957. The statue went up 50 years later, in 2007."
+        }
+      ]
     }
   }
 }
