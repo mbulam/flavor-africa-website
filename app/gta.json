@@ -743,5 +743,210 @@
    "img": "/img/vr-dazed.jpg",
    "pos": "center 18%"
   }
- ]
+ ],
+ "heist": {
+  "name": "The Heist",
+  "secs": 8,
+  "bust": 5,
+  "pay": 2000,
+  "clear": false,
+  "unit": "Job",
+  "missions": [
+   {
+    "name": "The Setup",
+    "qs": [
+     {
+      "q": "Before it was Rockstar North, the studio that made the first GTA was called what?",
+      "o": [
+       "DMA Design",
+       "Traveller's Tales",
+       "Codemasters",
+       "Rare"
+      ],
+      "a": 0,
+      "img": "/img/vr-station.jpg",
+      "pos": "center 40%"
+     },
+     {
+      "q": "Which brothers co-founded Rockstar Games?",
+      "o": [
+       "Sam and Dan Houser",
+       "Joe and Anthony Russo",
+       "Ross and Matt Duffer",
+       "Mark and Jay Duplass"
+      ],
+      "a": 0,
+      "img": "/img/gta6-logo.jpg",
+      "pos": "center 50%"
+     },
+     {
+      "q": "The first GTA had three cities. Which one was NOT in it?",
+      "o": [
+       "Los Santos",
+       "Liberty City",
+       "San Andreas",
+       "Vice City"
+      ],
+      "a": 0,
+      "img": "/img/vr-gi.jpg",
+      "pos": "center 40%"
+     },
+     {
+      "q": "Grand Theft Auto III came out in which year?",
+      "o": [
+       "2001",
+       "1999",
+       "2003",
+       "2004"
+      ],
+      "a": 0,
+      "img": "/img/gta6-car.jpg",
+      "pos": "center 70%"
+     },
+     {
+      "q": "GTA III's lead never speaks. What is he called?",
+      "o": [
+       "Claude",
+       "Tommy",
+       "Victor",
+       "Toni"
+      ],
+      "a": 0,
+      "img": "/img/vr-hangar.jpg",
+      "pos": "center 30%"
+     }
+    ]
+   },
+   {
+    "name": "The Getaway",
+    "qs": [
+     {
+      "q": "GTA: Vice City is set in which year?",
+      "o": [
+       "1986",
+       "1979",
+       "1992",
+       "1999"
+      ],
+      "a": 0,
+      "img": "/img/vr-album.jpg",
+      "pos": "center 40%"
+     },
+     {
+      "q": "Which actor voiced Tommy Vercetti in GTA: Vice City?",
+      "o": [
+       "Ray Liotta",
+       "Robert De Niro",
+       "Al Pacino",
+       "Joe Pesci"
+      ],
+      "a": 0,
+      "img": "/img/vr-gi.jpg",
+      "pos": "center 40%"
+     },
+     {
+      "q": "GTA: San Andreas is set in which year?",
+      "o": [
+       "1992",
+       "1986",
+       "1998",
+       "2004"
+      ],
+      "a": 0,
+      "img": "/img/gta6-bandanas.jpg",
+      "pos": "center 25%"
+     },
+     {
+      "q": "What is the name of CJ's gang in GTA: San Andreas?",
+      "o": [
+       "Grove Street Families",
+       "Ballas",
+       "Los Santos Vagos",
+       "Varrios Los Aztecas"
+      ],
+      "a": 0,
+      "img": "/img/gta6-lead.jpg",
+      "pos": "center 30%"
+     },
+     {
+      "q": "Which actor voiced the corrupt cop Frank Tenpenny in San Andreas?",
+      "o": [
+       "Samuel L. Jackson",
+       "Ice Cube",
+       "Laurence Fishburne",
+       "Denzel Washington"
+      ],
+      "a": 0,
+      "img": "/img/vr-dazed.jpg",
+      "pos": "center 18%"
+     }
+    ]
+   },
+   {
+    "name": "The Big Score",
+    "qs": [
+     {
+      "q": "In GTA IV, what is the name of Niko Bellic's cousin?",
+      "o": [
+       "Roman",
+       "Johnny",
+       "Luis",
+       "Packie"
+      ],
+      "a": 0,
+      "img": "/img/vr-station.jpg",
+      "pos": "center 40%"
+     },
+     {
+      "q": "Which of these is an expansion for GTA IV?",
+      "o": [
+       "The Lost and Damned",
+       "Vice City Stories",
+       "Liberty City Stories",
+       "Chinatown Wars"
+      ],
+      "a": 0,
+      "img": "/img/gta6-car.jpg",
+      "pos": "center 70%"
+     },
+     {
+      "q": "What is Michael's surname in GTA V?",
+      "o": [
+       "De Santa",
+       "Clinton",
+       "Philips",
+       "Bellic"
+      ],
+      "a": 0,
+      "img": "/img/vr-hangar.jpg",
+      "pos": "center 30%"
+     },
+     {
+      "q": "GTA: Chinatown Wars first came out on which console?",
+      "o": [
+       "Nintendo DS",
+       "PSP",
+       "Wii",
+       "Game Boy Advance"
+      ],
+      "a": 0,
+      "img": "/img/gta6-logo.jpg",
+      "pos": "center 50%"
+     },
+     {
+      "q": "In most GTA games, where can you get your car resprayed to shake off the cops?",
+      "o": [
+       "Pay 'n' Spray",
+       "Ammu-Nation",
+       "Cluckin' Bell",
+       "Vinewood Garage"
+      ],
+      "a": 0,
+      "img": "/img/vr-album.jpg",
+      "pos": "center 40%"
+     }
+    ]
+   }
+  ]
+ }
 }

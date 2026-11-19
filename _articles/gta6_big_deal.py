@@ -32,7 +32,7 @@ BODY = [
 ("p", "In November he said they were still running well above the company's own expectations. Take-Two expects $8 billion to $8.2 billion in net bookings for the year to March 2027, a forecast built around GTA VI's launch. Other publishers have spent the past year moving their own releases out of its way."),
 
 ("h2", "05 · The game", "Back to ", "Vice City"),
-("p", "GTA VI is set in Leonida, Rockstar's version of Florida, with Vice City, its long-running stand-in for Miami, at the centre. The series last went there in 2002's Grand Theft Auto: Vice City. Rockstar has named six regions so far: Vice City, the Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia and Mount Kalaga National Park."),
+("p", "GTA VI is set in Leonida, Rockstar's version of Florida, with Vice City, its long-running stand-in for Miami, at the centre. The series made its name there with 2002's Grand Theft Auto: Vice City, and last went back in 2006's Vice City Stories on the PSP. Rockstar has named six regions so far: Vice City, the Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia and Mount Kalaga National Park."),
 ("p", "The story follows two leads, Jason Duval and Lucia Caminos, who are a couple. Rockstar's own description says they've always known the deck is stacked against them, and the trailers have leaned hard on the relationship."),
 ("img", "img/gta6-car.jpg", "Jason and Lucia on the official cover art for Grand Theft Auto VI.", "Rockstar Games, via @gamefirstfr / Instagram"),
 
@@ -62,6 +62,8 @@ SOURCES = [
  ("Shacknews: GTA 6 pre-order demand is 'unprecedented and astonishing'", "https://www.shacknews.com/article/150293/gta-6-pre-orders-high-demand-ttwo"),
  ("Hitmarker: Take-Two forecasting up to $8.2 billion in net bookings", "https://hitmarker.net/news/take-two-is-forecasting-up-to-8-2-billion-in-net-bookings-for-the-fiscal-year-gta-6-launches-4283014"),
  ("Gameluster: GTA 6 pre-orders are 'far above' expectations (Nov 2026)", "https://gameluster.com/?p=169582"),
+ ("GamesRadar: The complete history of Grand Theft Auto (Vice City Stories)", "https://www.gamesradar.com/the-complete-history-of-grand-theft-auto/8"),
+ ("Giant Bomb: Grand Theft Auto: Vice City Stories", "https://www.giantbomb.com/games/3030-10264/"),
  ("Destructoid: Where does Grand Theft Auto 6 take place?", "https://www.destructoid.com/where-does-grand-theft-auto-6-take-place/"),
  ("GTA Intel: GTA 6 map, everything we know about Leonida", "https://gtaintel.com/news/gta-6-leonida-map-everything-we-know"),
  ("Engadget: Rockstar finally reveals pricing for Grand Theft Auto 6", "https://engadget.com/2200483/rockstar-reveals-gta-6-pricing-launch/"),

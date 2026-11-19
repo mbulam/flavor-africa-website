@@ -225,6 +225,11 @@ THE VICE RUN (added 19 Nov 2026, runs 48 hours; three missions from 19 Nov 2026 
   10:30pm Nairobi). After that the card disappears on its own and gta.html says the run is over. Nothing to remove.
 - Pictures are Rockstar Games artwork (img/gta6-*.jpg, img/vr-*.jpg), credited on screen. Every answer is checked
   against 2+ independent sources.
+- THE HEIST (hard mode, added 19 Nov 2026): "heist" in gta.json. Three jobs of five deeper questions on the whole
+  series, 8 seconds each, double the cash ("pay": 2000), and the wanted level carries across all three jobs
+  ("clear": false). It unlocks on a phone once that phone finishes all three Normal missions (saved as
+  fa-vicerun-heist-open) and keeps its own best (fa-vicerun-heist).
+
 SECURITY (19 Nov 2026)
 - _headers sets security headers on every page (HTTPS-only, no framing by other sites, etc.). Cloudflare Pages
   reads it; it is not served as a page.

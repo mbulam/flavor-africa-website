@@ -3,6 +3,8 @@
 // pays more), wrong or too slow adds a wanted star. Five stars from a wrong answer and you're busted; five stars from
 // running out of time and you're wasted. The wanted level clears between missions, cash carries over. Questions in each
 // mission come in a new order every run. Unlimited runs until "end" in app/gta.json; the best run is kept on the phone.
+// The Heist (hard mode, added 19 Nov 2026): unlocks once a phone finishes all three Normal missions. Deeper questions on
+// the whole series, a shorter clock, bigger cash, and the wanted level carries across all three jobs. It keeps its own best.
 (function () {
   var head = document.head;
   head.insertAdjacentHTML("beforeend", '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap"><link rel="stylesheet" href="/app/gta.css">');
@@ -22,9 +24,16 @@
   function rank(cash) { var r = RANKS[0][1]; RANKS.forEach(function (x) { if (cash >= x[0]) r = x[1]; }); return r; }
   // loading-screen tips, GTA style (game tips only, so no tip ever gives an answer away)
   var TIPS = ["Faster answers pay more cash.", "Your wanted level clears after every mission. Your cash doesn't.", "Five stars and the cops get you. Run out of time on that fifth one and you're wasted.", "Every run shuffles the questions, so no two runs are the same.", "Your best run is the one that counts. Replay as often as you like."];
-  function tip() { return TIPS[Math.floor(Math.random() * TIPS.length)]; }
+  function tip() {
+    var t = TIPS.slice();
+    if (mode && !mode.clear) t[1] = "In The Heist your wanted level follows you from job to job. Stay clean.";
+    return t[Math.floor(Math.random() * t.length)];
+  }
 
-  var G = null, best = load("fa-vicerun", null);
+  var G = null, best = load("fa-vicerun", null), hbest = load("fa-vicerun-heist", null), open = !!load("fa-vicerun-heist-open", false);
+  var mode = null; // the settings for the run in progress: Normal or The Heist
+  function normal() { return { hard: false, name: "The Vice Run", unit: "Mission", secs: G.secs, bust: G.bust, pay: 1000, clear: true, missions: missions() }; }
+  function heist() { var h = G.heist; return h ? { hard: true, name: h.name, unit: h.unit || "Job", secs: h.secs, bust: h.bust || G.bust, pay: h.pay || 2000, clear: h.clear !== false, missions: h.missions } : null; }
   function live() { var t = Date.now(); return G && t >= Date.parse(G.start) && t < Date.parse(G.end); }
   function ended() { return G && Date.now() >= Date.parse(G.end); }
   function credit() { return '<span class="gx-cred">Image: Rockstar Games</span>'; }
@@ -35,7 +44,7 @@
     var slot = document.querySelector(".fa-gta-slot");
     if (!slot) return;
     if (!live()) { slot.innerHTML = ""; return; }
-    var line = best ? "Your best run: " + money(best.cash) + ", " + rank(best.cash) + ". Think you can beat it?" : "Three missions, " + total() + " GTA questions. Every wrong answer raises your wanted level. Five stars and you're busted.";
+    var line = open && G.heist ? "The Heist is unlocked. " + (hbest ? "Your best heist: " + money(hbest.cash) + "." : "Deeper questions, eight seconds, bigger cash.") : best ? "Your best run: " + money(best.cash) + ", " + rank(best.cash) + ". Think you can beat it?" : "Three missions, " + total() + " GTA questions. Every wrong answer raises your wanted level. Five stars and you're busted.";
     slot.innerHTML = '<a class="gx-card" href="/gta.html"><span class="k">Bonus game · 48 hours only</span><h2 class="gx-sun">The Vice Run</h2><p>' + esc(line) + '</p>' + stars(0, G.bust) + '<span class="gx-btn">' + (best ? "Run it again" : "Start the run") + '</span><span class="gx-end">Ends ' + esc(G.endText) + '</span></a>';
   }
 
@@ -56,13 +65,17 @@
       '<div class="gx-hero"><span class="gx-k">Bonus game · ends ' + esc(G.endText) + '</span><h1 class="gx-sun">The Vice Run</h1><p>GTA VI is finally out. How well do you actually know it?</p></div>' +
       '<ul class="gx-rules"><li><b>' + ms.length + ' missions,</b> ' + ms[0].qs.length + ' questions each, ' + G.secs + ' seconds a question</li><li><b>Right answers pay cash.</b> Faster pays more.</li><li><b>Wrong or too slow?</b> One more wanted star. Five and you\'re busted. Your wanted level clears after each mission.</li></ul>' +
       (best ? '<p class="gx-note">Your best so far: ' + money(best.cash) + ' · ' + esc(rank(best.cash)) + '</p>' : '') +
-      '<div class="gx-acts"><button type="button" class="gx-btn gx-go">Start the run</button></div>';
-    root.querySelector(".gx-go").addEventListener("click", start);
+      '<div class="gx-acts"><button type="button" class="gx-btn gx-go">Start the run</button>' + (G.heist && open ? '<button type="button" class="gx-btn o gx-heist">The Heist (hard)</button>' : '') + '</div>' +
+      (G.heist ? (open ? '<p class="gx-note">The Heist: ' + G.heist.missions.length + ' jobs on the whole GTA series, ' + G.heist.secs + ' seconds a question, double the cash.' + (hbest ? ' Your best heist: ' + money(hbest.cash) + '.' : '') + '</p>'
+        : '<p class="gx-lock">Finish all ' + ms.length + ' missions to unlock The Heist, a hard mode for gamers: deeper questions, ' + G.heist.secs + ' seconds a question, bigger cash.</p>') : '');
+    root.querySelector(".gx-go").addEventListener("click", function () { start(normal()); });
+    var hb = root.querySelector(".gx-heist"); if (hb) hb.addEventListener("click", function () { start(heist()); });
     ms[0].qs.forEach(function (q) { preload(q.img); });
   }
 
-  function start() {
-    run = { m: 0, i: 0, cash: 0, stars: 0, right: 0, asked: 0, ms: missions().map(function (m) {
+  function start(md) {
+    mode = md || mode || normal();
+    run = { m: 0, i: 0, cash: 0, stars: 0, right: 0, asked: 0, ms: mode.missions.map(function (m) {
       return { name: m.name, qs: shuffle(m.qs).map(function (q) { var o = q.o.map(function (t, k) { return { t: t, ok: k === q.a }; }); return { q: q.q, img: q.img, pos: q.pos, o: shuffle(o) }; }) };
     }) };
     run.ms.forEach(function (m) { m.qs.forEach(function (q) { preload(q.img); }); });
@@ -74,9 +87,9 @@
     clear();
     var m = run.ms[run.m];
     root.innerHTML = '<div class="gx-top"><a class="gx-x" href="/games.html" aria-label="Quit the run">' + X + '</a><span class="gx-cash">' + money(run.cash) + '</span></div>' +
-      '<div class="gx-brief"><span class="gx-k">Mission ' + (run.m + 1) + ' of ' + run.ms.length + '</span><h1 class="gx-sun">' + esc(m.name) + '</h1><p class="gx-tip"><b>Tip:</b> ' + esc(tip()) + '</p>' +
-      '<div class="gx-acts"><button type="button" class="gx-btn gx-go">' + (run.m === 0 ? "Go" : "Next mission") + '</button></div></div>';
-    root.querySelector(".gx-go").addEventListener("click", function () { run.i = 0; run.stars = 0; ask(); });
+      '<div class="gx-brief"><span class="gx-k">' + (mode.hard ? esc(mode.name) + ' · ' : '') + mode.unit + ' ' + (run.m + 1) + ' of ' + run.ms.length + '</span><h1 class="gx-sun">' + esc(m.name) + '</h1><p class="gx-tip"><b>Tip:</b> ' + esc(tip()) + '</p>' +
+      '<div class="gx-acts"><button type="button" class="gx-btn gx-go">' + (run.m === 0 ? "Go" : "Next " + mode.unit.toLowerCase()) + '</button></div></div>';
+    root.querySelector(".gx-go").addEventListener("click", function () { run.i = 0; if (mode.clear || run.m === 0) run.stars = 0; ask(); });
     window.scrollTo(0, 0);
   }
 
@@ -95,8 +108,8 @@
     var m = run.ms[run.m], q = m.qs[run.i], t0 = 0, done = false;
     var next = m.qs[run.i + 1] || (run.ms[run.m + 1] && run.ms[run.m + 1].qs[0]);
     if (next) preload(next.img);
-    root.innerHTML = '<div class="gx-top"><a class="gx-x" href="/games.html" aria-label="Quit the run">' + X + '</a>' + stars(run.stars, G.bust) + '<span class="gx-cash">' + money(run.cash) + '</span></div>' +
-      '<div class="gx-meta"><span>Mission ' + (run.m + 1) + ' · Question ' + (run.i + 1) + ' of ' + m.qs.length + '</span><span class="gx-sec">' + G.secs + 's</span></div><div class="gx-bar"><i></i></div>' +
+    root.innerHTML = '<div class="gx-top"><a class="gx-x" href="/games.html" aria-label="Quit the run">' + X + '</a>' + stars(run.stars, mode.bust) + '<span class="gx-cash">' + money(run.cash) + '</span></div>' +
+      '<div class="gx-meta"><span>' + mode.unit + ' ' + (run.m + 1) + ' · Question ' + (run.i + 1) + ' of ' + m.qs.length + '</span><span class="gx-sec">' + mode.secs + 's</span></div><div class="gx-bar"><i></i></div>' +
       '<div class="gx-pic"><img src="' + esc(q.img) + '" alt="" style="object-position:' + esc(q.pos || "center") + '">' + credit() + '</div>' +
       '<div class="gx-text"><span class="gx-from">' + PHONE + 'New text</span><p class="gx-q">' + esc(q.q) + '</p></div><div class="gx-opts">' + q.o.map(function (o, k) { return '<button type="button" class="gx-opt" data-k="' + k + '" disabled>' + esc(o.t) + '</button>'; }).join("") + '</div><p class="gx-pop" aria-live="polite"></p>';
     var bar = root.querySelector(".gx-bar i"), sec = root.querySelector(".gx-sec"), pop = root.querySelector(".gx-pop"), btns = root.querySelectorAll(".gx-opt"), img = root.querySelector(".gx-pic img");
@@ -105,19 +118,19 @@
     if (lastBtn && lastBtn.getBoundingClientRect().bottom > window.innerHeight) window.scrollTo(0, root.getBoundingClientRect().top + window.pageYOffset);
     function finish(k) {
       if (done) return; done = true; clearInterval(timer);
-      var left = Math.max(0, G.secs - (Date.now() - t0) / 1000), ok = k >= 0 && q.o[k].ok, cashEl = root.querySelector(".gx-cash");
+      var left = Math.max(0, mode.secs - (Date.now() - t0) / 1000), ok = k >= 0 && q.o[k].ok, cashEl = root.querySelector(".gx-cash");
       run.asked++;
       btns.forEach(function (b, j) { b.disabled = true; if (q.o[j].ok) b.classList.add("ok"); else if (j === k) b.classList.add("no"); });
       if (ok) {
-        var won = Math.round((1000 + 1000 * left / G.secs) / 10) * 10, was = run.cash; run.cash += won; run.right++;
-        pop.className = "gx-pop ok"; pop.textContent = "+" + money(won) + (left > G.secs * 0.6 ? ". Fast hands pay." : ".");
+        var won = Math.round((mode.pay + mode.pay * left / mode.secs) / 10) * 10, was = run.cash; run.cash += won; run.right++;
+        pop.className = "gx-pop ok"; pop.textContent = "+" + money(won) + (left > mode.secs * 0.6 ? ". Fast hands pay." : ".");
         cashEl.classList.add("up"); tick(cashEl, was, run.cash);
       } else {
         run.stars++; pop.className = "gx-pop no"; pop.textContent = k < 0 ? "Too slow. One more star." : "Wrong. One more star.";
-        root.querySelector(".gx-top .gx-stars").outerHTML = stars(run.stars, G.bust); lights();
+        root.querySelector(".gx-top .gx-stars").outerHTML = stars(run.stars, mode.bust); lights();
       }
       wait = setTimeout(function () {
-        if (run.stars >= G.bust) return result(k < 0 ? "wasted" : "busted");
+        if (run.stars >= mode.bust) return result(k < 0 ? "wasted" : "busted");
         run.i++;
         if (run.i < m.qs.length) return ask();
         if (run.m + 1 < run.ms.length) return passed();
@@ -130,8 +143,8 @@
       if (t0) return; t0 = Date.now(); img.classList.add("in");
       btns.forEach(function (b) { b.disabled = false; });
       timer = setInterval(function () {
-        var el = (Date.now() - t0) / 1000, left = Math.max(0, G.secs - el);
-        bar.style.transform = "scaleX(" + (left / G.secs) + ")"; sec.textContent = Math.ceil(left) + "s";
+        var el = (Date.now() - t0) / 1000, left = Math.max(0, mode.secs - el);
+        bar.style.transform = "scaleX(" + (left / mode.secs) + ")"; sec.textContent = Math.ceil(left) + "s";
         if (left <= 0) finish(-1);
       }, 100);
     };
@@ -143,30 +156,34 @@
     clear();
     var m = run.ms[run.m];
     root.innerHTML = '<div class="gx-top"><a class="gx-x" href="/games.html" aria-label="Quit the run">' + X + '</a><span class="gx-cash">' + money(run.cash) + '</span></div>' +
-      '<div class="gx-brief"><span class="gx-k">Mission ' + (run.m + 1) + ' · ' + esc(m.name) + '</span><h1 class="gx-sun">Mission passed</h1><p class="gx-respect">Respect +</p>' +
-      '<p>' + money(run.cash) + ' so far, ' + run.right + ' right. Your wanted level is cleared.</p>' +
-      '<div class="gx-acts"><button type="button" class="gx-btn gx-go">On to mission ' + (run.m + 2) + '</button></div></div>';
+      '<div class="gx-brief"><span class="gx-k">' + mode.unit + ' ' + (run.m + 1) + ' · ' + esc(m.name) + '</span><h1 class="gx-sun">' + mode.unit + ' passed</h1><p class="gx-respect">Respect +</p>' +
+      '<p>' + money(run.cash) + ' so far, ' + run.right + ' right. ' + (mode.clear ? 'Your wanted level is cleared.' : 'Your wanted level stays with you.') + '</p>' +
+      '<div class="gx-acts"><button type="button" class="gx-btn gx-go">On to ' + mode.unit.toLowerCase() + ' ' + (run.m + 2) + '</button></div></div>';
     root.querySelector(".gx-go").addEventListener("click", function () { run.m++; brief(); });
     window.scrollTo(0, 0);
   }
 
   function result(how) {
     clear();
-    var nb = !best || run.cash > best.cash;
-    if (nb) { best = { cash: run.cash, stars: run.stars, right: run.right, busted: how !== "passed", mission: run.m + 1 }; save("fa-vicerun", best); }
+    var mine = mode.hard ? hbest : best, nb = !mine || run.cash > mine.cash;
+    if (nb) { mine = { cash: run.cash, stars: run.stars, right: run.right, busted: how !== "passed", mission: run.m + 1 }; if (mode.hard) { hbest = mine; save("fa-vicerun-heist", mine); } else { best = mine; save("fa-vicerun", mine); } }
+    var unlocked = !mode.hard && how === "passed" && G.heist && !open;
+    if (!mode.hard && how === "passed" && G.heist) { open = true; save("fa-vicerun-heist-open", true); }
     var gone = how !== "passed";
     var pic = gone ? '<img src="/img/gta6-bandanas.jpg" alt="" style="object-position:center 20%;filter:grayscale(1)">' : '<img src="/img/gta6-car.jpg" alt="" style="object-position:center 60%">';
-    var title = how === "busted" ? '<h1 class="gx-busted">Busted</h1>' : how === "wasted" ? '<h1 class="gx-busted">Wasted</h1>' : '<h1 class="gx-sun">Run complete</h1>';
-    var line = how === "busted" ? "Five stars in mission " + (run.m + 1) + ", question " + (run.i + 1) + ". The cops got there first." :
-      how === "wasted" ? "The clock ran out on your fifth star, in mission " + (run.m + 1) + ", question " + (run.i + 1) + "." :
-      "All " + run.ms.length + " missions done. " + run.right + " of " + run.asked + " right.";
+    var title = how === "busted" ? '<h1 class="gx-busted">Busted</h1>' : how === "wasted" ? '<h1 class="gx-busted">Wasted</h1>' : (mode.hard ? '<h1 class="gx-sun">Heist complete</h1>' : '<h1 class="gx-sun">Run complete</h1>');
+    var line = how === "busted" ? "Five stars in " + mode.unit.toLowerCase() + " " + (run.m + 1) + ", question " + (run.i + 1) + ". The cops got there first." :
+      how === "wasted" ? "The clock ran out on your fifth star, in " + mode.unit.toLowerCase() + " " + (run.m + 1) + ", question " + (run.i + 1) + "." :
+      "All " + run.ms.length + " " + mode.unit.toLowerCase() + "s done. " + run.right + " of " + run.asked + " right.";
     root.innerHTML = '<div class="gx-pic gx-big">' + pic + '<a class="gx-x gx-on" href="/games.html" aria-label="Back to Games">' + X + '</a>' + credit() + '</div><div class="gx-res">' + title +
-      '<p class="big">' + money(run.cash) + '</p><p class="gx-rank">Rank: ' + esc(rank(run.cash)) + '</p><p>' + line + '</p>' + (gone ? stars(run.stars, G.bust) : "") +
-      '<div class="gx-acts"><button type="button" class="gx-btn gx-share">Share my run</button><button type="button" class="gx-btn o gx-again">Run it again</button></div>' +
-      '<p class="gx-note">' + (nb ? "New best. " : "Your best: " + money(best.cash) + ". ") + 'Unlimited runs until ' + esc(G.endText) + '.</p></div>';
-    root.querySelector(".gx-again").addEventListener("click", start);
+      '<p class="big">' + money(run.cash) + '</p><p class="gx-rank">Rank: ' + esc(rank(run.cash)) + '</p><p>' + line + '</p>' + (gone ? stars(run.stars, mode.bust) : "") +
+      (unlocked ? '<p class="gx-unlock">You unlocked The Heist. Deeper questions on the whole series, ' + G.heist.secs + ' seconds each, double the cash.</p>' : '') +
+      '<div class="gx-acts">' + (open && G.heist && !mode.hard ? '<button type="button" class="gx-btn gx-heist">Start The Heist</button>' : '') + '<button type="button" class="gx-btn ' + (open && G.heist && !mode.hard ? 'o ' : '') + 'gx-share">Share my run</button><button type="button" class="gx-btn o gx-again">Run it again</button></div>' +
+      '<p class="gx-note">' + (nb ? "New best" + (mode.hard ? " heist" : "") + ". " : "Your best: " + money(mine.cash) + ". ") + 'Unlimited runs until ' + esc(G.endText) + '.</p></div>';
+    root.querySelector(".gx-again").addEventListener("click", function () { start(mode); });
+    var hb = root.querySelector(".gx-heist"); if (hb) hb.addEventListener("click", function () { start(heist()); });
     root.querySelector(".gx-share").addEventListener("click", function () {
-      var txt = (how === "passed" ? "I finished all three missions on The Vice Run with " : (how === "wasted" ? "Wasted" : "Busted") + " on The Vice Run with ") + money(run.cash) + " (" + rank(run.cash) + "). Beat it before " + G.endText + ".";
+      var txt = mode.hard ? (how === "passed" ? "I pulled off The Heist on The Vice Run with " : (how === "wasted" ? "Wasted" : "Busted") + " on The Heist with ") + money(run.cash) + ". Beat it before " + G.endText + "." : (how === "passed" ? "I finished all three missions on The Vice Run with " : (how === "wasted" ? "Wasted" : "Busted") + " on The Vice Run with ") + money(run.cash) + " (" + rank(run.cash) + "). Beat it before " + G.endText + ".";
       var url = "https://flavorafricagroup.org/gta.html";
       if (navigator.share) navigator.share({ title: "The Vice Run", text: txt, url: url }).catch(function () {});
       else if (navigator.clipboard) navigator.clipboard.writeText(txt + " " + url).then(function () { var b = root.querySelector(".gx-share"); b.textContent = "Copied"; });

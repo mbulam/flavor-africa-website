@@ -81,3 +81,6 @@ html:has(.gx-page) body,html:has(.gx-page) main{background:#07050C}
 .gx-text .gx-q{font-size:20px;margin-top:6px}
 .gx-opts{margin-top:12px;gap:8px}
 .gx-opt{min-height:50px;padding:12px 16px}
+/* The Heist, hard mode (added 19 Nov 2026) */
+.gx-lock{margin-top:14px;padding-top:14px;border-top:1px solid var(--gx-line);font-size:14px;line-height:1.45;color:var(--gx-mute)}
+.gx-unlock{margin-top:16px!important;color:var(--gx-orange)!important;font-weight:700}
