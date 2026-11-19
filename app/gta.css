@@ -55,3 +55,29 @@ html:has(.gx-page) body,html:has(.gx-page) main{background:#07050C}
 .gx-res h1{margin-top:22px}
 .gx-top .gx-stars svg{width:20px;height:20px}
 .gx-opt.ok{border-width:2px}
+/* Three missions and GTA touches (added 19 Nov 2026, late) */
+.gx-cash{color:#7AD678}
+.gx-cash.up{animation:gx-pop .6s ease-out}
+@keyframes gx-pop{0%{transform:scale(1)}30%{transform:scale(1.18)}100%{transform:scale(1)}}
+.gx-pic:not(.gx-big) img{opacity:0;transition:opacity .25s ease}
+.gx-pic img.in{opacity:1}
+.gx-brief{padding-top:28px}
+.gx-brief h1{margin:10px 0 0;font-size:54px;line-height:.92;font-weight:800;letter-spacing:-.025em;text-transform:uppercase}
+.gx-brief .gx-k{margin-top:0}
+.gx-brief p{margin:16px 0 0;font-size:16px;line-height:1.5;color:var(--gx-mute)}
+.gx-tip{border-top:1px solid var(--gx-line);padding-top:16px;margin-top:24px!important}
+.gx-tip b{color:var(--gx-ink)}
+.gx-respect{font:800 22px/1 inherit!important;color:var(--gx-ink)!important;letter-spacing:.01em}
+.gx-text{margin-top:18px;background:#120C1F;border:1px solid var(--gx-line);border-radius:18px 18px 18px 6px;padding:12px 16px 14px}
+.gx-from{display:flex;align-items:center;gap:6px;font:600 12px/1 inherit;color:var(--gx-mute)}
+.gx-from svg{width:14px;height:14px}
+.gx-text .gx-q{margin:8px 0 0;font-size:22px}
+.gx-rank{color:var(--gx-ink)!important;font-weight:700}
+.gx-lights{position:fixed;inset:0;pointer-events:none;z-index:50;animation:gx-siren 1.2s steps(1,end) forwards}
+@keyframes gx-siren{0%{box-shadow:inset 0 0 0 10px rgba(255,40,70,.85)}25%{box-shadow:inset 0 0 0 10px rgba(50,90,255,.85)}50%{box-shadow:inset 0 0 0 10px rgba(255,40,70,.85)}75%{box-shadow:inset 0 0 0 10px rgba(50,90,255,.85)}100%{box-shadow:none}}
+/* keep all four answers on screen on a phone without scrolling (19 Nov 2026) */
+.gx-pic:not(.gx-big){height:clamp(120px,20vh,190px);margin-top:12px}
+.gx-text{margin-top:12px;padding:10px 14px 12px}
+.gx-text .gx-q{font-size:20px;margin-top:6px}
+.gx-opts{margin-top:12px;gap:8px}
+.gx-opt{min-height:50px;padding:12px 16px}

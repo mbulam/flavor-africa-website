@@ -1,10 +1,387 @@
 {
- "_how": "The Vice Run (added 19 Nov 2026): a 48-hour GTA bonus quiz on the Games page. It shows only between start and end (UTC). Every answer is checked against 2+ sources (see gta-6-why-its-a-big-deal.html and its sources list). a = index of the right option before shuffling. img/pos = the picture on each question (all Rockstar Games artwork, credited on screen).",
+ "_how": "The Vice Run (added 19 Nov 2026; three missions from 19 Nov 2026 late). Shows only between start and end (UTC). Three missions of ten questions; each mission's questions come in a new order every run, options are shuffled, and the wanted level clears between missions. a = index of the right option before shuffling. img/pos = the picture on each question (all Rockstar Games artwork, credited on screen). Every answer is checked against 2+ independent sources. 'qs' at the bottom is only for phones still running the older app code until they update; leave it as the flat list of all thirty.",
  "start": "2026-11-19T19:00:00Z",
  "end": "2026-11-21T19:30:00Z",
  "endText": "Saturday at 10:30pm",
  "secs": 12,
  "bust": 5,
+ "missions": [
+  {
+   "name": "Welcome to Leonida",
+   "qs": [
+    {
+     "q": "GTA VI is set in Leonida. Which real US state is it based on?",
+     "o": [
+      "Florida",
+      "California",
+      "Texas",
+      "Georgia"
+     ],
+     "a": 0,
+     "img": "/img/vr-album.jpg",
+     "pos": "center 40%"
+    },
+    {
+     "q": "What are the names of GTA VI's two leads?",
+     "o": [
+      "Jason and Lucia",
+      "Michael and Trevor",
+      "Tommy and Lance",
+      "Niko and Roman"
+     ],
+     "a": 0,
+     "img": "/img/vr-dazed.jpg",
+     "pos": "center 18%"
+    },
+    {
+     "q": "Vice City is the series' stand-in for which real city?",
+     "o": [
+      "Miami",
+      "Los Angeles",
+      "New York",
+      "Las Vegas"
+     ],
+     "a": 0,
+     "img": "/img/vr-gi.jpg",
+     "pos": "center 40%"
+    },
+    {
+     "q": "In GTA, which word fills the screen when you die?",
+     "o": [
+      "Wasted",
+      "Busted",
+      "Game over",
+      "Mission failed"
+     ],
+     "a": 0,
+     "img": "/img/gta6-bandanas.jpg",
+     "pos": "center 25%"
+    },
+    {
+     "q": "Which company owns Rockstar Games?",
+     "o": [
+      "Take-Two Interactive",
+      "Electronic Arts",
+      "Sony",
+      "Microsoft"
+     ],
+     "a": 0,
+     "img": "/img/vr-station.jpg",
+     "pos": "center 40%"
+    },
+    {
+     "q": "GTA VI came out on which date?",
+     "o": [
+      "19 November 2026",
+      "26 May 2026",
+      "25 June 2026",
+      "15 October 2026"
+     ],
+     "a": 0,
+     "img": "/img/gta6-logo.jpg",
+     "pos": "center 50%"
+    },
+    {
+     "q": "Which consoles can you play GTA VI on at launch?",
+     "o": [
+      "PS5 and Xbox Series X|S",
+      "PS5 only",
+      "PS4 and PS5",
+      "PS5, Xbox and PC"
+     ],
+     "a": 0,
+     "img": "/img/gta6-car.jpg",
+     "pos": "center 70%"
+    },
+    {
+     "q": "How much does the standard edition of GTA VI cost in the US?",
+     "o": [
+      "$79.99",
+      "$59.99",
+      "$69.99",
+      "$99.99"
+     ],
+     "a": 0,
+     "img": "/img/vr-hangar.jpg",
+     "pos": "center 30%"
+    },
+    {
+     "q": "Who are the three playable leads in GTA V?",
+     "o": [
+      "Michael, Franklin and Trevor",
+      "Michael, Niko and Tommy",
+      "Franklin, Jason and Lance",
+      "Trevor, Roman and Claude"
+     ],
+     "a": 0,
+     "img": "/img/gta6-lead.jpg",
+     "pos": "center 30%"
+    },
+    {
+     "q": "Los Santos, the city in GTA V, is the series' version of which real city?",
+     "o": [
+      "Los Angeles",
+      "San Francisco",
+      "Las Vegas",
+      "San Diego"
+     ],
+     "a": 0,
+     "img": "/img/vr-gi.jpg",
+     "pos": "right 40%"
+    }
+   ]
+  },
+  {
+   "name": "Back in Vice City",
+   "qs": [
+    {
+     "q": "GTA V passed $1 billion in sales in how many days?",
+     "o": [
+      "3 days",
+      "7 days",
+      "15 days",
+      "30 days"
+     ],
+     "a": 0,
+     "img": "/img/gta6-lead.jpg",
+     "pos": "center 30%"
+    },
+    {
+     "q": "GTA V first came out in which year?",
+     "o": [
+      "2013",
+      "2011",
+      "2015",
+      "2008"
+     ],
+     "a": 0,
+     "img": "/img/vr-hangar.jpg",
+     "pos": "center 60%"
+    },
+    {
+     "q": "What is Lucia's surname in GTA VI?",
+     "o": [
+      "Caminos",
+      "Duval",
+      "Vercetti",
+      "Bellic"
+     ],
+     "a": 0,
+     "img": "/img/vr-dazed.jpg",
+     "pos": "center 18%"
+    },
+    {
+     "q": "Grassrivers, a region of Leonida, is inspired by which real place?",
+     "o": [
+      "The Everglades",
+      "The Florida Keys",
+      "The Grand Canyon",
+      "Yellowstone"
+     ],
+     "a": 0,
+     "img": "/img/vr-album.jpg",
+     "pos": "center 40%"
+    },
+    {
+     "q": "Which of these is NOT one of the Leonida regions Rockstar has named?",
+     "o": [
+      "Los Santos",
+      "Grassrivers",
+      "Port Gellhorn",
+      "Ambrosia"
+     ],
+     "a": 0,
+     "img": "/img/vr-station.jpg",
+     "pos": "center 40%"
+    },
+    {
+     "q": "Who is the lead character in GTA: San Andreas?",
+     "o": [
+      "Carl \"CJ\" Johnson",
+      "Niko Bellic",
+      "Tommy Vercetti",
+      "Trevor Philips"
+     ],
+     "a": 0,
+     "img": "/img/gta6-bandanas.jpg",
+     "pos": "center 25%"
+    },
+    {
+     "q": "Grand Theft Auto: Vice City, the game, came out in which year?",
+     "o": [
+      "2002",
+      "1997",
+      "2008",
+      "2013"
+     ],
+     "a": 0,
+     "img": "/img/gta6-car.jpg",
+     "pos": "center 70%"
+    },
+    {
+     "q": "Liberty City is the series' version of which real city?",
+     "o": [
+      "New York",
+      "Chicago",
+      "Boston",
+      "Detroit"
+     ],
+     "a": 0,
+     "img": "/img/vr-gi.jpg",
+     "pos": "center 40%"
+    },
+    {
+     "q": "Which song plays in GTA VI's first trailer?",
+     "o": [
+      "\"Love Is a Long Road\" by Tom Petty",
+      "\"Africa\" by Toto",
+      "\"Hotel California\" by Eagles",
+      "\"Take On Me\" by a-ha"
+     ],
+     "a": 0,
+     "img": "/img/vr-gi.jpg",
+     "pos": "right 40%"
+    },
+    {
+     "q": "GTA VI's first trailer came out in which year?",
+     "o": [
+      "2023",
+      "2021",
+      "2024",
+      "2025"
+     ],
+     "a": 0,
+     "img": "/img/gta6-logo.jpg",
+     "pos": "center 50%"
+    }
+   ]
+  },
+  {
+   "name": "The Long Road",
+   "qs": [
+    {
+     "q": "The first GTA VI trailer set a new record for the most-viewed non-music YouTube video in 24 hours. Who held it before?",
+     "o": [
+      "MrBeast",
+      "PewDiePie",
+      "Drake",
+      "Cristiano Ronaldo"
+     ],
+     "a": 0,
+     "img": "/img/vr-gi.jpg",
+     "pos": "center 40%"
+    },
+    {
+     "q": "Rockstar says GTA VI's second trailer was watched how many times in its first 24 hours?",
+     "o": [
+      "475 million",
+      "90 million",
+      "200 million",
+      "1 billion"
+     ],
+     "a": 0,
+     "img": "/img/gta6-bandanas.jpg",
+     "pos": "center 25%"
+    },
+    {
+     "q": "Take-Two said in November 2026 that GTA V has sold how many copies?",
+     "o": [
+      "Nearly 235 million",
+      "About 100 million",
+      "About 150 million",
+      "Over 400 million"
+     ],
+     "a": 0,
+     "img": "/img/vr-hangar.jpg",
+     "pos": "center 60%"
+    },
+    {
+     "q": "Rockstar North, the studio behind Grand Theft Auto, is based in which city?",
+     "o": [
+      "Edinburgh",
+      "Glasgow",
+      "London",
+      "Toronto"
+     ],
+     "a": 0,
+     "img": "/img/vr-station.jpg",
+     "pos": "center 40%"
+    },
+    {
+     "q": "The very first Grand Theft Auto game came out in which year?",
+     "o": [
+      "1997",
+      "1994",
+      "2001",
+      "1999"
+     ],
+     "a": 0,
+     "img": "/img/gta6-logo.jpg",
+     "pos": "center 50%"
+    },
+    {
+     "q": "Who is the lead character in GTA IV?",
+     "o": [
+      "Niko Bellic",
+      "Michael De Santa",
+      "Tommy Vercetti",
+      "Franklin Clinton"
+     ],
+     "a": 0,
+     "img": "/img/gta6-car.jpg",
+     "pos": "center 70%"
+    },
+    {
+     "q": "Who is the lead character in GTA: Vice City?",
+     "o": [
+      "Tommy Vercetti",
+      "Niko Bellic",
+      "Carl Johnson",
+      "Michael De Santa"
+     ],
+     "a": 0,
+     "img": "/img/vr-album.jpg",
+     "pos": "center 40%"
+    },
+    {
+     "q": "When the first trailer came out, GTA VI was promised for which year?",
+     "o": [
+      "2025",
+      "2024",
+      "2026",
+      "2027"
+     ],
+     "a": 0,
+     "img": "/img/gta6-lead.jpg",
+     "pos": "center 30%"
+    },
+    {
+     "q": "GTA Online launched in which year?",
+     "o": [
+      "2013",
+      "2008",
+      "2015",
+      "2018"
+     ],
+     "a": 0,
+     "img": "/img/vr-hangar.jpg",
+     "pos": "center 30%"
+    },
+    {
+     "q": "Who is the chief executive of Take-Two Interactive?",
+     "o": [
+      "Strauss Zelnick",
+      "Andrew Wilson",
+      "Phil Spencer",
+      "Bobby Kotick"
+     ],
+     "a": 0,
+     "img": "/img/vr-dazed.jpg",
+     "pos": "center 18%"
+    }
+   ]
+  }
+ ],
  "qs": [
   {
    "q": "GTA VI is set in Leonida. Which real US state is it based on?",
@@ -31,18 +408,6 @@
    "pos": "center 18%"
   },
   {
-   "q": "GTA V passed $1 billion in sales in how many days?",
-   "o": [
-    "3 days",
-    "7 days",
-    "15 days",
-    "30 days"
-   ],
-   "a": 0,
-   "img": "/img/gta6-lead.jpg",
-   "pos": "center 30%"
-  },
-  {
    "q": "Vice City is the series' stand-in for which real city?",
    "o": [
     "Miami",
@@ -55,28 +420,52 @@
    "pos": "center 40%"
   },
   {
-   "q": "Before GTA VI, the series last went to Vice City in a game from which year?",
+   "q": "In GTA, which word fills the screen when you die?",
    "o": [
-    "2002",
-    "1997",
-    "2008",
-    "2013"
+    "Wasted",
+    "Busted",
+    "Game over",
+    "Mission failed"
    ],
    "a": 0,
-   "img": "/img/gta6-car.jpg",
-   "pos": "center 70%"
+   "img": "/img/gta6-bandanas.jpg",
+   "pos": "center 25%"
   },
   {
-   "q": "Which of these is NOT one of the Leonida regions Rockstar has named?",
+   "q": "Which company owns Rockstar Games?",
    "o": [
-    "Los Santos",
-    "Grassrivers",
-    "Port Gellhorn",
-    "Ambrosia"
+    "Take-Two Interactive",
+    "Electronic Arts",
+    "Sony",
+    "Microsoft"
    ],
    "a": 0,
    "img": "/img/vr-station.jpg",
    "pos": "center 40%"
+  },
+  {
+   "q": "GTA VI came out on which date?",
+   "o": [
+    "19 November 2026",
+    "26 May 2026",
+    "25 June 2026",
+    "15 October 2026"
+   ],
+   "a": 0,
+   "img": "/img/gta6-logo.jpg",
+   "pos": "center 50%"
+  },
+  {
+   "q": "Which consoles can you play GTA VI on at launch?",
+   "o": [
+    "PS5 and Xbox Series X|S",
+    "PS5 only",
+    "PS4 and PS5",
+    "PS5, Xbox and PC"
+   ],
+   "a": 0,
+   "img": "/img/gta6-car.jpg",
+   "pos": "center 70%"
   },
   {
    "q": "How much does the standard edition of GTA VI cost in the US?",
@@ -91,16 +480,148 @@
    "pos": "center 30%"
   },
   {
-   "q": "Which company owns Rockstar Games?",
+   "q": "Who are the three playable leads in GTA V?",
    "o": [
-    "Take-Two Interactive",
-    "Electronic Arts",
-    "Sony",
-    "Microsoft"
+    "Michael, Franklin and Trevor",
+    "Michael, Niko and Tommy",
+    "Franklin, Jason and Lance",
+    "Trevor, Roman and Claude"
+   ],
+   "a": 0,
+   "img": "/img/gta6-lead.jpg",
+   "pos": "center 30%"
+  },
+  {
+   "q": "Los Santos, the city in GTA V, is the series' version of which real city?",
+   "o": [
+    "Los Angeles",
+    "San Francisco",
+    "Las Vegas",
+    "San Diego"
+   ],
+   "a": 0,
+   "img": "/img/vr-gi.jpg",
+   "pos": "right 40%"
+  },
+  {
+   "q": "GTA V passed $1 billion in sales in how many days?",
+   "o": [
+    "3 days",
+    "7 days",
+    "15 days",
+    "30 days"
+   ],
+   "a": 0,
+   "img": "/img/gta6-lead.jpg",
+   "pos": "center 30%"
+  },
+  {
+   "q": "GTA V first came out in which year?",
+   "o": [
+    "2013",
+    "2011",
+    "2015",
+    "2008"
+   ],
+   "a": 0,
+   "img": "/img/vr-hangar.jpg",
+   "pos": "center 60%"
+  },
+  {
+   "q": "What is Lucia's surname in GTA VI?",
+   "o": [
+    "Caminos",
+    "Duval",
+    "Vercetti",
+    "Bellic"
+   ],
+   "a": 0,
+   "img": "/img/vr-dazed.jpg",
+   "pos": "center 18%"
+  },
+  {
+   "q": "Grassrivers, a region of Leonida, is inspired by which real place?",
+   "o": [
+    "The Everglades",
+    "The Florida Keys",
+    "The Grand Canyon",
+    "Yellowstone"
+   ],
+   "a": 0,
+   "img": "/img/vr-album.jpg",
+   "pos": "center 40%"
+  },
+  {
+   "q": "Which of these is NOT one of the Leonida regions Rockstar has named?",
+   "o": [
+    "Los Santos",
+    "Grassrivers",
+    "Port Gellhorn",
+    "Ambrosia"
+   ],
+   "a": 0,
+   "img": "/img/vr-station.jpg",
+   "pos": "center 40%"
+  },
+  {
+   "q": "Who is the lead character in GTA: San Andreas?",
+   "o": [
+    "Carl \"CJ\" Johnson",
+    "Niko Bellic",
+    "Tommy Vercetti",
+    "Trevor Philips"
    ],
    "a": 0,
    "img": "/img/gta6-bandanas.jpg",
    "pos": "center 25%"
+  },
+  {
+   "q": "Grand Theft Auto: Vice City, the game, came out in which year?",
+   "o": [
+    "2002",
+    "1997",
+    "2008",
+    "2013"
+   ],
+   "a": 0,
+   "img": "/img/gta6-car.jpg",
+   "pos": "center 70%"
+  },
+  {
+   "q": "Liberty City is the series' version of which real city?",
+   "o": [
+    "New York",
+    "Chicago",
+    "Boston",
+    "Detroit"
+   ],
+   "a": 0,
+   "img": "/img/vr-gi.jpg",
+   "pos": "center 40%"
+  },
+  {
+   "q": "Which song plays in GTA VI's first trailer?",
+   "o": [
+    "\"Love Is a Long Road\" by Tom Petty",
+    "\"Africa\" by Toto",
+    "\"Hotel California\" by Eagles",
+    "\"Take On Me\" by a-ha"
+   ],
+   "a": 0,
+   "img": "/img/vr-gi.jpg",
+   "pos": "right 40%"
+  },
+  {
+   "q": "GTA VI's first trailer came out in which year?",
+   "o": [
+    "2023",
+    "2021",
+    "2024",
+    "2025"
+   ],
+   "a": 0,
+   "img": "/img/gta6-logo.jpg",
+   "pos": "center 50%"
   },
   {
    "q": "The first GTA VI trailer set a new record for the most-viewed non-music YouTube video in 24 hours. Who held it before?",
@@ -112,7 +633,19 @@
    ],
    "a": 0,
    "img": "/img/vr-gi.jpg",
-   "pos": "right 40%"
+   "pos": "center 40%"
+  },
+  {
+   "q": "Rockstar says GTA VI's second trailer was watched how many times in its first 24 hours?",
+   "o": [
+    "475 million",
+    "90 million",
+    "200 million",
+    "1 billion"
+   ],
+   "a": 0,
+   "img": "/img/gta6-bandanas.jpg",
+   "pos": "center 25%"
   },
   {
    "q": "Take-Two said in November 2026 that GTA V has sold how many copies?",
@@ -125,6 +658,90 @@
    "a": 0,
    "img": "/img/vr-hangar.jpg",
    "pos": "center 60%"
+  },
+  {
+   "q": "Rockstar North, the studio behind Grand Theft Auto, is based in which city?",
+   "o": [
+    "Edinburgh",
+    "Glasgow",
+    "London",
+    "Toronto"
+   ],
+   "a": 0,
+   "img": "/img/vr-station.jpg",
+   "pos": "center 40%"
+  },
+  {
+   "q": "The very first Grand Theft Auto game came out in which year?",
+   "o": [
+    "1997",
+    "1994",
+    "2001",
+    "1999"
+   ],
+   "a": 0,
+   "img": "/img/gta6-logo.jpg",
+   "pos": "center 50%"
+  },
+  {
+   "q": "Who is the lead character in GTA IV?",
+   "o": [
+    "Niko Bellic",
+    "Michael De Santa",
+    "Tommy Vercetti",
+    "Franklin Clinton"
+   ],
+   "a": 0,
+   "img": "/img/gta6-car.jpg",
+   "pos": "center 70%"
+  },
+  {
+   "q": "Who is the lead character in GTA: Vice City?",
+   "o": [
+    "Tommy Vercetti",
+    "Niko Bellic",
+    "Carl Johnson",
+    "Michael De Santa"
+   ],
+   "a": 0,
+   "img": "/img/vr-album.jpg",
+   "pos": "center 40%"
+  },
+  {
+   "q": "When the first trailer came out, GTA VI was promised for which year?",
+   "o": [
+    "2025",
+    "2024",
+    "2026",
+    "2027"
+   ],
+   "a": 0,
+   "img": "/img/gta6-lead.jpg",
+   "pos": "center 30%"
+  },
+  {
+   "q": "GTA Online launched in which year?",
+   "o": [
+    "2013",
+    "2008",
+    "2015",
+    "2018"
+   ],
+   "a": 0,
+   "img": "/img/vr-hangar.jpg",
+   "pos": "center 30%"
+  },
+  {
+   "q": "Who is the chief executive of Take-Two Interactive?",
+   "o": [
+    "Strauss Zelnick",
+    "Andrew Wilson",
+    "Phil Spencer",
+    "Bobby Kotick"
+   ],
+   "a": 0,
+   "img": "/img/vr-dazed.jpg",
+   "pos": "center 18%"
   }
  ]
 }
