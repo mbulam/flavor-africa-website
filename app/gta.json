@@ -1,0 +1,130 @@
+{
+ "_how": "The Vice Run (added 19 Nov 2026): a 48-hour GTA bonus quiz on the Games page. It shows only between start and end (UTC). Every answer is checked against 2+ sources (see gta-6-why-its-a-big-deal.html and its sources list). a = index of the right option before shuffling. img/pos = the picture on each question (all Rockstar Games artwork, credited on screen).",
+ "start": "2026-11-19T19:00:00Z",
+ "end": "2026-11-21T19:30:00Z",
+ "endText": "Saturday at 10:30pm",
+ "secs": 12,
+ "bust": 5,
+ "qs": [
+  {
+   "q": "GTA VI is set in Leonida. Which real US state is it based on?",
+   "o": [
+    "Florida",
+    "California",
+    "Texas",
+    "Georgia"
+   ],
+   "a": 0,
+   "img": "/img/vr-album.jpg",
+   "pos": "center 40%"
+  },
+  {
+   "q": "What are the names of GTA VI's two leads?",
+   "o": [
+    "Jason and Lucia",
+    "Michael and Trevor",
+    "Tommy and Lance",
+    "Niko and Roman"
+   ],
+   "a": 0,
+   "img": "/img/vr-dazed.jpg",
+   "pos": "center 18%"
+  },
+  {
+   "q": "GTA V passed $1 billion in sales in how many days?",
+   "o": [
+    "3 days",
+    "7 days",
+    "15 days",
+    "30 days"
+   ],
+   "a": 0,
+   "img": "/img/gta6-lead.jpg",
+   "pos": "center 30%"
+  },
+  {
+   "q": "Vice City is the series' stand-in for which real city?",
+   "o": [
+    "Miami",
+    "Los Angeles",
+    "New York",
+    "Las Vegas"
+   ],
+   "a": 0,
+   "img": "/img/vr-gi.jpg",
+   "pos": "center 40%"
+  },
+  {
+   "q": "Before GTA VI, the series last went to Vice City in a game from which year?",
+   "o": [
+    "2002",
+    "1997",
+    "2008",
+    "2013"
+   ],
+   "a": 0,
+   "img": "/img/gta6-car.jpg",
+   "pos": "center 70%"
+  },
+  {
+   "q": "Which of these is NOT one of the Leonida regions Rockstar has named?",
+   "o": [
+    "Los Santos",
+    "Grassrivers",
+    "Port Gellhorn",
+    "Ambrosia"
+   ],
+   "a": 0,
+   "img": "/img/vr-station.jpg",
+   "pos": "center 40%"
+  },
+  {
+   "q": "How much does the standard edition of GTA VI cost in the US?",
+   "o": [
+    "$79.99",
+    "$59.99",
+    "$69.99",
+    "$99.99"
+   ],
+   "a": 0,
+   "img": "/img/vr-hangar.jpg",
+   "pos": "center 30%"
+  },
+  {
+   "q": "Which company owns Rockstar Games?",
+   "o": [
+    "Take-Two Interactive",
+    "Electronic Arts",
+    "Sony",
+    "Microsoft"
+   ],
+   "a": 0,
+   "img": "/img/gta6-bandanas.jpg",
+   "pos": "center 25%"
+  },
+  {
+   "q": "The first GTA VI trailer set a new record for the most-viewed non-music YouTube video in 24 hours. Who held it before?",
+   "o": [
+    "MrBeast",
+    "PewDiePie",
+    "Drake",
+    "Cristiano Ronaldo"
+   ],
+   "a": 0,
+   "img": "/img/vr-gi.jpg",
+   "pos": "right 40%"
+  },
+  {
+   "q": "Take-Two said in November 2026 that GTA V has sold how many copies?",
+   "o": [
+    "Nearly 235 million",
+    "About 100 million",
+    "About 150 million",
+    "Over 400 million"
+   ],
+   "a": 0,
+   "img": "/img/vr-hangar.jpg",
+   "pos": "center 60%"
+  }
+ ]
+}

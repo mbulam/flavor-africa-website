@@ -209,3 +209,12 @@ THE FLAVOR BALLOT (added 16 Nov 2026)
 - After the show: put each winner's nominee id in "winners" in ballot.json (e.g. "bamp": "bigdaddy"), run _site.py,
   push. Every phone then sees its score, and What fans say marks the Grammy winner next to the fan vote.
 - Never change a nominee's id once voting has started (saved ballots point at the ids).
+
+THE VICE RUN (added 19 Nov 2026, runs 48 hours)
+- A GTA VI bonus quiz. Page: gta.html. Code: app/gta.js, app/gta.css. Questions: app/gta.json.
+- Ten questions, 12 seconds each. Right answers pay cash (faster pays more); wrong or too slow adds a wanted star;
+  five stars = busted. Unlimited runs; each phone keeps its best.
+- The Games page shows its card in .fa-gta-slot only between "start" and "end" in gta.json (ends Sat 21 Nov 2026,
+  10:30pm Nairobi). After that the card disappears on its own and gta.html says the run is over. Nothing to remove.
+- Pictures are Rockstar Games artwork (img/gta6-*.jpg, img/vr-*.jpg), credited on screen. Facts come from the
+  already-verified GTA 6 Decoded story.
