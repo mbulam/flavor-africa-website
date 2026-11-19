@@ -225,3 +225,8 @@ THE VICE RUN (added 19 Nov 2026, runs 48 hours; three missions from 19 Nov 2026 
   10:30pm Nairobi). After that the card disappears on its own and gta.html says the run is over. Nothing to remove.
 - Pictures are Rockstar Games artwork (img/gta6-*.jpg, img/vr-*.jpg), credited on screen. Every answer is checked
   against 2+ independent sources.
+SECURITY (19 Nov 2026)
+- _headers sets security headers on every page (HTTPS-only, no framing by other sites, etc.). Cloudflare Pages
+  reads it; it is not served as a page.
+- The inbox (app/inbox.html#<ADMIN_KEY>) sends the key in an x-admin-key header, never in the web address,
+  so it stays out of request logs. The functions compare it in constant time.

@@ -8,7 +8,7 @@ table{border-collapse:collapse;width:100%}td{padding:8px 0;border-bottom:1px sol
 <script>(function(){var key=location.hash.slice(1),s=document.getElementById("s"),o=document.getElementById("o");
 function e(x){return String(x==null?"":x).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 if(!key){s.textContent="This page needs the private link.";return}
-fetch("/api/fanseat?key="+encodeURIComponent(key)).then(function(r){return r.json()}).then(function(d){
+fetch("/api/fanseat",{headers:{"x-admin-key":key},cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
 if(!d.ok){s.textContent=d.error==="locked"?"That link isn't right.":"The inbox isn't set up yet.";return}
 s.textContent="Fan Seat questions and the fans' pick. Private: don't share this link.";var h="",shows={},weeks={};
 d.questions.forEach(function(q){(shows[q.show]=shows[q.show]||[]).push(q)});
@@ -19,7 +19,7 @@ h+="<h2>Fans' pick, by week</h2>";if(!d.votes.length)h+='<p class="s">No picks y
 Object.keys(weeks).forEach(function(k){h+='<p class="s"><b>Week of '+e(k)+"</b></p><table>";weeks[k].forEach(function(v){h+="<tr><td>"+e(v.song)+"</td><td>"+v.n+"</td></tr>"});h+="</table>"});
 o.innerHTML=h;alerts()}).catch(function(){s.textContent="Couldn't load. Check your connection."})
 function alerts(){var w=document.createElement("div");o.insertBefore(w,o.firstChild);
-function draw(msg){fetch("/api/push?key="+encodeURIComponent(key)).then(function(r){return r.json()}).then(function(d){if(!d.ok)return;
+function draw(msg){fetch("/api/push",{headers:{"x-admin-key":key},cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(!d.ok)return;
 var x="<h2>Alerts</h2><p class=\"s\"><b>"+d.phones+"</b> "+(d.phones===1?"phone has":"phones have")+" alerts on. A new No. 1 and a new Flavor Cover send one on their own. Use this for anything else, sparingly.</p>"+
 "<form id=\"af\"><label>Title<input id=\"at\" maxlength=\"60\" required placeholder=\"e.g. Fan Seat is open\"></label><label>Message<textarea id=\"ab\" maxlength=\"160\" rows=\"2\" required></textarea></label>"+
 "<label>Opens (a page on the site)<input id=\"au\" maxlength=\"200\" value=\"/\" required></label><button type=\"submit\">Send alert</button> <span id=\"am\" class=\"s\">"+e(msg||"")+"</span></form>";

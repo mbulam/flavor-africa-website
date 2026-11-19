@@ -1,6 +1,6 @@
 // Fan Seat (added 10 Nov 2026): fans send a question for the artist of the next Flavor Artist Live show.
 //   POST /api/fanseat {name, q, id}   -> saves a question while Fan Seat is open (FAN_SEAT in _site.py)
-//   GET  /api/fanseat?key=<ADMIN_KEY> -> every question plus the weekly fans' pick totals, for the team's inbox page
+//   GET  /api/fanseat  (header x-admin-key: <ADMIN_KEY>) -> every question plus the weekly fans' pick totals, for the team's inbox page
 // Questions live in the Cloudflare D1 database bound to this Pages project as DB.
 // ADMIN_KEY is a secret set on the Pages project; without it the inbox stays closed.
 const H = { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" };
@@ -9,6 +9,15 @@ const out = (o, status = 200) => new Response(JSON.stringify(o), { status, heade
 async function hash(text) {
   const d = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
   return [...new Uint8Array(d)].slice(0, 12).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+// the key travels in a header (not the web address) so it never lands in request logs (19 Nov 2026)
+function isAdmin(key, env) {
+  const want = env.ADMIN_KEY || "";
+  key = String(key || "");
+  if (want.length < 16 || key.length !== want.length) return false;
+  let d = 0;
+  for (let i = 0; i < want.length; i++) d |= want.charCodeAt(i) ^ key.charCodeAt(i);
+  return d === 0;
 }
 const clean = (s, max) => String(s || "").replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().slice(0, max);
 
@@ -20,8 +29,7 @@ export async function onRequest({ request, env }) {
     const url = new URL(request.url);
 
     if (request.method === "GET") {
-      const key = url.searchParams.get("key") || "";
-      if (!env.ADMIN_KEY || key.length < 16 || key !== env.ADMIN_KEY) return out({ ok: false, error: "locked" }, 403);
+      if (!isAdmin(request.headers.get("x-admin-key"), env)) return out({ ok: false, error: "locked" }, 403);
       const qs = (await db.prepare("SELECT n, show, name, q, at FROM questions ORDER BY n DESC LIMIT 1000").all()).results || [];
       let votes = [];
       try { votes = (await db.prepare("SELECT week, song, COUNT(*) AS n FROM votes GROUP BY week, song ORDER BY week DESC, n DESC LIMIT 200").all()).results || []; } catch (e) {}

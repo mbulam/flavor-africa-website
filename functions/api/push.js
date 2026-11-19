@@ -1,7 +1,7 @@
 // Alerts for the home-screen app (added 11 Nov 2026).
 //   GET  /api/push                      -> the public key a phone needs to switch alerts on
 //   GET  /api/push?latest=1             -> the newest alert's words (the phone asks for this when an alert arrives)
-//   GET  /api/push?key=<ADMIN_KEY>      -> how many phones have alerts on, and the last alerts sent (for the inbox page)
+//   GET  /api/push (header x-admin-key) -> how many phones have alerts on, and the last alerts sent (for the inbox page)
 //   POST /api/push {endpoint, id}       -> a phone switches alerts on;  {endpoint, off: true} switches them off
 //   POST /api/push {key, title, body, url}  -> the team sends an alert from the inbox page ({key, more: true} carries on a long send)
 // Game reminders (Flavor Trivia and Flavor Connections, 16 Nov 2026), table rem, one row per phone per game:
@@ -24,6 +24,15 @@ const SITE = "https://flavorafricagroup.org";
 
 const b64u = (buf) => btoa(String.fromCharCode(...new Uint8Array(buf))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 const clean = (s, max) => String(s || "").replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().slice(0, max);
+// constant-time key check; the inbox sends the key in the x-admin-key header or the POST body, never the web address
+function isAdmin(key, env) {
+  const want = env.ADMIN_KEY || "";
+  key = String(key || "");
+  if (want.length < 16 || key.length !== want.length) return false;
+  let d = 0;
+  for (let i = 0; i < want.length; i++) d |= want.charCodeAt(i) ^ key.charCodeAt(i);
+  return d === 0;
+}
 const nairobi = () => new Date(Date.now() + 108e5).toISOString();
 
 async function setup(db) {
@@ -228,9 +237,9 @@ export async function onRequest({ request, env }) {
         if (!m || Date.now() - Date.parse(m.at) > 3 * 864e5) return out({ ok: true, alert: null });
         return out({ ok: true, alert: { n: m.n, title: m.title, body: m.body, url: m.url } });
       }
-      const key = url.searchParams.get("key");
+      const key = request.headers.get("x-admin-key");
       if (key !== null) {
-        if (!env.ADMIN_KEY || key.length < 16 || key !== env.ADMIN_KEY) return out({ ok: false, error: "locked" }, 403);
+        if (!isAdmin(key, env)) return out({ ok: false, error: "locked" }, 403);
         const c = await db.prepare("SELECT COUNT(*) AS n FROM subs").first();
         const sent = (await db.prepare("SELECT title, body, url, at, sent, done FROM outbox ORDER BY n DESC LIMIT 20").all()).results || [];
         return out({ ok: true, phones: c ? c.n : 0, sent });
@@ -243,7 +252,7 @@ export async function onRequest({ request, env }) {
     try { b = await request.json(); } catch (e) {}
 
     if (b.key !== undefined) { // the team, from the inbox page
-      if (!env.ADMIN_KEY || String(b.key).length < 16 || b.key !== env.ADMIN_KEY) return out({ ok: false, error: "locked" }, 403);
+      if (!isAdmin(b.key, env)) return out({ ok: false, error: "locked" }, 403);
       if (!b.more) {
         const title = clean(b.title, 60), body = clean(b.body, 160);
         let to = clean(b.url, 200) || "/";
