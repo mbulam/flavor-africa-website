@@ -59,7 +59,7 @@ GLOBAL_ARTISTS = {
     "justin bieber", "ed sheeran", "bruno mars", "lady gaga", "billie eilish", "sabrina carpenter", "doja cat",
     "21 savage", "lil baby", "playboi carti", "kanye west", "ye", "j. cole", "post malone", "morgan wallen",
     "bad bunny", "offset", "quavo", "gunna", "lil durk", "young thug", "nicki minaj", "cardi b", "rosé", "olivia rodrigo", "ariana grande", "dua lipa", "coldplay", "metro boomin", "gunna",
-    "yanlml", "leto", "jeune lion", "2 mètres", "l2b", "la fève", "la feve", "gazo", "hamza", "niska", "pnl", "zola", "tayc",
+    "yanlml", "leto", "jeune lion", "2 mètres", "l2b", "la b7", "la fève", "la feve", "gazo", "hamza", "niska", "pnl", "zola", "tayc",
 }
 
 
