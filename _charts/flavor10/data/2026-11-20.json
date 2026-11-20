@@ -15,17 +15,10 @@
    "apple": "6822410197"
   },
   {
-   "title": "Chai ya Saa Kumi",
-   "artist": "Ywaya Tajiri",
-   "points": 47,
-   "charts": "PYR",
-   "apple": "6796900642"
-  },
-  {
    "title": "Finale",
    "artist": "Bien ft. Alikiba",
-   "points": 41,
-   "charts": "YR"
+   "points": 64,
+   "charts": "PYR"
   },
   {
    "title": "Heaven Baby",
@@ -35,10 +28,29 @@
    "apple": "6796539210"
   },
   {
+   "title": "Chai ya Saa Kumi",
+   "artist": "Ywaya Tajiri",
+   "points": 37,
+   "charts": "PYR",
+   "apple": "6796900642"
+  },
+  {
    "title": "Oh No",
    "artist": "Rema",
    "points": 33,
    "charts": "PY"
+  },
+  {
+   "title": "Signs",
+   "artist": "Bien, 2 Chainz & Pape Gen Z",
+   "points": 28,
+   "charts": "P"
+  },
+  {
+   "title": "Alusa Continua",
+   "artist": "Bien",
+   "points": 26,
+   "charts": "P"
   },
   {
    "title": "Asali",
@@ -47,28 +59,16 @@
    "charts": "R"
   },
   {
+   "title": "Kaumbete",
+   "artist": "Bien & Coster Ojwang",
+   "points": 25,
+   "charts": "P"
+  },
+  {
    "title": "Forgiveness",
    "artist": "Asake",
    "points": 24,
    "charts": "P"
-  },
-  {
-   "title": "Dai Dai",
-   "artist": "Shakira, Burna Boy",
-   "points": 24,
-   "charts": "Y"
-  },
-  {
-   "title": "Gratitude",
-   "artist": "Asake",
-   "points": 23,
-   "charts": "P"
-  },
-  {
-   "title": "Bounce",
-   "artist": "ruger",
-   "points": 23,
-   "charts": "R"
   }
  ]
 }
