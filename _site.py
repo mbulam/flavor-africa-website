@@ -550,7 +550,7 @@ def f10_list(ed, n, show):
         elif x.get("year"):
             note = " · " + x["year"]
         wave = ""
-        if chart and x.get("points"):
+        if False and chart and x.get("points"):   # wave bars dropped in the Games-page look (20 Nov 2026)
             W = 300 * x["points"] / top
             random.seed(i * 7 + 3)
             bars = "".join('<rect x="%d" y="%.1f" width="2.4" height="%.1f" rx="1.2"/>' % (xx, (24 - v) / 2, v)
@@ -581,22 +581,23 @@ def flavor10_html():
             on = x is ed
             if on: shown = n
             lists.append(f10_list(x, n, on))
-            tabs.append('<button type="button" role="tab" data-n="%d" aria-selected="%s"><b>%s</b><span>%s</span></button>' % (n, "true" if on else "false", day, F10_SHORT[n]))
+            tabs.append('<button type="button" role="tab" data-n="%d" aria-selected="%s"><b>%s</b> <span>%s</span></button>' % (n, "true" if on else "false", day, F10_SHORT[n]))
         else:
             soon = n > today.weekday()
-            tabs.append('<button type="button" role="tab" disabled title="%s"><b>%s</b><span>%s</span></button>' % ("Drops " + day if soon else "No list", day, F10_SHORT[n] if soon else "—"))
+            tabs.append('<button type="button" role="tab" disabled title="%s"><b>%s</b> <span>%s</span></button>' % ("Drops " + day if soon else "No list", day, F10_SHORT[n] if soon else "—"))
     if shown is None:   # today's list is Kenya from an earlier date (Monday's list missing)
         lists.insert(0, f10_list(ed, today.weekday(), True))
     player = ('<aside class="f10-pl" aria-label="Flavor 10 player"><div class="f10-art"><img alt="" hidden><span class="f10-ph">flavor.<b>10</b></span></div>'
-              '<div class="f10-now"><span class="tag">Now playing</span><b id="f10-title">%s</b><span id="f10-artist">%s</span></div>'
+              '<div class="f10-now"><i class="k">Now playing</i><b id="f10-title">%s</b><span id="f10-artist">%s</span></div>'
               '<div class="f10-ctl"><button class="f10-big" type="button" aria-label="Play preview"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="pl" d="M8 5.5v13l11-6.5z"/><path class="pa" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>'
               '<div class="f10-prog"><i></i></div><span class="f10-time">0:30</span></div>'
               '<p class="f10-note">30-second previews. Listen in full:</p><div class="f10-links"><a id="f10-sp" target="_blank" rel="noopener">Spotify</a><a id="f10-am" target="_blank" rel="noopener">Apple Music</a><a id="f10-yt" target="_blank" rel="noopener">YouTube</a></div>'
               '<audio preload="none"></audio></aside>' % (e(ed["songs"][0]["title"]), e(ed["songs"][0]["artist"])))
     when = datetime.date.fromisoformat(ed["date"]).strftime("%A %-d %B")
     sub = (ed.get("theme") + ". " if ed.get("theme") else "") + ed.get("line", "")
-    return ('<section class="wrap block" id="flavor-10"><div class="secbar"><h2>The Flavor 10 · <span class="f10-name">%s</span></h2>'
-            '<a href="charts.html">More charts »</a></div>'
+    return ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap">'
+            '<section class="wrap block f10x" id="flavor-10"><div class="f10-head"><h2 class="f10-cap"><span>The Flavor 10</span> <b class="f10-name">%s</b></h2>'
+            '<a href="charts.html">More charts</a></div>'
             '<div class="f10-week" role="tablist" aria-label="This week\'s Flavor 10s">%s</div>'
             '<p class="f10-sub">%s</p>'
             '<div class="f10-grid"><div class="f10-lists">%s</div>%s</div>'

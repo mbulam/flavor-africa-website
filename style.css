@@ -460,3 +460,59 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 .noms .a{color:var(--mute);font-size:14px;text-align:right;flex:0 1 46%}
 @media (max-width:520px){.noms li{flex-direction:column;gap:2px}.noms .a{text-align:left}}
 .art .body ul.noms{padding-left:0;margin-left:0}
+
+/* The Flavor 10 in the Games-page look (20 Nov 2026): Inter, ALL CAPS light + bold title, white rounded cards,
+   black pills, purple only on small labels, yellow only for the No. 1 and the song that's playing. */
+#flavor-10.f10x{--fxf:"Inter Display","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;font-family:var(--fxf)}
+.f10x .f10-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin:0 0 10px}
+.f10x .f10-cap{margin:0;font-family:var(--fxf);font-size:44px;line-height:.98;letter-spacing:-.015em;text-transform:uppercase;color:var(--ink)}
+.f10x .f10-cap span{font-weight:300}.f10x .f10-cap b{font-weight:700}
+.f10x .f10-head a{flex:none;font:600 14px/1 var(--fxf);color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:22px;padding:11px 16px}
+.f10x .f10-head a:hover{border-color:var(--ink)}
+.f10x .f10-sub{font:400 15px/1.45 var(--fxf);color:var(--mute);margin:0 0 16px}
+.f10x .f10-week{display:flex;gap:8px;border:0;margin:0 0 14px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.f10x .f10-week::-webkit-scrollbar{display:none}
+.f10x .f10-week button{flex:none;flex-direction:row;gap:5px;border:1px solid var(--line);border-radius:22px;padding:0 15px;min-height:40px;align-items:center;background:var(--paper);color:var(--ink)}
+.f10x .f10-week button:first-child{border-left:1px solid var(--line)}
+.f10x .f10-week b{font:500 13px/1 var(--fxf);letter-spacing:0;text-transform:none;color:var(--mute)}
+.f10x .f10-week span{font:600 14px/1 var(--fxf);text-transform:none;letter-spacing:0;overflow:visible}
+.f10x .f10-week button[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.f10x .f10-week button[aria-selected=true] b{color:var(--paper);opacity:.7}
+.f10x .f10-week button:not([disabled]):not([aria-selected=true]):hover{background:var(--paper);border-color:var(--ink)}
+.f10x .f10-week button[disabled]{opacity:.45}
+.f10x .f10-grid{gap:24px}
+.f10x .f10{border:1px solid var(--line);border-radius:8px;padding:4px 16px;background:var(--paper)}
+.f10x .f10 li{grid-template-columns:52px minmax(0,1fr) 40px;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.f10x .f10 li:last-child{border-bottom:0}
+.f10x .f10 li:hover,.f10x .f10 li.sel:not(.one){background:none}
+.f10x .f10 li.one{background:none;color:var(--ink);padding:12px 0;border-bottom:1px solid var(--line)}
+.f10x .f10-rk{width:52px;height:52px;border-radius:4px;background:rgba(127,127,127,.11);color:var(--ink);font:700 20px/1 var(--fxf);align-items:center;justify-content:center;gap:2px}
+.f10x .one .f10-rk{background:#0b0b0b;color:#F5CC11;font-size:26px}
+.f10x .f10-t b{font:600 16px/1.25 var(--fxf);text-transform:none;letter-spacing:0;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.f10x .one .f10-t b{font-size:17px;color:var(--ink)}
+.f10x .f10-t span{font:400 13.5px/1.35 var(--fxf);color:var(--mute);white-space:normal}
+.f10x .one .f10-t span{color:var(--mute)}
+.f10x .mv{font:600 10px/1 var(--fxf);letter-spacing:0;border:0;padding:0;background:none}
+.f10x .one .mv{color:#F5CC11}
+.f10x .mv.new{background:none;color:var(--accent);font-size:8.5px}
+.f10x .f10-btn{width:40px;height:40px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.f10x .one .f10-btn{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.f10x .f10 li.on .f10-btn{background:#F5CC11;border-color:#F5CC11;color:#0b0b0b}
+.f10x .f10 li.on .f10-t b{color:var(--ink)}
+.f10x .f10-pl{border-radius:8px;background:var(--paper)}
+.f10x .f10-art{border-radius:6px;background:#0b0b0b}
+.f10x .f10-ph{font-family:var(--fxf)}.f10x .f10-ph b{color:#F5CC11}
+.f10x .f10-now .k{display:block;font:500 12.5px/1.3 var(--fxf);font-style:normal;color:var(--accent);margin-bottom:4px}
+.f10x .f10-now b{font:700 26px/1.02 var(--fxf);letter-spacing:-.01em}
+.f10x .f10-big{background:var(--ink);color:var(--paper)}
+.f10x.playing .f10-big,.f10x .playing .f10-big{background:#F5CC11;color:#0b0b0b}
+.f10x .f10-prog i{background:var(--ink)}
+.f10x .f10-time{font:500 12px/1 var(--fxf)}
+.f10x .f10-note{font:400 13px/1.4 var(--fxf)}
+.f10x .f10-links a{font:600 13px/1 var(--fxf);letter-spacing:0;text-transform:none;border-radius:20px;padding:10px 14px;color:var(--ink)}
+.f10x .f10-links a:hover{border-color:var(--ink)}
+.f10x .f10-src,.f10x .f10-how{font-family:var(--fxf)}
+@media (max-width:900px){.f10x .f10-pl{border-radius:8px}.f10x .f10-art{width:88px;height:88px}.f10x .f10-now b{font-size:20px}}
+@media (max-width:640px){.f10x .f10-cap{font-size:34px}.f10x .f10-head a{padding:9px 12px;font-size:13px}
+  .f10x .f10-week b{font-size:12px}.f10x .f10-week span{font-size:13px}.f10x .f10-week button{padding:0 12px;min-height:38px}
+  .f10x .f10{padding:2px 12px}.f10x .f10 li{grid-template-columns:44px minmax(0,1fr) 38px;gap:12px}.f10x .f10-rk{width:44px;height:44px;font-size:17px}.f10x .one .f10-rk{font-size:22px}}
