@@ -21,6 +21,7 @@ e = lambda s: html.escape(s, quote=True)
 
 # slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, or YYYY-MM-DDTHH:MM to go live at a set time; Nairobi), image focus
 STORIES = [
+ ("fifa-presidential-race-2027", ["sport"], "Flavor Sports", "Infantino has a race on his hands: Diallo and Tashima confirmed", "France's federation boss and Japan's former FA chief will face him in Rabat. Africa's 54 votes already back him.", "sp-fifa-infantino.jpg", "2026-11-20T17:00", "center 20%"),
  ("oprah-daily-closing", ["news", "culture"], "The Wrap", "Oprah's magazine is closing after 26 years", "Oprah Daily, once O, The Oprah Magazine, ends in December. She's moving on to her podcast and a live show.", "wr-oprah-daily.jpg", "2026-11-20T15:45", "center 15%"),
  ("the-drop-20-nov-2026", ["music"], "The Drop", "The Drop: Bien's Alusa Continua, Rema's E-Mortal Boy, Otile Brown and more", "Five new releases for 20 November, led by Kenya.", "drop2-bien.jpg", "2026-11-20T13:30", "center 40%"),
  ("watchlist-20-22-nov", ["screen"], "The Watchlist", "Must watch this weekend: Sunrise on the Reaping, Steps and more", "Haymitch's Hunger Games, Anele Mdoda's wedding and three new Netflix titles.", "wl3-hunger-games-thumb.jpg", "2026-11-20T13:30", "center 40%"),
