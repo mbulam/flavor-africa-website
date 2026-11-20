@@ -8,3 +8,5 @@
 /.gitignore / 302
 /functions/* / 302
 /wrangler.toml / 302
+/sunday-reset.html /music.html 301
+/sunday-reset /music.html 301

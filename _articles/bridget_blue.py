@@ -13,7 +13,7 @@ BODY = [
 ("p", "She also asked fans to keep sharing the music: “You never know how far your like or your share can take us.”"),
 ("h2", "The album", "Twelve tracks, ", "her way"),
 ("p", "<em>RNB</em> came out on 31 March 2026 with 12 tracks. “We released 12 tracks into the world and the reception was absolutely amazing,” she said. It is the most personal record of her eight years in music, and it has quietly become one of the Kenyan albums of the year."),
-("p", "If you only know her from “I Choose You” with Bien, which made our <a href=\"sunday-reset.html\">Sunday Reset</a> playlist, start there and then play the album through."),
+("p", "If you only know her from “I Choose You” with Bien, start there and then play the album through."),
 ]
 
 SOURCES = [

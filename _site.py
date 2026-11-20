@@ -66,7 +66,6 @@ STORIES = [
  # Ayrosh show on hold (10 Nov 2026): hidden from every listing until it is confirmed. To bring it back, remove the "#" below
  # and put the Ayrosh hero, ticker line, purple band and About-page line back (see git history for 10 Nov 2026).
  # ("ayrosh", ["live", "music"], "Flavor Artist Live", "Know your next artist: Ayrosh", "Mugithi, reimagined. Ayrosh headlines Flavor Artist Live. Date to be announced.", "ay-cover.jpg", "2026-10-25", "center 30%"),
- ("sunday-reset", ["music"], "Flavor Playlist", "Sunday Reset: six songs for a slow Sunday", "Flavor Playlist Vol. 01, from Sade to Black Coffee and Msaki.", "sunday-reset-poster.jpg", "2026-10-25", "center"),
  ("true-colors-at-40", ["culture"], "Flavor Rewind", "True Colors at 40: Cyndi Lauper's No. 1, four decades on", "Forty years ago today, a quiet ballad went to No. 1.", "tc-beret.jpg", "2026-10-25", "center 20%"),
  ("lupita-in-their-words", ["culture"], "In Their Words", "In Their Words: Lupita Nyong'o on beauty", "“You can't eat beauty. It doesn't feed you.”", "itw-lupita.jpg", "2026-10-25", "center 30%"),
  ("mr-eazi", ["money"], "Money Moves", "Mr Eazi: singer, investor, owner", "Seven moves that turned an Afrobeats star into a business.", "me-cover.jpg", "2026-10-26", "center 20%"),
