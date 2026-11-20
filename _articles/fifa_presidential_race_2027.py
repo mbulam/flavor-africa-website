@@ -26,10 +26,10 @@ BODY = [
 ("p", "Tashima, 68, played for Japan, sat on the FIFA Council from 2015 and led the Japan Football Association from 2016 to 2024, when he became its honorary president. He is the first Japanese candidate for FIFA's top job, and he is running on governance and integrity, saying he wants FIFA to be a more trusted organisation."),
 ("p", "His problem is at home. The Asian Football Confederation, with 47 members, has already backed Infantino. Tashima himself puts his chances at 20 to 30 percent."),
 ("h2", "The swing vote", "Where ", "Concacaf stands"),
-("p", "Concacaf's 41 members are the bloc nobody can count yet. All 41 sent letters backing Infantino before the World Cup, but after the stake-sale row The Guardian reported that many were thinking about withdrawing them. Concacaf president Victor Montagliani chose not to run himself, and the confederation has not publicly lined up behind either challenger."),
+("p", "Concacaf's 41 members are the bloc nobody can count yet. All 41 sent letters backing Infantino before the World Cup, but after the stake-sale row The Guardian reported that many were thinking about withdrawing them. Concacaf president Victor Montagliani chose not to run himself, so where those 41 votes land is still an open question."),
 ("h2", "Why Africa matters", "54 votes, ", "one direction"),
 ("p", "This is where it gets interesting for us. CAF's 54 member associations make up the biggest single bloc in FIFA, close to a quarter of the 211 votes. In April 2026, in Vancouver, all 54 agreed to back Infantino for 2027 to 2031, and CAF president Patrice Motsepe repeated that unanimous support in October. Asia's AFC, with 47 members, and South America's CONMEBOL, with 10, are behind him too."),
-("p", "Add those up and Infantino has public pledges from 111 federations, five more than the 106 needed. On paper, that's enough. But the vote is secret, and pledges made in April were made before July's rows."),
+("p", "Add those up and Infantino has public pledges from 111 federations, five more than the 106 needed. On paper, that's enough. But the vote is secret, so a pledge isn't a guaranteed vote."),
 ("p", "So the election that will decide who runs world football is being held in Africa, and Africa has already said who it wants. Whether that holds for four more months, through a secret ballot, is the real question in Rabat."),
 ]
 
