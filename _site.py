@@ -643,7 +643,8 @@ rows[0].classList.add("sel");cur=null;links(rows[0],null);find(rows[0],function(
 def build_flavor10():
     h = rd("index.html")
     block = flavor10_html()
-    h = re.sub(r'<section class="wrap block" id="flavor-10">.*?</section>', "", h, flags=re.S)
+    h = re.sub(r'<link rel="stylesheet" href="https://fonts\.googleapis\.com/css2\?family=Inter[^>]*>(?=<section[^>]*id="flavor-10")', "", h)
+    h = re.sub(r'<section class="wrap block[^"]*" id="flavor-10">.*?</section>', "", h, flags=re.S)
     # remove the chart's player script too, or every rebuild would add another copy
     h = re.sub(r'<script>\(function\(\)\{var sec=document\.getElementById\("flavor-10"\).*?</script>', "", h, flags=re.S)
     if block:
