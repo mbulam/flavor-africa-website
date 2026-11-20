@@ -201,7 +201,7 @@ SECTIONS=[
  ('fashion','Fashion',['Flavor Fashion'],'Style, written like an editorial spread.'),
  ('money','Business',['Money Moves','Flavor Figures'],'The real ownership moves behind entertainment, and the numbers that tell the story.'),
  ('sport','Sport',['Flavor Sports'],'Where sport meets music, fashion and business.'),
- ('culture','Culture',['Flavor Roots','Flavor Decoded','Flavor Rewind','In Their Words'],'Where the culture comes from, what it means, and the moments worth remembering.'),
+ ('culture','Culture',['Flavor Roots','Flavor Decoded','Flavor Rewind'],'Where the culture comes from, what it means, and the moments worth remembering.'),
  ('features','Features',['Flavor Feature','The Flavor Cover','The Flavor Edit'],'Long reads, the monthly cover story and the weekly round-up.'),
  ('live','Live',['Flavor Artist Live','Nairobi This Weekend','Fan Seat'],'Flavor Artist Live, our own shows, and the biggest events in Nairobi each weekend.'),
 ]

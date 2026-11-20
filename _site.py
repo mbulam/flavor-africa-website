@@ -67,7 +67,6 @@ STORIES = [
  # and put the Ayrosh hero, ticker line, purple band and About-page line back (see git history for 10 Nov 2026).
  # ("ayrosh", ["live", "music"], "Flavor Artist Live", "Know your next artist: Ayrosh", "Mugithi, reimagined. Ayrosh headlines Flavor Artist Live. Date to be announced.", "ay-cover.jpg", "2026-10-25", "center 30%"),
  ("true-colors-at-40", ["culture"], "Flavor Rewind", "True Colors at 40: Cyndi Lauper's No. 1, four decades on", "Forty years ago today, a quiet ballad went to No. 1.", "tc-beret.jpg", "2026-10-25", "center 20%"),
- ("lupita-in-their-words", ["culture"], "In Their Words", "In Their Words: Lupita Nyong'o on beauty", "“You can't eat beauty. It doesn't feed you.”", "itw-lupita.jpg", "2026-10-25", "center 30%"),
  ("mr-eazi", ["money"], "Money Moves", "Mr Eazi: singer, investor, owner", "Seven moves that turned an Afrobeats star into a business.", "me-cover.jpg", "2026-10-26", "center 20%"),
  ("savara", ["features", "music"], "Flavor Feature", "Savara: the rhythm before the spotlight", "After 17 years helping shape Sauti Sol's sound, Savara is making room for a sound of his own.", "savara-1.jpg", "2026-10-26", "center 0%"),
  ("tg-blk", ["music"], "Flavor Spotlight", "tg.blk: the Mombasa bedroom producer opening doors for alternative music", "The artist to watch from the coast.", "tg-2026.jpg", "2026-10-27", "center 25%"),
@@ -169,7 +168,7 @@ TODAYS_PICKS = {"know": "tg-blk", "know_name": "tg.blk",
 # Worked out in the browser on Nairobi time, so it changes at midnight and picks up
 # scheduled stories the moment they go live.
 PICK_TAGS = {"The Flavor Cover", "Flavor Feature", "Money Moves", "Flavor Roots", "Flavor Rewind", "Flavor Decoded",
-             "The Verdict", "Flavor Spotlight", "In Their Words", "Flavor Fashion", "Flavor Artist Live",
+             "The Verdict", "Flavor Spotlight", "Flavor Fashion", "Flavor Artist Live",
              "Flavor Sports"}
 PICK_DAYS = 30
 PICKJS = ('<script>(function(){var g=document.querySelector(".sides[data-pool]");if(!g)return;'
