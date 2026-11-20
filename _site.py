@@ -21,6 +21,8 @@ e = lambda s: html.escape(s, quote=True)
 
 # slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, or YYYY-MM-DDTHH:MM to go live at a set time; Nairobi), image focus
 STORIES = [
+ ("the-drop-20-nov-2026", ["music"], "The Drop", "The Drop: Bien's Alusa Continua, Rema's E-Mortal Boy, Otile Brown and more", "Five new releases for 20 November, led by Kenya.", "drop2-bien.jpg", "2026-11-20T13:30", "center 40%"),
+ ("watchlist-20-22-nov", ["screen"], "The Watchlist", "Must watch this weekend: Sunrise on the Reaping, Steps and more", "Haymitch's Hunger Games, Anele Mdoda's wedding and three new Netflix titles.", "wl3-hunger-games-thumb.jpg", "2026-11-20T13:30", "center 40%"),
  ("pochettino-manchester-united", ["sport"], "Flavor Sports", "Pochettino takes the Manchester United job", "18th, one league win, and Liverpool at Anfield first. The job he walks into.", "sp-pochettino-night.jpg", "2026-11-19T19:10", "center 25%"),
  ("gta-6-why-its-a-big-deal", ["culture"], "Flavor Decoded", "GTA 6, decoded: why the world is counting down", "Thirteen years, two delays and a predecessor that beat Hollywood to $1 billion. Why Thursday matters.", "gta6-lead.jpg", "2026-11-17T14:15", "center 30%"),
  ("floyd-norman-honorary-oscar", ["news", "screen"], "The Wrap", "Floyd Norman receives an honorary Oscar", "Disney's first Black animator is only the fourth animator ever to get one.", "wr-floyd-norman.jpg", "2026-11-17T10:45", "center 20%"),
