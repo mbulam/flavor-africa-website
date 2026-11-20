@@ -1,8 +1,24 @@
 // Flavor Connections (added 16 Nov 2026): one puzzle a day. Sixteen tiles, four hidden groups of four, four mistakes allowed.
 // It has its own page, connections.html (website and app); in the app, a card on Today links to it.
 // Puzzles live in /app/connections.json, one per Nairobi date. A day with no puzzle hides the card on Today.
-// Progress, results and streak are kept on the phone (localStorage); nothing is sent anywhere.
+// Progress, results and streak are kept on the phone (localStorage). Only a play count goes to /api/plays (20 Nov 2026).
 (function () {
+  // Counts plays for the team (20 Nov 2026): the same random phone code as the fans' pick, no name. Sent to /api/plays,
+  // one row per phone per game per day. Phones that said "No thanks" to cookies aren't counted.
+  function faPlay(game, ev, score) {
+    try {
+      if (localStorage.getItem("fa-cookies") === "no") return;
+      var id = ""; try { id = JSON.parse(localStorage.getItem("fa-id") || '""'); } catch (e) {}
+      if (!/^[a-z0-9]{24}$/.test(id)) {
+        var a = new Uint8Array(24), abc = "abcdefghijklmnopqrstuvwxyz0123456789"; id = "";
+        (window.crypto || window.msCrypto).getRandomValues(a);
+        for (var k = 0; k < 24; k++) id += abc[a[k] % 36];
+        localStorage.setItem("fa-id", JSON.stringify(id));
+      }
+      fetch("/api/plays", { method: "POST", keepalive: true, headers: { "content-type": "application/json" },
+        body: JSON.stringify({ id: id, game: game, ev: ev, score: score == null ? null : score, app: document.documentElement.classList.contains("app") ? 1 : 0 }) }).catch(function () {});
+    } catch (e) {}
+  }
   if (!document.querySelector('link[href="/app/connections.css"]')) { var css = document.createElement("link"); css.rel = "stylesheet"; css.href = "/app/connections.css"; document.head.appendChild(css); }
   var PAGE = document.getElementById("fa-cx-page");
   var LIVES = 4, SQ = ["🟨", "🟩", "🟦", "🟪"];
@@ -115,6 +131,7 @@
     var key = sel.slice().sort().join("|");
     if (st.tries.some(function (t) { return t.slice().sort().join("|") === key; })) { toast("You've already tried that one."); return; }
     st.tries.push(sel.slice());
+    if (st.tries.length === 1) faPlay("connections", "start");
     if (st.tries.length === 1 && window.faRemind && window.faRemind.played) window.faRemind.played("connections", "started");
     var count = [0, 0, 0, 0]; sel.forEach(function (w) { count[group(w)]++; });
     var best = Math.max.apply(null, count), g = count.indexOf(best);
@@ -143,6 +160,7 @@
       if (s.last !== today) { s.n = s.last === yday ? s.n + 1 : 1; s.last = today; store.set("fa-cx-streak", s); }
     } else store.set("fa-cx-streak", { last: "", n: 0 });
     save(); sel = []; drawEnd();
+    faPlay("connections", "done", won ? 1 : 0);
     if (window.faRemind && window.faRemind.played) window.faRemind.played("connections", "done");   // no nudge tonight
   }
 

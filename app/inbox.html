@@ -10,14 +10,36 @@ function e(x){return String(x==null?"":x).replace(/[&<>"]/g,function(c){return{"
 if(!key){s.textContent="This page needs the private link.";return}
 fetch("/api/fanseat",{headers:{"x-admin-key":key},cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
 if(!d.ok){s.textContent=d.error==="locked"?"That link isn't right.":"The inbox isn't set up yet.";return}
-s.textContent="Fan Seat questions and the fans' pick. Private: don't share this link.";var h="",shows={},weeks={};
+s.textContent="Game plays, alerts, Fan Seat questions and the fans' pick. Private: don't share this link.";var h="",shows={},weeks={};
 d.questions.forEach(function(q){(shows[q.show]=shows[q.show]||[]).push(q)});
 h+="<h2>Fan Seat questions</h2>";if(!d.questions.length)h+='<p class="s">No questions yet.</p>';
 Object.keys(shows).forEach(function(k){h+='<p class="s"><b>'+e(k)+"</b> · "+shows[k].length+"</p><ul>";shows[k].forEach(function(q){h+="<li>"+e(q.q)+"<small>"+e(q.name||"No name")+" · "+e(new Date(q.at).toLocaleString("en-KE",{timeZone:"Africa/Nairobi"}))+"</small></li>"});h+="</ul>"});
 d.votes.forEach(function(v){(weeks[v.week]=weeks[v.week]||[]).push(v)});
 h+="<h2>Fans' pick, by week</h2>";if(!d.votes.length)h+='<p class="s">No picks yet.</p>';
 Object.keys(weeks).forEach(function(k){h+='<p class="s"><b>Week of '+e(k)+"</b></p><table>";weeks[k].forEach(function(v){h+="<tr><td>"+e(v.song)+"</td><td>"+v.n+"</td></tr>"});h+="</table>"});
-o.innerHTML=h;alerts()}).catch(function(){s.textContent="Couldn't load. Check your connection."})
+o.innerHTML=h;alerts();games()}).catch(function(){s.textContent="Couldn't load. Check your connection."})
+function games(){var w=document.createElement("div");o.insertBefore(w,o.firstChild);
+var NAME={trivia:"Flavor Trivia",connections:"Flavor Connections",mini:"Flavor Mini",vicerun:"The Vice Run",heist:"The Heist (Vice Run hard mode)"},ORDER=["trivia","connections","mini","vicerun","heist"];
+function n(x){return Number(x||0).toLocaleString("en-KE")}
+function avg(g){if(g.avg==null)return"–";if(g.game==="trivia")return g.avg+"/10";if(g.game==="connections")return Math.round(g.avg*100)+"% solved";if(g.game==="vicerun"||g.game==="heist")return"$"+n(Math.round(g.avg));return"–"}
+function day(d){return new Date(d+"T12:00:00Z").toLocaleDateString("en-KE",{weekday:"short",day:"numeric",month:"short",timeZone:"UTC"})}
+fetch("/api/plays",{headers:{"x-admin-key":key},cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(!d.ok)return;
+var by={};d.games.forEach(function(g){by[g.game]=g});
+var x="<h2>Games</h2><p class=\"s\"><b>"+n(d.all.today)+"</b> "+(d.all.today===1?"person has":"people have")+" played a game today · <b>"+n(d.all.people)+"</b> in all"+(d.since?" since "+e(day(d.since)):"")+". Each person counts once per game per day, however many times they refresh. People who said No thanks to cookies aren't counted.</p>";
+var seen=ORDER.filter(function(k){return by[k]});
+if(!seen.length)x+='<p class="s">No plays counted yet. They start adding up from the next game someone plays.</p>';
+seen.forEach(function(k){var g=by[k];x+='<p class="s" style="margin-top:18px"><b>'+e(NAME[k]||k)+'</b></p><table>'+
+"<tr><td>Played today</td><td>"+n(g.today)+" ("+n(g.today_done)+" finished)</td></tr>"+
+"<tr><td>Played in the last 7 days</td><td>"+n(g.week)+"</td></tr>"+
+"<tr><td>Played in all</td><td>"+n(g.people)+"</td></tr>"+
+"<tr><td>Finished</td><td>"+n(g.finished)+"</td></tr>"+
+(k==="vicerun"||k==="heist"?"<tr><td>Runs finished (replays included)</td><td>"+n(g.runs)+"</td></tr>":"")+
+"<tr><td>Average result</td><td>"+avg(g)+"</td></tr>"+
+"<tr><td>Played in the app (not the website)</td><td>"+n(g.in_app)+"</td></tr></table>"});
+if(d.ballots!=null)x+='<p class="s" style="margin-top:18px"><b>The Flavor Ballot</b></p><table><tr><td>Ballots sent in</td><td>'+n(d.ballots)+"</td></tr></table>";
+if(d.days.length){var ds={};d.days.forEach(function(r){(ds[r.day]=ds[r.day]||{})[r.game]=r.n});
+x+='<p class="s" style="margin-top:18px"><b>People per day</b> (last 14 days)</p><table>';Object.keys(ds).sort().reverse().forEach(function(k){var parts=ORDER.filter(function(g){return ds[k][g]}).map(function(g){return(NAME[g]||g).replace("Flavor ","").replace(" (Vice Run hard mode)","")+" "+n(ds[k][g])});x+="<tr><td>"+e(day(k))+"</td><td>"+e(parts.join(" · "))+"</td></tr>"});x+="</table>"}
+w.innerHTML=x}).catch(function(){})}
 function alerts(){var w=document.createElement("div");o.insertBefore(w,o.firstChild);
 function draw(msg){fetch("/api/push",{headers:{"x-admin-key":key},cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(!d.ok)return;
 var x="<h2>Alerts</h2><p class=\"s\"><b>"+d.phones+"</b> "+(d.phones===1?"phone has":"phones have")+" alerts on. A new No. 1 and a new Flavor Cover send one on their own. Use this for anything else, sparingly.</p>"+

@@ -1,8 +1,24 @@
 // Flavor Trivia (added 16 Nov 2026): ten questions a day, 15 seconds each, one theme per day.
 // It has its own page, trivia.html (website and app); in the app, a card on Today links to it.
 // Questions live in /app/trivia.json, one set per Nairobi date. A day with no set hides the card on Today.
-// Scores, streak and answers are kept on the phone (localStorage); nothing is sent anywhere.
+// Scores, streak and answers are kept on the phone (localStorage). Only a play count goes to /api/plays (20 Nov 2026).
 (function () {
+  // Counts plays for the team (20 Nov 2026): the same random phone code as the fans' pick, no name. Sent to /api/plays,
+  // one row per phone per game per day. Phones that said "No thanks" to cookies aren't counted.
+  function faPlay(game, ev, score) {
+    try {
+      if (localStorage.getItem("fa-cookies") === "no") return;
+      var id = ""; try { id = JSON.parse(localStorage.getItem("fa-id") || '""'); } catch (e) {}
+      if (!/^[a-z0-9]{24}$/.test(id)) {
+        var a = new Uint8Array(24), abc = "abcdefghijklmnopqrstuvwxyz0123456789"; id = "";
+        (window.crypto || window.msCrypto).getRandomValues(a);
+        for (var k = 0; k < 24; k++) id += abc[a[k] % 36];
+        localStorage.setItem("fa-id", JSON.stringify(id));
+      }
+      fetch("/api/plays", { method: "POST", keepalive: true, headers: { "content-type": "application/json" },
+        body: JSON.stringify({ id: id, game: game, ev: ev, score: score == null ? null : score, app: document.documentElement.classList.contains("app") ? 1 : 0 }) }).catch(function () {});
+    } catch (e) {}
+  }
   var R = document.documentElement;
   // its own styles, so the page also works on the website (not just the app)
   ["/app/fx.css", "/app/trivia.css"].forEach(function (h) { if (!document.querySelector('link[href="' + h + '"]')) { var css = document.createElement("link"); css.rel = "stylesheet"; css.href = h; document.head.appendChild(css); } });
@@ -107,7 +123,7 @@
     for (var m = 3; m > 0; m--) { seed = (seed * 1103515245 + 12345) >>> 0; var r = seed % (m + 1), t = o[m]; o[m] = o[r]; o[r] = t; }
     return o;
   }
-  function start() { st = { score: 0, pts: 0, ans: [], i: 0, done: false }; ask(); }
+  function start() { st = { score: 0, pts: 0, ans: [], i: 0, done: false }; faPlay("trivia", "start"); ask(); }
 
   function ask() {
     var q = set.qs[st.i], left = SECS;
@@ -156,6 +172,7 @@
     var s = store.get("fa-tv-streak", { last: "", n: 0 });
     if (s.last !== today) { s.n = s.last === yday ? s.n + 1 : 1; s.last = today; store.set("fa-tv-streak", s); }
     store.set("fa-tv-" + today, { score: st.score, pts: st.pts, ans: st.ans, done: true });
+    faPlay("trivia", "done", st.score);
     if (window.faRemind && window.faRemind.played) window.faRemind.played("trivia", "done");   // no nudge tonight
     drawResults();
   }

@@ -1,8 +1,24 @@
 // Flavor Mini (added 16 Nov 2026): a 5x5 crossword a day, on the same theme as that day's Flavor Trivia
 // but never reusing a trivia question. It has its own page, mini.html (website and app); the Games page shows its card.
 // Puzzles live in /app/mini.json, one per Nairobi date. A day with no puzzle hides the card.
-// Progress, time, results and streak are kept on the phone (localStorage); nothing is sent anywhere.
+// Progress, time, results and streak are kept on the phone (localStorage). Only a play count goes to /api/plays (20 Nov 2026).
 (function () {
+  // Counts plays for the team (20 Nov 2026): the same random phone code as the fans' pick, no name. Sent to /api/plays,
+  // one row per phone per game per day. Phones that said "No thanks" to cookies aren't counted.
+  function faPlay(game, ev, score) {
+    try {
+      if (localStorage.getItem("fa-cookies") === "no") return;
+      var id = ""; try { id = JSON.parse(localStorage.getItem("fa-id") || '""'); } catch (e) {}
+      if (!/^[a-z0-9]{24}$/.test(id)) {
+        var a = new Uint8Array(24), abc = "abcdefghijklmnopqrstuvwxyz0123456789"; id = "";
+        (window.crypto || window.msCrypto).getRandomValues(a);
+        for (var k = 0; k < 24; k++) id += abc[a[k] % 36];
+        localStorage.setItem("fa-id", JSON.stringify(id));
+      }
+      fetch("/api/plays", { method: "POST", keepalive: true, headers: { "content-type": "application/json" },
+        body: JSON.stringify({ id: id, game: game, ev: ev, score: score == null ? null : score, app: document.documentElement.classList.contains("app") ? 1 : 0 }) }).catch(function () {});
+    } catch (e) {}
+  }
   if (!document.querySelector('link[href="/app/mini.css"]')) { var css = document.createElement("link"); css.rel = "stylesheet"; css.href = "/app/mini.css"; document.head.appendChild(css); }
   var PAGE = document.getElementById("fa-mn-page");
   var store = {
@@ -177,7 +193,7 @@
   function typed(e) {
     var v = (inp.value || "").toUpperCase().replace(/[^A-Z]/g, ""); inp.value = "";
     if (!v) return;
-    if (st.f.length && !played) { played = true; if (window.faRemind && window.faRemind.played) window.faRemind.played("mini", "started"); }
+    if (st.f.length && !played) { played = true; faPlay("mini", "start"); if (window.faRemind && window.faRemind.played) window.faRemind.played("mini", "started"); }
     setLetter(cur.i, v.slice(-1)); save();
     if (full()) return check();
     advance();
@@ -220,6 +236,7 @@
     if (inp) inp.blur();
     window.scrollTo(0, 0);
     draw();
+    faPlay("mini", "done");
     if (window.faRemind && window.faRemind.played) window.faRemind.played("mini", "done");   // no nudge tonight
   }
   function share() {

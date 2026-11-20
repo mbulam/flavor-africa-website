@@ -235,3 +235,12 @@ SECURITY (19 Nov 2026)
   reads it; it is not served as a page.
 - The inbox (app/inbox.html#<ADMIN_KEY>) sends the key in an x-admin-key header, never in the web address,
   so it stays out of request logs. The functions compare it in constant time.
+
+GAME PLAY COUNTS (added 20 Nov 2026)
+- functions/api/plays.js counts how many people play each game: Flavor Trivia, Connections, Mini, The Vice Run and
+  The Heist. Each game tells /api/plays when someone starts and when they finish (score sent: Trivia right answers
+  out of 10, Connections solved 1/0, Vice Run/Heist cash). One row per phone, per game, per Nairobi day (D1 table
+  "plays"), so refreshing or replaying never counts the same person twice in a day. Phones that tapped "No thanks"
+  on the cookie notice aren't counted. Counts start from 20 Nov 2026; nothing before that was recorded.
+- Reading them: the "Games" section at the top of the inbox page (app/inbox.html#<ADMIN_KEY>): played today,
+  last 7 days, all time, finished, average result, app vs website, people per day for 14 days, and Ballot total.

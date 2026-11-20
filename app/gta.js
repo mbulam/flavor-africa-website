@@ -6,6 +6,22 @@
 // The Heist (hard mode, added 19 Nov 2026): unlocks once a phone finishes all three Normal missions. Deeper questions on
 // the whole series, a shorter clock, bigger cash, and the wanted level carries across all three jobs. It keeps its own best.
 (function () {
+  // Counts plays for the team (20 Nov 2026): the same random phone code as the fans' pick, no name. Sent to /api/plays,
+  // one row per phone per game per day. Phones that said "No thanks" to cookies aren't counted.
+  function faPlay(game, ev, score) {
+    try {
+      if (localStorage.getItem("fa-cookies") === "no") return;
+      var id = ""; try { id = JSON.parse(localStorage.getItem("fa-id") || '""'); } catch (e) {}
+      if (!/^[a-z0-9]{24}$/.test(id)) {
+        var a = new Uint8Array(24), abc = "abcdefghijklmnopqrstuvwxyz0123456789"; id = "";
+        (window.crypto || window.msCrypto).getRandomValues(a);
+        for (var k = 0; k < 24; k++) id += abc[a[k] % 36];
+        localStorage.setItem("fa-id", JSON.stringify(id));
+      }
+      fetch("/api/plays", { method: "POST", keepalive: true, headers: { "content-type": "application/json" },
+        body: JSON.stringify({ id: id, game: game, ev: ev, score: score == null ? null : score, app: document.documentElement.classList.contains("app") ? 1 : 0 }) }).catch(function () {});
+    } catch (e) {}
+  }
   var head = document.head;
   head.insertAdjacentHTML("beforeend", '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap"><link rel="stylesheet" href="/app/gta.css">');
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
@@ -75,6 +91,7 @@
 
   function start(md) {
     mode = md || mode || normal();
+    faPlay(mode.hard ? "heist" : "vicerun", "start");
     run = { m: 0, i: 0, cash: 0, stars: 0, right: 0, asked: 0, ms: mode.missions.map(function (m) {
       return { name: m.name, qs: shuffle(m.qs).map(function (q) { var o = q.o.map(function (t, k) { return { t: t, ok: k === q.a }; }); return { q: q.q, img: q.img, pos: q.pos, o: shuffle(o) }; }) };
     }) };
@@ -165,6 +182,7 @@
 
   function result(how) {
     clear();
+    faPlay(mode.hard ? "heist" : "vicerun", "done", run.cash);
     var mine = mode.hard ? hbest : best, nb = !mine || run.cash > mine.cash;
     if (nb) { mine = { cash: run.cash, stars: run.stars, right: run.right, busted: how !== "passed", mission: run.m + 1 }; if (mode.hard) { hbest = mine; save("fa-vicerun-heist", mine); } else { best = mine; save("fa-vicerun", mine); } }
     var unlocked = !mode.hard && how === "passed" && G.heist && !open;
