@@ -1,0 +1,113 @@
+{
+ "date": "2026-11-20",
+ "label": "20 NOV 2026",
+ "kind": "fresh",
+ "name": "Fresh",
+ "line": "Out this week and already climbing charts across Africa.",
+ "window": 7,
+ "sources": "Apple Music most played: Kenya, Nigeria, Ghana, Côte d'Ivoire, Senegal, South Africa, Zambia, Zimbabwe, Botswana, Tanzania, Uganda, Rwanda, DR Congo",
+ "songs": [
+  {
+   "title": "Lala",
+   "artist": "MDU aka TRP & Mzizi ft. Chymamusique",
+   "apple": "6834430371",
+   "out": "2026-11-17",
+   "points": 171,
+   "where": [
+    "za",
+    "bw"
+   ]
+  },
+  {
+   "title": "Does Anybody Care",
+   "artist": "MDU aka TRP & WAPO Jije",
+   "apple": "6834430370",
+   "out": "2026-11-17",
+   "points": 166,
+   "where": [
+    "za",
+    "bw"
+   ]
+  },
+  {
+   "title": "Oh My",
+   "artist": "Kidd Carder ft. BNXN",
+   "apple": "6827131239",
+   "out": "2026-11-13",
+   "points": 99,
+   "where": [
+    "ng"
+   ]
+  },
+  {
+   "title": "Ubaba wakho",
+   "artist": "Mzukulu ft. Naledi Aphiwe",
+   "apple": "6833972915",
+   "out": "2026-11-13",
+   "points": 99,
+   "where": [
+    "za"
+   ]
+  },
+  {
+   "title": "Honda Fit",
+   "artist": "Ndine Emma ft. Way Dee, Chanda na Kay & Frank Ro",
+   "apple": "6834089052",
+   "out": "2026-11-14",
+   "points": 99,
+   "where": [
+    "zm"
+   ]
+  },
+  {
+   "title": "Jaiye",
+   "artist": "Olamide ft. FOLA",
+   "apple": "6823312373",
+   "out": "2026-11-17",
+   "points": 96,
+   "where": [
+    "ng"
+   ]
+  },
+  {
+   "title": "FREESTYLE SGL #2",
+   "artist": "LA B7",
+   "apple": "6833475869",
+   "out": "2026-11-18",
+   "points": 96,
+   "where": [
+    "ci"
+   ]
+  },
+  {
+   "title": "Better Days Intro",
+   "artist": "Holy Ten",
+   "apple": "6835527125",
+   "out": "2026-11-18",
+   "points": 96,
+   "where": [
+    "zw"
+   ]
+  },
+  {
+   "title": "All This For You",
+   "artist": "Holy Ten ft. MrCandy",
+   "apple": "6835527130",
+   "out": "2026-11-18",
+   "points": 95,
+   "where": [
+    "zw"
+   ]
+  },
+  {
+   "title": "Home",
+   "artist": "Kwesi Arthur",
+   "apple": "6834185558",
+   "out": "2026-11-19",
+   "points": 94,
+   "where": [
+    "gh"
+   ]
+  }
+ ]
+}
