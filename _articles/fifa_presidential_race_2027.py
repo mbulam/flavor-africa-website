@@ -3,7 +3,7 @@ TITLE = "Infantino faces Philippe Diallo and Kohzo Tashima in the 2027 FIFA pres
 TAG = "Flavor Sports"
 H1 = "Infantino has a race on his hands"
 DEK = "France's Philippe Diallo and Japan's Kohzo Tashima will stand against him in Rabat in March. Africa's 54 votes are already in his corner."
-META = "Flavor Sports · 20 Nov 2026 · 4 min read"
+META = "Flavor Sports · 20 Nov 2026 · 6 min read"
 LEAD = ("img/sp-fifa-infantino.jpg", "Gianni Infantino, FIFA president since 2016", "gianni_infantino / Instagram")
 
 BODY = [
@@ -12,18 +12,24 @@ BODY = [
 ("p", "One name is missing. Ramon Vega, the former Switzerland and Tottenham defender who announced in October that he would run, is not on FIFA's list. To get onto the ballot, a candidate needs nominations from at least five of FIFA's 211 member associations."),
 ("facts", [("Election", "18 March 2027"), ("Where", "77th FIFA Congress, Rabat"), ("Voters", "211 member associations"), ("To win", "106 votes, a majority"), ("Final list due", "18 February 2027")]),
 ("h2", "The incumbent", "Infantino and ", "a fourth term"),
-("p", "Infantino, who is Swiss, was elected in February 2016 to replace Sepp Blatter. He was re-elected unopposed, by acclamation, in 2019 and again in 2023. FIFA's rules cap a president at three terms, but FIFA's Council accepted in 2022 that his first stint, the three years left of Blatter's term, doesn't count as a full one. That is why he can run for a fourth."),
-("p", "Six months ago this looked like a formality. Then, in July, just after the 2026 World Cup, Infantino backed a plan to sell up to a 20% stake in a new unit running FIFA's tournaments, the World Cup included, to private investors. UEFA's 55 members voted to boycott FIFA competitions unless it was dropped, and FIFA scrapped it within days. UEFA then said publicly that it had lost confidence in his leadership, and federations across Europe, France among them, withdrew their support for his re-election."),
+("p", "Infantino, who is Swiss, was elected in February 2016 to replace Sepp Blatter, beating Sheikh Salman bin Ebrahim Al Khalifa of Bahrain in a vote. He was re-elected unopposed, by acclamation, in 2019 and again in 2023. FIFA's rules cap a president at three terms, but FIFA's Council accepted in 2022 that his first stint, the three years left of Blatter's term, doesn't count as a full one. That is why he can run for a fourth."),
+("p", "History is on his side. The last time a sitting FIFA president lost an election was 1974, when João Havelange beat Stanley Rous."),
+("p", "Six months ago this looked like a formality. The trouble started during the 2026 World Cup itself. In July, FIFA lifted a one-match ban on US striker Folarin Balogun before his side's round-of-16 game against Belgium, after Donald Trump phoned Infantino about the red card. Belgium's federation said it was astonished, and UEFA said FIFA had crossed a red line. Infantino said FIFA's disciplinary committee acted independently."),
+("p", "Weeks later, just after the final, Infantino backed a plan to sell up to a 20% stake in a new unit running FIFA's tournaments, the World Cup included, to private investors. UEFA's 55 members voted to boycott FIFA competitions unless it was dropped, and FIFA scrapped it within days. UEFA then said publicly that it had lost confidence in his leadership, and federations across Europe, France among them, withdrew their support for his re-election. Concacaf, the confederation for North and Central America and the Caribbean, called for a full review of his presidency."),
 ("h2", "The challenger", "Philippe Diallo, ", "Europe's pick"),
 ("img", "img/sp-fifa-diallo.jpg", "Philippe Diallo, president of the French Football Federation", "telesport / Instagram"),
-("p", "Diallo, 63, has run the French federation since January 2023. On 16 November, the European national associations represented on UEFA's Executive Committee and the FIFA Council unanimously invited him to stand, and he accepted. Reuters reported that he did not yet have the backing of all 55 UEFA members, so Europe isn't a guaranteed bloc for him either."),
-("p", "There's an African thread to his story. His father, Souleymane Diallo, is a boxer born in Dakar, Senegal, who fought for France at the 1960 Olympics. Diallo has also been clear about the size of the job: he says he needs 106 votes, a majority, and claims he has support beyond Europe."),
+("p", "Diallo, 63, was born in Saint-Nazaire in western France and has spent more than 30 years in football administration, most of it behind the scenes. From 1992 to 2021 he ran the UCPF, the body that represents France's professional clubs as employers. He sat on the board of the French professional league from 2009 to 2021 and served on FIFA's Dispute Resolution Chamber."),
+("p", "He has run the French federation since January 2023, first as interim president after Noël Le Graët stepped aside, and was re-elected in December 2024 for a term to 2028. On 16 November, the European national associations represented on UEFA's Executive Committee and the FIFA Council unanimously invited him to stand, and he accepted. Reuters reported that he did not yet have the backing of all 55 UEFA members, so Europe isn't a guaranteed bloc for him either."),
+("p", "There's an African thread to his story. His father, Souleymane Diallo, is a boxer born in Dakar, Senegal, who took up boxing in the French Navy and fought for France at the 1960 Olympics in Rome. Diallo has also been clear about the size of the job: he says he needs 106 votes, a majority, and claims he has support beyond Europe."),
 ("h2", "The other challenger", "Kohzo Tashima ", "runs without the AFC"),
 ("img", "img/sp-fifa-tashima.jpg", "Kohzo Tashima, former president of the Japan Football Association", "central_do_futebol.oficial / Instagram"),
 ("p", "Tashima, 68, played for Japan, sat on the FIFA Council from 2015 and led the Japan Football Association from 2016 to 2024, when he became its honorary president. He is the first Japanese candidate for FIFA's top job, and he is running on governance and integrity, saying he wants FIFA to be a more trusted organisation."),
 ("p", "His problem is at home. The Asian Football Confederation, with 47 members, has already backed Infantino. Tashima himself puts his chances at 20 to 30 percent."),
+("h2", "The swing vote", "Where ", "Concacaf stands"),
+("p", "Concacaf's 41 members are the bloc nobody can count yet. All 41 sent letters backing Infantino before the World Cup, but after the stake-sale row The Guardian reported that many were thinking about withdrawing them. Concacaf president Victor Montagliani chose not to run himself, and the confederation has not publicly lined up behind either challenger."),
 ("h2", "Why Africa matters", "54 votes, ", "one direction"),
-("p", "This is where it gets interesting for us. CAF's 54 member associations make up the biggest single bloc in FIFA, close to a quarter of the 211 votes. In April 2026, in Vancouver, all 54 agreed to back Infantino for 2027 to 2031, and CAF president Patrice Motsepe repeated that unanimous support in October. South America's CONMEBOL is behind him too."),
+("p", "This is where it gets interesting for us. CAF's 54 member associations make up the biggest single bloc in FIFA, close to a quarter of the 211 votes. In April 2026, in Vancouver, all 54 agreed to back Infantino for 2027 to 2031, and CAF president Patrice Motsepe repeated that unanimous support in October. Asia's AFC, with 47 members, and South America's CONMEBOL, with 10, are behind him too."),
+("p", "Add those up and Infantino has public pledges from 111 federations, five more than the 106 needed. On paper, that's enough. But the vote is secret, and pledges made in April were made before July's rows."),
 ("p", "So the election that will decide who runs world football is being held in Africa, and Africa has already said who it wants. Whether that holds for four more months, through a secret ballot, is the real question in Rabat."),
 ]
 
@@ -50,4 +56,20 @@ SOURCES = [
  ("ESPN: CAF announce unanimous support for Infantino", "https://www.espn.com.sg/blog/fifa/243/index"),
  ("Times Live: Africa's football leaders back Infantino (9 Oct 2026)", "https://www.timeslive.co.za/sport/2026-10-09-africas-football-leaders-back-infantino-for-fifa-reelection/"),
  ("Telecom Asia: Infantino's term-limit argument", "https://www.telecomasia.net/blog/candidates-fifa-presidency-infantino-rivals/"),
+ ("UEFA: Philippe Diallo profile", "https://www.uefa.com/insideuefa/about-uefa/news/0280-17b443d6d6e7-4534e49d3d0a-1000--philippe-diallo/"),
+ ("UEFA: Philippe Diallo interview on his father and career", "https://www.uefa.com/news-media/news/02aa-21d1669c38cf-7275cb6f8631-1000–philippe-diallo-we-must-preserve-the-ethics-and-integrity-o/"),
+ ("Europe 1: Philippe Diallo led the UCPF from 1992 to 2021", "https://www.europe1.fr/node/49758"),
+ ("FFF: Philippe Diallo re-elected president (14 Dec 2024)", "https://www.fff.fr/article/13844-philippe-diallo-reelu-president-de-la-fff.html"),
+ ("Wikipedia: Philippe Diallo", "https://en.wikipedia.org/wiki/Philippe_Diallo"),
+ ("AP via PBS: FIFA lifts Balogun's suspension after Trump calls Infantino", "https://pbs.org/newshour/world/ap-report-fifa-lifts-u-s-player-baloguns-red-card-suspension-at-world-cup-after-trump-calls-infantino"),
+ ("NPR: Balogun's ban is lifted by FIFA", "https://www.npr.org/2026/07/05/g-s1-132061/folarin-balogun-soccer-reinstated-ban-suspended-fif"),
+ ("The Nightly / AP: UEFA says FIFA crossed a red line", "https://thenightly.com.au/sport/red-mist-backlash-as-us-ban-lifted-after-trump-call-c-22534930"),
+ ("Buenos Aires Herald: Concacaf calls for reckoning of Infantino's tenure", "https://buenosairesherald.com/sports/football/dire-hour-for-infantino-as-concacaf-calls-for-reckoning-of-his-fifa-tenure"),
+ ("World Soccer Talk: Concacaf piles pressure on Infantino", "https://worldsoccertalk.com/amp/news/its-time-for-a-comprehensive-review-of-this-leadership-concacaf-piles-pressure-on-fifas-gianni-infantino"),
+ ("Caliber / The Guardian: Concacaf members weigh pulling support", "https://caliber.az/en/post/media-concacaf-members-weigh-pulling-support-for-infantino-s-fifa-re-election"),
+ ("Folha de Pernambuco: Concacaf federations discuss revoking support letters", "https://www.folhape.com.br/esportes/fifa-pressao-sobre-infantino-cresce-e-federacoes-das-americas/504441/"),
+ ("TSN / Canadian Press: Montagliani not in the field", "https://www.tsn.ca/soccer/article/canadian-concacaf-president-montagliani-not-in-reported-field-for-fifa-presidency/"),
+ ("AllAfrica: African football chiefs back Infantino", "https://allafrica.com/stories/202610100172.html"),
+ ("Al Jazeera: Africa and Asia back Infantino for fourth term (30 Apr 2026)", "https://www.aljazeera.com/amp/sports/2026/4/30/africa-backing-infantino-for-unique-fourth-term-as-fifa-president"),
+ ("theScore: CAF backing Infantino; first term ruling", "https://thescore.com/worldcup/news/3533140"),
 ]
