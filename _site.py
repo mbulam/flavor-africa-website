@@ -21,6 +21,7 @@ e = lambda s: html.escape(s, quote=True)
 
 # slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, or YYYY-MM-DDTHH:MM to go live at a set time; Nairobi), image focus
 STORIES = [
+ ("oprah-daily-closing", ["news", "culture"], "The Wrap", "Oprah's magazine is closing after 26 years", "Oprah Daily, once O, The Oprah Magazine, ends in December. She's moving on to her podcast and a live show.", "wr-oprah-daily.jpg", "2026-11-20T15:45", "center 15%"),
  ("the-drop-20-nov-2026", ["music"], "The Drop", "The Drop: Bien's Alusa Continua, Rema's E-Mortal Boy, Otile Brown and more", "Five new releases for 20 November, led by Kenya.", "drop2-bien.jpg", "2026-11-20T13:30", "center 40%"),
  ("watchlist-20-22-nov", ["screen"], "The Watchlist", "Must watch this weekend: Sunrise on the Reaping, Steps and more", "Haymitch's Hunger Games, Anele Mdoda's wedding and three new Netflix titles.", "wl3-hunger-games-thumb.jpg", "2026-11-20T13:30", "center 40%"),
  ("pochettino-manchester-united", ["sport"], "Flavor Sports", "Pochettino takes the Manchester United job", "18th, one league win, and Liverpool at Anfield first. The job he walks into.", "sp-pochettino-night.jpg", "2026-11-19T19:10", "center 25%"),
@@ -103,6 +104,7 @@ EDITION = {
  "tyla-that-girl-scholarship": "Continental",
  "fame-week-africa": "Continental",
  "patrick-stewart-dies-at-86": "Global",
+ "oprah-daily-closing": "Global",
  "idris-elba-kenya-creative-economy": "Local", "joshua-baraka-visa-ambassador": "Continental",
  "tems-children-of-blood-and-bone-soundtrack": "Continental",
  "grammys-2027-nominations": "Global",
