@@ -77,7 +77,7 @@
   var X = "";
 
   // Trivia's own page (v3, 16 Nov 2026): the app's photo card, numbers strip and rows, plus "Remind me"
-  var WEEK = [["Sunday", "History", "Weekly leaderboard results"], ["Monday", "Music", ""], ["Tuesday", "Art & Film", ""], ["Wednesday", "African Brands", ""], ["Thursday", "Countries", ""], ["Friday", "Awards", ""], ["Saturday", "Sport", ""]];
+  var WEEK = [["Sunday", "History", "Weekly leaderboard results"], ["Monday", "Music", ""], ["Tuesday", "Art & Film", ""], ["Wednesday", "African Business", ""], ["Thursday", "Countries", ""], ["Friday", "Awards", ""], ["Saturday", "Sport", ""]];
   var BELL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg>';
   function remindable() { return R.classList.contains("app") && window.faRemind && window.faRemind.ok; }
   function remindBtn(cls) {

@@ -1,5 +1,5 @@
 {
-  "_how": "Flavor Trivia (added 16 Nov 2026). One set per date (Nairobi time). Each set: theme, img (photo for the card), qs = 10 questions. Each question: q, a (4 options), c (index of the right option, 0-3), x (one line shown after answering), s (optional story slug for 'Read our story'). Every answer checked against 2+ sources before it goes in. Week: Mon Music, Tue Art & Film, Wed African Brands, Thu Countries, Fri Awards, Sat Sport, Sun History. A day with no set simply hides the Trivia card.",
+  "_how": "Flavor Trivia (added 16 Nov 2026). One set per date (Nairobi time). Each set: theme, img (photo for the card), qs = 10 questions. Each question: q, a (4 options), c (index of the right option, 0-3), x (one line shown after answering), s (optional story slug for 'Read our story'). Every answer checked against 2+ sources before it goes in. Week: Mon Music, Tue Art & Film, Wed African Business, Thu Countries, Fri Awards, Sat Sport, Sun History. A day with no set simply hides the Trivia card.",
   "sets": {
     "2026-11-16": {
       "theme": "Music",
@@ -1058,7 +1058,7 @@
       ]
     },
     "2026-11-25": {
-      "theme": "African Brands",
+      "theme": "African Business",
       "img": "img/gmg-lead.jpg",
       "qs": [
         {
