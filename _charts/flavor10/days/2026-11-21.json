@@ -1,0 +1,61 @@
+{
+ "date": "2026-11-21",
+ "label": "21 NOV 2026",
+ "kind": "rewind",
+ "name": "Rewind",
+ "theme": "Crossing borders, 2010–2015",
+ "line": "Ten songs from the years African pop stopped staying home.",
+ "sources": "Picked by Flavor Africa. Credits checked against Wikipedia, Music in Africa, OkayAfrica, Pulse, The Citizen (TZ), Daily Monitor, citifmonline, NotJustOk",
+ "songs": [
+  {
+   "title": "Party Don't Stop",
+   "artist": "Camp Mulla ft. Collo",
+   "year": "2010"
+  },
+  {
+   "title": "Oliver Twist",
+   "artist": "D'banj",
+   "year": "2011"
+  },
+  {
+   "title": "Dami Duro",
+   "artist": "Davido",
+   "year": "2011"
+  },
+  {
+   "title": "Khona",
+   "artist": "Mafikizolo ft. Uhuru",
+   "year": "2013"
+  },
+  {
+   "title": "Number One",
+   "artist": "Diamond Platnumz",
+   "year": "2013"
+  },
+  {
+   "title": "Johnny",
+   "artist": "Yemi Alade",
+   "year": "2013"
+  },
+  {
+   "title": "Sitya Loss",
+   "artist": "Eddy Kenzo",
+   "year": "2014"
+  },
+  {
+   "title": "Adonai (Remix)",
+   "artist": "Sarkodie ft. Castro",
+   "year": "2014"
+  },
+  {
+   "title": "Ojuelegba",
+   "artist": "Wizkid",
+   "year": "2014"
+  },
+  {
+   "title": "Sura Yako",
+   "artist": "Sauti Sol",
+   "year": "2014"
+  }
+ ]
+}

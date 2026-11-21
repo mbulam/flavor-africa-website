@@ -1,0 +1,74 @@
+{
+ "date": "2026-11-21",
+ "label": "21 NOV 2026",
+ "sources": {
+  "P": "Apple Music Top 100: Kenya (21 Nov 2026)",
+  "Y": "YouTube Top Songs: Kenya (week of 17 Nov 2026)",
+  "R": "Kenya Airplay (week of 21 Nov 2026)"
+ },
+ "songs": [
+  {
+   "title": "I'll Be Okay",
+   "artist": "Bien",
+   "points": 74,
+   "charts": "PYR",
+   "apple": "6822410197"
+  },
+  {
+   "title": "Finale",
+   "artist": "Bien ft. Alikiba",
+   "points": 56,
+   "charts": "PYR"
+  },
+  {
+   "title": "Heaven Baby",
+   "artist": "Ayra Starr ft. Zayn",
+   "points": 40,
+   "charts": "YR",
+   "apple": "6796539210"
+  },
+  {
+   "title": "Chai ya Saa Kumi",
+   "artist": "Ywaya Tajiri",
+   "points": 35,
+   "charts": "YR",
+   "apple": "6796900642"
+  },
+  {
+   "title": "Kaumbete",
+   "artist": "Bien & Coster Ojwang",
+   "points": 33,
+   "charts": "P"
+  },
+  {
+   "title": "Omoka",
+   "artist": "Bien",
+   "points": 32,
+   "charts": "P"
+  },
+  {
+   "title": "Don't Go",
+   "artist": "Bien, Joshua Baraka & The Composers",
+   "points": 31,
+   "charts": "P"
+  },
+  {
+   "title": "Run Like Water",
+   "artist": "Bien",
+   "points": 29,
+   "charts": "P"
+  },
+  {
+   "title": "XOXO",
+   "artist": "Bien & Ywaya Tajiri",
+   "points": 28,
+   "charts": "P"
+  },
+  {
+   "title": "How Can I Forget",
+   "artist": "Bien, Oxlade & Øntiri",
+   "points": 27,
+   "charts": "P"
+  }
+ ]
+}
