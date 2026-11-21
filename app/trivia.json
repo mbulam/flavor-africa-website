@@ -818,6 +818,835 @@
           "x": "He was hanged at Kamiti Prison on 18 February 1957. The statue went up 50 years later, in 2007."
         }
       ]
+    },
+    "2026-11-23": {
+      "theme": "Music",
+      "img": "img/drop2-bien.jpg",
+      "qs": [
+        {
+          "q": "Bien's new album \"Alusa Continua\" plays on his middle name and which old rallying cry?",
+          "a": [
+            "Harambee",
+            "A luta continua",
+            "Uhuru sasa",
+            "Hakuna matata"
+          ],
+          "c": 1,
+          "x": "Alusa is his middle name. A luta continua means the struggle continues.",
+          "s": "bien-alusa-continua"
+        },
+        {
+          "q": "Bien is the first African artist signed to which Atlanta label?",
+          "a": [
+            "Def Jam",
+            "LVRN",
+            "Quality Control",
+            "Roc Nation"
+          ],
+          "c": 2,
+          "x": "It's the label behind Migos and Lil Baby, and Alusa Continua is his first album with them.",
+          "s": "bien-alusa-continua"
+        },
+        {
+          "q": "In Gikuyu, what does the word \"mugithi\" mean?",
+          "a": [
+            "Wedding",
+            "Guitar",
+            "Dance floor",
+            "Train"
+          ],
+          "c": 3,
+          "x": "It's named after the dance, where the whole room holds the hips of the person in front and snakes around.",
+          "s": "mugithi-decoded"
+        },
+        {
+          "q": "Benga music is most closely tied to which Kenyan community?",
+          "a": [
+            "Luo",
+            "Somali",
+            "Kalenjin",
+            "Maasai"
+          ],
+          "c": 0,
+          "x": "Its bouncy guitar lines took off in the 1960s and 70s, with D.O. Misiani among its big names."
+        },
+        {
+          "q": "Which Kenyan duo's \"Unbwogable\" became the anthem of the 2002 election?",
+          "a": [
+            "Sauti Sol",
+            "Gidi Gidi Maji Maji",
+            "Camp Mulla",
+            "Ethic"
+          ],
+          "c": 1,
+          "x": "The title mixes English with the Dholuo word bwogo, to scare, so it means unshakeable. The NARC campaign made it its song."
+        },
+        {
+          "q": "Rema's \"Calm Down\" got a remix with which American singer?",
+          "a": [
+            "Selena Gomez",
+            "Ariana Grande",
+            "Doja Cat",
+            "Billie Eilish"
+          ],
+          "c": 0,
+          "x": "The remix took it past a billion Spotify streams, a first for a song by an African lead artist."
+        },
+        {
+          "q": "Amapiano was born in which country?",
+          "a": [
+            "Nigeria",
+            "Ghana",
+            "South Africa",
+            "Angola"
+          ],
+          "c": 2,
+          "x": "The name means \"the pianos\" in isiZulu, after its signature keys. The log drum is its other trademark."
+        },
+        {
+          "q": "Bongo Flava is the pop sound of which country?",
+          "a": [
+            "Uganda",
+            "Tanzania",
+            "Rwanda",
+            "Kenya"
+          ],
+          "c": 1,
+          "x": "It mixes hip hop and R&B with taarab and dansi, and it's mostly sung in Swahili."
+        },
+        {
+          "q": "The guitar legend Ali Farka Touré was from which country?",
+          "a": [
+            "Mali",
+            "Senegal",
+            "Niger",
+            "Guinea"
+          ],
+          "c": 0,
+          "x": "He's often called the African John Lee Hooker, and he won three Grammys, the last one after he died."
+        },
+        {
+          "q": "Sofiya Nzau's global hit \"Mwaki\", made with Brazilian producer Zerb, is sung in which language?",
+          "a": [
+            "Swahili",
+            "Kamba",
+            "Kikuyu",
+            "Luo"
+          ],
+          "c": 2,
+          "x": "Mwaki means fire. Sofiya is from Murang'a, and her husband pushed her to sing it in her mother tongue."
+        }
+      ]
+    },
+    "2026-11-24": {
+      "theme": "Art & Film",
+      "img": "img/wr-one-woman-one-bra-amaa.jpg",
+      "qs": [
+        {
+          "q": "Which Kenyan film won Best Film at the 2026 Africa Movie Academy Awards?",
+          "a": [
+            "Supa Modo",
+            "Slum Bomber",
+            "One Woman One Bra",
+            "Rafiki"
+          ],
+          "c": 2,
+          "x": "Vincho Nchogu's debut also won Best Film in an African Language and Best Debut Feature.",
+          "s": "one-woman-one-bra-amaa-best-film"
+        },
+        {
+          "q": "Floyd Norman, who got an honorary Oscar this month, was the first Black animator at which studio?",
+          "a": [
+            "Warner Bros.",
+            "Pixar",
+            "DreamWorks",
+            "Disney"
+          ],
+          "c": 3,
+          "x": "Disney hired him in 1956, at 21. His first job was on Sleeping Beauty.",
+          "s": "floyd-norman-honorary-oscar"
+        },
+        {
+          "q": "Neema Ngelime, whose documentary won five awards at Durban FilmMart before it's even shot, is from which country?",
+          "a": [
+            "Tanzania",
+            "Kenya",
+            "Uganda",
+            "Rwanda"
+          ],
+          "c": 0,
+          "x": "She's a documentary photographer too, and the main shoot is planned for 2027.",
+          "s": "neema-ngelime"
+        },
+        {
+          "q": "Lupita Nyong'o's 2009 documentary \"In My Genes\" is about…",
+          "a": [
+            "Kenyan runners",
+            "Kenyans living with albinism",
+            "Her family tree",
+            "Twins in Kisumu"
+          ],
+          "c": 1,
+          "x": "She made it a few years before 12 Years a Slave."
+        },
+        {
+          "q": "Chinua Achebe took the title \"Things Fall Apart\" from a poem by…",
+          "a": [
+            "T.S. Eliot",
+            "W.B. Yeats",
+            "Wole Soyinka",
+            "Langston Hughes"
+          ],
+          "c": 1,
+          "x": "It's from \"The Second Coming\". The novel came out in 1958."
+        },
+        {
+          "q": "Ngũgĩ wa Thiong'o's first novel was…",
+          "a": [
+            "Petals of Blood",
+            "A Grain of Wheat",
+            "Weep Not, Child",
+            "Devil on the Cross"
+          ],
+          "c": 2,
+          "x": "It came out in 1964, and it's often called the first English-language novel by an East African writer."
+        },
+        {
+          "q": "Kenyan-born artist Wangechi Mutu put four bronze sculptures on the front of which New York museum in 2019?",
+          "a": [
+            "The Met",
+            "MoMA",
+            "The Guggenheim",
+            "The Whitney"
+          ],
+          "c": 0,
+          "x": "The series was called \"The NewOnes, will free Us\", and they sat in niches that had stood empty for over a century."
+        },
+        {
+          "q": "Why was Genevieve Nnaji's \"Lionheart\" dropped from the Oscars race in 2019?",
+          "a": [
+            "It came out too late",
+            "It was on Netflix",
+            "Too much of it was in English",
+            "It was too long"
+          ],
+          "c": 2,
+          "x": "It was Nigeria's first ever entry for the international feature award."
+        },
+        {
+          "q": "\"The Woman King\" tells the story of the women warriors of which kingdom?",
+          "a": [
+            "Asante",
+            "Zulu",
+            "Dahomey",
+            "Kongo"
+          ],
+          "c": 2,
+          "x": "Viola Davis plays the general, Nanisca, and Gina Prince-Bythewood directed it."
+        },
+        {
+          "q": "Seydou Keïta's famous studio portraits were shot in which city?",
+          "a": [
+            "Dakar",
+            "Bamako",
+            "Accra",
+            "Lagos"
+          ],
+          "c": 1,
+          "x": "He ran his studio from 1948 until the early 1960s, when he became Mali's official government photographer."
+        }
+      ]
+    },
+    "2026-11-25": {
+      "theme": "African Brands",
+      "img": "img/gmg-lead.jpg",
+      "qs": [
+        {
+          "q": "Denim Tears put the Ghana Must Go check on two classic sneakers this month. Which brand made them?",
+          "a": [
+            "Nike",
+            "adidas",
+            "Puma",
+            "New Balance"
+          ],
+          "c": 1,
+          "x": "The Stan Smith 80 and Superstar 82 both have a Sankofa heart on the tongue.",
+          "s": "ghana-must-go-decoded"
+        },
+        {
+          "q": "Mr Eazi's company Choplife Gaming runs which betting brand?",
+          "a": [
+            "SportPesa",
+            "Betway",
+            "betPawa",
+            "Bet9ja"
+          ],
+          "c": 2,
+          "x": "He came in as an investor in 2017 and was the face of its ads for years before Choplife took it over.",
+          "s": "mr-eazi"
+        },
+        {
+          "q": "Which payments brand named Joshua Baraka its first Ugandan ambassador in November?",
+          "a": [
+            "Mastercard",
+            "Visa",
+            "MTN MoMo",
+            "PayPal"
+          ],
+          "c": 1,
+          "x": "It's backing his B'rakaland EA show at Lugogo in Kampala on 28 November.",
+          "s": "joshua-baraka-visa-ambassador"
+        },
+        {
+          "q": "Java House opened its very first coffee shop in 1999 in which Nairobi mall?",
+          "a": [
+            "Sarit Centre",
+            "Yaya Centre",
+            "Adams Arcade",
+            "The Junction"
+          ],
+          "c": 2,
+          "x": "It was co-founded by Kevin Ashley, an American who'd moved to Kenya."
+        },
+        {
+          "q": "In 2020, Lagos-based Paystack was bought by which US payments company?",
+          "a": [
+            "PayPal",
+            "Stripe",
+            "Square",
+            "Visa"
+          ],
+          "c": 1,
+          "x": "The deal was worth more than $200 million, the biggest for a Nigerian startup at the time."
+        },
+        {
+          "q": "Stoney Tangawizi, the ginger drink every Kenyan knows, is made by…",
+          "a": [
+            "PepsiCo",
+            "Keroche",
+            "Coca-Cola",
+            "Kevian"
+          ],
+          "c": 2,
+          "x": "Tangawizi is just Swahili for ginger."
+        },
+        {
+          "q": "Kenya's Kevian is the company behind which juice?",
+          "a": [
+            "Afia",
+            "Minute Maid",
+            "Ceres",
+            "Del Monte"
+          ],
+          "c": 0,
+          "x": "Kimani Rugendo started Kevian in the 1990s with bottled water, before it moved into juice."
+        },
+        {
+          "q": "Mike Adenuga founded which Nigerian network?",
+          "a": [
+            "MTN Nigeria",
+            "Airtel Nigeria",
+            "Globacom",
+            "9mobile"
+          ],
+          "c": 2,
+          "x": "Glo went live in 2003 and is still Nigerian-owned."
+        },
+        {
+          "q": "In 2017, Kenyan betting firm SportPesa became the shirt sponsor of which Premier League club?",
+          "a": [
+            "Everton",
+            "Liverpool",
+            "Arsenal",
+            "West Ham"
+          ],
+          "c": 0,
+          "x": "The Toffees even played a friendly in Tanzania that summer as part of the deal."
+        },
+        {
+          "q": "Naivas opened its first shop in 1990 at Rongai, just outside which town?",
+          "a": [
+            "Naivasha",
+            "Nakuru",
+            "Thika",
+            "Eldoret"
+          ],
+          "c": 1,
+          "x": "It traded as Naivasha Self Service Stores for a while, and that's where the name Naivas comes from."
+        }
+      ]
+    },
+    "2026-11-26": {
+      "theme": "Countries",
+      "img": "img/nw-nbo.jpg",
+      "qs": [
+        {
+          "q": "What's the highest peak on Mount Kenya called?",
+          "a": [
+            "Nelion",
+            "Batian",
+            "Point Lenana",
+            "Uhuru"
+          ],
+          "c": 1,
+          "x": "Batian stands at 5,199 m. Most trekkers stop at Point Lenana, which is lower."
+        },
+        {
+          "q": "Which country has more pyramids than Egypt?",
+          "a": [
+            "Sudan",
+            "Libya",
+            "Ethiopia",
+            "Chad"
+          ],
+          "c": 0,
+          "x": "The Nubian pyramids at Meroë are smaller and steeper than the ones at Giza."
+        },
+        {
+          "q": "Next March's FIFA election happens in Morocco's capital. Which city is that?",
+          "a": [
+            "Casablanca",
+            "Marrakesh",
+            "Rabat",
+            "Tangier"
+          ],
+          "c": 2,
+          "x": "Casablanca is bigger, but Rabat is the capital. The 77th FIFA Congress is there on 18 March 2027.",
+          "s": "fifa-presidential-race-2027"
+        },
+        {
+          "q": "Which of these countries does NOT touch Lake Victoria?",
+          "a": [
+            "Kenya",
+            "Uganda",
+            "Tanzania",
+            "Rwanda"
+          ],
+          "c": 3,
+          "x": "Lake Victoria is shared by just three countries. Tanzania holds about half of it."
+        },
+        {
+          "q": "Which country renamed itself Eswatini in 2018?",
+          "a": [
+            "Swaziland",
+            "Lesotho",
+            "Botswana",
+            "Malawi"
+          ],
+          "c": 0,
+          "x": "King Mswati III announced it on the 50th anniversary of independence."
+        },
+        {
+          "q": "What's Africa's smallest country by land area?",
+          "a": [
+            "Gambia",
+            "Seychelles",
+            "Comoros",
+            "Mauritius"
+          ],
+          "c": 1,
+          "x": "It's only about 455 km², spread across roughly 115 islands in the Indian Ocean."
+        },
+        {
+          "q": "Lake Assal, the lowest point in Africa, is in which country?",
+          "a": [
+            "Eritrea",
+            "Ethiopia",
+            "Somalia",
+            "Djibouti"
+          ],
+          "c": 3,
+          "x": "It sits about 155 m below sea level, and it's one of the saltiest lakes on earth."
+        },
+        {
+          "q": "Which country officially runs on a 13-month calendar?",
+          "a": [
+            "Kenya",
+            "Ethiopia",
+            "Somalia",
+            "Sudan"
+          ],
+          "c": 1,
+          "x": "Twelve months of 30 days, then a short one of five or six. New Year falls in September."
+        },
+        {
+          "q": "How many counties does Kenya have?",
+          "a": [
+            "42",
+            "45",
+            "47",
+            "52"
+          ],
+          "c": 2,
+          "x": "They came with the 2010 constitution and replaced the old provinces."
+        },
+        {
+          "q": "Sossusvlei's big red dunes are in which country?",
+          "a": [
+            "Botswana",
+            "Namibia",
+            "Angola",
+            "South Africa"
+          ],
+          "c": 1,
+          "x": "They're in the Namib, which is often called the oldest desert in the world."
+        }
+      ]
+    },
+    "2026-11-27": {
+      "theme": "Awards",
+      "img": "img/wr-joshua-baraka-hipipo-2026.jpg",
+      "qs": [
+        {
+          "q": "Joshua Baraka was HiPipo's Artist of the Year in 2026. How many years running is that?",
+          "a": [
+            "First time",
+            "Two",
+            "Three",
+            "Four"
+          ],
+          "c": 1,
+          "x": "He won four awards on the night, including East Africa Best Act/Song for \"This Time\" with JAE5.",
+          "s": "joshua-baraka-hipipo-artist-of-the-year-2026"
+        },
+        {
+          "q": "Awar Odhiang is the Fashion Awards' Model of the Year 2026. Whose show did she close in October 2025?",
+          "a": [
+            "Dior",
+            "Saint Laurent",
+            "Chanel",
+            "Hermès"
+          ],
+          "c": 2,
+          "x": "It was Matthieu Blazy's first show for the house.",
+          "s": "awar-odhiang-model-of-the-year"
+        },
+        {
+          "q": "Messi won the Princess of Asturias Award for Sports this year. Which Kenyan has won it too?",
+          "a": [
+            "Eliud Kipchoge",
+            "David Rudisha",
+            "Faith Kipyegon",
+            "Tegla Loroupe"
+          ],
+          "c": 0,
+          "x": "Kipchoge won in 2023. Messi is the first footballer to win it alone.",
+          "s": "messi-princess-of-asturias"
+        },
+        {
+          "q": "Binyavanga Wainaina won the Caine Prize in 2002 with which story?",
+          "a": [
+            "How to Write About Africa",
+            "Discovering Home",
+            "One Day I Will Write About This Place",
+            "Kwani?"
+          ],
+          "c": 1,
+          "x": "\"How to Write About Africa\" is his famous satirical essay, and the memoir came later."
+        },
+        {
+          "q": "The first Ibrahim Prize for African leadership went in 2007 to a former president of which country?",
+          "a": [
+            "Botswana",
+            "Ghana",
+            "Mozambique",
+            "Tanzania"
+          ],
+          "c": 2,
+          "x": "It went to Joaquim Chissano. In many years since, no one has been judged good enough to win it."
+        },
+        {
+          "q": "Kofi Annan shared the 2001 Nobel Peace Prize with…",
+          "a": [
+            "Nelson Mandela",
+            "The Red Cross",
+            "The United Nations",
+            "Jimmy Carter"
+          ],
+          "c": 2,
+          "x": "He was the first UN chief from sub-Saharan Africa."
+        },
+        {
+          "q": "Faith Kipyegon was World Athletics' track athlete of the year for 2023. How many world records did she break that year?",
+          "a": [
+            "One",
+            "Two",
+            "Three",
+            "Four"
+          ],
+          "c": 2,
+          "x": "The 1500m, the mile and the 5000m, all inside about two months."
+        },
+        {
+          "q": "Which South African-born star won Best Actress at the Oscars for \"Monster\"?",
+          "a": [
+            "Charlize Theron",
+            "Thuso Mbedu",
+            "Pearl Thusi",
+            "Embeth Davidtz"
+          ],
+          "c": 0,
+          "x": "She won in 2004, the first South African to win an acting Oscar."
+        },
+        {
+          "q": "Kenya's Kalasha Awards are for…",
+          "a": [
+            "Gospel music",
+            "Film and TV",
+            "Fashion",
+            "Sport"
+          ],
+          "c": 1,
+          "x": "They're run by the Kenya Film Commission."
+        },
+        {
+          "q": "Who won the first Sócrates Award, for players' work off the pitch, at the 2022 Ballon d'Or?",
+          "a": [
+            "Didier Drogba",
+            "Mohamed Salah",
+            "Sadio Mané",
+            "Victor Osimhen"
+          ],
+          "c": 2,
+          "x": "He paid for a hospital and a school in Bambali, the village where he grew up."
+        }
+      ]
+    },
+    "2026-11-28": {
+      "theme": "Sport",
+      "img": "img/teg-ny.jpg",
+      "qs": [
+        {
+          "q": "In 1994 Tegla Loroupe became the first African woman to win a major marathon. Where?",
+          "a": [
+            "Boston",
+            "London",
+            "New York",
+            "Berlin"
+          ],
+          "c": 2,
+          "x": "She was 21 and it was her first major. She came back and won it again a year later.",
+          "s": "tegla-loroupe-new-york-1994"
+        },
+        {
+          "q": "Romelu Lukaku just retired from Belgium duty. His family's roots run back to which city?",
+          "a": [
+            "Kinshasa",
+            "Brazzaville",
+            "Lubumbashi",
+            "Kigali"
+          ],
+          "c": 0,
+          "x": "His dad, Roger, played for Zaire. Romelu leaves Belgium with 94 goals.",
+          "s": "lukaku-retires-belgium"
+        },
+        {
+          "q": "The WRC Safari Rally is based around which Kenyan town?",
+          "a": [
+            "Nanyuki",
+            "Naivasha",
+            "Nyeri",
+            "Narok"
+          ],
+          "c": 1,
+          "x": "It came back to the World Rally Championship in 2021 after 19 years away."
+        },
+        {
+          "q": "In 1988, Ibrahim Hussein became the first African man to win which marathon?",
+          "a": [
+            "Boston",
+            "London",
+            "Chicago",
+            "Berlin"
+          ],
+          "c": 0,
+          "x": "The year before, he was the first African man to win New York too."
+        },
+        {
+          "q": "Kip Keino won Olympic 1500m gold in which city?",
+          "a": [
+            "Rome",
+            "Tokyo",
+            "Mexico City",
+            "Munich"
+          ],
+          "c": 2,
+          "x": "That was 1968. Four years later in Munich he won the steeplechase."
+        },
+        {
+          "q": "Kenya reached the Cricket World Cup semi-finals in which year?",
+          "a": [
+            "1996",
+            "1999",
+            "2003",
+            "2011"
+          ],
+          "c": 2,
+          "x": "They beat Sri Lanka on the way, and India knocked them out in Durban."
+        },
+        {
+          "q": "Which country has won the most men's Rugby World Cups?",
+          "a": [
+            "New Zealand",
+            "South Africa",
+            "Australia",
+            "England"
+          ],
+          "c": 1,
+          "x": "Four: 1995, 2007, 2019 and 2023."
+        },
+        {
+          "q": "Gor Mahia fans call their club…",
+          "a": [
+            "K'Ogalo",
+            "Ingwe",
+            "Simba",
+            "Shujaa"
+          ],
+          "c": 0,
+          "x": "Ingwe is AFC Leopards, the other side of the Mashemeji derby."
+        },
+        {
+          "q": "Tunisia's Ahmed Hafnaoui won Olympic 400m freestyle gold in Tokyo at what age?",
+          "a": [
+            "16",
+            "18",
+            "21",
+            "24"
+          ],
+          "c": 1,
+          "x": "He went in as the slowest qualifier for the final, swimming from lane eight."
+        },
+        {
+          "q": "Javelin thrower Julius Yego got the nickname \"YouTube Man\" because…",
+          "a": [
+            "He filmed his training",
+            "He learned by watching YouTube videos",
+            "He went viral for a dance",
+            "He had a YouTube channel"
+          ],
+          "c": 1,
+          "x": "He went on to win the world title in Beijing in 2015."
+        }
+      ]
+    },
+    "2026-11-29": {
+      "theme": "History",
+      "img": "img/gmg-market.jpg",
+      "qs": [
+        {
+          "q": "In January 1983, which Nigerian president ordered undocumented migrants out of the country, giving the Ghana Must Go bag its name?",
+          "a": [
+            "Olusegun Obasanjo",
+            "Shehu Shagari",
+            "Ibrahim Babangida",
+            "Muhammadu Buhari"
+          ],
+          "c": 1,
+          "x": "About two million people were affected, around half of them Ghanaian, and they had until 31 January to go.",
+          "s": "ghana-must-go-decoded"
+        },
+        {
+          "q": "The Mau Mau stayed officially banned in Kenya until which year?",
+          "a": [
+            "1963",
+            "1978",
+            "1992",
+            "2003"
+          ],
+          "c": 3,
+          "x": "Independence came in 1963, but the ban stayed on the books for another 40 years.",
+          "s": "marley-locks-mau-mau"
+        },
+        {
+          "q": "The 1884–85 conference where European powers carved up Africa was held in which city?",
+          "a": [
+            "London",
+            "Paris",
+            "Berlin",
+            "Brussels"
+          ],
+          "c": 2,
+          "x": "Fourteen countries sent delegates. Not a single African was invited."
+        },
+        {
+          "q": "Before Nairobi, which town was the capital of what became Kenya?",
+          "a": [
+            "Mombasa",
+            "Nakuru",
+            "Kisumu",
+            "Malindi"
+          ],
+          "c": 0,
+          "x": "Nairobi started life in 1899 as a depot on the railway."
+        },
+        {
+          "q": "Which Asante queen mother led the War of the Golden Stool against the British in 1900?",
+          "a": [
+            "Nzinga",
+            "Yaa Asantewaa",
+            "Amina",
+            "Nehanda"
+          ],
+          "c": 1,
+          "x": "She was queen mother of Ejisu, and a well-known girls' school in Kumasi is named after her."
+        },
+        {
+          "q": "Which woman ruled ancient Egypt as pharaoh and built the temple at Deir el-Bahari?",
+          "a": [
+            "Nefertiti",
+            "Cleopatra",
+            "Hatshepsut",
+            "Nefertari"
+          ],
+          "c": 2,
+          "x": "She's often shown in statues wearing the pharaoh's false beard."
+        },
+        {
+          "q": "Who was Kenya's first woman elected to parliament?",
+          "a": [
+            "Wangari Maathai",
+            "Grace Onyango",
+            "Phoebe Asiyo",
+            "Martha Karua"
+          ],
+          "c": 1,
+          "x": "She won the Kisumu seat in 1969, after being the city's first woman mayor."
+        },
+        {
+          "q": "South Africa held its first election open to all races in which year?",
+          "a": [
+            "1990",
+            "1994",
+            "1996",
+            "1999"
+          ],
+          "c": 1,
+          "x": "It was 27 April, which is now Freedom Day."
+        },
+        {
+          "q": "The Suez Canal opened in which year?",
+          "a": [
+            "1799",
+            "1869",
+            "1914",
+            "1956"
+          ],
+          "c": 1,
+          "x": "1956 is the year Egypt nationalised it, which set off the Suez Crisis."
+        },
+        {
+          "q": "Who built Fort Jesus in Mombasa?",
+          "a": [
+            "The Omani Arabs",
+            "The British",
+            "The Portuguese",
+            "The Dutch"
+          ],
+          "c": 2,
+          "x": "They built it in the 1590s to guard the harbour. The Omanis took it in 1698 after a siege of nearly three years."
+        }
+      ]
     }
   }
 }

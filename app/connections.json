@@ -56,6 +56,62 @@
         {"t": "Pharaohs", "w": ["RAMESSES", "KHUFU", "AKHENATEN", "TUTANKHAMUN"], "x": "The Great Pyramid of Giza was built for Khufu."},
         {"t": "Old African kingdoms and empires", "w": ["AKSUM", "SONGHAI", "KUSH", "BENIN"], "x": "Kush ruled Egypt for a time. The Kingdom of Benin was in what is now Nigeria, not the country Benin."}
       ]
+    },
+    "2026-11-23": {
+      "groups": [
+        {"t": "African instruments", "w": ["KORA", "MBIRA", "NYATITI", "DJEMBE"], "x": "West Africa's harp, Zimbabwe's thumb piano, the Luo lyre and the drum everyone's tried at least once."},
+        {"t": "Kenyan music styles", "w": ["GENGETONE", "MUGITHI", "OHANGLA", "TAARAB"], "x": "Nairobi's street sound, the Kikuyu train, Luo party music and the coast's oldest groove.", "s": "mugithi-decoded"},
+        {"t": "On Bien's Alusa Continua", "w": ["2 CHAINZ", "ALIKIBA", "OXLADE", "FEMI ONE"], "x": "Atlanta, Dar es Salaam, Lagos and Nairobi, all on one album.", "s": "bien-alusa-continua"},
+        {"t": "Nigerian stars' real first names", "w": ["DAMINI", "AYODEJI", "DAVID", "TEMILADE"], "x": "Burna Boy, Wizkid, Davido and Tems."}
+      ]
+    },
+    "2026-11-24": {
+      "groups": [
+        {"t": "Black Panther characters", "w": ["SHURI", "NAKIA", "OKOYE", "M'BAKU"], "x": "Lupita played Nakia, and Danai Gurira was Okoye."},
+        {"t": "Lupita Nyong'o films", "w": ["US", "QUEEN OF KATWE", "THE WILD ROBOT", "12 YEARS A SLAVE"], "x": "Her Oscar came for 12 Years a Slave, and she voices Roz in The Wild Robot."},
+        {"t": "Kenyan films", "w": ["RAFIKI", "SUPA MODO", "NAIROBI HALF LIFE", "KATI KATI"], "x": "Wanuri Kahiu, Likarion Wainaina, Tosh Gitonga and Mbithi Masya."},
+        {"t": "Where African film festivals happen", "w": ["MARRAKECH", "ZANZIBAR", "CARTHAGE", "DURBAN"], "x": "Marrakech's international festival, ZIFF, the Carthage Film Days in Tunis and the Durban International Film Festival."}
+      ]
+    },
+    "2026-11-25": {
+      "groups": [
+        {"t": "Banks in Kenya", "w": ["EQUITY", "KCB", "NCBA", "ABSA"], "x": "Absa came from South Africa and replaced the Barclays name in Kenya."},
+        {"t": "Kenyan supermarkets", "w": ["QUICKMART", "CHANDARANA", "CARREFOUR", "CLEANSHELF"], "x": "Carrefour is French, but it's a Nairobi weekend staple now."},
+        {"t": "Mobile money", "w": ["M-PESA", "MOMO", "ECOCASH", "TELEBIRR"], "x": "Kenya, MTN's markets, Zimbabwe and Ethiopia."},
+        {"t": "Airline codes", "w": ["KQ", "ET", "WB", "MS"], "x": "Kenya Airways, Ethiopian, RwandAir and EgyptAir."}
+      ]
+    },
+    "2026-11-26": {
+      "groups": [
+        {"t": "Island countries", "w": ["MADAGASCAR", "MAURITIUS", "COMOROS", "CABO VERDE"], "x": "Three in the Indian Ocean and one in the Atlantic."},
+        {"t": "Southern African capitals", "w": ["GABORONE", "HARARE", "WINDHOEK", "MASERU"], "x": "Botswana, Zimbabwe, Namibia and Lesotho."},
+        {"t": "Landlocked countries", "w": ["UGANDA", "RWANDA", "MALAWI", "CHAD"], "x": "Niger is landlocked too, but it was needed elsewhere."},
+        {"t": "Named after a river", "w": ["NIGER", "NIGERIA", "GAMBIA", "SENEGAL"], "x": "Two countries are named after the Niger. Chad is named after a lake, not a river."}
+      ]
+    },
+    "2026-11-27": {
+      "groups": [
+        {"t": "Award shows", "w": ["BRITS", "BAFTAS", "BET", "AMVCA"], "x": "The AMVCAs are the Africa Magic Viewers' Choice Awards, held in Lagos."},
+        {"t": "Golden ___", "w": ["BOOT", "BALL", "GLOVE", "GLOBE"], "x": "Lion, Bear and Stallion are golden too, but then the Palme d'Or would have had nowhere to go."},
+        {"t": "Top film festival prizes", "w": ["PALME D'OR", "LION", "BEAR", "STALLION"], "x": "Cannes, Venice's Golden Lion, Berlin's Golden Bear and FESPACO's Golden Stallion of Yennenga."},
+        {"t": "African Nobel Peace winners", "w": ["LUTHULI", "TUTU", "MUKWEGE", "GBOWEE"], "x": "South Africa twice, then DR Congo and Liberia. Albert Luthuli was the first African to win it, with the 1960 prize."}
+      ]
+    },
+    "2026-11-28": {
+      "groups": [
+        {"t": "Athletics events", "w": ["STEEPLECHASE", "HURDLES", "JAVELIN", "DECATHLON"], "x": "Kenya's favourite is the first one."},
+        {"t": "Kenyan Premier League clubs", "w": ["AFC LEOPARDS", "ULINZI STARS", "BANDARI", "KCB"], "x": "Ingwe, the army side, the Mombasa dockers and the bankers."},
+        {"t": "Have won AFCON", "w": ["ZAMBIA", "ALGERIA", "CAMEROON", "GHANA"], "x": "Zambia's 2012 win in Libreville is still one of the great stories."},
+        {"t": "Cricket terms", "w": ["DUCK", "MAIDEN", "YORKER", "GOOGLY"], "x": "Out for nought, an over with no runs, a ball at the toes and a sneaky leg-spinner's trick."}
+      ]
+    },
+    "2026-11-29": {
+      "groups": [
+        {"t": "Independent in 1960", "w": ["NIGERIA", "SENEGAL", "TOGO", "CAMEROON"], "x": "1960 is called the Year of Africa. Seventeen countries became independent."},
+        {"t": "Old Swahili coast towns", "w": ["MALINDI", "KILWA", "ZANZIBAR", "PATE"], "x": "Kilwa was once one of the richest towns on the coast."},
+        {"t": "Fought early British rule in Kenya", "w": ["MEKATILILI", "KOITALEL", "WAIYAKI", "OTENYO"], "x": "The Giriama, the Nandi, the Kikuyu and the Gusii, long before the Mau Mau."},
+        {"t": "Kapenguria Six, minus Kenyatta", "w": ["KAGGIA", "KUBAI", "NGEI", "ONEKO"], "x": "Bildad Kaggia, Fred Kubai, Paul Ngei and Achieng' Oneko. Kungu Karumba was the sixth."}
+      ]
     }
   }
 }
