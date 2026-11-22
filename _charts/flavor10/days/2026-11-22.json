@@ -1,0 +1,51 @@
+{
+ "date": "2026-11-22",
+ "label": "22 NOV 2026",
+ "kind": "reset",
+ "name": "Reset",
+ "theme": "Slow Sunday",
+ "line": "Quiet ones for the last day of the week.",
+ "sources": "Picked by Flavor Africa. Credits checked against Wikipedia, Music in Africa, Nation, OkayAfrica, Nonesuch, BellaNaija, Channels TV, World Circuit",
+ "songs": [
+  {
+   "title": "Kothbiro",
+   "artist": "Ayub Ogada"
+  },
+  {
+   "title": "Zange",
+   "artist": "Bongeziwe Mabandla"
+  },
+  {
+   "title": "Down on My Knees",
+   "artist": "Ayọ"
+  },
+  {
+   "title": "Orente",
+   "artist": "Adekunle Gold"
+  },
+  {
+   "title": "Umama",
+   "artist": "Sjava"
+  },
+  {
+   "title": "Malaika",
+   "artist": "Miriam Makeba"
+  },
+  {
+   "title": "Kala",
+   "artist": "Ali Farka Touré & Toumani Diabaté"
+  },
+  {
+   "title": "Bittersweet",
+   "artist": "Lianne La Havas"
+  },
+  {
+   "title": "Turn Your Lights Down Low",
+   "artist": "Bob Marley & The Wailers"
+  },
+  {
+   "title": "Fast Car",
+   "artist": "Tracy Chapman"
+  }
+ ]
+}

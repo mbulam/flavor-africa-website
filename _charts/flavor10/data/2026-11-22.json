@@ -1,0 +1,74 @@
+{
+ "date": "2026-11-22",
+ "label": "22 NOV 2026",
+ "sources": {
+  "P": "Apple Music Top 100: Kenya (22 Nov 2026)",
+  "Y": "YouTube Top Songs: Kenya (week of 17 Nov 2026)",
+  "R": "Kenya Airplay (week of 22 Nov 2026)"
+ },
+ "songs": [
+  {
+   "title": "I'll Be Okay",
+   "artist": "Bien",
+   "points": 74,
+   "charts": "PYR",
+   "apple": "6822410197"
+  },
+  {
+   "title": "Finale",
+   "artist": "Bien ft. Alikiba",
+   "points": 55,
+   "charts": "PYR"
+  },
+  {
+   "title": "Heaven Baby",
+   "artist": "Ayra Starr ft. Zayn",
+   "points": 40,
+   "charts": "YR",
+   "apple": "6796539210"
+  },
+  {
+   "title": "Chai ya Saa Kumi",
+   "artist": "Ywaya Tajiri",
+   "points": 35,
+   "charts": "YR",
+   "apple": "6796900642"
+  },
+  {
+   "title": "Asali",
+   "artist": "Xenia Manasseh & Cracker Mallo",
+   "points": 25,
+   "charts": "R"
+  },
+  {
+   "title": "Kaumbete",
+   "artist": "Bien & Coster Ojwang",
+   "points": 24,
+   "charts": "P"
+  },
+  {
+   "title": "Dai Dai",
+   "artist": "Shakira, Burna Boy",
+   "points": 24,
+   "charts": "Y"
+  },
+  {
+   "title": "Omoka",
+   "artist": "Bien",
+   "points": 23,
+   "charts": "P"
+  },
+  {
+   "title": "Bounce",
+   "artist": "ruger",
+   "points": 23,
+   "charts": "R"
+  },
+  {
+   "title": "Don't Go",
+   "artist": "Bien, Joshua Baraka & The Composers",
+   "points": 23,
+   "charts": "P"
+  }
+ ]
+}
