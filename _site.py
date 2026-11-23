@@ -21,6 +21,7 @@ e = lambda s: html.escape(s, quote=True)
 
 # slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, or YYYY-MM-DDTHH:MM to go live at a set time; Nairobi), image focus
 STORIES = [
+ ("jensen-huang-reinstated-nvidia-ceo", ["news", "money"], "The Wrap", "Jensen Huang is back as Nvidia CEO, 11 days after resigning", "The board that ruled out his return last week voted unanimously to bring him back.", "wr-jensen-huang.jpg", "2026-11-23T17:30", "center 20%"),
  ("youssou-ndour-media-empire", ["money"], "Money Moves", "Youssou N'Dour owns a newspaper, a radio station and a TV channel", "How the voice behind 7 Seconds built his own media group in Dakar, and what it has cost him.", "yn-cover.jpg", "2026-11-23T11:00", "center 25%"),
  ("fifa-presidential-race-2027", ["sport"], "Flavor Sports", "Infantino has a race on his hands: Diallo and Tashima confirmed", "France's federation boss and Japan's former FA chief will face him in Rabat. Africa's 54 votes already back him.", "sp-fifa-infantino.jpg", "2026-11-20T17:00", "center 20%"),
  ("oprah-daily-closing", ["news", "culture"], "The Wrap", "Oprah's magazine is closing after 26 years", "Oprah Daily, once O, The Oprah Magazine, ends in December. She's moving on to her podcast and a live show.", "wr-oprah-daily.jpg", "2026-11-20T15:45", "center 15%"),
@@ -98,6 +99,7 @@ SECTIONS = {  # slug: (heading on page, empty message)
 }
 # The Wrap edition for each news story (filters News page chips: Local / Continental / Global)
 EDITION = {
+    "jensen-huang-reinstated-nvidia-ceo": "Global",
     "floyd-norman-honorary-oscar": "Global",
  "one-woman-one-bra-amaa-best-film": "Local",
  "tems-soul-train-2026": "Continental", "sofiya-nzau-world-tour": "Local", "drake-janice-stfu-lawsuit": "Global",
