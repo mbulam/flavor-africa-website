@@ -1,0 +1,112 @@
+{
+ "date": "2026-11-24",
+ "label": "24 NOV 2026",
+ "kind": "west",
+ "name": "West Africa",
+ "line": "The biggest new songs in Nigeria, Ghana, Côte d'Ivoire and Senegal, all out in the last month.",
+ "window": 30,
+ "sources": "Apple Music most played: Nigeria, Ghana, Côte d'Ivoire, Senegal",
+ "songs": [
+  {
+   "title": "Feel Alright",
+   "artist": "Rema & Wizkid",
+   "apple": "6831560095",
+   "out": "2026-11-20",
+   "points": 138,
+   "where": [
+    "ng",
+    "gh"
+   ]
+  },
+  {
+   "title": "FREE",
+   "artist": "Didi B",
+   "apple": "6825863697",
+   "out": "2026-11-05",
+   "points": 95,
+   "where": [
+    "ci"
+   ]
+  },
+  {
+   "title": "GEN Z II",
+   "artist": "Fameye, Joey B & Sarkodie ft. AratheJay",
+   "apple": "6829507252",
+   "out": "2026-11-12",
+   "points": 88,
+   "where": [
+    "gh"
+   ]
+  },
+  {
+   "title": "Velvet",
+   "artist": "Rema",
+   "apple": "6831560105",
+   "out": "2026-11-20",
+   "points": 87,
+   "where": [
+    "ng"
+   ]
+  },
+  {
+   "title": "MALADE",
+   "artist": "Didi B & Khaid",
+   "apple": "6825864126",
+   "out": "2026-10-27",
+   "points": 87,
+   "where": [
+    "ci"
+   ]
+  },
+  {
+   "title": "SAVE ME",
+   "artist": "O'Kenneth",
+   "apple": "6825928766",
+   "out": "2026-11-13",
+   "points": 83,
+   "where": [
+    "gh"
+   ]
+  },
+  {
+   "title": "CELLOPHANE",
+   "artist": "THB & døpelym",
+   "apple": "6832559545",
+   "out": "2026-11-20",
+   "points": 81,
+   "where": [
+    "ci"
+   ]
+  },
+  {
+   "title": "KƆKƆSAKYI",
+   "artist": "O'Kenneth",
+   "apple": "6825928763",
+   "out": "2026-11-13",
+   "points": 77,
+   "where": [
+    "gh"
+   ]
+  },
+  {
+   "title": "MC LAREN",
+   "artist": "THB",
+   "apple": "6832559544",
+   "out": "2026-11-20",
+   "points": 67,
+   "where": [
+    "ci"
+   ]
+  },
+  {
+   "title": "Guap Up",
+   "artist": "Zaylevelten",
+   "apple": "6834514591",
+   "out": "2026-11-20",
+   "points": 65,
+   "where": [
+    "ng"
+   ]
+  }
+ ]
+}
