@@ -21,6 +21,7 @@ e = lambda s: html.escape(s, quote=True)
 
 # slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, or YYYY-MM-DDTHH:MM to go live at a set time; Nairobi), image focus
 STORIES = [
+ ("miss-universe-2026-jennifer-barreto", ["news", "culture"], "The Wrap", "Jennifer Barreto wins Miss Universe 2026 at home, the first mother to take the crown", "Puerto Rico's own took the 75th crown. Five African women made the Top 30, with DR Congo's Jessi Kalambayi in the Top 12.", "wr-miss-universe-2026.jpg", "2026-11-25T09:00", "center 15%"),
  ("jensen-huang-reinstated-nvidia-ceo", ["news", "money"], "The Wrap", "Jensen Huang is back as Nvidia CEO, 11 days after resigning", "The board that ruled out his return last week voted unanimously to bring him back.", "wr-jensen-huang.jpg", "2026-11-23T17:30", "center 20%"),
  ("youssou-ndour-media-empire", ["money"], "Money Moves", "Youssou N'Dour owns a newspaper, a radio station and a TV channel", "How the voice behind 7 Seconds built his own media group in Dakar, and what it has cost him.", "yn-cover.jpg", "2026-11-23T11:00", "center 25%"),
  ("fifa-presidential-race-2027", ["sport"], "Flavor Sports", "Infantino has a race on his hands: Diallo and Tashima confirmed", "France's federation boss and Japan's former FA chief will face him in Rabat. Africa's 54 votes already back him.", "sp-fifa-infantino.jpg", "2026-11-20T17:00", "center 20%"),
@@ -99,6 +100,7 @@ SECTIONS = {  # slug: (heading on page, empty message)
 }
 # The Wrap edition for each news story (filters News page chips: Local / Continental / Global)
 EDITION = {
+    "miss-universe-2026-jennifer-barreto": "Global",
     "jensen-huang-reinstated-nvidia-ceo": "Global",
     "floyd-norman-honorary-oscar": "Global",
  "one-woman-one-bra-amaa-best-film": "Local",
