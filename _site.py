@@ -160,10 +160,7 @@ FLAVOR_FM_FEATURED = None
 FLAVOR_MIX = {"youtube": "we_LnIwQO3g", "title": "Raw & Unkut x Kareka The Entertainer",
               "dj": "Sami Flinch · Party Mix 2026, Dancehall x Afrobeats"}
 # Optional: "blurb" (the line under the heading) and "done" (shown after a fan's third question), for interviews etc.
-FAN_SEAT = {"show": "2026-11-anwar-saa-zone", "artist": "Anwar",
-            "line": "We're sitting down with Anwar Hassanali of Saa Zone",
-            "blurb": "What should we ask him? The best questions go into the interview.",
-            "done": "We'll take the best ones into the interview."}
+FAN_SEAT = None   # Ask Anwar (Saa Zone interview) taken down 25 Nov 2026
 HERO = {"grammys-2027-nominations"}   # the big top story (hand-set in index.html)
 # Today's picks (added 16 Nov 2026): the top of Today in the app. "Play this" is always the Flavor 10 No. 1.
 # "know" is a story slug (know_name / know_line override its headline and teaser). "show" is one thing to show up for:
