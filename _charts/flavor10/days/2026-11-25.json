@@ -1,0 +1,114 @@
+{
+ "date": "2026-11-25",
+ "label": "25 NOV 2026",
+ "kind": "south",
+ "name": "South",
+ "line": "The biggest new songs in South Africa, Zambia, Zimbabwe and Botswana, all out in the last month.",
+ "window": 30,
+ "sources": "Apple Music most played: South Africa, Zambia, Zimbabwe, Botswana",
+ "songs": [
+  {
+   "title": "Sorry Batswadi Baka",
+   "artist": "DJ Maphorisa, Xduppy, Focalistic & Optimist Music ZA ft. Sia_TheBee, BeeKayrsa28 & others",
+   "apple": "6833867238",
+   "out": "2026-11-12",
+   "points": 263,
+   "where": [
+    "za",
+    "zw",
+    "bw"
+   ]
+  },
+  {
+   "title": "Sobuye Sbonane",
+   "artist": "Dlala Thukzin & Zeh McGeba",
+   "apple": "6822654216",
+   "out": "2026-10-30",
+   "points": 138,
+   "where": [
+    "za",
+    "bw"
+   ]
+  },
+  {
+   "title": "Bitter Truth",
+   "artist": "Yo Maps",
+   "apple": "6828562212",
+   "out": "2026-11-06",
+   "points": 100,
+   "where": [
+    "zm"
+   ]
+  },
+  {
+   "title": "DINGA",
+   "artist": "Jnr Spragga",
+   "apple": "6834304378",
+   "out": "2026-11-12",
+   "points": 99,
+   "where": [
+    "zw"
+   ]
+  },
+  {
+   "title": "Inzondo",
+   "artist": "Vico Da Sporo ft. Phakamani & KaMavovo",
+   "apple": "6832606347",
+   "out": "2026-11-20",
+   "points": 98,
+   "where": [
+    "bw"
+   ]
+  },
+  {
+   "title": "Nkankala Free",
+   "artist": "Way Dee ft. Xaven",
+   "apple": "6831707141",
+   "out": "2026-11-06",
+   "points": 94,
+   "where": [
+    "zm"
+   ]
+  },
+  {
+   "title": "Archie Gwegwe",
+   "artist": "DJ Maphorisa, Xduppy & Mluusician ft. Benzoo, Vulela Maweekend & others",
+   "apple": "6833867243",
+   "out": "2026-11-12",
+   "points": 94,
+   "where": [
+    "bw"
+   ]
+  },
+  {
+   "title": "Satan Uri Nhova",
+   "artist": "Hulengende",
+   "apple": "6831908185",
+   "out": "2026-11-06",
+   "points": 93,
+   "where": [
+    "zw"
+   ]
+  },
+  {
+   "title": "Pressure",
+   "artist": "Usimamane",
+   "apple": "6833520112",
+   "out": "2026-11-20",
+   "points": 80,
+   "where": [
+    "za"
+   ]
+  },
+  {
+   "title": "International Baby",
+   "artist": "76 Drums & BLOOD KID yvok",
+   "apple": "6826012883",
+   "out": "2026-11-03",
+   "points": 79,
+   "where": [
+    "zm"
+   ]
+  }
+ ]
+}
