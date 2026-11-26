@@ -516,3 +516,15 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 @media (max-width:640px){.f10x .f10-cap{font-size:34px}.f10x .f10-head a{padding:9px 12px;font-size:13px}
   .f10x .f10-week b{font-size:12px}.f10x .f10-week span{font-size:13px}.f10x .f10-week button{padding:0 12px;min-height:38px}
   .f10x .f10{padding:2px 12px}.f10x .f10 li{grid-template-columns:44px minmax(0,1fr) 38px;gap:12px}.f10x .f10-rk{width:44px;height:44px;font-size:17px}.f10x .one .f10-rk{font-size:22px}}
+/* Articles (26 Nov 2026): templated / AI-looking details removed. No side bar on pull quotes, no spaced-caps
+   labels or credits, no small label above section headings, no yellow tag box at the top of a story. */
+.art blockquote.pull{margin:46px 0;padding:0;border-left:0}
+.art blockquote.pull p{color:var(--ink);text-transform:none;font-size:clamp(28px,4.2vw,38px);line-height:1.12;max-width:24ch}
+.art blockquote.pull p::before{content:"\201C"}.art blockquote.pull p::after{content:"\201D"}
+.art blockquote.pull cite{margin-top:14px;font-family:var(--body);font-size:14px;letter-spacing:0;text-transform:none}
+.art blockquote.pull cite::before{content:"\2014\00a0"}
+.ab-essay blockquote{border-left:0;padding-left:0;text-transform:none;color:var(--ink)}
+.art .body h2 .k{display:none}
+.art>.tag{background:none;padding:0;color:var(--accent);font-family:var(--body);font-weight:600;font-size:14px;letter-spacing:0;text-transform:none}
+.art>.meta{font-family:var(--body);font-size:13px;letter-spacing:0;text-transform:none}
+.art figcaption,.art .credit{font-family:var(--body);font-size:12.5px;letter-spacing:0;line-height:1.45}

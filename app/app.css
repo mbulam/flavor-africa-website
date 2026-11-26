@@ -476,3 +476,9 @@ html.app h1,html.app h2,html.app h3{font-family:var(--fx-font)}
 .fx-pick-go{display:flex;flex-direction:column;gap:8px;margin-top:20px}
 .fx-pick-go .fx-btn{width:100%;min-height:50px;border-radius:25px;font-size:15px}
 @media (prefers-reduced-motion:reduce){.fx-pick,.fx-pick-bg{transition:none}}
+/* Articles in the app (26 Nov 2026): same clean-up as the website. Quote has no side bar, credits and captions
+   are plain text, no small label above section headings. */
+html.app.fx-story article .body h2 .k{display:none}
+html.app .art blockquote.pull p{font-family:var(--fx-font);font-weight:600;font-size:27px;line-height:1.18;letter-spacing:-.015em;color:var(--fx-ink);text-transform:none}
+html.app .art blockquote.pull cite{font:400 14px/1.4 var(--fx-font);letter-spacing:0;text-transform:none;color:var(--fx-mute)}
+html.app .art figcaption,html.app .art .credit{font-family:var(--fx-font);font-size:12.5px;letter-spacing:0;line-height:1.45;color:var(--fx-mute)}
