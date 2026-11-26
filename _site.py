@@ -474,7 +474,7 @@ TK_FIXED = [("Ngoma na Marafiki \u00b7 Coming soon", "live.html"),
             ("Follow @flavor.africacorp", "https://www.instagram.com/flavor.africacorp")]
 TKJS = ('<script>(function(){var t=document.querySelector(".ticker[data-pool]");if(!t)return;'
         'var tr=t.querySelector(".tk-track"),src=t.querySelector("template");if(!tr||!src)return;'
-        'if(window.matchMedia&&matchMedia("(prefers-reduced-motion:reduce)").matches)return;'
+        'if(document.documentElement.classList.contains("app")||(window.matchMedia&&matchMedia("(prefers-reduced-motion:reduce)").matches))return;'
         'var now=new Date(Date.now()+108e5).toISOString().slice(0,16),items=[].slice.call(src.content.children),'
         'st=items.filter(function(a){return a.hasAttribute("data-pub")&&a.getAttribute("data-pub")<=now}),'
         'fx=items.filter(function(a){return!a.hasAttribute("data-pub")});if(st.length<2)return;'
@@ -483,10 +483,10 @@ TKJS = ('<script>(function(){var t=document.querySelector(".ticker[data-pool]");
         'function next(){var a;if(fx.length&&n%3===2){a=fx[fi++%fx.length]}else{if(!q.length){q=mix(st);if(q[0]===last)q.push(q.shift())}a=q.shift()}n++;last=a;'
         'var w=document.createElement("span");w.className="tk-it";w.appendChild(a.cloneNode(true));var d=document.createElement("i");d.setAttribute("aria-hidden","true");w.appendChild(d);return w}'
         'tr.innerHTML="";tr.classList.add("tk-live");var x=0,on=true,prev=0,v=t.offsetWidth<700?46:58;'
-        'function fill(){while(tr.scrollWidth+x<t.offsetWidth*2)tr.appendChild(next())}fill();'
+        'function fill(){var W=t.offsetWidth,k=0;if(!W)return;while(tr.scrollWidth+x<W*2&&k++<40)tr.appendChild(next())}fill();'
         't.addEventListener("mouseenter",function(){on=false});t.addEventListener("mouseleave",function(){on=true});'
-        'function step(ts){if(prev&&on&&!document.hidden){x-=Math.min(ts-prev,60)*v/1e3;var f=tr.firstChild;'
-        'while(f&&x+f.offsetWidth<0){x+=f.offsetWidth;tr.removeChild(f);f=tr.firstChild}fill();tr.style.transform="translateX("+x+"px)"}'
+        'function step(ts){if(prev&&on&&!document.hidden&&t.offsetWidth){x-=Math.min(ts-prev,60)*v/1e3;var f=tr.firstChild;'
+        'while(f&&f.offsetWidth&&x+f.offsetWidth<0){x+=f.offsetWidth;tr.removeChild(f);f=tr.firstChild}fill();tr.style.transform="translateX("+x+"px)"}'
         'prev=ts;requestAnimationFrame(step)}requestAnimationFrame(step)})();</script>')
 
 
