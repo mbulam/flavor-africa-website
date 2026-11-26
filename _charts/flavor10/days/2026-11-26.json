@@ -1,0 +1,115 @@
+{
+ "date": "2026-11-26",
+ "label": "26 NOV 2026",
+ "kind": "east",
+ "name": "East & Central",
+ "line": "The biggest new songs in Tanzania, Uganda, Rwanda and DR Congo, all out in the last month.",
+ "window": 30,
+ "sources": "Apple Music most played: Tanzania, Uganda, Rwanda, DR Congo",
+ "songs": [
+  {
+   "title": "TANZANIA",
+   "artist": "Rema & BNYX®",
+   "apple": "6831560106",
+   "out": "2026-11-20",
+   "points": 271,
+   "where": [
+    "tz",
+    "ug",
+    "rw"
+   ]
+  },
+  {
+   "title": "Pretty Girls",
+   "artist": "Joeboy",
+   "apple": "6821044268",
+   "out": "2026-11-06",
+   "points": 246,
+   "where": [
+    "tz",
+    "ug",
+    "rw"
+   ]
+  },
+  {
+   "title": "Call On Me / Jowo",
+   "artist": "Joshua Baraka & Watendawili",
+   "apple": "6821977263",
+   "out": "2026-11-06",
+   "points": 96,
+   "where": [
+    "ug"
+   ]
+  },
+  {
+   "title": "Commando",
+   "artist": "Joshua Baraka & Tiwa Savage",
+   "apple": "6821976901",
+   "out": "2026-11-06",
+   "points": 94,
+   "where": [
+    "ug"
+   ]
+  },
+  {
+   "title": "Okay",
+   "artist": "Zuba Ray",
+   "apple": "6829791285",
+   "out": "2026-11-05",
+   "points": 91,
+   "where": [
+    "rw"
+   ]
+  },
+  {
+   "title": "El Classico",
+   "artist": "BabyDaiz & Tiakola",
+   "apple": "6824554505",
+   "out": "2026-11-20",
+   "points": 89,
+   "where": [
+    "cd"
+   ]
+  },
+  {
+   "title": "KIZOBA ZOBA (yes)",
+   "artist": "Zozo machine king",
+   "apple": "6830463447",
+   "out": "2026-11-06",
+   "points": 85,
+   "where": [
+    "cd"
+   ]
+  },
+  {
+   "title": "MAMBO BYEE",
+   "artist": "Marioo",
+   "apple": "6834395161",
+   "out": "2026-11-20",
+   "points": 80,
+   "where": [
+    "tz"
+   ]
+  },
+  {
+   "title": "Kumbele",
+   "artist": "PSON",
+   "apple": "6822416537",
+   "out": "2026-11-06",
+   "points": 79,
+   "where": [
+    "cd"
+   ]
+  },
+  {
+   "title": "Unaweza",
+   "artist": "PAUL CLEMENT ft. Jaque Gachiri",
+   "apple": "6838315776",
+   "out": "2026-11-22",
+   "points": 60,
+   "where": [
+    "tz"
+   ]
+  }
+ ]
+}
