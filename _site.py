@@ -463,8 +463,63 @@ def build_sections():
         wr(f, add_filter(add_sched(segs_html(h))))
 
 
+# ---- The running strip under the homepage hero (changed 26 Nov 2026: it never stops changing) ----
+# Built from STORIES on every run, so a new story joins the strip on its own (scheduled ones the minute they go live).
+# In the browser the strip is an endless queue: each item leaves on the left and a new one is fed in on the right,
+# the newest two stories first, then the rest in a fresh shuffle every lap, with the day's Flavor 10 No. 1 and the
+# fixed lines below dropped in between. Nothing repeats until the whole pool has gone by.
+TK_DAYS = 30            # stories from the last 30 days go in the strip
+TK_WEEKLY = {"Nairobi This Weekend", "The Watchlist", "The Drop"}
+TK_FIXED = [("Ngoma na Marafiki \u00b7 Coming soon", "live.html"),
+            ("Follow @flavor.africacorp", "https://www.instagram.com/flavor.africacorp")]
+TKJS = ('<script>(function(){var t=document.querySelector(".ticker[data-pool]");if(!t)return;'
+        'var tr=t.querySelector(".tk-track"),src=t.querySelector("template");if(!tr||!src)return;'
+        'if(window.matchMedia&&matchMedia("(prefers-reduced-motion:reduce)").matches)return;'
+        'var now=new Date(Date.now()+108e5).toISOString().slice(0,16),items=[].slice.call(src.content.children),'
+        'st=items.filter(function(a){return a.hasAttribute("data-pub")&&a.getAttribute("data-pub")<=now}),'
+        'fx=items.filter(function(a){return!a.hasAttribute("data-pub")});if(st.length<2)return;'
+        'function mix(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),k=a[i];a[i]=a[j];a[j]=k}return a}'
+        'var q=st.slice(0,2).concat(mix(st.slice(2))),fi=Math.floor(Math.random()*fx.length),n=0,last=null;'
+        'function next(){var a;if(fx.length&&n%3===2){a=fx[fi++%fx.length]}else{if(!q.length){q=mix(st);if(q[0]===last)q.push(q.shift())}a=q.shift()}n++;last=a;'
+        'var w=document.createElement("span");w.className="tk-it";w.appendChild(a.cloneNode(true));var d=document.createElement("i");d.setAttribute("aria-hidden","true");w.appendChild(d);return w}'
+        'tr.innerHTML="";tr.classList.add("tk-live");var x=0,on=true,prev=0,v=t.offsetWidth<700?46:58;'
+        'function fill(){while(tr.scrollWidth+x<t.offsetWidth*2)tr.appendChild(next())}fill();'
+        't.addEventListener("mouseenter",function(){on=false});t.addEventListener("mouseleave",function(){on=true});'
+        'function step(ts){if(prev&&on&&!document.hidden){x-=Math.min(ts-prev,60)*v/1e3;var f=tr.firstChild;'
+        'while(f&&x+f.offsetWidth<0){x+=f.offsetWidth;tr.removeChild(f);f=tr.firstChild}fill();tr.style.transform="translateX("+x+"px)"}'
+        'prev=ts;requestAnimationFrame(step)}requestAnimationFrame(step)})();</script>')
+
+
+def ticker_html():
+    today = nairobi_today()
+    age = lambda s: (today - datetime.date.fromisoformat(s[6][:10])).days
+    # weekend guides and release round-ups go stale fast, so they only ride the strip for a week
+    pool = [s for s in newest(STORIES) if age(s) <= (7 if s[2] in TK_WEEKLY else TK_DAYS)]
+    def a(text, href, pub=None):
+        ext = href.startswith("http")
+        return '<a href="%s"%s%s><span>%s</span></a>' % (e(href), (' data-pub="%s"' % pub) if pub else "",
+                                                       ' target="_blank" rel="noopener"' if ext else "", e(text))
+    # no tag in front when the headline already says it ("The Drop: ...", "GTA 6, decoded")
+    stories = [a(s[3] if s[2].split()[-1].lower() in s[3].lower() else "%s \u00b7 %s" % (s[2], s[3]), s[0] + ".html", s[6]) for s in pool]
+    fixed = []
+    try:
+        ed = f10_today()
+        top = ed["songs"][0]
+        fixed.append(a("Flavor 10 No. 1 today: %s \u00b7 %s" % (top["title"], top["artist"]), "index.html#flavor-10"))
+    except Exception:
+        fixed.append(a("The Flavor 10 \u00b7 a new chart every morning", "index.html#flavor-10"))
+    fixed += [a(t, h) for t, h in TK_FIXED]
+    # without JavaScript (or with reduced motion) the strip shows the newest stories on the old CSS loop
+    run = "".join(x + '<i aria-hidden="true"></i>' for x in (stories[:5] + fixed))
+    return ('<div class="ticker" data-pool aria-label="Flavor Africa headlines"><div class="tk-track">'
+            '<div class="tk-run">%s</div><div class="tk-run" aria-hidden="true">%s</div></div>'
+            '<template>%s</template>%s</div>') % (run, run, "".join(stories + fixed), TKJS)
+
+
 def build_home():
     h = rd("index.html")
+    h, n = re.subn(r'<div class="ticker".*?(?=<div class="picks-hd")', lambda m: ticker_html() + "</div>", h, count=1, flags=re.S)
+    assert n == 1
     # Every story goes into Latest (newest first). The Wrap and Culture & Sport blocks
     # below hide whatever Latest is already showing (done in the browser, so it stays
     # right as scheduled stories go live).
