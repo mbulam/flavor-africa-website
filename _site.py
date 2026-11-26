@@ -70,7 +70,7 @@ STORIES = [
  ("watchlist-30-oct-1-nov", ["screen"], "The Watchlist", "Must watch this weekend: Call Me Queen, How to Ruin Diwali and more", "A Nairobi story in cinemas, a Diwali disaster and two Netflix thrillers.", "wl2-deadendjob.jpg", "2026-10-30", "center 40%"),
  ("watchlist", ["screen"], "The Watchlist", "Must watch this weekend: Lupin, A Land Apart, Spinners and more", "This weekend's picks across cinemas and streaming.", "wl-lupin.jpg", "2026-10-23", "center 0%"),
  ("uk-afrobeats-chart-18-24-oct", ["charts", "music"], "Flavor Charts", "Ayra Starr and Zayn take No. 1 on the UK Afrobeats chart", "“Heaven Baby” climbs to the top. Here's the top five.", "ch-heaven.jpg", "2026-10-23", "center 30%"),
- ("nairobi-new-sound", ["features"], "The Flavor Cover", "Nairobi's New Sound", "It isn't one genre. That's the whole point. Issue 01 of the Flavor Cover.", "nns-njerae.jpg", "2026-10-24", "center 25%"),
+ ("nairobi-new-sound", ["features"], "The Flavor Cover", "Nairobi's New Sound", "Dancehall, konpa, arbantone and gospel, all at once. Issue 01 of the Flavor Cover.", "nns-njerae.jpg", "2026-10-24", "center 25%"),
  ("messi-princess-of-asturias", ["sport"], "Flavor Sports", "One of one: Messi wins the Princess of Asturias Award on his own", "The first footballer to take Spain's top sports honour alone.", "sp-messi-wave.jpg", "2026-10-24", "center 30%"),
  ("tems-what-you-need-record", ["charts", "music", "news"], "Flavor Charts", "Tems makes Billboard history with “What You Need”", "30 weeks on the Hot 100, a record for a solo African song.", "ch-tems.jpg", "2026-10-24", "center 10%"),
  # Ayrosh show on hold (10 Nov 2026): hidden from every listing until it is confirmed. To bring it back, remove the "#" below

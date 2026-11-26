@@ -7,7 +7,7 @@ META = "The Wrap · Continental · 13 Nov 2026 · 3 min read"
 LEAD = ("img/wr-tems-cobab.jpg", "Tems, photographed for EE72's Fall 2026 digital cover", "Campbell Addy for EE72")
 
 BODY = [
-("p", "Tems isn't just singing on the <em>Children of Blood and Bone</em> soundtrack. She's in charge of it. As executive music producer and curator, she's shaping the whole album for Paramount Pictures' adaptation of Tomi Adeyemi's bestselling fantasy novel, which reaches cinemas on 15 January 2027."),
+("p", "Tems is doing more than singing on the <em>Children of Blood and Bone</em> soundtrack. She's running it. As executive music producer and curator, she's shaping the whole album for Paramount Pictures' adaptation of Tomi Adeyemi's bestselling fantasy novel, which reaches cinemas on 15 January 2027."),
 ("p", "Until now, fans only had the job title to go on. This week Tems announced the soundtrack's lead single and named everyone else on it."),
 ("h2", "The single", "African ", "Love Story"),
 ("p", "The first song is “African Love Story”, which Tems wrote and performs herself. It's out on Friday 20 November through RCA Records, and pre-saves are already open. If you can't wait, pieces of it play through the film's new trailer, released the same day as the announcement."),

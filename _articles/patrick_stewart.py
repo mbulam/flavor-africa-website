@@ -12,7 +12,7 @@ BODY = [
 ("h2", "The stage", "A son of ", "Mirfield"),
 ("p", "Stewart grew up in Mirfield, in the West Riding of Yorkshire, and came to acting through the theatre. He made his name with the Royal Shakespeare Company, and the stage stayed at the centre of his life long after Hollywood found him."),
 ("p", "He won three Olivier Awards, the first in 1979 for <em>Antony and Cleopatra</em>, and a later one for his solo <em>A Christmas Carol</em>, in which he played dozens of characters on his own. His 2007 <em>Macbeth</em>, which transferred to Broadway in 2008, earned him his only Tony nomination. Later in life he shared the stage with his close friend Sir Ian McKellen in <em>Waiting for Godot</em> and Harold Pinter’s <em>No Man’s Land</em>, in London and New York."),
-("h2", "The screen", "Two roles, one ", "legacy"),
+("h2", "The screen", "Picard ", "and Professor X"),
 ("p", "For most of the world, Stewart was Captain Jean-Luc Picard. He led <em>Star Trek: The Next Generation</em> for seven seasons from 1987, then four feature films, and turned “Make it so” into one of television’s best-known lines. In 2020 he came back to the role in <em>Star Trek: Picard</em>, which he also executive produced, and the series ended with its third season in 2023."),
 ("p", "In 2000 he became Professor Charles Xavier in <em>X-Men</em>, a role he returned to across the franchise, including a final, much-praised turn in <em>Logan</em> (2017). He was also cast as Xavier in Marvel’s upcoming <em>Avengers: Doomsday</em>. Away from the two franchises, his films included <em>Excalibur</em>, <em>L.A. Story</em> and <em>Conspiracy Theory</em>."),
 ("h2", "The man", "Beyond the ", "roles"),

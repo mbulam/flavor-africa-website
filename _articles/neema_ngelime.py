@@ -53,7 +53,7 @@ BODY = [
 ("p", "For all the awards, the hardest part is still ahead. The film is in late development, with about €90,000 of its €400,000 budget secured. The team is talking to European broadcasters and co-producers to close the gap, and the main shoot is planned for July 2027 in Tanzania."),
 ("p", "That's where this year's prizes matter most. Each 2027 market place puts the film, and its director, back in the rooms where documentaries find partners and money. The Sørfond forum in Norway this month is the next date on the calendar."),
 
-("h2", "Why watch her", "Remember ", "the name"),
+("h2", "Why watch her", "Follow ", "the journey"),
 ("p", "A feature documentary can take years to reach a screen, and this one is no exception. But there is a reason juries in three countries have backed it before a single day of the main shoot: a director with a clear voice, an experimental way of working that has already proved itself in her short films, and a deeply personal story that speaks to how women across East Africa are expected to live."),
 ("p", "If you want to follow the journey, Ngelime is on Instagram at <a href=\"https://www.instagram.com/thebongolese/\" target=\"_blank\" rel=\"noopener\">@thebongolese</a>."),
 ]

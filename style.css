@@ -528,3 +528,22 @@ footer small{grid-column:1/-1;color:var(--mute);font-size:12px;border-top:1px so
 .art>.tag{background:none;padding:0;color:var(--accent);font-family:var(--body);font-weight:600;font-size:14px;letter-spacing:0;text-transform:none}
 .art>.meta{font-family:var(--body);font-size:13px;letter-spacing:0;text-transform:none}
 .art figcaption,.art .credit{font-family:var(--body);font-size:12.5px;letter-spacing:0;line-height:1.45}
+/* Whole site (26 Nov 2026): no fades over photos (text gets a tight shadow on the letters instead), no
+   spaced-out capital labels in the typewriter font, no yellow tag boxes. */
+.hero::after,.ab-live-img::after{display:none}
+.hero-txt,.ab-live-in{text-shadow:0 1px 2px rgba(0,0,0,.6),0 0 12px rgba(0,0,0,.35)}
+.hero h1{font-weight:700}.hero p{color:#fff}.hero .meta{color:rgba(255,255,255,.9)}
+.tag{background:none;padding:0;color:var(--accent);font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:0;text-transform:none}
+.hero .tag{color:#fff}.band .tag,.ab-live .tag{color:var(--yellow)}
+.sub a,.meta,.secbar a,.play,.facts2 span:first-child,.band .facts span:first-child,.segs span,.segs a,.copy,footer .line,footer nav a,
+.sources summary,.tk-run span,.f10-week b,.mv,.f10-time,.f10-links a,.ab-btn{font-family:var(--body);letter-spacing:.02em}
+.meta,footer .line,.sources summary,.facts2 span:first-child,.band .facts span:first-child{text-transform:none;font-size:12.5px}
+.hero-txt button,.ab-live-in .ab-btn{text-shadow:none}
+:root{--mono:var(--body)}
+.picks-hd,.picks-hd *{letter-spacing:.02em}
+/* Top story on Home: the headline sits under the photo, not on it, so no fade or shadow is ever needed. */
+.hero{aspect-ratio:auto;overflow:visible;background:none}
+.hero img{position:relative;inset:auto;aspect-ratio:3/2;height:auto}
+.hero-txt{position:static;padding:16px 0 0;color:var(--ink);text-shadow:none}
+.hero p{color:var(--mute)}.hero .meta{color:var(--mute)}.hero .tag{color:var(--accent)}
+@media (max-width:640px){.hero-box .hero-txt{padding:16px 16px 6px}}

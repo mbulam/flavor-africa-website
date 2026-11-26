@@ -2,7 +2,7 @@ FILE = "nairobi-new-sound.html"
 TITLE = "Nairobi's New Sound"
 TAG = "The Flavor Cover"
 H1 = "Nairobi’s New Sound"
-DEK = "It isn't one genre. That's the whole point. Africa's youngest streaming city is playing dancehall, konpa, arbantone and gospel all at once, and the numbers prove it. Issue 01 of the Flavor Cover."
+DEK = "Africa's youngest streaming city is playing dancehall, konpa, arbantone and gospel all at once, and the streaming numbers back it up. Issue 01 of the Flavor Cover."
 META = "The Flavor Cover · Issue 01 · 24 Oct 2026 · 7 min read"
 LEAD = ("img/nns-njerae.jpg", "Cover: Njerae, live with Flavor Africa")
 
@@ -30,8 +30,8 @@ BODY = [
 
 ("img", "img/nns-bien.jpg", "Bien, whose konpa-driven “Finale” with Alikiba became the year’s big cross-border hit"),
 
-("h2", "The plot twist", "Nobody saw ", "this coming"),
-("p", "Here's the number that surprised everyone. Among young Kenyan listeners, gospel grew 37% year on year. Drill, which a lot of people assumed was the future of youth music, grew just 6%. That means gospel is growing roughly six times faster than drill among the very generation running the club mixes."),
+("h2", "The plot twist", "Gospel ", "outgrows drill"),
+("p", "Among young Kenyan listeners, gospel grew 37% year on year. Drill, which a lot of people assumed was the future of youth music, grew just 6%. That means gospel is growing roughly six times faster than drill among the very generation running the club mixes."),
 ("p", "It fits a wider pattern in the data. Young listeners are streaming more of almost everything: amapiano up 34%, R&B up 28%, Afrobeats up 25%, Afropop up 21%. They aren't choosing between the club and the church. They're doing both, sometimes on the same playlist."),
 
 ("img", "img/nns-gospel.jpg", "Gospel is growing roughly six times faster than drill among young Kenyan listeners"),

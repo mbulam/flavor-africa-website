@@ -9,7 +9,7 @@ LEAD = ("img/sp-germany-farewell-team.jpg", "Germany line up in the black farewe
 BODY = [
 ("p", "Germany's men played their last game in Adidas on Monday, 16 November 2026, and they made it a night to remember. Jürgen Klopp's side beat the Netherlands 5-0 at the Olympiastadion in Berlin to finish top of their Nations League group and book a place in the quarter-finals."),
 ("p", "From 1 January 2027, Nike takes over as the national team's kit supplier. So this was the final outing for the black-and-gold farewell shirt, and the last time the German men walked out in the three stripes."),
-("h2", "The game", "Five goals, ", "one farewell"),
+("h2", "The game", "A 5-0 ", "send-off"),
 ("p", "Derry Scherhant opened the scoring just before half-time. The winger was born in Berlin and came through at Hertha, the club that calls the Olympiastadion home, and it was his first goal for Germany."),
 ("p", "The second half was one-way traffic. Florian Wirtz scored the second, Nico Schlotterbeck added a third and Wirtz got his second of the night for 4-0. Brajan Gruda, who had already set up two, finished it off with the fifth."),
 ("img", "img/sp-germany-scherhant.jpg", "Derry Scherhant celebrates his first goal for Germany", "DFB / Philipp Reinhard"),

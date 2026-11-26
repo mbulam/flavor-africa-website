@@ -9,7 +9,7 @@ LEAD = ("img/verdict-bensoul.jpg", "The Flight 420 album artwork", "@bensoulmusi
 BODY = [
 ("p", "Bensoul released <em>Flight 420</em> on Friday 30 October, on his own imprint, Sudah Nation. It's 13 tracks long, and it arrives three and a half years after <em>The Lion of Sudah</em>, the debut album he put out on Sauti Sol's Sol Generation label in April 2023. This time the label is his own, and you can hear him enjoying the freedom."),
 
-("h2", "The setup", "Three colours, ", "one idea"),
+("h2", "The setup", "Red, yellow ", "and green"),
 ("p", "The songs started at a writing camp in February, with Hendrick Sam, Wuodomollo and Jaz Beatz on production, and Trevor Magak recording the live instruments. Bensoul has described the album as being about life, joy and passion, and the rollout spelled that out in colour. On Instagram in April he gave each one a meaning: red for passion, yellow for happiness, green for life. Those are the colours of the painted plane on the cover, the knitted cap and the suits in his photos, and the sunset on the hand-painted back cover."),
 ("img", "img/verdict-bensoul-red.jpg", "Bensoul in red during the Flight 420 rollout", "@bensoulmusic / Instagram"),
 ("p", "The number has followed him for a while. <em>The Lion of Sudah</em> came out on 20 April 2023, the lead single <em>NaEnjoy</em> came out on 20 April 2026, and he announced it with a post that read simply “4:20pm TODAY.” He hasn't explained the title on record, so we'll leave that to him."),

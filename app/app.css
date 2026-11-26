@@ -482,3 +482,8 @@ html.app.fx-story article .body h2 .k{display:none}
 html.app .art blockquote.pull p{font-family:var(--fx-font);font-weight:600;font-size:27px;line-height:1.18;letter-spacing:-.015em;color:var(--fx-ink);text-transform:none}
 html.app .art blockquote.pull cite{font:400 14px/1.4 var(--fx-font);letter-spacing:0;text-transform:none;color:var(--fx-mute)}
 html.app .art figcaption,html.app .art .credit{font-family:var(--fx-font);font-size:12.5px;letter-spacing:0;line-height:1.45;color:var(--fx-mute)}
+/* Whole app (26 Nov 2026): no fades over photos. The text on photos gets a tight shadow on the letters instead. */
+.fa-d-card::after,.fa-cv .cvp::after,.fx-hero::after,.fx-card::after,.fa-bl-card::after{display:none!important}
+.fa-d-body,.fa-d-head,.fa-cv .cvt,.fx-hero .in,.fx-card,.fa-bl-card{text-shadow:0 1px 2px rgba(0,0,0,.6),0 0 12px rgba(0,0,0,.35)}
+.fx-hero p{color:#fff}
+.fx-btns,.fx-btns *,.fa-d-go,.fa-d-card button,.fx-card button,.fa-bl-card button{text-shadow:none}

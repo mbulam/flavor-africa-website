@@ -8,7 +8,7 @@ LEAD = ("img/wr-tems-st.jpg", "Tems, nominated for Spotify's RNB X International
 
 BODY = [
 ("p", "BET began rolling out nominations for the 2026 Soul Train Awards on Monday 5 October, releasing the categories in stages rather than all at once. The first slate included R&B/Soul Song of the Year and the fan-voted Spotify RNB X International Artist award, and Tems is the only artist named in both."),
-("h2", "The nominations", "Two categories, ", "one Nigerian star"),
+("h2", "The nominations", "Up for ", "two awards"),
 ("p", "Her nod for Song of the Year is for “What You Need”, the slow-burning single that has spent most of 2026 on the Billboard Hot 100 and has since become the longest-charting solo song by an African artist in the chart's history. The second is the RNB X International Artist award, which Spotify backs and fans vote on."),
 ("p", "She isn't the only African voice in the song category. South Africa's Tyla is also up for R&B/Soul Song of the Year, with “Chanel”."),
 ("h2", "What's next", "Mark ", "the date"),

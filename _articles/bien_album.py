@@ -13,10 +13,10 @@ BODY = [
 ("h2", "The guest list", "Seventeen tracks, ", "plenty of company"),
 ("p", "The features stretch across Kenya, East Africa and beyond:"),
 ("raw", "<ul><li>“Signs” with 2 Chainz and Papa Gen Z</li><li>“Finale” with Alikiba</li><li>“How Can I Forget” with Oxlade</li><li>“Don't Go” with Joshua Baraka and The Compozers</li><li>“Mayolo” with Femi One and Papaa Maasai</li><li>“Kaumbete” with Coster Ojwang</li><li>“Mueni” with KayCyy</li><li>“XOXO” with Ywaya Tajiri</li><li>“P.O. Box Kakamega” with Bryce One</li><li>“Success” with Tulwap Kipsigis and Nono Melodies</li></ul>"),
-("p", "“Finale”, his konpa-flavoured duet with Tanzania's Alikiba, is already one of the biggest cross-border hits of the year, which tells you how much is riding on the rest."),
+("p", "“Finale”, his konpa-flavoured duet with Tanzania's Alikiba, is already one of the biggest cross-border hits of the year, so there's a lot riding on the rest of the album."),
 ("img", "img/nns-bien-stole.jpg", "Bien", "@bienaimesol / Instagram"),
 ("h2", "Why it matters", "The first ", "Quality Control album"),
-("p", "This is Bien's first album since he became the first African artist signed to Quality Control Music, the Atlanta label behind Migos and Lil Baby, as it expands into Africa. A 2 Chainz feature is a sign of that new reach. The rest of the tracklist is a sign that he hasn't forgotten where he's from."),
+("p", "This is Bien's first album since he became the first African artist signed to Quality Control Music, the Atlanta label behind Migos and Lil Baby, as it expands into Africa. Getting 2 Chainz on the record shows that new reach, while the rest of the guest list stays close to home."),
 ]
 
 SOURCES = [

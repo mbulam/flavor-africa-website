@@ -25,7 +25,7 @@ BODY = [
     ("p", "Lamine Yamal and Vicky López won the men’s and women’s Young Talent awards. Unai Simón and Cata Coll were named Goalkeepers of the Year; Spain coach Luis de la Fuente and Barcelona coach Pere Romeu took the coaching awards. Paris Saint-Germain won Men’s Club of the Year, while Barcelona took the women’s prize. Kane and Mexico’s Charlyn Corral won the striker awards. Arsenal and England forward Bukayo Saka received the Sócrates Award for solidarity and social causes."),
     ("h2", "A London first", "The ceremony leaves ", "Paris"),
     ("p", "The 70th-edition ceremony was held at the London Palladium on 26 October. London hosted the Ballon d’Or for the first time, with the venue chosen as a tribute to Stanley Matthews, the inaugural winner in 1956. Thirteen awards were presented in all."),
-    ("h2", "How the vote works", "More than ", "a goal count"),
+    ("h2", "How the vote works", "How the ", "vote works"),
     ("p", "The award is decided by specialist journalists, using a season window that ran from 3 August 2025 to 19 July 2026. France Football’s criteria put individual performance and decisive impact first, team achievements second, and class and fair play third. The men’s jury comprises journalists from the top 100 FIFA-ranked countries; the women’s jury draws from the top 50. Each juror ranks ten nominees, with points awarded from 15 for first place down to one for tenth."),
 ]
 

@@ -24,7 +24,7 @@ BODY = [
 ("p", "The features pull the other way, out of Kenya. 2 Chainz brings Atlanta rap, Oxlade brings Nigerian Afrobeats, Joshua Baraka brings Uganda and Alikiba brings Bongo Flava. The album keeps swinging between home and away, and that swing is exactly what people are arguing about."),
 ("img", "img/fva-stage.jpg", "Bien on stage", "@imvaho_nshya_rwanda / Instagram"),
 
-("h2", "Track by track", "Seventeen songs, ", "one guest list"),
+("h2", "Track by track", "Song ", "by song"),
 ("p", "The tracklist and features below come from the official tracklist. Where a credit or description is on record, we've added it."),
 ("raw", "<ol>"
  "<li><strong>Alusa Continua</strong>. The title track opens the album.</li>"

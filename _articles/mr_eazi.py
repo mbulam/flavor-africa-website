@@ -23,7 +23,7 @@ BODY = [
 
 ("h2", "Move 03", "Build your own ", "investment arm"),
 ("p", "In 2021 he set up Zagadat Capital, an investment vehicle named after one of his catchphrases. One of its first cheques went into pawaPay, a mobile money payments company spun out of the betPawa business, as part of a $9 million seed round. Mr Eazi joined pawaPay's board, and the company has since crossed one billion transactions, a milestone it reached in under three and a half years."),
-("p", "Zagadat is not just a tech fund. As you'll see further down, it has started taking positions in companies on the stock market too."),
+("p", "Zagadat is a tech fund, but as you'll see further down, it has also started taking positions in companies on the stock market."),
 
 ("h2", "Move 04", "Invest in ", "the next generation"),
 ("p", "emPawa Africa, the artist incubator he launched in 2019, was built to give young artists the kind of backing that is hard to find early in a career. Its first big programme, emPawa100, picked 100 emerging African artists from thousands of online submissions and paid for each one's music video, at $3,000 per artist. The top ten went to a three-week mentorship camp in Cape Town."),

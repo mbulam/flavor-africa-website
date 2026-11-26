@@ -20,7 +20,7 @@ BODY = [
 ("h2", "", "Bringing it into ", "the room"),
 ("p", "The third part is live events. In 2019, the show toured Kenyan universities to record stories about real campus life. The tours have since gone abroad, with stops in France and Dubai. In September 2026, Legally Clueless took its <em>For Mannerless Women</em> series off the screen for a live gathering in Nairobi, bringing women from the show's community into one room. Forbes notes that she deliberately keeps these rooms small, so women feel safe enough to open up."),
 ("quote", "The podcast is a tool. It's not the product.", "Adelle Onyango, in Forbes"),
-("h2", "", "The ", "takeaway"),
+("h2", "", "Still a ", "podcast first"),
 ("p", "Adelle told Forbes that a lot of the money comes from “the non-sexy, non-creative parts of the business,” and that this is what pays for everything else. She also says there's no single way to do it: each creator can shape a business model that works for them."),
 ("p", "Seven years after she started it, the podcast is still at the centre of what Legally Clueless does. The difference is that it now feeds a radio deal, a training curriculum and a live events calendar, and that business is what Forbes chose to write about."),
 

@@ -14,7 +14,7 @@ BODY = [
 ("p", "For Fancy Fingers, the week started a day early. On Wednesday, 11 November, he was at the Latin Recording Academy’s Person of the Year gala, a private event held during Latin Grammy Week. This year’s honouree was Daddy Yankee, the first reggaeton artist to receive the award. Fancy Fingers described it on Instagram as an honour to meet great artists and other people in the industry."),
 ("h2", "The show", "Latin music’s ", "biggest night"),
 ("p", "The Latin Grammys returned to the MGM Grand Garden Arena this year, with Roselyn Sánchez hosting for the tenth time. The show aired live on Univision in the US. Nominees competed across 60 categories, and songwriter-producer Edgar Barrera went in with the most nominations, 10."),
-("h2", "The bigger picture", "Why it ", "matters"),
+("h2", "The bigger picture", "A Nairobi visit ", "in September"),
 ("p", "The trip comes at an interesting time. In September, Latin Recording Academy CEO Manuel Abud and Recording Academy president Panos A. Panay were in Nairobi, talking with creatives about Kenya’s push to host a Recording Academy hub for Africa. Abud told the room that Latin music’s rise took decades of building, and that Africa’s should be seen as a long-term project too."),
 ("p", "Nobody is saying the two are connected. Still, two months after that visit, four Kenyan faces were in Las Vegas on the Latin Recording Academy’s biggest night of the year."),
 ]
