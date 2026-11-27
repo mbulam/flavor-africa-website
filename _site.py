@@ -21,6 +21,7 @@ e = lambda s: html.escape(s, quote=True)
 
 # slug, sections, tag, title, teaser, image, date (YYYY-MM-DD, or YYYY-MM-DDTHH:MM to go live at a set time; Nairobi), image focus
 STORIES = [
+ ("caf-awards-2026-final-five", ["sport"], "Flavor Sports", "Five Players, Two Countries: The Race for African Player of the Year", "Morocco and Senegal share all five places on the CAF shortlist. The winner is named in Lagos on Wednesday, 2 December.", "sp-caf-awards-trophy.jpg", "2026-11-27T10:50", "center 40%"),
  ("adelle-onyango-legally-clueless-forbes", ["news", "money"], "The Wrap", "Adelle Onyango's Legally Clueless is in Forbes", "How she built a media business around one Kenyan podcast, with radio deals, workshops and live shows doing what ads alone couldn't.", "wr-adelle-onyango.jpg", "2026-11-25T20:30", "center 25%"),
  ("pete-edochie-dies-at-79", ["news", "screen"], "The Wrap", "Pete Edochie dies at 79", "The actor who became Okonkwo in Things Fall Apart died in Enugu on 25 November after a long illness.", "wr-pete-edochie.jpg", "2026-11-25T12:30", "center 25%"),
  ("the-flavor-verdict-alusa-continua", ["music"], "The Verdict", "The Flavor Verdict: Bien's Alusa Continua doesn't all land. It still matters", "Seventeen tracks, a road trip across Kenya and an argument the whole country joined. Our call on Bien's new album.", "fva-cover.jpg", "2026-11-25T10:15", "center 30%"),
