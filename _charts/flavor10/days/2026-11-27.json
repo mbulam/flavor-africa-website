@@ -1,0 +1,115 @@
+{
+ "date": "2026-11-27",
+ "label": "27 NOV 2026",
+ "kind": "fresh",
+ "name": "Fresh",
+ "line": "Out this week and already climbing charts across Africa.",
+ "window": 7,
+ "sources": "Apple Music most played: Kenya, Nigeria, Ghana, Côte d'Ivoire, Senegal, South Africa, Zambia, Zimbabwe, Botswana, Tanzania, Uganda, Rwanda, DR Congo",
+ "songs": [
+  {
+   "title": "SUGA",
+   "artist": "Rema",
+   "apple": "6831560296",
+   "out": "2026-11-20",
+   "points": 125,
+   "where": [
+    "ng",
+    "rw"
+   ]
+  },
+  {
+   "title": "Insert 1",
+   "artist": "Kabza De Small ft. Dj Stokie",
+   "apple": "6838312605",
+   "out": "2026-11-25",
+   "points": 109,
+   "where": [
+    "za",
+    "bw"
+   ]
+  },
+  {
+   "title": "Kaumbete",
+   "artist": "Bien & Coster Ojwang",
+   "apple": "6822410188",
+   "out": "2026-11-20",
+   "points": 99,
+   "where": [
+    "ke"
+   ]
+  },
+  {
+   "title": "Omoka",
+   "artist": "Bien",
+   "apple": "6822409887",
+   "out": "2026-11-20",
+   "points": 98,
+   "where": [
+    "ke"
+   ]
+  },
+  {
+   "title": "Do You Understand",
+   "artist": "Gabzy",
+   "apple": "6829865143",
+   "out": "2026-11-20",
+   "points": 86,
+   "where": [
+    "zm",
+    "ug"
+   ]
+  },
+  {
+   "title": "Angeke",
+   "artist": "Kabza De Small, T-Man SA & SLY ft. Thatohatsi & Young Stunna",
+   "apple": "6837352768",
+   "out": "2026-11-26",
+   "points": 78,
+   "where": [
+    "za",
+    "bw"
+   ]
+  },
+  {
+   "title": "10 Carats [Remix]",
+   "artist": "Trap Scary ft. Oseikrom Sikanii, Kofi Mole & others",
+   "apple": "6838711911",
+   "out": "2026-11-21",
+   "points": 76,
+   "where": [
+    "gh"
+   ]
+  },
+  {
+   "title": "Money In A Wheelbarrow",
+   "artist": "Adekunle Gold & Blaqbonez",
+   "apple": "6832566906",
+   "out": "2026-11-20",
+   "points": 67,
+   "where": [
+    "ng"
+   ]
+  },
+  {
+   "title": "Tchô tchô",
+   "artist": "Kadirov Mania ft. Renard Barakissa",
+   "apple": "6837506466",
+   "out": "2026-11-20",
+   "points": 48,
+   "where": [
+    "ci"
+   ]
+  },
+  {
+   "title": "Bigger",
+   "artist": "Burna Boy",
+   "apple": "6812477301",
+   "out": "2026-11-20",
+   "points": 16,
+   "where": [
+    "ng"
+   ]
+  }
+ ]
+}
