@@ -1,0 +1,72 @@
+{
+ "date": "2026-11-28",
+ "label": "28 NOV 2026",
+ "sources": {
+  "P": "Apple Music Top 100: Kenya (28 Nov 2026)",
+  "R": "Kenya Airplay (week of 28 Nov 2026)"
+ },
+ "songs": [
+  {
+   "title": "I'll Be Okay",
+   "artist": "Bien",
+   "points": 44,
+   "charts": "PR",
+   "apple": "6822410197"
+  },
+  {
+   "title": "Finale",
+   "artist": "Bien ft. Alikiba",
+   "points": 39,
+   "charts": "PR"
+  },
+  {
+   "title": "Chai ya Saa Kumi",
+   "artist": "Ywaya Tajiri",
+   "points": 31,
+   "charts": "PR",
+   "apple": "6796900642"
+  },
+  {
+   "title": "Asali",
+   "artist": "Xenia Manasseh & Cracker Mallo",
+   "points": 25,
+   "charts": "R"
+  },
+  {
+   "title": "Kaumbete",
+   "artist": "Bien & Coster Ojwang",
+   "points": 24,
+   "charts": "P"
+  },
+  {
+   "title": "AYAYAAH",
+   "artist": "ELEMENT EleéeH, Joshua Baraka & Bien",
+   "points": 24,
+   "charts": "R"
+  },
+  {
+   "title": "Omoka",
+   "artist": "Bien",
+   "points": 23,
+   "charts": "P"
+  },
+  {
+   "title": "Bounce",
+   "artist": "ruger",
+   "points": 23,
+   "charts": "R"
+  },
+  {
+   "title": "Run Like Water",
+   "artist": "Bien",
+   "points": 22,
+   "charts": "P"
+  },
+  {
+   "title": "Forgiveness",
+   "artist": "Asake",
+   "points": 21,
+   "charts": "P"
+  }
+ ]
+}
