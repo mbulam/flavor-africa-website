@@ -112,6 +112,62 @@
         {"t": "Fought early British rule in Kenya", "w": ["MEKATILILI", "KOITALEL", "WAIYAKI", "OTENYO"], "x": "The Giriama, the Nandi, the Kikuyu and the Gusii, long before the Mau Mau."},
         {"t": "Kapenguria Six, minus Kenyatta", "w": ["KAGGIA", "KUBAI", "NGEI", "ONEKO"], "x": "Bildad Kaggia, Fred Kubai, Paul Ngei and Achieng' Oneko. Kungu Karumba was the sixth."}
       ]
+    },
+    "2026-11-30": {
+      "groups": [
+        {"t": "Bongo Flava stars", "w": ["ALIKIBA", "HARMONIZE", "RAYVANNY", "MBOSSO"], "x": "All four are from Tanzania, and three of them came up through WCB Wasafi. Alikiba is the odd one out on that."},
+        {"t": "Ghanaian stars", "w": ["SARKODIE", "STONEBWOY", "SHATTA WALE", "BLACK SHERIF"], "x": "Stonebwoy and Shatta Wale have one of Ghana's longest rivalries."},
+        {"t": "Kenyan rappers", "w": ["KHALIGRAPH", "OCTOPIZZO", "NYASHINSKI", "WANGECHI"], "x": "Khaligraph Jones calls himself the OG."},
+        {"t": "Rema songs", "w": ["CALM DOWN", "DUMEBI", "IRON MAN", "BENIN BOYS"], "x": "Benin Boys, with Shallipopi, is a nod to his home city."}
+      ]
+    },
+    "2026-12-01": {
+      "groups": [
+        {"t": "Kenyan TV shows", "w": ["PAPA SHIRANDULA", "TAHIDI HIGH", "MACHACHARI", "VITIMBI"], "x": "Vitimbi first aired in 1985, back when KBC was still VOK."},
+        {"t": "Nollywood stars (surnames)", "w": ["NNAJI", "MOFE-DAMIJO", "JALADE-EKEINDE", "AKINDELE"], "x": "Genevieve, RMD, Omotola and Funke."},
+        {"t": "Ngũgĩ wa Thiong'o novels", "w": ["PETALS OF BLOOD", "DEVIL ON THE CROSS", "WIZARD OF THE CROW", "A GRAIN OF WHEAT"], "x": "Devil on the Cross was first written in Gikuyu, on prison toilet paper."},
+        {"t": "British actors with Nigerian roots", "w": ["OYELOWO", "BOYEGA", "ERIVO", "EJIOFOR"], "x": "Erivo and Ejiofor are both in Children of Blood and Bone in January."}
+      ]
+    },
+    "2026-12-02": {
+      "groups": [
+        {"t": "South African banks", "w": ["CAPITEC", "NEDBANK", "FNB", "ABSA"], "x": "Absa is the one you'll also see on Kenyan streets."},
+        {"t": "Payment apps", "w": ["OPAY", "PALMPAY", "MONIEPOINT", "WAVE"], "x": "Wave started in Senegal. The other three are giants in Nigeria."},
+        {"t": "African billionaire surnames", "w": ["RUPERT", "OPPENHEIMER", "SAWIRIS", "MOTSEPE"], "x": "South Africa, South Africa, Egypt and South Africa again. Motsepe also runs CAF."},
+        {"t": "Companies with a Swahili word in the name", "w": ["TWIGA", "PESAPAL", "WASOKO", "LIPA LATER"], "x": "Giraffe, money, market and pay."}
+      ]
+    },
+    "2026-12-03": {
+      "groups": [
+        {"t": "North African capitals", "w": ["TUNIS", "ALGIERS", "TRIPOLI", "CAIRO"], "x": "Rabat would have fitted too, if it had turned up."},
+        {"t": "Kenyan county towns", "w": ["KITUI", "NYERI", "MERU", "EMBU"], "x": "Each one shares its name with its county."},
+        {"t": "African lakes", "w": ["TURKANA", "KIVU", "NAIVASHA", "VOLTA"], "x": "Lake Volta in Ghana is one of the biggest man-made lakes in the world."},
+        {"t": "Hides another country's name", "w": ["SOMALIA", "NIGERIA", "GUINEA-BISSAU", "SOUTH SUDAN"], "x": "Mali, Niger, Guinea and Sudan are all tucked inside."}
+      ]
+    },
+    "2026-12-04": {
+      "groups": [
+        {"t": "Ballon d'Or night trophies", "w": ["KOPA", "YASHIN", "GERD MULLER", "JOHAN CRUYFF"], "x": "Best young player, best keeper, top scorer and best coach."},
+        {"t": "African Nobel Literature winners", "w": ["SOYINKA", "GORDIMER", "MAHFOUZ", "GURNAH"], "x": "Nigeria, South Africa, Egypt and Tanzania."},
+        {"t": "Literary prizes", "w": ["BOOKER", "CAINE", "PULITZER", "GONCOURT"], "x": "The Caine Prize is the one just for African short stories."},
+        {"t": "Have been African Player of the Year", "w": ["DROGBA", "ETO'O", "TOURE", "AUBAMEYANG"], "x": "Eto'o and Yaya Touré have won it four times each."}
+      ]
+    },
+    "2026-12-05": {
+      "groups": [
+        {"t": "Kenyan marathon stars", "w": ["KIPTUM", "KOSGEI", "KAMWOROR", "JEPCHIRCHIR"], "x": "Kelvin Kiptum ran 2:00:35 in Chicago in 2023."},
+        {"t": "NBA players with African roots", "w": ["EMBIID", "SIAKAM", "MUTOMBO", "ANTETOKOUNMPO"], "x": "Cameroon, Cameroon, DR Congo and Nigeria."},
+        {"t": "Rugby words", "w": ["SCRUM", "LINEOUT", "RUCK", "TRY"], "x": "In rugby union, a try is worth five points."},
+        {"t": "___BALL", "w": ["HAND", "NET", "BASKET", "VOLLEY"], "x": "Basket was the trap, sitting next to the NBA names."}
+      ]
+    },
+    "2026-12-06": {
+      "groups": [
+        {"t": "Liberation-era parties", "w": ["KANU", "ANC", "ZANU", "FRELIMO"], "x": "Kenya, South Africa, Zimbabwe and Mozambique."},
+        {"t": "Ancient Egyptian gods", "w": ["RA", "ISIS", "OSIRIS", "ANUBIS"], "x": "Anubis is the one with the jackal's head."},
+        {"t": "Famous African queens", "w": ["NZINGA", "AMINA", "MAKEDA", "NEFERTITI"], "x": "Makeda is the Queen of Sheba in Ethiopian tradition."},
+        {"t": "Old names of African capitals", "w": ["LEOPOLDVILLE", "SALISBURY", "LOURENCO MARQUES", "FORT LAMY"], "x": "Kinshasa, Harare, Maputo and N'Djamena."}
+      ]
     }
   }
 }

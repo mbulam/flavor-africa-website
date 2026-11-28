@@ -1647,6 +1647,828 @@
           "x": "They built it in the 1590s to guard the harbour. The Omanis took it in 1698 after a siege of nearly three years."
         }
       ]
+    },
+    "2026-11-30": {
+      "theme": "Music",
+      "img": "img/wr-tems-cobab.jpg",
+      "qs": [
+        {
+          "q": "Tems is the executive music producer on the soundtrack for which film?",
+          "a": [
+            "Black Panther: Wakanda Forever",
+            "Children of Blood and Bone",
+            "Mufasa: The Lion King",
+            "The Woman King"
+          ],
+          "c": 1,
+          "x": "She also wrote and sings the lead single, \"African Love Story\". The film reaches cinemas in January.",
+          "s": "tems-children-of-blood-and-bone-soundtrack"
+        },
+        {
+          "q": "Youssou N'Dour's biggest international hit, \"7 Seconds\", was a duet with…",
+          "a": [
+            "Sade",
+            "Tracy Chapman",
+            "Neneh Cherry",
+            "Annie Lennox"
+          ],
+          "c": 2,
+          "x": "It came out in 1994, and it's sung in Wolof, French and English.",
+          "s": "youssou-ndour-media-empire"
+        },
+        {
+          "q": "Which drummer did Fela Kuti say Afrobeat couldn't exist without?",
+          "a": [
+            "Ginger Baker",
+            "Tony Allen",
+            "Manu Dibango",
+            "Hugh Masekela"
+          ],
+          "c": 1,
+          "x": "Tony Allen drummed in Fela's band Africa 70 through the 1970s, and Fela credited him as a co-creator of the sound."
+        },
+        {
+          "q": "Hugh Masekela was best known for playing which instrument?",
+          "a": [
+            "Saxophone",
+            "Piano",
+            "Guitar",
+            "Trumpet"
+          ],
+          "c": 3,
+          "x": "His 1968 instrumental \"Grazing in the Grass\" went all the way to number one in the US."
+        },
+        {
+          "q": "Burna Boy's \"Last Last\" is built on a sample of which singer's song?",
+          "a": [
+            "Toni Braxton",
+            "Whitney Houston",
+            "Brandy",
+            "Mary J. Blige"
+          ],
+          "c": 0,
+          "x": "It flips Toni Braxton's \"He Wasn't Man Enough\" from 2000."
+        },
+        {
+          "q": "Ethic Entertainment's \"Lamba Lolo\" helped put which Kenyan sound on the map?",
+          "a": [
+            "Benga",
+            "Gengetone",
+            "Ohangla",
+            "Arbantone"
+          ],
+          "c": 1,
+          "x": "It went viral in 2018, and the matatus played it on repeat."
+        },
+        {
+          "q": "In 2021, UNESCO added which music to its intangible cultural heritage list?",
+          "a": [
+            "Congolese rumba",
+            "Highlife",
+            "Taarab",
+            "Mbalax"
+          ],
+          "c": 0,
+          "x": "DR Congo and the Republic of Congo put in the bid together, and it was approved in December 2021."
+        },
+        {
+          "q": "Zuchu's mother is which famous taarab singer?",
+          "a": [
+            "Siti binti Saad",
+            "Bi Kidude",
+            "Khadija Kopa",
+            "Malika"
+          ],
+          "c": 2,
+          "x": "Zuchu grew up around taarab in Zanzibar before Diamond Platnumz signed her to WCB Wasafi."
+        },
+        {
+          "q": "Kabza De Small and DJ Maphorisa team up under which name?",
+          "a": [
+            "The Scorpion Kings",
+            "Major League DJz",
+            "Black Motion",
+            "Distruction Boyz"
+          ],
+          "c": 0,
+          "x": "Their joint albums helped take amapiano from South Africa's townships to the rest of the world."
+        },
+        {
+          "q": "Ayra Starr is signed to which Nigerian label?",
+          "a": [
+            "YBNL",
+            "Chocolate City",
+            "Starboy Entertainment",
+            "Mavin Records"
+          ],
+          "c": 3,
+          "x": "Mavin is Don Jazzy's label, the same home that gave us Rema."
+        }
+      ]
+    },
+    "2026-12-01": {
+      "theme": "Art & Film",
+      "img": "img/wr-pete-edochie.jpg",
+      "qs": [
+        {
+          "q": "In the 1987 TV version of \"Things Fall Apart\", Pete Edochie played…",
+          "a": [
+            "Obierika",
+            "Okonkwo",
+            "Unoka",
+            "Ikemefuna"
+          ],
+          "c": 1,
+          "x": "The role gave him the name Ebubedike, which stayed with him until he died last week at 79.",
+          "s": "pete-edochie-dies-at-79"
+        },
+        {
+          "q": "Which South African actor plays Zélie in \"Children of Blood and Bone\"?",
+          "a": [
+            "Pearl Thusi",
+            "Nomzamo Mbatha",
+            "Thuso Mbedu",
+            "Thandiwe Newton"
+          ],
+          "c": 2,
+          "x": "The film is set in Orïsha, a world built on the Yoruba Orisha tradition, and it opens in January.",
+          "s": "tems-children-of-blood-and-bone-soundtrack"
+        },
+        {
+          "q": "What was Netflix's first Kenyan original series?",
+          "a": [
+            "Country Queen",
+            "Single Kiasi",
+            "Selina",
+            "Pepeta"
+          ],
+          "c": 0,
+          "x": "The drama came out in 2022 and follows a woman who goes home to her village to fight a mining company."
+        },
+        {
+          "q": "Which 1992 film is usually credited with starting Nollywood's home video boom?",
+          "a": [
+            "Lionheart",
+            "Living in Bondage",
+            "Osuofia in London",
+            "Glamour Girls"
+          ],
+          "c": 1,
+          "x": "It was made in Igbo and sold on VHS tapes straight to people's homes."
+        },
+        {
+          "q": "Chimamanda Ngozi Adichie's \"Half of a Yellow Sun\" is set during which war?",
+          "a": [
+            "The Boer War",
+            "The Nigerian Civil War",
+            "The Mau Mau uprising",
+            "The Rwandan Civil War"
+          ],
+          "c": 1,
+          "x": "The film version starred Chiwetel Ejiofor and Thandiwe Newton."
+        },
+        {
+          "q": "The painter Chéri Samba, famous for his bright paintings with speech bubbles, is from which country?",
+          "a": [
+            "DR Congo",
+            "Senegal",
+            "Ghana",
+            "Côte d'Ivoire"
+          ],
+          "c": 0,
+          "x": "He started out painting signs and comic strips in Kinshasa in the 1970s."
+        },
+        {
+          "q": "Zeitz MOCAA, Africa's big contemporary art museum, was built inside an old…",
+          "a": [
+            "Railway station",
+            "Prison",
+            "Grain silo",
+            "Power station"
+          ],
+          "c": 2,
+          "x": "It opened in Cape Town's V&A Waterfront in 2017."
+        },
+        {
+          "q": "Mati Diop's \"Atlantics\" won which prize at Cannes in 2019?",
+          "a": [
+            "Palme d'Or",
+            "Grand Prix",
+            "Caméra d'Or",
+            "Best Director"
+          ],
+          "c": 1,
+          "x": "She was the first Black woman director to have a film in the main competition."
+        },
+        {
+          "q": "\"Vioja Mahakamani\", the KBC comedy, is set mostly in a…",
+          "a": [
+            "Hospital",
+            "Police station",
+            "Matatu stage",
+            "Courtroom"
+          ],
+          "c": 3,
+          "x": "Mahakamani means in court, and the show ran on Kenyan TV for decades."
+        },
+        {
+          "q": "\"Sarafina!\" (1992) starred Leleti Khumalo alongside which Hollywood star?",
+          "a": [
+            "Whoopi Goldberg",
+            "Oprah Winfrey",
+            "Angela Bassett",
+            "Halle Berry"
+          ],
+          "c": 0,
+          "x": "It's set around the 1976 Soweto uprising, and it started life as a stage musical."
+        }
+      ]
+    },
+    "2026-12-02": {
+      "theme": "African Business",
+      "img": "img/yn-cover.jpg",
+      "qs": [
+        {
+          "q": "Youssou N'Dour's media group owns RFM radio, TFM television and which daily paper?",
+          "a": [
+            "Le Soleil",
+            "L'Observateur",
+            "Jeune Afrique",
+            "Walf Quotidien"
+          ],
+          "c": 1,
+          "x": "He built Groupe Futurs Médias in the early 2000s. TFM only got on air in 2010 after a long standoff with the government.",
+          "s": "youssou-ndour-media-empire"
+        },
+        {
+          "q": "Adelle Onyango's Legally Clueless became the first East African podcast to air on radio. Which station picked it up?",
+          "a": [
+            "Kiss FM",
+            "Capital FM",
+            "Trace FM",
+            "Homeboyz Radio"
+          ],
+          "c": 2,
+          "x": "Kiss FM was where she used to host breakfast. Forbes wrote about the business behind the show in November.",
+          "s": "adelle-onyango-legally-clueless-forbes"
+        },
+        {
+          "q": "Strive Masiyiwa founded which telecoms group?",
+          "a": [
+            "Econet",
+            "Vodacom",
+            "Airtel Africa",
+            "MTN"
+          ],
+          "c": 0,
+          "x": "He fought Zimbabwe's government for years for a mobile licence before Econet finally launched in 1998."
+        },
+        {
+          "q": "Who co-founded Flutterwave and is still its CEO?",
+          "a": [
+            "Shola Akinlade",
+            "Olugbenga Agboola",
+            "Iyinoluwa Aboyeji",
+            "Tosin Eniolorunda"
+          ],
+          "c": 1,
+          "x": "Everyone calls him GB. Aboyeji was a co-founder too but left in 2018."
+        },
+        {
+          "q": "Safaricom listed on the Nairobi bourse in which year?",
+          "a": [
+            "2002",
+            "2005",
+            "2008",
+            "2011"
+          ],
+          "c": 2,
+          "x": "When trading started that June, it was the biggest share sale East Africa had ever seen."
+        },
+        {
+          "q": "Andela, the company that trains and places software developers, was started in which city?",
+          "a": [
+            "Nairobi",
+            "Lagos",
+            "Kigali",
+            "Accra"
+          ],
+          "c": 1,
+          "x": "It launched in 2014, and Mark Zuckerberg's foundation later backed it."
+        },
+        {
+          "q": "Brookside, Kenya's biggest dairy, is linked to which family?",
+          "a": [
+            "The Kenyatta family",
+            "The Moi family",
+            "The Shah family",
+            "The Kibaki family"
+          ],
+          "c": 0,
+          "x": "France's Danone bought a stake in it in 2014."
+        },
+        {
+          "q": "The Dangote oil refinery is in which city?",
+          "a": [
+            "Abuja",
+            "Port Harcourt",
+            "Kano",
+            "Lagos"
+          ],
+          "c": 3,
+          "x": "It sits in the Lekki Free Trade Zone and is built to handle 650,000 barrels a day."
+        },
+        {
+          "q": "M-KOPA started out in 2011 selling what, paid off bit by bit through M-Pesa?",
+          "a": [
+            "Motorbikes",
+            "Smartphones",
+            "Solar home kits",
+            "Water tanks"
+          ],
+          "c": 2,
+          "x": "Phones came later. Now it's mostly smartphones on the same pay-as-you-go plan."
+        },
+        {
+          "q": "Bidco, the company behind Elianto oil, is based in which Kenyan town?",
+          "a": [
+            "Thika",
+            "Athi River",
+            "Nakuru",
+            "Kisumu"
+          ],
+          "c": 0,
+          "x": "Vimal Shah chairs it. His father started the business."
+        }
+      ]
+    },
+    "2026-12-03": {
+      "theme": "Countries",
+      "img": "img/fr2-kenya-forest.jpg",
+      "qs": [
+        {
+          "q": "How many official languages does South Africa have?",
+          "a": [
+            "9",
+            "11",
+            "12",
+            "14"
+          ],
+          "c": 2,
+          "x": "Sign language became number twelve in 2023."
+        },
+        {
+          "q": "Which is the only African country with Spanish as an official language?",
+          "a": [
+            "Western Sahara",
+            "Equatorial Guinea",
+            "Morocco",
+            "Cabo Verde"
+          ],
+          "c": 1,
+          "x": "It was a Spanish colony until 1968."
+        },
+        {
+          "q": "What sits in the middle of Kenya's flag?",
+          "a": [
+            "A lion",
+            "A rooster",
+            "A Maasai shield and two spears",
+            "A drum"
+          ],
+          "c": 2,
+          "x": "The shield and spears stand for defending the country's freedom."
+        },
+        {
+          "q": "Which is Africa's deepest lake?",
+          "a": [
+            "Lake Victoria",
+            "Lake Malawi",
+            "Lake Turkana",
+            "Lake Tanganyika"
+          ],
+          "c": 3,
+          "x": "It goes down to about 1,470 m, second only to Lake Baikal in the whole world."
+        },
+        {
+          "q": "Which country produces the most coffee in Africa?",
+          "a": [
+            "Kenya",
+            "Uganda",
+            "Ethiopia",
+            "Côte d'Ivoire"
+          ],
+          "c": 2,
+          "x": "It's also where coffee comes from in the first place."
+        },
+        {
+          "q": "Liberia's capital, Monrovia, is named after…",
+          "a": [
+            "A US president",
+            "A river",
+            "A British explorer",
+            "A ship"
+          ],
+          "c": 0,
+          "x": "James Monroe was the US president when the settlement was founded in the 1820s."
+        },
+        {
+          "q": "Victoria Falls sits on the border between which two countries?",
+          "a": [
+            "Zambia and Malawi",
+            "Zimbabwe and Botswana",
+            "Zambia and Zimbabwe",
+            "Zimbabwe and Mozambique"
+          ],
+          "c": 2,
+          "x": "Locally it's called Mosi-oa-Tunya, the smoke that thunders."
+        },
+        {
+          "q": "What's the capital of Madagascar?",
+          "a": [
+            "Toamasina",
+            "Antananarivo",
+            "Moroni",
+            "Port Louis"
+          ],
+          "c": 1,
+          "x": "People just call it Tana."
+        },
+        {
+          "q": "Ouarzazate, where films like \"Gladiator\" were shot, is in which country?",
+          "a": [
+            "Tunisia",
+            "Egypt",
+            "Algeria",
+            "Morocco"
+          ],
+          "c": 3,
+          "x": "It's called the door of the desert, and it has some of the biggest film studios in Africa."
+        },
+        {
+          "q": "Timbuktu, the old city of scholars and manuscripts, is in which country?",
+          "a": [
+            "Niger",
+            "Mali",
+            "Mauritania",
+            "Burkina Faso"
+          ],
+          "c": 1,
+          "x": "It sits near the Niger River, at the edge of the Sahara."
+        }
+      ]
+    },
+    "2026-12-04": {
+      "theme": "Awards",
+      "img": "img/gr27-beyonce.jpg",
+      "qs": [
+        {
+          "q": "Beyoncé just became the first artist to reach how many Grammy nominations?",
+          "a": [
+            "80",
+            "88",
+            "100",
+            "120"
+          ],
+          "c": 2,
+          "x": "Number 100 was for \"Morning Dew (Donk)\". The winners are named on 7 February.",
+          "s": "grammys-2027-nominations"
+        },
+        {
+          "q": "Before this week's CAF Awards, Sadio Mané had won African Player of the Year in which two years?",
+          "a": [
+            "2016 and 2018",
+            "2019 and 2022",
+            "2017 and 2021",
+            "2015 and 2019"
+          ],
+          "c": 1,
+          "x": "The 2026 ceremony was in Lagos on Wednesday, at the National Theatre.",
+          "s": "caf-awards-2026-final-five"
+        },
+        {
+          "q": "Tems won the Grammy for Best African Music Performance in 2025 with which song?",
+          "a": [
+            "Free Mind",
+            "Me & U",
+            "Love Me JeJe",
+            "Higher"
+          ],
+          "c": 2,
+          "x": "She's up for four more in February."
+        },
+        {
+          "q": "Ben Okri won the Booker Prize in 1991 with which novel?",
+          "a": [
+            "The Famished Road",
+            "Things Fall Apart",
+            "Purple Hibiscus",
+            "Season of Migration to the North"
+          ],
+          "c": 0,
+          "x": "He was 32, one of the youngest winners the prize has had."
+        },
+        {
+          "q": "Which South African writer won the Booker twice?",
+          "a": [
+            "Nadine Gordimer",
+            "Damon Galgut",
+            "J.M. Coetzee",
+            "André Brink"
+          ],
+          "c": 2,
+          "x": "First for \"Life & Times of Michael K\" in 1983, then \"Disgrace\" in 1999. He got the Nobel in 2003."
+        },
+        {
+          "q": "Nelson Mandela and F.W. de Klerk shared the Nobel Peace Prize in which year?",
+          "a": [
+            "1990",
+            "1993",
+            "1994",
+            "1996"
+          ],
+          "c": 1,
+          "x": "That was the year before the first all-race election."
+        },
+        {
+          "q": "Which Ethiopian leader won the 2019 Nobel Peace Prize?",
+          "a": [
+            "Meles Zenawi",
+            "Abiy Ahmed",
+            "Sahle-Work Zewde",
+            "Haile Selassie"
+          ],
+          "c": 1,
+          "x": "It was mainly for ending the long standoff with Eritrea."
+        },
+        {
+          "q": "\"My Octopus Teacher\", which won the Oscar for best documentary in 2021, was filmed off the coast of which country?",
+          "a": [
+            "Mozambique",
+            "Namibia",
+            "Kenya",
+            "South Africa"
+          ],
+          "c": 3,
+          "x": "Craig Foster filmed it in a kelp forest near Cape Town."
+        },
+        {
+          "q": "Peter Tabichi, the Kenyan science teacher who won the 2019 Global Teacher Prize, took home how much?",
+          "a": [
+            "$100,000",
+            "$250,000",
+            "$500,000",
+            "$1 million"
+          ],
+          "c": 3,
+          "x": "He's a Franciscan brother who taught at a village school in Nakuru County and gave most of his pay away."
+        },
+        {
+          "q": "Who has won CAF Women's Player of the Year a record six times?",
+          "a": [
+            "Asisat Oshoala",
+            "Barbra Banda",
+            "Perpetua Nkwocha",
+            "Thembi Kgatlana"
+          ],
+          "c": 0,
+          "x": "Perpetua Nkwocha is next on the list, with four."
+        }
+      ]
+    },
+    "2026-12-05": {
+      "theme": "Sport",
+      "img": "img/sp-caf-awards-trophy.jpg",
+      "qs": [
+        {
+          "q": "Who finished as top scorer at AFCON 2025 in Morocco?",
+          "a": [
+            "Youssef En-Nesyri",
+            "Brahim Díaz",
+            "Victor Osimhen",
+            "Mohamed Salah"
+          ],
+          "c": 1,
+          "x": "The Real Madrid forward made the CAF Player of the Year final five too.",
+          "s": "caf-awards-2026-final-five"
+        },
+        {
+          "q": "Bayern Munich signed Morocco's Ismael Saibari in July from which club?",
+          "a": [
+            "Ajax",
+            "Feyenoord",
+            "PSV Eindhoven",
+            "AZ Alkmaar"
+          ],
+          "c": 2,
+          "x": "He'd just scored in all three of Morocco's World Cup group games.",
+          "s": "caf-awards-2026-final-five"
+        },
+        {
+          "q": "Which club has won the CAF Champions League the most times?",
+          "a": [
+            "Zamalek",
+            "TP Mazembe",
+            "Espérance",
+            "Al Ahly"
+          ],
+          "c": 3,
+          "x": "Zamalek and TP Mazembe are next, with five each."
+        },
+        {
+          "q": "Ferdinand Omanyala set his African 100m record of 9.77 in which city?",
+          "a": [
+            "Nairobi",
+            "Eugene",
+            "Monaco",
+            "Doha"
+          ],
+          "c": 0,
+          "x": "It was at the Kip Keino Classic at Kasarani in September 2021."
+        },
+        {
+          "q": "Who won Kenya's first ever Olympic gold?",
+          "a": [
+            "Kip Keino",
+            "Naftali Temu",
+            "Amos Biwott",
+            "Wilson Kiprugut"
+          ],
+          "c": 1,
+          "x": "He won the 10,000m at Mexico City in 1968, a few days before Keino's 1500m."
+        },
+        {
+          "q": "Which city hosted the 2026 Youth Olympic Games, the first Olympic event ever held in Africa?",
+          "a": [
+            "Kigali",
+            "Cairo",
+            "Dakar",
+            "Rabat"
+          ],
+          "c": 2,
+          "x": "The Games ran in Senegal from 31 October to 13 November."
+        },
+        {
+          "q": "In 2018, Siya Kolisi became the Springboks' first Black…",
+          "a": [
+            "Head coach",
+            "Test captain",
+            "Try scorer",
+            "Kicker"
+          ],
+          "c": 1,
+          "x": "He then lifted the World Cup twice, in 2019 and 2023."
+        },
+        {
+          "q": "Kyalami, the last track to host a Formula 1 race in Africa, is in which country?",
+          "a": [
+            "Morocco",
+            "Egypt",
+            "Kenya",
+            "South Africa"
+          ],
+          "c": 3,
+          "x": "The last South African Grand Prix there was in 1993."
+        },
+        {
+          "q": "Hakeem Olajuwon, the No. 1 pick in the 1984 NBA draft, was born in which city?",
+          "a": [
+            "Accra",
+            "Lagos",
+            "Dakar",
+            "Kinshasa"
+          ],
+          "c": 1,
+          "x": "He took the Houston Rockets to two NBA titles, in 1994 and 1995."
+        },
+        {
+          "q": "In 2024, Biniam Girmay became the first Black African to win a stage of the Tour de France. Where is he from?",
+          "a": [
+            "Ethiopia",
+            "Rwanda",
+            "Eritrea",
+            "Kenya"
+          ],
+          "c": 2,
+          "x": "He won three stages that year and took the green jersey home to Asmara."
+        }
+      ]
+    },
+    "2026-12-06": {
+      "theme": "History",
+      "img": "img/dec-baobab.jpg",
+      "qs": [
+        {
+          "q": "Who was Kenya's first vice-president?",
+          "a": [
+            "Daniel arap Moi",
+            "Jaramogi Oginga Odinga",
+            "Joseph Murumbi",
+            "Tom Mboya"
+          ],
+          "c": 1,
+          "x": "He served from 1964 until he resigned in 1966 and started his own party, the KPU."
+        },
+        {
+          "q": "The rock-cut churches of Lalibela are in which country?",
+          "a": [
+            "Egypt",
+            "Sudan",
+            "Eritrea",
+            "Ethiopia"
+          ],
+          "c": 3,
+          "x": "Tradition credits King Lalibela, who ruled around 1200. They were carved straight down into the rock."
+        },
+        {
+          "q": "Patrice Lumumba was the first prime minister of which country?",
+          "a": [
+            "DR Congo",
+            "Angola",
+            "Rwanda",
+            "Congo-Brazzaville"
+          ],
+          "c": 0,
+          "x": "He took office at independence in June 1960 and was killed in January 1961."
+        },
+        {
+          "q": "Kenya's Saba Saba rally of 7 July 1990 pushed for…",
+          "a": [
+            "Free primary school",
+            "Land reform",
+            "Multiparty politics",
+            "A new capital"
+          ],
+          "c": 2,
+          "x": "A year and a half later, in December 1991, the one-party law was scrapped."
+        },
+        {
+          "q": "South Africa marks the Sharpeville massacre of 21 March 1960 with which public holiday?",
+          "a": [
+            "Freedom Day",
+            "Heritage Day",
+            "Youth Day",
+            "Human Rights Day"
+          ],
+          "c": 3,
+          "x": "Police opened fire on people protesting the pass laws, and 69 were killed."
+        },
+        {
+          "q": "What does \"Burkina Faso\" mean?",
+          "a": [
+            "Land of the upright people",
+            "Land of gold",
+            "River country",
+            "Land of the free"
+          ],
+          "c": 0,
+          "x": "Thomas Sankara picked the name in 1984 to replace Upper Volta."
+        },
+        {
+          "q": "Which Kenyan city was first called Port Florence?",
+          "a": [
+            "Mombasa",
+            "Kisumu",
+            "Nakuru",
+            "Naivasha"
+          ],
+          "c": 1,
+          "x": "The Uganda Railway reached the lake there in December 1901."
+        },
+        {
+          "q": "Which king built the Zulu nation into a big power in the early 1800s?",
+          "a": [
+            "Cetshwayo",
+            "Moshoeshoe",
+            "Shaka",
+            "Dingane"
+          ],
+          "c": 2,
+          "x": "Dingane was his half-brother, and he killed Shaka in 1828 and took over."
+        },
+        {
+          "q": "Steve Biko led which movement in South Africa?",
+          "a": [
+            "Black Consciousness",
+            "Pan-Africanist Congress",
+            "Umkhonto we Sizwe",
+            "The Freedom Charter"
+          ],
+          "c": 0,
+          "x": "He died in police custody in 1977, aged 30."
+        },
+        {
+          "q": "Before he was crowned, Emperor Haile Selassie was known as…",
+          "a": [
+            "Ras Makonnen",
+            "Ras Tafari",
+            "Lij Iyasu",
+            "Menelik"
+          ],
+          "c": 1,
+          "x": "That's where the Rastafari movement in Jamaica got its name."
+        }
+      ]
     }
   }
 }
