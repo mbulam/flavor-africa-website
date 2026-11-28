@@ -40,6 +40,16 @@
 
   function title(light) { return '<span class="l">' + esc(set.theme) + "</span> <b>" + esc(dayName) + "</b>"; }
   function result() { return store.get("fa-tv-" + today, null); }
+  // A run in progress (28 Nov 2026): saved the moment a question shows and again when it's answered, so going back,
+  // refreshing or closing the app can't restart the ten. A question that was on screen when you left counts as time's up.
+  var RUN = "fa-tv-run-" + today;
+  function run() {
+    var r = store.get(RUN, null);
+    if (!r || !r.ans || !set) return null;
+    if (r.open === r.ans.length && r.ans.length < set.qs.length) { r.ans.push(-1); r.open = -1; r.left = 1; store.set(RUN, r); }
+    return r;
+  }
+  function saveRun(open) { store.set(RUN, { score: st.score, pts: st.pts, ans: st.ans, open: open, left: st.leftQ || 0 }); }
   function streak() {
     var s = store.get("fa-tv-streak", { last: "", n: 0 });
     return s.last === today || s.last === yday ? s.n : 0;
@@ -51,10 +61,10 @@
   window.faTriviaSlot = function () {
     var slot = document.querySelector(".fa-tv-slot");
     if (!slot || !set) return;
-    var r = result(), dots = "";
+    var r = result(), g = r ? null : run(), dots = "";
     for (var i = 0; i < set.qs.length; i++) dots += "<i" + (r && r.ans ? ' class="' + (r.ans[i] === set.qs[i].c ? "ok" : "no") + '"' : "") + "></i>";
-    slot.innerHTML = '<div class="fa-cxc fx"><a href="/trivia.html" class="fa-cxc-in"><span class="tx"><span class="k">Flavor Trivia · ' + (r ? "played today" : "today") + '</span><span class="t">' + title() + '</span><span class="s">' +
-      (r ? "You scored " + r.score + "/10 and " + r.pts + " points. A new ten lands tomorrow." : "Ten questions. Fifteen seconds each. Faster answers score more.") + '</span></span><span class="fa-tv-dots" role="img" aria-label="' + (r ? r.score + " of " + set.qs.length + " right" : set.qs.length + " questions") + '">' + dots + '</span></a><div class="fx-btns"><a class="fx-btn d" href="/trivia.html">' + (r ? "See your score" : "Play now") + "</a>" + remindBtn("l") + "</div></div>";
+    slot.innerHTML = '<div class="fa-cxc fx"><a href="/trivia.html" class="fa-cxc-in"><span class="tx"><span class="k">Flavor Trivia · ' + (r ? "played today" : g ? "in progress" : "today") + '</span><span class="t">' + title() + '</span><span class="s">' +
+      (r ? "You scored " + r.score + "/10 and " + r.pts + " points. A new ten lands tomorrow." : g ? "You're on question " + Math.min(g.ans.length + 1, set.qs.length) + " of " + set.qs.length + ". Pick up where you left off." : "Ten questions. Fifteen seconds each. Faster answers score more.") + '</span></span><span class="fa-tv-dots" role="img" aria-label="' + (r ? r.score + " of " + set.qs.length + " right" : set.qs.length + " questions") + '">' + dots + '</span></a><div class="fx-btns"><a class="fx-btn d" href="/trivia.html">' + (r ? "See your score" : g ? "Keep going" : "Play now") + "</a>" + remindBtn("l") + "</div></div>";
   };
   document.addEventListener("click", function (e) { var a = e.target.closest(".fa-tv-slot [data-a=remind]"); if (a) remind(a); });
 
@@ -71,8 +81,11 @@
     box.addEventListener("click", click);
     var r = result();
     if (r) st = r;
+    else if (set) { var g = run(); if (g && g.ans.length >= set.qs.length) { st = g; st.i = g.ans.length - 1; next(); return; } }
     drawIntro();
   }
+  // Coming back from the back button with the page kept in memory: check what's saved, in case another tab moved on
+  window.addEventListener("pageshow", function (e) { if (e.persisted && PAGE && set && !timer) { var r = result(); if (r) { st = r; drawIntro(); } } });
   function top() { window.scrollTo(0, 0); }
   var X = "";
 
@@ -92,8 +105,12 @@
   }
   function drawIntro() {
     top();
-    var r = result(), card;
-    if (set) {
+    var r = result(), g = r ? null : run(), card;
+    if (set && g) {
+      var at = Math.min(g.ans.length + 1, set.qs.length);
+      card = '<div class="fx-card" style="height:360px;background-image:url(\'/' + esc(set.img) + '\');background-position:center 35%"><div class="in"><span class="k">Today · ' + esc(dayName) + '</span><h2 class="fx-cap">' + title() + "</h2><p>" +
+        "You're on question " + at + " of " + set.qs.length + ", with " + g.score + " right so far." + (g.left ? " The question you left counted as time's up." : "") + '</p><div class="fx-btns"><button type="button" class="fx-btn" data-a="start">Keep going</button>' + remindBtn() + "</div></div></div>";
+    } else if (set) {
       card = '<div class="fx-card" style="height:360px;background-image:url(\'/' + esc(set.img) + '\');background-position:center 35%"><div class="in"><span class="k">Today · ' + esc(dayName) + '</span><h2 class="fx-cap">' + title() + "</h2><p>" +
         (r ? "You scored " + r.score + "/10 and " + r.pts + " points. A new ten lands tomorrow." : "Ten questions. Fifteen seconds each. Faster answers score more.") + '</p><div class="fx-btns">' +
         (r ? '<button type="button" class="fx-btn" data-a="results">See your score</button>' : '<button type="button" class="fx-btn" data-a="start">Play now</button>') + remindBtn() + "</div></div></div>";
@@ -123,11 +140,17 @@
     for (var m = 3; m > 0; m--) { seed = (seed * 1103515245 + 12345) >>> 0; var r = seed % (m + 1), t = o[m]; o[m] = o[r]; o[r] = t; }
     return o;
   }
-  function start() { st = { score: 0, pts: 0, ans: [], i: 0, done: false }; faPlay("trivia", "start"); ask(); }
+  // One go a day: if a run is already saved (even from another tab), carry on from it instead of starting fresh
+  function start() {
+    var r = result(); if (r) { st = r; drawResults(); return; }
+    var g = run();
+    if (g) { st = { score: g.score, pts: g.pts, ans: g.ans, i: g.ans.length, done: false }; if (st.i >= set.qs.length) { st.i = set.qs.length - 1; next(); return; } ask(); return; }
+    st = { score: 0, pts: 0, ans: [], i: 0, done: false }; faPlay("trivia", "start"); ask();
+  }
 
   function ask() {
     var q = set.qs[st.i], left = SECS;
-    st.locked = false; top();
+    st.locked = false; st.leftQ = 0; saveRun(st.i); top();
     box.innerHTML = '<div class="fa-tv-top">' + X + '<span class="fa-tv-where">' + esc(set.theme) + " " + esc(dayName) + " · Question " + (st.i + 1) + " of " + set.qs.length + '</span><span class="sp"></span></div>' +
       '<div class="fa-tv-q"><div class="fa-tv-ring" role="timer"><svg viewBox="0 0 112 112" aria-hidden="true"><circle cx="56" cy="56" r="50" class="bg"/><circle cx="56" cy="56" r="50" class="fg"/></svg><span><b>' + left + "</b><i>seconds</i></span></div>" +
       "<h2>" + esc(q.q) + '</h2><div class="fa-tv-opts">' +
@@ -150,10 +173,12 @@
 
   function answer(k, secsLeft) {
     if (st.locked) return; st.locked = true;
+    var saved = store.get(RUN, null);
+    if (saved && saved.ans && saved.ans.length > st.ans.length) { clearInterval(timer); timer = null; st.locked = false; start(); return; }
     clearInterval(timer); timer = null;
     var q = set.qs[st.i], right = k === q.c;
     if (right) { st.score++; st.pts += Math.max(10, secsLeft * 10); }
-    st.ans.push(k);
+    st.ans.push(k); saveRun(-1);
     [].forEach.call(box.querySelectorAll(".fa-tv-opts button"), function (b) {
       var j = +b.getAttribute("data-o");
       b.disabled = true;
@@ -168,10 +193,12 @@
 
   function next() {
     if (st.i < set.qs.length - 1) { st.i++; ask(); return; }
+    var had = result(); if (had) { st = had; drawResults(); return; }   // already finished (another tab): keep the first score
     st.done = true;
     var s = store.get("fa-tv-streak", { last: "", n: 0 });
     if (s.last !== today) { s.n = s.last === yday ? s.n + 1 : 1; s.last = today; store.set("fa-tv-streak", s); }
     store.set("fa-tv-" + today, { score: st.score, pts: st.pts, ans: st.ans, done: true });
+    try { localStorage.removeItem(RUN); } catch (e) {}
     faPlay("trivia", "done", st.score);
     if (window.faRemind && window.faRemind.played) window.faRemind.played("trivia", "done");   // no nudge tonight
     drawResults();

@@ -87,6 +87,9 @@
     st = store.get(KEY, null);
     if (!st || !st.order) st = { order: seeded(all, "o"), solved: [], miss: 0, tries: [], done: false, won: false };
     box.addEventListener("click", click);
+    // left during the last shake (28 Nov 2026): the result was already decided, so finish it rather than reopen the board
+    if (!st.done && st.miss >= LIVES) return finish(false);
+    if (!st.done && st.solved.length >= 4) return finish(true);
     draw();
   }
 
